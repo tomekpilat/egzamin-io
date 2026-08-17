@@ -199,7 +199,7 @@ export default function Home() {
       <footer className="site-footer">
         <a className="brand" href="#top" aria-label="egzaminio — wróć na górę"><BrandLogo /></a>
         <p>Ćwiczenia do egzaminu ósmoklasisty, które naprawdę tłumaczą.</p>
-        <div><a href="/logowanie">Logowanie</a><a href="/polityka-prywatnosci">Prywatność</a><a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a><span>© 2026 egzaminio</span></div>
+        <div><a href="/logowanie">Logowanie</a><a href="/informacje-prawne">Informacje prawne</a><a href="/regulamin">Regulamin</a><a href="/polityka-prywatnosci">Prywatność</a><a href="/polityka-cookies">Cookies</a><a href="/bezpieczenstwo-dzieci-ai">Dzieci i AI</a><a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a><span>© 2026 egzaminio</span></div>
         <small>egzaminio jest niezależnym projektem edukacyjnym i nie jest powiązany z Centralną Komisją Egzaminacyjną.</small>
       </footer>
     </main>

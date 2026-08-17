@@ -1,0 +1,18 @@
+import type { Metadata } from "next";
+import { LegalShell } from "@/components/legal-shell";
+import { LEGAL_UPDATED_LABEL } from "@/lib/legal";
+
+export const metadata: Metadata = { title: "Cookies i pamięć urządzenia — egzaminio", description: "Informacje o cookies, local storage i sesji logowania egzaminio.", robots: { index: false, follow: false } };
+
+export default function CookiesPage() {
+  return (
+    <LegalShell currentPath="/polityka-cookies" title="Cookies i pamięć urządzenia" description={`Wersja robocza · ostatnia aktualizacja: ${LEGAL_UPDATED_LABEL}`}>
+      <div className="legal-alert"><b>Stan obecnego MVP</b><p>Serwis używa pamięci przeglądarki potrzebnej do sesji Supabase Auth. Nie wdrożono jeszcze analityki ani reklamy. Jeżeli zostaną dodane, najpierw wdrożymy panel zgody, zaktualizujemy tabelę poniżej i domyślnie je zablokujemy do czasu wyboru użytkownika.</p></div>
+      <section className="legal-section"><h2>1. Nie tylko pliki cookies</h2><p>„Cookies” w tej polityce obejmują pliki cookies oraz podobne technologie zapisujące lub odczytujące informacje na urządzeniu, np. local storage i identyfikatory sesji. Zgodnie z art. 399 Prawa komunikacji elektronicznej technologie niekonieczne wymagają uprzedniej informacji i zgody. Wyjątkiem jest zapis lub odczyt niezbędny do transmisji albo świadczenia usługi wyraźnie żądanej przez użytkownika.</p></section>
+      <section className="legal-section"><h2>2. Kategorie</h2><div className="legal-table-wrap"><table><thead><tr><th>Kategoria</th><th>Cel i dostawca</th><th>Okres</th><th>Podstawa / status</th></tr></thead><tbody><tr><td>Niezbędne</td><td>Supabase Auth: utrzymanie bezpiecznej sesji, odświeżenie tokenu i wylogowanie. Dane są przechowywane w pamięci przeglądarki; dokładny klucz zależy od projektu.</td><td>Sesja i ustawienia dostawcy; po wylogowaniu token przestaje być ważny</td><td>Niezbędne do żądanej usługi — bez osobnej zgody</td></tr><tr><td>Preferencje</td><td>Zapamiętanie ustawień niekoniecznych, np. widoku lub języka</td><td><mark>[UZUPEŁNIJ PO WDROŻENIU]</mark></td><td>Obecnie niewłączone; zgoda, gdy będzie wymagana</td></tr><tr><td>Analityczne</td><td>Pomiar użycia i błędów przez <mark>[UZUPEŁNIJ DOSTAWCĘ]</mark></td><td><mark>[UZUPEŁNIJ]</mark></td><td>Obecnie niewłączone; dopiero po zgodzie</td></tr><tr><td>Marketingowe</td><td>Pomiar kampanii i reklama przez <mark>[UZUPEŁNIJ DOSTAWCĘ]</mark></td><td><mark>[UZUPEŁNIJ]</mark></td><td>Obecnie niewłączone; dopiero po zgodzie; bez reklamy profilowanej wobec dzieci</td></tr></tbody></table></div></section>
+      <section className="legal-section"><h2>3. Google i Facebook</h2><p>Sam przycisk logowania nie powinien uruchamiać narzędzi reklamowych. Po kliknięciu użytkownik przechodzi do wybranego dostawcy, który może odczytać własne cookies i przetwarzać dane zgodnie ze swoją polityką. Nie publikujemy niczego w imieniu użytkownika. Przed startem zostanie wykonany test sieciowy potwierdzający brak trackerów przed kliknięciem.</p></section>
+      <section className="legal-section"><h2>4. Jak zmienić wybór</h2><p>Po wdrożeniu technologii opcjonalnych link „Ustawienia prywatności” będzie stale dostępny w stopce i pozwoli wycofać zgodę równie łatwo, jak ją udzielić. Ustawienia przeglądarki pozwalają też usuwać dane witryny lub blokować cookies, lecz blokada pamięci niezbędnej może uniemożliwić logowanie. Wycofanie zgody nie wpływa na zgodność wcześniejszego przetwarzania.</p></section>
+      <section className="legal-section legal-source-note"><h2>Oficjalne źródło</h2><p><a href="https://eli.gov.pl/api/acts/DU/2024/1221/text.html" target="_blank" rel="noreferrer">Prawo komunikacji elektronicznej — art. 399</a>.</p></section>
+    </LegalShell>
+  );
+}

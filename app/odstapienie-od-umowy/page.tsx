@@ -1,0 +1,16 @@
+import type { Metadata } from "next";
+import { LegalShell } from "@/components/legal-shell";
+import { LEGAL_UPDATED_LABEL } from "@/lib/legal";
+
+export const metadata: Metadata = { title: "Odstąpienie od umowy — egzaminio", description: "Informacja i wzór odstąpienia od umowy zawartej z egzaminio.", robots: { index: false, follow: false } };
+
+export default function WithdrawalPage() {
+  return (
+    <LegalShell currentPath="/odstapienie-od-umowy" title="Odstąpienie od umowy" description={`Informacja dla konsumenta · wersja robocza z ${LEGAL_UPDATED_LABEL}`}>
+      <div className="legal-alert"><b>Plan płatny nie jest jeszcze dostępny</b><p>Ta strona przygotowuje MVP na przyszły checkout. Przed jego uruchomieniem trzeba uzupełnić dane przedsiębiorcy, adres zwrotu, model świadczenia i treść potwierdzenia umowy.</p></div>
+      <section className="legal-section"><h2>Prawo konsumenta</h2><p>Konsument zawierający umowę na odległość może co do zasady odstąpić od niej w ciągu 14 dni bez podawania przyczyny. Termin biegnie od zawarcia umowy o usługę. Wystarczy wysłać jednoznaczne oświadczenie przed upływem terminu na kontakt@egzamin.io.</p><p>Jeżeli na wyraźne żądanie konsumenta wykonywanie usługi rozpocznie się przed upływem terminu, przedsiębiorca może — w przypadkach przewidzianych prawem — żądać zapłaty proporcjonalnej za spełnione świadczenie. Utrata prawa odstąpienia przy treści cyfrowej niedostarczanej na nośniku wymaga wcześniejszej wyraźnej zgody, potwierdzenia przyjęcia informacji o utracie prawa oraz przekazania potwierdzenia umowy.</p></section>
+      <section className="legal-section"><h2>Wzór oświadczenia</h2><div className="withdrawal-template"><p><b>Adresat:</b> [NAZWA I ADRES PRZEDSIĘBIORCY], kontakt@egzamin.io</p><p>Niniejszym informuję o odstąpieniu od umowy dotyczącej planu egzaminio.</p><p>Data zawarcia umowy: ____________________</p><p>Imię i nazwisko konsumenta: ____________________</p><p>Adres e-mail konta: ____________________</p><p>Adres konsumenta (jeżeli potrzebny do identyfikacji): ____________________</p><p>Data złożenia oświadczenia: ____________________</p><p>Podpis — tylko jeżeli formularz wysyłany jest w wersji papierowej: ____________________</p></div><a className="legal-button" href="mailto:kontakt@egzamin.io?subject=Odstapienie%20od%20umowy%20egzaminio&body=Niniejszym%20informuje%20o%20odstapieniu%20od%20umowy%20dotyczacej%20planu%20egzaminio.%0A%0AData%20zawarcia%20umowy%3A%0AImie%20i%20nazwisko%3A%0AAdres%20e-mail%20konta%3A%0AData%3A">Wyślij oświadczenie e-mailem</a></section>
+      <section className="legal-section legal-source-note"><h2>Oficjalne źródło</h2><p><a href="https://prawakonsumenta.uokik.gov.pl/pytania-i-odpowiedzi/odstapienie-od-umowy/" target="_blank" rel="noreferrer">UOKiK — odstąpienie od umowy</a>.</p></section>
+    </LegalShell>
+  );
+}

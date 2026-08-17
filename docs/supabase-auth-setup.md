@@ -13,7 +13,7 @@ egzaminio korzysta z tego samego modelu co kancelio.pl: Supabase Auth odpowiada 
    supabase db push
    ```
 
-Migracja `supabase/migrations/20260817190000_auth_profiles.sql` tworzy profile i cztery role:
+Migracje `supabase/migrations/20260817190000_auth_profiles.sql` oraz `supabase/migrations/20260817210000_legal_acceptances.sql` tworzą profile, zapis wersjonowanej akceptacji dokumentów i cztery role:
 
 - `student` — ćwiczenia, nauczyciel AI i własny postęp,
 - `parent` — połączone konta dzieci i raporty,
@@ -113,7 +113,8 @@ Sprawdź kolejno:
 5. wybór każdej roli i właściwy panel,
 6. brak możliwości ustawienia `admin` przez żądanie z przeglądarki,
 7. wylogowanie i wygaśnięcie sesji.
+8. zapis `terms_accepted_at`, `privacy_acknowledged_at` i `legal_version` po rejestracji e-mail oraz onboardingu OAuth.
 
 ## Ważne przed publicznym MVP
 
-Ósmoklasiści są zazwyczaj osobami niepełnoletnimi. Obecny interfejs zbiera potwierdzenie zgody opiekuna, ale przed publicznym startem trzeba wdrożyć weryfikowalny proces zgody rodzicielskiej, uzupełnić politykę prywatności i skonsultować podstawę przetwarzania z prawnikiem.
+Ósmoklasiści są zazwyczaj osobami niepełnoletnimi. Obecny interfejs zapisuje oświadczenie o zgodzie opiekuna, ale przed publicznym startem trzeba wdrożyć weryfikowalny proces po stronie rodzica. Pakiet roboczych dokumentów jest dostępny pod `/informacje-prawne`; wszystkie pola oznaczone `[UZUPEŁNIJ]` i okresy retencji muszą zostać potwierdzone przed startem.

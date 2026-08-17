@@ -5,6 +5,7 @@ import Link from "next/link";
 import { BrandLogo } from "@/components/brand-logo";
 import { getSupabaseClient } from "@/lib/supabase-browser";
 import type { SelfServiceRole } from "@/lib/roles";
+import { LEGAL_VERSION } from "@/lib/legal";
 
 const choices: Array<{
   value: SelfServiceRole;
@@ -35,15 +36,27 @@ const choices: Array<{
 export default function ChooseRolePage() {
   const [role, setRole] = useState<SelfServiceRole>("student");
   const [guardianConsent, setGuardianConsent] = useState(false);
+  const [acceptedLegal, setAcceptedLegal] = useState(false);
   const [busy, setBusy] = useState(true);
   const [error, setError] = useState("");
 
   useEffect(() => {
     getSupabaseClient()
-      .then((supabase) => supabase.auth.getSession())
-      .then(({ data }) => {
-        if (!data.session) window.location.replace("/logowanie");
-        else setBusy(false);
+      .then(async (supabase) => {
+        const { data } = await supabase.auth.getSession();
+        if (!data.session) {
+          window.location.replace("/logowanie");
+          return;
+        }
+        const { data: profile } = await supabase
+          .from("profiles")
+          .select("role,guardian_consent_at,legal_version")
+          .eq("id", data.session.user.id)
+          .single();
+        if (profile?.role === "student" || profile?.role === "parent" || profile?.role === "teacher") setRole(profile.role);
+        setGuardianConsent(Boolean(profile?.guardian_consent_at));
+        setAcceptedLegal(profile?.legal_version === LEGAL_VERSION);
+        setBusy(false);
       })
       .catch(() => {
         setError("Nie udało się odczytać sesji. Zaloguj się ponownie.");
@@ -52,6 +65,11 @@ export default function ChooseRolePage() {
   }, []);
 
   async function saveRole() {
+    if (!acceptedLegal) {
+      setError("Zaakceptuj regulamin i zapoznaj się z polityką prywatności.");
+      return;
+    }
+
     if (role === "student" && !guardianConsent) {
       setError("Konto ucznia wymaga potwierdzenia zgody rodzica lub opiekuna.");
       return;
@@ -67,6 +85,11 @@ export default function ChooseRolePage() {
         window.location.replace("/logowanie");
         return;
       }
+
+      const { error: legalError } = await supabase.rpc("record_legal_acceptance", {
+        accepted_version: LEGAL_VERSION,
+      });
+      if (legalError) throw legalError;
 
       const { error: updateError } = await supabase
         .from("profiles")
@@ -127,6 +150,10 @@ export default function ChooseRolePage() {
             <span>Mam zgodę rodzica lub opiekuna na utworzenie konta.</span>
           </label>
         )}
+        <label className="check-row onboarding-consent legal-consent">
+          <input type="checkbox" checked={acceptedLegal} onChange={(event) => setAcceptedLegal(event.target.checked)} />
+          <span>Akceptuję <a href="/regulamin" target="_blank">regulamin</a> i potwierdzam zapoznanie się z <a href="/polityka-prywatnosci" target="_blank">polityką prywatności</a>.</span>
+        </label>
         {error && <div className="auth-notice error" role="status">{error}</div>}
         <button className="auth-submit" type="button" disabled={busy} onClick={saveRole}>
           {busy ? "Chwila…" : "Przejdź do mojego panelu"}<span>→</span>

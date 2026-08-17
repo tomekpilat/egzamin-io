@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { FormEvent, useState } from "react";
 import { BrandLogo } from "@/components/brand-logo";
+import { LEGAL_VERSION } from "@/lib/legal";
 import { getSupabaseClient } from "@/lib/supabase-browser";
 import type { SelfServiceRole } from "@/lib/roles";
 
@@ -79,7 +80,7 @@ export default function LoginPage() {
     if (mode === "signup" && !acceptedTerms) {
       setNotice({
         type: "error",
-        message: "Zaakceptuj politykę prywatności, aby utworzyć konto.",
+        message: "Zaakceptuj regulamin i zapoznaj się z polityką prywatności.",
       });
       return;
     }
@@ -106,6 +107,8 @@ export default function LoginPage() {
               requested_role: role,
               guardian_consent_confirmed:
                 role === "student" ? guardianConsent : false,
+              legal_accepted: true,
+              legal_version: LEGAL_VERSION,
             },
           },
         });
@@ -326,7 +329,7 @@ export default function LoginPage() {
                   onChange={(event) => setAcceptedTerms(event.target.checked)}
                 />
                 <span>
-                  Akceptuję <a href="/polityka-prywatnosci">politykę prywatności</a>.
+                  Akceptuję <a href="/regulamin" target="_blank">regulamin</a> i potwierdzam zapoznanie się z <a href="/polityka-prywatnosci" target="_blank">polityką prywatności</a>.
                 </span>
               </label>
             )}

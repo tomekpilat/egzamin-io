@@ -53,6 +53,8 @@ Konfiguracja Supabase, providerów OAuth i administratora jest opisana w [docs/s
 
 Strategia wejścia na rynek znajduje się w [docs/marketing-strategy-mvp.md](docs/marketing-strategy-mvp.md).
 
+Roboczy pakiet prawny (prywatność, regulamin, cookies, dzieci i AI oraz odstąpienie od umowy) jest dostępny pod `/informacje-prawne`. Dokumenty są celowo wyłączone z indeksowania do czasu uzupełnienia danych operatora, dostawców i konsultacji prawnej.
+
 ## Weryfikacja
 
 ```bash

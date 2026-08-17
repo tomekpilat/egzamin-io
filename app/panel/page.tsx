@@ -6,6 +6,7 @@ import type { User } from "@supabase/supabase-js";
 import { BrandLogo } from "@/components/brand-logo";
 import { isUserRole, roleLabels, type UserRole } from "@/lib/roles";
 import { getSupabaseClient } from "@/lib/supabase-browser";
+import { LEGAL_VERSION } from "@/lib/legal";
 
 type Profile = {
   id: string;
@@ -13,6 +14,7 @@ type Profile = {
   display_name: string | null;
   role: UserRole;
   onboarding_completed: boolean;
+  legal_version: string | null;
 };
 
 type RoleCounts = Record<UserRole, number>;
@@ -152,7 +154,7 @@ export default function DashboardPage() {
 
           const { data, error: profileError } = await supabase
             .from("profiles")
-            .select("id,email,display_name,role,onboarding_completed")
+            .select("id,email,display_name,role,onboarding_completed,legal_version")
             .eq("id", nextUser.id)
             .single();
 
@@ -161,7 +163,7 @@ export default function DashboardPage() {
           }
 
           const nextProfile = data as Profile;
-          if (!nextProfile.onboarding_completed && nextProfile.role !== "admin") {
+          if ((!nextProfile.onboarding_completed || nextProfile.legal_version !== LEGAL_VERSION) && nextProfile.role !== "admin") {
             window.location.replace("/wybierz-role");
             return;
           }

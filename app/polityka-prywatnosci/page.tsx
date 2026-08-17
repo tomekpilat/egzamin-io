@@ -1,35 +1,129 @@
-import { BrandLogo } from "@/components/brand-logo";
-import Link from "next/link";
 import type { Metadata } from "next";
+import { LegalShell } from "@/components/legal-shell";
+import { LEGAL_UPDATED_LABEL } from "@/lib/legal";
 
 export const metadata: Metadata = {
   title: "Polityka prywatności — egzaminio",
-  description: "Informacje o danych przetwarzanych przez egzaminio.",
+  description: "Jak egzaminio przetwarza dane uczniów, rodziców i nauczycieli.",
+  robots: { index: false, follow: false },
 };
 
 export default function PrivacyPage() {
   return (
-    <main className="legal-page">
-      <header className="account-header">
-        <Link href="/" aria-label="egzaminio — strona główna"><BrandLogo /></Link>
-        <Link href="/" className="account-back">← Wróć na stronę</Link>
-      </header>
-      <article>
-        <span className="section-kicker">Dokument roboczy MVP</span>
-        <h1>Polityka prywatności egzaminio</h1>
-        <p className="legal-lead">Ostatnia aktualizacja: 17 sierpnia 2026 r.</p>
-        <div className="legal-alert"><b>Przed publicznym uruchomieniem</b><p>Ten dokument wymaga uzupełnienia o dane administratora, wybrany region Supabase, okresy retencji oraz przeglądu prawnego procesu zgody rodzica.</p></div>
-        <h2>Jakie dane przetwarzamy</h2>
-        <p>Na etapie konta są to: adres e-mail, nazwa wyświetlana, wybrana rola, identyfikator konta oraz techniczne informacje niezbędne do utrzymania bezpiecznej sesji. Dla konta ucznia zapisujemy również informację o potwierdzeniu zgody rodzica lub opiekuna.</p>
-        <h2>Do czego używamy danych</h2>
-        <p>Dane służą do logowania, wyświetlania właściwego panelu, zapisywania postępów, limitowania bezpłatnych pytań do AI oraz ochrony konta przed nieuprawnionym dostępem.</p>
-        <h2>Logowanie zewnętrzne</h2>
-        <p>Jeżeli wybierzesz Google lub Facebook, operator logowania przekaże Supabase podstawowe dane konta potrzebne do uwierzytelnienia. Nie publikujemy niczego w Twoim imieniu.</p>
-        <h2>Konta uczniów</h2>
-        <p>egzaminio jest projektowane dla osób niepełnoletnich, dlatego język komunikatów powinien być zrozumiały, zakres danych minimalny, a proces zgody opiekuna zweryfikowany przed publicznym startem produktu.</p>
-        <h2>Twoje prawa</h2>
-        <p>Możesz poprosić o dostęp do danych, ich poprawienie, usunięcie, ograniczenie przetwarzania albo wycofać zgodę, pisząc na <a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a>.</p>
-      </article>
-    </main>
+    <LegalShell currentPath="/polityka-prywatnosci" title="Polityka prywatności" description={`Wersja robocza · ostatnia aktualizacja: ${LEGAL_UPDATED_LABEL}`}>
+      <div className="legal-alert legal-alert-critical">
+        <b>Uzupełnij przed publicznym uruchomieniem</b>
+        <p>Administratorem będzie: <mark>[NAZWA / IMIĘ I NAZWISKO, ADRES, KRAJ, DANE REJESTROWE]</mark>. Kontakt: <a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a>. Jeżeli administrator jest poza EOG i oferuje usługę osobom w Polsce, prawnik powinien zweryfikować obowiązek wyznaczenia przedstawiciela w UE.</p>
+      </div>
+
+      <nav className="legal-toc" aria-label="Spis treści">
+        <b>Na tej stronie</b><a href="#administrator">Administrator</a><a href="#dane">Dane i źródła</a><a href="#cele">Cele i podstawy</a><a href="#dzieci">Dzieci i rodzice</a><a href="#ai">Nauczyciel AI</a><a href="#odbiorcy">Dostawcy i transfery</a><a href="#retencja">Jak długo przechowujemy</a><a href="#prawa">Twoje prawa</a>
+      </nav>
+
+      <section className="legal-section" id="administrator">
+        <h2>1. Kto odpowiada za dane</h2>
+        <p>Administratorem danych osobowych użytkowników egzaminio jest podmiot wskazany powyżej. To on decyduje, po co i jak przetwarzane są dane. W sprawach prywatności, usunięcia konta lub wycofania zgody napisz na <a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a>. Inspektor ochrony danych: <mark>[NIE WYZNACZONO / UZUPEŁNIJ KONTAKT]</mark>.</p>
+      </section>
+
+      <section className="legal-section" id="dane">
+        <h2>2. Jakie dane przetwarzamy i skąd je mamy</h2>
+        <div className="legal-table-wrap"><table>
+          <thead><tr><th>Obszar</th><th>Przykładowe dane</th><th>Źródło</th></tr></thead>
+          <tbody>
+            <tr><td>Konto i logowanie</td><td>E-mail, nazwa wyświetlana, identyfikator konta, dostawca logowania, znaczniki czasu, rola</td><td>Od Ciebie lub z Google/Facebook po wybraniu logowania społecznościowego</td></tr>
+            <tr><td>Konto ucznia</td><td>Wybrana rola, informacja i dowód zgody/upoważnienia opiekuna, powiązanie z kontem rodzica</td><td>Od ucznia i opiekuna</td></tr>
+            <tr><td>Nauka</td><td>Odpowiedzi, wyniki, czas pracy, tematy, postęp, limity pytań</td><td>Z aktywności w usłudze</td></tr>
+            <tr><td>Rozmowy z AI</td><td>Treść pytania, kontekst zadania, odpowiedź modelu, ocena odpowiedzi i zgłoszenie błędu</td><td>Od użytkownika i systemu AI</td></tr>
+            <tr><td>Rodzic i nauczyciel</td><td>Zaproszenia, powiązania kont, grupy, zestawy i raporty postępów</td><td>Od użytkowników i z ich aktywności</td></tr>
+            <tr><td>Płatności</td><td>Plan, status płatności, identyfikator transakcji, dane do dokumentu sprzedaży; bez pełnych danych karty</td><td>Od użytkownika i operatora płatności po uruchomieniu planu płatnego</td></tr>
+            <tr><td>Bezpieczeństwo</td><td>Adres IP, typ urządzenia i przeglądarki, zdarzenia logowania, błędy, identyfikatory sesji</td><td>Automatycznie z urządzenia i infrastruktury</td></tr>
+            <tr><td>Kontakt</td><td>Treść wiadomości, adres kontaktowy, historia rozwiązania sprawy</td><td>Od osoby kontaktującej się</td></tr>
+          </tbody>
+        </table></div>
+        <p>Nie prosimy o dane szczególnej kategorii, numery PESEL, adres domowy ucznia ani informacje medyczne. Nie wpisuj ich do rozmowy z AI. Jeżeli trafią tam przypadkowo, mogą zostać usunięte lub zanonimizowane.</p>
+      </section>
+
+      <section className="legal-section" id="cele">
+        <h2>3. Po co i na jakiej podstawie</h2>
+        <div className="legal-table-wrap"><table>
+          <thead><tr><th>Cel</th><th>Podstawa</th></tr></thead>
+          <tbody>
+            <tr><td>Utworzenie konta, logowanie, ćwiczenia, zapis postępu i obsługa AI</td><td>Niezbędność do wykonania umowy lub działań przed jej zawarciem — art. 6 ust. 1 lit. b RODO</td></tr>
+            <tr><td>Rozliczenia, rachunkowość, obowiązki konsumenckie i odpowiedzi organom</td><td>Obowiązek prawny — art. 6 ust. 1 lit. c RODO</td></tr>
+            <tr><td>Bezpieczeństwo, zapobieganie nadużyciom, diagnostyka, obrona roszczeń i podstawowe statystyki usługi</td><td>Prawnie uzasadniony interes — art. 6 ust. 1 lit. f RODO, po teście równowagi uwzględniającym szczególną ochronę dzieci</td></tr>
+            <tr><td>Opcjonalna analityka, personalizacja marketingowa lub newsletter</td><td>Zgoda — art. 6 ust. 1 lit. a RODO; dla zapisu/odczytu na urządzeniu również zgoda, jeżeli jest wymagana</td></tr>
+            <tr><td>Usługa dla dziecka, gdy jej podstawą jest zgoda</td><td>Zgoda dziecka lub opiekuna zgodnie z właściwym progiem wieku i art. 8 RODO; przed startem publicznym wdrożymy rozsądną weryfikację opiekuna</td></tr>
+          </tbody>
+        </table></div>
+        <p>Podanie danych konta jest dobrowolne, ale bez e-maila lub zewnętrznego identyfikatora nie utworzymy konta. Dane oznaczone jako opcjonalne nie wpływają na dostęp do podstawowej usługi. Zgodę można wycofać równie łatwo, jak została udzielona.</p>
+      </section>
+
+      <section className="legal-section" id="dzieci">
+        <h2>4. Konta dzieci i rola rodzica</h2>
+        <p>Usługa jest projektowana dla ósmoklasistów, dlatego stosujemy minimalizację danych, komunikaty zrozumiałe dla dziecka i ustawienia zapewniające wysoki poziom prywatności. Przed publicznym uruchomieniem kont uczniów poniżej 16 lat samo zaznaczenie pola przez ucznia zostanie zastąpione procesem weryfikacji opiekuna, np. przez oddzielny link e-mail.</p>
+        <ul>
+          <li>Rodzic zobaczy po połączeniu konta postęp, regularność i obszary do powtórki.</li>
+          <li>Treść prywatnych rozmów ucznia z AI nie będzie domyślnie wyświetlana rodzicowi, chyba że wymaga tego bezpieczeństwo, prawo lub uczeń sam ją udostępni.</li>
+          <li>Nie kierujemy do dzieci reklam opartych na profilowaniu ani bezpośrednich wezwań do zakupu lub namawiania rodzica na zakup.</li>
+          <li>Opiekun może wycofać zgodę i poprosić o usunięcie konta dziecka.</li>
+        </ul>
+        <p>Więcej wyjaśniamy na stronie <a href="/bezpieczenstwo-dzieci-ai">Dzieci i AI</a>.</p>
+      </section>
+
+      <section className="legal-section" id="ai">
+        <h2>5. Jak działa nauczyciel AI</h2>
+        <p>Użytkownik jest wyraźnie informowany, że rozmawia z systemem sztucznej inteligencji, a nie z człowiekiem. Pytanie, kontekst zadania i niezbędne instrukcje są przesyłane do dostawcy modelu: <mark>[UZUPEŁNIJ DOSTAWCĘ, MODEL, REGION I USTAWIENIA TRENINGU]</mark>. Odpowiedzi mogą zawierać błędy. Nie gwarantujemy wyniku egzaminu i zachęcamy do sprawdzenia odpowiedzi w materiałach źródłowych lub z nauczycielem.</p>
+        <p>Profil nauki może dopasowywać kolejność ćwiczeń i podpowiedzi, ale MVP nie podejmuje wyłącznie automatycznych decyzji wywołujących skutki prawne lub podobnie istotnie wpływających na użytkownika. Jeżeli taka funkcja powstanie, polityka i mechanizm kontroli człowieka zostaną zaktualizowane przed jej użyciem.</p>
+      </section>
+
+      <section className="legal-section" id="odbiorcy">
+        <h2>6. Komu powierzamy dane</h2>
+        <p>Dostęp otrzymują tylko podmioty potrzebne do działania usługi i osoby upoważnione:</p>
+        <ul>
+          <li><b>Supabase</b> — uwierzytelnianie i baza danych; <mark>[UZUPEŁNIJ REGION PROJEKTU I DPA]</mark>.</li>
+          <li><b>Google i Meta</b> — wyłącznie gdy użytkownik wybierze odpowiednie logowanie; dostawca przetwarza też dane według własnych zasad.</li>
+          <li><b>Hosting i kopie zapasowe</b> — <mark>[UZUPEŁNIJ FAKTYCZNEGO DOSTAWCĘ, LOKALIZACJĘ I PODPROCESORÓW; Coolify jest oprogramowaniem, nie nazwą hostingu]</mark>.</li>
+          <li><b>Dostawca AI</b> — <mark>[UZUPEŁNIJ]</mark>; należy wyłączyć używanie treści dzieci do trenowania modeli, jeżeli dostawca na to pozwala, i zawrzeć właściwe warunki powierzenia.</li>
+          <li><b>E-mail, płatności, obsługa i analityka</b> — <mark>[UZUPEŁNIJ PRZED WŁĄCZENIEM KAŻDEJ USŁUGI]</mark>.</li>
+          <li>Organy publiczne — tylko gdy wymaga tego prawo.</li>
+        </ul>
+        <p>Jeżeli dane trafią poza EOG, zastosujemy właściwy mechanizm z rozdziału V RODO, np. decyzję stwierdzającą odpowiedni stopień ochrony albo standardowe klauzule umowne wraz z oceną transferu. Dokładny mechanizm zostanie wskazany po wyborze regionów i dostawców.</p>
+      </section>
+
+      <section className="legal-section" id="retencja">
+        <h2>7. Jak długo przechowujemy dane</h2>
+        <p>Poniższe okresy są rekomendacją MVP i muszą zostać wdrożone technicznie oraz potwierdzone po wyborze infrastruktury:</p>
+        <div className="legal-table-wrap"><table>
+          <thead><tr><th>Dane</th><th>Planowany okres</th></tr></thead>
+          <tbody>
+            <tr><td>Konto, profil i postęp</td><td>Do usunięcia konta lub zakończenia umowy, następnie do 30 dni w systemach aktywnych i do 90 dni w rotacyjnych kopiach zapasowych</td></tr>
+            <tr><td>Surowa treść rozmów z AI</td><td>90 dni, chyba że użytkownik usunie ją wcześniej, dłuższe zachowanie jest potrzebne do zgłoszenia lub prawo wymaga inaczej</td></tr>
+            <tr><td>Zanonimizowane statystyki nauki</td><td>Bezterminowo, jeżeli nie pozwalają już zidentyfikować osoby</td></tr>
+            <tr><td>Logi bezpieczeństwa</td><td>12 miesięcy, dłużej wyłącznie dla konkretnego incydentu lub roszczenia</td></tr>
+            <tr><td>Kontakt i reklamacje</td><td>24 miesiące od zamknięcia sprawy lub przez okres dochodzenia/obrony roszczeń</td></tr>
+            <tr><td>Zgody i ich wycofanie</td><td>Przez czas korzystania z podstawy zgody i okres niezbędny do wykazania zgodności lub obrony roszczeń</td></tr>
+            <tr><td>Dokumenty rozliczeniowe</td><td>Przez okres wymagany przez przepisy podatkowe i rachunkowe właściwe dla operatora</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+
+      <section className="legal-section" id="prawa">
+        <h2>8. Twoje prawa</h2>
+        <p>W zależności od podstawy i sytuacji możesz żądać:</p>
+        <ul><li>dostępu do danych i ich kopii,</li><li>sprostowania danych,</li><li>usunięcia danych lub ograniczenia przetwarzania,</li><li>przeniesienia danych dostarczonych na podstawie zgody lub umowy,</li><li>sprzeciwu wobec przetwarzania opartego na prawnie uzasadnionym interesie,</li><li>wycofania zgody bez wpływu na zgodność wcześniejszego przetwarzania.</li></ul>
+        <p>Napisz na <a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a>. Możemy poprosić o rozsądną weryfikację tożsamości. Odpowiemy co do zasady w ciągu miesiąca. Masz też prawo złożyć skargę do <a href="https://uodo.gov.pl/pl/p/skargi" target="_blank" rel="noreferrer">Prezesa Urzędu Ochrony Danych Osobowych</a> lub właściwego organu w swoim kraju.</p>
+      </section>
+
+      <section className="legal-section">
+        <h2>9. Bezpieczeństwo i zmiany dokumentu</h2>
+        <p>Stosujemy kontrolę dostępu opartą na rolach, polityki dostępu do wierszy bazy, szyfrowane połączenia, ograniczone klucze aplikacji, kopie zapasowe i rejestrowanie zdarzeń. Żaden system nie daje jednak absolutnego bezpieczeństwa. Incydenty oceniamy i zgłaszamy osobom lub organowi, gdy wymaga tego prawo.</p>
+        <p>O istotnej zmianie poinformujemy w aplikacji lub e-mailem z wyprzedzeniem właściwym do jej wpływu. Gdy zmieni się cel oparty na zgodzie albo warunki umowy, poprosimy o nową zgodę lub akceptację, jeżeli będzie to wymagane.</p>
+      </section>
+
+      <section className="legal-section legal-source-note">
+        <h2>Oficjalne źródła</h2>
+        <p><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" target="_blank" rel="noreferrer">RODO — EUR-Lex</a>, <a href="https://uodo.gov.pl/pl/493/2261" target="_blank" rel="noreferrer">prawa dzieci według UODO</a> i <a href="https://digital-strategy.ec.europa.eu/en/policies/guidelines-transparency-ai-generated-content" target="_blank" rel="noreferrer">przejrzystość AI — Komisja Europejska</a>.</p>
+      </section>
+    </LegalShell>
   );
 }
