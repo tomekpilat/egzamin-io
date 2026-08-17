@@ -1,0 +1,11 @@
+.git
+.gitignore
+.wrangler
+dist
+node_modules
+npm-debug.log*
+.DS_Store
+.env
+.env.*
+!.env.example
+docs/previews

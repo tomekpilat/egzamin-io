@@ -23,6 +23,22 @@ npm run dev
 
 Strona będzie dostępna pod adresem `http://localhost:3000`.
 
+## Docker
+
+Obraz produkcyjny korzysta z wieloetapowego buildu i uruchamia wyłącznie serwer standalone na porcie `3000`.
+
+```bash
+docker build -t egzaminio .
+docker run --rm -p 3000:3000 egzaminio
+```
+
+Po uruchomieniu:
+
+- strona: `http://localhost:3000`
+- health check: `http://localhost:3000/api/health`
+
+Szczegółowa instrukcja wdrożenia znajduje się w [docs/coolify-deployment.md](docs/coolify-deployment.md).
+
 ## Weryfikacja
 
 ```bash
