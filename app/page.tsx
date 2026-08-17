@@ -1,21 +1,6 @@
 "use client";
 
-function BrandLogo({ compact = false }: { compact?: boolean }) {
-  return (
-    <span
-      className={`wordmark${compact ? " wordmark-compact" : ""}`}
-      role="img"
-      aria-label="egzaminio"
-    >
-      <span aria-hidden="true">
-        <span className="wordmark-main">egzamin</span>
-        <span className="wordmark-io">
-          i<span className="wordmark-o">o<span className="wordmark-check">✓</span></span>
-        </span>
-      </span>
-    </span>
-  );
-}
+import { BrandLogo } from "@/components/brand-logo";
 
 export default function Home() {
   return (
@@ -29,7 +14,10 @@ export default function Home() {
           <a href="#dla-rodzica">Dla rodzica</a>
           <a href="#dostep">Dostęp</a>
         </nav>
-        <a className="header-cta" href="#zapisz-sie">Powiadom mnie</a>
+        <div className="header-actions">
+          <a className="header-login" href="/logowanie">Zaloguj się</a>
+          <a className="header-cta" href="/logowanie?tryb=rejestracja">Załóż konto</a>
+        </div>
       </header>
 
       <section className="hero" id="top">
@@ -40,7 +28,7 @@ export default function Home() {
             Ćwicz na zadaniach z arkuszy CKE. A gdy utkniesz, nauczyciel AI wyjaśni Ci wszystko prostym językiem — bez podawania gotowca.
           </p>
           <div className="hero-actions">
-            <a className="primary-action" href="#zapisz-sie">Chcę wiedzieć o starcie <span>→</span></a>
+            <a className="primary-action" href="/logowanie?tryb=rejestracja">Wypróbuj za darmo <span>→</span></a>
             <a className="text-action" href="#jak-to-dziala">Zobacz, jak to działa <span>↓</span></a>
           </div>
           <div className="hero-trust">
@@ -185,7 +173,7 @@ export default function Home() {
             <h3>Plan bezpłatny</h3>
             <div className="plan-price">0 zł <small>/ miesiąc</small></div>
             <ul><li>✓ Wybrane ćwiczenia CKE</li><li>✓ 3 pytania do AI dziennie</li><li>✓ Podstawowy podgląd postępów</li></ul>
-            <a href="#zapisz-sie">Powiadom mnie o starcie</a>
+            <a href="/logowanie?tryb=rejestracja">Załóż darmowe konto</a>
           </article>
           <article className="plan-card plus-plan">
             <span className="plan-label">Więcej nauki</span>
@@ -201,17 +189,17 @@ export default function Home() {
         <span className="signup-orbit orbit-one" />
         <span className="signup-orbit orbit-two" />
         <div className="signup-logo"><BrandLogo /></div>
-        <span className="section-kicker">Premiera w przygotowaniu</span>
+        <span className="section-kicker">Darmowy start</span>
         <h2>Spokojniejszy egzamin<br />zaczyna się od jednego zadania.</h2>
-        <p>egzaminio powstaje z myślą o uczniach ósmej klasy i ich rodzicach. Już wkrótce podamy datę startu.</p>
-        <a className="primary-action signup-action" href="mailto:kontakt@egzamin.io?subject=Chcę%20wiedzieć%20o%20starcie%20egzaminio">Chcę wiedzieć o starcie <span>→</span></a>
-        <small>Bez spamu. Tylko informacja o premierze i dostępie testowym.</small>
+        <p>Załóż konto ucznia, rodzica albo nauczyciela. Pierwsze ćwiczenia i 3 pytania do nauczyciela AI są bezpłatne.</p>
+        <a className="primary-action signup-action" href="/logowanie?tryb=rejestracja">Załóż darmowe konto <span>→</span></a>
+        <small>Bez karty płatniczej. Konto ucznia wymaga zgody rodzica lub opiekuna.</small>
       </section>
 
       <footer className="site-footer">
         <a className="brand" href="#top" aria-label="egzaminio — wróć na górę"><BrandLogo /></a>
         <p>Ćwiczenia do egzaminu ósmoklasisty, które naprawdę tłumaczą.</p>
-        <div><a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a><span>© 2026 egzaminio</span></div>
+        <div><a href="/logowanie">Logowanie</a><a href="/polityka-prywatnosci">Prywatność</a><a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a><span>© 2026 egzaminio</span></div>
         <small>egzaminio jest niezależnym projektem edukacyjnym i nie jest powiązany z Centralną Komisją Egzaminacyjną.</small>
       </footer>
     </main>

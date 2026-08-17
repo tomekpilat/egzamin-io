@@ -39,6 +39,20 @@ Po uruchomieniu:
 
 Szczegółowa instrukcja wdrożenia znajduje się w [docs/coolify-deployment.md](docs/coolify-deployment.md).
 
+## Konta i role
+
+Logowanie korzysta z tego samego stacku co kancelio.pl: Supabase Auth, PostgreSQL i Row Level Security. Dostępne są:
+
+- własna rejestracja przez e-mail i hasło,
+- logowanie przez Google,
+- logowanie przez Facebook,
+- role: uczeń, rodzic, nauczyciel i administrator,
+- osobne panele startowe dla każdej roli.
+
+Konfiguracja Supabase, providerów OAuth i administratora jest opisana w [docs/supabase-auth-setup.md](docs/supabase-auth-setup.md).
+
+Strategia wejścia na rynek znajduje się w [docs/marketing-strategy-mvp.md](docs/marketing-strategy-mvp.md).
+
 ## Weryfikacja
 
 ```bash

@@ -26,6 +26,15 @@ W konfiguracji sieci aplikacji ustaw:
 
 Opcjonalnie dodaj również `https://www.egzamin.io` i ustaw przekierowanie na domenę główną. Kontener nasłuchuje na `0.0.0.0:3000`, więc nie trzeba dodawać zmiennych `PORT` ani `HOST` w Coolify.
 
+Do działania logowania dodaj zmienne runtime:
+
+```text
+SUPABASE_URL=https://TWOJ_PROJECT_REF.supabase.co
+SUPABASE_PUBLISHABLE_KEY=sb_publishable_...
+```
+
+Pełna konfiguracja bazy, Google i Facebooka jest opisana w [supabase-auth-setup.md](supabase-auth-setup.md).
+
 ## 3. DNS
 
 U dostawcy domeny ustaw rekord `A` dla domeny głównej na publiczny adres IPv4 serwera Coolify:
