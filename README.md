@@ -1,4 +1,4 @@
-# egzamin.io
+# egzaminio
 
 Teaser aplikacji do przygotowania ósmoklasistów do egzaminu. Produkt łączy ćwiczenia oparte na arkuszach CKE z nauczycielem AI, który udziela podpowiedzi i wyjaśnia rozwiązania krok po kroku.
 
@@ -21,4 +21,4 @@ npm run build
 
 ## Ważne
 
-egzamin.io jest niezależnym projektem edukacyjnym i nie jest powiązany z Centralną Komisją Egzaminacyjną.
+egzaminio jest niezależnym projektem edukacyjnym i nie jest powiązany z Centralną Komisją Egzaminacyjną.

@@ -14,11 +14,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://egzamin.io"),
-  title: "egzamin.io — Egzamin bez paniki",
+  title: "egzaminio — Egzamin bez paniki",
   description:
     "Ćwiczenia z arkuszy CKE i nauczyciel AI, który wyjaśnia zadania krok po kroku.",
   openGraph: {
-    title: "egzamin.io — Egzamin bez paniki. Krok po kroku.",
+    title: "egzaminio — Egzamin bez paniki. Krok po kroku.",
     description:
       "Ćwicz na zadaniach z arkuszy CKE i pytaj nauczyciela AI, gdy czegoś nie rozumiesz.",
     type: "website",
@@ -28,13 +28,13 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1730,
         height: 909,
-        alt: "egzamin.io — Egzamin bez paniki. Krok po kroku.",
+        alt: "egzaminio — Egzamin bez paniki. Krok po kroku.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "egzamin.io — Egzamin bez paniki. Krok po kroku.",
+    title: "egzaminio — Egzamin bez paniki. Krok po kroku.",
     description:
       "Ćwiczenia z arkuszy CKE i nauczyciel AI, który naprawdę tłumaczy.",
     images: ["/og.png"],

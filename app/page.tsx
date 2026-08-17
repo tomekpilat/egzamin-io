@@ -1,12 +1,28 @@
 "use client";
 
+function BrandLogo({ compact = false }: { compact?: boolean }) {
+  return (
+    <span
+      className={`wordmark${compact ? " wordmark-compact" : ""}`}
+      role="img"
+      aria-label="egzaminio"
+    >
+      <span aria-hidden="true">
+        <span className="wordmark-main">egzamin</span>
+        <span className="wordmark-io">
+          i<span className="wordmark-o">o<span className="wordmark-check">✓</span></span>
+        </span>
+      </span>
+    </span>
+  );
+}
+
 export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="egzamin.io — strona główna">
-          <span className="brand-mark">8</span>
-          <span>egzamin.io</span>
+        <a className="brand" href="#top" aria-label="egzaminio — strona główna">
+          <BrandLogo />
         </a>
         <nav className="desktop-nav" aria-label="Główna nawigacja">
           <a href="#jak-to-dziala">Jak to działa</a>
@@ -33,11 +49,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="product-stage" aria-label="Podgląd ćwiczenia w aplikacji egzamin.io">
+        <div className="product-stage" aria-label="Podgląd ćwiczenia w aplikacji egzaminio">
           <div className="stage-glow" />
           <div className="product-window">
             <div className="window-bar">
-              <span className="mini-brand"><b>8</b> egzamin.io</span>
+              <span className="mini-brand"><BrandLogo compact /></span>
               <span className="lesson-count">Zadanie 2 z 6</span>
               <span className="mini-avatar">KN</span>
             </div>
@@ -184,19 +200,19 @@ export default function Home() {
       <section className="signup-section" id="zapisz-sie">
         <span className="signup-orbit orbit-one" />
         <span className="signup-orbit orbit-two" />
-        <div className="signup-mark">8</div>
+        <div className="signup-logo"><BrandLogo /></div>
         <span className="section-kicker">Premiera w przygotowaniu</span>
         <h2>Spokojniejszy egzamin<br />zaczyna się od jednego zadania.</h2>
-        <p>egzamin.io powstaje z myślą o uczniach ósmej klasy i ich rodzicach. Już wkrótce podamy datę startu.</p>
-        <a className="primary-action signup-action" href="mailto:kontakt@egzamin.io?subject=Chcę%20wiedzieć%20o%20starcie%20egzamin.io">Chcę wiedzieć o starcie <span>→</span></a>
+        <p>egzaminio powstaje z myślą o uczniach ósmej klasy i ich rodzicach. Już wkrótce podamy datę startu.</p>
+        <a className="primary-action signup-action" href="mailto:kontakt@egzamin.io?subject=Chcę%20wiedzieć%20o%20starcie%20egzaminio">Chcę wiedzieć o starcie <span>→</span></a>
         <small>Bez spamu. Tylko informacja o premierze i dostępie testowym.</small>
       </section>
 
       <footer className="site-footer">
-        <a className="brand" href="#top"><span className="brand-mark">8</span><span>egzamin.io</span></a>
+        <a className="brand" href="#top" aria-label="egzaminio — wróć na górę"><BrandLogo /></a>
         <p>Ćwiczenia do egzaminu ósmoklasisty, które naprawdę tłumaczą.</p>
-        <div><a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a><span>© 2026 egzamin.io</span></div>
-        <small>egzamin.io jest niezależnym projektem edukacyjnym i nie jest powiązany z Centralną Komisją Egzaminacyjną.</small>
+        <div><a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a><span>© 2026 egzaminio</span></div>
+        <small>egzaminio jest niezależnym projektem edukacyjnym i nie jest powiązany z Centralną Komisją Egzaminacyjną.</small>
       </footer>
     </main>
   );
