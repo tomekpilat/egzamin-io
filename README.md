@@ -2,6 +2,8 @@
 
 Teaser aplikacji do przygotowania ósmoklasistów do egzaminu. Produkt łączy ćwiczenia oparte na arkuszach CKE z nauczycielem AI, który udziela podpowiedzi i wyjaśnia rozwiązania krok po kroku.
 
+Interfejs korzysta z lokalnych komponentów shadcn/ui na Tailwind CSS 4. Wzory TeX/MathML renderuje przypięty MathJax 4 z rozszerzeniami bezpieczeństwa i dostępności.
+
 ## Podgląd
 
 ### Desktop
@@ -39,6 +41,8 @@ Po uruchomieniu:
 
 Szczegółowa instrukcja wdrożenia znajduje się w [docs/coolify-deployment.md](docs/coolify-deployment.md).
 
+Kompletna konfiguracja Hetzner, domeny, firewalla, Coolify, Supabase i OAuth: [docs/hetzner-domain-coolify-setup.md](docs/hetzner-domain-coolify-setup.md).
+
 ## Konta i role
 
 Logowanie korzysta z tego samego stacku co kancelio.pl: Supabase Auth, PostgreSQL i Row Level Security. Dostępne są:
@@ -52,6 +56,8 @@ Logowanie korzysta z tego samego stacku co kancelio.pl: Supabase Auth, PostgreSQ
 Konfiguracja Supabase, providerów OAuth i administratora jest opisana w [docs/supabase-auth-setup.md](docs/supabase-auth-setup.md).
 
 Strategia wejścia na rynek znajduje się w [docs/marketing-strategy-mvp.md](docs/marketing-strategy-mvp.md).
+
+Etapowy plan funkcjonalności produktu znajduje się w [docs/mvp-implementation-plan.md](docs/mvp-implementation-plan.md).
 
 Roboczy pakiet prawny (prywatność, regulamin, cookies, dzieci i AI oraz odstąpienie od umowy) jest dostępny pod `/informacje-prawne`. Dokumenty są celowo wyłączone z indeksowania do czasu uzupełnienia danych operatora, dostawców i konsultacji prawnej.
 

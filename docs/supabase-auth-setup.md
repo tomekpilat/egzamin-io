@@ -13,7 +13,7 @@ egzaminio korzysta z tego samego modelu co kancelio.pl: Supabase Auth odpowiada 
    supabase db push
    ```
 
-Migracje `supabase/migrations/20260817190000_auth_profiles.sql` oraz `supabase/migrations/20260817210000_legal_acceptances.sql` tworzą profile, zapis wersjonowanej akceptacji dokumentów i cztery role:
+Migracje w `supabase/migrations/` tworzą profile, zapis wersjonowanej akceptacji dokumentów, zweryfikowany przepływ zgody opiekuna, stan weryfikacji nauczyciela i cztery role:
 
 - `student` — ćwiczenia, nauczyciel AI i własny postęp,
 - `parent` — połączone konta dzieci i raporty,
@@ -46,8 +46,10 @@ Dodaj do Redirect URLs:
 ```text
 https://egzamin.io/panel
 https://egzamin.io/wybierz-role
+https://egzamin.io/oczekuje-na-zgode
 http://localhost:3000/panel
 http://localhost:3000/wybierz-role
+http://localhost:3000/oczekuje-na-zgode
 ```
 
 Jeśli używasz `www`, dodaj analogiczne adresy z `https://www.egzamin.io`.
@@ -114,7 +116,9 @@ Sprawdź kolejno:
 6. brak możliwości ustawienia `admin` przez żądanie z przeglądarki,
 7. wylogowanie i wygaśnięcie sesji.
 8. zapis `terms_accepted_at`, `privacy_acknowledged_at` i `legal_version` po rejestracji e-mail oraz onboardingu OAuth.
+9. blokadę konta ucznia do czasu zatwierdzenia przez konto rodzica o zgodnym adresie e-mail.
+10. brak dostępu nieweryfikowanego nauczyciela do funkcji grup i wyników uczniów.
 
 ## Ważne przed publicznym MVP
 
-Ósmoklasiści są zazwyczaj osobami niepełnoletnimi. Obecny interfejs zapisuje oświadczenie o zgodzie opiekuna, ale przed publicznym startem trzeba wdrożyć weryfikowalny proces po stronie rodzica. Pakiet roboczych dokumentów jest dostępny pod `/informacje-prawne`; wszystkie pola oznaczone `[UZUPEŁNIJ]` i okresy retencji muszą zostać potwierdzone przed startem.
+Ósmoklasiści są zazwyczaj osobami niepełnoletnimi. Interfejs nie uznaje już checkboxa ucznia za zgodę: uczeń podaje osobny e-mail, czeka na `/oczekuje-na-zgode`, a zalogowany rodzic zatwierdza prośbę w panelu. Przed publicznym startem prawnik musi potwierdzić wystarczalność tej weryfikacji dla ostatecznego modelu usługi. Pakiet roboczych dokumentów jest dostępny pod `/informacje-prawne`; wszystkie pola oznaczone `[UZUPEŁNIJ]` i okresy retencji muszą zostać potwierdzone przed startem.

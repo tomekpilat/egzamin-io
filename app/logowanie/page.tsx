@@ -4,6 +4,10 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { FormEvent, useState } from "react";
 import { BrandLogo } from "@/components/brand-logo";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { LEGAL_VERSION } from "@/lib/legal";
 import { getSupabaseClient } from "@/lib/supabase-browser";
 import type { SelfServiceRole } from "@/lib/roles";
@@ -62,7 +66,7 @@ export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState<SelfServiceRole>("student");
-  const [guardianConsent, setGuardianConsent] = useState(false);
+  const [guardianEmail, setGuardianEmail] = useState("");
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [busy, setBusy] = useState(false);
   const [notice, setNotice] = useState<Notice>(null);
@@ -85,11 +89,16 @@ export default function LoginPage() {
       return;
     }
 
-    if (mode === "signup" && role === "student" && !guardianConsent) {
+    if (mode === "signup" && role === "student" && !guardianEmail.trim()) {
       setNotice({
         type: "error",
-        message: "Konto ucznia wymaga potwierdzenia zgody rodzica lub opiekuna.",
+        message: "Podaj e-mail rodzica lub opiekuna, który zatwierdzi konto ucznia.",
       });
+      return;
+    }
+
+    if (mode === "signup" && role === "student" && guardianEmail.trim().toLowerCase() === email.trim().toLowerCase()) {
+      setNotice({ type: "error", message: "E-mail opiekuna musi być inny niż e-mail ucznia." });
       return;
     }
 
@@ -105,8 +114,7 @@ export default function LoginPage() {
             data: {
               display_name: name.trim(),
               requested_role: role,
-              guardian_consent_confirmed:
-                role === "student" ? guardianConsent : false,
+              guardian_email: role === "student" ? guardianEmail.trim().toLowerCase() : null,
               legal_accepted: true,
               legal_version: LEGAL_VERSION,
             },
@@ -230,14 +238,14 @@ export default function LoginPage() {
           </div>
 
           <div className="social-buttons">
-            <button type="button" disabled={busy} onClick={() => handleSocial("google")}>
+            <Button variant="outline" type="button" disabled={busy} onClick={() => handleSocial("google")}>
               <span className="provider-mark google-mark">G</span>
               Kontynuuj z Google
-            </button>
-            <button type="button" disabled={busy} onClick={() => handleSocial("facebook")}>
+            </Button>
+            <Button variant="outline" type="button" disabled={busy} onClick={() => handleSocial("facebook")}>
               <span className="provider-mark facebook-mark">f</span>
               Kontynuuj z Facebookiem
-            </button>
+            </Button>
           </div>
 
           <div className="auth-divider"><span>lub przez e-mail</span></div>
@@ -245,9 +253,10 @@ export default function LoginPage() {
           <form className="auth-form" onSubmit={handleSubmit}>
             {mode === "signup" && (
               <>
-                <label>
+                <Label htmlFor="signup-name">
                   Imię
-                  <input
+                  <Input
+                    id="signup-name"
                     type="text"
                     value={name}
                     onChange={(event) => setName(event.target.value)}
@@ -257,7 +266,7 @@ export default function LoginPage() {
                     placeholder="Jak mamy się do Ciebie zwracać?"
                     required
                   />
-                </label>
+                </Label>
 
                 <fieldset className="role-picker">
                   <legend>Zakładam konto jako</legend>
@@ -284,9 +293,10 @@ export default function LoginPage() {
               </>
             )}
 
-            <label>
+            <Label htmlFor="auth-email">
               E-mail
-              <input
+              <Input
+                id="auth-email"
                 type="email"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
@@ -295,10 +305,11 @@ export default function LoginPage() {
                 placeholder="twoj@email.pl"
                 required
               />
-            </label>
-            <label>
+            </Label>
+            <Label htmlFor="auth-password">
               Hasło
-              <input
+              <Input
+                id="auth-password"
                 type="password"
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
@@ -308,17 +319,23 @@ export default function LoginPage() {
                 placeholder={mode === "signup" ? "Minimum 8 znaków" : "Twoje hasło"}
                 required
               />
-            </label>
+            </Label>
 
             {mode === "signup" && role === "student" && (
-              <label className="check-row">
-                <input
-                  type="checkbox"
-                  checked={guardianConsent}
-                  onChange={(event) => setGuardianConsent(event.target.checked)}
+              <Label htmlFor="guardian-email">
+                E-mail rodzica lub opiekuna
+                <Input
+                  id="guardian-email"
+                  type="email"
+                  value={guardianEmail}
+                  onChange={(event) => setGuardianEmail(event.target.value)}
+                  maxLength={254}
+                  autoComplete="email"
+                  placeholder="rodzic@email.pl"
+                  required
                 />
-                <span>Mam zgodę rodzica lub opiekuna na utworzenie konta.</span>
-              </label>
+                <small className="guardian-help">Wyślemy prośbę do opiekuna. Konto ucznia zacznie działać dopiero po zatwierdzeniu z konta rodzica.</small>
+              </Label>
             )}
 
             {mode === "signup" && (
@@ -335,19 +352,19 @@ export default function LoginPage() {
             )}
 
             {notice && (
-              <div className={`auth-notice ${notice.type}`} role="status" aria-live="polite">
-                {notice.message}
-              </div>
+              <Alert variant={notice.type === "error" ? "destructive" : "success"} className={`auth-notice ${notice.type}`}>
+                <AlertDescription role="status" aria-live="polite">{notice.message}</AlertDescription>
+              </Alert>
             )}
 
-            <button className="auth-submit" type="submit" disabled={busy}>
+            <Button className="auth-submit" type="submit" disabled={busy}>
               {busy
                 ? "Chwila…"
                 : mode === "signup"
                   ? "Załóż darmowe konto"
                   : "Zaloguj się"}
               <span>→</span>
-            </button>
+            </Button>
           </form>
 
           <p className="auth-security">Sesję i hasło bezpiecznie obsługuje Supabase Auth.</p>

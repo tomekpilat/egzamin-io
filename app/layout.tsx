@@ -49,8 +49,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `window.MathJax={loader:{load:['ui/safe']},tex:{inlineMath:[['\\\\(','\\\\)']],displayMath:[['\\\\[','\\\\]']],packages:{'[-]':['require','autoload']}},options:{ignoreHtmlClass:'mathjax_ignore',processHtmlClass:'mathjax_process',menuOptions:{settings:{enrich:true,speech:true,braille:true,assistiveMml:false}}},startup:{ready(){MathJax.startup.defaultReady();MathJax.startup.promise.then(()=>window.dispatchEvent(new Event('mathjax-ready')))}}};` }} />
+        <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-mml-chtml.js" />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased mathjax_ignore`}
       >
         {children}
       </body>

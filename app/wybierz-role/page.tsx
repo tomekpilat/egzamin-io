@@ -3,6 +3,10 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { BrandLogo } from "@/components/brand-logo";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { getSupabaseClient } from "@/lib/supabase-browser";
 import type { SelfServiceRole } from "@/lib/roles";
 import { LEGAL_VERSION } from "@/lib/legal";
@@ -35,7 +39,7 @@ const choices: Array<{
 
 export default function ChooseRolePage() {
   const [role, setRole] = useState<SelfServiceRole>("student");
-  const [guardianConsent, setGuardianConsent] = useState(false);
+  const [guardianEmail, setGuardianEmail] = useState("");
   const [acceptedLegal, setAcceptedLegal] = useState(false);
   const [busy, setBusy] = useState(true);
   const [error, setError] = useState("");
@@ -50,11 +54,11 @@ export default function ChooseRolePage() {
         }
         const { data: profile } = await supabase
           .from("profiles")
-          .select("role,guardian_consent_at,legal_version")
+          .select("role,guardian_email,legal_version")
           .eq("id", data.session.user.id)
           .single();
         if (profile?.role === "student" || profile?.role === "parent" || profile?.role === "teacher") setRole(profile.role);
-        setGuardianConsent(Boolean(profile?.guardian_consent_at));
+        setGuardianEmail(profile?.guardian_email ?? "");
         setAcceptedLegal(profile?.legal_version === LEGAL_VERSION);
         setBusy(false);
       })
@@ -70,8 +74,8 @@ export default function ChooseRolePage() {
       return;
     }
 
-    if (role === "student" && !guardianConsent) {
-      setError("Konto ucznia wymaga potwierdzenia zgody rodzica lub opiekuna.");
+    if (role === "student" && !guardianEmail.trim()) {
+      setError("Podaj e-mail rodzica lub opiekuna, który zatwierdzi konto.");
       return;
     }
 
@@ -86,23 +90,27 @@ export default function ChooseRolePage() {
         return;
       }
 
+      if (role === "student" && guardianEmail.trim().toLowerCase() === user.email?.toLowerCase()) {
+        setError("E-mail opiekuna musi być inny niż e-mail ucznia.");
+        setBusy(false);
+        return;
+      }
+
       const { error: legalError } = await supabase.rpc("record_legal_acceptance", {
         accepted_version: LEGAL_VERSION,
       });
       if (legalError) throw legalError;
 
-      const { error: updateError } = await supabase
-        .from("profiles")
-        .update({
-          role,
-          onboarding_completed: true,
-          guardian_consent_at:
-            role === "student" && guardianConsent
-              ? new Date().toISOString()
-              : null,
-          updated_at: new Date().toISOString(),
-        })
-        .eq("id", user.id);
+      if (role === "student") {
+        const { error: roleError } = await supabase.from("profiles").update({ role, updated_at: new Date().toISOString() }).eq("id", user.id);
+        if (roleError) throw roleError;
+        const { error: consentError } = await supabase.rpc("request_guardian_consent", { requested_guardian_email: guardianEmail.trim().toLowerCase() });
+        if (consentError) throw consentError;
+        window.location.assign("/oczekuje-na-zgode");
+        return;
+      }
+
+      const { error: updateError } = await supabase.from("profiles").update({ role, onboarding_completed: true, guardian_consent_at: null, updated_at: new Date().toISOString() }).eq("id", user.id);
 
       if (updateError) throw updateError;
       window.location.assign("/panel");
@@ -141,23 +149,21 @@ export default function ChooseRolePage() {
           ))}
         </div>
         {role === "student" && (
-          <label className="check-row onboarding-consent">
-            <input
-              type="checkbox"
-              checked={guardianConsent}
-              onChange={(event) => setGuardianConsent(event.target.checked)}
-            />
-            <span>Mam zgodę rodzica lub opiekuna na utworzenie konta.</span>
-          </label>
+          <Label className="onboarding-field" htmlFor="onboarding-guardian-email">
+            E-mail rodzica lub opiekuna
+            <Input id="onboarding-guardian-email" type="email" value={guardianEmail} onChange={(event) => setGuardianEmail(event.target.value)} placeholder="rodzic@email.pl" maxLength={254} required />
+            <small>Opiekun zatwierdzi prośbę po zalogowaniu na własne konto rodzica.</small>
+          </Label>
         )}
+        {role === "teacher" && <Alert variant="warning" className="onboarding-role-note"><AlertDescription>Konto nauczyciela pozwala obejrzeć panel od razu. Zapraszanie uczniów i dostęp do wyników grupy zostaną odblokowane po weryfikacji nauczyciela.</AlertDescription></Alert>}
         <label className="check-row onboarding-consent legal-consent">
           <input type="checkbox" checked={acceptedLegal} onChange={(event) => setAcceptedLegal(event.target.checked)} />
           <span>Akceptuję <a href="/regulamin" target="_blank">regulamin</a> i potwierdzam zapoznanie się z <a href="/polityka-prywatnosci" target="_blank">polityką prywatności</a>.</span>
         </label>
-        {error && <div className="auth-notice error" role="status">{error}</div>}
-        <button className="auth-submit" type="button" disabled={busy} onClick={saveRole}>
+        {error && <Alert variant="destructive" className="auth-notice error"><AlertDescription role="status">{error}</AlertDescription></Alert>}
+        <Button className="auth-submit" type="button" disabled={busy} onClick={saveRole}>
           {busy ? "Chwila…" : "Przejdź do mojego panelu"}<span>→</span>
-        </button>
+        </Button>
       </section>
     </main>
   );

@@ -15,6 +15,7 @@ const documents = [
   ["/polityka-cookies", "Cookies i pamięć urządzenia", "Niezbędna sesja logowania oraz zasady przyszłej analityki i marketingu."],
   ["/bezpieczenstwo-dzieci-ai", "Dzieci i AI", "Prostym językiem o błędach AI, zgodzie opiekuna, reklamach i bezpiecznych pytaniach."],
   ["/odstapienie-od-umowy", "Odstąpienie od umowy", "Informacja dla konsumenta i wzór oświadczenia przed uruchomieniem planu płatnego."],
+  ["/usun-konto", "Usunięcie konta i danych", "Procedura dla kont e-mail, Google i Facebook oraz zgód opiekuna."],
 ] as const;
 
 export default function LegalHubPage() {
@@ -35,7 +36,7 @@ export default function LegalHubPage() {
           <li>Dane administratora i usługodawcy: nazwa, adres, kraj, NIP/REGON lub dane rejestrowe.</li>
           <li>Faktyczny hosting, region Supabase, dostawca modelu AI, e-maili i płatności.</li>
           <li>Umowy powierzenia, podprocesorzy i mechanizmy transferów poza EOG.</li>
-          <li>Zweryfikowany proces zgody rodzica, a nie wyłącznie oświadczenie ucznia.</li>
+          <li>Prawna akceptacja wdrożonego procesu zgody: osobny e-mail, zablokowane konto ucznia i decyzja z zalogowanego konta rodzica.</li>
           <li>Retencja wdrożona technicznie: usuwanie rozmów, logów, kont i kopii zapasowych.</li>
           <li>Licencja i sposób oznaczania każdego materiału źródłowego CKE.</li>
           <li>Cennik, cykl rozliczeń, zasady odnowienia i checkout zgodny z prawami konsumenta.</li>

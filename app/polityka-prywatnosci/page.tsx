@@ -60,12 +60,12 @@ export default function PrivacyPage() {
 
       <section className="legal-section" id="dzieci">
         <h2>4. Konta dzieci i rola rodzica</h2>
-        <p>Usługa jest projektowana dla ósmoklasistów, dlatego stosujemy minimalizację danych, komunikaty zrozumiałe dla dziecka i ustawienia zapewniające wysoki poziom prywatności. Przed publicznym uruchomieniem kont uczniów poniżej 16 lat samo zaznaczenie pola przez ucznia zostanie zastąpione procesem weryfikacji opiekuna, np. przez oddzielny link e-mail.</p>
+        <p>Usługa jest projektowana dla ósmoklasistów, dlatego stosujemy minimalizację danych, komunikaty zrozumiałe dla dziecka i ustawienia zapewniające wysoki poziom prywatności. Uczeń nie może sam oświadczyć zgody za rodzica: podaje osobny adres opiekuna, konto pozostaje zablokowane, a rodzic zatwierdza prośbę po zalogowaniu na własne konto. Zapisujemy datę, konto zatwierdzające i powiązanie rodzic–dziecko. Przed publicznym startem prawnik powinien potwierdzić, czy ten poziom weryfikacji jest wystarczający dla ostatecznego modelu usługi.</p>
         <ul>
           <li>Rodzic zobaczy po połączeniu konta postęp, regularność i obszary do powtórki.</li>
           <li>Treść prywatnych rozmów ucznia z AI nie będzie domyślnie wyświetlana rodzicowi, chyba że wymaga tego bezpieczeństwo, prawo lub uczeń sam ją udostępni.</li>
           <li>Nie kierujemy do dzieci reklam opartych na profilowaniu ani bezpośrednich wezwań do zakupu lub namawiania rodzica na zakup.</li>
-          <li>Opiekun może wycofać zgodę i poprosić o usunięcie konta dziecka.</li>
+          <li>Opiekun może wycofać zgodę i poprosić o usunięcie konta dziecka zgodnie z procedurą <a href="/usun-konto">usunięcia konta i danych</a>.</li>
         </ul>
         <p>Więcej wyjaśniamy na stronie <a href="/bezpieczenstwo-dzieci-ai">Dzieci i AI</a>.</p>
       </section>

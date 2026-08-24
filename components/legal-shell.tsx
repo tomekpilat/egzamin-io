@@ -8,6 +8,7 @@ const legalLinks = [
   ["/polityka-cookies", "Cookies i pamięć urządzenia"],
   ["/bezpieczenstwo-dzieci-ai", "Dzieci i AI"],
   ["/odstapienie-od-umowy", "Odstąpienie od umowy"],
+  ["/usun-konto", "Usunięcie konta i danych"],
 ] as const;
 
 type LegalShellProps = {
@@ -44,9 +45,8 @@ export function LegalShell({ title, description, currentPath, children, kicker =
       </div>
       <footer className="legal-footer">
         <BrandLogo />
-        <div><Link href="/informacje-prawne">Informacje prawne</Link><a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a><span>© 2026 egzaminio</span></div>
+        <div><Link href="/informacje-prawne">Informacje prawne</Link><Link href="/usun-konto">Usuń konto</Link><a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a><span>© 2026 egzaminio</span></div>
       </footer>
     </main>
   );
 }
-

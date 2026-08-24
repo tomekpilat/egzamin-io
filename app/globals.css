@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
 
 :root {
   --ink: #14213d;
@@ -9,6 +12,49 @@
   --coral-dark: #e95435;
   --mint: #47b9a2;
   --line: #e3e4e2;
+  --radius: .75rem;
+  --background: oklch(0.978 0.008 82);
+  --foreground: oklch(0.255 0.055 262);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.255 0.055 262);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.255 0.055 262);
+  --primary: oklch(0.255 0.055 262);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.955 0.014 81);
+  --secondary-foreground: oklch(0.255 0.055 262);
+  --muted-foreground: oklch(0.54 0.035 264);
+  --accent: oklch(0.94 0.045 37);
+  --accent-foreground: oklch(0.42 0.13 34);
+  --destructive: oklch(0.58 0.22 27);
+  --border: oklch(0.9 0.01 82);
+  --input: oklch(0.9 0.01 82);
+  --ring: oklch(0.65 0.16 36);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--secondary);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
 * { box-sizing: border-box; }
@@ -22,6 +68,7 @@ body {
 }
 a { color: inherit; text-decoration: none; }
 button, input { font: inherit; }
+mjx-container { max-width: 100%; color: inherit; }
 
 .site-header {
   width: min(1180px, calc(100% - 48px));
@@ -85,6 +132,7 @@ button, input { font: inherit; }
 .task-meta { margin-bottom: 15px; color: #7b8290; font-size: 9px; text-transform: uppercase; letter-spacing: .06em; }
 .task-meta span { margin-right: 7px; padding: 4px 6px; border-radius: 5px; background: #fff0ec; color: #c75035; font-weight: 800; }
 .task-preview h2 { margin: 0; max-width: 430px; font-size: 16px; line-height: 1.5; letter-spacing: -.02em; }
+.task-formula { margin: 8px 0 -5px; color: #4f5f83; font-size: 13px; }
 .triangle-figure { position: relative; width: 190px; height: 110px; margin: 17px auto; }
 .triangle-shape { position: absolute; left: 16px; bottom: 14px; width: 0; height: 0; border-left: 0 solid transparent; border-right: 150px solid transparent; border-bottom: 80px solid #edf1ff; filter: drop-shadow(-2px 2px 0 #66728d); }
 .side-six, .side-eight, .side-x { position: absolute; color: #66728d; font-size: 9px; }

@@ -1,6 +1,8 @@
 "use client";
 
 import { BrandLogo } from "@/components/brand-logo";
+import { MathFormula } from "@/components/math-formula";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -16,7 +18,7 @@ export default function Home() {
         </nav>
         <div className="header-actions">
           <a className="header-login" href="/logowanie">Zaloguj się</a>
-          <a className="header-cta" href="/logowanie?tryb=rejestracja">Załóż konto</a>
+          <Button variant="outline" className="header-cta" asChild><a href="/logowanie?tryb=rejestracja">Załóż konto</a></Button>
         </div>
       </header>
 
@@ -28,7 +30,7 @@ export default function Home() {
             Ćwicz na zadaniach z arkuszy CKE. A gdy utkniesz, nauczyciel AI wyjaśni Ci wszystko prostym językiem — bez podawania gotowca.
           </p>
           <div className="hero-actions">
-            <a className="primary-action" href="/logowanie?tryb=rejestracja">Wypróbuj za darmo <span>→</span></a>
+            <Button size="lg" className="primary-action" asChild><a href="/logowanie?tryb=rejestracja">Wypróbuj za darmo <span>→</span></a></Button>
             <a className="text-action" href="#jak-to-dziala">Zobacz, jak to działa <span>↓</span></a>
           </div>
           <div className="hero-trust">
@@ -49,6 +51,7 @@ export default function Home() {
               <section className="task-preview">
                 <div className="task-meta"><span>CKE</span> Matematyka · maj 2025</div>
                 <h2>Trójkąt prostokątny ma boki długości 6 cm i 8 cm. Ile ma przeciwprostokątna?</h2>
+                <MathFormula latex="x=\\sqrt{6^2+8^2}" display className="task-formula" />
                 <div className="triangle-figure" aria-hidden="true">
                   <div className="triangle-shape" />
                   <span className="side-six">6 cm</span>
@@ -192,14 +195,14 @@ export default function Home() {
         <span className="section-kicker">Darmowy start</span>
         <h2>Spokojniejszy egzamin<br />zaczyna się od jednego zadania.</h2>
         <p>Załóż konto ucznia, rodzica albo nauczyciela. Pierwsze ćwiczenia i 3 pytania do nauczyciela AI są bezpłatne.</p>
-        <a className="primary-action signup-action" href="/logowanie?tryb=rejestracja">Załóż darmowe konto <span>→</span></a>
+        <Button size="lg" className="primary-action signup-action" asChild><a href="/logowanie?tryb=rejestracja">Załóż darmowe konto <span>→</span></a></Button>
         <small>Bez karty płatniczej. Konto ucznia wymaga zgody rodzica lub opiekuna.</small>
       </section>
 
       <footer className="site-footer">
         <a className="brand" href="#top" aria-label="egzaminio — wróć na górę"><BrandLogo /></a>
         <p>Ćwiczenia do egzaminu ósmoklasisty, które naprawdę tłumaczą.</p>
-        <div><a href="/logowanie">Logowanie</a><a href="/informacje-prawne">Informacje prawne</a><a href="/regulamin">Regulamin</a><a href="/polityka-prywatnosci">Prywatność</a><a href="/polityka-cookies">Cookies</a><a href="/bezpieczenstwo-dzieci-ai">Dzieci i AI</a><a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a><span>© 2026 egzaminio</span></div>
+        <div><a href="/logowanie">Logowanie</a><a href="/informacje-prawne">Informacje prawne</a><a href="/regulamin">Regulamin</a><a href="/polityka-prywatnosci">Prywatność</a><a href="/polityka-cookies">Cookies</a><a href="/bezpieczenstwo-dzieci-ai">Dzieci i AI</a><a href="/usun-konto">Usuń konto</a><a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a><span>© 2026 egzaminio</span></div>
         <small>egzaminio jest niezależnym projektem edukacyjnym i nie jest powiązany z Centralną Komisją Egzaminacyjną.</small>
       </footer>
     </main>
