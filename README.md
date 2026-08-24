@@ -41,7 +41,7 @@ Po uruchomieniu:
 
 Szczegółowa instrukcja wdrożenia znajduje się w [docs/coolify-deployment.md](docs/coolify-deployment.md).
 
-Kompletna konfiguracja Hetzner, domeny, firewalla, Coolify, Supabase i OAuth: [docs/hetzner-domain-coolify-setup.md](docs/hetzner-domain-coolify-setup.md).
+Kompletna konfiguracja domeny, aplikacji na istniejącym Coolify, Supabase i OAuth: [docs/hetzner-domain-coolify-setup.md](docs/hetzner-domain-coolify-setup.md).
 
 ## Konta i role
 

@@ -17,11 +17,11 @@ Uczeń rozwiązuje zadania z legalnie użytej i opisanej bazy arkuszy, otrzymuje
 
 ## Etap 0 — infrastruktura i dostęp
 
-Status po tej zmianie: fundament wykonany, konfiguracja zewnętrzna pozostaje po stronie paneli Hetzner/Supabase/Google/Meta.
+Status po tej zmianie: fundament wykonany, a deployment wykorzystuje istniejącą maszynę Hetzner z Coolify; konfiguracja zewnętrzna pozostaje po stronie DNS/Supabase/Google/Meta.
 
 Zakres:
 
-- Hetzner, Coolify, DNS, HTTPS, health check, backupy i auto-deploy z `main`.
+- Istniejący Hetzner/Coolify, DNS, HTTPS, health check, backupy i auto-deploy z `main`.
 - Supabase w regionie UE, migracje, RLS, Google, Facebook, e-mail/hasło i SMTP.
 - Role: uczeń, rodzic, nauczyciel, administrator.
 - Wersjonowana akceptacja regulaminu i polityki prywatności.

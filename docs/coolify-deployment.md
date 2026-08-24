@@ -2,7 +2,7 @@
 
 Projekt jest gotowy do wdrożenia jako aplikacja z `Dockerfile`. Kontener uruchamia produkcyjny serwer Node.js na porcie `3000` i udostępnia endpoint kontrolny `GET /api/health`.
 
-Pełna instrukcja od utworzenia serwera Hetzner, przez firewall i DNS, po Google/Facebook znajduje się w [hetzner-domain-coolify-setup.md](hetzner-domain-coolify-setup.md). Ten dokument pozostaje skróconą instrukcją samego zasobu aplikacji.
+Pełna instrukcja wdrożenia na istniejącej maszynie z Coolify — od kontroli zasobów i DNS po Supabase oraz Google/Facebook — znajduje się w [hetzner-domain-coolify-setup.md](hetzner-domain-coolify-setup.md). Ten dokument pozostaje skróconą instrukcją samego zasobu aplikacji.
 
 ## 1. Dodanie aplikacji
 

@@ -101,18 +101,16 @@ export default function ChooseRolePage() {
       });
       if (legalError) throw legalError;
 
+      const { error: onboardingError } = await supabase.rpc("complete_onboarding", {
+        selected_role: role,
+        requested_guardian_email: role === "student" ? guardianEmail.trim().toLowerCase() : null,
+      });
+      if (onboardingError) throw onboardingError;
+
       if (role === "student") {
-        const { error: roleError } = await supabase.from("profiles").update({ role, updated_at: new Date().toISOString() }).eq("id", user.id);
-        if (roleError) throw roleError;
-        const { error: consentError } = await supabase.rpc("request_guardian_consent", { requested_guardian_email: guardianEmail.trim().toLowerCase() });
-        if (consentError) throw consentError;
         window.location.assign("/oczekuje-na-zgode");
         return;
       }
-
-      const { error: updateError } = await supabase.from("profiles").update({ role, onboarding_completed: true, guardian_consent_at: null, updated_at: new Date().toISOString() }).eq("id", user.id);
-
-      if (updateError) throw updateError;
       window.location.assign("/panel");
     } catch {
       setError("Nie udało się zapisać roli. Spróbuj ponownie.");
