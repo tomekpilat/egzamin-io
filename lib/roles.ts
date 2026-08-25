@@ -1,7 +1,7 @@
-export const selfServiceRoles = ["student", "parent", "teacher"] as const;
+export const selfServiceRoles = ["student", "parent"] as const;
 
 export type SelfServiceRole = (typeof selfServiceRoles)[number];
-export type UserRole = SelfServiceRole | "admin";
+export type UserRole = SelfServiceRole | "teacher" | "admin";
 
 export const roleLabels: Record<UserRole, string> = {
   student: "Uczeń",
@@ -15,5 +15,5 @@ export function isSelfServiceRole(value: unknown): value is SelfServiceRole {
 }
 
 export function isUserRole(value: unknown): value is UserRole {
-  return value === "admin" || isSelfServiceRole(value);
+  return value === "teacher" || value === "admin" || isSelfServiceRole(value);
 }

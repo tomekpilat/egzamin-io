@@ -1,10 +1,18 @@
 "use client";
 
+import Image from "next/image";
+import { useState } from "react";
 import { BrandLogo } from "@/components/brand-logo";
 import { MathFormula } from "@/components/math-formula";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Home() {
+  const [selectedAnswer, setSelectedAnswer] = useState("B");
+  const [hintExpanded, setHintExpanded] = useState(false);
+  const [demoReply, setDemoReply] = useState("Mamy 6² + 8². To inaczej 36 + 64. Kiedy je dodasz, otrzymasz 100. Chcesz, żebym pokazał też, dlaczego potem wyciągamy pierwiastek?");
+
   return (
     <main>
       <header className="site-header">
@@ -17,6 +25,7 @@ export default function Home() {
           <a href="#dostep">Dostęp</a>
         </nav>
         <div className="header-actions">
+          <ThemeToggle />
           <a className="header-login" href="/logowanie">Zaloguj się</a>
           <Button variant="outline" className="header-cta" asChild><a href="/logowanie?tryb=rejestracja">Załóż konto</a></Button>
         </div>
@@ -58,14 +67,17 @@ export default function Home() {
                   <span className="side-eight">8 cm</span>
                   <span className="side-x">x</span>
                 </div>
-                <div className="answers">
-                  <span>A&nbsp; 7 cm</span><span className="chosen">B&nbsp; 10 cm</span><span>C&nbsp; 12 cm</span><span>D&nbsp; 14 cm</span>
+                <div className="answers" aria-label="Przykładowe odpowiedzi">
+                  {["A|7 cm", "B|10 cm", "C|12 cm", "D|14 cm"].map((answer) => {
+                    const [letter, value] = answer.split("|");
+                    return <Button variant="outline" type="button" key={letter} className={selectedAnswer === letter ? "chosen" : ""} aria-pressed={selectedAnswer === letter} onClick={() => setSelectedAnswer(letter)}>{letter}&nbsp; {value}</Button>;
+                  })}
                 </div>
               </section>
               <aside className="ai-preview">
                 <div className="ai-title"><span>AI</span><div><b>Nauczyciel obok</b><small>Wyjaśnia, ale nie wyręcza</small></div></div>
-                <div className="ai-message"><b>Mała podpowiedź</b>To trójkąt prostokątny. Pamiętasz wzór, który łączy długości jego boków?</div>
-                <div className="ai-suggestion">A jeśli nie pamiętam wzoru?</div>
+                <div className="ai-message" aria-live="polite"><b>{hintExpanded ? "Jeszcze jeden krok" : "Mała podpowiedź"}</b>{hintExpanded ? "To twierdzenie Pitagorasa: suma kwadratów przyprostokątnych jest równa kwadratowi przeciwprostokątnej." : "To trójkąt prostokątny. Pamiętasz wzór, który łączy długości jego boków?"}</div>
+                <Button variant="outline" type="button" className="ai-suggestion" onClick={() => setHintExpanded((value) => !value)}>{hintExpanded ? "Wróć do pierwszej podpowiedzi" : "A jeśli nie pamiętam wzoru?"}</Button>
                 <div className="ai-limit"><b>3</b> darmowe pytania dziennie</div>
               </aside>
             </div>
@@ -89,27 +101,24 @@ export default function Home() {
           <p>Zaczynasz od prawdziwego zadania egzaminacyjnego. Reszta dopasowuje się do tego, czego akurat nie rozumiesz.</p>
         </div>
         <div className="steps-grid">
-          <article className="step-card step-coral">
-            <span className="step-number">01</span>
+          <Card className="step-card step-coral">
             <div className="step-icon">✎</div>
             <h3>Rozwiązujesz</h3>
             <p>Zadania pochodzące ze zdigitalizowanych arkuszy CKE, uporządkowane według tematu i poziomu.</p>
             <span className="step-detail">Bez przypadkowych ćwiczeń</span>
-          </article>
-          <article className="step-card step-navy">
-            <span className="step-number">02</span>
+          </Card>
+          <Card className="step-card step-navy">
             <div className="step-icon">AI</div>
             <h3>Pytasz</h3>
             <p>Gdy utkniesz, AI daje małą podpowiedź. Możesz dopytać tak, jak zapytałbyś nauczyciela.</p>
             <span className="step-detail">Własnymi słowami</span>
-          </article>
-          <article className="step-card step-mint">
-            <span className="step-number">03</span>
+          </Card>
+          <Card className="step-card step-mint">
             <div className="step-icon">↗</div>
             <h3>Rozumiesz</h3>
             <p>Wyjaśnienie prowadzi krok po kroku i pokazuje tok myślenia, zamiast zdradzać sam wynik.</p>
             <span className="step-detail">Wiedza zostaje na dłużej</span>
-          </article>
+          </Card>
         </div>
       </section>
 
@@ -118,10 +127,10 @@ export default function Home() {
           <div className="demo-question"><span>Ty</span><p>Nie rozumiem, skąd wzięło się 100.</p></div>
           <div className="demo-answer">
             <span className="demo-ai">AI</span>
-            <div><b>Spójrzmy tylko na ten krok.</b><p>Mamy 6² + 8². To inaczej 36 + 64. Kiedy je dodasz, otrzymasz 100. Chcesz, żebym pokazał też, dlaczego potem wyciągamy pierwiastek?</p></div>
+            <div><b>Spójrzmy tylko na ten krok.</b><p aria-live="polite">{demoReply}</p></div>
           </div>
-          <div className="demo-chips"><span>Tak, pokaż</span><span>Co oznacza ²?</span></div>
-          <div className="demo-input">Dopytaj własnymi słowami… <b>↑</b></div>
+          <div className="demo-chips"><Button variant="outline" type="button" onClick={() => setDemoReply("Pierwiastek odwraca podnoszenie do kwadratu. Skoro x² = 100, to x = √100, czyli 10.")}>Tak, pokaż</Button><Button variant="outline" type="button" onClick={() => setDemoReply("Zapis 6² oznacza 6 · 6, czyli 36. Mała dwójka mówi: pomnóż liczbę przez samą siebie.")}>Co oznacza ²?</Button></div>
+          <Button type="button" variant="outline" className="demo-input" onClick={() => setDemoReply("Napisz własne pytanie w aplikacji — AI odniesie je do dokładnie tego zadania.")}>Dopytaj własnymi słowami… <b>↑</b></Button>
         </div>
         <div className="explain-copy">
           <span className="section-kicker">Pomoc dokładnie wtedy, gdy trzeba</span>
@@ -133,6 +142,11 @@ export default function Home() {
             <li><span>✓</span> Możliwość dalszej rozmowy z AI</li>
           </ul>
         </div>
+      </section>
+
+      <section className="family-story" aria-labelledby="family-story-title">
+        <Image src="/rodzic-i-uczen-nauka.png" width={1536} height={1024} sizes="(max-width: 900px) 100vw, 1120px" alt="Uczeń pracuje nad zadaniem przy wsparciu rodzica" />
+        <div className="family-story-copy"><span className="section-kicker">Nauka bez presji</span><h2 id="family-story-title">Rodzic wspiera rytm. Uczeń zachowuje samodzielność.</h2><p>Panel pokazuje cel i regularność, ale prywatna rozmowa ucznia z AI pozostaje prywatna.</p><Button variant="secondary" asChild><a href="#dla-rodzica">Zobacz panel rodzica</a></Button></div>
       </section>
 
       <section className="parent-section" id="dla-rodzica">
@@ -171,20 +185,20 @@ export default function Home() {
           <p>Podstawowe ćwiczenia będą dostępne bez opłat. Każdego dnia uczeń otrzyma 3 pytania do nauczyciela AI. Więcej rozmów i pełne ścieżki powtórkowe pojawią się w planie Plus.</p>
         </div>
         <div className="plans">
-          <article className="plan-card free-plan">
+          <Card className="plan-card free-plan">
             <span className="plan-label">Na początek</span>
             <h3>Plan bezpłatny</h3>
             <div className="plan-price">0 zł <small>/ miesiąc</small></div>
             <ul><li>✓ Wybrane ćwiczenia CKE</li><li>✓ 3 pytania do AI dziennie</li><li>✓ Podstawowy podgląd postępów</li></ul>
             <a href="/logowanie?tryb=rejestracja">Załóż darmowe konto</a>
-          </article>
-          <article className="plan-card plus-plan">
+          </Card>
+          <Card className="plan-card plus-plan">
             <span className="plan-label">Więcej nauki</span>
             <h3>Plan Plus</h3>
             <div className="plan-price">Wkrótce</div>
             <ul><li>✓ Pełna baza ćwiczeń</li><li>✓ Więcej rozmów z AI</li><li>✓ Plan nauki i inteligentne powtórki</li></ul>
-            <span className="plan-soon">Szczegóły przed premierą</span>
-          </article>
+            <Button variant="outline" asChild><a href="mailto:kontakt@egzamin.io?subject=Lista%20oczekujacych%20egzaminio%20Plus">Powiadom mnie o premierze</a></Button>
+          </Card>
         </div>
       </section>
 
@@ -194,7 +208,7 @@ export default function Home() {
         <div className="signup-logo"><BrandLogo /></div>
         <span className="section-kicker">Darmowy start</span>
         <h2>Spokojniejszy egzamin<br />zaczyna się od jednego zadania.</h2>
-        <p>Załóż konto ucznia, rodzica albo nauczyciela. Pierwsze ćwiczenia i 3 pytania do nauczyciela AI są bezpłatne.</p>
+        <p>Załóż konto ucznia albo rodzica. Pierwsze ćwiczenia i 3 pytania do nauczyciela AI są bezpłatne. Konta nauczycieli nadajemy ręcznie po weryfikacji.</p>
         <Button size="lg" className="primary-action signup-action" asChild><a href="/logowanie?tryb=rejestracja">Załóż darmowe konto <span>→</span></a></Button>
         <small>Bez karty płatniczej. Konto ucznia wymaga zgody rodzica lub opiekuna.</small>
       </section>

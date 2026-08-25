@@ -5,11 +5,13 @@ import Link from "next/link";
 import { BrandLogo } from "@/components/brand-logo";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { getSupabaseClient } from "@/lib/supabase-browser";
 import type { SelfServiceRole } from "@/lib/roles";
 import { LEGAL_VERSION } from "@/lib/legal";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const choices: Array<{
   value: SelfServiceRole;
@@ -28,12 +30,6 @@ const choices: Array<{
     title: "Jestem rodzicem",
     description: "Chcę wspierać dziecko",
     detail: "Raport postępów, regularność i obszary do powtórki.",
-  },
-  {
-    value: "teacher",
-    title: "Jestem nauczycielem",
-    description: "Chcę pracować z uczniami",
-    detail: "Zestawy ćwiczeń, grupy i podgląd wyników.",
   },
 ];
 
@@ -57,7 +53,11 @@ export default function ChooseRolePage() {
           .select("role,guardian_email,legal_version")
           .eq("id", data.session.user.id)
           .single();
-        if (profile?.role === "student" || profile?.role === "parent" || profile?.role === "teacher") setRole(profile.role);
+        if (profile?.role === "teacher" || profile?.role === "admin") {
+          window.location.replace("/panel");
+          return;
+        }
+        if (profile?.role === "student" || profile?.role === "parent") setRole(profile.role);
         setGuardianEmail(profile?.guardian_email ?? "");
         setAcceptedLegal(profile?.legal_version === LEGAL_VERSION);
         setBusy(false);
@@ -120,30 +120,29 @@ export default function ChooseRolePage() {
 
   return (
     <main className="onboarding-page">
-      <Link className="onboarding-brand" href="/" aria-label="egzaminio — strona główna">
-        <BrandLogo />
-      </Link>
+      <div className="onboarding-top"><Link className="onboarding-brand" href="/" aria-label="egzaminio — strona główna"><BrandLogo /></Link><ThemeToggle /></div>
       <section className="onboarding-card">
         <span className="section-kicker">Ostatni krok</span>
         <h1>Jak chcesz korzystać z egzaminio?</h1>
         <p>Na tej podstawie przygotujemy właściwy panel i pierwsze zadania.</p>
         <div className="onboarding-roles">
           {choices.map((choice) => (
-            <button
+            <Button
               type="button"
+              variant="outline"
               key={choice.value}
               className={role === choice.value ? "selected" : ""}
               onClick={() => setRole(choice.value)}
               aria-pressed={role === choice.value}
             >
-              <span>{choice.value === "student" ? "U" : choice.value === "parent" ? "R" : "N"}</span>
+              <span>{choice.value === "student" ? "U" : "R"}</span>
               <div>
                 <b>{choice.title}</b>
                 <em>{choice.description}</em>
                 <small>{choice.detail}</small>
               </div>
               <i>✓</i>
-            </button>
+            </Button>
           ))}
         </div>
         {role === "student" && (
@@ -153,11 +152,11 @@ export default function ChooseRolePage() {
             <small>Opiekun zatwierdzi prośbę po zalogowaniu na własne konto rodzica.</small>
           </Label>
         )}
-        {role === "teacher" && <Alert variant="warning" className="onboarding-role-note"><AlertDescription>Konto nauczyciela pozwala obejrzeć panel od razu. Zapraszanie uczniów i dostęp do wyników grupy zostaną odblokowane po weryfikacji nauczyciela.</AlertDescription></Alert>}
-        <label className="check-row onboarding-consent legal-consent">
-          <input type="checkbox" checked={acceptedLegal} onChange={(event) => setAcceptedLegal(event.target.checked)} />
-          <span>Akceptuję <a href="/regulamin" target="_blank">regulamin</a> i potwierdzam zapoznanie się z <a href="/polityka-prywatnosci" target="_blank">polityką prywatności</a>.</span>
-        </label>
+        <p className="teacher-access-note">Dostęp nauczycielski jest nadawany ręcznie po weryfikacji — nie można wybrać tej roli podczas rejestracji.</p>
+        <div className="check-row onboarding-consent legal-consent">
+          <Checkbox id="accepted-legal" checked={acceptedLegal} onCheckedChange={(checked) => setAcceptedLegal(checked === true)} />
+          <label htmlFor="accepted-legal">Akceptuję <a href="/regulamin" target="_blank">regulamin</a> i potwierdzam zapoznanie się z <a href="/polityka-prywatnosci" target="_blank">polityką prywatności</a>.</label>
+        </div>
         {error && <Alert variant="destructive" className="auth-notice error"><AlertDescription role="status">{error}</AlertDescription></Alert>}
         <Button className="auth-submit" type="button" disabled={busy} onClick={saveRole}>
           {busy ? "Chwila…" : "Przejdź do mojego panelu"}<span>→</span>

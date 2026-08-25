@@ -49,7 +49,7 @@
 .role-picker b { font-size: 10px; }
 .role-picker small { margin-top: 4px; color: #818999; font-size: 7.5px; line-height: 1.35; }
 .check-row { display: flex; align-items: flex-start; gap: 9px; color: #697385; font-size: 10px; line-height: 1.5; cursor: pointer; }
-.check-row input { width: 15px; height: 15px; margin: 0; accent-color: var(--coral); flex: 0 0 auto; }
+.check-row [data-slot="checkbox"] { width: 17px; height: 17px; margin: 0; flex: 0 0 auto; }
 .check-row a { color: #c74e35; text-decoration: underline; }
 .auth-notice { padding: 11px 13px; border-radius: 9px; font-size: 10px; line-height: 1.45; }
 .auth-notice.error { background: #fff0ed; color: #a73c28; }
@@ -243,4 +243,74 @@
 
 @media (max-width: 560px) {
   .consent-card [data-slot="card-header"] { padding: 27px 21px 20px; }.consent-content { padding: 0 21px 25px; }.consent-actions { display: grid; }.guardian-section-heading { align-items: flex-start; flex-direction: column; }.guardian-section-heading > small { text-align: left; }.guardian-request-card, .linked-children article { grid-template-columns: 40px 1fr; }.guardian-request-actions, .linked-children article [data-slot="badge"] { grid-column: 1 / -1; }.guardian-request-actions { display: grid; grid-template-columns: 1fr 1fr; }
+}
+
+/* Accessible type scale and shared shadcn surfaces */
+.account-header-actions, .onboarding-top, .consent-top, .dashboard-topbar-actions { display: flex; align-items: center; gap: 12px; }
+.onboarding-top, .consent-top { width: min(680px, 100%); justify-content: space-between; }
+.onboarding-top .onboarding-brand, .consent-top .onboarding-brand { margin: 0; }
+.teacher-access-note { margin: -2px 0 4px; color: var(--muted); font-size: 13px; line-height: 1.55; }
+
+.account-back, .auth-tabs button, .social-buttons button, .auth-submit { font-size: 14px; }
+.auth-card-heading p, .auth-divider, .auth-form > label:not(.check-row), .role-picker legend, .role-picker b, .check-row, .auth-notice, .guardian-help, .auth-security { font-size: 13px; line-height: 1.55; }
+.role-picker small, .auth-proof span, .auth-story blockquote small { font-size: 12px; }
+.role-picker > div { grid-template-columns: repeat(2, 1fr); }
+.onboarding-card > p, .onboarding-roles b, .onboarding-roles em, .onboarding-roles small, .onboarding-field, .onboarding-field small, .consent-card [data-slot="card-description"], .consent-step b, .consent-step span, .consent-privacy { font-size: 13px; line-height: 1.55; }
+
+.dashboard-sidebar nav a, .sidebar-plan b, .sidebar-signout { font-size: 13px; }
+.sidebar-plan span, .sidebar-plan a { font-size: 12px; line-height: 1.45; }
+.dashboard-topbar > div:first-child > span, .dashboard-account b, .dashboard-account small, .dashboard-kicker, .daily-ring span, .admin-total span { font-size: 12px; }
+.dashboard-topbar h1 { font-size: 24px; }
+.dashboard-hero p, .dashboard-card p { font-size: 14px; line-height: 1.65; }
+.dashboard-hero button, .secondary-button, .ai-prompt-preview { font-size: 13px; }
+.metric-card span, .metric-card small, .card-heading span, .guardian-section-heading > small, .guardian-request-card span, .guardian-request-card small, .linked-children article span { font-size: 12px; line-height: 1.5; }
+.guardian-request-card b, .linked-children article b, .guardian-avatar { font-size: 13px; }
+.dashboard-loading, .legal-lead { font-size: 14px; }
+.legal-sidebar > span, .legal-sidebar nav a, .legal-sidebar > p, .legal-alert b, .legal-alert p, .legal-toc b, .legal-toc a, .legal-cards span, .legal-cards p, .legal-cards b, .legal-checklist li, .legal-source-note p, .legal-callout-grid b, .legal-callout-grid p, .withdrawal-template p, .legal-button, .legal-footer > div { font-size: 13px !important; line-height: 1.55; }
+.legal-page article p, .legal-page article li { font-size: 15px; }
+.legal-page th, .legal-page td { font-size: 13px; }
+.legal-page th { font-size: 12px; }
+
+.child-settings-card { margin-top: 3px; border-color: var(--border); box-shadow: none; }
+.child-card-title-row { display: grid; grid-template-columns: 42px 1fr auto; align-items: center; gap: 12px; }
+.child-card-title-row [data-slot="card-title"] { font-size: 17px; }
+.child-settings-content { display: grid; gap: 20px; }
+.goal-overview { display: grid; gap: 10px; }
+.goal-overview > div { display: flex; justify-content: space-between; gap: 20px; color: var(--muted); font-size: 13px; }
+.goal-overview b { color: var(--foreground); }
+.child-preference-grid { display: grid; grid-template-columns: minmax(160px, .7fr) minmax(240px, 1.3fr); gap: 16px; align-items: stretch; }
+.child-preference-grid > label { display: grid; gap: 8px; font-size: 13px; font-weight: 750; }
+.summary-preference { padding: 13px 14px; display: flex; align-items: center; justify-content: space-between; gap: 18px; border: 1px solid var(--border); border-radius: 12px; }
+.summary-preference label { font-size: 13px; font-weight: 750; }
+.summary-preference p { margin: 4px 0 0; font-size: 12px; }
+.child-settings-actions, .account-settings-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.account-settings-card, .admin-teacher-card { margin-top: 15px; scroll-margin-top: 22px; }
+.account-settings-actions > div { margin-right: auto; display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 13px; }
+.admin-teacher-form { display: grid; gap: 9px; }
+.admin-teacher-form > label { font-size: 13px; font-weight: 750; }
+.admin-teacher-form > div { display: grid; grid-template-columns: minmax(220px, 1fr) auto; gap: 10px; }
+
+.dark .account-page, .dark .onboarding-page, .dark .legal-page, .dark .dashboard-page, .dark .dashboard-loading { background: var(--paper); color: var(--foreground); }
+.dark .auth-card, .dark .onboarding-card, .dark .consent-card, .dark .dashboard-sidebar, .dark .dashboard-topbar, .dark .metric-card, .dark .dashboard-card, .dark .guardian-requests, .dark .linked-children, .dark .legal-sidebar, .dark .legal-page article { border-color: var(--border); background: var(--card); color: var(--card-foreground); }
+.dark .auth-story blockquote, .dark .auth-tabs, .dark .consent-step, .dark .guardian-request-card, .dark .linked-children article, .dark .legal-toc, .dark .legal-callout-grid > div, .dark .legal-checklist li, .dark .withdrawal-template { border-color: var(--border); background: var(--secondary); color: var(--foreground); }
+.dark .auth-tabs button.active, .dark .social-buttons button, .dark .auth-form input, .dark .role-picker label, .dark .onboarding-roles button, .dark .consent-step > svg, .dark .legal-toc a, .dark .legal-page table { border-color: var(--border); background: var(--card); color: var(--foreground); }
+.dark .role-picker label.selected, .dark .onboarding-roles button.selected { border-color: var(--coral); background: color-mix(in oklch, var(--accent) 65%, var(--card)); }
+.dark .dashboard-sidebar nav a.active, .dark .legal-sidebar nav a.active { background: color-mix(in oklch, var(--accent) 65%, var(--card)); }
+.dark .dashboard-topbar { background: color-mix(in oklch, var(--card) 86%, transparent); }
+.dark .dashboard-sidebar, .dark .dashboard-topbar { border-color: var(--border); }
+.dark .legal-page th { background: var(--secondary); color: var(--foreground); }
+.dark .legal-page td, .dark .legal-page th, .dark .legal-section + .legal-section { border-color: var(--border); }
+.dark .legal-source-note { background: #15283a; }
+.dark .legal-alert { border-color: #75423a; background: #34211f; color: #ffc5b7; }
+.dark .account-back, .dark .dashboard-sidebar nav a, .dark .dashboard-card p, .dark .metric-card span, .dark .metric-card small, .dark .legal-page article p, .dark .legal-page article li { color: var(--muted); }
+.dark .auth-proof b, .dark .auth-card-heading h2, .dark .auth-form > label:not(.check-row), .dark .role-picker legend, .dark .role-picker b, .dark .onboarding-field, .dark .dashboard-topbar h1, .dark .legal-page h1, .dark .legal-page h2 { color: var(--foreground); }
+.dark .auth-proof span, .dark .role-picker small, .dark .check-row, .dark .guardian-help, .dark .teacher-access-note { color: var(--muted); }
+
+@media (max-width: 680px) {
+  .child-card-title-row { grid-template-columns: 42px 1fr; }
+  .child-card-title-row [data-slot="badge"] { grid-column: 1 / -1; width: fit-content; }
+  .child-preference-grid, .admin-teacher-form > div { grid-template-columns: 1fr; }
+  .child-settings-actions { display: grid; }
+  .account-settings-actions { align-items: stretch; flex-direction: column; }
+  .account-settings-actions > div { width: 100%; margin-right: 0; justify-content: space-between; }
 }

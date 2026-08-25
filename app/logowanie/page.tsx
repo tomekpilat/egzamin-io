@@ -6,8 +6,11 @@ import { FormEvent, useState } from "react";
 import { BrandLogo } from "@/components/brand-logo";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { LEGAL_VERSION } from "@/lib/legal";
 import { getSupabaseClient } from "@/lib/supabase-browser";
 import type { SelfServiceRole } from "@/lib/roles";
@@ -32,12 +35,6 @@ const roleOptions: Array<{
     title: "Rodzic",
     description: "Postępy dziecka i tygodniowy plan nauki",
     icon: "R",
-  },
-  {
-    value: "teacher",
-    title: "Nauczyciel",
-    description: "Zestawy zadań i wyniki uczniów",
-    icon: "N",
   },
 ];
 
@@ -174,9 +171,7 @@ export default function LoginPage() {
         <Link href="/" aria-label="egzaminio — strona główna">
           <BrandLogo />
         </Link>
-        <Link href="/" className="account-back">
-          ← Wróć na stronę
-        </Link>
+        <div className="account-header-actions"><ThemeToggle /><Link href="/" className="account-back">← Wróć na stronę</Link></div>
       </header>
 
       <section className="auth-shell">
@@ -208,24 +203,26 @@ export default function LoginPage() {
 
         <div className="auth-card">
           <div className="auth-tabs" role="tablist" aria-label="Dostęp do konta">
-            <button
+            <Button
               type="button"
+              variant="ghost"
               role="tab"
               className={mode === "login" ? "active" : ""}
               aria-selected={mode === "login"}
               onClick={() => changeMode("login")}
             >
               Logowanie
-            </button>
-            <button
+            </Button>
+            <Button
               type="button"
+              variant="ghost"
               role="tab"
               className={mode === "signup" ? "active" : ""}
               aria-selected={mode === "signup"}
               onClick={() => changeMode("signup")}
             >
               Rejestracja
-            </button>
+            </Button>
           </div>
 
           <div className="auth-card-heading">
@@ -270,26 +267,26 @@ export default function LoginPage() {
 
                 <fieldset className="role-picker">
                   <legend>Zakładam konto jako</legend>
-                  <div>
+                  <RadioGroup value={role} onValueChange={(value) => setRole(value as SelfServiceRole)}>
                     {roleOptions.map((option) => (
                       <label
                         key={option.value}
+                        htmlFor={`role-${option.value}`}
                         className={role === option.value ? "selected" : ""}
                       >
-                        <input
-                          type="radio"
-                          name="role"
+                        <RadioGroupItem
+                          id={`role-${option.value}`}
                           value={option.value}
-                          checked={role === option.value}
-                          onChange={() => setRole(option.value)}
+                          className="sr-only"
                         />
                         <span className="role-icon">{option.icon}</span>
                         <b>{option.title}</b>
                         <small>{option.description}</small>
                       </label>
                     ))}
-                  </div>
+                  </RadioGroup>
                 </fieldset>
+                <p className="teacher-access-note">Konta nauczycieli są tworzone i nadawane ręcznie po weryfikacji szkoły.</p>
               </>
             )}
 
@@ -339,16 +336,16 @@ export default function LoginPage() {
             )}
 
             {mode === "signup" && (
-              <label className="check-row">
-                <input
-                  type="checkbox"
+              <div className="check-row">
+                <Checkbox
+                  id="accepted-terms"
                   checked={acceptedTerms}
-                  onChange={(event) => setAcceptedTerms(event.target.checked)}
+                  onCheckedChange={(checked) => setAcceptedTerms(checked === true)}
                 />
-                <span>
+                <label htmlFor="accepted-terms">
                   Akceptuję <a href="/regulamin" target="_blank">regulamin</a> i potwierdzam zapoznanie się z <a href="/polityka-prywatnosci" target="_blank">polityką prywatności</a>.
-                </span>
-              </label>
+                </label>
+              </div>
             )}
 
             {notice && (

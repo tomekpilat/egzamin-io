@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Logowanie i rejestracja — egzaminio",
-  description: "Zaloguj się albo załóż darmowe konto ucznia, rodzica lub nauczyciela.",
+  description: "Zaloguj się albo załóż darmowe konto ucznia lub rodzica.",
   robots: { index: false, follow: false },
 };
 

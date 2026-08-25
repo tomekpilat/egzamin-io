@@ -8,7 +8,14 @@ import { MathFormula } from "@/components/math-formula";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Progress } from "@/components/ui/progress";
+import { Switch } from "@/components/ui/switch";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { isUserRole, roleLabels, type UserRole } from "@/lib/roles";
+import { normalizeWeeklyGoal, summarizeParentPreferences } from "@/lib/parent-preferences";
 import { getSupabaseClient } from "@/lib/supabase-browser";
 import { LEGAL_VERSION } from "@/lib/legal";
 
@@ -25,7 +32,7 @@ type Profile = {
 };
 
 type GuardianRequest = { request_id: string; student_id: string; student_display_name: string | null; student_email: string; requested_at: string; expires_at: string };
-type LinkedChild = { student_id: string; student_display_name: string | null; student_email: string; linked_at: string };
+type LinkedChild = { student_id: string; student_display_name: string | null; student_email: string; linked_at: string; weekly_goal: number; summary_email_enabled: boolean };
 
 type RoleCounts = Record<UserRole, number>;
 
@@ -39,16 +46,16 @@ const emptyCounts: RoleCounts = {
 function StudentPanel() {
   return (
     <>
-      <section className="dashboard-hero student-hero">
+      <section className="dashboard-hero student-hero" id="zadania">
         <div>
           <span className="dashboard-kicker">Plan na dziś · 24 min</span>
           <h2>Zacznij od jednego zadania.</h2>
           <p>Krótka seria z procentów, potem powtórka z geometrii.</p>
-          <Button type="button">Rozpocznij ćwiczenie <span>→</span></Button>
+          <Button type="button" disabled title="Moduł ćwiczeń zostanie uruchomiony w kolejnym etapie MVP">Ćwiczenia wkrótce</Button>
         </div>
         <div className="daily-ring"><b>0/6</b><span>zadań dzisiaj</span></div>
       </section>
-      <section className="dashboard-grid three-columns">
+      <section className="dashboard-grid three-columns" id="postep">
         <article className="metric-card"><span>Seria nauki</span><b>🔥 0 dni</b><small>Pierwszy krok możesz zrobić dziś.</small></article>
         <article className="metric-card"><span>Pytania do AI</span><b>3</b><small>Dostępne w planie bezpłatnym.</small></article>
         <article className="metric-card"><span>Opanowane tematy</span><b>0%</b><small>Postęp pojawi się po pierwszej serii.</small></article>
@@ -59,7 +66,7 @@ function StudentPanel() {
           <p>6 zadań z arkuszy CKE · około 18 minut</p>
           <div className="progress-line"><i style={{ width: "0%" }} /></div>
           <MathFormula latex="x=\\sqrt{6^2+8^2}=10" display className="dashboard-formula" />
-          <Button variant="outline" type="button" className="secondary-button">Otwórz zestaw</Button>
+          <Button variant="outline" type="button" className="secondary-button" disabled>Moduł w przygotowaniu</Button>
         </article>
         <article className="dashboard-card ai-card">
           <div className="card-heading"><div><span>Nauczyciel AI</span><h3>Możesz zapytać własnymi słowami</h3></div><b className="ai-badge">AI</b></div>
@@ -71,10 +78,37 @@ function StudentPanel() {
   );
 }
 
-function ParentPanel({ requests, linkedChildren, actionBusy, onApprove, onReject }: { requests: GuardianRequest[]; linkedChildren: LinkedChild[]; actionBusy: string; onApprove: (id: string) => void; onReject: (id: string) => void }) {
+function ChildSettingsCard({ child, busy, onSave }: { child: LinkedChild; busy: boolean; onSave: (studentId: string, weeklyGoal: number, summaryEmailEnabled: boolean) => void }) {
+  const [weeklyGoal, setWeeklyGoal] = useState(child.weekly_goal);
+  const [summaryEnabled, setSummaryEnabled] = useState(child.summary_email_enabled);
+  const childName = child.student_display_name || "Uczeń";
+
+  return (
+    <Card className="child-settings-card">
+      <CardHeader>
+        <div className="child-card-title-row">
+          <div className="guardian-avatar">{(child.student_display_name || child.student_email).slice(0, 2).toUpperCase()}</div>
+          <div><CardTitle>{childName}</CardTitle><CardDescription>{child.student_email}</CardDescription></div>
+          <Badge variant="outline">Zgoda aktywna</Badge>
+        </div>
+      </CardHeader>
+      <CardContent className="child-settings-content">
+        <div className="goal-overview"><div><b>Cel tygodniowy</b><span>{weeklyGoal} {weeklyGoal === 1 ? "sesja" : "sesji"} nauki</span></div><Progress value={0} aria-label={`Postęp celu tygodniowego: 0 z ${weeklyGoal}`} /></div>
+        <div className="child-preference-grid">
+          <Label htmlFor={`goal-${child.student_id}`}>Liczba sesji w tygodniu<Input id={`goal-${child.student_id}`} type="number" min={1} max={30} value={weeklyGoal} onChange={(event) => setWeeklyGoal(normalizeWeeklyGoal(event.target.value))} /></Label>
+          <div className="summary-preference"><div><Label htmlFor={`summary-${child.student_id}`}>Tygodniowe podsumowanie</Label><p>Powiadomienie e-mail bez treści rozmów z AI.</p></div><Switch id={`summary-${child.student_id}`} checked={summaryEnabled} onCheckedChange={setSummaryEnabled} /></div>
+        </div>
+        <div className="child-settings-actions"><Button type="button" onClick={() => onSave(child.student_id, weeklyGoal, summaryEnabled)} disabled={busy}>{busy ? "Zapisuję…" : "Zapisz ustawienia"}</Button><Button variant="outline" asChild><Link href="/bezpieczenstwo-dzieci-ai">Zakres danych rodzica</Link></Button></div>
+      </CardContent>
+    </Card>
+  );
+}
+
+function ParentPanel({ requests, linkedChildren, actionBusy, onApprove, onReject, onSavePreferences }: { requests: GuardianRequest[]; linkedChildren: LinkedChild[]; actionBusy: string; onApprove: (id: string) => void; onReject: (id: string) => void; onSavePreferences: (studentId: string, weeklyGoal: number, summaryEmailEnabled: boolean) => void }) {
+  const { totalWeeklyGoal, enabledReports } = summarizeParentPreferences(linkedChildren);
   return (
     <>
-      <section className="dashboard-hero parent-hero-dashboard">
+      <section className="dashboard-hero parent-hero-dashboard" id="zadania">
         <div>
           <span className="dashboard-kicker">Panel rodzica</span>
           <h2>{requests.length ? "Dziecko czeka na Twoją zgodę." : linkedChildren.length ? "Wspieraj bez zaglądania przez ramię." : "Połącz konto dziecka."}</h2>
@@ -91,12 +125,12 @@ function ParentPanel({ requests, linkedChildren, actionBusy, onApprove, onReject
           <div className="guardian-request-actions"><Button size="sm" onClick={() => onApprove(request.request_id)} disabled={Boolean(actionBusy)}>Zatwierdź</Button><Button size="sm" variant="outline" onClick={() => onReject(request.request_id)} disabled={Boolean(actionBusy)}>Odrzuć</Button></div>
         </article>)}
       </section>}
-      <section className="dashboard-grid three-columns">
+      <section className="dashboard-grid three-columns" id="postep">
         <article className="metric-card"><span>Połączone konta</span><b>{linkedChildren.length}</b><small>Wyłącznie po zatwierdzonej prośbie.</small></article>
-        <article className="metric-card"><span>Aktywność w tygodniu</span><b>—</b><small>Pojawi się po pierwszych ćwiczeniach.</small></article>
-        <article className="metric-card"><span>Czas nauki</span><b>—</b><small>Bez podglądu treści rozmów z AI.</small></article>
+        <article className="metric-card"><span>Cel tygodniowy</span><b>{totalWeeklyGoal || "—"}</b><small>Łączna liczba zaplanowanych sesji.</small></article>
+        <article className="metric-card"><span>Raporty e-mail</span><b>{enabledReports}</b><small>Bez podglądu treści rozmów z AI.</small></article>
       </section>
-      {linkedChildren.length > 0 && <section className="linked-children"><h3>Połączone konta dzieci</h3>{linkedChildren.map((child) => <article key={child.student_id}><div className="guardian-avatar">{(child.student_display_name || child.student_email).slice(0, 2).toUpperCase()}</div><div><b>{child.student_display_name || "Uczeń"}</b><span>{child.student_email}</span></div><Badge variant="outline">Zgoda aktywna</Badge></article>)}</section>}
+      {linkedChildren.length > 0 && <section className="linked-children"><div className="guardian-section-heading"><div><Badge variant="secondary">Ustawienia nauki</Badge><h3>Połączone konta dzieci</h3></div><small>Cel i podsumowania ustawiasz osobno dla każdego dziecka.</small></div>{linkedChildren.map((child) => <ChildSettingsCard key={child.student_id} child={child} busy={actionBusy === child.student_id} onSave={onSavePreferences} />)}</section>}
       <section className="dashboard-card empty-dashboard-card">
         <span className="empty-icon">↗</span>
         <div><h3>Tygodniowy raport bez pilnowania każdego zadania</h3><p>Po połączeniu kont pokażemy regularność, postęp w tematach i jedną konkretną rekomendację na kolejny tydzień.</p></div>
@@ -109,38 +143,46 @@ function TeacherPanel({ verificationStatus }: { verificationStatus: Profile["tea
   const verified = verificationStatus === "verified";
   return (
     <>
-      <section className="dashboard-hero teacher-hero">
+      <section className="dashboard-hero teacher-hero" id="zadania">
         <div>
           <span className="dashboard-kicker">Panel nauczyciela</span>
           <h2>Przygotuj pierwszy zestaw.</h2>
           <p>Wybierz zadania CKE według tematu i udostępnij je uczniom jednym linkiem.</p>
-          <Button type="button" disabled={!verified}>Utwórz zestaw <span>→</span></Button>
+          <Button type="button" disabled title="Moduł zestawów zostanie uruchomiony w kolejnym etapie MVP">Zestawy wkrótce</Button>
         </div>
         <div className="teacher-stack"><i>CKE</i><i>6 zadań</i><i>Link dla klasy</i></div>
       </section>
       {!verified && <Alert variant={verificationStatus === "rejected" ? "destructive" : "warning"} className="teacher-verification"><AlertTitle>{verificationStatus === "rejected" ? "Weryfikacja wymaga wyjaśnienia" : "Konto nauczyciela oczekuje na weryfikację"}</AlertTitle><AlertDescription>Możesz przeglądać panel i bibliotekę. Tworzenie grup, zapraszanie uczniów i dostęp do ich wyników są zablokowane do potwierdzenia roli nauczyciela przez administratora. Napisz na kontakt@egzamin.io z adresu szkolnego.</AlertDescription></Alert>}
-      <section className="dashboard-grid three-columns">
+      <section className="dashboard-grid three-columns" id="postep">
         <article className="metric-card"><span>Moje grupy</span><b>0</b><small>Utwórz grupę lub zaproś klasę.</small></article>
         <article className="metric-card"><span>Aktywne zestawy</span><b>0</b><small>Gotowe zadania pojawią się tutaj.</small></article>
         <article className="metric-card"><span>Uczniowie</span><b>0</b><small>Dołączają przez bezpieczny kod.</small></article>
       </section>
       <section className="dashboard-grid two-columns">
-        <article className="dashboard-card"><span className="dashboard-kicker dark-kicker">Biblioteka CKE</span><h3>Wybieraj zadania według umiejętności</h3><p>Matematyka, język polski i angielski — z metadanymi i wyjaśnieniami AI.</p><Button variant="outline" className="secondary-button" type="button">Przeglądaj zadania</Button></article>
-        <article className="dashboard-card"><span className="dashboard-kicker dark-kicker">Wyniki</span><h3>Zobacz, gdzie grupa naprawdę utknęła</h3><p>Skuteczność według tematu bez ujawniania prywatnych rozmów uczniów z AI. Dane pokazujemy tylko dla przypisanej grupy i w niezbędnym zakresie.</p><Button variant="outline" className="secondary-button" type="button" disabled={!verified}>Zobacz przykładowy raport</Button></article>
+        <article className="dashboard-card"><span className="dashboard-kicker dark-kicker">Biblioteka CKE</span><h3>Wybieraj zadania według umiejętności</h3><p>Matematyka, język polski i angielski — z metadanymi i wyjaśnieniami AI.</p><Button variant="outline" className="secondary-button" type="button" disabled>Biblioteka w przygotowaniu</Button></article>
+        <article className="dashboard-card"><span className="dashboard-kicker dark-kicker">Wyniki</span><h3>Zobacz, gdzie grupa naprawdę utknęła</h3><p>Skuteczność według tematu bez ujawniania prywatnych rozmów uczniów z AI. Dane pokazujemy tylko dla przypisanej grupy i w niezbędnym zakresie.</p><Button variant="outline" className="secondary-button" type="button" disabled>{verified ? "Raporty w przygotowaniu" : "Dostęp po weryfikacji"}</Button></article>
       </section>
     </>
   );
 }
 
-function AdminPanel({ counts }: { counts: RoleCounts }) {
+function AdminPanel({ counts, busy, error, onGrantTeacher }: { counts: RoleCounts; busy: boolean; error: string; onGrantTeacher: (email: string) => Promise<boolean> }) {
   const total = Object.values(counts).reduce((sum, value) => sum + value, 0);
+  const [teacherEmail, setTeacherEmail] = useState("");
+
+  async function grantTeacherRole() {
+    const email = teacherEmail.trim().toLowerCase();
+    if (!email) return;
+    if (await onGrantTeacher(email)) setTeacherEmail("");
+  }
+
   return (
     <>
-      <section className="dashboard-hero admin-hero">
-        <div><span className="dashboard-kicker">Administracja MVP</span><h2>Stan platformy w jednym miejscu.</h2><p>Kontroluj konta, treści CKE i gotowość produktu przed zaproszeniem kolejnej kohorty.</p><button type="button">Przejdź do użytkowników <span>→</span></button></div>
+      <section className="dashboard-hero admin-hero" id="zadania">
+        <div><span className="dashboard-kicker">Administracja MVP</span><h2>Stan platformy w jednym miejscu.</h2><p>Kontroluj konta, treści CKE i gotowość produktu przed zaproszeniem kolejnej kohorty.</p><Button asChild><a href="#nadawanie-roli">Nadaj rolę nauczyciela <span>→</span></a></Button></div>
         <div className="admin-total"><b>{total}</b><span>wszystkich kont</span></div>
       </section>
-      <section className="dashboard-grid four-columns">
+      <section className="dashboard-grid four-columns" id="postep">
         {(["student", "parent", "teacher", "admin"] as UserRole[]).map((role) => (
           <article className="metric-card" key={role}><span>{roleLabels[role]}</span><b>{counts[role]}</b><small>aktywnych profili</small></article>
         ))}
@@ -149,6 +191,13 @@ function AdminPanel({ counts }: { counts: RoleCounts }) {
         <article className="dashboard-card"><span className="status-dot ready" /> <h3>Supabase Auth i RLS</h3><p>Role są odseparowane w bazie, a administratora nie można wybrać podczas rejestracji.</p></article>
         <article className="dashboard-card"><span className="status-dot pending" /> <h3>Treści do publikacji</h3><p>Dodaj workflow akceptacji zdigitalizowanych zadań przed uruchomieniem płatnego ruchu.</p></article>
       </section>
+      <Card className="admin-teacher-card" id="nadawanie-roli">
+        <CardHeader><CardTitle>Ręczne nadawanie roli nauczyciela</CardTitle><CardDescription>Użytkownik najpierw zakłada zwykłe konto. Po weryfikacji administrator zmienia jego rolę na nauczyciela.</CardDescription></CardHeader>
+        <CardContent>
+          {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+          <div className="admin-teacher-form"><Label htmlFor="teacher-email">Adres e-mail zweryfikowanego nauczyciela</Label><div><Input id="teacher-email" type="email" autoComplete="email" placeholder="nauczyciel@szkola.pl" value={teacherEmail} onChange={(event) => setTeacherEmail(event.target.value)} /><Button type="button" onClick={() => void grantTeacherRole()} disabled={busy || !teacherEmail.trim()}>{busy ? "Nadaję rolę…" : "Nadaj rolę"}</Button></div></div>
+        </CardContent>
+      </Card>
     </>
   );
 }
@@ -161,6 +210,8 @@ export default function DashboardPage() {
   const [linkedChildren, setLinkedChildren] = useState<LinkedChild[]>([]);
   const [guardianActionBusy, setGuardianActionBusy] = useState("");
   const [actionError, setActionError] = useState("");
+  const [adminActionBusy, setAdminActionBusy] = useState(false);
+  const [adminActionError, setAdminActionError] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -173,6 +224,17 @@ export default function DashboardPage() {
     if (requestsError || childrenError) throw requestsError ?? childrenError;
     setGuardianRequests((requests as GuardianRequest[] | null) ?? []);
     setLinkedChildren((children as LinkedChild[] | null) ?? []);
+  }, []);
+
+  const refreshAdminCounts = useCallback(async () => {
+    const supabase = await getSupabaseClient();
+    const { data: profiles, error: profilesError } = await supabase.from("profiles").select("role");
+    if (profilesError) throw profilesError;
+    const nextCounts = { ...emptyCounts };
+    profiles?.forEach((item) => {
+      if (isUserRole(item.role)) nextCounts[item.role] += 1;
+    });
+    setCounts(nextCounts);
   }, []);
 
   useEffect(() => {
@@ -213,12 +275,7 @@ export default function DashboardPage() {
           if (nextProfile.role === "parent") {
             await refreshParentData();
           } else if (nextProfile.role === "admin") {
-            const { data: profiles } = await supabase.from("profiles").select("role");
-            const nextCounts = { ...emptyCounts };
-            profiles?.forEach((item) => {
-              if (isUserRole(item.role)) nextCounts[item.role] += 1;
-            });
-            setCounts(nextCounts);
+            await refreshAdminCounts();
           }
           setLoading(false);
         };
@@ -240,7 +297,7 @@ export default function DashboardPage() {
       active = false;
       unsubscribe?.();
     };
-  }, [refreshParentData]);
+  }, [refreshAdminCounts, refreshParentData]);
 
   async function decideGuardianRequest(requestId: string, decision: "approve" | "reject") {
     setGuardianActionBusy(requestId);
@@ -255,6 +312,42 @@ export default function DashboardPage() {
       setActionError("Nie udało się zapisać decyzji opiekuna. Odśwież stronę i spróbuj ponownie.");
     } finally {
       setGuardianActionBusy("");
+    }
+  }
+
+  async function saveGuardianPreferences(studentId: string, weeklyGoal: number, summaryEmailEnabled: boolean) {
+    setGuardianActionBusy(studentId);
+    setActionError("");
+    try {
+      const supabase = await getSupabaseClient();
+      const { error: preferencesError } = await supabase.rpc("update_guardian_preferences", {
+        target_student_id: studentId,
+        next_weekly_goal: weeklyGoal,
+        next_summary_email_enabled: summaryEmailEnabled,
+      });
+      if (preferencesError) throw preferencesError;
+      await refreshParentData();
+    } catch {
+      setActionError("Nie udało się zapisać ustawień dziecka. Spróbuj ponownie.");
+    } finally {
+      setGuardianActionBusy("");
+    }
+  }
+
+  async function grantTeacherRole(email: string) {
+    setAdminActionBusy(true);
+    setAdminActionError("");
+    try {
+      const supabase = await getSupabaseClient();
+      const { error: grantError } = await supabase.rpc("grant_teacher_role", { target_email: email });
+      if (grantError) throw grantError;
+      await refreshAdminCounts();
+      return true;
+    } catch {
+      setAdminActionError("Nie udało się nadać roli. Sprawdź adres, status konta i uprawnienia administratora.");
+      return false;
+    } finally {
+      setAdminActionBusy(false);
     }
   }
 
@@ -307,21 +400,25 @@ export default function DashboardPage() {
           <a href="#postep"><span>↗</span> {profile.role === "admin" ? "Treści CKE" : "Postępy"}</a>
           <a href="#ustawienia"><span>⚙</span> Ustawienia</a>
         </nav>
-        <div className="sidebar-plan"><b>Plan bezpłatny</b><span>3 pytania AI dziennie</span><i><em /></i><a href="#plan">Poznaj plan Plus →</a></div>
-        <button className="sidebar-signout" type="button" onClick={signOut}>Wyloguj się</button>
+        <div className="sidebar-plan"><b>Plan bezpłatny</b><span>3 pytania AI dziennie</span><i><em /></i><Link href="/#dostep">Poznaj plan Plus →</Link></div>
+        <Button variant="ghost" className="sidebar-signout" type="button" onClick={signOut}>Wyloguj się</Button>
       </aside>
 
       <div className="dashboard-main">
         <header className="dashboard-topbar">
           <div><span>{roleLabels[profile.role]}</span><h1>Cześć, {firstName}!</h1></div>
-          <div className="dashboard-account"><span>{displayName.slice(0, 2).toUpperCase()}</span><div><b>{displayName}</b><small>{profile.email}</small></div></div>
+          <div className="dashboard-topbar-actions"><ThemeToggle /><div className="dashboard-account"><span>{displayName.slice(0, 2).toUpperCase()}</span><div><b>{displayName}</b><small>{profile.email}</small></div></div></div>
         </header>
         <div className="dashboard-content">
           {profile.role === "student" && <StudentPanel />}
           {actionError && profile.role === "parent" && <Alert variant="destructive" className="dashboard-alert"><AlertDescription>{actionError}</AlertDescription></Alert>}
-          {profile.role === "parent" && <ParentPanel requests={guardianRequests} linkedChildren={linkedChildren} actionBusy={guardianActionBusy} onApprove={(id) => void decideGuardianRequest(id, "approve")} onReject={(id) => void decideGuardianRequest(id, "reject")} />}
+          {profile.role === "parent" && <ParentPanel requests={guardianRequests} linkedChildren={linkedChildren} actionBusy={guardianActionBusy} onApprove={(id) => void decideGuardianRequest(id, "approve")} onReject={(id) => void decideGuardianRequest(id, "reject")} onSavePreferences={(studentId, weeklyGoal, summaryEnabled) => void saveGuardianPreferences(studentId, weeklyGoal, summaryEnabled)} />}
           {profile.role === "teacher" && <TeacherPanel verificationStatus={profile.teacher_verification_status} />}
-          {profile.role === "admin" && <AdminPanel counts={counts} />}
+          {profile.role === "admin" && <AdminPanel counts={counts} busy={adminActionBusy} error={adminActionError} onGrantTeacher={grantTeacherRole} />}
+          <Card className="account-settings-card" id="ustawienia">
+            <CardHeader><CardTitle>Ustawienia konta</CardTitle><CardDescription>Motyw, prywatność i zarządzanie danymi w jednym miejscu.</CardDescription></CardHeader>
+            <CardContent className="account-settings-actions"><div><span>Wygląd aplikacji</span><ThemeToggle /></div><Button variant="outline" asChild><Link href="/polityka-prywatnosci">Prywatność</Link></Button><Button variant="outline" asChild><Link href="/usun-konto">Usuń konto i dane</Link></Button></CardContent>
+          </Card>
         </div>
       </div>
     </main>

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { MathJaxProvider } from "@/components/mathjax-provider";
+import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import "./account.css";
 
@@ -48,15 +50,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pl">
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: `window.MathJax={loader:{load:['ui/safe']},tex:{inlineMath:[['\\\\(','\\\\)']],displayMath:[['\\\\[','\\\\]']],packages:{'[-]':['require','autoload']}},options:{ignoreHtmlClass:'mathjax_ignore',processHtmlClass:'mathjax_process',menuOptions:{settings:{enrich:true,speech:true,braille:true,assistiveMml:false}}},startup:{ready(){MathJax.startup.defaultReady();MathJax.startup.promise.then(()=>window.dispatchEvent(new Event('mathjax-ready')))}}};` }} />
-        <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-mml-chtml.js" />
-      </head>
+    <html lang="pl" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased mathjax_ignore`}
       >
-        {children}
+        <ThemeProvider>
+          <MathJaxProvider>{children}</MathJaxProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
