@@ -2,7 +2,6 @@
 /* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import Link from "next/link";
 import type { User } from "@supabase/supabase-js";
 import { BrandLogo } from "@/components/brand-logo";
 import { MathFormula } from "@/components/math-formula";
@@ -33,6 +32,7 @@ type Profile = {
 
 type GuardianRequest = { request_id: string; student_id: string; student_display_name: string | null; student_email: string; requested_at: string; expires_at: string };
 type LinkedChild = { student_id: string; student_display_name: string | null; student_email: string; linked_at: string; weekly_goal: number; summary_email_enabled: boolean };
+type ParentView = "start" | "children" | "connect" | "settings";
 
 type RoleCounts = Record<UserRole, number>;
 
@@ -97,13 +97,13 @@ function ChildSettingsCard({ child, busy, onSave }: { child: LinkedChild; busy: 
           <Label htmlFor={`goal-${child.student_id}`}>Liczba sesji w tygodniu<Input id={`goal-${child.student_id}`} type="number" min={1} max={30} value={weeklyGoal} onChange={(event) => setWeeklyGoal(normalizeWeeklyGoal(event.target.value))} /></Label>
           <div className="summary-preference"><div><Label htmlFor={`summary-${child.student_id}`}>Tygodniowe podsumowanie</Label><p>Powiadomienie e-mail bez treści rozmów z AI.</p></div><Switch id={`summary-${child.student_id}`} checked={summaryEnabled} onCheckedChange={setSummaryEnabled} /></div>
         </div>
-        <div className="child-settings-actions"><Button type="button" onClick={() => onSave(child.student_id, weeklyGoal, summaryEnabled)} disabled={busy}>{busy ? "Zapisuję…" : "Zapisz ustawienia"}</Button><Button variant="outline" asChild><Link href="/bezpieczenstwo-dzieci-ai">Zakres danych rodzica</Link></Button></div>
+        <div className="child-settings-actions"><Button type="button" onClick={() => onSave(child.student_id, weeklyGoal, summaryEnabled)} disabled={busy}>{busy ? "Zapisuję…" : "Zapisz ustawienia"}</Button><Button variant="outline" asChild><a href="/bezpieczenstwo-dzieci-ai">Zakres danych rodzica</a></Button></div>
       </CardContent>
     </Card>
   );
 }
 
-function ParentPanel({ parentEmail, requests, linkedChildren, actionBusy, onApprove, onReject, onSavePreferences }: { parentEmail: string; requests: GuardianRequest[]; linkedChildren: LinkedChild[]; actionBusy: string; onApprove: (id: string) => void; onReject: (id: string) => void; onSavePreferences: (studentId: string, weeklyGoal: number, summaryEmailEnabled: boolean) => void }) {
+function ParentPanel({ activeView, parentEmail, requests, linkedChildren, actionBusy, onNavigate, onApprove, onReject, onSavePreferences }: { activeView: ParentView; parentEmail: string; requests: GuardianRequest[]; linkedChildren: LinkedChild[]; actionBusy: string; onNavigate: (view: ParentView) => void; onApprove: (id: string) => void; onReject: (id: string) => void; onSavePreferences: (studentId: string, weeklyGoal: number, summaryEmailEnabled: boolean) => void }) {
   const { totalWeeklyGoal, enabledReports } = summarizeParentPreferences(linkedChildren);
   const [inviteStatus, setInviteStatus] = useState("");
   const invitePath = "/logowanie?tryb=rejestracja&rola=uczen";
@@ -129,37 +129,55 @@ function ParentPanel({ parentEmail, requests, linkedChildren, actionBusy, onAppr
 
   return (
     <>
-      <section className="dashboard-hero parent-hero-dashboard" id="zadania">
-        <div>
-          <span className="dashboard-kicker">Panel rodzica</span>
-          <h2>{requests.length ? "Dziecko czeka na Twoją zgodę." : linkedChildren.length ? "Wspieraj bez zaglądania przez ramię." : "Połącz konto dziecka."}</h2>
-          <p>Zatwierdzasz konto we własnym panelu. Po połączeniu widzisz regularność i postęp, ale nie prywatną treść rozmów ucznia z AI.</p>
-          <Button type="button" asChild><a href="#polacz-dziecko">Połącz konto dziecka <span>→</span></a></Button>
-        </div>
-        <div className="parent-illustration"><span>R</span><i>+</i><span>U</span></div>
-      </section>
-      {requests.length > 0 && <section className="guardian-requests" aria-labelledby="guardian-requests-title">
-        <div className="guardian-section-heading"><div><Badge variant="secondary">Wymaga decyzji</Badge><h3 id="guardian-requests-title">Prośby o zgodę opiekuna</h3></div><small>Sprawdź tożsamość dziecka poza serwisem przed zatwierdzeniem.</small></div>
-        {requests.map((request) => <article className="guardian-request-card" key={request.request_id}>
-          <div className="guardian-avatar">{(request.student_display_name || request.student_email).slice(0, 2).toUpperCase()}</div>
-          <div><b>{request.student_display_name || "Uczeń"}</b><span>{request.student_email}</span><small>Prośba z {new Date(request.requested_at).toLocaleDateString("pl-PL")}</small></div>
-          <div className="guardian-request-actions"><Button size="sm" onClick={() => onApprove(request.request_id)} disabled={Boolean(actionBusy)}>Zatwierdź</Button><Button size="sm" variant="outline" onClick={() => onReject(request.request_id)} disabled={Boolean(actionBusy)}>Odrzuć</Button></div>
-        </article>)}
-      </section>}
-      <Card className="parent-connect-card" id="polacz-dziecko">
-        <CardHeader><Badge variant="secondary">Działa od razu</Badge><CardTitle>Połącz konto dziecka</CardTitle><CardDescription>Wyślij link i swój e-mail. Po rejestracji prośba o zgodę pojawi się powyżej.</CardDescription></CardHeader>
-        <CardContent><div className="parent-connect-steps"><span><b>1</b>Wyślij link</span><span><b>2</b>Dziecko wpisuje Twój e-mail</span><span><b>3</b>Zatwierdzasz prośbę</span></div><div className="parent-connect-actions"><Button type="button" onClick={() => void copyInvite()}>Kopiuj link dla dziecka</Button><Button variant="outline" type="button" onClick={() => void copyGuardianEmail()}>Kopiuj mój e-mail</Button><Button variant="outline" asChild><a href={`mailto:?subject=${encodeURIComponent("Zaproszenie do egzaminio")}&body=${encodeURIComponent(`Załóż konto ucznia przez ten link: ${publicInviteUrl}\nW polu opiekuna wpisz: ${parentEmail}`)}`}>Wyślij e-mailem</a></Button><Button variant="ghost" asChild><Link href="/bezpieczenstwo-dzieci-ai">Jak chronimy dane?</Link></Button></div>{inviteStatus && <p className="parent-invite-status" role="status">{inviteStatus}</p>}</CardContent>
-      </Card>
-      {linkedChildren.length > 0 && <section className="dashboard-grid three-columns" id="postep">
-        <article className="metric-card"><span>Połączone konta</span><b>{linkedChildren.length}</b><small>Wyłącznie po zatwierdzonej prośbie.</small></article>
-        <article className="metric-card"><span>Cel tygodniowy</span><b>{totalWeeklyGoal || "—"}</b><small>Łączna liczba zaplanowanych sesji.</small></article>
-        <article className="metric-card"><span>Raporty e-mail</span><b>{enabledReports}</b><small>Bez podglądu treści rozmów z AI.</small></article>
-      </section>}
-      {linkedChildren.length > 0 && <section className="linked-children"><div className="guardian-section-heading"><div><Badge variant="secondary">Ustawienia nauki</Badge><h3>Połączone konta dzieci</h3></div><small>Cel i podsumowania ustawiasz osobno dla każdego dziecka.</small></div>{linkedChildren.map((child) => <ChildSettingsCard key={child.student_id} child={child} busy={actionBusy === child.student_id} onSave={onSavePreferences} />)}</section>}
-      {linkedChildren.length > 0 && <section className="dashboard-card empty-dashboard-card">
-        <span className="empty-icon">↗</span>
-        <div><h3>Tygodniowy raport bez pilnowania każdego zadania</h3><p>Po połączeniu kont pokażemy regularność, postęp w tematach i jedną konkretną rekomendację na kolejny tydzień.</p></div>
-      </section>}
+      {activeView === "start" && <>
+        <section className="dashboard-hero parent-hero-dashboard">
+          <div>
+            <span className="dashboard-kicker">Panel rodzica</span>
+            <h2>{requests.length ? "Dziecko czeka na Twoją zgodę." : linkedChildren.length ? "Wspieraj bez zaglądania przez ramię." : "Połącz konto dziecka."}</h2>
+            <p>Zatwierdzasz konto we własnym panelu. Po połączeniu widzisz regularność i postęp, ale nie prywatną treść rozmów ucznia z AI.</p>
+            <Button type="button" onClick={() => onNavigate(linkedChildren.length ? "children" : "connect")}>{linkedChildren.length ? "Zobacz dzieci" : "Połącz konto dziecka"} <span>→</span></Button>
+          </div>
+          <div className="parent-illustration"><span>R</span><i>+</i><span>U</span></div>
+        </section>
+        {requests.length > 0 && <section className="guardian-requests" aria-labelledby="guardian-requests-title">
+          <div className="guardian-section-heading"><div><Badge variant="secondary">Wymaga decyzji</Badge><h3 id="guardian-requests-title">Prośby o zgodę opiekuna</h3></div><small>Sprawdź tożsamość dziecka poza serwisem przed zatwierdzeniem.</small></div>
+          {requests.map((request) => <article className="guardian-request-card" key={request.request_id}>
+            <div className="guardian-avatar">{(request.student_display_name || request.student_email).slice(0, 2).toUpperCase()}</div>
+            <div><b>{request.student_display_name || "Uczeń"}</b><span>{request.student_email}</span><small>Prośba z {new Date(request.requested_at).toLocaleDateString("pl-PL")}</small></div>
+            <div className="guardian-request-actions"><Button size="sm" onClick={() => onApprove(request.request_id)} disabled={Boolean(actionBusy)}>Zatwierdź</Button><Button size="sm" variant="outline" onClick={() => onReject(request.request_id)} disabled={Boolean(actionBusy)}>Odrzuć</Button></div>
+          </article>)}
+        </section>}
+        {linkedChildren.length > 0 && <section className="dashboard-grid three-columns">
+          <article className="metric-card"><span>Połączone konta</span><b>{linkedChildren.length}</b><small>Wyłącznie po zatwierdzonej prośbie.</small></article>
+          <article className="metric-card"><span>Cel tygodniowy</span><b>{totalWeeklyGoal || "—"}</b><small>Łączna liczba zaplanowanych sesji.</small></article>
+          <article className="metric-card"><span>Raporty e-mail</span><b>{enabledReports}</b><small>Bez podglądu treści rozmów z AI.</small></article>
+        </section>}
+        <section className="dashboard-card empty-dashboard-card">
+          <span className="empty-icon">↗</span>
+          <div><h3>Tygodniowy raport bez pilnowania każdego zadania</h3><p>Po połączeniu kont pokażemy regularność, postęp w tematach i jedną konkretną rekomendację na kolejny tydzień.</p></div>
+        </section>
+      </>}
+
+      {activeView === "children" && <>
+        <div className="dashboard-view-heading"><div><span className="dashboard-kicker dark-kicker">Dzieci</span><h2>Postępy i ustawienia nauki</h2></div><Button type="button" onClick={() => onNavigate("connect")}>Połącz kolejne konto</Button></div>
+        {requests.length > 0 && <section className="guardian-requests" aria-labelledby="children-requests-title">
+          <div className="guardian-section-heading"><div><Badge variant="secondary">Wymaga decyzji</Badge><h3 id="children-requests-title">Prośby o zgodę opiekuna</h3></div><small>Sprawdź tożsamość dziecka poza serwisem przed zatwierdzeniem.</small></div>
+          {requests.map((request) => <article className="guardian-request-card" key={request.request_id}>
+            <div className="guardian-avatar">{(request.student_display_name || request.student_email).slice(0, 2).toUpperCase()}</div>
+            <div><b>{request.student_display_name || "Uczeń"}</b><span>{request.student_email}</span><small>Prośba z {new Date(request.requested_at).toLocaleDateString("pl-PL")}</small></div>
+            <div className="guardian-request-actions"><Button size="sm" onClick={() => onApprove(request.request_id)} disabled={Boolean(actionBusy)}>Zatwierdź</Button><Button size="sm" variant="outline" onClick={() => onReject(request.request_id)} disabled={Boolean(actionBusy)}>Odrzuć</Button></div>
+          </article>)}
+        </section>}
+        {linkedChildren.length > 0 ? <section className="linked-children"><div className="guardian-section-heading"><div><Badge variant="secondary">Ustawienia nauki</Badge><h3>Połączone konta dzieci</h3></div><small>Cel i podsumowania ustawiasz osobno dla każdego dziecka.</small></div>{linkedChildren.map((child) => <ChildSettingsCard key={child.student_id} child={child} busy={actionBusy === child.student_id} onSave={onSavePreferences} />)}</section> : <Card className="parent-empty-view"><CardHeader><CardTitle>Nie ma jeszcze połączonych kont</CardTitle><CardDescription>Wyślij dziecku link rejestracyjny. Po zatwierdzeniu prośby zobaczysz je tutaj.</CardDescription></CardHeader><CardContent><Button type="button" onClick={() => onNavigate("connect")}>Połącz konto dziecka</Button></CardContent></Card>}
+      </>}
+
+      {activeView === "connect" && <>
+        <div className="dashboard-view-heading"><div><span className="dashboard-kicker dark-kicker">Połącz konto</span><h2>Zaproś dziecko w trzech krokach</h2></div></div>
+        <Card className="parent-connect-card">
+          <CardHeader><Badge variant="secondary">Działa od razu</Badge><CardTitle>Połącz konto dziecka</CardTitle><CardDescription>Wyślij link i swój e-mail. Po rejestracji prośba o zgodę pojawi się w widoku „Dzieci”.</CardDescription></CardHeader>
+          <CardContent><div className="parent-connect-steps"><span><b>1</b>Wyślij link</span><span><b>2</b>Dziecko wpisuje Twój e-mail</span><span><b>3</b>Zatwierdzasz prośbę</span></div><div className="parent-connect-actions"><Button type="button" onClick={() => void copyInvite()}>Kopiuj link dla dziecka</Button><Button variant="outline" type="button" onClick={() => void copyGuardianEmail()}>Kopiuj mój e-mail</Button><Button variant="outline" asChild><a href={`mailto:?subject=${encodeURIComponent("Zaproszenie do egzaminio")}&body=${encodeURIComponent(`Załóż konto ucznia przez ten link: ${publicInviteUrl}\nW polu opiekuna wpisz: ${parentEmail}`)}`}>Wyślij e-mailem</a></Button><Button variant="ghost" asChild><a href="/bezpieczenstwo-dzieci-ai">Jak chronimy dane?</a></Button></div>{inviteStatus && <p className="parent-invite-status" role="status">{inviteStatus}</p>}</CardContent>
+        </Card>
+      </>}
     </>
   );
 }
@@ -233,6 +251,7 @@ export default function DashboardPage() {
   const [counts, setCounts] = useState<RoleCounts>(emptyCounts);
   const [guardianRequests, setGuardianRequests] = useState<GuardianRequest[]>([]);
   const [linkedChildren, setLinkedChildren] = useState<LinkedChild[]>([]);
+  const [parentView, setParentView] = useState<ParentView>("start");
   const [guardianActionBusy, setGuardianActionBusy] = useState("");
   const [actionError, setActionError] = useState("");
   const [actionMessage, setActionMessage] = useState("");
@@ -425,31 +444,38 @@ export default function DashboardPage() {
       <aside className="dashboard-sidebar">
         <a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a>
         <nav aria-label="Panel">
-          <a className="active" href="/panel"><span>⌂</span> Start</a>
-          <a href="#zadania"><span>✎</span> {profile.role === "parent" ? "Dzieci" : profile.role === "teacher" ? "Zestawy" : profile.role === "admin" ? "Użytkownicy" : "Ćwiczenia"}</a>
-          <a href={profile.role === "parent" ? "#polacz-dziecko" : "#postep"}><span>↗</span> {profile.role === "parent" ? "Połącz konto" : profile.role === "admin" ? "Treści CKE" : "Postępy"}</a>
-          <a href="#ustawienia"><span>⚙</span> Ustawienia</a>
+          {profile.role === "parent" ? <>
+            <button type="button" className={parentView === "start" ? "active" : ""} aria-current={parentView === "start" ? "page" : undefined} onClick={() => setParentView("start")}><span>⌂</span> Start</button>
+            <button type="button" className={parentView === "children" ? "active" : ""} aria-current={parentView === "children" ? "page" : undefined} onClick={() => setParentView("children")}><span>✎</span> Dzieci</button>
+            <button type="button" className={parentView === "connect" ? "active" : ""} aria-current={parentView === "connect" ? "page" : undefined} onClick={() => setParentView("connect")}><span>↗</span> Połącz konto</button>
+            <button type="button" className={parentView === "settings" ? "active" : ""} aria-current={parentView === "settings" ? "page" : undefined} onClick={() => setParentView("settings")}><span>⚙</span> Ustawienia</button>
+          </> : <>
+            <a className="active" href="/panel"><span>⌂</span> Start</a>
+            <a href="#zadania"><span>✎</span> {profile.role === "teacher" ? "Zestawy" : profile.role === "admin" ? "Użytkownicy" : "Ćwiczenia"}</a>
+            <a href="#postep"><span>↗</span> {profile.role === "admin" ? "Treści CKE" : "Postępy"}</a>
+            <a href="#ustawienia"><span>⚙</span> Ustawienia</a>
+          </>}
         </nav>
-        <div className="sidebar-plan"><b>Plan bezpłatny</b><span>3 pytania AI dziennie</span><i><em /></i><Link href="/#dostep">Poznaj plan Plus →</Link></div>
+        <div className="sidebar-plan"><b>Plan bezpłatny</b><span>3 pytania AI dziennie</span><i><em /></i><a href="/#dostep">Poznaj plan Plus →</a></div>
         <Button variant="ghost" className="sidebar-signout" type="button" onClick={signOut}>Wyloguj się</Button>
       </aside>
 
       <div className="dashboard-main">
         <header className="dashboard-topbar">
           <div><span>{roleLabels[profile.role]}</span><h1>Cześć, {firstName}!</h1></div>
-          <div className="dashboard-topbar-actions"><ThemeToggle /><div className="dashboard-account"><span>{displayName.slice(0, 2).toUpperCase()}</span><div><b>{displayName}</b><small>{profile.email}</small></div></div></div>
+          <div className="dashboard-topbar-actions"><div className="dashboard-account"><span>{displayName.slice(0, 2).toUpperCase()}</span><div><b>{displayName}</b><small>{profile.email}</small></div></div></div>
         </header>
         <div className="dashboard-content">
           {profile.role === "student" && <StudentPanel />}
           {actionError && profile.role === "parent" && <Alert variant="destructive" className="dashboard-alert"><AlertDescription>{actionError}</AlertDescription></Alert>}
           {actionMessage && profile.role === "parent" && <Alert variant="success" className="dashboard-alert"><AlertDescription>{actionMessage}</AlertDescription></Alert>}
-          {profile.role === "parent" && <ParentPanel parentEmail={profile.email} requests={guardianRequests} linkedChildren={linkedChildren} actionBusy={guardianActionBusy} onApprove={(id) => void decideGuardianRequest(id, "approve")} onReject={(id) => void decideGuardianRequest(id, "reject")} onSavePreferences={(studentId, weeklyGoal, summaryEnabled) => void saveGuardianPreferences(studentId, weeklyGoal, summaryEnabled)} />}
+          {profile.role === "parent" && <ParentPanel activeView={parentView} parentEmail={profile.email} requests={guardianRequests} linkedChildren={linkedChildren} actionBusy={guardianActionBusy} onNavigate={setParentView} onApprove={(id) => void decideGuardianRequest(id, "approve")} onReject={(id) => void decideGuardianRequest(id, "reject")} onSavePreferences={(studentId, weeklyGoal, summaryEnabled) => void saveGuardianPreferences(studentId, weeklyGoal, summaryEnabled)} />}
           {profile.role === "teacher" && <TeacherPanel verificationStatus={profile.teacher_verification_status} />}
           {profile.role === "admin" && <AdminPanel counts={counts} busy={adminActionBusy} error={adminActionError} onGrantTeacher={grantTeacherRole} />}
-          <Card className="account-settings-card" id="ustawienia">
+          {(profile.role !== "parent" || parentView === "settings") && <Card className="account-settings-card" id="ustawienia">
             <CardHeader><CardTitle>Ustawienia konta</CardTitle><CardDescription>Motyw, prywatność i zarządzanie danymi w jednym miejscu.</CardDescription></CardHeader>
-            <CardContent className="account-settings-actions"><div><span>Wygląd aplikacji</span><ThemeToggle /></div><Button variant="outline" asChild><Link href="/polityka-prywatnosci">Prywatność</Link></Button><Button variant="outline" asChild><Link href="/usun-konto">Usuń konto i dane</Link></Button></CardContent>
-          </Card>
+            <CardContent className="account-settings-actions"><div><span>Wygląd aplikacji</span><ThemeToggle /></div><Button variant="outline" asChild><a href="/polityka-prywatnosci">Polityka prywatności</a></Button><Button variant="outline" asChild><a href="/usun-konto">Usuń konto i dane</a></Button></CardContent>
+          </Card>}
         </div>
       </div>
     </main>

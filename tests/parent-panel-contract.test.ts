@@ -21,6 +21,21 @@ describe("parent panel actions", () => {
     expect(panel).toContain("Ustawienia dziecka zostały zapisane.");
   });
 
+  it("switches the parent dashboard content instead of using page anchors", () => {
+    expect(panel).toContain('type ParentView = "start" | "children" | "connect" | "settings"');
+    expect(panel).toContain('onClick={() => setParentView("children")}');
+    expect(panel).toContain('onClick={() => setParentView("connect")}');
+    expect(panel).toContain('parentView === "settings"');
+    expect(panel).not.toContain('profile.role === "parent" ? "#polacz-dziecko"');
+  });
+
+  it("keeps plan, privacy and theme controls in their intended places", () => {
+    expect(panel).toContain('<a href="/#dostep">Poznaj plan Plus →</a>');
+    expect(panel).toContain('<a href="/polityka-prywatnosci">Polityka prywatności</a>');
+    expect(panel).not.toContain('<div className="dashboard-topbar-actions"><ThemeToggle />');
+    expect(panel).toContain('<span>Wygląd aplikacji</span><ThemeToggle />');
+  });
+
   it("links visibly to child-safety information", () => {
     expect(panel).toContain('href="/bezpieczenstwo-dzieci-ai"');
   });
