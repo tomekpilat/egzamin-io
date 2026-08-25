@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
+
 import type { Metadata } from "next";
 import { LegalShell } from "@/components/legal-shell";
 import { LEGAL_UPDATED_LABEL } from "@/lib/legal";

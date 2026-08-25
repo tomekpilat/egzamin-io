@@ -1,0 +1,9 @@
+cluster,keyword,target_url,priority,intent,season,monthly_volume,keyword_difficulty,serp_notes,data_source,measurement_date,decision
+rekrutacja,kalkulator punktów do liceum,/kalkulator-punktow,P0,transactional,kwiecien-lipiec,,,,,,validate
+rekrutacja,ile punktów do liceum,/rekrutacja/ile-punktow-do-liceum,P0,commercial,kwiecien-lipiec,,,,,,validate
+egzamin,egzamin ósmoklasisty 2027,/egzamin-osmoklasisty-2027,P1,informational,styczen-maj,,,,,,validate
+matematyka,procenty zadania egzamin ósmoklasisty,/matematyka/procenty-zadania-egzamin-osmoklasisty,P1,learning,evergreen,,,,,,validate
+polski,lektury obowiązkowe egzamin ósmoklasisty,/jezyk-polski/lektury-obowiazkowe,P1,learning,wrzesien-maj,,,,,,validate
+angielski,funkcje językowe egzamin ósmoklasisty angielski,/jezyk-angielski/funkcje-jezykowe,P1,learning,evergreen,,,,,,validate
+arkusze,arkusze egzamin ósmoklasisty pdf,/arkusze,P1,practice,listopad-grudzien,,,,,,validate
+rodzic,jak przygotować dziecko do egzaminu ósmoklasisty,/dla-rodzica/jak-przygotowac-dziecko-do-egzaminu,P1,commercial,wrzesien-maj,,,,,,validate

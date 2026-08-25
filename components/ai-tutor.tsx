@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
+
 import { useEffect, useRef, useState } from "react";
 import { Send, ShieldCheck, Sparkles } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";

@@ -4,6 +4,7 @@ import { MathJaxProvider } from "@/components/mathjax-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import "./account.css";
+import "./seo.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

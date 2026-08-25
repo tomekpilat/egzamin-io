@@ -11,7 +11,7 @@ export default defineConfig({
     coverage: {
       provider: "v8",
       reporter: ["text", "json-summary", "html"],
-      include: ["lib/roles.ts", "lib/parent-preferences.ts", "lib/plans.ts"],
+      include: ["lib/roles.ts", "lib/parent-preferences.ts", "lib/plans.ts", "lib/seo-pages.ts", "lib/cke-seo.ts"],
       thresholds: { lines: 95, functions: 95, statements: 95, branches: 95 },
     },
   },

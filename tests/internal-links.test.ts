@@ -16,7 +16,8 @@ function routeSource(pathname: string) {
   const route = pathname === "/" ? appRoot : join(appRoot, pathname.slice(1));
   const page = join(route, "page.tsx");
   const handler = join(route, "route.ts");
-  return existsSync(page) ? page : existsSync(handler) ? handler : null;
+  const publicCatchAll = join(appRoot, "[...seoSlug]", "page.tsx");
+  return existsSync(page) ? page : existsSync(handler) ? handler : pathname !== "/" && existsSync(publicCatchAll) ? publicCatchAll : null;
 }
 
 describe("static internal navigation", () => {
