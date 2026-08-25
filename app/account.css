@@ -361,6 +361,61 @@
 .subject-progress-value b { font-size: 25px; }
 .subject-progress-value span { color: var(--muted); font-size: 12px; }
 
+.parent-progress-heading { align-items: center; }
+.parent-progress-heading > small { color: var(--muted); font-size: 12px; }
+.parent-progress-toolbar { margin-top: 15px; padding: 16px 18px; display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; border: 1px solid var(--border); border-radius: 14px; background: var(--card); }
+.parent-progress-toolbar > div { min-width: 0; display: grid; gap: 8px; }
+.parent-progress-toolbar > div > span { color: var(--muted); font-size: 12px; font-weight: 800; }
+.parent-progress-toolbar > div > div { display: flex; gap: 7px; flex-wrap: wrap; }
+.parent-child-selector { flex: 1; }
+.parent-range-selector { align-items: end; }
+.parent-progress-loading { margin-top: 15px; }
+.parent-progress-loading [data-slot="card-content"] { color: var(--muted); font-size: 14px; }
+.parent-progress-empty [data-slot="card-content"] p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
+.parent-progress-metrics .positive-trend { color: #187361; }
+.parent-progress-metrics .negative-trend { color: #b74331; }
+.parent-weekly-goal-card { margin-top: 15px; gap: 18px; }
+.parent-weekly-goal-card [data-slot="card-header"] { display: flex; grid-template-columns: 1fr auto; align-items: start; justify-content: space-between; gap: 16px; }
+.parent-weekly-goal-card [data-slot="card-title"] { font-size: 17px; }
+.parent-weekly-goal-card [data-slot="card-description"] { margin-top: 5px; }
+.parent-subject-progress { margin-top: 15px; padding: 22px; border: 1px solid var(--border); border-radius: 16px; background: var(--card); }
+.parent-subject-progress > div:last-child { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.parent-subject-progress [data-slot="card"] { gap: 17px; box-shadow: none; }
+.parent-topic-grid { margin-top: 15px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.parent-topic-card { min-height: 225px; }
+.parent-topic-card [data-slot="card-content"] { flex: 1; }
+.parent-topic-card ul { margin: 0; padding: 0; display: grid; gap: 8px; list-style: none; }
+.parent-topic-card li { padding: 10px 11px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border: 1px solid var(--border); border-radius: 10px; }
+.parent-topic-card li b, .parent-topic-card li span { display: block; }
+.parent-topic-card li b { font-size: 13px; }
+.parent-topic-card li span { margin-top: 3px; color: var(--muted); font-size: 11px; }
+.parent-topic-card.strong li { background: color-mix(in srgb, #e8f6f1 75%, var(--card)); }
+.parent-topic-card.focus li { background: color-mix(in srgb, #fff1ed 75%, var(--card)); }
+.parent-recommendation { margin-top: 15px; }
+.parent-recommendation [data-slot="alert-description"] { font-size: 14px; }
+
+.plan-plus-page { min-height: 100vh; background: var(--paper); color: var(--foreground); }
+.plan-plus-header { width: min(1120px, calc(100% - 48px)); min-height: 82px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.plan-plus-shell { width: min(1000px, calc(100% - 48px)); margin: 0 auto; padding: 34px 0 70px; }
+.plan-plus-hero { padding: clamp(28px, 5vw, 52px); display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(260px, .7fr); align-items: center; gap: 38px; border-radius: 24px; background: radial-gradient(circle at 88% 5%, rgba(255,104,70,.32), transparent 38%), var(--ink); color: white; }
+.plan-plus-hero h1 { max-width: 620px; margin: 18px 0 14px; font-size: clamp(38px, 6vw, 60px); line-height: 1.02; letter-spacing: -.055em; }
+.plan-plus-hero > div > p { max-width: 610px; margin: 0; color: #c3cddd; font-size: 16px; line-height: 1.65; }
+.plan-plus-price-card { border-color: rgba(255,255,255,.2); background: rgba(255,255,255,.1); color: white; box-shadow: none; backdrop-filter: blur(10px); }
+.plan-plus-price-card [data-slot="card-content"] b, .plan-plus-price-card [data-slot="card-content"] span, .plan-plus-price-card [data-slot="card-content"] small { display: block; }
+.plan-plus-price-card [data-slot="card-content"] b { color: #ffb4a2; font-size: 45px; letter-spacing: -.055em; }
+.plan-plus-price-card [data-slot="card-content"] span { margin-top: 4px; font-weight: 750; }
+.plan-plus-price-card [data-slot="card-content"] small { margin-top: 13px; color: #c3cddd; font-size: 12px; line-height: 1.5; }
+.plan-plus-role-grid { margin: 18px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.plan-plus-role-grid [data-slot="card"] { scroll-margin-top: 20px; box-shadow: none; }
+.plan-plus-role-grid [data-slot="card-title"] { margin-top: 8px; font-size: 21px; line-height: 1.2; }
+.plan-plus-role-grid p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.plan-plus-comparison { max-width: none; }
+.plan-plus-terms { margin-top: 20px; padding: 24px; border: 1px solid var(--border); border-radius: 16px; background: var(--card); }
+.plan-plus-terms h2 { margin: 0; font-size: 20px; }
+.plan-plus-terms p { color: var(--muted); font-size: 14px; line-height: 1.65; }
+.plan-plus-terms nav { display: flex; gap: 9px 18px; flex-wrap: wrap; }
+.plan-plus-terms nav a { color: var(--coral-dark); font-size: 13px; font-weight: 750; text-decoration: underline; text-underline-offset: 3px; }
+
 .dark .account-page, .dark .onboarding-page, .dark .legal-page, .dark .dashboard-page, .dark .dashboard-loading { background: var(--paper); color: var(--foreground); }
 .dark .auth-story-image { border-color: var(--border); box-shadow: 0 16px 42px rgba(0,0,0,.28); }
 .dark .auth-card, .dark .onboarding-card, .dark .consent-card, .dark .dashboard-sidebar, .dark .dashboard-topbar, .dark .metric-card, .dark .dashboard-card, .dark .guardian-requests, .dark .linked-children, .dark .legal-sidebar, .dark .legal-page article { border-color: var(--border); background: var(--card); color: var(--card-foreground); }
@@ -383,6 +438,13 @@
 .dark .parent-connect-card { background: var(--card); color: var(--card-foreground); }
 .dark .parent-connect-steps span { border-color: var(--border); color: #d4dcea; }
 .dark .parent-invite-status { color: #79dfc8; }
+.dark .parent-progress-toolbar, .dark .parent-subject-progress, .dark .parent-topic-card, .dark .parent-weekly-goal-card, .dark .plan-plus-role-grid [data-slot="card"], .dark .plan-plus-terms, .dark .plan-plus-comparison { border-color: var(--border); background: var(--card); color: var(--card-foreground); }
+.dark .parent-topic-card.strong li { background: #17372f; }
+.dark .parent-topic-card.focus li { background: #38231f; }
+.dark .parent-progress-metrics .positive-trend { color: #79dfc8; }
+.dark .parent-progress-metrics .negative-trend { color: #ff9b87; }
+.dark .plan-plus-price-card { background: rgba(255,255,255,.08); color: white; }
+.dark .plan-plus-page { background: var(--paper); color: var(--foreground); }
 .dark .practice-answer.correct { border-color: #31836f; background: #15372f; }
 .dark .practice-answer.incorrect { border-color: #8f5045; background: #3a2420; }
 
@@ -399,4 +461,16 @@
   .practice-progress-card { position: static; }
   .practice-subjects { display: grid; grid-template-columns: 1fr 1fr; }
   .practice-actions { display: grid; }
+  .dashboard-sidebar nav { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+  .dashboard-sidebar nav :is(a, button), .dashboard-sidebar nav :is(a, button):not(.active) { font-size: 9px; }
+  .parent-progress-heading { align-items: flex-start; }
+  .parent-progress-toolbar { align-items: stretch; flex-direction: column; }
+  .parent-range-selector { align-items: start; }
+  .parent-progress-toolbar > div > div { display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); }
+  .parent-subject-progress > div:last-child, .parent-topic-grid { grid-template-columns: 1fr; }
+  .plan-plus-header, .plan-plus-shell { width: calc(100% - 30px); }
+  .plan-plus-shell { padding-top: 12px; }
+  .plan-plus-hero, .plan-plus-role-grid { grid-template-columns: 1fr; }
+  .plan-plus-hero { padding: 27px 20px; }
+  .plan-plus-price-card [data-slot="card-content"] b { font-size: 38px; }
 }

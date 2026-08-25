@@ -22,7 +22,8 @@ describe("parent panel actions", () => {
   });
 
   it("switches the parent dashboard content instead of using page anchors", () => {
-    expect(panel).toContain('type ParentView = "start" | "children" | "connect" | "settings"');
+    expect(panel).toContain('type ParentView = "start" | "progress" | "children" | "connect" | "settings"');
+    expect(panel).toContain('onClick={() => setParentView("progress")}');
     expect(panel).toContain('onClick={() => setParentView("children")}');
     expect(panel).toContain('onClick={() => setParentView("connect")}');
     expect(panel).toContain('parentView === "settings"');
@@ -30,7 +31,8 @@ describe("parent panel actions", () => {
   });
 
   it("keeps plan, privacy and theme controls in their intended places", () => {
-    expect(panel).toContain('<a href="/#dostep">Poznaj plan Plus →</a>');
+    expect(panel).toContain('"/plan-plus#dla-rodzica"');
+    expect(panel).toContain('"/plan-plus#dla-ucznia"');
     expect(panel).toContain('<a href="/polityka-prywatnosci">Polityka prywatności</a>');
     expect(panel).not.toContain('<div className="dashboard-topbar-actions"><ThemeToggle />');
     expect(panel).toContain('<span>Wygląd aplikacji</span><ThemeToggle />');

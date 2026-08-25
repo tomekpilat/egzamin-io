@@ -8,17 +8,9 @@ import { MathFormula } from "@/components/math-formula";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { calculatePlusEconomics, formatPln, PLUS_AI_QUESTIONS_PER_DAY, PLUS_ANNUAL_PRICE_PLN } from "@/lib/plans";
+import { calculatePlusEconomics, formatPln, PLAN_COMPARISON_ROWS, PLUS_ANNUAL_PRICE_PLN } from "@/lib/plans";
 
 const plusEconomics = calculatePlusEconomics();
-const planRows = [
-  ["Cena", "0 zł", `${PLUS_ANNUAL_PRICE_PLN} zł / rok`],
-  ["Koszt miesięczny", "0 zł", `${formatPln(plusEconomics.monthly)} zł`],
-  ["Zadania CKE", "Wybrane zestawy", "Pełna baza"],
-  ["Pytania do AI", "3 dziennie", `${PLUS_AI_QUESTIONS_PER_DAY} dziennie`],
-  ["Plan nauki", "Podstawowy postęp", "Plan i inteligentne powtórki"],
-  ["Panel rodzica", "Cel tygodniowy", "Raport i rekomendacje"],
-] as const;
 
 export default function Home() {
   const [selectedAnswer, setSelectedAnswer] = useState("B");
@@ -97,7 +89,7 @@ export default function Home() {
         <div className="section-heading"><span className="section-kicker">Proste plany</span><h2>Free na start. Plus do regularnej nauki.</h2><p>{PLUS_ANNUAL_PRICE_PLN} zł rocznie to {formatPln(plusEconomics.monthly)} zł miesięcznie lub około {Math.round(plusEconomics.daily * 100)} gr dziennie.</p></div>
         <Card className="pricing-table-card">
           <div className="pricing-table-head"><span>Porównanie</span><div><b>Free</b><small>0 zł</small></div><div className="plus-heading"><b>Plus</b><small>119 zł / rok</small></div></div>
-          <div className="pricing-table" role="table" aria-label="Porównanie planu Free i Plus">{planRows.map(([feature, free, plus]) => <div className="pricing-row" role="row" key={feature}><b role="rowheader">{feature}</b><span role="cell">{free}</span><span role="cell">{plus}</span></div>)}</div>
+          <div className="pricing-table" role="table" aria-label="Porównanie planu Free i Plus">{PLAN_COMPARISON_ROWS.map(([feature, free, plus]) => <div className="pricing-row" role="row" key={feature}><b role="rowheader">{feature}</b><span role="cell">{free}</span><span role="cell">{plus}</span></div>)}</div>
           <div className="pricing-value"><b>Czy Plus się opłaca?</b><span>Przy 3 sesjach tygodniowo koszt jednej sesji to około {Math.round(plusEconomics.perSession * 100)} gr.</span></div>
           <div className="pricing-actions"><Button asChild><a href="/logowanie?tryb=rejestracja">Zacznij za darmo</a></Button><Button variant="outline" asChild><a href="mailto:kontakt@egzamin.io?subject=Lista%20oczekujacych%20egzaminio%20Plus">Dołącz do listy Plus</a></Button></div>
         </Card>
