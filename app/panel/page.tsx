@@ -4,7 +4,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { User } from "@supabase/supabase-js";
 import { BrandLogo } from "@/components/brand-logo";
-import { MathFormula } from "@/components/math-formula";
+import { StudentPractice, type StudentView } from "@/components/student-practice";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -33,7 +33,6 @@ type Profile = {
 type GuardianRequest = { request_id: string; student_id: string; student_display_name: string | null; student_email: string; requested_at: string; expires_at: string };
 type LinkedChild = { student_id: string; student_display_name: string | null; student_email: string; linked_at: string; weekly_goal: number; summary_email_enabled: boolean };
 type ParentView = "start" | "children" | "connect" | "settings";
-type StudentView = "start" | "exercises" | "progress" | "settings";
 
 type RoleCounts = Record<UserRole, number>;
 
@@ -43,59 +42,6 @@ const emptyCounts: RoleCounts = {
   teacher: 0,
   admin: 0,
 };
-
-function StudentPanel({ activeView, onNavigate }: { activeView: StudentView; onNavigate: (view: StudentView) => void }) {
-  return (
-    <>
-      {activeView === "start" && <>
-        <section className="dashboard-hero student-hero">
-          <div>
-            <span className="dashboard-kicker">Plan na dziś · 24 min</span>
-            <h2>Zacznij od jednego zadania.</h2>
-            <p>Krótka seria z procentów, potem powtórka z geometrii.</p>
-            <Button type="button" onClick={() => onNavigate("exercises")}>Przejdź do ćwiczeń <span>→</span></Button>
-          </div>
-          <div className="daily-ring"><b>0/6</b><span>zadań dzisiaj</span></div>
-        </section>
-        <section className="dashboard-grid three-columns">
-          <article className="metric-card"><span>Dzisiejszy cel</span><b>6 zadań</b><small>Około 24 minuty spokojnej pracy.</small></article>
-          <article className="metric-card"><span>Pytania do AI</span><b>3</b><small>Dostępne w planie bezpłatnym.</small></article>
-          <article className="metric-card"><span>Seria nauki</span><b>🔥 0 dni</b><small>Pierwszy krok możesz zrobić dziś.</small></article>
-        </section>
-      </>}
-
-      {activeView === "exercises" && <>
-        <div className="dashboard-view-heading"><div><span className="dashboard-kicker dark-kicker">Ćwiczenia</span><h2>Twój plan zadań</h2></div><Badge variant="secondary">Materiały w przygotowaniu</Badge></div>
-        <section className="dashboard-grid two-columns">
-          <article className="dashboard-card">
-            <div className="card-heading"><div><span>Następne ćwiczenie</span><h3>Procenty w zadaniach tekstowych</h3></div><b className="subject-badge">∑</b></div>
-            <p>6 zadań z arkuszy CKE · około 18 minut</p>
-            <div className="progress-line"><i style={{ width: "0%" }} /></div>
-            <MathFormula latex="x=\\sqrt{6^2+8^2}=10" display className="dashboard-formula" />
-          </article>
-          <article className="dashboard-card ai-card">
-            <div className="card-heading"><div><span>Nauczyciel AI</span><h3>Możesz zapytać własnymi słowami</h3></div><b className="ai-badge">AI</b></div>
-            <p>Wyjaśnię krok, podam prostszy przykład albo przypomnę potrzebny wzór.</p>
-            <div className="ai-prompt-preview">Rozmowa AI pojawi się w kolejnym etapie MVP.</div>
-          </article>
-        </section>
-      </>}
-
-      {activeView === "progress" && <>
-        <div className="dashboard-view-heading"><div><span className="dashboard-kicker dark-kicker">Postępy</span><h2>Zobacz, co już umiesz</h2></div><Button variant="outline" type="button" onClick={() => onNavigate("exercises")}>Wróć do ćwiczeń</Button></div>
-        <section className="dashboard-grid three-columns">
-          <article className="metric-card"><span>Seria nauki</span><b>🔥 0 dni</b><small>Pierwszy krok możesz zrobić dziś.</small></article>
-          <article className="metric-card"><span>Rozwiązane zadania</span><b>0</b><small>Wynik pojawi się po pierwszej serii.</small></article>
-          <article className="metric-card"><span>Opanowane tematy</span><b>0%</b><small>Postęp rośnie wraz z poprawnymi odpowiedziami.</small></article>
-        </section>
-        <section className="dashboard-card empty-dashboard-card">
-          <span className="empty-icon">↗</span>
-          <div><h3>Tu pojawi się historia nauki</h3><p>Po rozwiązaniu pierwszych zadań zobaczysz regularność, mocne strony i tematy warte powtórki.</p></div>
-        </section>
-      </>}
-    </>
-  );
-}
 
 function ChildSettingsCard({ child, busy, onSave }: { child: LinkedChild; busy: boolean; onSave: (studentId: string, weeklyGoal: number, summaryEmailEnabled: boolean) => void }) {
   const [weeklyGoal, setWeeklyGoal] = useState(child.weekly_goal);
@@ -492,7 +438,7 @@ export default function DashboardPage() {
           <div className="dashboard-topbar-actions"><div className="dashboard-account"><span>{displayName.slice(0, 2).toUpperCase()}</span><div><b>{displayName}</b><small>{profile.email}</small></div></div></div>
         </header>
         <div className="dashboard-content">
-          {profile.role === "student" && <StudentPanel activeView={studentView} onNavigate={setStudentView} />}
+          {profile.role === "student" && <StudentPractice activeView={studentView} onNavigate={setStudentView} />}
           {actionError && profile.role === "parent" && <Alert variant="destructive" className="dashboard-alert"><AlertDescription>{actionError}</AlertDescription></Alert>}
           {actionMessage && profile.role === "parent" && <Alert variant="success" className="dashboard-alert"><AlertDescription>{actionMessage}</AlertDescription></Alert>}
           {profile.role === "parent" && <ParentPanel activeView={parentView} parentEmail={profile.email} requests={guardianRequests} linkedChildren={linkedChildren} actionBusy={guardianActionBusy} onNavigate={setParentView} onApprove={(id) => void decideGuardianRequest(id, "approve")} onReject={(id) => void decideGuardianRequest(id, "reject")} onSavePreferences={(studentId, weeklyGoal, summaryEnabled) => void saveGuardianPreferences(studentId, weeklyGoal, summaryEnabled)} />}
