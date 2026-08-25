@@ -1,5 +1,5 @@
 import { AiProviderError, askTutorProvider } from "@/lib/ai-provider";
-import { normalizeUsage, validateTutorMessage, type AiChatMessage, type TutorQuestionContext } from "@/lib/ai-tutor";
+import { normalizeUsage, validateTutorMessage, validateTutorScope, type AiChatMessage, type TutorQuestionContext } from "@/lib/ai-tutor";
 import { getSupabaseServiceClient, verifySupabaseAccessToken } from "@/lib/supabase-server";
 
 export const dynamic = "force-dynamic";
@@ -69,12 +69,57 @@ export async function POST(request: Request) {
     const auth = await authenticatedStudent(request);
     if (!auth) return json({ error: "Zaloguj się ponownie." }, 401);
 
-    const body = await request.json() as { questionId?: unknown; message?: unknown };
+    const declaredLength = Number(request.headers.get("content-length")) || 0;
+    if (declaredLength > 2_000) return json({ error: "Żądanie jest zbyt duże." }, 413);
+    const rawBody = await request.text();
+    if (rawBody.length > 2_000) return json({ error: "Żądanie jest zbyt duże." }, 413);
+    let body: { questionId?: unknown; message?: unknown };
+    try {
+      body = JSON.parse(rawBody) as { questionId?: unknown; message?: unknown };
+    } catch {
+      return json({ error: "Nieprawidłowe żądanie." }, 400);
+    }
     if (!validQuestionId(body.questionId)) return json({ error: "Nieprawidłowe zadanie." }, 400);
     const validation = validateTutorMessage(body.message);
     if (!validation.ok) return json({ error: validation.message, code: validation.code }, 422);
 
     const supabase = getSupabaseServiceClient();
+    const [{ data: scopeQuestion, error: scopeQuestionError }, { data: scopeExplanation, error: scopeExplanationError }] = await Promise.all([
+      supabase.from("practice_questions")
+        .select("subject,topic,prompt,options")
+        .eq("id", body.questionId)
+        .eq("is_published", true)
+        .single(),
+      supabase.from("ai_question_explanations")
+        .select("solution_steps,hints,final_explanation")
+        .eq("question_id", body.questionId)
+        .eq("status", "approved")
+        .single(),
+    ]);
+    if (scopeQuestionError || !scopeQuestion) return json({ error: "Nieprawidłowe zadanie." }, 404);
+    if (scopeExplanationError || !scopeExplanation) return json({ error: "To zadanie czeka jeszcze na zatwierdzone opracowanie.", code: "explanation_unavailable" }, 409);
+    const scopeValidation = validateTutorScope(validation.message, {
+      subject: String(scopeQuestion.subject) as TutorQuestionContext["subject"],
+      topic: String(scopeQuestion.topic),
+      prompt: String(scopeQuestion.prompt),
+      options: stringArray(scopeQuestion.options),
+      solutionSteps: stringArray(scopeExplanation.solution_steps),
+      hints: stringArray(scopeExplanation.hints),
+      finalExplanation: String(scopeExplanation.final_explanation),
+    });
+    if (!scopeValidation.ok) {
+      const { data: rejectionData, error: rejectionError } = await supabase.rpc("record_ai_scope_rejection", {
+        requested_student_id: auth.user.id,
+      });
+      if (rejectionError) throw rejectionError;
+      const rejection = (rejectionData as Record<string, unknown>[] | null)?.[0];
+      const blocked = rejection?.blocked === true;
+      return json({
+        error: blocked ? "Zbyt wiele pytań niezwiązanych z zadaniami. Spróbuj ponownie jutro." : scopeValidation.message,
+        code: blocked ? "scope_rate_limit" : scopeValidation.code,
+      }, blocked ? 429 : 422);
+    }
+
     const { data, error: reserveError } = await supabase.rpc("reserve_ai_tutor_request", {
       requested_student_id: auth.user.id,
       target_question_id: body.questionId,

@@ -24,6 +24,16 @@ describe("AI tutor end-to-end contract", () => {
     expect(practice).toContain("{answerResult && <AiTutor");
   });
 
+  it("rejects off-topic and injection attempts before reserving quota or calling the provider", () => {
+    expect(route).toContain("validateTutorScope");
+    expect(route).toContain('supabase.rpc("record_ai_scope_rejection"');
+    const guardCall = route.indexOf("const scopeValidation = validateTutorScope");
+    expect(guardCall).toBeGreaterThan(0);
+    expect(guardCall).toBeLessThan(route.indexOf('supabase.rpc("reserve_ai_tutor_request"'));
+    expect(guardCall).toBeLessThan(route.indexOf("askTutorProvider(context"));
+    expect(route).toContain("declaredLength > 2_000");
+  });
+
   it("shows usage, privacy guidance, retry-safe errors and a Plus path", () => {
     expect(component).toContain("{usage.remaining} z {usage.limit} pytań");
     expect(component).toContain("Nie wpisuj danych osobowych");

@@ -12,6 +12,8 @@ Nauczyciel AI pojawia się dopiero po sprawdzeniu odpowiedzi ucznia. Rozmowa jes
 - rodzic nie ma dostępu do treści prywatnej rozmowy dziecka,
 - model nie otrzymuje e-maila, nazwy profilu, wyników ani surowego identyfikatora konta,
 - oczywiste dane kontaktowe i treści alarmowe są zatrzymywane przed wywołaniem dostawcy.
+- pytanie musi odnosić się do bieżącego zadania, odpowiedzi lub kroku rozwiązania; polecenia niezwiązane z zadaniem i próby prompt injection są odrzucane przed rezerwacją limitu i wywołaniem modelu,
+- po 10 odrzuconych wiadomościach dziennie w planie Free lub 30 w Plus dalsze próby są blokowane do następnego dnia.
 
 ## Konfiguracja Coolify
 
@@ -92,6 +94,8 @@ Rekomendowany próg wejścia dla modelu produkcyjnego:
 ## Monitoring i retencja
 
 Administrator może odczytać dzienne agregaty funkcją `get_ai_usage_metrics(30)`. Zwracane są liczby udanych i błędnych wywołań, tokeny, szacowany koszt oraz średnie opóźnienie.
+
+Próby użycia AI poza zakresem zadania są agregowane osobno przez `get_ai_scope_rejection_metrics(30)`. Treść odrzuconej wiadomości nie jest zapisywana w historii rozmowy ani przesyłana do dostawcy.
 
 Funkcja `purge_expired_ai_chat_history(90)` usuwa rozmowy starsze niż 90 dni. Należy uruchamiać ją codziennie przez Supabase Cron albo zaufany harmonogram serwera.
 
