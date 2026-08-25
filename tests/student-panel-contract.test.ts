@@ -26,4 +26,13 @@ describe("student panel navigation", () => {
     expect(practice).toContain('supabase.rpc("submit_practice_answer"');
     expect(practice).toContain("answer_explanation");
   });
+
+  it("removes dashboard chrome while the student is solving a question", () => {
+    expect(panel).toContain('const focusMode = profile.role === "student" && studentView === "exercises"');
+    expect(panel).toContain("{!focusMode && <aside");
+    expect(panel).toContain("{!focusMode && <header");
+    expect(practice).toContain('className="practice-focus-shell"');
+    expect(practice).toContain("hasUnsavedPracticeAnswer");
+    expect(practice).toContain('window.addEventListener("beforeunload"');
+  });
 });

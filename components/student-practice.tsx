@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { ChevronLeft, ChevronRight, LogOut } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { getSupabaseClient } from "@/lib/supabase-browser";
 
 export type StudentView = "start" | "exercises" | "progress" | "settings";
@@ -50,6 +52,16 @@ const subjectLabels: Record<Subject, string> = {
   english: "Język angielski",
 };
 
+export const UNSAVED_ANSWER_MESSAGE = "Masz wybraną odpowiedź, której jeszcze nie sprawdzono. Opuścić ją bez zapisywania?";
+
+export function hasUnsavedPracticeAnswer(
+  questionId: string | null,
+  persistedAnswer: number | null,
+  draftAnswer: { questionId: string; index: number } | null,
+) {
+  return Boolean(questionId && draftAnswer?.questionId === questionId && draftAnswer.index !== persistedAnswer);
+}
+
 function normalizeQuestion(value: Record<string, unknown>): PracticeQuestion {
   const subject = value.subject;
   if (subject !== "mathematics" && subject !== "polish" && subject !== "english") {
@@ -85,6 +97,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+  const answerRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   useEffect(() => {
     let active = true;
@@ -128,10 +141,32 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
           correct_count: correctCount,
         }
       : null;
+  const hasUnsavedAnswer = hasUnsavedPracticeAnswer(
+    currentQuestion?.question_id ?? null,
+    currentQuestion?.selected_answer ?? null,
+    draftAnswer,
+  );
+
+  useEffect(() => {
+    if (!hasUnsavedAnswer) return;
+    const preventAccidentalExit = (event: BeforeUnloadEvent) => {
+      event.preventDefault();
+      event.returnValue = "";
+    };
+    window.addEventListener("beforeunload", preventAccidentalExit);
+    return () => window.removeEventListener("beforeunload", preventAccidentalExit);
+  }, [hasUnsavedAnswer]);
+
+  function confirmDraftDiscard() {
+    return !hasUnsavedAnswer || window.confirm(UNSAVED_ANSWER_MESSAGE);
+  }
 
   function selectSubject(nextSubject: SubjectFilter) {
+    if (nextSubject === subject || !confirmDraftDiscard()) return;
     setSubject(nextSubject);
     setQuestionIndex(0);
+    setDraftAnswer(null);
+    setSubmittedAnswer(null);
     setError("");
   }
 
@@ -139,6 +174,15 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
     if (!currentQuestion) return;
     setDraftAnswer({ questionId: currentQuestion.question_id, index });
     setSubmittedAnswer(null);
+  }
+
+  function handleAnswerKeyDown(event: React.KeyboardEvent<HTMLButtonElement>, index: number) {
+    if (!["ArrowDown", "ArrowRight", "ArrowUp", "ArrowLeft"].includes(event.key)) return;
+    event.preventDefault();
+    const direction = event.key === "ArrowDown" || event.key === "ArrowRight" ? 1 : -1;
+    const nextIndex = (index + direction + currentQuestion!.options.length) % currentQuestion!.options.length;
+    selectAnswer(nextIndex);
+    answerRefs.current[nextIndex]?.focus();
   }
 
   async function submitAnswer() {
@@ -155,6 +199,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
       const result = (data as AnswerResult[] | null)?.[0];
       if (!result) throw new Error("missing_result");
       setSubmittedAnswer({ ...result, questionId: currentQuestion.question_id });
+      setDraftAnswer(null);
       setQuestions((current) =>
         current.map((question) =>
           question.question_id === currentQuestion.question_id
@@ -176,9 +221,20 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
     }
   }
 
-  function nextQuestion() {
+  function moveQuestion(direction: -1 | 1) {
     if (!filteredQuestions.length) return;
-    setQuestionIndex((current) => (current + 1) % filteredQuestions.length);
+    if (!confirmDraftDiscard()) return;
+    setQuestionIndex((current) => (current + direction + filteredQuestions.length) % filteredQuestions.length);
+    setDraftAnswer(null);
+    setSubmittedAnswer(null);
+    setError("");
+  }
+
+  function exitPractice() {
+    if (!confirmDraftDiscard()) return;
+    setDraftAnswer(null);
+    setSubmittedAnswer(null);
+    onNavigate("start");
   }
 
   function subjectStats(target: Subject) {
@@ -215,17 +271,33 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
         </section>
       </>}
 
-      {activeView === "exercises" && <>
-        <div className="dashboard-view-heading"><div><span className="dashboard-kicker dark-kicker">Ćwiczenia demo</span><h2>Rozwiąż pytanie krok po kroku</h2></div><Badge variant="secondary">{answeredCount}/{questions.length} ukończonych</Badge></div>
-        <div className="practice-subjects" aria-label="Filtruj pytania według przedmiotu">
-          {subjects.map((item) => <Button key={item.value} type="button" size="sm" variant={subject === item.value ? "default" : "outline"} aria-pressed={subject === item.value} onClick={() => selectSubject(item.value)}>{item.label}</Button>)}
-        </div>
-        {error && <Alert variant="destructive" className="dashboard-alert"><AlertDescription>{error}</AlertDescription></Alert>}
-        {currentQuestion && <section className="practice-layout">
-          <Card className="practice-question-card">
+      {activeView === "exercises" && <section className="practice-focus-shell" aria-label="Tryb skupienia">
+        <header className="practice-focus-header">
+          <div className="practice-focus-subject">
+            <span>Tryb skupienia</span>
+            <label htmlFor="practice-subject">Przedmiot</label>
+            <Select value={subject} onValueChange={(value) => selectSubject(value as SubjectFilter)} disabled={submitting}>
+              <SelectTrigger id="practice-subject" aria-label="Wybierz przedmiot"><SelectValue /></SelectTrigger>
+              <SelectContent>{subjects.map((item) => <SelectItem key={item.value} value={item.value}>{item.label}</SelectItem>)}</SelectContent>
+            </Select>
+          </div>
+          <div className="practice-focus-progress" aria-live="polite">
+            <div><span>{currentQuestion ? subjectLabels[currentQuestion.subject] : "Ćwiczenia"}</span><b>{currentQuestion ? `${questionIndex + 1} z ${filteredQuestions.length}` : "—"}</b></div>
+            <Progress value={currentQuestion ? ((questionIndex + 1) / Math.max(filteredQuestions.length, 1)) * 100 : 0} aria-label="Postęp w bieżącym zestawie" />
+          </div>
+          <div className="practice-focus-controls">
+            <Button type="button" size="icon" variant="ghost" aria-label="Poprzednie pytanie" onClick={() => moveQuestion(-1)} disabled={submitting || filteredQuestions.length < 2}><ChevronLeft aria-hidden="true" /></Button>
+            <Button type="button" size="icon" variant="ghost" aria-label="Następne pytanie" onClick={() => moveQuestion(1)} disabled={submitting || filteredQuestions.length < 2}><ChevronRight aria-hidden="true" /></Button>
+            <Button type="button" variant="outline" className="practice-focus-exit" onClick={exitPractice} disabled={submitting}><LogOut aria-hidden="true" /><span>Zakończ</span></Button>
+          </div>
+        </header>
+        <div className="practice-focus-stage">
+          {error && <Alert variant="destructive" className="dashboard-alert"><AlertDescription>{error}</AlertDescription></Alert>}
+          {!currentQuestion && <Alert><AlertTitle>Brak pytań w tym przedmiocie</AlertTitle><AlertDescription>Wybierz inny przedmiot, aby kontynuować ćwiczenia.</AlertDescription></Alert>}
+          {currentQuestion && <Card className="practice-question-card practice-focus-question-card">
             <CardHeader>
               <div className="practice-meta"><Badge variant="outline">{subjectLabels[currentQuestion.subject]}</Badge><span>{currentQuestion.topic}</span><span>Poziom {currentQuestion.difficulty}/3</span></div>
-              <CardTitle>{currentQuestion.prompt}</CardTitle>
+              <h1 data-slot="card-title">{currentQuestion.prompt}</h1>
               <CardDescription>Pytanie {questionIndex + 1} z {filteredQuestions.length} · {currentQuestion.source_label}</CardDescription>
             </CardHeader>
             <CardContent>
@@ -234,19 +306,17 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
                   const correct = answerResult?.answer_correct_index === index;
                   const incorrect = Boolean(answerResult) && selectedAnswer === index && !correct;
                   const answerClass = ["practice-answer", selectedAnswer === index && "selected", correct && "correct", incorrect && "incorrect"].filter(Boolean).join(" ");
-                  return <button key={option} type="button" role="radio" aria-checked={selectedAnswer === index} className={answerClass} onClick={() => selectAnswer(index)}><b>{String.fromCharCode(65 + index)}</b><span>{option}</span></button>;
+                  return <button key={option} ref={(element) => { answerRefs.current[index] = element; }} type="button" role="radio" aria-checked={selectedAnswer === index} tabIndex={selectedAnswer === index || (selectedAnswer === null && index === 0) ? 0 : -1} className={answerClass} onClick={() => selectAnswer(index)} onKeyDown={(event) => handleAnswerKeyDown(event, index)} disabled={submitting}><b>{String.fromCharCode(65 + index)}</b><span>{option}</span></button>;
                 })}
               </div>
               {answerResult && <Alert variant={answerResult.answer_is_correct ? "success" : "warning"} className="practice-feedback"><AlertTitle>{answerResult.answer_is_correct ? "Dobra odpowiedź!" : "Jeszcze nie tym razem"}</AlertTitle><AlertDescription>{answerResult.answer_explanation}</AlertDescription></Alert>}
-              <div className="practice-actions"><Button type="button" onClick={() => void submitAnswer()} disabled={selectedAnswer === null || submitting}>{submitting ? "Sprawdzam…" : answerResult ? "Sprawdź ponownie" : "Sprawdź odpowiedź"}</Button><Button type="button" variant="outline" onClick={nextQuestion}>Następne pytanie →</Button></div>
+              <div className="practice-actions"><Button type="button" size="lg" onClick={() => void submitAnswer()} disabled={selectedAnswer === null || submitting}>{submitting ? "Sprawdzam…" : answerResult ? "Sprawdź ponownie" : "Sprawdź odpowiedź"}</Button>{answerResult && <Button type="button" size="lg" variant="outline" onClick={() => moveQuestion(1)}>Następne pytanie <ChevronRight aria-hidden="true" /></Button>}</div>
             </CardContent>
           </Card>
-          <Card className="practice-progress-card">
-            <CardHeader><CardTitle>Twój postęp</CardTitle><CardDescription>Wynik zapisuje się po każdym sprawdzeniu.</CardDescription></CardHeader>
-            <CardContent><div className="practice-score"><b>{score}%</b><span>{correctCount} poprawnych z {answeredCount} rozwiązanych</span></div><Progress value={(answeredCount / Math.max(questions.length, 1)) * 100} /><Button variant="ghost" type="button" onClick={() => onNavigate("progress")}>Zobacz szczegóły →</Button></CardContent>
-          </Card>
-        </section>}
-      </>}
+          }
+          <p className="practice-save-note" role="status">Odpowiedź zapisuje się na koncie po kliknięciu „Sprawdź odpowiedź”.</p>
+        </div>
+      </section>}
 
       {activeView === "progress" && <>
         <div className="dashboard-view-heading"><div><span className="dashboard-kicker dark-kicker">Postępy</span><h2>Twój wynik w zestawie demo</h2></div><Button variant="outline" type="button" onClick={() => onNavigate("exercises")}>Wróć do ćwiczeń</Button></div>

@@ -408,10 +408,11 @@ export default function DashboardPage() {
     user?.user_metadata?.full_name ||
     user?.user_metadata?.name ||
     profile.email;
+  const focusMode = profile.role === "student" && studentView === "exercises";
 
   return (
-    <main className="dashboard-page">
-      <aside className="dashboard-sidebar">
+    <main className={`dashboard-page${focusMode ? " dashboard-focus-mode" : ""}`}>
+      {!focusMode && <aside className="dashboard-sidebar">
         <a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a>
         <nav aria-label="Panel">
           {profile.role === "parent" ? <>
@@ -434,14 +435,14 @@ export default function DashboardPage() {
         </nav>
         <div className="sidebar-plan"><b>Plan bezpłatny</b><span>3 pytania AI dziennie</span><i><em /></i><a href={profile.role === "parent" ? "/plan-plus#dla-rodzica" : profile.role === "student" ? "/plan-plus#dla-ucznia" : "/plan-plus"}>Poznaj plan Plus →</a></div>
         <Button variant="ghost" className="sidebar-signout" type="button" onClick={signOut}>Wyloguj się</Button>
-      </aside>
+      </aside>}
 
       <div className="dashboard-main">
-        <header className="dashboard-topbar">
+        {!focusMode && <header className="dashboard-topbar">
           <div><span>{roleLabels[profile.role]}</span><h1>Cześć, {firstName}!</h1></div>
           <div className="dashboard-topbar-actions"><div className="dashboard-account"><span>{displayName.slice(0, 2).toUpperCase()}</span><div><b>{displayName}</b><small>{profile.email}</small></div></div></div>
-        </header>
-        <div className="dashboard-content">
+        </header>}
+        <div className={focusMode ? "dashboard-content dashboard-focus-content" : "dashboard-content"}>
           {profile.role === "student" && <StudentPractice activeView={studentView} onNavigate={setStudentView} />}
           {actionError && profile.role === "parent" && <Alert variant="destructive" className="dashboard-alert"><AlertDescription>{actionError}</AlertDescription></Alert>}
           {actionMessage && profile.role === "parent" && <Alert variant="success" className="dashboard-alert"><AlertDescription>{actionMessage}</AlertDescription></Alert>}
