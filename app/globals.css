@@ -106,12 +106,12 @@ mjx-container { max-width: 100%; color: inherit; }
   gap: 30px;
 }
 .brand { display: inline-flex; align-items: center; }
-.wordmark { display: inline-flex; align-items: baseline; color: var(--foreground); font-size: 23px; font-weight: 850; letter-spacing: -.07em; line-height: 1; }
-.wordmark > span { display: inline-flex; align-items: baseline; }
+.wordmark { display: inline-flex; align-items: center; color: var(--foreground); font-size: 23px; font-weight: 850; line-height: 1; }
+.wordmark-text { display: inline-flex; align-items: baseline; letter-spacing: -.07em; }
 .wordmark-main, .wordmark-io { display: inline-block; }
 .wordmark-io { color: var(--coral); }
-.wordmark-o { position: relative; display: inline-block; }
-.wordmark-check { position: absolute; left: 50%; top: 53%; color: var(--ink); font-size: .42em; font-weight: 950; letter-spacing: 0; transform: translate(-50%, -50%) rotate(-7deg); }
+.wordmark-check-badge { width: .86em; height: .86em; margin-left: .3em; display: inline-grid; flex: 0 0 auto; place-items: center; border-radius: .25em; background: var(--coral); color: #fff; box-shadow: 0 .1em .28em rgba(214, 75, 47, .24); }
+.wordmark-check-badge > span { font-size: .6em; font-weight: 950; letter-spacing: 0; line-height: 1; transform: translateY(-.03em); }
 .wordmark-compact { font-size: 13px; }
 .desktop-nav { display: flex; align-items: center; gap: 31px; color: var(--muted); font-size: 15px; font-weight: 650; }
 .desktop-nav a:hover { color: var(--ink); }
@@ -451,7 +451,7 @@ mjx-container { max-width: 100%; color: inherit; }
 .pricing-actions { padding: 20px 28px 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .site-footer { min-height: auto; padding-top: 32px; }
 
-.dark .wordmark-check { color: #172033; }
+.dark .wordmark-check-badge { color: #fff; box-shadow: 0 .1em .32em rgba(0, 0, 0, .3); }
 .dark .header-login { color: #d5ddea; }
 .dark .task-formula { color: #cbd5e7; }
 .dark .subject-strip { border-color: var(--border); background: #111a2c; }

@@ -5,14 +5,12 @@ export function BrandLogo({ compact = false }: { compact?: boolean }) {
       role="img"
       aria-label="egzaminio"
     >
-      <span aria-hidden="true">
+      <span className="wordmark-text" aria-hidden="true">
         <span className="wordmark-main">egzamin</span>
-        <span className="wordmark-io">
-          i
-          <span className="wordmark-o">
-            o<span className="wordmark-check">✓</span>
-          </span>
-        </span>
+        <span className="wordmark-io">io</span>
+      </span>
+      <span className="wordmark-check-badge" aria-hidden="true">
+        <span>✓</span>
       </span>
     </span>
   );
