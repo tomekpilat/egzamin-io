@@ -13,10 +13,19 @@ import { getSupabaseClient } from "@/lib/supabase-browser";
 export type StudentView = "start" | "exercises" | "progress" | "settings";
 type Subject = "mathematics" | "polish" | "english";
 type SubjectFilter = "all" | Subject;
+export type MaterialFilter = "demo" | "all-cke" | `year:${number}`;
+type ExamSession = "main" | "additional";
 
-type PracticeQuestion = {
+export type PracticeQuestion = {
   question_id: string;
+  source_type: "demo" | "cke";
   source_label: string;
+  exam_paper_id: string | null;
+  exam_year: number | null;
+  exam_session: ExamSession | null;
+  exam_variant: string | null;
+  source_document_id: string | null;
+  paper_question_number: number | null;
   subject: Subject;
   topic: string;
   prompt: string;
@@ -28,6 +37,20 @@ type PracticeQuestion = {
   attempt_count: number;
   correct_answer: number | null;
   explanation: string | null;
+};
+
+type PaperProgress = {
+  progress_paper_id: string;
+  exam_year: number;
+  exam_session: ExamSession;
+  subject: Subject;
+  variant_code: string;
+  source_label: string;
+  total_questions: number;
+  answered_questions: number;
+  correct_questions: number;
+  accuracy_percent: number;
+  completion_status: "not_started" | "in_progress" | "completed";
 };
 
 type AnswerResult = {
@@ -52,6 +75,11 @@ const subjectLabels: Record<Subject, string> = {
   english: "Język angielski",
 };
 
+const sessionLabels: Record<ExamSession, string> = {
+  main: "termin główny",
+  additional: "termin dodatkowy",
+};
+
 export const UNSAVED_ANSWER_MESSAGE = "Masz wybraną odpowiedź, której jeszcze nie sprawdzono. Opuścić ją bez zapisywania?";
 
 export function hasUnsavedPracticeAnswer(
@@ -64,16 +92,31 @@ export function hasUnsavedPracticeAnswer(
 
 function normalizeQuestion(value: Record<string, unknown>): PracticeQuestion {
   const subject = value.subject;
+  const sourceType = value.source_type;
   if (subject !== "mathematics" && subject !== "polish" && subject !== "english") {
     throw new Error("invalid_subject");
+  }
+  if (sourceType !== "demo" && sourceType !== "cke") {
+    throw new Error("invalid_source_type");
   }
   if (!Array.isArray(value.options) || value.options.length !== 4) {
     throw new Error("invalid_options");
   }
+  const examSession = value.exam_session;
+  if (examSession != null && examSession !== "main" && examSession !== "additional") {
+    throw new Error("invalid_exam_session");
+  }
 
   return {
     question_id: String(value.question_id),
+    source_type: sourceType,
     source_label: String(value.source_label),
+    exam_paper_id: value.exam_paper_id == null ? null : String(value.exam_paper_id),
+    exam_year: value.exam_year == null ? null : Number(value.exam_year),
+    exam_session: examSession ?? null,
+    exam_variant: value.exam_variant == null ? null : String(value.exam_variant),
+    source_document_id: value.source_document_id == null ? null : String(value.source_document_id),
+    paper_question_number: value.paper_question_number == null ? null : Number(value.paper_question_number),
     subject,
     topic: String(value.topic),
     prompt: String(value.prompt),
@@ -88,9 +131,64 @@ function normalizeQuestion(value: Record<string, unknown>): PracticeQuestion {
   };
 }
 
+function normalizePaperProgress(value: Record<string, unknown>): PaperProgress {
+  const subject = value.subject;
+  const session = value.exam_session;
+  const status = value.completion_status;
+  if (subject !== "mathematics" && subject !== "polish" && subject !== "english") throw new Error("invalid_subject");
+  if (session !== "main" && session !== "additional") throw new Error("invalid_exam_session");
+  if (status !== "not_started" && status !== "in_progress" && status !== "completed") throw new Error("invalid_completion_status");
+  return {
+    progress_paper_id: String(value.progress_paper_id),
+    exam_year: Number(value.exam_year),
+    exam_session: session,
+    subject,
+    variant_code: String(value.variant_code),
+    source_label: String(value.source_label),
+    total_questions: Number(value.total_questions),
+    answered_questions: Number(value.answered_questions),
+    correct_questions: Number(value.correct_questions),
+    accuracy_percent: Number(value.accuracy_percent),
+    completion_status: status,
+  };
+}
+
+export function defaultMaterialFilter(questions: PracticeQuestion[]): MaterialFilter {
+  const years = questions.flatMap((question) => question.source_type === "cke" && question.exam_year ? [question.exam_year] : []);
+  return years.length ? `year:${Math.max(...years)}` : "demo";
+}
+
+export function filterPracticeQuestions(
+  questions: PracticeQuestion[],
+  subject: SubjectFilter,
+  material: MaterialFilter,
+  paperId = "all",
+) {
+  return questions.filter((question) => {
+    const matchesSubject = subject === "all" || question.subject === subject;
+    const matchesMaterial = material === "demo"
+      ? question.source_type === "demo"
+      : material === "all-cke"
+        ? question.source_type === "cke"
+        : question.source_type === "cke" && question.exam_year === Number(material.slice(5));
+    const matchesPaper = paperId === "all" || question.exam_paper_id === paperId;
+    return matchesSubject && matchesMaterial && matchesPaper;
+  });
+}
+
+export function formatQuestionSource(question: PracticeQuestion) {
+  if (question.source_type === "demo") return "Zestaw demonstracyjny egzaminio";
+  const session = question.exam_session ? sessionLabels[question.exam_session] : "arkusz CKE";
+  const variant = question.exam_variant && question.exam_variant !== "standard" ? ` · wariant ${question.exam_variant}` : "";
+  return `CKE ${question.exam_year} · ${session}${variant}`;
+}
+
 export function StudentPractice({ activeView, onNavigate }: { activeView: StudentView; onNavigate: (view: StudentView) => void }) {
   const [questions, setQuestions] = useState<PracticeQuestion[]>([]);
+  const [paperProgress, setPaperProgress] = useState<PaperProgress[]>([]);
   const [subject, setSubject] = useState<SubjectFilter>("all");
+  const [material, setMaterial] = useState<MaterialFilter>("demo");
+  const [paperId, setPaperId] = useState("all");
   const [questionIndex, setQuestionIndex] = useState(0);
   const [draftAnswer, setDraftAnswer] = useState<{ questionId: string; index: number } | null>(null);
   const [submittedAnswer, setSubmittedAnswer] = useState<(AnswerResult & { questionId: string }) | null>(null);
@@ -103,10 +201,18 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
     let active = true;
     getSupabaseClient()
       .then(async (supabase) => {
-        const { data, error: questionsError } = await supabase.rpc("get_practice_questions");
-        if (questionsError) throw questionsError;
+        const [{ data, error: questionsError }, { data: progressData, error: progressError }] = await Promise.all([
+          supabase.rpc("get_practice_questions"),
+          supabase.rpc("get_student_paper_progress"),
+        ]);
+        if (questionsError || progressError) throw questionsError ?? progressError;
         const loaded = ((data as Record<string, unknown>[] | null) ?? []).map(normalizeQuestion);
-        if (active) setQuestions(loaded);
+        const progress = ((progressData as Record<string, unknown>[] | null) ?? []).map(normalizePaperProgress);
+        if (active) {
+          setQuestions(loaded);
+          setPaperProgress(progress);
+          setMaterial(defaultMaterialFilter(loaded));
+        }
       })
       .catch(() => {
         if (active) setError("Nie udało się pobrać zestawu demo. Administrator powinien zastosować najnowszą migrację Supabase.");
@@ -119,9 +225,41 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
     };
   }, []);
 
+  const examYears = useMemo(
+    () => Array.from(new Set(questions.flatMap((question) => question.source_type === "cke" && question.exam_year ? [question.exam_year] : []))).sort((a, b) => b - a),
+    [questions],
+  );
+  const materialOptions = useMemo(() => {
+    const options: { value: MaterialFilter; label: string; count: number }[] = [];
+    if (examYears.length) options.push({ value: "all-cke", label: "Wszystkie lata CKE", count: questions.filter((question) => question.source_type === "cke").length });
+    examYears.forEach((year) => options.push({ value: `year:${year}`, label: `CKE ${year}`, count: questions.filter((question) => question.source_type === "cke" && question.exam_year === year).length }));
+    if (questions.some((question) => question.source_type === "demo")) options.push({ value: "demo", label: "Zestaw demo egzaminio", count: questions.filter((question) => question.source_type === "demo").length });
+    return options;
+  }, [examYears, questions]);
+  const materialQuestions = useMemo(
+    () => filterPracticeQuestions(questions, "all", material),
+    [questions, material],
+  );
+  const availableSubjects = useMemo(
+    () => subjects.filter((item) => item.value === "all" || materialQuestions.some((question) => question.subject === item.value)),
+    [materialQuestions],
+  );
+  const availablePapers = useMemo(() => {
+    const byPaper = new Map<string, { id: string; label: string; count: number }>();
+    filterPracticeQuestions(questions, subject, material).forEach((question) => {
+      if (!question.exam_paper_id) return;
+      const current = byPaper.get(question.exam_paper_id);
+      byPaper.set(question.exam_paper_id, {
+        id: question.exam_paper_id,
+        label: `${question.exam_year} · ${question.exam_session ? sessionLabels[question.exam_session] : "CKE"}${question.exam_variant && question.exam_variant !== "standard" ? ` · ${question.exam_variant}` : ""}`,
+        count: (current?.count ?? 0) + 1,
+      });
+    });
+    return Array.from(byPaper.values());
+  }, [questions, subject, material]);
   const filteredQuestions = useMemo(
-    () => questions.filter((question) => subject === "all" || question.subject === subject),
-    [questions, subject],
+    () => filterPracticeQuestions(questions, subject, material, paperId),
+    [questions, subject, material, paperId],
   );
   const currentQuestion = filteredQuestions[questionIndex] ?? null;
   const answeredCount = questions.filter((question) => question.selected_answer !== null).length;
@@ -164,10 +302,42 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
   function selectSubject(nextSubject: SubjectFilter) {
     if (nextSubject === subject || !confirmDraftDiscard()) return;
     setSubject(nextSubject);
+    setPaperId("all");
     setQuestionIndex(0);
     setDraftAnswer(null);
     setSubmittedAnswer(null);
     setError("");
+  }
+
+  function selectMaterial(nextMaterial: MaterialFilter) {
+    if (nextMaterial === material || !confirmDraftDiscard()) return;
+    const nextQuestions = filterPracticeQuestions(questions, "all", nextMaterial);
+    setMaterial(nextMaterial);
+    setPaperId("all");
+    if (subject !== "all" && !nextQuestions.some((question) => question.subject === subject)) setSubject("all");
+    setQuestionIndex(0);
+    setDraftAnswer(null);
+    setSubmittedAnswer(null);
+    setError("");
+  }
+
+  function selectPaper(nextPaperId: string) {
+    if (nextPaperId === paperId || !confirmDraftDiscard()) return;
+    setPaperId(nextPaperId);
+    setQuestionIndex(0);
+    setDraftAnswer(null);
+    setSubmittedAnswer(null);
+    setError("");
+  }
+
+  function startPractice() {
+    if (!filteredQuestions.length) {
+      setError("Brak pytań dla wybranego roku i przedmiotu. Wybierz inny zestaw.");
+      return;
+    }
+    setQuestionIndex(0);
+    setError("");
+    onNavigate("exercises");
   }
 
   function selectAnswer(index: number) {
@@ -214,6 +384,8 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
             : question,
         ),
       );
+      const { data: progressData, error: progressError } = await supabase.rpc("get_student_paper_progress");
+      if (!progressError) setPaperProgress(((progressData as Record<string, unknown>[] | null) ?? []).map(normalizePaperProgress));
     } catch {
       setError("Nie udało się zapisać odpowiedzi. Spróbuj ponownie.");
     } finally {
@@ -257,13 +429,39 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
       {activeView === "start" && <>
         <section className="dashboard-hero student-hero">
           <div>
-            <span className="dashboard-kicker">Zestaw demonstracyjny · {questions.length} pytań</span>
+            <span className="dashboard-kicker">Arkusze CKE i zestaw demonstracyjny</span>
             <h2>{answeredCount ? "Kontynuuj tam, gdzie skończyłeś." : "Zacznij od jednego pytania."}</h2>
-            <p>Autorskie zadania z matematyki, polskiego i angielskiego pokazują cały przebieg ćwiczenia przed importem arkuszy CKE.</p>
-            <Button type="button" onClick={() => onNavigate("exercises")}>{answeredCount ? "Kontynuuj ćwiczenia" : "Rozpocznij demo"} <span>→</span></Button>
+            <p>Wybierz rok, arkusz i przedmiot. Oficjalne materiały CKE są zawsze wyraźnie oddzielone od ćwiczeń demonstracyjnych egzaminio.</p>
           </div>
           <div className="daily-ring"><b>{answeredCount}/{questions.length}</b><span>rozwiązanych</span></div>
         </section>
+        <Card className="practice-launch-card">
+          <CardHeader><Badge variant="secondary">Wybór materiału</Badge><CardTitle>Co chcesz teraz ćwiczyć?</CardTitle><CardDescription>Dostępne lata i arkusze wynikają wyłącznie z materiałów opublikowanych w bazie.</CardDescription></CardHeader>
+          <CardContent>
+            <div className="practice-launch-filters">
+              <label htmlFor="practice-material-start">Rocznik
+                <Select value={material} onValueChange={(value) => selectMaterial(value as MaterialFilter)}>
+                  <SelectTrigger id="practice-material-start"><SelectValue /></SelectTrigger>
+                  <SelectContent>{materialOptions.map((item) => <SelectItem key={item.value} value={item.value}>{item.label} · {item.count}</SelectItem>)}</SelectContent>
+                </Select>
+              </label>
+              <label htmlFor="practice-subject-start">Przedmiot
+                <Select value={subject} onValueChange={(value) => selectSubject(value as SubjectFilter)}>
+                  <SelectTrigger id="practice-subject-start"><SelectValue /></SelectTrigger>
+                  <SelectContent>{availableSubjects.map((item) => <SelectItem key={item.value} value={item.value}>{item.label}</SelectItem>)}</SelectContent>
+                </Select>
+              </label>
+              {availablePapers.length > 1 && <label htmlFor="practice-paper-start">Arkusz
+                <Select value={paperId} onValueChange={selectPaper}>
+                  <SelectTrigger id="practice-paper-start"><SelectValue placeholder="Wszystkie arkusze" /></SelectTrigger>
+                  <SelectContent><SelectItem value="all">Wszystkie arkusze</SelectItem>{availablePapers.map((paper) => <SelectItem key={paper.id} value={paper.id}>{paper.label} · {paper.count}</SelectItem>)}</SelectContent>
+                </Select>
+              </label>}
+            </div>
+            <div className="practice-launch-summary"><div><b>{filteredQuestions.length}</b><span>{filteredQuestions.length === 1 ? "dostępne pytanie" : "dostępnych pytań"}</span></div><Button type="button" size="lg" onClick={startPractice} disabled={!filteredQuestions.length}>{answeredCount ? "Kontynuuj ćwiczenia" : "Rozpocznij ćwiczenia"} <span>→</span></Button></div>
+            {material === "demo" && <p className="practice-demo-note">To autorski zestaw demonstracyjny egzaminio — nie jest oficjalnym arkuszem CKE.</p>}
+          </CardContent>
+        </Card>
         <section className="dashboard-grid three-columns">
           <article className="metric-card"><span>Pytania demo</span><b>{questions.length}</b><small>Trzy przedmioty w jednym zestawie.</small></article>
           <article className="metric-card"><span>Poprawne odpowiedzi</span><b>{correctCount}</b><small>{answeredCount ? String(score) + "% skuteczności" : "Wynik pojawi się po pierwszym pytaniu."}</small></article>
@@ -275,11 +473,14 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
         <header className="practice-focus-header">
           <div className="practice-focus-subject">
             <span>Tryb skupienia</span>
-            <label htmlFor="practice-subject">Przedmiot</label>
-            <Select value={subject} onValueChange={(value) => selectSubject(value as SubjectFilter)} disabled={submitting}>
+            <div><label htmlFor="practice-material">Rocznik</label><Select value={material} onValueChange={(value) => selectMaterial(value as MaterialFilter)} disabled={submitting}>
+              <SelectTrigger id="practice-material" aria-label="Wybierz rocznik"><SelectValue /></SelectTrigger>
+              <SelectContent>{materialOptions.map((item) => <SelectItem key={item.value} value={item.value}>{item.label}</SelectItem>)}</SelectContent>
+            </Select></div>
+            <div><label htmlFor="practice-subject">Przedmiot</label><Select value={subject} onValueChange={(value) => selectSubject(value as SubjectFilter)} disabled={submitting}>
               <SelectTrigger id="practice-subject" aria-label="Wybierz przedmiot"><SelectValue /></SelectTrigger>
-              <SelectContent>{subjects.map((item) => <SelectItem key={item.value} value={item.value}>{item.label}</SelectItem>)}</SelectContent>
-            </Select>
+              <SelectContent>{availableSubjects.map((item) => <SelectItem key={item.value} value={item.value}>{item.label}</SelectItem>)}</SelectContent>
+            </Select></div>
           </div>
           <div className="practice-focus-progress" aria-live="polite">
             <div><span>{currentQuestion ? subjectLabels[currentQuestion.subject] : "Ćwiczenia"}</span><b>{currentQuestion ? `${questionIndex + 1} z ${filteredQuestions.length}` : "—"}</b></div>
@@ -298,7 +499,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
             <CardHeader>
               <div className="practice-meta"><Badge variant="outline">{subjectLabels[currentQuestion.subject]}</Badge><span>{currentQuestion.topic}</span><span>Poziom {currentQuestion.difficulty}/3</span></div>
               <h1 data-slot="card-title">{currentQuestion.prompt}</h1>
-              <CardDescription>Pytanie {questionIndex + 1} z {filteredQuestions.length} · {currentQuestion.source_label}</CardDescription>
+              <CardDescription>Pytanie {questionIndex + 1} z {filteredQuestions.length} · {formatQuestionSource(currentQuestion)}{currentQuestion.paper_question_number ? ` · zadanie ${currentQuestion.paper_question_number}` : ""}</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="practice-answers" role="radiogroup" aria-label="Wybierz odpowiedź">
@@ -331,6 +532,13 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
             const percent = stats.answered ? Math.round((stats.correct / stats.answered) * 100) : 0;
             return <Card key={item}><CardHeader><CardTitle>{subjectLabels[item]}</CardTitle><CardDescription>{stats.answered} z {stats.total} rozwiązanych</CardDescription></CardHeader><CardContent><div className="subject-progress-value"><b>{percent}%</b><span>{stats.correct} poprawnych</span></div><Progress value={(stats.answered / Math.max(stats.total, 1)) * 100} /></CardContent></Card>;
           })}
+        </section>
+        <section className="practice-paper-progress" aria-labelledby="paper-progress-title">
+          <div className="guardian-section-heading"><div><Badge variant="secondary">Arkusze CKE</Badge><h3 id="paper-progress-title">Wyniki według rocznika i arkusza</h3></div><small>Pełny arkusz liczymy osobno od sesji mieszających zadania.</small></div>
+          {paperProgress.length ? <div className="practice-paper-grid">{paperProgress.map((paper) => {
+            const statusLabel = paper.completion_status === "completed" ? "Ukończony" : paper.completion_status === "in_progress" ? "Rozpoczęty" : "Nierozpoczęty";
+            return <Card key={paper.progress_paper_id} className="practice-paper-card"><CardHeader><div className="practice-paper-title"><Badge variant={paper.completion_status === "completed" ? "default" : "outline"}>{statusLabel}</Badge><span>CKE {paper.exam_year} · {sessionLabels[paper.exam_session]}</span></div><CardTitle>{subjectLabels[paper.subject]}</CardTitle><CardDescription>{paper.source_label}</CardDescription></CardHeader><CardContent><div className="subject-progress-value"><b>{paper.accuracy_percent}%</b><span>{paper.correct_questions} poprawnych z {paper.answered_questions} rozwiązanych</span></div><Progress value={(paper.answered_questions / Math.max(paper.total_questions, 1)) * 100} aria-label={`Ukończenie arkusza ${paper.exam_year}: ${paper.answered_questions} z ${paper.total_questions}`} /></CardContent></Card>;
+          })}</div> : <Card className="practice-paper-empty"><CardContent><b>Brak opublikowanych arkuszy CKE</b><p>Gdy pierwszy zweryfikowany arkusz zostanie zaimportowany, pojawi się tutaj jako osobny rocznik — bez mieszania z zestawem demo.</p></CardContent></Card>}
         </section>
       </>}
     </>

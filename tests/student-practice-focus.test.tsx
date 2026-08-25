@@ -16,7 +16,14 @@ vi.mock("@/lib/supabase-browser", () => ({
 const questions = [
   {
     question_id: "demo-mat-01",
+    source_type: "demo",
     source_label: "Zestaw demonstracyjny egzaminio",
+    exam_paper_id: null,
+    exam_year: null,
+    exam_session: null,
+    exam_variant: null,
+    source_document_id: null,
+    paper_question_number: null,
     subject: "mathematics",
     topic: "Procenty",
     prompt: "Ile wynosi 20% z 50?",
@@ -31,7 +38,14 @@ const questions = [
   },
   {
     question_id: "demo-pol-01",
+    source_type: "demo",
     source_label: "Zestaw demonstracyjny egzaminio",
+    exam_paper_id: null,
+    exam_year: null,
+    exam_session: null,
+    exam_variant: null,
+    source_document_id: null,
+    paper_question_number: null,
     subject: "polish",
     topic: "Części mowy",
     prompt: "Które słowo jest rzeczownikiem?",
@@ -46,9 +60,10 @@ const questions = [
   },
 ];
 
-function prepareRpc() {
+function prepareRpc(questionRows = questions, progressRows: Record<string, unknown>[] = []) {
   rpc.mockImplementation(async (name: string) => {
-    if (name === "get_practice_questions") return { data: questions, error: null };
+    if (name === "get_practice_questions") return { data: questionRows, error: null };
+    if (name === "get_student_paper_progress") return { data: progressRows, error: null };
     if (name === "submit_practice_answer") {
       return {
         data: [{
@@ -140,5 +155,39 @@ describe("StudentPractice focus mode", () => {
     await user.click(screen.getByRole("button", { name: "Zakończ" }));
     expect(confirm).not.toHaveBeenCalled();
     expect(onNavigate).toHaveBeenCalledWith("start");
+  });
+
+  it("proposes the newest imported CKE year and preserves its context in focus mode", async () => {
+    const cke2024 = {
+      ...questions[0],
+      question_id: "cke-2024-mat-01",
+      source_type: "cke",
+      source_label: "CKE 2024 matematyka",
+      exam_paper_id: "cke-2024-main-mat",
+      exam_year: 2024,
+      exam_session: "main",
+      exam_variant: "standard",
+      source_document_id: "MOMA-P0-100-2405",
+      paper_question_number: 1,
+      prompt: "Pytanie z 2024 roku",
+    };
+    const cke2025 = {
+      ...cke2024,
+      question_id: "cke-2025-mat-01",
+      source_label: "CKE 2025 matematyka",
+      exam_paper_id: "cke-2025-main-mat",
+      exam_year: 2025,
+      source_document_id: "MOMA-P0-100-2505",
+      prompt: "Pytanie z 2025 roku",
+    };
+    prepareRpc([questions[0], cke2024, cke2025]);
+    const user = userEvent.setup();
+    const { rerender } = render(<StudentPractice activeView="start" onNavigate={(view) => rerender(<StudentPractice activeView={view} onNavigate={() => undefined} />)} />);
+
+    expect(await screen.findByRole("combobox", { name: "Rocznik" })).toHaveTextContent("CKE 2025");
+    expect(screen.getByText("1", { selector: ".practice-launch-summary b" })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Rozpocznij ćwiczenia →" }));
+    expect(await screen.findByRole("heading", { name: "Pytanie z 2025 roku" })).toBeInTheDocument();
+    expect(screen.getByText(/CKE 2025 · termin główny · zadanie 1/)).toBeInTheDocument();
   });
 });

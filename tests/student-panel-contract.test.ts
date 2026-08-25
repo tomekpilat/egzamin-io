@@ -23,8 +23,17 @@ describe("student panel navigation", () => {
 
   it("loads questions and saves answers through authenticated database functions", () => {
     expect(practice).toContain('supabase.rpc("get_practice_questions")');
+    expect(practice).toContain('supabase.rpc("get_student_paper_progress")');
     expect(practice).toContain('supabase.rpc("submit_practice_answer"');
     expect(practice).toContain("answer_explanation");
+  });
+
+  it("keeps CKE years visible as filters and reports each paper separately", () => {
+    expect(practice).toContain("defaultMaterialFilter");
+    expect(practice).toContain("filterPracticeQuestions");
+    expect(practice).toContain('aria-label="Wybierz rocznik"');
+    expect(practice).toContain('id="paper-progress-title"');
+    expect(practice).toContain("formatQuestionSource(currentQuestion)");
   });
 
   it("removes dashboard chrome while the student is solving a question", () => {
