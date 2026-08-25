@@ -3,6 +3,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { Lightbulb, MessageCircleQuestion, PencilLine } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 import { MathFormula } from "@/components/math-formula";
 import { Button } from "@/components/ui/button";
@@ -71,7 +72,11 @@ export default function Home() {
 
       <section className="section how-section" id="jak-to-dziala">
         <div className="section-heading"><span className="section-kicker">Jak to działa</span><h2>Zadanie. Podpowiedź. Zrozumienie.</h2></div>
-        <div className="steps-grid"><Card className="step-card step-coral"><div className="step-icon">✎</div><h3>Rozwiązujesz</h3><p>Prawdziwe zadanie z arkusza CKE.</p></Card><Card className="step-card step-navy"><div className="step-icon">AI</div><h3>Pytasz</h3><p>AI pomaga dokładnie tam, gdzie utkniesz.</p></Card><Card className="step-card step-mint"><div className="step-icon">↗</div><h3>Rozumiesz</h3><p>Wracasz do zadania i kończysz je samodzielnie.</p></Card></div>
+        <div className="steps-grid">
+          <Card className="step-card step-coral"><div className="step-icon"><PencilLine aria-hidden="true" /></div><h3>Rozwiązujesz</h3><p>Prawdziwe zadanie z arkusza CKE.</p></Card>
+          <Card className="step-card step-navy"><div className="step-icon"><MessageCircleQuestion aria-hidden="true" /></div><h3>Pytasz</h3><p>AI pomaga dokładnie tam, gdzie utkniesz.</p></Card>
+          <Card className="step-card step-mint"><div className="step-icon"><Lightbulb aria-hidden="true" /></div><h3>Rozumiesz</h3><p>Wracasz do zadania i kończysz je samodzielnie.</p></Card>
+        </div>
       </section>
 
       <section className="explain-section">
