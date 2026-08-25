@@ -9,9 +9,7 @@ export function BrandLogo({ compact = false }: { compact?: boolean }) {
         <span className="wordmark-main">egzamin</span>
         <span className="wordmark-io">io</span>
       </span>
-      <span className="wordmark-check-badge" aria-hidden="true">
-        <span>✓</span>
-      </span>
+      <span className="wordmark-tick" aria-hidden="true">✓</span>
     </span>
   );
 }
