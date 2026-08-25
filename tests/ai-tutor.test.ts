@@ -1,0 +1,58 @@
+import { describe, expect, it } from "vitest";
+import {
+  AI_MESSAGE_MAX_LENGTH,
+  buildTutorSystemPrompt,
+  estimateDeepSeekCostMicrousd,
+  normalizeUsage,
+  validateTutorMessage,
+  type TutorQuestionContext,
+} from "@/lib/ai-tutor";
+
+const context: TutorQuestionContext = {
+  questionId: "demo-mat-01",
+  subject: "mathematics",
+  topic: "Procenty",
+  prompt: "Ile to 20% z 50?",
+  options: ["5", "10", "20", "25"],
+  answerKey: { correct_index: 1 },
+  solutionSteps: ["Zapisz procent jako ułamek.", "Pomnóż przez 50."],
+  hints: ["Zacznij od 20/100.", "Skróć ułamek."],
+  finalExplanation: "20% z 50 to 10.",
+  history: [],
+};
+
+describe("AI tutor validation and prompt", () => {
+  it("accepts and normalizes a short task question", () => {
+    expect(validateTutorMessage("  Skąd   wziął się ten krok?  ")).toEqual({ ok: true, message: "Skąd  wziął się ten krok?" });
+  });
+
+  it("rejects missing, overly long and identifying content before the provider", () => {
+    expect(validateTutorMessage(null)).toMatchObject({ ok: false, code: "invalid_message" });
+    expect(validateTutorMessage("a".repeat(AI_MESSAGE_MAX_LENGTH + 1))).toMatchObject({ ok: false, code: "invalid_message" });
+    expect(validateTutorMessage("Napisz do mnie: uczen@example.com")).toMatchObject({ ok: false, code: "personal_data" });
+    expect(validateTutorMessage("Mój numer telefonu to 501 222 333")).toMatchObject({ ok: false, code: "personal_data" });
+    expect(validateTutorMessage("Mam na imię Ada i mieszkam w Krakowie")).toMatchObject({ ok: false, code: "personal_data" });
+  });
+
+  it("returns a direct safety handoff without sending urgent content to AI", () => {
+    const result = validateTutorMessage("Nie chcę już żyć");
+    expect(result).toMatchObject({ ok: false, code: "safety" });
+    expect(result.message).toContain("112");
+  });
+
+  it("anchors the tutor to the approved answer and subject method", () => {
+    const prompt = buildTutorSystemPrompt(context);
+    expect(prompt).toContain("Zatwierdzony klucz: {\"correct_index\":1}");
+    expect(prompt).toContain("Nie zmieniaj ich");
+    expect(prompt).toContain("MathJax");
+    expect(buildTutorSystemPrompt({ ...context, subject: "polish" })).toContain("zasad języka polskiego");
+    expect(buildTutorSystemPrompt({ ...context, subject: "english" })).toContain("Wyjaśniaj po polsku");
+  });
+
+  it("calculates token cost in microdollars and clamps usage", () => {
+    expect(estimateDeepSeekCostMicrousd({ cacheHitInputTokens: 1000, cacheMissInputTokens: 2000, outputTokens: 500 })).toBe(423);
+    expect(normalizeUsage(2, 3, "free")).toEqual({ used: 2, limit: 3, remaining: 1, plan: "free" });
+    expect(normalizeUsage(60, 50, "plus")).toEqual({ used: 60, limit: 50, remaining: 0, plan: "plus" });
+    expect(normalizeUsage("bad", "bad", "unknown")).toEqual({ used: 0, limit: 3, remaining: 3, plan: "free" });
+  });
+});

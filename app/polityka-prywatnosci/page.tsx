@@ -33,7 +33,7 @@ export default function PrivacyPage() {
             <tr><td>Konto i logowanie</td><td>E-mail, nazwa wyświetlana, identyfikator konta, dostawca logowania, znaczniki czasu, rola</td><td>Od Ciebie lub z Google/Facebook po wybraniu logowania społecznościowego</td></tr>
             <tr><td>Konto ucznia</td><td>Wybrana rola, informacja i dowód zgody/upoważnienia opiekuna, powiązanie z kontem rodzica</td><td>Od ucznia i opiekuna</td></tr>
             <tr><td>Nauka</td><td>Odpowiedzi, wyniki, czas pracy, tematy, postęp, limity pytań</td><td>Z aktywności w usłudze</td></tr>
-            <tr><td>Rozmowy z AI</td><td>Treść pytania, kontekst zadania, odpowiedź modelu, ocena odpowiedzi i zgłoszenie błędu</td><td>Od użytkownika i systemu AI</td></tr>
+            <tr><td>Rozmowy z AI</td><td>Treść pytania, kontekst zadania, odpowiedź modelu, liczba tokenów, szacowany koszt i czas odpowiedzi</td><td>Od użytkownika, aplikacji i dostawcy modelu</td></tr>
             <tr><td>Rodzic i nauczyciel</td><td>Zaproszenia, powiązania kont, grupy, zestawy i raporty postępów</td><td>Od użytkowników i z ich aktywności</td></tr>
             <tr><td>Płatności</td><td>Plan, status płatności, identyfikator transakcji, dane do dokumentu sprzedaży; bez pełnych danych karty</td><td>Od użytkownika i operatora płatności po uruchomieniu planu płatnego</td></tr>
             <tr><td>Bezpieczeństwo</td><td>Adres IP, typ urządzenia i przeglądarki, zdarzenia logowania, błędy, identyfikatory sesji</td><td>Automatycznie z urządzenia i infrastruktury</td></tr>
@@ -74,7 +74,8 @@ export default function PrivacyPage() {
 
       <section className="legal-section" id="ai">
         <h2>5. Jak działa nauczyciel AI</h2>
-        <p>Użytkownik jest wyraźnie informowany, że rozmawia z systemem sztucznej inteligencji, a nie z człowiekiem. Pytanie, kontekst zadania i niezbędne instrukcje są przesyłane do dostawcy modelu: <mark>[UZUPEŁNIJ DOSTAWCĘ, MODEL, REGION I USTAWIENIA TRENINGU]</mark>. Odpowiedzi mogą zawierać błędy. Nie gwarantujemy wyniku egzaminu i zachęcamy do sprawdzenia odpowiedzi w materiałach źródłowych lub z nauczycielem.</p>
+        <p>Użytkownik jest wyraźnie informowany, że rozmawia z systemem sztucznej inteligencji, a nie z człowiekiem. W pierwszym wdrożeniu planowanym dostawcą API jest <b>Hangzhou DeepSeek Artificial Intelligence Co., Ltd.</b>, a domyślnym modelem <b>DeepSeek V4 Flash</b>. Do modelu wysyłamy aktualne zadanie, zatwierdzone opracowanie, bieżące pytanie i maksymalnie osiem ostatnich wiadomości dotyczących tego zadania. Nie wysyłamy e-maila, nazwy profilu, wyników ani identyfikatora konta; techniczny identyfikator izolujący pamięć podręczną jest pseudonimizowany jednokierunkowo.</p>
+        <p>Formularz blokuje oczywiste adresy e-mail, numery telefonów, PESEL, linki i zwroty wskazujące na adres lub szkołę, ale filtr nie daje stuprocentowej gwarancji. Użytkownik nie powinien wpisywać żadnych danych osobowych. Odpowiedzi mogą zawierać błędy. Nie gwarantujemy wyniku egzaminu i zachęcamy do sprawdzenia odpowiedzi w materiale źródłowym lub z nauczycielem.</p>
         <p>Profil nauki może dopasowywać kolejność ćwiczeń i podpowiedzi, ale MVP nie podejmuje wyłącznie automatycznych decyzji wywołujących skutki prawne lub podobnie istotnie wpływających na użytkownika. Jeżeli taka funkcja powstanie, polityka i mechanizm kontroli człowieka zostaną zaktualizowane przed jej użyciem.</p>
       </section>
 
@@ -91,11 +92,11 @@ export default function PrivacyPage() {
           <li><b>Supabase</b> — uwierzytelnianie i baza danych; <mark>[UZUPEŁNIJ REGION PROJEKTU I DPA]</mark>.</li>
           <li><b>Google i Meta</b> — wyłącznie gdy użytkownik wybierze odpowiednie logowanie; dostawca przetwarza też dane według własnych zasad.</li>
           <li><b>Hosting i kopie zapasowe</b> — <mark>[UZUPEŁNIJ FAKTYCZNEGO DOSTAWCĘ, LOKALIZACJĘ I PODPROCESORÓW; Coolify jest oprogramowaniem, nie nazwą hostingu]</mark>.</li>
-          <li><b>Dostawca AI</b> — <mark>[UZUPEŁNIJ]</mark>; należy wyłączyć używanie treści dzieci do trenowania modeli, jeżeli dostawca na to pozwala, i zawrzeć właściwe warunki powierzenia.</li>
+          <li><b>DeepSeek</b> — planowany dostawca modelu DeepSeek V4 Flash. Według polityki dostawcy dane mogą być przetwarzane w Chińskiej Republice Ludowej. <mark>Przed włączeniem produkcyjnym trzeba potwierdzić umowę powierzenia, podstawę transferu poza EOG, ocenę skutków transferu, retencję API oraz skuteczne wyłączenie używania treści do trenowania.</mark></li>
           <li><b>E-mail, płatności, obsługa i analityka</b> — <mark>[UZUPEŁNIJ PRZED WŁĄCZENIEM KAŻDEJ USŁUGI]</mark>.</li>
           <li>Organy publiczne — tylko gdy wymaga tego prawo.</li>
         </ul>
-        <p>Jeżeli dane trafią poza EOG, zastosujemy właściwy mechanizm z rozdziału V RODO, np. decyzję stwierdzającą odpowiedni stopień ochrony albo standardowe klauzule umowne wraz z oceną transferu. Dokładny mechanizm zostanie wskazany po wyborze regionów i dostawców.</p>
+        <p>DeepSeek wskazuje, że bezpośrednio przetwarza i przechowuje dane w Chińskiej Republice Ludowej. Samo usunięcie identyfikatorów nie zastępuje wymaganej oceny prawnej transferu. Moduł AI nie powinien zostać włączony dla użytkowników produkcyjnych do czasu udokumentowania właściwego mechanizmu z rozdziału V RODO, warunków powierzenia i oceny ryzyka albo wyboru dostawcy zapewniającego akceptowalny region i warunki.</p>
       </section>
 
       <section className="legal-section" id="retencja">

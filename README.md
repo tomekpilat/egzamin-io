@@ -61,6 +61,8 @@ Etapowy plan funkcjonalności produktu znajduje się w [docs/mvp-implementation-
 
 Ręczne przygotowanie, walidacja, wersjonowanie i publikacja arkuszy CKE są opisane w [docs/cke-import-process.md](docs/cke-import-process.md).
 
+Konfiguracja nauczyciela AI, limity, workflow zatwierdzania opracowań i benchmark są opisane w [docs/ai-tutor-mvp.md](docs/ai-tutor-mvp.md). Uzasadnienie modelu i szacunek kosztów znajdują się w [docs/ai-model-evaluation.md](docs/ai-model-evaluation.md).
+
 Roboczy pakiet prawny (prywatność, regulamin, cookies, dzieci i AI oraz odstąpienie od umowy) jest dostępny pod `/informacje-prawne`. Dokumenty są celowo wyłączone z indeksowania do czasu uzupełnienia danych operatora, dostawców i konsultacji prawnej.
 
 ## Weryfikacja

@@ -31,7 +31,7 @@ Przed rozpoczęciem przygotuj:
 | `<SUPABASE_PROJECT_REF>` | Supabase → Project Settings → General |
 | `<SUPABASE_PUBLISHABLE_KEY>` | Supabase → Project Settings → API Keys |
 
-Nie używaj w aplikacji klucza `service_role` ani sekretów Google/Facebook.
+Klucza `service_role` nie udostępniaj przeglądarce. Po włączeniu modułu AI będzie on potrzebny wyłącznie jako sekret serwerowy w Coolify; sekretów Google/Facebook nadal nie dodawaj do aplikacji.
 
 ## 2. Kontrola istniejącej maszyny — bez zmian w działających aplikacjach
 
@@ -133,7 +133,9 @@ Ustaw health check:
 | Timeout | `5s` |
 | Retries | `3` |
 
-Nie dodawaj `PORT`, `HOST`, `service_role`, Client Secret Google ani App Secret Facebook. `Dockerfile` ustawia port i host, a sekrety providerów zostają w Supabase.
+Nie dodawaj `PORT`, `HOST`, Client Secret Google ani App Secret Facebook. `Dockerfile` ustawia port i host, a sekrety OAuth zostają w Supabase. Klucz `service_role` jest wyjątkiem wymaganym dopiero przez serwerowy moduł AI i musi pozostać sekretem runtime.
+
+Jeżeli włączasz nauczyciela AI, dodaj osobno jako sekrety runtime `SUPABASE_SERVICE_ROLE_KEY`, `DEEPSEEK_API_KEY` i losowy `AI_USER_HASH_SECRET`. Nie oznaczaj ich jako publiczne ani dostępne dla kodu przeglądarki. Szczegóły: [ai-tutor-mvp.md](ai-tutor-mvp.md).
 
 ## 6. Zastosuj migracje Supabase i wykonaj pierwszy deploy
 

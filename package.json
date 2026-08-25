@@ -17,7 +17,9 @@
     "cke:validate": "node scripts/cke-import.mjs validate",
     "cke:stage": "node scripts/cke-import.mjs stage",
     "cke:hash": "node scripts/cke-import.mjs hash",
-    "cke:workflow": "node scripts/cke-import.mjs"
+    "cke:workflow": "node scripts/cke-import.mjs",
+    "ai:generate": "node scripts/ai-generate-explanations.mjs",
+    "ai:benchmark": "node scripts/ai-benchmark.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.112.3",

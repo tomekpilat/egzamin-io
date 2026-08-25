@@ -35,6 +35,16 @@ SUPABASE_URL=https://TWOJ_PROJECT_REF.supabase.co
 SUPABASE_PUBLISHABLE_KEY=sb_publishable_...
 ```
 
+Do działania nauczyciela AI dodaj również trzy sekrety dostępne wyłącznie w runtime:
+
+```text
+SUPABASE_SERVICE_ROLE_KEY=eyJ...
+DEEPSEEK_API_KEY=sk-...
+AI_USER_HASH_SECRET=<losowy sekret co najmniej 32 znaki>
+```
+
+Pełna konfiguracja modelu, limitów i monitoringu znajduje się w [ai-tutor-mvp.md](ai-tutor-mvp.md).
+
 Pełna konfiguracja bazy, Google i Facebooka jest opisana w [supabase-auth-setup.md](supabase-auth-setup.md).
 
 ## 3. DNS
