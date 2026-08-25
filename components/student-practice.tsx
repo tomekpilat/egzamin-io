@@ -9,9 +9,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Progress } from "@/components/ui/progress";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { getSupabaseClient } from "@/lib/supabase-browser";
+import { SubjectIcon, subjectLabels, type SubjectKey } from "@/components/subject-icon";
 
 export type StudentView = "start" | "exercises" | "progress" | "settings";
-type Subject = "mathematics" | "polish" | "english";
+type Subject = SubjectKey;
 type SubjectFilter = "all" | Subject;
 export type MaterialFilter = "demo" | "all-cke" | `year:${number}`;
 type ExamSession = "main" | "additional";
@@ -68,12 +69,6 @@ const subjects: { value: SubjectFilter; label: string }[] = [
   { value: "polish", label: "Język polski" },
   { value: "english", label: "Język angielski" },
 ];
-
-const subjectLabels: Record<Subject, string> = {
-  mathematics: "Matematyka",
-  polish: "Język polski",
-  english: "Język angielski",
-};
 
 const sessionLabels: Record<ExamSession, string> = {
   main: "termin główny",
@@ -530,14 +525,14 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
           {(["mathematics", "polish", "english"] as Subject[]).map((item) => {
             const stats = subjectStats(item);
             const percent = stats.answered ? Math.round((stats.correct / stats.answered) * 100) : 0;
-            return <Card key={item}><CardHeader><CardTitle>{subjectLabels[item]}</CardTitle><CardDescription>{stats.answered} z {stats.total} rozwiązanych</CardDescription></CardHeader><CardContent><div className="subject-progress-value"><b>{percent}%</b><span>{stats.correct} poprawnych</span></div><Progress value={(stats.answered / Math.max(stats.total, 1)) * 100} /></CardContent></Card>;
+            return <Card key={item}><CardHeader><div className="subject-card-heading"><SubjectIcon subject={item} /><div><CardTitle>{subjectLabels[item]}</CardTitle><CardDescription>{stats.answered} z {stats.total} rozwiązanych</CardDescription></div></div></CardHeader><CardContent><div className="subject-progress-value"><b>{percent}%</b><span>{stats.correct} poprawnych</span></div><Progress value={(stats.answered / Math.max(stats.total, 1)) * 100} /></CardContent></Card>;
           })}
         </section>
         <section className="practice-paper-progress" aria-labelledby="paper-progress-title">
           <div className="guardian-section-heading"><div><Badge variant="secondary">Arkusze CKE</Badge><h3 id="paper-progress-title">Wyniki według rocznika i arkusza</h3></div><small>Pełny arkusz liczymy osobno od sesji mieszających zadania.</small></div>
           {paperProgress.length ? <div className="practice-paper-grid">{paperProgress.map((paper) => {
             const statusLabel = paper.completion_status === "completed" ? "Ukończony" : paper.completion_status === "in_progress" ? "Rozpoczęty" : "Nierozpoczęty";
-            return <Card key={paper.progress_paper_id} className="practice-paper-card"><CardHeader><div className="practice-paper-title"><Badge variant={paper.completion_status === "completed" ? "default" : "outline"}>{statusLabel}</Badge><span>CKE {paper.exam_year} · {sessionLabels[paper.exam_session]}</span></div><CardTitle>{subjectLabels[paper.subject]}</CardTitle><CardDescription>{paper.source_label}</CardDescription></CardHeader><CardContent><div className="subject-progress-value"><b>{paper.accuracy_percent}%</b><span>{paper.correct_questions} poprawnych z {paper.answered_questions} rozwiązanych</span></div><Progress value={(paper.answered_questions / Math.max(paper.total_questions, 1)) * 100} aria-label={`Ukończenie arkusza ${paper.exam_year}: ${paper.answered_questions} z ${paper.total_questions}`} /></CardContent></Card>;
+            return <Card key={paper.progress_paper_id} className="practice-paper-card"><CardHeader><div className="practice-paper-title"><Badge variant={paper.completion_status === "completed" ? "default" : "outline"}>{statusLabel}</Badge><span>CKE {paper.exam_year} · {sessionLabels[paper.exam_session]}</span></div><div className="subject-card-heading compact"><SubjectIcon subject={paper.subject} /><div><CardTitle>{subjectLabels[paper.subject]}</CardTitle><CardDescription>{paper.source_label}</CardDescription></div></div></CardHeader><CardContent><div className="subject-progress-value"><b>{paper.accuracy_percent}%</b><span>{paper.correct_questions} poprawnych z {paper.answered_questions} rozwiązanych</span></div><Progress value={(paper.answered_questions / Math.max(paper.total_questions, 1)) * 100} aria-label={`Ukończenie arkusza ${paper.exam_year}: ${paper.answered_questions} z ${paper.total_questions}`} /></CardContent></Card>;
           })}</div> : <Card className="practice-paper-empty"><CardContent><b>Brak opublikowanych arkuszy CKE</b><p>Gdy pierwszy zweryfikowany arkusz zostanie zaimportowany, pojawi się tutaj jako osobny rocznik — bez mieszania z zestawem demo.</p></CardContent></Card>}
         </section>
       </>}

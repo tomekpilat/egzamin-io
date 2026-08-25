@@ -4,6 +4,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { User } from "@supabase/supabase-js";
 import { BrandLogo } from "@/components/brand-logo";
+import { FeedbackDialog } from "@/components/feedback-dialog";
 import { ParentProgress } from "@/components/parent-progress";
 import { StudentPractice, type StudentView } from "@/components/student-practice";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -12,12 +13,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { isUserRole, roleLabels, type UserRole } from "@/lib/roles";
 import { normalizeWeeklyGoal, summarizeParentPreferences } from "@/lib/parent-preferences";
 import { getSupabaseClient } from "@/lib/supabase-browser";
 import { LEGAL_VERSION } from "@/lib/legal";
+import { FEEDBACK_CATEGORIES, feedbackStatusLabels, type FeedbackStatus } from "@/lib/feedback";
 
 type Profile = {
   id: string;
@@ -36,6 +39,21 @@ type LinkedChild = { student_id: string; student_display_name: string | null; st
 type ParentView = "start" | "progress" | "children" | "connect" | "settings";
 
 type RoleCounts = Record<UserRole, number>;
+type AdminFeedback = {
+  feedback_id: string;
+  feedback_user_id: string;
+  feedback_user_role: UserRole;
+  feedback_category: string;
+  feedback_rating: number | null;
+  feedback_message: string;
+  feedback_contact_email: string | null;
+  feedback_question_id: string | null;
+  feedback_exam_paper_id: string | null;
+  feedback_page_path: string;
+  feedback_screen_context: string;
+  feedback_status: FeedbackStatus;
+  feedback_created_at: string;
+};
 
 const emptyCounts: RoleCounts = {
   student: 0,
@@ -178,7 +196,7 @@ function TeacherPanel({ verificationStatus }: { verificationStatus: Profile["tea
   );
 }
 
-function AdminPanel({ counts, busy, error, onGrantTeacher }: { counts: RoleCounts; busy: boolean; error: string; onGrantTeacher: (email: string) => Promise<boolean> }) {
+function AdminPanel({ counts, feedback, busy, feedbackBusyId, error, onGrantTeacher, onUpdateFeedback }: { counts: RoleCounts; feedback: AdminFeedback[]; busy: boolean; feedbackBusyId: string; error: string; onGrantTeacher: (email: string) => Promise<boolean>; onUpdateFeedback: (id: string, status: FeedbackStatus) => void }) {
   const total = Object.values(counts).reduce((sum, value) => sum + value, 0);
   const [teacherEmail, setTeacherEmail] = useState("");
 
@@ -210,6 +228,20 @@ function AdminPanel({ counts, busy, error, onGrantTeacher }: { counts: RoleCount
           <div className="admin-teacher-form"><Label htmlFor="teacher-email">Adres e-mail zweryfikowanego nauczyciela</Label><div><Input id="teacher-email" type="email" autoComplete="email" placeholder="nauczyciel@szkola.pl" value={teacherEmail} onChange={(event) => setTeacherEmail(event.target.value)} /><Button type="button" onClick={() => void grantTeacherRole()} disabled={busy || !teacherEmail.trim()}>{busy ? "Nadaję rolę…" : "Nadaj rolę"}</Button></div></div>
         </CardContent>
       </Card>
+      <Card className="admin-feedback-card" id="feedback">
+        <CardHeader><div className="admin-feedback-heading"><div><CardTitle>Feedback użytkowników</CardTitle><CardDescription>Najnowsze zgłoszenia z aplikacji. Dane kontaktowe pojawiają się wyłącznie po zgodzie użytkownika.</CardDescription></div><Badge variant="secondary">{feedback.filter((item) => item.feedback_status === "new").length} nowych</Badge></div></CardHeader>
+        <CardContent>
+          {!feedback.length ? <p className="admin-feedback-empty">Brak zgłoszeń. Nowe opinie pojawią się tutaj automatycznie.</p> : <div className="admin-feedback-list">{feedback.map((item) => {
+            const category = FEEDBACK_CATEGORIES.find((entry) => entry.value === item.feedback_category)?.label ?? item.feedback_category;
+            return <article className="admin-feedback-item" key={item.feedback_id}>
+              <div className="admin-feedback-meta"><Badge variant="outline">{category}</Badge><span>{roleLabels[item.feedback_user_role]}</span>{item.feedback_rating && <span aria-label={`Ocena ${item.feedback_rating} z 5`}>Ocena {item.feedback_rating}/5</span>}<time dateTime={item.feedback_created_at}>{new Date(item.feedback_created_at).toLocaleString("pl-PL")}</time></div>
+              <p>{item.feedback_message}</p>
+              <div className="admin-feedback-context"><span>{item.feedback_screen_context} · {item.feedback_page_path}</span>{item.feedback_question_id && <span>Zadanie: {item.feedback_question_id}</span>}{item.feedback_contact_email && <a href={`mailto:${item.feedback_contact_email}`}>{item.feedback_contact_email}</a>}</div>
+              <Label htmlFor={`feedback-status-${item.feedback_id}`}>Status<Select value={item.feedback_status} onValueChange={(value) => onUpdateFeedback(item.feedback_id, value as FeedbackStatus)} disabled={feedbackBusyId === item.feedback_id}><SelectTrigger id={`feedback-status-${item.feedback_id}`}><SelectValue /></SelectTrigger><SelectContent>{(Object.entries(feedbackStatusLabels) as [FeedbackStatus, string][]).map(([value, label]) => <SelectItem key={value} value={value}>{label}</SelectItem>)}</SelectContent></Select></Label>
+            </article>;
+          })}</div>}
+        </CardContent>
+      </Card>
     </>
   );
 }
@@ -226,6 +258,8 @@ export default function DashboardPage() {
   const [actionError, setActionError] = useState("");
   const [actionMessage, setActionMessage] = useState("");
   const [adminActionBusy, setAdminActionBusy] = useState(false);
+  const [adminFeedback, setAdminFeedback] = useState<AdminFeedback[]>([]);
+  const [feedbackBusyId, setFeedbackBusyId] = useState("");
   const [adminActionError, setAdminActionError] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -250,6 +284,13 @@ export default function DashboardPage() {
       if (isUserRole(item.role)) nextCounts[item.role] += 1;
     });
     setCounts(nextCounts);
+  }, []);
+
+  const refreshAdminFeedback = useCallback(async () => {
+    const supabase = await getSupabaseClient();
+    const { data, error: feedbackError } = await supabase.rpc("get_admin_feedback", { requested_limit: 50 });
+    if (feedbackError) throw feedbackError;
+    setAdminFeedback((data as AdminFeedback[] | null) ?? []);
   }, []);
 
   useEffect(() => {
@@ -290,7 +331,7 @@ export default function DashboardPage() {
           if (nextProfile.role === "parent") {
             await refreshParentData();
           } else if (nextProfile.role === "admin") {
-            await refreshAdminCounts();
+            await Promise.all([refreshAdminCounts(), refreshAdminFeedback()]);
           }
           setLoading(false);
         };
@@ -312,7 +353,7 @@ export default function DashboardPage() {
       active = false;
       unsubscribe?.();
     };
-  }, [refreshAdminCounts, refreshParentData]);
+  }, [refreshAdminCounts, refreshAdminFeedback, refreshParentData]);
 
   async function decideGuardianRequest(requestId: string, decision: "approve" | "reject") {
     setGuardianActionBusy(requestId);
@@ -367,6 +408,21 @@ export default function DashboardPage() {
       return false;
     } finally {
       setAdminActionBusy(false);
+    }
+  }
+
+  async function updateFeedbackStatus(feedbackId: string, status: FeedbackStatus) {
+    setFeedbackBusyId(feedbackId);
+    setAdminActionError("");
+    try {
+      const supabase = await getSupabaseClient();
+      const { error: updateError } = await supabase.rpc("update_feedback_status", { target_feedback_id: feedbackId, next_status: status });
+      if (updateError) throw updateError;
+      await refreshAdminFeedback();
+    } catch {
+      setAdminActionError("Nie udało się zmienić statusu zgłoszenia. Spróbuj ponownie.");
+    } finally {
+      setFeedbackBusyId("");
     }
   }
 
@@ -440,7 +496,7 @@ export default function DashboardPage() {
       <div className="dashboard-main">
         {!focusMode && <header className="dashboard-topbar">
           <div><span>{roleLabels[profile.role]}</span><h1>Cześć, {firstName}!</h1></div>
-          <div className="dashboard-topbar-actions"><div className="dashboard-account"><span>{displayName.slice(0, 2).toUpperCase()}</span><div><b>{displayName}</b><small>{profile.email}</small></div></div></div>
+          <div className="dashboard-topbar-actions"><FeedbackDialog userEmail={profile.email} screenContext={`${profile.role}:${profile.role === "student" ? studentView : profile.role === "parent" ? parentView : "start"}`} /><div className="dashboard-account"><span>{displayName.slice(0, 2).toUpperCase()}</span><div><b>{displayName}</b><small>{profile.email}</small></div></div></div>
         </header>}
         <div className={focusMode ? "dashboard-content dashboard-focus-content" : "dashboard-content"}>
           {profile.role === "student" && <StudentPractice activeView={studentView} onNavigate={setStudentView} />}
@@ -448,7 +504,7 @@ export default function DashboardPage() {
           {actionMessage && profile.role === "parent" && <Alert variant="success" className="dashboard-alert"><AlertDescription>{actionMessage}</AlertDescription></Alert>}
           {profile.role === "parent" && <ParentPanel activeView={parentView} parentEmail={profile.email} requests={guardianRequests} linkedChildren={linkedChildren} actionBusy={guardianActionBusy} onNavigate={setParentView} onApprove={(id) => void decideGuardianRequest(id, "approve")} onReject={(id) => void decideGuardianRequest(id, "reject")} onSavePreferences={(studentId, weeklyGoal, summaryEnabled) => void saveGuardianPreferences(studentId, weeklyGoal, summaryEnabled)} />}
           {profile.role === "teacher" && <TeacherPanel verificationStatus={profile.teacher_verification_status} />}
-          {profile.role === "admin" && <AdminPanel counts={counts} busy={adminActionBusy} error={adminActionError} onGrantTeacher={grantTeacherRole} />}
+          {profile.role === "admin" && <AdminPanel counts={counts} feedback={adminFeedback} busy={adminActionBusy} feedbackBusyId={feedbackBusyId} error={adminActionError} onGrantTeacher={grantTeacherRole} onUpdateFeedback={(id, status) => void updateFeedbackStatus(id, status)} />}
           {((profile.role === "parent" && parentView === "settings") || (profile.role === "student" && studentView === "settings") || (profile.role !== "parent" && profile.role !== "student")) && <Card className="account-settings-card" id="ustawienia">
             <CardHeader><CardTitle>Ustawienia konta</CardTitle><CardDescription>Motyw, prywatność i zarządzanie danymi w jednym miejscu.</CardDescription></CardHeader>
             <CardContent className="account-settings-actions"><div><span>Wygląd aplikacji</span><ThemeToggle /></div>{(profile.role === "parent" || profile.role === "student") && <Button variant="outline" asChild><a href={profile.role === "parent" ? "/plan-plus#dla-rodzica" : "/plan-plus#dla-ucznia"}>Poznaj plan Plus</a></Button>}<Button variant="outline" asChild><a href="/polityka-prywatnosci">Polityka prywatności</a></Button><Button variant="outline" asChild><a href="/usun-konto">Usuń konto i dane</a></Button></CardContent>

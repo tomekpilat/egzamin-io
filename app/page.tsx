@@ -8,6 +8,7 @@ import { MathFormula } from "@/components/math-formula";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { SUBJECT_CATEGORIES, SubjectIcon } from "@/components/subject-icon";
 import { calculatePlusEconomics, formatPln, PLAN_COMPARISON_ROWS, PLUS_ANNUAL_PRICE_PLN } from "@/lib/plans";
 
 const plusEconomics = calculatePlusEconomics();
@@ -64,7 +65,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="subject-strip" aria-label="Zakres przygotowań"><span><b>∑</b> Matematyka</span><span><b>ą</b> Język polski</span><span><b>A</b> Język angielski</span><span><b>✓</b> Arkusze CKE</span></section>
+      <section className="subject-strip" aria-label="Zakres przygotowań">
+        {SUBJECT_CATEGORIES.map((category) => <div className="subject-category" key={category.key}><SubjectIcon subject={category.key} /><span>{category.label}</span></div>)}
+      </section>
 
       <section className="section how-section" id="jak-to-dziala">
         <div className="section-heading"><span className="section-kicker">Jak to działa</span><h2>Zadanie. Podpowiedź. Zrozumienie.</h2></div>

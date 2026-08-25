@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { getSupabaseClient } from "@/lib/supabase-browser";
+import { SubjectIcon, subjectLabels, type SubjectKey } from "@/components/subject-icon";
 
 export type ParentProgressChild = {
   student_id: string;
@@ -16,7 +17,7 @@ export type ParentProgressChild = {
 };
 
 type ProgressRange = 7 | 30 | 0;
-type Subject = "mathematics" | "polish" | "english";
+type Subject = SubjectKey;
 type SubjectStat = { subject: Subject; solved: number; correct: number; accuracy: number };
 type TopicStat = { subject: Subject; topic: string; solved: number; accuracy: number };
 
@@ -43,12 +44,6 @@ const ranges: Array<{ value: ProgressRange; label: string }> = [
   { value: 30, label: "30 dni" },
   { value: 0, label: "Cały okres" },
 ];
-
-const subjectLabels: Record<Subject, string> = {
-  mathematics: "Matematyka",
-  polish: "Język polski",
-  english: "Język angielski",
-};
 
 const subjectOrder: Subject[] = ["mathematics", "polish", "english"];
 
@@ -195,7 +190,7 @@ export function ParentProgress({ linkedChildren, pendingRequests, onConnect }: {
           <div className="guardian-section-heading"><div><Badge variant="secondary">Przedmioty</Badge><h3 id="parent-subject-title">Wyniki według przedmiotu</h3></div><small>Liczymy ostatnią odpowiedź dla każdego zadania w okresie.</small></div>
           <div>{subjectOrder.map((subject) => {
             const stat = subjectStats.get(subject);
-            return <Card key={subject}><CardHeader><CardTitle>{subjectLabels[subject]}</CardTitle><CardDescription>{stat?.solved ?? 0} rozwiązanych</CardDescription></CardHeader><CardContent><div className="subject-progress-value"><b>{stat?.accuracy ?? 0}%</b><span>{stat?.correct ?? 0} poprawnych</span></div><Progress value={stat?.accuracy ?? 0} /></CardContent></Card>;
+            return <Card key={subject}><CardHeader><div className="subject-card-heading"><SubjectIcon subject={subject} /><div><CardTitle>{subjectLabels[subject]}</CardTitle><CardDescription>{stat?.solved ?? 0} rozwiązanych</CardDescription></div></div></CardHeader><CardContent><div className="subject-progress-value"><b>{stat?.accuracy ?? 0}%</b><span>{stat?.correct ?? 0} poprawnych</span></div><Progress value={stat?.accuracy ?? 0} /></CardContent></Card>;
           })}</div>
         </section>
 
