@@ -39,12 +39,23 @@
 .auth-card-heading h2 { margin: 0; font-size: 28px; letter-spacing: -.04em; }
 .auth-card-heading p { margin: 7px 0 22px; color: var(--muted); font-size: 12px; }
 .social-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.social-buttons button { min-height: 46px; display: flex; align-items: center; justify-content: center; gap: 9px; padding: 10px; border: 1px solid #d7d9dc; border-radius: 10px; background: white; color: #333c4c; font-size: 11px; font-weight: 750; cursor: pointer; }
-.social-buttons button:hover { border-color: #9fa4ac; background: #fbfbfa; }
-.social-buttons button:disabled { opacity: .55; cursor: wait; }
-.provider-mark { width: 22px; height: 22px; display: grid; place-items: center; border-radius: 50%; font-size: 12px; font-weight: 900; }
-.google-mark { color: #4285f4; border: 1px solid #e1e1e1; }
-.facebook-mark { color: white; background: #1877f2; font-family: Arial, sans-serif; font-size: 16px; }
+.social-buttons .social-auth-button { width: 100%; min-width: 0; min-height: 48px; padding: 10px 12px; display: grid; grid-template-columns: 24px minmax(0, 1fr) 24px; align-items: center; gap: 10px; border: 1px solid #747775; border-radius: 10px; background: #fff; color: #1f1f1f; font-family: Arial, sans-serif; font-size: 14px; font-weight: 600; line-height: 20px; box-shadow: none; cursor: pointer; }
+.social-buttons .social-auth-button:hover:not(:disabled) { border-color: #5f6368; background: #f8f9fa; box-shadow: 0 1px 2px rgba(60,64,67,.18); }
+.social-buttons .social-auth-button:focus-visible { border-color: #1a73e8; outline: 3px solid rgba(26,115,232,.25); outline-offset: 2px; box-shadow: none; }
+.social-buttons .social-auth-button:disabled { opacity: .68; cursor: not-allowed; }
+.social-buttons .social-auth-button[aria-busy="true"] { opacity: 1; cursor: wait; }
+.social-auth-icon, .social-auth-balance { width: 24px; height: 24px; display: grid; place-items: center; }
+.social-brand-icon { width: 20px; height: 20px; display: block; flex: 0 0 auto; }
+.google-brand-icon { padding: 1px; border-radius: 2px; background: #fff; }
+.facebook-brand-icon { border-radius: 50%; }
+.social-auth-copy { min-width: 0; display: grid; place-items: center; }
+.social-auth-copy > span { grid-area: 1 / 1; }
+.social-auth-label { overflow: hidden; max-width: 100%; text-overflow: ellipsis; white-space: nowrap; }
+.social-auth-label.is-hidden { visibility: hidden; }
+.social-auth-loading { display: inline-flex; align-items: center; justify-content: center; gap: 7px; white-space: nowrap; }
+.social-auth-loading svg { width: 16px; height: 16px; animation: social-auth-spin .8s linear infinite; }
+@keyframes social-auth-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .social-auth-loading svg { animation: none; } }
 .auth-divider { display: flex; align-items: center; gap: 12px; margin: 20px 0; color: #969da8; font-size: 9px; text-transform: uppercase; letter-spacing: .08em; }
 .auth-divider::before, .auth-divider::after { content: ""; flex: 1; border-top: 1px solid #e5e6e6; }
 .auth-form { display: grid; gap: 14px; }
@@ -354,7 +365,10 @@
 .dark .auth-story-image { border-color: var(--border); box-shadow: 0 16px 42px rgba(0,0,0,.28); }
 .dark .auth-card, .dark .onboarding-card, .dark .consent-card, .dark .dashboard-sidebar, .dark .dashboard-topbar, .dark .metric-card, .dark .dashboard-card, .dark .guardian-requests, .dark .linked-children, .dark .legal-sidebar, .dark .legal-page article { border-color: var(--border); background: var(--card); color: var(--card-foreground); }
 .dark .auth-story blockquote, .dark .auth-tabs, .dark .auth-journey li, .dark .consent-step, .dark .guardian-request-card, .dark .linked-children article, .dark .legal-toc, .dark .legal-callout-grid > div, .dark .legal-checklist li, .dark .withdrawal-template { border-color: var(--border); background: var(--secondary); color: var(--foreground); }
-.dark .auth-tabs button.active, .dark .social-buttons button, .dark .auth-form input, .dark .role-picker label, .dark .onboarding-roles button, .dark .consent-step > svg, .dark .legal-toc a, .dark .legal-page table { border-color: var(--border); background: var(--card); color: var(--foreground); }
+.dark .auth-tabs button.active, .dark .auth-form input, .dark .role-picker label, .dark .onboarding-roles button, .dark .consent-step > svg, .dark .legal-toc a, .dark .legal-page table { border-color: var(--border); background: var(--card); color: var(--foreground); }
+.dark .social-buttons .social-auth-button { border-color: #8e918f; background: #131314; color: #e3e3e3; }
+.dark .social-buttons .social-auth-button:hover:not(:disabled) { border-color: #a9acab; background: #202124; }
+.dark .social-buttons .social-auth-button:focus-visible { border-color: #8ab4f8; outline-color: rgba(138,180,248,.38); }
 .dark .role-picker label.selected, .dark .onboarding-roles button.selected { border-color: var(--coral); background: color-mix(in oklch, var(--accent) 65%, var(--card)); }
 .dark .dashboard-sidebar nav :is(a, button).active, .dark .legal-sidebar nav a.active { background: color-mix(in oklch, var(--accent) 65%, var(--card)); }
 .dark .dashboard-topbar { background: color-mix(in oklch, var(--card) 86%, transparent); }

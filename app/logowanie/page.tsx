@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { SocialAuthButtons, type SocialProvider } from "@/components/social-auth-buttons";
 import { validateSignupConfirmation } from "@/lib/auth-validation";
 import { LEGAL_VERSION } from "@/lib/legal";
 import { getSupabaseClient } from "@/lib/supabase-browser";
@@ -120,8 +121,10 @@ export default function LoginPage() {
   const [role, setRole] = useState<SelfServiceRole>(searchParams.get("rola") === "rodzic" ? "parent" : "student");
   const [guardianEmail, setGuardianEmail] = useState("");
   const [acceptedTerms, setAcceptedTerms] = useState(false);
-  const [busy, setBusy] = useState(false);
+  const [emailBusy, setEmailBusy] = useState(false);
+  const [pendingProvider, setPendingProvider] = useState<SocialProvider | null>(null);
   const [notice, setNotice] = useState<Notice>(null);
+  const busy = emailBusy || pendingProvider !== null;
 
   function changeMode(nextMode: Mode) {
     setMode(nextMode);
@@ -169,7 +172,7 @@ export default function LoginPage() {
       return;
     }
 
-    setBusy(true);
+    setEmailBusy(true);
     try {
       const supabase = await getSupabaseClient();
       if (mode === "signup") {
@@ -213,12 +216,14 @@ export default function LoginPage() {
       const message = error instanceof Error ? error.message : "unknown";
       setNotice({ type: "error", message: friendlyAuthError(message) });
     } finally {
-      setBusy(false);
+      setEmailBusy(false);
     }
   }
 
-  async function handleSocial(provider: "google" | "facebook") {
-    setBusy(true);
+  async function handleSocial(provider: SocialProvider) {
+    if (busy) return;
+
+    setPendingProvider(provider);
     setNotice(null);
     try {
       const supabase = await getSupabaseClient();
@@ -241,7 +246,7 @@ export default function LoginPage() {
     } catch (error) {
       const message = error instanceof Error ? error.message : "unknown";
       setNotice({ type: "error", message: friendlyAuthError(message) });
-      setBusy(false);
+      setPendingProvider(null);
     }
   }
 
@@ -393,16 +398,11 @@ export default function LoginPage() {
             </fieldset>
           )}
 
-          <div className="social-buttons">
-            <Button variant="outline" type="button" disabled={busy} onClick={() => handleSocial("google")}>
-              <span className="provider-mark google-mark">G</span>
-              {mode === "signup" ? "Zarejestruj z Google" : "Zaloguj z Google"}
-            </Button>
-            <Button variant="outline" type="button" disabled={busy} onClick={() => handleSocial("facebook")}>
-              <span className="provider-mark facebook-mark">f</span>
-              {mode === "signup" ? "Zarejestruj z Facebookiem" : "Zaloguj z Facebookiem"}
-            </Button>
-          </div>
+          <SocialAuthButtons
+            disabled={emailBusy}
+            pendingProvider={pendingProvider}
+            onSelect={handleSocial}
+          />
 
           <div className="auth-divider"><span>lub użyj e-maila</span></div>
 
@@ -510,7 +510,7 @@ export default function LoginPage() {
             )}
 
             <Button className="auth-submit" type="submit" disabled={busy}>
-              {busy
+              {emailBusy
                 ? "Chwila…"
                 : mode === "signup"
                   ? `Załóż konto ${role === "student" ? "ucznia" : "rodzica"}`

@@ -9,7 +9,7 @@ const accountStyles = readFileSync(join(process.cwd(), "app/account.css"), "utf8
 describe("simplified registration flow", () => {
   it("asks for the account role before showing registration methods", () => {
     expect(login.indexOf('className="role-picker signup-role-picker"')).toBeLessThan(
-      login.indexOf('className="social-buttons"'),
+      login.indexOf("<SocialAuthButtons"),
     );
     expect(login).toContain('value: "student"');
     expect(login).toContain('value: "parent"');
@@ -18,7 +18,7 @@ describe("simplified registration flow", () => {
   it("uses the selected-card style without extra checkmarks on role cards", () => {
     const rolePicker = login.slice(
       login.indexOf('<fieldset className="role-picker signup-role-picker">'),
-      login.indexOf('<div className="social-buttons">'),
+      login.indexOf("<SocialAuthButtons"),
     );
 
     expect(rolePicker).not.toContain("✓");
