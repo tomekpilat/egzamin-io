@@ -4,6 +4,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Lightbulb, MessageCircleQuestion, PencilLine } from "lucide-react";
+import { ArrowRight, Calculator, Target } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 import { MathFormula } from "@/components/math-formula";
 import { Button } from "@/components/ui/button";
@@ -23,7 +24,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a>
-        <nav className="desktop-nav" aria-label="Główna nawigacja"><a href="#jak-to-dziala">Jak to działa</a><a href="#dla-rodzica">Dla rodzica</a><a href="#dostep">Plany</a></nav>
+        <nav className="desktop-nav" aria-label="Główna nawigacja"><a href="/kalkulator-punktow">Kalkulator punktów</a><a href="#jak-to-dziala">Jak to działa</a><a href="#dla-rodzica">Dla rodzica</a><a href="#dostep">Plany</a></nav>
         <div className="header-actions"><ThemeToggle /><a className="header-login" href="/logowanie">Zaloguj się</a><Button variant="outline" className="header-cta" asChild><a href="/logowanie?tryb=rejestracja">Załóż konto</a></Button></div>
       </header>
 
@@ -70,6 +71,13 @@ export default function Home() {
         {SUBJECT_CATEGORIES.map((category) => <div className="subject-category" key={category.key}><SubjectIcon subject={category.key} /><span>{category.label}</span></div>)}
       </section>
 
+      <section className="recruitment-hook" aria-labelledby="recruitment-hook-title">
+        <div className="recruitment-hook-icon"><Calculator aria-hidden="true" /></div>
+        <div className="recruitment-hook-copy"><span className="section-kicker">Darmowy kalkulator</span><h2 id="recruitment-hook-title">Ile masz punktów do liceum?</h2><p>Policz wynik do 200 punktów i porównaj go z progiem wybranej klasy. Bez logowania.</p></div>
+        <div className="recruitment-hook-example" aria-hidden="true"><span><Target /></span><div><small>Przykład</small><b>151 / 200 pkt</b></div></div>
+        <Button size="lg" className="recruitment-hook-action" asChild><a href="/kalkulator-punktow">Policz swoje punkty <ArrowRight aria-hidden="true" /></a></Button>
+      </section>
+
       <section className="section how-section" id="jak-to-dziala">
         <div className="section-heading"><span className="section-kicker">Jak to działa</span><h2>Zadanie. Podpowiedź. Zrozumienie.</h2></div>
         <div className="steps-grid">
@@ -103,7 +111,7 @@ export default function Home() {
         </Card>
       </section>
 
-      <footer className="site-footer"><a className="brand" href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a><p>Ćwiczenia CKE, które naprawdę tłumaczą.</p><div><a href="/logowanie">Logowanie</a><a href="/informacje-prawne">Informacje prawne</a><a href="/bezpieczenstwo-dzieci-ai">Dzieci i AI</a><a href="mailto:kontakt@egzamin.io">Kontakt</a></div><small>© 2026 egzaminio · Niezależny projekt edukacyjny, niepowiązany z CKE.</small></footer>
+      <footer className="site-footer"><a className="brand" href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a><p>Ćwiczenia CKE, które naprawdę tłumaczą.</p><div><a href="/kalkulator-punktow">Kalkulator punktów</a><a href="/logowanie">Logowanie</a><a href="/informacje-prawne">Informacje prawne</a><a href="/bezpieczenstwo-dzieci-ai">Dzieci i AI</a><a href="mailto:kontakt@egzamin.io">Kontakt</a></div><small>© 2026 egzaminio · Niezależny projekt edukacyjny, niepowiązany z CKE.</small></footer>
     </main>
   );
 }
