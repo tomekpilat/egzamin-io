@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { validateSignupConfirmation } from "@/lib/auth-validation";
 import { LEGAL_VERSION } from "@/lib/legal";
 import { getSupabaseClient } from "@/lib/supabase-browser";
 import type { SelfServiceRole } from "@/lib/roles";
@@ -38,6 +39,58 @@ const roleOptions: Array<{
   },
 ];
 
+const roleJourneys: Record<
+  SelfServiceRole,
+  {
+    kicker: string;
+    title: string;
+    lead: string;
+    steps: Array<{ title: string; description: string }>;
+    note: string;
+  }
+> = {
+  student: {
+    kicker: "Konto ucznia",
+    title: "Ty ćwiczysz. Rodzic wspiera.",
+    lead: "Wiesz dokładnie, co wydarzy się po założeniu konta.",
+    steps: [
+      {
+        title: "Rozwiązujesz zadania CKE",
+        description: "Ćwiczysz z podpowiedziami AI i własnym planem nauki.",
+      },
+      {
+        title: "Zapraszasz rodzica",
+        description: "Podajesz jego e-mail, a my wysyłamy prośbę o zgodę.",
+      },
+      {
+        title: "Uczycie się spokojniej",
+        description: "Ty widzisz zadania, a rodzic postęp i tygodniowy cel.",
+      },
+    ],
+    note: "Konto ucznia uruchomimy po akceptacji rodzica lub opiekuna.",
+  },
+  parent: {
+    kicker: "Konto rodzica",
+    title: "Wspierasz. Nie odrabiasz za dziecko.",
+    lead: "Trzy proste kroki do wspólnego planu nauki.",
+    steps: [
+      {
+        title: "Zapraszasz dziecko",
+        description: "Wysyłasz link do rejestracji i swój adres e-mail.",
+      },
+      {
+        title: "Łączysz konta",
+        description: "Zatwierdzasz prośbę dziecka w panelu rodzica.",
+      },
+      {
+        title: "Widzisz to, co ważne",
+        description: "Śledzisz regularność, postęp i ustawiasz tygodniowy cel.",
+      },
+    ],
+    note: "Jedno konto rodzica może wspierać więcej niż jedno dziecko.",
+  },
+};
+
 function friendlyAuthError(message: string) {
   if (/invalid login credentials/i.test(message)) {
     return "Nieprawidłowy e-mail lub hasło.";
@@ -59,9 +112,10 @@ export default function LoginPage() {
   const [mode, setMode] = useState<Mode>(
     searchParams.get("tryb") === "rejestracja" ? "signup" : "login",
   );
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [emailConfirmation, setEmailConfirmation] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordConfirmation, setPasswordConfirmation] = useState("");
   const [role, setRole] = useState<SelfServiceRole>(searchParams.get("rola") === "rodzic" ? "parent" : "student");
   const [guardianEmail, setGuardianEmail] = useState("");
   const [acceptedTerms, setAcceptedTerms] = useState(false);
@@ -72,11 +126,26 @@ export default function LoginPage() {
     setMode(nextMode);
     setNotice(null);
     setPassword("");
+    setPasswordConfirmation("");
+    setEmailConfirmation("");
   }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setNotice(null);
+
+    if (mode === "signup") {
+      const confirmationError = validateSignupConfirmation(
+        email,
+        emailConfirmation,
+        password,
+        passwordConfirmation,
+      );
+      if (confirmationError) {
+        setNotice({ type: "error", message: confirmationError });
+        return;
+      }
+    }
 
     if (mode === "signup" && !acceptedTerms) {
       setNotice({
@@ -109,7 +178,7 @@ export default function LoginPage() {
           options: {
             emailRedirectTo: `${window.location.origin}/panel`,
             data: {
-              display_name: name.trim(),
+              display_name: email.trim().split("@")[0],
               requested_role: role,
               guardian_email: role === "student" ? guardianEmail.trim().toLowerCase() : null,
               legal_accepted: true,
@@ -120,6 +189,7 @@ export default function LoginPage() {
         if (error) throw error;
 
         setPassword("");
+        setPasswordConfirmation("");
         if (data.session) {
           window.location.assign("/panel");
           return;
@@ -151,10 +221,19 @@ export default function LoginPage() {
     setNotice(null);
     try {
       const supabase = await getSupabaseClient();
+      if (mode === "signup") {
+        window.sessionStorage.setItem("egzaminio:signup-role", role);
+      } else {
+        window.sessionStorage.removeItem("egzaminio:signup-role");
+      }
+      const roleParam = role === "parent" ? "rodzic" : "uczen";
       const { error } = await supabase.auth.signInWithOAuth({
         provider,
         options: {
-          redirectTo: `${window.location.origin}/wybierz-role`,
+          redirectTo:
+            mode === "signup"
+              ? `${window.location.origin}/wybierz-role?rola=${roleParam}`
+              : `${window.location.origin}/panel`,
         },
       });
       if (error) throw error;
@@ -164,6 +243,8 @@ export default function LoginPage() {
       setBusy(false);
     }
   }
+
+  const selectedJourney = roleJourneys[role];
 
   return (
     <main className="account-page">
@@ -176,29 +257,51 @@ export default function LoginPage() {
 
       <section className="auth-shell">
         <div className="auth-story">
-          <span className="section-kicker">Twoje miejsce do nauki</span>
-          <h1>
-            Spokojnie. Zrobimy to <em>krok po kroku.</em>
-          </h1>
-          <p>
-            Jedno konto otwiera ćwiczenia CKE, rozmowę z nauczycielem AI i
-            postęp dopasowany do Twojej roli.
-          </p>
-          <div className="auth-proof">
-            <div>
-              <b>3</b>
-              <span>pytania do AI dziennie bez opłat</span>
+          {mode === "signup" ? (
+            <div className="auth-journey" aria-live="polite">
+              <span className="section-kicker">{selectedJourney.kicker}</span>
+              <h1>{selectedJourney.title}</h1>
+              <p>{selectedJourney.lead}</p>
+              <ol>
+                {selectedJourney.steps.map((step) => (
+                  <li key={step.title}>
+                    <span aria-hidden="true">✓</span>
+                    <div>
+                      <b>{step.title}</b>
+                      <small>{step.description}</small>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+              <p className="auth-journey-note">{selectedJourney.note}</p>
             </div>
-            <div>
-              <b>100%</b>
-              <span>zadań opartych na arkuszach CKE</span>
-            </div>
-          </div>
-          <blockquote>
-            „Nie podaje gotowca. Pomaga zrozumieć dokładnie ten krok, na którym
-            utknąłem.”
-            <small>— Kuba, klasa 8</small>
-          </blockquote>
+          ) : (
+            <>
+              <span className="section-kicker">Twoje miejsce do nauki</span>
+              <h1>
+                Spokojnie. Zrobimy to <em>krok po kroku.</em>
+              </h1>
+              <p>
+                Wróć do zadań CKE, rozmów z nauczycielem AI i swojego planu
+                nauki.
+              </p>
+              <div className="auth-proof">
+                <div>
+                  <b>3</b>
+                  <span>pytania do AI dziennie bez opłat</span>
+                </div>
+                <div>
+                  <b>100%</b>
+                  <span>zadań opartych na arkuszach CKE</span>
+                </div>
+              </div>
+              <blockquote>
+                „Nie podaje gotowca. Pomaga zrozumieć dokładnie ten krok, na
+                którym utknąłem.”
+                <small>— Kuba, klasa 8</small>
+              </blockquote>
+            </>
+          )}
         </div>
 
         <div className="auth-card">
@@ -234,93 +337,122 @@ export default function LoginPage() {
             </p>
           </div>
 
+          {mode === "signup" && (
+            <fieldset className="role-picker signup-role-picker">
+              <legend>Rejestruję się jako</legend>
+              <RadioGroup
+                value={role}
+                onValueChange={(value) => {
+                  setRole(value as SelfServiceRole);
+                  setNotice(null);
+                }}
+              >
+                {roleOptions.map((option) => (
+                  <label
+                    key={option.value}
+                    htmlFor={`role-${option.value}`}
+                    className={role === option.value ? "selected" : ""}
+                  >
+                    <RadioGroupItem
+                      id={`role-${option.value}`}
+                      value={option.value}
+                      className="sr-only"
+                    />
+                    <span className="role-icon">{option.icon}</span>
+                    <span>
+                      <b>{option.title}</b>
+                      <small>{option.description}</small>
+                    </span>
+                    <i aria-hidden="true">✓</i>
+                  </label>
+                ))}
+              </RadioGroup>
+            </fieldset>
+          )}
+
           <div className="social-buttons">
             <Button variant="outline" type="button" disabled={busy} onClick={() => handleSocial("google")}>
               <span className="provider-mark google-mark">G</span>
-              Kontynuuj z Google
+              {mode === "signup" ? "Zarejestruj z Google" : "Zaloguj z Google"}
             </Button>
             <Button variant="outline" type="button" disabled={busy} onClick={() => handleSocial("facebook")}>
               <span className="provider-mark facebook-mark">f</span>
-              Kontynuuj z Facebookiem
+              {mode === "signup" ? "Zarejestruj z Facebookiem" : "Zaloguj z Facebookiem"}
             </Button>
           </div>
 
-          <div className="auth-divider"><span>lub przez e-mail</span></div>
+          <div className="auth-divider"><span>lub użyj e-maila</span></div>
 
           <form className="auth-form" onSubmit={handleSubmit}>
-            {mode === "signup" && (
-              <>
-                <Label htmlFor="signup-name">
-                  Imię
+            <div className={mode === "signup" ? "registration-fields" : "login-fields"}>
+              <Label htmlFor="auth-email">
+                E-mail
+                <Input
+                  id="auth-email"
+                  type="email"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                  maxLength={254}
+                  autoComplete="email"
+                  placeholder="twoj@email.pl"
+                  required
+                />
+              </Label>
+
+              {mode === "signup" && (
+                <Label htmlFor="auth-email-confirmation">
+                  Powtórz e-mail
                   <Input
-                    id="signup-name"
-                    type="text"
-                    value={name}
-                    onChange={(event) => setName(event.target.value)}
-                    minLength={2}
-                    maxLength={80}
-                    autoComplete="name"
-                    placeholder="Jak mamy się do Ciebie zwracać?"
+                    id="auth-email-confirmation"
+                    type="email"
+                    value={emailConfirmation}
+                    onChange={(event) => setEmailConfirmation(event.target.value)}
+                    maxLength={254}
+                    autoComplete="email"
+                    placeholder="Wpisz ten sam e-mail"
+                    aria-invalid={Boolean(emailConfirmation) && email.trim().toLowerCase() !== emailConfirmation.trim().toLowerCase()}
                     required
                   />
                 </Label>
+              )}
 
-                <fieldset className="role-picker">
-                  <legend>Zakładam konto jako</legend>
-                  <RadioGroup value={role} onValueChange={(value) => setRole(value as SelfServiceRole)}>
-                    {roleOptions.map((option) => (
-                      <label
-                        key={option.value}
-                        htmlFor={`role-${option.value}`}
-                        className={role === option.value ? "selected" : ""}
-                      >
-                        <RadioGroupItem
-                          id={`role-${option.value}`}
-                          value={option.value}
-                          className="sr-only"
-                        />
-                        <span className="role-icon">{option.icon}</span>
-                        <b>{option.title}</b>
-                        <small>{option.description}</small>
-                      </label>
-                    ))}
-                  </RadioGroup>
-                </fieldset>
-                <p className="teacher-access-note">Konta nauczycieli są tworzone i nadawane ręcznie po weryfikacji szkoły.</p>
-              </>
-            )}
+              <Label htmlFor="auth-password">
+                Hasło
+                <Input
+                  id="auth-password"
+                  type="password"
+                  value={password}
+                  onChange={(event) => setPassword(event.target.value)}
+                  minLength={8}
+                  maxLength={128}
+                  autoComplete={mode === "signup" ? "new-password" : "current-password"}
+                  placeholder={mode === "signup" ? "Minimum 8 znaków" : "Twoje hasło"}
+                  required
+                />
+              </Label>
 
-            <Label htmlFor="auth-email">
-              E-mail
-              <Input
-                id="auth-email"
-                type="email"
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-                maxLength={254}
-                autoComplete="email"
-                placeholder="twoj@email.pl"
-                required
-              />
-            </Label>
-            <Label htmlFor="auth-password">
-              Hasło
-              <Input
-                id="auth-password"
-                type="password"
-                value={password}
-                onChange={(event) => setPassword(event.target.value)}
-                minLength={8}
-                maxLength={128}
-                autoComplete={mode === "signup" ? "new-password" : "current-password"}
-                placeholder={mode === "signup" ? "Minimum 8 znaków" : "Twoje hasło"}
-                required
-              />
-            </Label>
+              {mode === "signup" && (
+                <Label htmlFor="auth-password-confirmation">
+                  Powtórz hasło
+                  <Input
+                    id="auth-password-confirmation"
+                    type="password"
+                    value={passwordConfirmation}
+                    onChange={(event) => setPasswordConfirmation(event.target.value)}
+                    minLength={8}
+                    maxLength={128}
+                    autoComplete="new-password"
+                    placeholder="Wpisz to samo hasło"
+                    aria-invalid={Boolean(passwordConfirmation) && password !== passwordConfirmation}
+                    required
+                  />
+                </Label>
+              )}
+            </div>
 
             {mode === "signup" && role === "student" && (
               <Label htmlFor="guardian-email">
-                E-mail rodzica lub opiekuna
+                E-mail rodzica lub opiekuna do zatwierdzenia konta
                 <Input
                   id="guardian-email"
                   type="email"
@@ -331,7 +463,7 @@ export default function LoginPage() {
                   placeholder="rodzic@email.pl"
                   required
                 />
-                <small className="guardian-help">Wyślemy prośbę do opiekuna. Konto ucznia zacznie działać dopiero po zatwierdzeniu z konta rodzica.</small>
+                <small className="guardian-help">Wyślemy prośbę o zgodę. Rodzic zaakceptuje ją po zalogowaniu na swoje konto.</small>
               </Label>
             )}
 
@@ -358,7 +490,7 @@ export default function LoginPage() {
               {busy
                 ? "Chwila…"
                 : mode === "signup"
-                  ? "Załóż darmowe konto"
+                  ? `Załóż konto ${role === "student" ? "ucznia" : "rodzica"}`
                   : "Zaloguj się"}
               <span>→</span>
             </Button>

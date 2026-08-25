@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { BrandLogo } from "@/components/brand-logo";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
@@ -33,8 +34,16 @@ const choices: Array<{
   },
 ];
 
+function roleFromParam(value: string | null): SelfServiceRole | null {
+  if (value === "rodzic" || value === "parent") return "parent";
+  if (value === "uczen" || value === "student") return "student";
+  return null;
+}
+
 export default function ChooseRolePage() {
-  const [role, setRole] = useState<SelfServiceRole>("student");
+  const searchParams = useSearchParams();
+  const requestedRole = roleFromParam(searchParams.get("rola"));
+  const [role, setRole] = useState<SelfServiceRole>(requestedRole ?? "student");
   const [guardianEmail, setGuardianEmail] = useState("");
   const [acceptedLegal, setAcceptedLegal] = useState(false);
   const [busy, setBusy] = useState(true);
@@ -43,6 +52,8 @@ export default function ChooseRolePage() {
   useEffect(() => {
     getSupabaseClient()
       .then(async (supabase) => {
+        const storedRole = window.sessionStorage.getItem("egzaminio:signup-role");
+        const preferredRole = requestedRole ?? roleFromParam(storedRole);
         const { data } = await supabase.auth.getSession();
         if (!data.session) {
           window.location.replace("/logowanie");
@@ -50,14 +61,18 @@ export default function ChooseRolePage() {
         }
         const { data: profile } = await supabase
           .from("profiles")
-          .select("role,guardian_email,legal_version")
+          .select("role,guardian_email,legal_version,onboarding_completed")
           .eq("id", data.session.user.id)
           .single();
         if (profile?.role === "teacher" || profile?.role === "admin") {
           window.location.replace("/panel");
           return;
         }
-        if (profile?.role === "student" || profile?.role === "parent") setRole(profile.role);
+        if (!profile?.onboarding_completed && preferredRole) {
+          setRole(preferredRole);
+        } else if (profile?.role === "student" || profile?.role === "parent") {
+          setRole(profile.role);
+        }
         setGuardianEmail(profile?.guardian_email ?? "");
         setAcceptedLegal(profile?.legal_version === LEGAL_VERSION);
         setBusy(false);
@@ -66,7 +81,7 @@ export default function ChooseRolePage() {
         setError("Nie udało się odczytać sesji. Zaloguj się ponownie.");
         setBusy(false);
       });
-  }, []);
+  }, [requestedRole]);
 
   async function saveRole() {
     if (!acceptedLegal) {
@@ -106,6 +121,7 @@ export default function ChooseRolePage() {
         requested_guardian_email: role === "student" ? guardianEmail.trim().toLowerCase() : null,
       });
       if (onboardingError) throw onboardingError;
+      window.sessionStorage.removeItem("egzaminio:signup-role");
 
       if (role === "student") {
         window.location.assign("/oczekuje-na-zgode");
@@ -152,7 +168,6 @@ export default function ChooseRolePage() {
             <small>Opiekun zatwierdzi prośbę po zalogowaniu na własne konto rodzica.</small>
           </Label>
         )}
-        <p className="teacher-access-note">Dostęp nauczycielski jest nadawany ręcznie po weryfikacji — nie można wybrać tej roli podczas rejestracji.</p>
         <div className="check-row onboarding-consent legal-consent">
           <Checkbox id="accepted-legal" checked={acceptedLegal} onCheckedChange={(checked) => setAcceptedLegal(checked === true)} />
           <label htmlFor="accepted-legal">Akceptuję <a href="/regulamin" target="_blank">regulamin</a> i potwierdzam zapoznanie się z <a href="/polityka-prywatnosci" target="_blank">polityką prywatności</a>.</label>
