@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2025-main-mathematics-standard",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2025-main-mathematics-standard",
+    "source_document_id": "UZUPELNIJ-KOD-Z-PDF",
+    "source_pdf_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "source_url": "https://bip.cke.gov.pl/UZUPELNIJ-OFICJALNY-ADRES",
+    "source_label": "CKE 2025 · matematyka · termin główny",
+    "exam_year": 2025,
+    "exam_session": "main",
+    "subject": "mathematics",
+    "variant_code": "standard",
+    "question_count": 2
+  },
+  "permission": {
+    "reference": "UZUPELNIJ-NUMER-LUB-LOKALIZACJE-ZGODY-CKE",
+    "verified_by": "UZUPELNIJ-OSOBE-WERYFIKUJACA",
+    "verified_at": "2026-08-25T12:00:00Z",
+    "notes": "Zachowaj kopię zgody poza repozytorium, jeżeli zawiera dane osobowe."
+  },
+  "questions": [
+    {
+      "id": "cke-2025-main-mathematics-standard-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [2],
+      "type": "single_choice",
+      "topic": "UZUPEŁNIJ TEMAT",
+      "difficulty": 1,
+      "prompt": "UZUPEŁNIJ DOKŁADNĄ TREŚĆ ZADANIA",
+      "answer_options": ["A", "B", "C", "D"],
+      "answer_key": { "correct_index": 0 },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – poprawna odpowiedź", "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi"] },
+      "explanation": "UZUPEŁNIJ ZWERYFIKOWANE WYJAŚNIENIE",
+      "content_blocks": [
+        { "type": "markdown", "text": "Treść pomocnicza." },
+        { "type": "math", "latex": "x^2 + y^2 = z^2", "display": true },
+        { "type": "image", "asset_id": "q01-figure" }
+      ],
+      "assets": [
+        {
+          "id": "q01-figure",
+          "path": "assets/cke-2025-main-mathematics-standard/q01-figure.png",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "alt": "UZUPEŁNIJ precyzyjny opis ilustracji",
+          "caption": "Źródło: arkusz CKE, strona 2."
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-mathematics-standard-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [3, 4],
+      "type": "long_text",
+      "topic": "UZUPEŁNIJ TEMAT",
+      "difficulty": 3,
+      "prompt": "UZUPEŁNIJ TREŚĆ ZADANIA OTWARTEGO",
+      "answer_key": { "accepted_methods": ["UZUPEŁNIJ METODĘ"] },
+      "scoring": { "max_points": 3, "rules": ["UZUPEŁNIJ KRYTERIA CKE"] },
+      "explanation": "UZUPEŁNIJ ZWERYFIKOWANE ROZWIĄZANIE KROK PO KROKU",
+      "content_blocks": [
+        { "type": "table", "header_rows": 1, "caption": "UZUPEŁNIJ podpis tabeli", "rows": [["Kolumna 1", "Kolumna 2"], ["Wartość", "Wartość"]] }
+      ],
+      "assets": []
+    }
+  ]
+}

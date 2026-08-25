@@ -59,6 +59,8 @@ Strategia wejścia na rynek znajduje się w [docs/marketing-strategy-mvp.md](doc
 
 Etapowy plan funkcjonalności produktu znajduje się w [docs/mvp-implementation-plan.md](docs/mvp-implementation-plan.md).
 
+Ręczne przygotowanie, walidacja, wersjonowanie i publikacja arkuszy CKE są opisane w [docs/cke-import-process.md](docs/cke-import-process.md).
+
 Roboczy pakiet prawny (prywatność, regulamin, cookies, dzieci i AI oraz odstąpienie od umowy) jest dostępny pod `/informacje-prawne`. Dokumenty są celowo wyłączone z indeksowania do czasu uzupełnienia danych operatora, dostawców i konsultacji prawnej.
 
 ## Weryfikacja

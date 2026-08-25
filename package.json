@@ -13,7 +13,11 @@
     "test:coverage": "vitest run --coverage",
     "verify": "npm run lint && npm run test:coverage && npm run build",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern coverage --ignore-pattern supabase/.temp",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "cke:validate": "node scripts/cke-import.mjs validate",
+    "cke:stage": "node scripts/cke-import.mjs stage",
+    "cke:hash": "node scripts/cke-import.mjs hash",
+    "cke:workflow": "node scripts/cke-import.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.112.3",
