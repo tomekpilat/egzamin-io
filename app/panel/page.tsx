@@ -21,6 +21,7 @@ import { normalizeWeeklyGoal, summarizeParentPreferences } from "@/lib/parent-pr
 import { getSupabaseClient } from "@/lib/supabase-browser";
 import { LEGAL_VERSION } from "@/lib/legal";
 import { FEEDBACK_CATEGORIES, feedbackStatusLabels, type FeedbackStatus } from "@/lib/feedback";
+import { resolveAccountRoute } from "@/lib/account-routing";
 
 type Profile = {
   id: string;
@@ -318,12 +319,9 @@ export default function DashboardPage() {
           }
 
           const nextProfile = data as Profile;
-          if (nextProfile.role === "student" && !nextProfile.guardian_consent_at) {
-            window.location.replace(nextProfile.guardian_email ? "/oczekuje-na-zgode" : "/wybierz-role");
-            return;
-          }
-          if ((!nextProfile.onboarding_completed || nextProfile.legal_version !== LEGAL_VERSION) && nextProfile.role !== "admin") {
-            window.location.replace("/wybierz-role");
+          const accountRoute = resolveAccountRoute(nextProfile, LEGAL_VERSION);
+          if (accountRoute !== "/panel") {
+            window.location.replace(accountRoute);
             return;
           }
 

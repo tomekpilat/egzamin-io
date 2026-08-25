@@ -10,9 +10,10 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { getSupabaseClient } from "@/lib/supabase-browser";
-import type { SelfServiceRole } from "@/lib/roles";
+import { isUserRole, type SelfServiceRole } from "@/lib/roles";
 import { LEGAL_VERSION } from "@/lib/legal";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { resolveAccountRoute } from "@/lib/account-routing";
 
 const choices: Array<{
   value: SelfServiceRole;
@@ -59,13 +60,15 @@ export default function ChooseRolePage() {
           window.location.replace("/logowanie");
           return;
         }
-        const { data: profile } = await supabase
+        const { data: profile, error: profileError } = await supabase
           .from("profiles")
-          .select("role,guardian_email,legal_version,onboarding_completed")
+          .select("role,guardian_email,guardian_consent_at,legal_version,onboarding_completed")
           .eq("id", data.session.user.id)
           .single();
-        if (profile?.role === "teacher" || profile?.role === "admin") {
-          window.location.replace("/panel");
+        if (profileError || !profile || !isUserRole(profile.role)) throw profileError ?? new Error("profile_not_found");
+        const accountRoute = resolveAccountRoute(profile, LEGAL_VERSION);
+        if (accountRoute !== "/wybierz-role") {
+          window.location.replace(accountRoute);
           return;
         }
         if (!profile?.onboarding_completed && preferredRole) {
