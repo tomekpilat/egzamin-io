@@ -10,6 +10,7 @@ describe("BrandLogo", () => {
     expect(screen.getByRole("img", { name: "egzaminio" })).toBeInTheDocument();
     expect(container.querySelector(".wordmark-text")).toHaveTextContent("egzaminio");
     expect(container.querySelector(".wordmark-tick")).toHaveTextContent("✓");
+    expect(container.querySelector(".wordmark-tick")?.textContent?.codePointAt(0)).toBe(10003);
   });
 
   it("keeps the tick in the compact logo", () => {
