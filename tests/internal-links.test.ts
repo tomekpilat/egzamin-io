@@ -48,4 +48,15 @@ describe("static internal navigation", () => {
     const source = readFileSync(join(appRoot, "page.tsx"), "utf8");
     expect(source).not.toMatch(/step-number|>\s*0[123]\s*</);
   });
+
+  it("does not present permanently disabled landing or dashboard actions", () => {
+    const sources = [join(appRoot, "page.tsx"), join(appRoot, "panel", "page.tsx")].map((file) => readFileSync(file, "utf8")).join("\n");
+    expect(sources).not.toMatch(/<Button[^>]*\sdisabled(?:\s|>)/);
+  });
+
+  it("links the parent experience to the child-safety route", () => {
+    const sources = [join(appRoot, "page.tsx"), join(appRoot, "panel", "page.tsx")].map((file) => readFileSync(file, "utf8")).join("\n");
+    expect(sources).toContain('href="/bezpieczenstwo-dzieci-ai"');
+    expect(routeSource("/bezpieczenstwo-dzieci-ai")).not.toBeNull();
+  });
 });

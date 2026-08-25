@@ -289,6 +289,14 @@
 .admin-teacher-form { display: grid; gap: 9px; }
 .admin-teacher-form > label { font-size: 13px; font-weight: 750; }
 .admin-teacher-form > div { display: grid; grid-template-columns: minmax(220px, 1fr) auto; gap: 10px; }
+.parent-connect-card { margin-top: 15px; scroll-margin-top: 20px; border-color: var(--border); }
+.parent-connect-card [data-slot="card-header"] { padding-bottom: 16px; }
+.parent-connect-card [data-slot="badge"] { width: fit-content; }
+.parent-connect-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.parent-connect-steps span { padding: 13px; display: flex; align-items: center; gap: 9px; border: 1px solid var(--border); border-radius: 11px; color: var(--muted); font-size: 13px; }
+.parent-connect-steps b { width: 25px; height: 25px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 50%; background: var(--accent); color: var(--accent-foreground); }
+.parent-connect-actions { margin-top: 16px; display: flex; gap: 9px; flex-wrap: wrap; }
+.parent-invite-status { margin: 12px 0 0; color: #187361; font-size: 13px; font-weight: 700; }
 
 .dark .account-page, .dark .onboarding-page, .dark .legal-page, .dark .dashboard-page, .dark .dashboard-loading { background: var(--paper); color: var(--foreground); }
 .dark .auth-card, .dark .onboarding-card, .dark .consent-card, .dark .dashboard-sidebar, .dark .dashboard-topbar, .dark .metric-card, .dark .dashboard-card, .dark .guardian-requests, .dark .linked-children, .dark .legal-sidebar, .dark .legal-page article { border-color: var(--border); background: var(--card); color: var(--card-foreground); }
@@ -305,11 +313,16 @@
 .dark .account-back, .dark .dashboard-sidebar nav a, .dark .dashboard-card p, .dark .metric-card span, .dark .metric-card small, .dark .legal-page article p, .dark .legal-page article li { color: var(--muted); }
 .dark .auth-proof b, .dark .auth-card-heading h2, .dark .auth-form > label:not(.check-row), .dark .role-picker legend, .dark .role-picker b, .dark .onboarding-field, .dark .dashboard-topbar h1, .dark .legal-page h1, .dark .legal-page h2 { color: var(--foreground); }
 .dark .auth-proof span, .dark .role-picker small, .dark .check-row, .dark .guardian-help, .dark .teacher-access-note { color: var(--muted); }
+.dark .parent-connect-card { background: var(--card); color: var(--card-foreground); }
+.dark .parent-connect-steps span { border-color: var(--border); color: #d4dcea; }
+.dark .parent-invite-status { color: #79dfc8; }
 
 @media (max-width: 680px) {
   .child-card-title-row { grid-template-columns: 42px 1fr; }
   .child-card-title-row [data-slot="badge"] { grid-column: 1 / -1; width: fit-content; }
   .child-preference-grid, .admin-teacher-form > div { grid-template-columns: 1fr; }
+  .parent-connect-steps { grid-template-columns: 1fr; }
+  .parent-connect-actions { display: grid; }
   .child-settings-actions { display: grid; }
   .account-settings-actions { align-items: stretch; flex-direction: column; }
   .account-settings-actions > div { width: 100%; margin-right: 0; justify-content: space-between; }

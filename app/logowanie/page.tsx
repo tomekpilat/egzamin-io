@@ -62,7 +62,7 @@ export default function LoginPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [role, setRole] = useState<SelfServiceRole>("student");
+  const [role, setRole] = useState<SelfServiceRole>(searchParams.get("rola") === "rodzic" ? "parent" : "student");
   const [guardianEmail, setGuardianEmail] = useState("");
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [busy, setBusy] = useState(false);
