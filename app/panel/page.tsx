@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
@@ -422,7 +423,7 @@ export default function DashboardPage() {
   return (
     <main className="dashboard-page">
       <aside className="dashboard-sidebar">
-        <Link href="/" aria-label="egzaminio — strona główna"><BrandLogo /></Link>
+        <a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a>
         <nav aria-label="Panel">
           <a className="active" href="/panel"><span>⌂</span> Start</a>
           <a href="#zadania"><span>✎</span> {profile.role === "parent" ? "Dzieci" : profile.role === "teacher" ? "Zestawy" : profile.role === "admin" ? "Użytkownicy" : "Ćwiczenia"}</a>

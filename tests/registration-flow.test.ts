@@ -15,6 +15,16 @@ describe("simplified registration flow", () => {
     expect(login).toContain('value: "parent"');
   });
 
+  it("uses the selected-card style without extra checkmarks on role cards", () => {
+    const rolePicker = login.slice(
+      login.indexOf('<fieldset className="role-picker signup-role-picker">'),
+      login.indexOf('<div className="social-buttons">'),
+    );
+
+    expect(rolePicker).not.toContain("✓");
+    expect(accountStyles).not.toContain(".role-picker label.selected i");
+  });
+
   it("requires email and password confirmation", () => {
     expect(login).toContain('id="auth-email-confirmation"');
     expect(login).toContain('id="auth-password-confirmation"');

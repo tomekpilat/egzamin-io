@@ -1,7 +1,7 @@
 "use client";
+/* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { BrandLogo } from "@/components/brand-logo";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -136,7 +136,7 @@ export default function ChooseRolePage() {
 
   return (
     <main className="onboarding-page">
-      <div className="onboarding-top"><Link className="onboarding-brand" href="/" aria-label="egzaminio — strona główna"><BrandLogo /></Link><ThemeToggle /></div>
+      <div className="onboarding-top"><a className="onboarding-brand" href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a><ThemeToggle /></div>
       <section className="onboarding-card">
         <span className="section-kicker">Ostatni krok</span>
         <h1>Jak chcesz korzystać z egzaminio?</h1>

@@ -1,6 +1,6 @@
 "use client";
+/* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
 
-import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { FormEvent, useState } from "react";
 import { BrandLogo } from "@/components/brand-logo";
@@ -249,10 +249,10 @@ export default function LoginPage() {
   return (
     <main className="account-page">
       <header className="account-header">
-        <Link href="/" aria-label="egzaminio — strona główna">
+        <a href="/" aria-label="egzaminio — strona główna">
           <BrandLogo />
-        </Link>
-        <div className="account-header-actions"><ThemeToggle /><Link href="/" className="account-back">← Wróć na stronę</Link></div>
+        </a>
+        <div className="account-header-actions"><ThemeToggle /><a href="/" className="account-back">← Wróć na stronę</a></div>
       </header>
 
       <section className="auth-shell">
@@ -363,7 +363,6 @@ export default function LoginPage() {
                       <b>{option.title}</b>
                       <small>{option.description}</small>
                     </span>
-                    <i aria-hidden="true">✓</i>
                   </label>
                 ))}
               </RadioGroup>

@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
 
 import Image from "next/image";
 import { useState } from "react";
@@ -27,7 +28,7 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="egzaminio — strona główna"><BrandLogo /></a>
+        <a className="brand" href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a>
         <nav className="desktop-nav" aria-label="Główna nawigacja"><a href="#jak-to-dziala">Jak to działa</a><a href="#dla-rodzica">Dla rodzica</a><a href="#dostep">Plany</a></nav>
         <div className="header-actions"><ThemeToggle /><a className="header-login" href="/logowanie">Zaloguj się</a><Button variant="outline" className="header-cta" asChild><a href="/logowanie?tryb=rejestracja">Załóż konto</a></Button></div>
       </header>
@@ -102,7 +103,7 @@ export default function Home() {
         </Card>
       </section>
 
-      <footer className="site-footer"><a className="brand" href="#top" aria-label="egzaminio — wróć na górę"><BrandLogo /></a><p>Ćwiczenia CKE, które naprawdę tłumaczą.</p><div><a href="/logowanie">Logowanie</a><a href="/informacje-prawne">Informacje prawne</a><a href="/bezpieczenstwo-dzieci-ai">Dzieci i AI</a><a href="mailto:kontakt@egzamin.io">Kontakt</a></div><small>© 2026 egzaminio · Niezależny projekt edukacyjny, niepowiązany z CKE.</small></footer>
+      <footer className="site-footer"><a className="brand" href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a><p>Ćwiczenia CKE, które naprawdę tłumaczą.</p><div><a href="/logowanie">Logowanie</a><a href="/informacje-prawne">Informacje prawne</a><a href="/bezpieczenstwo-dzieci-ai">Dzieci i AI</a><a href="mailto:kontakt@egzamin.io">Kontakt</a></div><small>© 2026 egzaminio · Niezależny projekt edukacyjny, niepowiązany z CKE.</small></footer>
     </main>
   );
 }

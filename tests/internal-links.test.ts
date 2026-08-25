@@ -59,4 +59,19 @@ describe("static internal navigation", () => {
     expect(sources).toContain('href="/bezpieczenstwo-dzieci-ai"');
     expect(routeSource("/bezpieczenstwo-dzieci-ai")).not.toBeNull();
   });
+
+  it("uses full-page anchors for reliable links back to the homepage", () => {
+    const sources = [
+      join(appRoot, "logowanie", "page.tsx"),
+      join(appRoot, "wybierz-role", "page.tsx"),
+      join(appRoot, "oczekuje-na-zgode", "page.tsx"),
+      join(appRoot, "panel", "page.tsx"),
+      join(root, "components", "legal-shell.tsx"),
+    ].map((file) => readFileSync(file, "utf8"));
+
+    for (const source of sources) {
+      expect(source).toContain('href="/"');
+      expect(source).not.toMatch(/<Link[^>]*href="\/"/);
+    }
+  });
 });

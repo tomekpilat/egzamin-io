@@ -54,7 +54,7 @@
 .role-picker { margin: 1px 0; padding: 0; border: 0; }
 .role-picker legend { margin-bottom: 8px; color: #404a5d; font-size: 11px; font-weight: 800; }
 .role-picker > div { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
-.role-picker label { min-width: 0; padding: 11px; display: grid; grid-template-columns: 32px 1fr 20px; align-items: center; gap: 9px; border: 1px solid #dde0e2; border-radius: 11px; text-align: left; cursor: pointer; }
+.role-picker label { min-width: 0; padding: 11px; display: grid; grid-template-columns: 32px 1fr; align-items: center; gap: 9px; border: 1px solid #dde0e2; border-radius: 11px; text-align: left; cursor: pointer; }
 .role-picker label.selected { border-color: var(--coral); background: #fff5f2; box-shadow: inset 0 0 0 1px var(--coral); }
 .role-picker input { position: absolute; opacity: 0; pointer-events: none; }
 .role-icon { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 9px; color: var(--ink); background: #eef0f6; font-size: 11px; font-weight: 900; }
@@ -62,8 +62,6 @@
 .role-picker b, .role-picker small { display: block; }
 .role-picker b { font-size: 12px; }
 .role-picker small { margin-top: 2px; color: #818999; font-size: 10px; line-height: 1.35; }
-.role-picker i { opacity: 0; width: 19px; height: 19px; display: grid; place-items: center; border-radius: 50%; background: var(--coral); color: #fff; font-size: 10px; font-style: normal; font-weight: 900; }
-.role-picker label.selected i { opacity: 1; }
 .signup-role-picker { margin-bottom: 18px; }
 .check-row { display: flex; align-items: flex-start; gap: 9px; color: #697385; font-size: 10px; line-height: 1.5; cursor: pointer; }
 .check-row [data-slot="checkbox"] { width: 17px; height: 17px; margin: 0; flex: 0 0 auto; }

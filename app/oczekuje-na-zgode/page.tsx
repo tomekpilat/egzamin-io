@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
 
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
@@ -59,7 +60,7 @@ export default function WaitingForGuardianPage() {
 
   return (
     <main className="consent-page">
-      <div className="consent-top"><Link href="/" aria-label="egzaminio — strona główna"><BrandLogo /></Link><ThemeToggle /></div>
+      <div className="consent-top"><a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a><ThemeToggle /></div>
       <Card className="consent-card">
         <CardHeader>
           <Badge variant="secondary"><ShieldCheck size={13} /> Bezpieczne konto ucznia</Badge>
