@@ -12,12 +12,13 @@ export const GRADE_POINTS = {
 } as const;
 
 export type RecruitmentGrade = keyof typeof GRADE_POINTS;
+export type RecruitmentGradeInput = RecruitmentGrade | null;
 
 export type RecruitmentPointsInput = {
   polishExamPercent: number;
   mathematicsExamPercent: number;
   foreignLanguageExamPercent: number;
-  grades: [RecruitmentGrade, RecruitmentGrade, RecruitmentGrade, RecruitmentGrade];
+  grades: [RecruitmentGradeInput, RecruitmentGradeInput, RecruitmentGradeInput, RecruitmentGradeInput];
   honorsCertificate: boolean;
   volunteering: boolean;
   achievementPoints: number;
@@ -50,8 +51,8 @@ function roundPoints(value: number) {
   return Math.round((value + Number.EPSILON) * 100) / 100;
 }
 
-export function pointsForGrade(grade: RecruitmentGrade) {
-  return GRADE_POINTS[grade];
+export function pointsForGrade(grade: RecruitmentGradeInput) {
+  return grade === null ? 0 : GRADE_POINTS[grade];
 }
 
 export function calculateRecruitmentPoints(input: RecruitmentPointsInput): RecruitmentPointsResult {

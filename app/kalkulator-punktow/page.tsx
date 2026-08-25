@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
 
 import { useMemo, useState } from "react";
-import { ArrowRight, BookOpenCheck, Calculator, GraduationCap, Info, RotateCcw, ShieldCheck, Target, Trophy } from "lucide-react";
+import { ArrowRight, BookOpenCheck, Calculator, Database, GraduationCap, Info, RotateCcw, ShieldCheck, Target, Trophy } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 import { MarketingSignupForm } from "@/components/marketing-signup-form";
 import { SchoolThresholdSearch } from "@/components/school-threshold-search";
@@ -15,7 +15,7 @@ import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
-import { calculateRecruitmentPoints, compareWithThreshold, type RecruitmentGrade } from "@/lib/recruitment-points";
+import { calculateRecruitmentPoints, compareWithThreshold, type RecruitmentGrade, type RecruitmentGradeInput } from "@/lib/recruitment-points";
 import type { RecruitmentThresholdRecord } from "@/lib/recruitment-schools";
 
 const GRADES: RecruitmentGrade[] = [6, 5, 4, 3, 2];
@@ -34,13 +34,13 @@ const FAQS = [
 type ExamMode = "unknown" | "estimate";
 type CalculatorState = {
   polish: number; mathematics: number; foreignLanguage: number;
-  grades: [RecruitmentGrade, RecruitmentGrade, RecruitmentGrade, RecruitmentGrade];
+  grades: [RecruitmentGradeInput, RecruitmentGradeInput, RecruitmentGradeInput, RecruitmentGradeInput];
   honors: boolean; volunteering: boolean; achievements: number;
 };
 
-const SAMPLE_STATE: CalculatorState = {
-  polish: 70, mathematics: 70, foreignLanguage: 80, grades: [5, 5, 5, 5],
-  honors: true, volunteering: true, achievements: 0,
+const INITIAL_STATE: CalculatorState = {
+  polish: 0, mathematics: 0, foreignLanguage: 0, grades: [null, null, null, null],
+  honors: false, volunteering: false, achievements: 0,
 };
 
 function formatPoints(value: number) {
@@ -51,12 +51,12 @@ function PercentField({ id, label, value, onChange }: { id: string; label: strin
   return <div className="calculator-field"><Label htmlFor={id}>{label}</Label><div className="calculator-number-input"><Input id={id} type="number" inputMode="decimal" min={0} max={100} value={value} onChange={(event) => onChange(Number(event.target.value))} /><span aria-hidden="true">%</span></div></div>;
 }
 
-function GradeField({ id, label, value, onChange }: { id: string; label: string; value: RecruitmentGrade; onChange: (value: RecruitmentGrade) => void }) {
-  return <div className="calculator-field"><Label htmlFor={id}>{label}</Label><Select value={String(value)} onValueChange={(next) => onChange(Number(next) as RecruitmentGrade)}><SelectTrigger id={id} className="calculator-grade-trigger"><SelectValue /></SelectTrigger><SelectContent>{GRADES.map((grade) => <SelectItem key={grade} value={String(grade)}>{GRADE_LABELS[grade]}</SelectItem>)}</SelectContent></Select></div>;
+function GradeField({ id, label, value, onChange }: { id: string; label: string; value: RecruitmentGradeInput; onChange: (value: RecruitmentGrade) => void }) {
+  return <div className="calculator-field"><Label htmlFor={id}>{label}</Label><Select value={value === null ? "" : String(value)} onValueChange={(next) => onChange(Number(next) as RecruitmentGrade)}><SelectTrigger id={id} className="calculator-grade-trigger"><SelectValue placeholder="Wybierz ocenę" /></SelectTrigger><SelectContent>{GRADES.map((grade) => <SelectItem key={grade} value={String(grade)}>{GRADE_LABELS[grade]}</SelectItem>)}</SelectContent></Select></div>;
 }
 
 export default function RecruitmentCalculatorPage() {
-  const [form, setForm] = useState<CalculatorState>(SAMPLE_STATE);
+  const [form, setForm] = useState<CalculatorState>(INITIAL_STATE);
   const [examMode, setExamMode] = useState<ExamMode>("unknown");
   const [targetName, setTargetName] = useState("");
   const [threshold, setThreshold] = useState("");
@@ -85,7 +85,7 @@ export default function RecruitmentCalculatorPage() {
   };
 
   const reset = () => {
-    setForm(SAMPLE_STATE); setExamMode("unknown"); setTargetName(""); setThreshold(""); setVerifiedThreshold(null);
+    setForm(INITIAL_STATE); setExamMode("unknown"); setTargetName(""); setThreshold(""); setVerifiedThreshold(null);
   };
 
   const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQS.map(({ question, answer }) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) };
@@ -95,10 +95,9 @@ export default function RecruitmentCalculatorPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <header className="calculator-header"><a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a><div className="calculator-header-actions"><ThemeToggle /><Button variant="outline" asChild><a href="/logowanie">Zaloguj się</a></Button></div></header>
 
-      <section className="calculator-hero">
-        <div><Badge variant="secondary"><Calculator aria-hidden="true" /> Kalkulator 2027</Badge><h1>Kalkulator punktów<br />do liceum i technikum.</h1><p>Sprawdź wynik do 200 punktów — z egzaminu, świadectwa, osiągnięć i wolontariatu. Bez logowania i bez zapisywania wpisanych ocen.</p></div>
-        <div className="calculator-score-hero" aria-live="polite"><span>{examMode === "unknown" ? "Prognoza ze świadectwa" : "Twój szacowany wynik"}</span><strong>{formatPoints(result.total)}</strong><small>{examMode === "unknown" ? "z maks. 100 pkt bez egzaminu" : "z 200 punktów"}</small><Progress value={result.total / 2} aria-label={`${formatPoints(result.total)} z 200 punktów`} /></div>
-      </section>
+      <section className="calculator-hero"><div><Badge variant="secondary"><Calculator aria-hidden="true" /> Kalkulator 2027</Badge><h1>Kalkulator punktów<br />do liceum i technikum.</h1><p>Wpisz swoje dane, znajdź klasę w bazie progów i od razu zobacz, jakiego wyniku potrzebujesz. Bez logowania.</p></div></section>
+
+      <section className="calculator-steps" aria-label="Jak użyć kalkulatora"><div><span>1</span><p><b>Uzupełnij punkty</b><small>Oceny, egzamin i osiągnięcia.</small></p></div><div className="calculator-step-featured"><span>2</span><p><b>Znajdź szkołę w naszej bazie</b><small>Próg i źródło uzupełnią się automatycznie.</small></p></div><div><span>3</span><p><b>Porównaj wynik</b><small>Zobacz zapas albo brakujące punkty.</small></p></div></section>
 
       <section className="calculator-trust"><ShieldCheck aria-hidden="true" /><div><b>Aktualne przeliczniki, jawne źródła</b><p>Wzór wynika z obowiązujących zasad rekrutacji. Linki do rozporządzenia i wyjaśnienia MEN znajdziesz bezpośrednio pod kalkulatorem.</p></div></section>
 
@@ -118,11 +117,12 @@ export default function RecruitmentCalculatorPage() {
           <Button type="button" variant="ghost" className="calculator-reset" onClick={reset}><RotateCcw aria-hidden="true" /> Wyczyść kalkulator</Button>
         </div>
 
-        <aside className="calculator-result-column"><Card className="calculator-result-card"><CardHeader><Badge variant="outline">Wynik na żywo</Badge><CardTitle>{formatPoints(result.total)} <span>/ 200 pkt</span></CardTitle></CardHeader><CardContent>
-          <div className="calculator-breakdown"><div><span>Egzamin {examMode === "unknown" ? "(jeszcze niewpisany)" : ""}</span><b>{formatPoints(result.exam.total)} / 100</b></div><Progress value={result.exam.total} /><div><span>Świadectwo i osiągnięcia</span><b>{formatPoints(result.certificate.total)} / 100</b></div><Progress value={result.certificate.total} /></div>
+        <aside className="calculator-result-column"><Card className="calculator-result-card"><CardHeader><Badge variant="outline">Twój wynik</Badge><CardTitle><strong>{formatPoints(result.total)}</strong> <span>punktów z 200</span></CardTitle></CardHeader><CardContent>
+          <div className="calculator-breakdown"><div><span>Egzamin {examMode === "unknown" ? <small>jeszcze niewpisany</small> : null}</span><b>{formatPoints(result.exam.total)} / 100</b></div><Progress value={result.exam.total} /><div><span>Świadectwo i osiągnięcia</span><b>{formatPoints(result.certificate.total)} / 100</b></div><Progress value={result.certificate.total} /></div>
           <div className="calculator-target-fields">
+            <div className="calculator-threshold-intro"><Database aria-hidden="true" /><div><Badge>Baza progów</Badge><h2>Znajdź szkołę i konkretną klasę</h2><p>Wybierz wynik z naszej bazy. Pokażemy rok oraz źródło, a próg wpisze się sam.</p></div></div>
             <SchoolThresholdSearch query={targetName} onQueryChange={(value) => { setTargetName(value); setVerifiedThreshold(null); }} onSelect={selectThreshold} />
-            <div><Label htmlFor="target-threshold">Próg z poprzedniego roku <small>(opcjonalnie)</small></Label><div className="calculator-number-input"><Input id="target-threshold" type="number" inputMode="decimal" min={0} max={200} value={threshold} onChange={(event) => { setThreshold(event.target.value); setVerifiedThreshold(null); }} placeholder="np. 172" /><span>pkt</span></div></div>
+            <details className="calculator-manual-threshold"><summary>Nie ma szkoły w bazie? Wpisz próg ręcznie</summary><div><Label htmlFor="target-threshold">Próg z poprzedniego roku</Label><div className="calculator-number-input"><Input id="target-threshold" type="number" inputMode="decimal" min={0} max={200} value={threshold} onChange={(event) => { setThreshold(event.target.value); setVerifiedThreshold(null); }} placeholder="np. 172" /><span>pkt</span></div></div></details>
             {verifiedThreshold ? <div className="calculator-verified-threshold"><ShieldCheck aria-hidden="true" /><span>Zweryfikowano: {verifiedThreshold.source_label}, {verifiedThreshold.recruitment_year}. <a href={verifiedThreshold.source_url} target="_blank" rel="noreferrer">Źródło ↗</a></span></div> : null}
           </div>
 

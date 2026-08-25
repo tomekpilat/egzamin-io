@@ -20,6 +20,7 @@ describe("recruitment points calculator", () => {
 
   it("uses the official grade-to-points table", () => {
     expect([6, 5, 4, 3, 2].map((grade) => pointsForGrade(grade as 2 | 3 | 4 | 5 | 6))).toEqual([18, 17, 14, 8, 2]);
+    expect(pointsForGrade(null)).toBe(0);
   });
 
   it("calculates the sample result shown in the product", () => {

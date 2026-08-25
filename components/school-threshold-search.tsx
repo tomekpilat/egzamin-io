@@ -51,7 +51,7 @@ export function SchoolThresholdSearch({
 
   return (
     <div className="school-threshold-search">
-      <Label htmlFor={`${id}-school`}>Szkoła lub klasa <small>(opcjonalnie)</small></Label>
+      <Label htmlFor={`${id}-school`}>Wyszukaj szkołę lub klasę</Label>
       <div className="school-threshold-input"><Search aria-hidden="true" /><Input id={`${id}-school`} role="combobox" aria-expanded={open} aria-controls={`${id}-results`} autoComplete="off" value={query} onChange={(event) => { const next = event.target.value; onQueryChange(next); if (normalizeSchoolSearch(next).length < 2) { setResults([]); setStatus("idle"); setOpen(false); } else setOpen(true); }} onFocus={() => query.length >= 2 && setOpen(true)} placeholder="np. XIV LO Warszawa, mat-fiz" /></div>
       {open && (results.length > 0 || status !== "idle") && <div className="school-threshold-results" id={`${id}-results`} role="listbox">
         {results.map((record) => <button key={record.threshold_id} type="button" role="option" aria-selected="false" onClick={() => { onQueryChange(schoolThresholdLabel(record)); onSelect(record); setOpen(false); }}><CheckCircle2 aria-hidden="true" /><span><b>{record.school_name}</b><small>{record.city} · {record.class_name} · próg {record.recruitment_year}: {record.threshold_points} pkt</small></span></button>)}

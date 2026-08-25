@@ -36,6 +36,13 @@ describe("public recruitment calculator", () => {
     expect(page).toContain('rola=uczen');
   });
 
+  it("starts empty and explains the three-step flow with the threshold database highlighted", () => {
+    expect(page).toContain("grades: [null, null, null, null]");
+    expect(page).toContain("Znajdź szkołę w naszej bazie");
+    expect(page).toContain("Baza progów");
+    expect(page).toContain("próg wpisze się sam");
+  });
+
   it("uses verified school thresholds, a consent-backed alert and FAQ structured data", () => {
     expect(page).toContain("SchoolThresholdSearch");
     expect(page).toContain('subscriptionType="recruitment_thresholds"');
