@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Lightbulb, MessageCircleQuestion, PencilLine } from "lucide-react";
 import { ArrowRight, Calculator, Target } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
+import { MarketingSignupForm } from "@/components/marketing-signup-form";
 import { MathFormula } from "@/components/math-formula";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -107,7 +108,8 @@ export default function Home() {
           <div className="pricing-table-head"><span>Porównanie</span><div><b>Free</b><small>0 zł</small></div><div className="plus-heading"><b>Plus</b><small>119 zł / rok</small></div></div>
           <div className="pricing-table" role="table" aria-label="Porównanie planu Free i Plus">{PLAN_COMPARISON_ROWS.map(([feature, free, plus]) => <div className="pricing-row" role="row" key={feature}><b role="rowheader">{feature}</b><span role="cell">{free}</span><span role="cell">{plus}</span></div>)}</div>
           <div className="pricing-value"><b>Czy Plus się opłaca?</b><span>Przy 3 sesjach tygodniowo koszt jednej sesji to około {Math.round(plusEconomics.perSession * 100)} gr.</span></div>
-          <div className="pricing-actions"><Button asChild><a href="/logowanie?tryb=rejestracja">Zacznij za darmo</a></Button><Button variant="outline" asChild><a href="mailto:kontakt@egzamin.io?subject=Lista%20oczekujacych%20egzaminio%20Plus">Dołącz do listy Plus</a></Button></div>
+          <div className="pricing-actions"><Button asChild><a href="/logowanie?tryb=rejestracja">Zacznij za darmo</a></Button><Button variant="outline" asChild><a href="/plan-plus">Poznaj plan Plus</a></Button></div>
+          <MarketingSignupForm subscriptionType="plus_waitlist" sourcePath="/" title="Powiadom mnie o starcie Plus" description="Zostaw e-mail. Napiszemy, gdy sprzedaż ruszy — bez zakładania konta." submitLabel="Dołącz do listy" compact />
         </Card>
       </section>
 

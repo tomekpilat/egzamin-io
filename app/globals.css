@@ -487,6 +487,23 @@ mjx-container { max-width: 100%; color: inherit; }
 .pricing-actions { padding: 20px 28px 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .site-footer { min-height: auto; padding-top: 32px; }
 
+.marketing-signup { padding: 20px; display: grid; gap: 14px; border: 1px solid var(--border); border-radius: 16px; background: var(--card); color: var(--foreground); }
+.marketing-signup-heading { display: flex; align-items: flex-start; gap: 11px; }
+.marketing-signup-heading > svg, .marketing-signup-success > svg { width: 20px; height: 20px; flex: 0 0 20px; color: var(--coral-dark); }
+.marketing-signup-heading p, .marketing-signup-success p { margin: 4px 0 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+.marketing-signup-fields { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
+.marketing-signup-fields [data-slot="input"] { height: 42px; }
+.marketing-signup-consent { display: flex; align-items: flex-start; gap: 9px; }
+.marketing-signup-consent [data-slot="checkbox"] { margin-top: 2px; flex: 0 0 auto; }
+.marketing-signup-consent [data-slot="label"] { display: block; color: var(--muted); font-size: 11px; font-weight: 500; line-height: 1.5; }
+.marketing-signup-consent a { color: var(--foreground); text-decoration: underline; }
+.marketing-signup-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.marketing-signup-message { margin: 0; color: var(--muted); font-size: 12px; }
+.marketing-signup-error { color: var(--destructive); }
+.marketing-signup-success { padding: 18px; display: flex; gap: 11px; border: 1px solid color-mix(in oklch, #20856b 45%, var(--border)); border-radius: 16px; background: color-mix(in oklch, #20856b 8%, var(--card)); }
+.marketing-signup-success > svg { color: #20856b; }
+.pricing-table-card > .marketing-signup { margin: 0 28px 28px; }
+
 .dark .wordmark-tick { color: #ff8468; text-shadow: 0 .08em .2em rgba(0, 0, 0, .32); }
 .dark .header-login { color: #d5ddea; }
 .dark .task-formula { color: #cbd5e7; }
@@ -531,4 +548,6 @@ mjx-container { max-width: 100%; color: inherit; }
   .pricing-row b, .pricing-row span { font-size: 12px; }
   .pricing-value { margin: 15px 15px 0; flex-direction: column; gap: 5px; }
   .pricing-actions { padding: 15px; grid-template-columns: 1fr; }
+  .marketing-signup-fields { grid-template-columns: 1fr; }
+  .pricing-table-card > .marketing-signup { margin: 0 15px 15px; }
 }

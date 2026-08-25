@@ -25,6 +25,9 @@ describe("Plan Plus screen", () => {
     expect(page).toContain("Powiadom mnie o starcie");
     expect(page).toContain("Sprzedaż jeszcze nie wystartowała");
     expect(page).not.toMatch(/href=["']\/checkout/);
+    expect(page).toContain('subscriptionType="plus_waitlist"');
+    expect(page).not.toContain("mailto:kontakt@egzamin.io?subject=Powiadom");
+    expect(landing).toContain('subscriptionType="plus_waitlist"');
   });
 
   it("supports an explicit payment CTA only after a valid checkout is configured", () => {

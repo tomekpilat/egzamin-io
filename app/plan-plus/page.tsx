@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
 
 import { BrandLogo } from "@/components/brand-logo";
+import { MarketingSignupForm } from "@/components/marketing-signup-form";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -58,7 +59,8 @@ export default function PlanPlusPage() {
             {PLAN_COMPARISON_ROWS.map(([feature, free, plus]) => <div className="pricing-row" role="row" key={feature}><b role="rowheader">{feature}</b><span role="cell">{free}</span><span role="cell">{plus}</span></div>)}
           </div>
           <div className="pricing-value"><b>{checkout.enabled ? "Roczny dostęp z możliwością anulowania" : "Sprzedaż jeszcze nie wystartowała"}</b><span>{checkout.enabled ? "Plan odnawia się co 12 miesięcy. Możesz anulować przed datą kolejnego odnowienia, zachowując dostęp do końca opłaconego okresu." : "Nie pobieramy teraz płatności i nie przekierowujemy do nieaktywnego checkoutu."}</span></div>
-          <div className="pricing-actions">{checkout.enabled ? <Button asChild><a href={checkout.url}>Zamawiam i płacę {PLUS_ANNUAL_PRICE_PLN} zł</a></Button> : <Button asChild><a href="mailto:kontakt@egzamin.io?subject=Powiadom%20mnie%20o%20starcie%20Planu%20Plus">Powiadom mnie o starcie</a></Button>}<Button variant="outline" asChild><a href="/panel">Zostań przy planie Free</a></Button></div>
+          <div className="pricing-actions">{checkout.enabled ? <Button asChild><a href={checkout.url}>Zamawiam i płacę {PLUS_ANNUAL_PRICE_PLN} zł</a></Button> : <Button asChild><a href="#lista-plus">Powiadom mnie o starcie</a></Button>}<Button variant="outline" asChild><a href="/panel">Zostań przy planie Free</a></Button></div>
+          {!checkout.enabled ? <div id="lista-plus"><MarketingSignupForm subscriptionType="plus_waitlist" sourcePath="/plan-plus" title="Lista oczekujących Plus" description="Podaj e-mail. Powiadomimy Cię o starcie sprzedaży i cenie — bez pobierania płatności." submitLabel="Powiadom mnie o starcie" /></div> : null}
         </Card>
 
         <section className="plan-plus-terms" aria-labelledby="plan-plus-terms-title">

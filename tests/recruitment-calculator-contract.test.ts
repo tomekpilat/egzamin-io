@@ -25,13 +25,28 @@ describe("public recruitment calculator", () => {
   it("links to official rules and explains the estimate limitations", () => {
     expect(page).toContain("eli.gov.pl");
     expect(page).toContain("gov.pl/web/edukacja");
-    expect(page).toContain("Progi z poprzednich lat nie gwarantują przyjęcia");
-    expect(page).toContain("Kalkulator nie zapisuje wpisanych danych");
+    expect(page).toContain("Nie jest wymaganiem ustalonym z góry");
+    expect(page).toContain("Kalkulator nie zapisuje ocen ani procentów");
+  });
+
+  it("supports an honest autumn forecast and separate parent/student paths", () => {
+    expect(page).toContain('type ExamMode = "unknown" | "estimate"');
+    expect(page).toContain("W rekrutacji liczą się oceny na świadectwie ukończenia szkoły podstawowej");
+    expect(page).toContain('rola=rodzic');
+    expect(page).toContain('rola=uczen');
+  });
+
+  it("uses verified school thresholds, a consent-backed alert and FAQ structured data", () => {
+    expect(page).toContain("SchoolThresholdSearch");
+    expect(page).toContain('subscriptionType="recruitment_thresholds"');
+    expect(page).toContain('"@type": "FAQPage"');
+    expect(page).toContain("Tabela punktów za oceny");
   });
 
   it("has dedicated shareable metadata without inheriting an unrelated social image", () => {
-    expect(layout).toContain("Kalkulator punktów do liceum — egzaminio");
+    expect(layout).toContain("Kalkulator punktów do liceum i technikum 2027 — egzaminio");
     expect(layout).toContain('canonical: "/kalkulator-punktow"');
     expect(layout.match(/images: \[\]/g)).toHaveLength(2);
+    expect(layout).toContain('dynamic = "force-static"');
   });
 });
