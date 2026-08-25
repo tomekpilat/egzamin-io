@@ -110,7 +110,7 @@ mjx-container { max-width: 100%; color: inherit; }
 .wordmark-text { display: inline-flex; align-items: baseline; letter-spacing: -.07em; }
 .wordmark-main, .wordmark-io { display: inline-block; }
 .wordmark-io { color: var(--coral); }
-.wordmark-tick { margin-left: .18em; display: inline-block; flex: 0 0 auto; color: var(--coral); font-family: "Segoe UI Symbol", "DejaVu Sans", "Arial Unicode MS", Arial, sans-serif; font-size: .9em; font-weight: 900; letter-spacing: 0; line-height: .8; text-shadow: 0 .08em .18em rgba(214, 75, 47, .2); transform: translateY(-.02em); }
+.wordmark-tick { margin-left: .18em; display: inline-block; flex: 0 0 auto; color: var(--coral); font-family: "Segoe UI Symbol", "DejaVu Sans", "Arial Unicode MS", Arial, sans-serif; font-size: .9em; font-weight: 900; letter-spacing: 0; line-height: .8; text-shadow: 0 .08em .18em rgba(214, 75, 47, .2); transform: translateY(-.1em); }
 .wordmark-compact { font-size: 13px; }
 .desktop-nav { display: flex; align-items: center; gap: 31px; color: var(--muted); font-size: 15px; font-weight: 650; }
 .desktop-nav a:hover { color: var(--ink); }
