@@ -504,6 +504,18 @@ mjx-container { max-width: 100%; color: inherit; }
 .marketing-signup-success > svg { color: #20856b; }
 .pricing-table-card > .marketing-signup { margin: 0 28px 28px; }
 
+.analytics-consent-banner { position: fixed; z-index: 70; inset: auto 22px 22px; max-width: 1040px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 22px; border: 1px solid var(--border); border-radius: 16px; background: var(--card); color: var(--foreground); box-shadow: 0 24px 70px rgba(15, 23, 42, .24); }
+.analytics-consent-banner b { font-size: 16px; }
+.analytics-consent-banner p { max-width: 680px; margin: 5px 0; color: var(--muted); font-size: 13px; line-height: 1.55; }
+.analytics-consent-banner a { color: var(--coral-dark); font-size: 12px; font-weight: 750; text-decoration: underline; }
+.analytics-consent-actions { display: grid; grid-template-columns: repeat(3, auto); gap: 8px; }
+.privacy-quick-links { position: fixed; z-index: 60; left: 14px; bottom: 12px; padding: 4px; display: flex; align-items: center; gap: 2px; border: 1px solid var(--border); border-radius: 999px; background: var(--card); box-shadow: 0 5px 18px rgba(15, 23, 42, .12); }
+.privacy-quick-links :is(a, button) { padding: 6px 8px; border: 0; background: transparent; color: var(--muted); font-size: 12px; font-weight: 700; cursor: pointer; }
+.privacy-quick-links :is(a, button):hover { color: var(--foreground); }
+.analytics-settings-row { padding: 16px 0; display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; border-block: 1px solid var(--border); }
+.analytics-settings-row > div { display: grid; gap: 5px; }
+.analytics-settings-row p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+
 .dark .wordmark-tick { color: #ff8468; text-shadow: 0 .08em .2em rgba(0, 0, 0, .32); }
 .dark .header-login { color: #d5ddea; }
 .dark .task-formula { color: #cbd5e7; }
@@ -550,4 +562,7 @@ mjx-container { max-width: 100%; color: inherit; }
   .pricing-actions { padding: 15px; grid-template-columns: 1fr; }
   .marketing-signup-fields { grid-template-columns: 1fr; }
   .pricing-table-card > .marketing-signup { margin: 0 15px 15px; }
+  .analytics-consent-banner { inset: auto 10px 10px; padding: 16px; grid-template-columns: 1fr; gap: 14px; }
+  .analytics-consent-actions { grid-template-columns: 1fr; }
+  .analytics-consent-actions [data-slot="button"] { width: 100%; }
 }

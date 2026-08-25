@@ -3,7 +3,7 @@
 
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { BrandLogo } from "@/components/brand-logo";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
@@ -14,6 +14,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { SocialAuthButtons, type SocialProvider } from "@/components/social-auth-buttons";
 import { validateSignupConfirmation } from "@/lib/auth-validation";
+import { trackAnalyticsEvent } from "@/lib/analytics";
 import { LEGAL_VERSION } from "@/lib/legal";
 import { getSupabaseClient } from "@/lib/supabase-browser";
 import type { SelfServiceRole } from "@/lib/roles";
@@ -126,6 +127,10 @@ export default function LoginPage() {
   const [notice, setNotice] = useState<Notice>(null);
   const busy = emailBusy || pendingProvider !== null;
 
+  useEffect(() => {
+    if (mode === "signup") trackAnalyticsEvent("signup_started");
+  }, [mode]);
+
   function changeMode(nextMode: Mode) {
     setMode(nextMode);
     setNotice(null);
@@ -192,6 +197,8 @@ export default function LoginPage() {
         });
         if (error) throw error;
 
+        trackAnalyticsEvent("signup_completed");
+
         setPassword("");
         setPasswordConfirmation("");
         if (data.session) {
@@ -210,6 +217,7 @@ export default function LoginPage() {
           password,
         });
         if (error) throw error;
+        trackAnalyticsEvent("login_completed");
         window.location.assign("/panel");
       }
     } catch (error) {
@@ -232,6 +240,7 @@ export default function LoginPage() {
       } else {
         window.sessionStorage.removeItem("egzaminio:signup-role");
       }
+      window.sessionStorage.setItem("egzaminio:analytics-auth-intent", mode);
       const roleParam = role === "parent" ? "rodzic" : "uczen";
       const { error } = await supabase.auth.signInWithOAuth({
         provider,
@@ -244,6 +253,7 @@ export default function LoginPage() {
       });
       if (error) throw error;
     } catch (error) {
+      window.sessionStorage.removeItem("egzaminio:analytics-auth-intent");
       const message = error instanceof Error ? error.message : "unknown";
       setNotice({ type: "error", message: friendlyAuthError(message) });
       setPendingProvider(null);

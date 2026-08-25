@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { MathJaxProvider } from "@/components/mathjax-provider";
+import { AnalyticsConsent } from "@/components/analytics-consent";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import "./account.css";
@@ -57,6 +58,7 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <MathJaxProvider>{children}</MathJaxProvider>
+          <AnalyticsConsent measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
         </ThemeProvider>
       </body>
     </html>

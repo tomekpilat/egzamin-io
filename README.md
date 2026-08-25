@@ -55,6 +55,8 @@ Logowanie korzysta z tego samego stacku co kancelio.pl: Supabase Auth, PostgreSQ
 
 Konfiguracja Supabase, providerów OAuth i administratora jest opisana w [docs/supabase-auth-setup.md](docs/supabase-auth-setup.md).
 
+Konfiguracja Google Analytics 4, Consent Mode i zmiennej środowiskowej Coolify jest opisana w [docs/google-analytics-setup.md](docs/google-analytics-setup.md).
+
 Strategia wejścia na rynek znajduje się w [docs/marketing-strategy-mvp.md](docs/marketing-strategy-mvp.md).
 
 Etapowy plan funkcjonalności produktu znajduje się w [docs/mvp-implementation-plan.md](docs/mvp-implementation-plan.md).

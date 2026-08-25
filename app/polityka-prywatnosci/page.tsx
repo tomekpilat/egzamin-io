@@ -19,7 +19,7 @@ export default function PrivacyPage() {
       </div>
 
       <nav className="legal-toc" aria-label="Spis treści">
-        <b>Na tej stronie</b><a href="#administrator">Administrator</a><a href="#dane">Dane i źródła</a><a href="#cele">Cele i podstawy</a><a href="#dzieci">Dzieci i rodzice</a><a href="#ai">Nauczyciel AI</a><a href="#feedback">Feedback</a><a href="#newsletter">Alerty i lista Plus</a><a href="#odbiorcy">Dostawcy i transfery</a><a href="#retencja">Jak długo przechowujemy</a><a href="#prawa">Twoje prawa</a>
+        <b>Na tej stronie</b><a href="#administrator">Administrator</a><a href="#dane">Dane i źródła</a><a href="#cele">Cele i podstawy</a><a href="#dzieci">Dzieci i rodzice</a><a href="#ai">Nauczyciel AI</a><a href="#feedback">Feedback</a><a href="#newsletter">Alerty i lista Plus</a><a href="#analityka">Analityka GA4</a><a href="#odbiorcy">Dostawcy i transfery</a><a href="#retencja">Jak długo przechowujemy</a><a href="#prawa">Twoje prawa</a>
       </nav>
 
       <section className="legal-section" id="administrator">
@@ -41,6 +41,7 @@ export default function PrivacyPage() {
             <tr><td>Bezpieczeństwo</td><td>Adres IP, typ urządzenia i przeglądarki, zdarzenia logowania, błędy, identyfikatory sesji</td><td>Automatycznie z urządzenia i infrastruktury</td></tr>
             <tr><td>Feedback w aplikacji</td><td>Kategoria, opcjonalna ocena, treść opinii, rola konta, bieżący ekran i identyfikator zadania; adres e-mail tylko po zgodzie na kontakt</td><td>Od użytkownika i z kontekstu bieżącego ekranu</td></tr>
             <tr><td>Alerty rekrutacyjne i lista Plus</td><td>Adres e-mail, typ zapisu, wskazana szkoła lub klasa i rok rekrutacji, dokładna treść i wersja zgody, czas i źródło zapisu oraz status wypisu</td><td>Od osoby wypełniającej osobny formularz</td></tr>
+            <tr><td>Opcjonalna analityka GA4</td><td>Oczyszczona ścieżka strony, zatwierdzona nazwa zdarzenia, identyfikator urządzenia/sesji w cookies, przybliżona lokalizacja, typ urządzenia i przeglądarki; bez danych konta i treści edukacyjnych</td><td>Automatycznie z urządzenia, wyłącznie po zgodzie</td></tr>
             <tr><td>Kontakt</td><td>Treść wiadomości, adres kontaktowy, historia rozwiązania sprawy</td><td>Od osoby kontaktującej się</td></tr>
           </tbody>
         </table></div>
@@ -57,7 +58,7 @@ export default function PrivacyPage() {
             <tr><td>Bezpieczeństwo, zapobieganie nadużyciom, diagnostyka, obrona roszczeń i podstawowe statystyki usługi</td><td>Prawnie uzasadniony interes — art. 6 ust. 1 lit. f RODO, po teście równowagi uwzględniającym szczególną ochronę dzieci</td></tr>
             <tr><td>Przyjmowanie i analiza feedbacku, naprawa błędów oraz rozwój aplikacji</td><td>Prawnie uzasadniony interes w ulepszaniu i zabezpieczaniu usługi — art. 6 ust. 1 lit. f RODO; kontakt zwrotny następuje wyłącznie po dobrowolnej zgodzie — art. 6 ust. 1 lit. a RODO</td></tr>
             <tr><td>Wysyłanie zamówionego alertu o progach oraz informacji o starcie i ofercie Plus</td><td>Dobrowolna zgoda — art. 6 ust. 1 lit. a RODO oraz zgoda na przesyłanie informacji handlowej/marketingu zgodnie z art. 398 Prawa komunikacji elektronicznej</td></tr>
-            <tr><td>Opcjonalna analityka, personalizacja marketingowa lub newsletter</td><td>Zgoda — art. 6 ust. 1 lit. a RODO; dla zapisu/odczytu na urządzeniu również zgoda, jeżeli jest wymagana</td></tr>
+            <tr><td>Opcjonalny pomiar użycia serwisu w Google Analytics 4</td><td>Dobrowolna zgoda — art. 6 ust. 1 lit. a RODO; zapis i odczyt cookies analitycznych również dopiero po zgodzie zgodnie z art. 399 Prawa komunikacji elektronicznej</td></tr>
             <tr><td>Usługa dla dziecka, gdy jej podstawą jest zgoda</td><td>Zgoda dziecka lub opiekuna zgodnie z właściwym progiem wieku i art. 8 RODO; przed startem publicznym wdrożymy rozsądną weryfikację opiekuna</td></tr>
           </tbody>
         </table></div>
@@ -95,22 +96,30 @@ export default function PrivacyPage() {
         <p>Każda wiadomość wysłana z tych list powinna zawierać indywidualny link rezygnacji prowadzący do strony <a href="/wypisz">wypisu</a>. Zgodę można wycofać jednym kliknięciem lub przez wiadomość na <a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a>. Wycofanie nie wpływa na zgodność wcześniejszego przetwarzania i nie ogranicza korzystania z bezpłatnego kalkulatora ani konta.</p>
       </section>
 
+      <section className="legal-section" id="analityka">
+        <h2>8. Opcjonalna analityka Google Analytics 4</h2>
+        <p>Po dobrowolnej zgodzie używamy Google Analytics 4, aby mierzyć odsłony i podstawowe etapy lejka MVP. Stosujemy podstawowy Consent Mode: przed zgodą i po odmowie tag Google nie jest ładowany, więc żadne pingi ani dane analityczne nie są wysyłane do Google. Zgodę zapisujemy lokalnie na urządzeniu, bez łączenia jej z profilem.</p>
+        <p>Słownik jest zamknięty i obejmuje tylko: <code>page_view</code>, <code>signup_started</code>, <code>signup_completed</code>, <code>login_completed</code>, <code>practice_started</code>, <code>answer_checked</code>, <code>plan_plus_viewed</code> i <code>plan_plus_cta_clicked</code>. Nie wysyłamy e-maila, imienia, identyfikatora konta, roli dziecko/rodzic, szkoły, treści zadania, odpowiedzi, poprawności, wyniku, postępu ani rozmowy AI. Usuwamy query string, fragment URL, tokeny oraz segmenty przypominające identyfikatory.</p>
+        <p>Google Signals, personalizacja reklam, remarketing, połączenie z Google Ads i rozszerzony pomiar powinny pozostać wyłączone. Zgodę można wycofać przez stale dostępne „Ustawienia prywatności”; zatrzymamy przyszły pomiar i usuniemy cookies analityczne ustawione przez aplikację.</p>
+      </section>
+
       <section className="legal-section" id="odbiorcy">
-        <h2>8. Komu powierzamy dane</h2>
+        <h2>9. Komu powierzamy dane</h2>
         <p>Dostęp otrzymują tylko podmioty potrzebne do działania usługi i osoby upoważnione:</p>
         <ul>
           <li><b>Supabase</b> — uwierzytelnianie i baza danych; <mark>[UZUPEŁNIJ REGION PROJEKTU I DPA]</mark>.</li>
           <li><b>Google i Meta</b> — wyłącznie gdy użytkownik wybierze odpowiednie logowanie; dostawca przetwarza też dane według własnych zasad.</li>
+          <li><b>Google Ireland Limited</b> — opcjonalny Google Analytics 4 po zgodzie. Google może korzystać z podmiotów w innych państwach; transfery mogą opierać się na decyzji stwierdzającej odpowiedni poziom ochrony lub standardowych klauzulach umownych. Przed produkcją administrator powinien zaakceptować właściwe warunki Google i udokumentować ocenę ustawień oraz transferów.</li>
           <li><b>Hosting i kopie zapasowe</b> — <mark>[UZUPEŁNIJ FAKTYCZNEGO DOSTAWCĘ, LOKALIZACJĘ I PODPROCESORÓW; Coolify jest oprogramowaniem, nie nazwą hostingu]</mark>.</li>
           <li><b>DeepSeek</b> — planowany dostawca modelu DeepSeek V4 Flash. Według polityki dostawcy dane mogą być przetwarzane w Chińskiej Republice Ludowej. <mark>Przed włączeniem produkcyjnym trzeba potwierdzić umowę powierzenia, podstawę transferu poza EOG, ocenę skutków transferu, retencję API oraz skuteczne wyłączenie używania treści do trenowania.</mark></li>
-          <li><b>E-mail, płatności, obsługa i analityka</b> — <mark>[UZUPEŁNIJ PRZED WŁĄCZENIEM KAŻDEJ USŁUGI]</mark>.</li>
+          <li><b>E-mail, płatności i obsługa</b> — <mark>[UZUPEŁNIJ PRZED WŁĄCZENIEM KAŻDEJ USŁUGI]</mark>.</li>
           <li>Organy publiczne — tylko gdy wymaga tego prawo.</li>
         </ul>
         <p>DeepSeek wskazuje, że bezpośrednio przetwarza i przechowuje dane w Chińskiej Republice Ludowej. Samo usunięcie identyfikatorów nie zastępuje wymaganej oceny prawnej transferu. Moduł AI nie powinien zostać włączony dla użytkowników produkcyjnych do czasu udokumentowania właściwego mechanizmu z rozdziału V RODO, warunków powierzenia i oceny ryzyka albo wyboru dostawcy zapewniającego akceptowalny region i warunki.</p>
       </section>
 
       <section className="legal-section" id="retencja">
-        <h2>9. Jak długo przechowujemy dane</h2>
+        <h2>10. Jak długo przechowujemy dane</h2>
         <p>Poniższe okresy są rekomendacją MVP i muszą zostać wdrożone technicznie oraz potwierdzone po wyborze infrastruktury:</p>
         <div className="legal-table-wrap"><table>
           <thead><tr><th>Dane</th><th>Planowany okres</th></tr></thead>
@@ -121,6 +130,8 @@ export default function PrivacyPage() {
             <tr><td>Logi bezpieczeństwa</td><td>12 miesięcy, dłużej wyłącznie dla konkretnego incydentu lub roszczenia</td></tr>
             <tr><td>Feedback z aplikacji</td><td>24 miesiące od zamknięcia zgłoszenia, krócej po skutecznym żądaniu usunięcia, chyba że dane są potrzebne do obrony roszczeń</td></tr>
             <tr><td>Alert rekrutacyjny i lista Plus</td><td>Alert do 31 sierpnia danego roku rekrutacji, a lista Plus do 12 miesięcy po starcie sprzedaży — zawsze krócej po wycofaniu zgody; minimalny dowód zgody lub wypisu może być przechowywany przez okres potrzebny do wykazania zgodności lub obrony roszczeń</td></tr>
+            <tr><td>Google Analytics 4</td><td>Cookies analityczne maksymalnie 90 dni bez odnawiania; dane użytkownika i zdarzeń w GA4 — minimalne ustawienie 2 miesiące. Standardowe zagregowane raporty GA4 mogą być dostępne dłużej zgodnie z działaniem usługi Google.</td></tr>
+            <tr><td>Lokalny zapis wyboru analityki</td><td>180 dni lub do usunięcia danych witryny; po zmianie decyzji zapis zastępujemy aktualnym wyborem</td></tr>
             <tr><td>Kontakt i reklamacje</td><td>24 miesiące od zamknięcia sprawy lub przez okres dochodzenia/obrony roszczeń</td></tr>
             <tr><td>Zgody i ich wycofanie</td><td>Przez czas korzystania z podstawy zgody i okres niezbędny do wykazania zgodności lub obrony roszczeń</td></tr>
             <tr><td>Dokumenty rozliczeniowe</td><td>Przez okres wymagany przez przepisy podatkowe i rachunkowe właściwe dla operatora</td></tr>
@@ -129,21 +140,21 @@ export default function PrivacyPage() {
       </section>
 
       <section className="legal-section" id="prawa">
-        <h2>10. Twoje prawa</h2>
+        <h2>11. Twoje prawa</h2>
         <p>W zależności od podstawy i sytuacji możesz żądać:</p>
         <ul><li>dostępu do danych i ich kopii,</li><li>sprostowania danych,</li><li>usunięcia danych lub ograniczenia przetwarzania,</li><li>przeniesienia danych dostarczonych na podstawie zgody lub umowy,</li><li>sprzeciwu wobec przetwarzania opartego na prawnie uzasadnionym interesie,</li><li>wycofania zgody bez wpływu na zgodność wcześniejszego przetwarzania.</li></ul>
         <p>Napisz na <a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a>. Możemy poprosić o rozsądną weryfikację tożsamości. Odpowiemy co do zasady w ciągu miesiąca. Masz też prawo złożyć skargę do <a href="https://uodo.gov.pl/pl/p/skargi" target="_blank" rel="noreferrer">Prezesa Urzędu Ochrony Danych Osobowych</a> lub właściwego organu w swoim kraju.</p>
       </section>
 
       <section className="legal-section">
-        <h2>11. Bezpieczeństwo i zmiany dokumentu</h2>
+        <h2>12. Bezpieczeństwo i zmiany dokumentu</h2>
         <p>Stosujemy kontrolę dostępu opartą na rolach, polityki dostępu do wierszy bazy, szyfrowane połączenia, ograniczone klucze aplikacji, kopie zapasowe i rejestrowanie zdarzeń. Żaden system nie daje jednak absolutnego bezpieczeństwa. Incydenty oceniamy i zgłaszamy osobom lub organowi, gdy wymaga tego prawo.</p>
         <p>O istotnej zmianie poinformujemy w aplikacji lub e-mailem z wyprzedzeniem właściwym do jej wpływu. Gdy zmieni się cel oparty na zgodzie albo warunki umowy, poprosimy o nową zgodę lub akceptację, jeżeli będzie to wymagane.</p>
       </section>
 
       <section className="legal-section legal-source-note">
         <h2>Oficjalne źródła</h2>
-        <p><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" target="_blank" rel="noreferrer">RODO — EUR-Lex</a>, <a href="https://eli.gov.pl/api/acts/DU/2024/1221/text.html" target="_blank" rel="noreferrer">Prawo komunikacji elektronicznej — art. 398</a>, <a href="https://uodo.gov.pl/pl/701/4467" target="_blank" rel="noreferrer">UODO o wycofaniu zgody</a>, <a href="https://uodo.gov.pl/pl/493/2261" target="_blank" rel="noreferrer">prawa dzieci według UODO</a> i <a href="https://digital-strategy.ec.europa.eu/en/policies/guidelines-transparency-ai-generated-content" target="_blank" rel="noreferrer">przejrzystość AI — Komisja Europejska</a>.</p>
+        <p><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" target="_blank" rel="noreferrer">RODO — EUR-Lex</a>, <a href="https://eli.gov.pl/api/acts/DU/2024/1221/text.html" target="_blank" rel="noreferrer">Prawo komunikacji elektronicznej — art. 398–399</a>, <a href="https://uodo.gov.pl/pl/701/4467" target="_blank" rel="noreferrer">UODO o wycofaniu zgody</a>, <a href="https://support.google.com/analytics/answer/11593727" target="_blank" rel="noreferrer">dane zbierane przez Google Analytics</a>, <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noreferrer">jak Google wykorzystuje dane</a>, <a href="https://uodo.gov.pl/pl/493/2261" target="_blank" rel="noreferrer">prawa dzieci według UODO</a> i <a href="https://digital-strategy.ec.europa.eu/en/policies/guidelines-transparency-ai-generated-content" target="_blank" rel="noreferrer">przejrzystość AI — Komisja Europejska</a>.</p>
       </section>
     </LegalShell>
   );

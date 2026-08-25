@@ -11,6 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { getSupabaseClient } from "@/lib/supabase-browser";
 import { SubjectIcon, subjectLabels, type SubjectKey } from "@/components/subject-icon";
 import { AiTutor } from "@/components/ai-tutor";
+import { trackAnalyticsEvent } from "@/lib/analytics";
 
 export type StudentView = "start" | "exercises" | "progress" | "settings";
 type Subject = SubjectKey;
@@ -333,6 +334,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
     }
     setQuestionIndex(0);
     setError("");
+    trackAnalyticsEvent("practice_started");
     onNavigate("exercises");
   }
 
@@ -365,6 +367,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
       const result = (data as AnswerResult[] | null)?.[0];
       if (!result) throw new Error("missing_result");
       setSubmittedAnswer({ ...result, questionId: currentQuestion.question_id });
+      trackAnalyticsEvent("answer_checked");
       setDraftAnswer(null);
       setQuestions((current) =>
         current.map((question) =>
