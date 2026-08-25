@@ -2,6 +2,7 @@
 /* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
 
 import { useSearchParams } from "next/navigation";
+import Image from "next/image";
 import { FormEvent, useState } from "react";
 import { BrandLogo } from "@/components/brand-logo";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -245,6 +246,18 @@ export default function LoginPage() {
   }
 
   const selectedJourney = roleJourneys[role];
+  const storyImage =
+    mode === "signup" && role === "parent"
+      ? {
+          src: "/rodzic-i-uczen-nauka.png",
+          alt: "Rodzic wspiera ucznia podczas nauki przy laptopie",
+          label: "Wspólny plan, spokojne wsparcie",
+        }
+      : {
+          src: "/uczen-nauka-logowanie.png",
+          alt: "Ósmoklasista przygotowuje się do egzaminu przy biurku",
+          label: mode === "signup" ? "Nauka we własnym tempie" : "Wracaj do swojego planu",
+        };
 
   return (
     <main className="account-page">
@@ -257,6 +270,17 @@ export default function LoginPage() {
 
       <section className="auth-shell">
         <div className="auth-story">
+          <div className="auth-story-image">
+            <Image
+              src={storyImage.src}
+              alt={storyImage.alt}
+              width={1536}
+              height={1024}
+              sizes="(max-width: 680px) calc(100vw - 30px), (max-width: 900px) 650px, 430px"
+              priority
+            />
+            <span>{storyImage.label}</span>
+          </div>
           {mode === "signup" ? (
             <div className="auth-journey" aria-live="polite">
               <span className="section-kicker">{selectedJourney.kicker}</span>

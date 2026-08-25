@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 
@@ -40,6 +40,13 @@ describe("simplified registration flow", () => {
 
   it("anchors the left column instead of vertically recentering it", () => {
     expect(accountStyles).toMatch(/\.auth-shell \{[^}]*align-items: start;/);
-    expect(accountStyles).toContain(".auth-story { padding-top: 76px; }");
+    expect(accountStyles).toContain(".auth-story { min-width: 0; }");
+  });
+
+  it("shows role-aware imagery on login and registration", () => {
+    expect(login).toContain('src: "/uczen-nauka-logowanie.png"');
+    expect(login).toContain('src: "/rodzic-i-uczen-nauka.png"');
+    expect(login).toContain('className="auth-story-image"');
+    expect(existsSync(join(process.cwd(), "public/uczen-nauka-logowanie.png"))).toBe(true);
   });
 });
