@@ -276,6 +276,11 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
           correct_count: correctCount,
         }
       : null;
+  const tutorFeedback = currentQuestion && answerResult ? {
+    isCorrect: answerResult.answer_is_correct,
+    correctAnswer: `${String.fromCharCode(65 + answerResult.answer_correct_index)}. ${currentQuestion.options[answerResult.answer_correct_index]}`,
+    explanation: answerResult.answer_explanation,
+  } : null;
   const hasUnsavedAnswer = hasUnsavedPracticeAnswer(
     currentQuestion?.question_id ?? null,
     currentQuestion?.selected_answer ?? null,
@@ -494,27 +499,27 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
         <div className="practice-focus-stage">
           {error && <Alert variant="destructive" className="dashboard-alert"><AlertDescription>{error}</AlertDescription></Alert>}
           {!currentQuestion && <Alert><AlertTitle>Brak pytań w tym przedmiocie</AlertTitle><AlertDescription>Wybierz inny przedmiot, aby kontynuować ćwiczenia.</AlertDescription></Alert>}
-          {currentQuestion && <Card className="practice-question-card practice-focus-question-card">
-            <CardHeader>
-              <div className="practice-meta"><Badge variant="outline">{subjectLabels[currentQuestion.subject]}</Badge><span>{currentQuestion.topic}</span><span>Poziom {currentQuestion.difficulty}/3</span></div>
-              <h1 data-slot="card-title">{currentQuestion.prompt}</h1>
-              <CardDescription>Pytanie {questionIndex + 1} z {filteredQuestions.length} · {formatQuestionSource(currentQuestion)}{currentQuestion.paper_question_number ? ` · zadanie ${currentQuestion.paper_question_number}` : ""}</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="practice-answers" role="radiogroup" aria-label="Wybierz odpowiedź">
-                {currentQuestion.options.map((option, index) => {
-                  const correct = answerResult?.answer_correct_index === index;
-                  const incorrect = Boolean(answerResult) && selectedAnswer === index && !correct;
-                  const answerClass = ["practice-answer", selectedAnswer === index && "selected", correct && "correct", incorrect && "incorrect"].filter(Boolean).join(" ");
-                  return <button key={option} ref={(element) => { answerRefs.current[index] = element; }} type="button" role="radio" aria-checked={selectedAnswer === index} tabIndex={selectedAnswer === index || (selectedAnswer === null && index === 0) ? 0 : -1} className={answerClass} onClick={() => selectAnswer(index)} onKeyDown={(event) => handleAnswerKeyDown(event, index)} disabled={submitting}><b>{String.fromCharCode(65 + index)}</b><span>{option}</span></button>;
-                })}
-              </div>
-              {answerResult && <Alert variant={answerResult.answer_is_correct ? "success" : "warning"} className="practice-feedback"><AlertTitle>{answerResult.answer_is_correct ? "Dobra odpowiedź!" : "Jeszcze nie tym razem"}</AlertTitle><AlertDescription>{answerResult.answer_explanation}</AlertDescription></Alert>}
-              {answerResult && <AiTutor questionId={currentQuestion.question_id} />}
-              <div className="practice-actions"><Button type="button" size="lg" onClick={() => void submitAnswer()} disabled={selectedAnswer === null || submitting}>{submitting ? "Sprawdzam…" : answerResult ? "Sprawdź ponownie" : "Sprawdź odpowiedź"}</Button>{answerResult && <Button type="button" size="lg" variant="outline" onClick={() => moveQuestion(1)}>Następne pytanie <ChevronRight aria-hidden="true" /></Button>}</div>
-            </CardContent>
-          </Card>
-          }
+          {currentQuestion && <div className="practice-focus-workspace">
+            <Card className="practice-question-card practice-focus-question-card">
+              <CardHeader>
+                <div className="practice-meta"><Badge variant="outline">{subjectLabels[currentQuestion.subject]}</Badge><span>{currentQuestion.topic}</span><span>Poziom {currentQuestion.difficulty}/3</span></div>
+                <h1 data-slot="card-title">{currentQuestion.prompt}</h1>
+                <CardDescription>Pytanie {questionIndex + 1} z {filteredQuestions.length} · {formatQuestionSource(currentQuestion)}{currentQuestion.paper_question_number ? ` · zadanie ${currentQuestion.paper_question_number}` : ""}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="practice-answers" role="radiogroup" aria-label="Wybierz odpowiedź">
+                  {currentQuestion.options.map((option, index) => {
+                    const correct = answerResult?.answer_correct_index === index;
+                    const incorrect = Boolean(answerResult) && selectedAnswer === index && !correct;
+                    const answerClass = ["practice-answer", selectedAnswer === index && "selected", correct && "correct", incorrect && "incorrect"].filter(Boolean).join(" ");
+                    return <button key={option} ref={(element) => { answerRefs.current[index] = element; }} type="button" role="radio" aria-checked={selectedAnswer === index} tabIndex={selectedAnswer === index || (selectedAnswer === null && index === 0) ? 0 : -1} className={answerClass} onClick={() => selectAnswer(index)} onKeyDown={(event) => handleAnswerKeyDown(event, index)} disabled={submitting}><b>{String.fromCharCode(65 + index)}</b><span>{option}</span></button>;
+                  })}
+                </div>
+                <div className="practice-actions"><Button type="button" size="lg" onClick={() => void submitAnswer()} disabled={selectedAnswer === null || submitting}>{submitting ? "Sprawdzam…" : answerResult ? "Sprawdź ponownie" : "Sprawdź odpowiedź"}</Button>{answerResult && <Button type="button" size="lg" variant="outline" onClick={() => moveQuestion(1)}>Następne pytanie <ChevronRight aria-hidden="true" /></Button>}</div>
+              </CardContent>
+            </Card>
+            <aside className="practice-support-panel" aria-label="Odpowiedź, podpowiedzi i rozmowa z AI"><AiTutor questionId={currentQuestion.question_id} feedback={tutorFeedback} /></aside>
+          </div>}
           <p className="practice-save-note" role="status">Odpowiedź zapisuje się na koncie po kliknięciu „Sprawdź odpowiedź”.</p>
         </div>
       </section>}

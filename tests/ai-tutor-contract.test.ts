@@ -18,10 +18,17 @@ describe("AI tutor end-to-end contract", () => {
     expect(component).not.toContain("SUPABASE_SERVICE_ROLE_KEY");
   });
 
-  it("releases failed reservations and only shows chat after checking an answer", () => {
+  it("releases failed reservations and keeps help beside the active question", () => {
     expect(route).toContain('supabase.rpc("fail_ai_tutor_request"');
     expect(route).toContain('supabase.rpc("complete_ai_tutor_request"');
-    expect(practice).toContain("{answerResult && <AiTutor");
+    expect(practice).toContain("practice-support-panel");
+    expect(practice).toContain("<AiTutor questionId={currentQuestion.question_id} feedback={tutorFeedback}");
+  });
+
+  it("loads chat state directly instead of relying on the broken legacy bootstrap RPC", () => {
+    expect(route).toContain('.from("ai_tutor_threads")');
+    expect(route).toContain('.from("ai_usage_daily")');
+    expect(route).not.toContain('supabase.rpc("get_ai_chat_for_student"');
   });
 
   it("rejects off-topic and injection attempts before reserving quota or calling the provider", () => {
@@ -35,7 +42,9 @@ describe("AI tutor end-to-end contract", () => {
   });
 
   it("shows usage, privacy guidance, retry-safe errors and a Plus path", () => {
-    expect(component).toContain("{usage.remaining} z {usage.limit} pytań");
+    expect(component).toContain("{usage.remaining} z {usage.limit} pytań AI");
+    expect(component).toContain("Pokaż podpowiedź");
+    expect(component).toContain("Spróbuj ponownie");
     expect(component).toContain("Nie wpisuj danych osobowych");
     expect(component).toContain('href="/plan-plus#porownanie"');
     expect(route).toContain("pytanie nie zostało odliczone");

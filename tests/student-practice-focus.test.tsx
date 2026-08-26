@@ -10,7 +10,10 @@ import {
 const { rpc } = vi.hoisted(() => ({ rpc: vi.fn() }));
 
 vi.mock("@/lib/supabase-browser", () => ({
-  getSupabaseClient: async () => ({ rpc }),
+  getSupabaseClient: async () => ({
+    rpc,
+    auth: { getSession: async () => ({ data: { session: { access_token: "test-token" } } }) },
+  }),
 }));
 
 const questions = [
@@ -61,6 +64,12 @@ const questions = [
 ];
 
 function prepareRpc(questionRows = questions, progressRows: Record<string, unknown>[] = []) {
+  vi.stubGlobal("fetch", vi.fn().mockResolvedValue(new Response(JSON.stringify({
+    messages: [],
+    usage: { used: 0, limit: 3, remaining: 3, plan: "free" },
+    available: true,
+    hints: ["Zamień procent na ułamek.", "Pomnóż przez liczbę."],
+  }), { status: 200, headers: { "Content-Type": "application/json" } })));
   rpc.mockImplementation(async (name: string) => {
     if (name === "get_practice_questions") return { data: questionRows, error: null };
     if (name === "get_student_paper_progress") return { data: progressRows, error: null };
@@ -105,6 +114,8 @@ describe("StudentPractice focus mode", () => {
     expect(screen.getByRole("button", { name: "Poprzednie pytanie" })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Następne pytanie" })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Zakończ" })).toBeInTheDocument();
+    expect(screen.getByRole("complementary", { name: "Odpowiedź, podpowiedzi i rozmowa z AI" })).toBeInTheDocument();
+    expect(screen.getByText("Podpowiedzi")).toBeInTheDocument();
 
     const answers = screen.getAllByRole("radio");
     answers[0].focus();
@@ -151,6 +162,7 @@ describe("StudentPractice focus mode", () => {
       selected_answer: 1,
     }));
     expect(await screen.findByText("Dobra odpowiedź!")).toBeInTheDocument();
+    expect(screen.getByText("Poprawna odpowiedź: B. 10")).toBeInTheDocument();
 
     await user.click(screen.getByRole("button", { name: "Zakończ" }));
     expect(confirm).not.toHaveBeenCalled();

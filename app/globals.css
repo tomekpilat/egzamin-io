@@ -504,11 +504,11 @@ mjx-container { max-width: 100%; color: inherit; }
 .marketing-signup-success > svg { color: #20856b; }
 .pricing-table-card > .marketing-signup { margin: 0 28px 28px; }
 
-.analytics-consent-banner { position: fixed; z-index: 70; inset: auto 22px 22px; max-width: 1040px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 22px; border: 1px solid var(--border); border-radius: 16px; background: var(--card); color: var(--foreground); box-shadow: 0 24px 70px rgba(15, 23, 42, .24); }
-.analytics-consent-banner b { font-size: 16px; }
-.analytics-consent-banner p { max-width: 680px; margin: 5px 0; color: var(--muted); font-size: 13px; line-height: 1.55; }
-.analytics-consent-banner a { color: var(--coral-dark); font-size: 12px; font-weight: 750; text-decoration: underline; }
-.analytics-consent-actions { display: grid; grid-template-columns: repeat(3, auto); gap: 8px; }
+.analytics-consent-banner { position: fixed; z-index: 70; inset: auto 22px 22px; max-width: 880px; margin: 0 auto; padding: 14px 16px; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 18px; border: 1px solid var(--border); border-radius: 14px; background: var(--card); color: var(--foreground); box-shadow: 0 20px 55px rgba(15, 23, 42, .2); }
+.analytics-consent-banner b { font-size: 14px; }
+.analytics-consent-banner p { max-width: 610px; margin: 3px 0 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.analytics-consent-settings-link { padding: 0; border: 0; background: transparent; color: var(--coral-dark); font: inherit; font-weight: 750; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
+.analytics-consent-actions { display: grid; grid-template-columns: repeat(2, auto); gap: 8px; }
 .privacy-quick-links { position: fixed; z-index: 60; left: 14px; bottom: 12px; padding: 4px; display: flex; align-items: center; gap: 2px; border: 1px solid var(--border); border-radius: 999px; background: var(--card); box-shadow: 0 5px 18px rgba(15, 23, 42, .12); }
 .privacy-quick-links :is(a, button) { padding: 6px 8px; border: 0; background: transparent; color: var(--muted); font-size: 12px; font-weight: 700; cursor: pointer; }
 .privacy-quick-links :is(a, button):hover { color: var(--foreground); }

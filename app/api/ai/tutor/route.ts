@@ -38,16 +38,71 @@ async function authenticatedStudent(request: Request) {
 
 async function loadChat(studentId: string, questionId: string) {
   const supabase = getSupabaseServiceClient();
-  const { data, error } = await supabase.rpc("get_ai_chat_for_student", {
-    requested_student_id: studentId,
-    target_question_id: questionId,
-  });
-  if (error) throw error;
-  const row = (data as Record<string, unknown>[] | null)?.[0];
-  if (!row) throw new Error("missing_chat_status");
+  const todayUtc = new Date().toISOString().slice(0, 10);
+  const [{ data: profile, error: profileError }, { data: question, error: questionError }] = await Promise.all([
+    supabase.from("profiles")
+      .select("role,onboarding_completed,plan_tier,plan_valid_until")
+      .eq("id", studentId)
+      .single(),
+    supabase.from("practice_questions")
+      .select("id")
+      .eq("id", questionId)
+      .eq("is_published", true)
+      .single(),
+  ]);
+  if (profileError || !profile || profile.role !== "student" || !profile.onboarding_completed) {
+    throw new Error("active_student_profile_required");
+  }
+  if (questionError || !question) throw new Error("published_question_not_found");
+
+  const [{ data: thread, error: threadError }, { data: usageRow, error: usageError }, { data: explanation, error: explanationError }] = await Promise.all([
+    supabase.from("ai_tutor_threads")
+      .select("id")
+      .eq("student_id", studentId)
+      .eq("question_id", questionId)
+      .maybeSingle(),
+    supabase.from("ai_usage_daily")
+      .select("reserved_count")
+      .eq("student_id", studentId)
+      .eq("usage_date", todayUtc)
+      .maybeSingle(),
+    supabase.from("ai_question_explanations")
+      .select("hints")
+      .eq("question_id", questionId)
+      .eq("status", "approved")
+      .order("version", { ascending: false })
+      .limit(1)
+      .maybeSingle(),
+  ]);
+  if (threadError || usageError) throw threadError ?? usageError;
+  // A missing approved explanation is a valid editorial state, not a broken chat.
+  if (explanationError && explanationError.code !== "PGRST116") throw explanationError;
+
+  let messages: AiChatMessage[] = [];
+  if (thread?.id) {
+    const { data: messageRows, error: messageError } = await supabase.from("ai_tutor_messages")
+      .select("id,role,content,created_at")
+      .eq("thread_id", thread.id)
+      .order("created_at", { ascending: true });
+    if (messageError) throw messageError;
+    messages = ((messageRows as Record<string, unknown>[] | null) ?? [])
+      .filter((message) => message.role === "user" || message.role === "assistant")
+      .map((message) => ({
+        id: String(message.id),
+        role: message.role as AiChatMessage["role"],
+        content: String(message.content),
+        created_at: String(message.created_at),
+      }));
+  }
+
+  const planValidUntil = profile.plan_valid_until ? new Date(String(profile.plan_valid_until)) : null;
+  const activePlan = profile.plan_tier === "plus" && (!planValidUntil || planValidUntil > new Date()) ? "plus" : "free";
+  const dailyLimit = activePlan === "plus" ? 50 : 3;
   return {
-    messages: (Array.isArray(row.chat_messages) ? row.chat_messages : []) as AiChatMessage[],
-    usage: normalizeUsage(row.used_count, row.daily_limit, row.active_plan),
+    messages,
+    usage: normalizeUsage(usageRow?.reserved_count, dailyLimit, activePlan),
+    available: Boolean(explanation),
+    hints: stringArray(explanation?.hints),
   };
 }
 
@@ -58,8 +113,9 @@ export async function GET(request: Request) {
     const questionId = new URL(request.url).searchParams.get("questionId");
     if (!validQuestionId(questionId)) return json({ error: "Nieprawidłowe zadanie." }, 400);
     return json(await loadChat(auth.user.id, questionId));
-  } catch {
-    return json({ error: "Nie udało się pobrać rozmowy z AI." }, 503);
+  } catch (error) {
+    console.error("[ai-tutor] chat bootstrap failed", error instanceof Error ? error.message : "unknown_error");
+    return json({ error: "Nie udało się uruchomić pomocy AI. Spróbuj ponownie lub zgłoś problem administratorowi." }, 503);
   }
 }
 
@@ -189,7 +245,7 @@ export async function POST(request: Request) {
       },
       usage,
     });
-  } catch {
+  } catch (error) {
     if (requestId) {
       try {
         await getSupabaseServiceClient().rpc("fail_ai_tutor_request", { target_request_id: requestId, failure_code: "internal_error" });
@@ -197,6 +253,7 @@ export async function POST(request: Request) {
         // The reservation expires automatically; never expose server details to a student.
       }
     }
+    console.error("[ai-tutor] request failed", error instanceof Error ? error.message : "unknown_error");
     return json({ error: "Nie udało się połączyć z nauczycielem AI. Spróbuj ponownie." }, 500);
   }
 }

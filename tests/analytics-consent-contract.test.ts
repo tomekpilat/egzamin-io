@@ -25,8 +25,8 @@ describe("GA4 basic consent contract", () => {
   });
 
   it("offers equal banner choices, persistent settings and cookie cleanup", () => {
-    expect(component).toContain("Akceptuję");
-    expect(component).toContain("Odrzucam opcjonalne");
+    expect(component).toContain("Zgadzam się");
+    expect(component).toContain("Nie, dziękuję");
     expect(component).toContain("Ustawienia prywatności");
     expect(component).toContain("clearGoogleAnalyticsCookies");
     expect(component).toContain("window.location.reload()");

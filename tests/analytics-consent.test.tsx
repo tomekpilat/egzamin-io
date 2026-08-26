@@ -18,13 +18,13 @@ describe("AnalyticsConsent", () => {
   it("does not render or load Google when the Measurement ID is absent", async () => {
     render(<AnalyticsConsent />);
     await Promise.resolve();
-    expect(screen.queryByText("Akceptuję")).not.toBeInTheDocument();
+    expect(screen.queryByText("Zgadzam się")).not.toBeInTheDocument();
     expect(document.querySelector('script[src*="googletagmanager.com"]')).toBeNull();
   });
 
   it("does not load a script, set GA cookies or create requests before consent and after rejection", async () => {
     render(<AnalyticsConsent measurementId="G-ABC12345" />);
-    const reject = await screen.findByRole("button", { name: "Odrzucam opcjonalne" });
+    const reject = await screen.findByRole("button", { name: "Nie, dziękuję" });
     expect(document.querySelector('script[src*="googletagmanager.com"]')).toBeNull();
     expect(document.cookie).not.toContain("_ga");
     expect(window.dataLayer).toBeUndefined();
@@ -36,7 +36,7 @@ describe("AnalyticsConsent", () => {
 
   it("loads gtag only after explicit acceptance with ads still denied", async () => {
     render(<AnalyticsConsent measurementId="G-ABC12345" />);
-    fireEvent.click(await screen.findByRole("button", { name: "Akceptuję" }));
+    fireEvent.click(await screen.findByRole("button", { name: "Zgadzam się" }));
     await waitFor(() => expect(document.querySelector('script[src*="googletagmanager.com"]')).not.toBeNull());
     expect(window.__egzaminioAnalyticsReady).toBe(true);
     expect(window.dataLayer).toEqual(expect.arrayContaining([

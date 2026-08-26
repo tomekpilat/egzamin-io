@@ -3,6 +3,7 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 
 const migration = readFileSync(join(process.cwd(), "supabase/migrations/20260825230000_ai_tutor.sql"), "utf8");
+const chatStatusFix = readFileSync(join(process.cwd(), "supabase/migrations/20260826130000_fix_ai_chat_status.sql"), "utf8");
 
 describe("AI tutor database security and accounting", () => {
   it("requires reviewed, versioned explanations tied to the answer key", () => {
@@ -26,5 +27,12 @@ describe("AI tutor database security and accounting", () => {
     expect(migration).toContain("cost_microusd bigint not null default 0");
     expect(migration).toContain("latency_ms_total bigint not null default 0");
     expect(migration).toContain("purge_expired_ai_chat_history");
+  });
+
+  it("repairs the chat status return shape without widening database access", () => {
+    expect(chatStatusFix).toContain("returns table (chat_messages jsonb, used_count integer, daily_limit integer, active_plan text)");
+    expect(chatStatusFix).toContain("limit_value,\n    plan_name;");
+    expect(chatStatusFix).not.toContain("limit_value,\n    limit_value,");
+    expect(chatStatusFix).toContain("grant execute on function public.get_ai_chat_for_student(uuid, text) to service_role");
   });
 });
