@@ -34,7 +34,7 @@ export async function POST(request: Request) {
       const limited = /too many/i.test(error.message);
       return Response.json({ message: limited ? "Spróbuj ponownie za kilka minut." : "Zapis jest chwilowo niedostępny." }, { status: limited ? 429 : 503 });
     }
-    return Response.json({ message: validation.value.subscriptionType === "plus_waitlist" ? "Powiadomimy Cię o starcie planu Plus." : `Powiadomimy Cię, gdy zweryfikujemy progi dla ${validation.value.schoolName}.` }, { status: 201 });
+    return Response.json({ message: validation.value.subscriptionType === "plus_waitlist" ? "Powiadomimy Cię o starcie pakietu Plus." : `Powiadomimy Cię, gdy zweryfikujemy progi dla ${validation.value.schoolName}.` }, { status: 201 });
   } catch {
     return Response.json({ message: "Zapis jest chwilowo niedostępny." }, { status: 503 });
   }

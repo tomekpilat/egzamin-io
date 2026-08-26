@@ -12,9 +12,9 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { SUBJECT_CATEGORIES, SubjectIcon } from "@/components/subject-icon";
-import { calculatePlusEconomics, formatPln, PLAN_COMPARISON_ROWS, PLUS_ANNUAL_PRICE_PLN } from "@/lib/plans";
+import { calculatePlusPackageEconomics, PLAN_COMPARISON_ROWS, PLUS_PACKAGE_PRICE_PLN } from "@/lib/plans";
 
-const plusEconomics = calculatePlusEconomics();
+const plusEconomics = calculatePlusPackageEconomics();
 
 export default function Home() {
   const [selectedAnswer, setSelectedAnswer] = useState("B");
@@ -103,13 +103,13 @@ export default function Home() {
       </section>
 
       <section className="section pricing-section" id="dostep">
-        <div className="section-heading"><span className="section-kicker">Proste plany</span><h2>Free na start. Plus do regularnej nauki.</h2><p>{PLUS_ANNUAL_PRICE_PLN} zł rocznie to {formatPln(plusEconomics.monthly)} zł miesięcznie lub około {Math.round(plusEconomics.daily * 100)} gr dziennie.</p></div>
+        <div className="section-heading"><span className="section-kicker">Prosty dostęp</span><h2>Free na start. Pakiet Plus do regularnej nauki.</h2><p>{PLUS_PACKAGE_PRICE_PLN} zł jednorazowo. Bez abonamentu i automatycznego odnowienia.</p></div>
         <Card className="pricing-table-card">
-          <div className="pricing-table-head"><span>Porównanie</span><div><b>Free</b><small>0 zł</small></div><div className="plus-heading"><b>Plus</b><small>119 zł / rok</small></div></div>
-          <div className="pricing-table" role="table" aria-label="Porównanie planu Free i Plus">{PLAN_COMPARISON_ROWS.map(([feature, free, plus]) => <div className="pricing-row" role="row" key={feature}><b role="rowheader">{feature}</b><span role="cell">{free}</span><span role="cell">{plus}</span></div>)}</div>
-          <div className="pricing-value"><b>Czy Plus się opłaca?</b><span>Przy 3 sesjach tygodniowo koszt jednej sesji to około {Math.round(plusEconomics.perSession * 100)} gr.</span></div>
-          <div className="pricing-actions"><Button asChild><a href="/logowanie?tryb=rejestracja">Zacznij za darmo</a></Button><Button variant="outline" asChild><a href="/plan-plus" data-analytics-event="plan_plus_cta_clicked">Poznaj plan Plus</a></Button></div>
-          <MarketingSignupForm subscriptionType="plus_waitlist" sourcePath="/" title="Powiadom mnie o starcie Plus" description="Zostaw e-mail. Napiszemy, gdy sprzedaż ruszy — bez zakładania konta." submitLabel="Dołącz do listy" compact />
+          <div className="pricing-table-head"><span>Porównanie</span><div><b>Free</b><small>0 zł</small></div><div className="plus-heading"><b>Pakiet Plus</b><small>{PLUS_PACKAGE_PRICE_PLN} zł / pakiet</small></div></div>
+          <div className="pricing-table" role="table" aria-label="Porównanie wersji Free i pakietu Plus">{PLAN_COMPARISON_ROWS.map(([feature, free, plus]) => <div className="pricing-row" role="row" key={feature}><b role="rowheader">{feature}</b><span role="cell">{free}</span><span role="cell">{plus}</span></div>)}</div>
+          <div className="pricing-value"><b>Czy pakiet się opłaca?</b><span>Dwie godziny korepetycji po {plusEconomics.tutoringHourlyPrice} zł kosztują {plusEconomics.twoTutoringHours} zł. Pakiet kosztuje {PLUS_PACKAGE_PRICE_PLN} zł — o {plusEconomics.differenceVsTwoHours} zł mniej — i wspiera regularną pracę między lekcjami. Nie zastępuje indywidualnego nauczyciela.</span></div>
+          <div className="pricing-actions"><Button asChild><a href="/logowanie?tryb=rejestracja">Zacznij za darmo</a></Button><Button variant="outline" asChild><a href="/plan-plus" data-analytics-event="plan_plus_cta_clicked">Poznaj pakiet Plus</a></Button></div>
+          <MarketingSignupForm subscriptionType="plus_waitlist" sourcePath="/" title="Powiadom mnie o starcie pakietu Plus" description="Zostaw e-mail. Napiszemy, gdy sprzedaż ruszy — bez zakładania konta." submitLabel="Dołącz do listy" compact />
         </Card>
       </section>
 

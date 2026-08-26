@@ -10,8 +10,8 @@ describe("Plan Plus screen", () => {
   it("uses one shared plan comparison on the landing and dedicated page", () => {
     expect(page).toContain("PLAN_COMPARISON_ROWS.map");
     expect(landing).toContain("PLAN_COMPARISON_ROWS.map");
-    expect(page).toContain("PLUS_ANNUAL_PRICE_PLN");
-    expect(page).toContain("formatPln(economics.monthly)");
+    expect(page).toContain("PLUS_PACKAGE_PRICE_PLN");
+    expect(page).toContain("calculatePlusPackageEconomics");
   });
 
   it("links both dashboard roles to their benefit section", () => {
@@ -23,7 +23,7 @@ describe("Plan Plus screen", () => {
 
   it("uses a waitlist before payments instead of a dead checkout", () => {
     expect(page).toContain("Powiadom mnie o starcie");
-    expect(page).toContain("Sprzedaż jeszcze nie wystartowała");
+    expect(page).toContain("Pakiet Plus · wkrótce");
     expect(page).not.toMatch(/href=["']\/checkout/);
     expect(page).toContain('subscriptionType="plus_waitlist"');
     expect(page).not.toContain("mailto:kontakt@egzamin.io?subject=Powiadom");
@@ -32,8 +32,14 @@ describe("Plan Plus screen", () => {
 
   it("supports an explicit payment CTA only after a valid checkout is configured", () => {
     expect(page).toContain("resolvePlusCheckout(process.env.NEXT_PUBLIC_PLUS_CHECKOUT_URL)");
-    expect(page).toContain("Zamawiam i płacę");
-    expect(page).toContain("Plan odnawia się co 12 miesięcy");
+    expect(page).toContain("Pakiet nie odnawia się automatycznie");
+    expect(page).toContain("Zamawiam pakiet i płacę");
+  });
+
+  it("compares the package with tutoring without claiming it replaces a teacher", () => {
+    expect(page).toContain("dwie korepetycje kosztują");
+    expect(page).toContain("nie zastępuje indywidualnego nauczyciela");
+    expect(landing).toContain("Dwie godziny korepetycji");
   });
 
   it("links all required legal information and the panel return", () => {

@@ -111,7 +111,7 @@ function AiTutorConversation({ questionId }: { questionId: string }) {
         {usage.remaining > 0 ? <div className="ai-tutor-composer">
           <Textarea value={input} onChange={(event) => setInput(event.target.value)} onKeyDown={(event) => { if (event.key === "Enter" && !event.shiftKey) { event.preventDefault(); void sendMessage(); } }} maxLength={AI_MESSAGE_MAX_LENGTH} rows={2} placeholder="Np. skąd wziął się ten krok?" aria-label="Pytanie do nauczyciela AI" disabled={sending} />
           <Button type="button" size="icon" aria-label="Wyślij pytanie" onClick={() => void sendMessage()} disabled={sending || input.trim().length < 2}><Send aria-hidden="true" /></Button>
-        </div> : <div className="ai-tutor-limit"><div><b>Dzisiejszy limit został wykorzystany</b><span>Nowe pytania będą dostępne jutro.</span></div>{usage.plan === "free" && <Button variant="outline" asChild><a href="/plan-plus#porownanie">Poznaj plan Plus</a></Button>}</div>}
+        </div> : <div className="ai-tutor-limit"><div><b>Dzisiejszy limit został wykorzystany</b><span>Nowe pytania będą dostępne jutro.</span></div>{usage.plan === "free" && <Button variant="outline" asChild><a href="/plan-plus#porownanie">Poznaj pakiet Plus</a></Button>}</div>}
         <p className="ai-tutor-privacy"><ShieldCheck aria-hidden="true" /> Nie wpisuj danych osobowych. Do modelu nie wysyłamy profilu, e-maila ani postępów ucznia.</p>
       </>}
     </CardContent>

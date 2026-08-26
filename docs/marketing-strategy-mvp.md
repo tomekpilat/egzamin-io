@@ -63,18 +63,14 @@ Pierwszych nauczycieli należy traktować jako radę produktu, a nie jako szerok
 - podstawowy postęp,
 - jeden profil ucznia.
 
-### Plus — hipoteza cenowa
+### Pakiet Plus
 
 - pełna baza i plan powtórek,
 - wyższy limit rozmów z AI,
 - raport rodzica,
 - inteligentne powtórki.
 
-Test cenowy, dopiero po potwierdzeniu retencji:
-
-- wariant A: 29 zł miesięcznie,
-- wariant B: 39 zł miesięcznie,
-- wariant C: 99 zł za dostęp do egzaminu 2027.
+Cena startowa: **149 zł jednorazowo za pakiet**, bez automatycznego odnowienia. W komunikacji porównuj ją z przykładowym kosztem dwóch godzin korepetycji po 80 zł, ale jasno zaznaczaj, że aplikacja wspiera regularną pracę i nie zastępuje indywidualnego nauczyciela.
 
 Nie obniżać ceny przed sprawdzeniem, czy barierą jest cena, czy brak wartości w pierwszej sesji.
 
@@ -139,7 +135,7 @@ Kryterium wyjścia: co najmniej 30% retencji D7 i minimum 70% pozytywnych ocen w
 - program poleceń nauczycieli,
 - pierwsze reklamy Meta wyłącznie do rodziców,
 - newsletter „Jedno zadanie na tydzień”,
-- test planu Plus bez agresywnych blokad.
+- test pakietu Plus bez agresywnych blokad.
 
 ### Etap 4 — monetyzacja (listopad 2026)
 

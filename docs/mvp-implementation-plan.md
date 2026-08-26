@@ -146,21 +146,21 @@ Zakres:
 
 Kryterium wyjścia: nieweryfikowane konto nie może wywołać RPC tworzącego grupę ani pobrać wyników, nawet poza interfejsem.
 
-## Etap 6 — plan Plus i płatności
+## Etap 6 — pakiet Plus i płatności
 
 Priorytet: P1 po potwierdzeniu retencji i jakości AI. Szacunkowo: 1 sprint.
 
 Zakres:
 
 - wybór operatora płatności i umowy powierzenia,
-- cena miesięczna/roczna, jasne odnowienie i rezygnacja,
+- jednorazowa cena 149 zł, dokładny zakres i czas dostępu, bez automatycznego odnowienia,
 - checkout z jednoznacznym obowiązkiem zapłaty,
 - zgody wymagane do wcześniejszego rozpoczęcia usługi cyfrowej,
-- webhooki idempotentne i stan subskrypcji po stronie serwera,
+- webhooki idempotentne i stan uprawnienia do pakietu po stronie serwera,
 - faktury/rachunki, zwroty i obsługa odstąpienia,
 - limity egzekwowane w bazie, nie w przeglądarce.
 
-Kryterium wyjścia: prawnik zatwierdził checkout i regulamin, a testy obejmują płatność, odnowienie, błąd, anulowanie, zwrot i powtórzony webhook.
+Kryterium wyjścia: prawnik zatwierdził checkout i regulamin, a testy obejmują płatność jednorazową, nadanie dostępu, błąd, zwrot, wygaśnięcie dostępu i powtórzony webhook.
 
 ## Etap 7 — analityka, marketing i pilotaż
 

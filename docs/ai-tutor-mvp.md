@@ -5,7 +5,7 @@
 Nauczyciel AI pojawia się dopiero po sprawdzeniu odpowiedzi ucznia. Rozmowa jest zawsze przypisana do jednego zadania i korzysta z zatwierdzonego opracowania, a nie z samej wiedzy modelu.
 
 - plan Free: 3 udane pytania dziennie,
-- plan Plus: 50 udanych pytań dziennie,
+- pakiet Plus: 50 udanych pytań dziennie,
 - limit jest rezerwowany atomowo w PostgreSQL, więc równoległe żądania go nie omijają,
 - awaria lub timeout modelu zwalnia rezerwację i nie zużywa pytania,
 - zapisujemy model, tokeny, szacowany koszt, czas odpowiedzi i status błędu,

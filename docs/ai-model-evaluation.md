@@ -25,7 +25,7 @@ razem: 0,00042 USD
 1000 odpowiedzi: około 0,42 USD
 ```
 
-Przy pełnym wykorzystaniu 50 pytań dziennie przez cały rok daje to około 7,67 USD na aktywnego użytkownika Plus rocznie przed ewentualnym podwojeniem cen w godzinach szczytu, podatkami i innymi kosztami infrastruktury. Przy cenie 119 zł rocznie sam koszt modelu pozostawia zapas, ale rentowność trzeba oceniać łącznie z płatnościami, hostingiem, obsługą i podatkami.
+Przy pełnym wykorzystaniu 50 pytań dziennie przez 12 miesięcy daje to około 7,67 USD na aktywnego użytkownika pakietu Plus przed ewentualnym podwojeniem cen w godzinach szczytu, podatkami i innymi kosztami infrastruktury. Przy cenie pakietu 149 zł sam koszt modelu pozostawia zapas, ale rentowność trzeba oceniać łącznie z faktycznym okresem dostępu, płatnościami, hostingiem, obsługą i podatkami.
 
 ## Co jeszcze trzeba zmierzyć
 

@@ -19,7 +19,7 @@ export default function PrivacyPage() {
       </div>
 
       <nav className="legal-toc" aria-label="Spis treści">
-        <b>Na tej stronie</b><a href="#administrator">Administrator</a><a href="#dane">Dane i źródła</a><a href="#cele">Cele i podstawy</a><a href="#dzieci">Dzieci i rodzice</a><a href="#ai">Nauczyciel AI</a><a href="#feedback">Feedback</a><a href="#newsletter">Alerty i lista Plus</a><a href="#analityka">Analityka GA4</a><a href="#odbiorcy">Dostawcy i transfery</a><a href="#retencja">Jak długo przechowujemy</a><a href="#prawa">Twoje prawa</a>
+        <b>Na tej stronie</b><a href="#administrator">Administrator</a><a href="#dane">Dane i źródła</a><a href="#cele">Cele i podstawy</a><a href="#dzieci">Dzieci i rodzice</a><a href="#ai">Nauczyciel AI</a><a href="#feedback">Feedback</a><a href="#newsletter">Alerty i lista pakietu Plus</a><a href="#analityka">Analityka GA4</a><a href="#odbiorcy">Dostawcy i transfery</a><a href="#retencja">Jak długo przechowujemy</a><a href="#prawa">Twoje prawa</a>
       </nav>
 
       <section className="legal-section" id="administrator">
@@ -40,7 +40,7 @@ export default function PrivacyPage() {
             <tr><td>Płatności</td><td>Plan, status płatności, identyfikator transakcji, dane do dokumentu sprzedaży; bez pełnych danych karty</td><td>Od użytkownika i operatora płatności po uruchomieniu planu płatnego</td></tr>
             <tr><td>Bezpieczeństwo</td><td>Adres IP, typ urządzenia i przeglądarki, zdarzenia logowania, błędy, identyfikatory sesji</td><td>Automatycznie z urządzenia i infrastruktury</td></tr>
             <tr><td>Feedback w aplikacji</td><td>Kategoria, opcjonalna ocena, treść opinii, rola konta, bieżący ekran i identyfikator zadania; adres e-mail tylko po zgodzie na kontakt</td><td>Od użytkownika i z kontekstu bieżącego ekranu</td></tr>
-            <tr><td>Alerty rekrutacyjne i lista Plus</td><td>Adres e-mail, typ zapisu, wskazana szkoła lub klasa i rok rekrutacji, dokładna treść i wersja zgody, czas i źródło zapisu oraz status wypisu</td><td>Od osoby wypełniającej osobny formularz</td></tr>
+            <tr><td>Alerty rekrutacyjne i lista pakietu Plus</td><td>Adres e-mail, typ zapisu, wskazana szkoła lub klasa i rok rekrutacji, dokładna treść i wersja zgody, czas i źródło zapisu oraz status wypisu</td><td>Od osoby wypełniającej osobny formularz</td></tr>
             <tr><td>Opcjonalna analityka GA4</td><td>Oczyszczona ścieżka strony, zatwierdzona nazwa zdarzenia, identyfikator urządzenia/sesji w cookies, przybliżona lokalizacja, typ urządzenia i przeglądarki; bez danych konta i treści edukacyjnych</td><td>Automatycznie z urządzenia, wyłącznie po zgodzie</td></tr>
             <tr><td>Kontakt</td><td>Treść wiadomości, adres kontaktowy, historia rozwiązania sprawy</td><td>Od osoby kontaktującej się</td></tr>
           </tbody>
@@ -91,7 +91,7 @@ export default function PrivacyPage() {
       </section>
 
       <section className="legal-section" id="newsletter">
-        <h2>7. Alerty rekrutacyjne i lista oczekujących Plus</h2>
+        <h2>7. Alerty rekrutacyjne i lista oczekujących na pakiet Plus</h2>
         <p>Zapis nie wymaga konta i jest niezależny od użycia kalkulatora. Adres e-mail zapisujemy dopiero po zaznaczeniu osobnej, niewymuszonej zgody. Przy alercie rekrutacyjnym zapisujemy również nazwę szkoły lub klasy i rok, aby wysłać informację odpowiadającą prośbie. Nie zapisujemy ocen, procentów ani wyniku wpisanego do kalkulatora.</p>
         <p>Każda wiadomość wysłana z tych list powinna zawierać indywidualny link rezygnacji prowadzący do strony <a href="/wypisz">wypisu</a>. Zgodę można wycofać jednym kliknięciem lub przez wiadomość na <a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a>. Wycofanie nie wpływa na zgodność wcześniejszego przetwarzania i nie ogranicza korzystania z bezpłatnego kalkulatora ani konta.</p>
       </section>
@@ -129,7 +129,7 @@ export default function PrivacyPage() {
             <tr><td>Zanonimizowane statystyki nauki</td><td>Bezterminowo, jeżeli nie pozwalają już zidentyfikować osoby</td></tr>
             <tr><td>Logi bezpieczeństwa</td><td>12 miesięcy, dłużej wyłącznie dla konkretnego incydentu lub roszczenia</td></tr>
             <tr><td>Feedback z aplikacji</td><td>24 miesiące od zamknięcia zgłoszenia, krócej po skutecznym żądaniu usunięcia, chyba że dane są potrzebne do obrony roszczeń</td></tr>
-            <tr><td>Alert rekrutacyjny i lista Plus</td><td>Alert do 31 sierpnia danego roku rekrutacji, a lista Plus do 12 miesięcy po starcie sprzedaży — zawsze krócej po wycofaniu zgody; minimalny dowód zgody lub wypisu może być przechowywany przez okres potrzebny do wykazania zgodności lub obrony roszczeń</td></tr>
+            <tr><td>Alert rekrutacyjny i lista pakietu Plus</td><td>Alert do 31 sierpnia danego roku rekrutacji, a lista pakietu Plus do 12 miesięcy po starcie sprzedaży — zawsze krócej po wycofaniu zgody; minimalny dowód zgody lub wypisu może być przechowywany przez okres potrzebny do wykazania zgodności lub obrony roszczeń</td></tr>
             <tr><td>Google Analytics 4</td><td>Cookies analityczne maksymalnie 90 dni bez odnawiania; dane użytkownika i zdarzeń w GA4 — minimalne ustawienie 2 miesiące. Standardowe zagregowane raporty GA4 mogą być dostępne dłużej zgodnie z działaniem usługi Google.</td></tr>
             <tr><td>Lokalny zapis wyboru analityki</td><td>180 dni lub do usunięcia danych witryny; po zmianie decyzji zapis zastępujemy aktualnym wyborem</td></tr>
             <tr><td>Kontakt i reklamacje</td><td>24 miesiące od zamknięcia sprawy lub przez okres dochodzenia/obrony roszczeń</td></tr>

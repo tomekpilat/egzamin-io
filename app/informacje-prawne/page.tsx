@@ -39,7 +39,7 @@ export default function LegalHubPage() {
           <li>Prawna akceptacja wdrożonego procesu zgody: osobny e-mail, zablokowane konto ucznia i decyzja z zalogowanego konta rodzica.</li>
           <li>Retencja wdrożona technicznie: usuwanie rozmów, logów, kont i kopii zapasowych.</li>
           <li>Licencja i sposób oznaczania każdego materiału źródłowego CKE.</li>
-          <li>Cennik, cykl rozliczeń, zasady odnowienia i checkout zgodny z prawami konsumenta.</li>
+          <li>Zakres pakietu Plus, dokładny czas dostępu i checkout zgodny z prawami konsumenta.</li>
           <li>Ocena skutków dla ochrony danych dzieci i ocena ryzyka funkcji AI.</li>
           <li>Akceptacja warunków Google Analytics, wyłączenie funkcji reklamowych i udokumentowanie ustawień retencji oraz udostępniania danych.</li>
         </ul>

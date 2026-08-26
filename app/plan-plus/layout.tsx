@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Plan Plus — egzaminio",
-  description: "Porównaj plan Free i plan Plus za 119 zł na 12 miesięcy.",
+  title: "Pakiet Plus — egzaminio",
+  description: "Porównaj wersję Free i pakiet Plus za 149 zł jednorazowo, bez automatycznego odnowienia.",
 };
 
 export default function PlanPlusLayout({ children }: { children: React.ReactNode }) {

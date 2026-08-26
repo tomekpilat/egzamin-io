@@ -487,7 +487,7 @@ export default function DashboardPage() {
             <a href="#ustawienia"><span>⚙</span> Ustawienia</a>
           </>}
         </nav>
-        <div className="sidebar-plan"><b>Plan bezpłatny</b><span>3 pytania AI dziennie</span><i><em /></i><a href={profile.role === "parent" ? "/plan-plus#dla-rodzica" : profile.role === "student" ? "/plan-plus#dla-ucznia" : "/plan-plus"}>Poznaj plan Plus →</a></div>
+        <div className="sidebar-plan"><b>Wersja bezpłatna</b><span>3 pytania AI dziennie</span><i><em /></i><a href={profile.role === "parent" ? "/plan-plus#dla-rodzica" : profile.role === "student" ? "/plan-plus#dla-ucznia" : "/plan-plus"}>Poznaj pakiet Plus →</a></div>
         <Button variant="ghost" className="sidebar-signout" type="button" onClick={signOut}>Wyloguj się</Button>
       </aside>}
 
@@ -505,7 +505,7 @@ export default function DashboardPage() {
           {profile.role === "admin" && <AdminPanel counts={counts} feedback={adminFeedback} busy={adminActionBusy} feedbackBusyId={feedbackBusyId} error={adminActionError} onGrantTeacher={grantTeacherRole} onUpdateFeedback={(id, status) => void updateFeedbackStatus(id, status)} />}
           {((profile.role === "parent" && parentView === "settings") || (profile.role === "student" && studentView === "settings") || (profile.role !== "parent" && profile.role !== "student")) && <Card className="account-settings-card" id="ustawienia">
             <CardHeader><CardTitle>Ustawienia konta</CardTitle><CardDescription>Motyw, prywatność i zarządzanie danymi w jednym miejscu.</CardDescription></CardHeader>
-            <CardContent className="account-settings-actions"><div><span>Wygląd aplikacji</span><ThemeToggle /></div>{(profile.role === "parent" || profile.role === "student") && <Button variant="outline" asChild><a href={profile.role === "parent" ? "/plan-plus#dla-rodzica" : "/plan-plus#dla-ucznia"}>Poznaj plan Plus</a></Button>}<Button variant="outline" asChild><a href="/polityka-prywatnosci">Polityka prywatności</a></Button><Button variant="outline" asChild><a href="/usun-konto">Usuń konto i dane</a></Button></CardContent>
+            <CardContent className="account-settings-actions"><div><span>Wygląd aplikacji</span><ThemeToggle /></div>{(profile.role === "parent" || profile.role === "student") && <Button variant="outline" asChild><a href={profile.role === "parent" ? "/plan-plus#dla-rodzica" : "/plan-plus#dla-ucznia"}>Poznaj pakiet Plus</a></Button>}<Button variant="outline" asChild><a href="/polityka-prywatnosci">Polityka prywatności</a></Button><Button variant="outline" asChild><a href="/usun-konto">Usuń konto i dane</a></Button></CardContent>
           </Card>}
         </div>
       </div>

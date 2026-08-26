@@ -38,7 +38,7 @@ export function marketingConsentText(type: MarketingSubscriptionType, schoolName
     const school = clean(schoolName, 160);
     return `Chcę otrzymać e-mailem informację o progach rekrutacyjnych${school ? ` dla ${school}` : " dla wskazanej szkoły"} oraz materiały egzaminio pomagające przygotować się do rekrutacji. Zgodę mogę wycofać w każdej chwili jednym kliknięciem w wiadomości.`;
   }
-  return "Chcę otrzymać e-mailem informację o starcie i ofercie planu egzaminio Plus. Zgodę mogę wycofać w każdej chwili jednym kliknięciem w wiadomości.";
+  return "Chcę otrzymać e-mailem informację o starcie i ofercie pakietu egzaminio Plus. Zgodę mogę wycofać w każdej chwili jednym kliknięciem w wiadomości.";
 }
 
 export function validateMarketingSignup(input: MarketingSignupInput) {
