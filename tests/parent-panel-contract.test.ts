@@ -34,8 +34,8 @@ describe("parent panel actions", () => {
     expect(panel).toContain('"/plan-plus#dla-rodzica"');
     expect(panel).toContain('"/plan-plus#dla-ucznia"');
     expect(panel).toContain('<a href="/polityka-prywatnosci">Polityka prywatności</a>');
-    expect(panel).not.toContain('<div className="dashboard-topbar-actions"><ThemeToggle />');
-    expect(panel).toContain('<span>Wygląd aplikacji</span><ThemeToggle />');
+    expect(panel).not.toContain("ThemeToggle");
+    expect(panel).toContain('<span>Wygląd aplikacji</span><ThemeSettings />');
   });
 
   it("links visibly to child-safety information", () => {

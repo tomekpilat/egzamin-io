@@ -4,7 +4,6 @@
 import { useEffect, useState } from "react";
 import { FileCheck2 } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -72,7 +71,7 @@ export default function AcceptLegalChangesPage() {
 
   return (
     <main className="consent-page">
-      <div className="consent-top"><a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a><ThemeToggle /></div>
+      <div className="consent-top"><a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a></div>
       <Card className="consent-card legal-update-card">
         <CardHeader>
           <Badge variant="secondary"><FileCheck2 size={13} aria-hidden="true" /> Aktualizacja dokumentów</Badge>

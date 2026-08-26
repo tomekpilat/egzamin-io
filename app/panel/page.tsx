@@ -15,7 +15,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { ThemeSettings } from "@/components/theme-settings";
 import { isUserRole, roleLabels, type UserRole } from "@/lib/roles";
 import { normalizeWeeklyGoal, summarizeParentPreferences } from "@/lib/parent-preferences";
 import { getSupabaseClient } from "@/lib/supabase-browser";
@@ -505,7 +505,7 @@ export default function DashboardPage() {
           {profile.role === "admin" && <AdminPanel counts={counts} feedback={adminFeedback} busy={adminActionBusy} feedbackBusyId={feedbackBusyId} error={adminActionError} onGrantTeacher={grantTeacherRole} onUpdateFeedback={(id, status) => void updateFeedbackStatus(id, status)} />}
           {((profile.role === "parent" && parentView === "settings") || (profile.role === "student" && studentView === "settings") || (profile.role !== "parent" && profile.role !== "student")) && <Card className="account-settings-card" id="ustawienia">
             <CardHeader><CardTitle>Ustawienia konta</CardTitle><CardDescription>Motyw, prywatność i zarządzanie danymi w jednym miejscu.</CardDescription></CardHeader>
-            <CardContent className="account-settings-actions"><div><span>Wygląd aplikacji</span><ThemeToggle /></div>{(profile.role === "parent" || profile.role === "student") && <Button variant="outline" asChild><a href={profile.role === "parent" ? "/plan-plus#dla-rodzica" : "/plan-plus#dla-ucznia"}>Poznaj pakiet Plus</a></Button>}<Button variant="outline" asChild><a href="/polityka-prywatnosci">Polityka prywatności</a></Button><Button variant="outline" asChild><a href="/usun-konto">Usuń konto i dane</a></Button></CardContent>
+            <CardContent className="account-settings-actions"><div className="account-theme-setting"><span>Wygląd aplikacji</span><ThemeSettings /></div>{(profile.role === "parent" || profile.role === "student") && <Button variant="outline" asChild><a href={profile.role === "parent" ? "/plan-plus#dla-rodzica" : "/plan-plus#dla-ucznia"}>Poznaj pakiet Plus</a></Button>}<Button variant="outline" asChild><a href="/polityka-prywatnosci">Polityka prywatności</a></Button><Button variant="outline" asChild><a href="/usun-konto">Usuń konto i dane</a></Button></CardContent>
           </Card>}
         </div>
       </div>

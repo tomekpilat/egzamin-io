@@ -12,7 +12,6 @@ import { Label } from "@/components/ui/label";
 import { getSupabaseClient } from "@/lib/supabase-browser";
 import { isUserRole, type SelfServiceRole } from "@/lib/roles";
 import { LEGAL_VERSION } from "@/lib/legal";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { resolveAccountRoute } from "@/lib/account-routing";
 
 const choices: Array<{
@@ -139,7 +138,7 @@ export default function ChooseRolePage() {
 
   return (
     <main className="onboarding-page">
-      <div className="onboarding-top"><a className="onboarding-brand" href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a><ThemeToggle /></div>
+      <div className="onboarding-top"><a className="onboarding-brand" href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a></div>
       <section className="onboarding-card">
         <span className="section-kicker">Ostatni krok</span>
         <h1>Jak chcesz korzystać z egzaminio?</h1>

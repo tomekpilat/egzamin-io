@@ -10,7 +10,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { getSupabaseClient } from "@/lib/supabase-browser";
-import { ThemeToggle } from "@/components/theme-toggle";
 
 type ConsentStatus = {
   guardian_email: string;
@@ -60,7 +59,7 @@ export default function WaitingForGuardianPage() {
 
   return (
     <main className="consent-page">
-      <div className="consent-top"><a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a><ThemeToggle /></div>
+      <div className="consent-top"><a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a></div>
       <Card className="consent-card">
         <CardHeader>
           <Badge variant="secondary"><ShieldCheck size={13} /> Bezpieczne konto ucznia</Badge>

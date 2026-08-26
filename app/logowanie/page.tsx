@@ -11,7 +11,6 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { SocialAuthButtons, type SocialProvider } from "@/components/social-auth-buttons";
 import { validateSignupConfirmation } from "@/lib/auth-validation";
 import { trackAnalyticsEvent } from "@/lib/analytics";
@@ -280,7 +279,7 @@ export default function LoginPage() {
         <a href="/" aria-label="egzaminio — strona główna">
           <BrandLogo />
         </a>
-        <div className="account-header-actions"><ThemeToggle /><a href="/" className="account-back">← Wróć na stronę</a></div>
+        <div className="account-header-actions"><a href="/" className="account-back">← Wróć na stronę</a></div>
       </header>
 
       <section className="auth-shell">

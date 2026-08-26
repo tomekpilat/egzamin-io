@@ -364,6 +364,7 @@
 .child-settings-actions, .account-settings-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .account-settings-card, .admin-teacher-card { margin-top: 15px; scroll-margin-top: 22px; }
 .account-settings-actions > div { margin-right: auto; display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 13px; }
+.account-settings-actions > .account-theme-setting { flex: 1 1 390px; justify-content: space-between; }
 .admin-teacher-form { display: grid; gap: 9px; }
 .admin-teacher-form > label { font-size: 13px; font-weight: 750; }
 .admin-teacher-form > div { display: grid; grid-template-columns: minmax(220px, 1fr) auto; gap: 10px; }
@@ -620,6 +621,9 @@
   .child-settings-actions { display: grid; }
   .account-settings-actions { align-items: stretch; flex-direction: column; }
   .account-settings-actions > div { width: 100%; margin-right: 0; justify-content: space-between; }
+  .account-settings-actions > .account-theme-setting { flex-basis: auto; align-items: flex-start; flex-direction: column; }
+  .theme-settings { width: 100%; }
+  .theme-settings [data-slot="button"] { min-width: 0; flex: 1; }
   .practice-layout, .practice-subject-progress { grid-template-columns: 1fr; }
   .practice-launch-filters, .practice-paper-grid { grid-template-columns: 1fr; }
   .practice-launch-summary { align-items: stretch; flex-direction: column; }
