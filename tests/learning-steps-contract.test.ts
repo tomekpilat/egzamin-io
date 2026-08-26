@@ -6,19 +6,19 @@ const page = readFileSync(join(process.cwd(), "app/page.tsx"), "utf8");
 const styles = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
 
 describe("learning steps section", () => {
-  it("uses one accessible Lucide icon for every step", () => {
-    expect(page).toContain('import { Lightbulb, MessageCircleQuestion, PencilLine } from "lucide-react"');
-    expect(page).toContain('<PencilLine aria-hidden="true" />');
-    expect(page).toContain('<MessageCircleQuestion aria-hidden="true" />');
-    expect(page).toContain('<Lightbulb aria-hidden="true" />');
-    expect(page).not.toContain('<div className="step-icon">✎</div>');
-    expect(page).not.toContain('<div className="step-icon">AI</div>');
-    expect(page).not.toContain('<div className="step-icon">↗</div>');
+  it("keeps decorative icons out of the learning steps and calculator hook", () => {
+    expect(page).not.toContain("PencilLine");
+    expect(page).not.toContain("MessageCircleQuestion");
+    expect(page).not.toContain("Lightbulb");
+    expect(page).not.toContain("recruitment-hook-icon");
+    expect(page).not.toContain("<Target />");
+    expect(styles).not.toContain(".step-icon");
+    expect(styles).not.toContain(".recruitment-hook-icon");
   });
 
   it("keeps the cards compact on desktop and mobile", () => {
-    expect(styles).toContain(".step-card { position: relative; min-height: 220px; overflow: hidden; padding: 24px;");
-    expect(styles).toContain(".step-icon { width: 52px; height: 52px; margin: 2px 0 18px;");
-    expect(styles).toContain(".step-card { min-height: 190px; }");
+    expect(styles).toContain(".step-card { position: relative; min-height: 160px; overflow: hidden; padding: 24px; display: grid; align-content: center;");
+    expect(styles).toContain(".step-card { min-height: 150px; padding: 22px; }");
+    expect(styles).toContain(".step-card { min-height: 150px; }");
   });
 });
