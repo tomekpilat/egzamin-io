@@ -21,7 +21,11 @@ import {
 function configureAnalytics(measurementId: string) {
   if (window.__egzaminioAnalyticsReady) return;
   window.dataLayer = window.dataLayer ?? [];
-  window.gtag = window.gtag ?? ((...args: unknown[]) => { window.dataLayer!.push(args); });
+  window.gtag = window.gtag ?? function gtag() {
+    // Google requires the native Arguments object here; a rest-parameter array is not parsed as a gtag command.
+    // eslint-disable-next-line prefer-rest-params
+    window.dataLayer!.push(arguments);
+  };
   window.gtag("consent", "default", { analytics_storage: "denied", ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied" });
   window.gtag("set", "ads_data_redaction", true);
   window.gtag("set", "url_passthrough", false);

@@ -23,7 +23,7 @@ export type AnalyticsConsentRecord = {
 
 declare global {
   interface Window {
-    dataLayer?: unknown[][];
+    dataLayer?: unknown[];
     gtag?: (...args: unknown[]) => void;
     __egzaminioAnalyticsReady?: boolean;
   }

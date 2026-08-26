@@ -14,6 +14,8 @@ describe("GA4 basic consent contract", () => {
     expect(component).toContain('if (!enabled || choice !== "accepted") return');
     expect(component).toContain("document.createElement(\"script\")");
     expect(component).toContain("googletagmanager.com/gtag/js");
+    expect(component).toContain("window.dataLayer!.push(arguments)");
+    expect(component).not.toContain("window.dataLayer!.push(args)");
   });
 
   it("defaults every Consent Mode v2 storage purpose to denied and never grants ads", () => {

@@ -39,9 +39,13 @@ describe("AnalyticsConsent", () => {
     fireEvent.click(await screen.findByRole("button", { name: "Zgadzam się" }));
     await waitFor(() => expect(document.querySelector('script[src*="googletagmanager.com"]')).not.toBeNull());
     expect(window.__egzaminioAnalyticsReady).toBe(true);
-    expect(window.dataLayer).toEqual(expect.arrayContaining([
+    expect(window.dataLayer?.every((command) => Object.prototype.toString.call(command) === "[object Arguments]")).toBe(true);
+    const commands = window.dataLayer?.map((command) => Array.from(command as IArguments));
+    expect(commands).toEqual(expect.arrayContaining([
       expect.arrayContaining(["consent", "default", expect.objectContaining({ analytics_storage: "denied", ad_storage: "denied" })]),
       expect.arrayContaining(["consent", "update", expect.objectContaining({ analytics_storage: "granted", ad_storage: "denied" })]),
+      expect.arrayContaining(["config", "G-ABC12345"]),
+      expect.arrayContaining(["event", "page_view"]),
     ]));
   });
 });
