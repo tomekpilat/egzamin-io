@@ -3,7 +3,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Lightbulb, MessageCircleQuestion, PencilLine } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 import { MarketingSignupForm } from "@/components/marketing-signup-form";
 import { MathFormula } from "@/components/math-formula";
@@ -79,9 +79,9 @@ export default function Home() {
       <section className="section how-section" id="jak-to-dziala">
         <div className="section-heading"><span className="section-kicker">Jak to działa</span><h2>Zadanie. Podpowiedź. Zrozumienie.</h2></div>
         <div className="steps-grid">
-          <Card className="step-card"><h3>Rozwiązujesz</h3><p>Prawdziwe zadanie z arkusza CKE.</p></Card>
-          <Card className="step-card step-navy"><h3>Pytasz</h3><p>AI pomaga dokładnie tam, gdzie utkniesz.</p></Card>
-          <Card className="step-card"><h3>Rozumiesz</h3><p>Wracasz do zadania i kończysz je samodzielnie.</p></Card>
+          <Card className="step-card"><div className="step-heading"><PencilLine aria-hidden="true" /><h3>Rozwiązujesz</h3></div><p>Prawdziwe zadanie z arkusza CKE.</p></Card>
+          <Card className="step-card step-navy"><div className="step-heading"><MessageCircleQuestion aria-hidden="true" /><h3>Pytasz</h3></div><p>AI pomaga dokładnie tam, gdzie utkniesz.</p></Card>
+          <Card className="step-card"><div className="step-heading"><Lightbulb aria-hidden="true" /><h3>Rozumiesz</h3></div><p>Wracasz do zadania i kończysz je samodzielnie.</p></Card>
         </div>
       </section>
 

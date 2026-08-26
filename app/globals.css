@@ -237,10 +237,13 @@ mjx-container { max-width: 100%; color: inherit; }
 .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .step-card { position: relative; min-height: 160px; overflow: hidden; padding: 24px; display: grid; align-content: center; border: 1px solid var(--line); border-radius: 20px; background: white; box-shadow: 0 13px 35px rgba(20,33,61,.05); }
 .step-number { float: right; color: #b6bbc5; font-size: 11px; font-weight: 800; letter-spacing: .08em; }
-.step-card h3 { margin: 0 0 8px; font-size: 22px; letter-spacing: -.03em; }
+.step-heading { margin-bottom: 8px; display: flex; align-items: center; gap: 9px; }
+.step-heading svg { width: 18px; height: 18px; flex: 0 0 18px; opacity: .38; stroke-width: 1.65; }
+.step-card h3 { margin: 0; font-size: 22px; letter-spacing: -.03em; }
 .step-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
 .step-detail { position: absolute; left: 28px; bottom: 27px; padding-top: 11px; border-top: 1px solid #eaebec; color: #747d90; font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
 .step-navy { background: var(--ink); color: white; border-color: var(--ink); transform: translateY(-14px); box-shadow: 0 24px 50px rgba(20,33,61,.18); }
+.step-navy .step-heading svg { opacity: .48; }
 .step-navy p { color: #b8c3d6; }
 .step-navy .step-detail { border-color: rgba(255,255,255,.14); color: #aeb9ce; }
 
