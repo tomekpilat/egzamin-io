@@ -132,21 +132,21 @@ function AiTutorConversation({ questionId, feedback }: { questionId: string; fee
 
   return <Card className="ai-tutor-card" aria-labelledby="ai-tutor-title">
     <CardHeader>
-      <div className="ai-tutor-heading"><div className="ai-tutor-icon"><Sparkles aria-hidden="true" /></div><div><CardTitle id="ai-tutor-title">Pomoc do zadania</CardTitle><CardDescription>Odpowiedź, podpowiedzi i rozmowa są zawsze obok pytania.</CardDescription></div><Badge variant={usage.remaining ? "secondary" : "outline"}>{usage.remaining} z {usage.limit} pytań AI</Badge></div>
+      <div className="ai-tutor-heading"><div className="ai-tutor-icon"><Sparkles aria-hidden="true" /></div><div><CardTitle id="ai-tutor-title">Pomoc do zadania</CardTitle><CardDescription>Najpierw podpowiedzi, potem wyjaśnienie i rozmowa z AI.</CardDescription></div><Badge variant={usage.remaining ? "secondary" : "outline"}>{usage.remaining} z {usage.limit} pytań AI</Badge></div>
     </CardHeader>
     <CardContent className="ai-tutor-content">
-      <section className="ai-assistance-section" aria-labelledby="answer-help-title">
-        <div className="ai-assistance-title"><CheckCircle2 aria-hidden="true" /><b id="answer-help-title">Odpowiedź</b></div>
-        {feedback ? <Alert variant={feedback.isCorrect ? "success" : "warning"} className="practice-feedback"><AlertTitle>{feedback.isCorrect ? "Dobra odpowiedź!" : "Jeszcze nie tym razem"}</AlertTitle><AlertDescription><b>Poprawna odpowiedź: {feedback.correctAnswer}</b><span>{feedback.explanation}</span></AlertDescription></Alert> : <p className="ai-assistance-placeholder">Zaznacz odpowiedź i kliknij „Sprawdź”, aby zobaczyć wynik oraz wyjaśnienie.</p>}
-      </section>
-
-      <section className="ai-assistance-section" aria-labelledby="hints-title">
+      {!feedback && <section className="ai-assistance-section" aria-labelledby="hints-title">
         <div className="ai-assistance-title"><Lightbulb aria-hidden="true" /><b id="hints-title">Podpowiedzi</b></div>
         {loading ? <p className="ai-tutor-loading">Wczytujemy podpowiedzi…</p> : available ? <>
           {visibleHintCount > 0 ? <ol className="ai-hints-list">{hints.slice(0, visibleHintCount).map((hint, index) => <li key={`${index}-${hint}`}>{hint}</li>)}</ol> : <p className="ai-assistance-placeholder">Odkrywaj wskazówki pojedynczo — bez zdradzania całego rozwiązania.</p>}
           {visibleHintCount < hints.length ? <Button type="button" size="sm" variant="outline" onClick={() => setVisibleHintCount((count) => Math.min(count + 1, hints.length))}>{visibleHintCount ? "Pokaż kolejną" : "Pokaż podpowiedź"}</Button> : hints.length > 0 ? <small>To wszystkie podpowiedzi do tego zadania.</small> : null}
         </> : !error ? <p className="ai-assistance-placeholder">Podpowiedzi do tego zadania czekają na zatwierdzenie.</p> : null}
-      </section>
+      </section>}
+
+      {feedback && <section className="ai-assistance-section" aria-labelledby="answer-help-title">
+        <div className="ai-assistance-title"><CheckCircle2 aria-hidden="true" /><b id="answer-help-title">Odpowiedź</b></div>
+        <Alert variant={feedback.isCorrect ? "success" : "warning"} className={`practice-feedback ${feedback.isCorrect ? "is-correct" : "is-incorrect"}`}><AlertTitle>{feedback.isCorrect ? "Dobra odpowiedź!" : "Jeszcze nie tym razem"}</AlertTitle><AlertDescription><b>Poprawna odpowiedź: {feedback.correctAnswer}</b><span>{feedback.explanation}</span></AlertDescription></Alert>
+      </section>}
 
       <section className="ai-assistance-section ai-conversation-section" aria-labelledby="conversation-title">
         <div className="ai-assistance-title"><Sparkles aria-hidden="true" /><div><b id="conversation-title">Zapytaj AI</b><span>Rozmowa dotyczy tylko tego zadania.</span></div></div>

@@ -597,6 +597,9 @@
 .dark .practice-focus-header { background: color-mix(in srgb, var(--paper) 90%, transparent); }
 .dark .practice-focus-question-card { border-color: var(--border); background: var(--card); box-shadow: 0 18px 55px rgba(0,0,0,.2); }
 .dark .ai-tutor-card { border-color: color-mix(in srgb, var(--coral) 34%, var(--border)); background: var(--card); }
+.dark .practice-feedback.is-correct { border-color: #31836f; background: #15372f; color: #b7f7df; }
+.dark .practice-feedback.is-incorrect { border-color: #8d6b25; background: #362d17; color: #fde7a3; }
+.dark .ai-assistance-section .practice-feedback [data-slot="alert-description"] > b { color: inherit; }
 .dark .ai-tutor-message.user > span { background: #f3f2ed; color: #182032; }
 
 @media (max-width: 960px) and (min-width: 681px) {

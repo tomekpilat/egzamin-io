@@ -6,6 +6,7 @@ const route = readFileSync(join(process.cwd(), "app/api/ai/tutor/route.ts"), "ut
 const provider = readFileSync(join(process.cwd(), "lib/ai-provider.ts"), "utf8");
 const component = readFileSync(join(process.cwd(), "components/ai-tutor.tsx"), "utf8");
 const practice = readFileSync(join(process.cwd(), "components/student-practice.tsx"), "utf8");
+const styles = readFileSync(join(process.cwd(), "app/account.css"), "utf8");
 
 describe("AI tutor end-to-end contract", () => {
   it("verifies the user and keeps provider and service keys on the server", () => {
@@ -48,5 +49,13 @@ describe("AI tutor end-to-end contract", () => {
     expect(component).toContain("Nie wpisuj danych osobowych");
     expect(component).toContain('href="/plan-plus#porownanie"');
     expect(route).toContain("pytanie nie zostało odliczone");
+  });
+
+  it("shows hints first and replaces them with readable answer feedback", () => {
+    expect(component.indexOf('{!feedback && <section className="ai-assistance-section"')).toBeLessThan(component.indexOf('{feedback && <section className="ai-assistance-section"'));
+    expect(component).toContain('className={`practice-feedback ${feedback.isCorrect ? "is-correct" : "is-incorrect"}`}');
+    expect(styles).toContain(".dark .practice-feedback.is-correct");
+    expect(styles).toContain(".dark .practice-feedback.is-incorrect");
+    expect(styles).toContain('.dark .ai-assistance-section .practice-feedback [data-slot="alert-description"] > b { color: inherit; }');
   });
 });
