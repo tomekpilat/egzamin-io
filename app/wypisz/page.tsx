@@ -1,8 +1,7 @@
 "use client";
-/* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
 
 import { useState } from "react";
-import { BrandLogo } from "@/components/brand-logo";
+import { SiteHeader } from "@/components/site-header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -24,5 +23,5 @@ export default function UnsubscribePage() {
     }
   }
 
-  return <main className="auth-page"><header className="auth-header"><a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a></header><div className="auth-shell"><Card><CardHeader><CardTitle>Rezygnacja z wiadomości</CardTitle></CardHeader><CardContent className="auth-form">{status === "done" ? <p role="status">{message}</p> : <><p>Jedno kliknięcie potwierdzi rezygnację z alertu lub listy oczekujących powiązanej z tym linkiem.</p><Button onClick={unsubscribe} disabled={status === "sending"}>{status === "sending" ? "Wypisuję…" : "Wypisz mój adres"}</Button>{status === "error" ? <p role="alert">{message}</p> : null}</>}</CardContent></Card></div></main>;
+  return <main className="auth-page"><SiteHeader currentPath="/wypisz" /><div className="auth-shell"><Card><CardHeader><CardTitle>Rezygnacja z wiadomości</CardTitle></CardHeader><CardContent className="auth-form">{status === "done" ? <p role="status">{message}</p> : <><p>Jedno kliknięcie potwierdzi rezygnację z alertu lub listy oczekujących powiązanej z tym linkiem.</p><Button onClick={unsubscribe} disabled={status === "sending"}>{status === "sending" ? "Wypisuję…" : "Wypisz mój adres"}</Button>{status === "error" ? <p role="alert">{message}</p> : null}</>}</CardContent></Card></div></main>;
 }

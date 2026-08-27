@@ -62,6 +62,7 @@ describe("static internal navigation", () => {
   });
 
   it("uses full-page anchors for reliable links back to the homepage", () => {
+    const sharedHeader = readFileSync(join(root, "components", "site-header.tsx"), "utf8");
     const sources = [
       join(appRoot, "logowanie", "page.tsx"),
       join(appRoot, "wybierz-role", "page.tsx"),
@@ -71,8 +72,10 @@ describe("static internal navigation", () => {
     ].map((file) => readFileSync(file, "utf8"));
 
     for (const source of sources) {
-      expect(source).toContain('href="/"');
+      expect(source.includes('href="/"') || source.includes("<SiteHeader")).toBe(true);
       expect(source).not.toMatch(/<Link[^>]*href="\/"/);
     }
+    expect(sharedHeader).toContain('href="/"');
+    expect(sharedHeader).not.toMatch(/<Link[^>]*href="\/"/);
   });
 });

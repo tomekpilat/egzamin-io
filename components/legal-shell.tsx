@@ -1,6 +1,6 @@
-/* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
 import Link from "next/link";
 import { BrandLogo } from "@/components/brand-logo";
+import { SiteHeader } from "@/components/site-header";
 
 const legalLinks = [
   ["/informacje-prawne", "Centrum prawne"],
@@ -23,10 +23,7 @@ type LegalShellProps = {
 export function LegalShell({ title, description, currentPath, children, kicker = "Informacje prawne" }: LegalShellProps) {
   return (
     <main className="legal-page">
-      <header className="account-header legal-header">
-        <a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a>
-        <div className="account-header-actions"><a href="/" className="account-back">← Wróć na stronę</a></div>
-      </header>
+      <SiteHeader currentPath={currentPath} />
       <div className="legal-shell">
         <aside className="legal-sidebar" aria-label="Dokumenty prawne">
           <span>Dokumenty</span>

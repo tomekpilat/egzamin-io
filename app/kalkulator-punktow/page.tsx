@@ -6,6 +6,7 @@ import { ArrowRight, BookOpenCheck, Calculator, Database, GraduationCap, Info, R
 import { BrandLogo } from "@/components/brand-logo";
 import { MarketingSignupForm } from "@/components/marketing-signup-form";
 import { SchoolThresholdSearch } from "@/components/school-threshold-search";
+import { SiteHeader } from "@/components/site-header";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -92,7 +93,7 @@ export default function RecruitmentCalculatorPage() {
   return (
     <main className="calculator-page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-      <header className="calculator-header"><a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a><div className="calculator-header-actions"><Button variant="outline" asChild><a href="/logowanie">Zaloguj się</a></Button></div></header>
+      <SiteHeader currentPath="/kalkulator-punktow" />
 
       <section className="calculator-hero"><div><Badge variant="secondary"><Calculator aria-hidden="true" /> Kalkulator 2027</Badge><h1>Kalkulator punktów<br />do liceum i technikum.</h1><p>Wpisz swoje dane, znajdź klasę w bazie progów i od razu zobacz, jakiego wyniku potrzebujesz. Bez logowania.</p><div className="calculator-source-inline"><ShieldCheck aria-hidden="true" /><span>Aktualne przeliczniki · progi ze wskazanym rokiem i źródłem</span></div></div></section>
 

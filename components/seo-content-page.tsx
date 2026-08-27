@@ -2,6 +2,7 @@
 
 import { ArrowRight, BookOpenCheck, CalendarDays, CheckCircle2, ExternalLink, Info, LibraryBig } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
+import { SiteHeader } from "@/components/site-header";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -12,12 +13,7 @@ function JsonLd({ value }: { value: object }) {
 }
 
 export function SeoHeader() {
-  return (
-    <header className="knowledge-header">
-      <a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a>
-      <nav aria-label="Nawigacja bazy wiedzy"><a href="/baza-wiedzy">Baza wiedzy</a><a href="/kalkulator-punktow">Kalkulator</a><a href="/logowanie">Zaloguj się</a></nav>
-    </header>
-  );
+  return <SiteHeader currentPath="/baza-wiedzy" />;
 }
 
 export function SeoFooter() {

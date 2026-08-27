@@ -7,6 +7,7 @@ import { ArrowRight, Lightbulb, MessageCircleQuestion, PencilLine } from "lucide
 import { BrandLogo } from "@/components/brand-logo";
 import { MarketingSignupForm } from "@/components/marketing-signup-form";
 import { MathFormula } from "@/components/math-formula";
+import { SiteHeader } from "@/components/site-header";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { SUBJECT_CATEGORIES, SubjectIcon } from "@/components/subject-icon";
@@ -21,11 +22,7 @@ export default function Home() {
 
   return (
     <main>
-      <header className="site-header">
-        <a className="brand" href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a>
-        <nav className="desktop-nav" aria-label="Główna nawigacja"><a href="/kalkulator-punktow">Kalkulator</a><a href="/baza-wiedzy">Baza wiedzy</a><a href="#dla-rodzica">Dla rodzica</a><a href="#dostep">Plany</a></nav>
-        <div className="header-actions"><a className="header-login" href="/logowanie">Zaloguj się</a><Button variant="outline" className="header-cta" asChild><a href="/logowanie?tryb=rejestracja">Załóż konto</a></Button></div>
-      </header>
+      <SiteHeader currentPath="/" />
 
       <section className="hero" id="top">
         <div className="hero-copy">

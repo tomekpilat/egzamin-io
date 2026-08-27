@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
 
-import { BrandLogo } from "@/components/brand-logo";
 import { MarketingSignupForm } from "@/components/marketing-signup-form";
+import { SiteHeader } from "@/components/site-header";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -19,10 +19,7 @@ export default function PlanPlusPage() {
 
   return (
     <main className="plan-plus-page">
-      <header className="plan-plus-header">
-        <a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a>
-        <Button variant="ghost" asChild><a href="/panel">← Wróć do panelu</a></Button>
-      </header>
+      <SiteHeader currentPath="/plan-plus" />
 
       <section className="plan-plus-shell">
         <div className="plan-plus-hero">

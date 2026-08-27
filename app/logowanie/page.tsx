@@ -1,10 +1,8 @@
 "use client";
-/* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
 
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { FormEvent, useEffect, useState } from "react";
-import { BrandLogo } from "@/components/brand-logo";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -17,6 +15,7 @@ import { trackAnalyticsEvent } from "@/lib/analytics";
 import { LEGAL_VERSION } from "@/lib/legal";
 import { getSupabaseClient } from "@/lib/supabase-browser";
 import type { SelfServiceRole } from "@/lib/roles";
+import { SiteHeader } from "@/components/site-header";
 
 type Mode = "login" | "signup";
 type Notice = { type: "error" | "success"; message: string } | null;
@@ -275,12 +274,7 @@ export default function LoginPage() {
 
   return (
     <main className="account-page">
-      <header className="account-header">
-        <a href="/" aria-label="egzaminio — strona główna">
-          <BrandLogo />
-        </a>
-        <div className="account-header-actions"><a href="/" className="account-back">← Wróć na stronę</a></div>
-      </header>
+      <SiteHeader currentPath="/logowanie" />
 
       <section className="auth-shell">
         <div className="auth-story">
