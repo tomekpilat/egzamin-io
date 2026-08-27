@@ -22,10 +22,11 @@ describe("parent panel actions", () => {
   });
 
   it("switches the parent dashboard content instead of using page anchors", () => {
-    expect(panel).toContain('type ParentView = "start" | "progress" | "children" | "connect" | "settings"');
+    expect(panel).toContain('type ParentView = "start" | "progress" | "children" | "connect" | "payments" | "settings"');
     expect(panel).toContain('onClick={() => setParentView("progress")}');
     expect(panel).toContain('onClick={() => setParentView("children")}');
     expect(panel).toContain('onClick={() => setParentView("connect")}');
+    expect(panel).toContain('onClick={() => setParentView("payments")}');
     expect(panel).toContain('parentView === "settings"');
     expect(panel).not.toContain('profile.role === "parent" ? "#polacz-dziecko"');
   });

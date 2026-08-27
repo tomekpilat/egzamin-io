@@ -9,13 +9,13 @@ import {
   calculatePlusPackageEconomics,
   PLAN_COMPARISON_ROWS,
   PLUS_PACKAGE_PRICE_PLN,
-  resolvePlusCheckout,
 } from "@/lib/plans";
+import { resolvePaymentRuntimeConfig } from "@/lib/payments";
 
 const economics = calculatePlusPackageEconomics();
 
 export default function PlanPlusPage() {
-  const checkout = resolvePlusCheckout(process.env.NEXT_PUBLIC_PLUS_CHECKOUT_URL);
+  const payments = resolvePaymentRuntimeConfig();
 
   return (
     <main className="plan-plus-page">
@@ -24,7 +24,7 @@ export default function PlanPlusPage() {
       <section className="plan-plus-shell">
         <div className="plan-plus-hero">
           <div>
-            <Badge variant="secondary">Pakiet Plus · wkrótce</Badge>
+            <Badge variant="secondary">Pakiet Plus{payments.enabled ? " · dostępny" : " · wkrótce"}</Badge>
             <h1>Regularna nauka bez dokładania presji.</h1>
             <p>Pełna baza ćwiczeń, więcej rozmów z AI oraz plan powtórek dla ucznia. Rodzic widzi trend i konkretny następny krok.</p>
           </div>
@@ -55,13 +55,13 @@ export default function PlanPlusPage() {
             {PLAN_COMPARISON_ROWS.map(([feature, free, plus]) => <div className="pricing-row" role="row" key={feature}><b role="rowheader">{feature}</b><span role="cell">{free}</span><span role="cell">{plus}</span></div>)}
           </div>
           <div className="pricing-value"><b>Czy pakiet się opłaca?</b><span>Przy przykładowej stawce {economics.tutoringHourlyPrice} zł za godzinę dwie korepetycje kosztują {economics.twoTutoringHours} zł. Pakiet Plus kosztuje {PLUS_PACKAGE_PRICE_PLN} zł jednorazowo, czyli o {economics.differenceVsTwoHours} zł mniej. Wspiera codzienną naukę, ale nie zastępuje indywidualnego nauczyciela.</span></div>
-          <div className="pricing-actions">{checkout.enabled ? <Button asChild><a href={checkout.url} data-analytics-event="plan_plus_cta_clicked">Zamawiam pakiet i płacę {PLUS_PACKAGE_PRICE_PLN} zł</a></Button> : <Button asChild><a href="#lista-plus" data-analytics-event="plan_plus_cta_clicked">Powiadom mnie o starcie</a></Button>}<Button variant="outline" asChild><a href="/panel">Zostań przy wersji Free</a></Button></div>
-          {!checkout.enabled ? <div id="lista-plus"><MarketingSignupForm subscriptionType="plus_waitlist" sourcePath="/plan-plus" title="Lista oczekujących na pakiet Plus" description="Podaj e-mail. Powiadomimy Cię o starcie sprzedaży i cenie — bez pobierania płatności." submitLabel="Powiadom mnie o starcie" /></div> : null}
+          <div className="pricing-actions">{payments.enabled ? <Button asChild><a href="/panel?widok=platnosci" data-analytics-event="plan_plus_cta_clicked">Zamawiam pakiet i płacę {PLUS_PACKAGE_PRICE_PLN} zł</a></Button> : <Button asChild><a href="#lista-plus" data-analytics-event="plan_plus_cta_clicked">Powiadom mnie o starcie</a></Button>}<Button variant="outline" asChild><a href="/panel">Zostań przy wersji Free</a></Button></div>
+          {!payments.enabled ? <div id="lista-plus"><MarketingSignupForm subscriptionType="plus_waitlist" sourcePath="/plan-plus" title="Lista oczekujących na pakiet Plus" description="Podaj e-mail. Powiadomimy Cię o starcie sprzedaży i cenie — bez pobierania płatności." submitLabel="Powiadom mnie o starcie" /></div> : null}
         </Card>
 
         <section className="plan-plus-terms" aria-labelledby="plan-plus-terms-title">
           <h2 id="plan-plus-terms-title">Najważniejsze zasady</h2>
-          <p>{checkout.enabled ? "Pakiet nie odnawia się automatycznie. Przed zamówieniem sprawdź zakres, datę rozpoczęcia i zakończenia dostępu oraz zasady odstąpienia. Szczegóły są dostępne w dokumentach poniżej." : "Przed uruchomieniem sprzedaży pokażemy dokładny zakres pakietu oraz datę rozpoczęcia i zakończenia dostępu. Zakup zostanie uruchomiony dopiero po wdrożeniu bezpiecznych płatności."}</p>
+          <p>{payments.enabled ? `Pakiet nie odnawia się automatycznie. Dostęp trwa do ${new Intl.DateTimeFormat("pl-PL", { dateStyle: "long", timeZone: "Europe/Warsaw" }).format(new Date(payments.accessUntil!))}. Przed zamówieniem sprawdź zakres pakietu i zasady odstąpienia.` : "Przed uruchomieniem sprzedaży pokażemy dokładny zakres pakietu oraz datę rozpoczęcia i zakończenia dostępu. Zakup zostanie uruchomiony dopiero po wdrożeniu bezpiecznych płatności."}</p>
           <nav aria-label="Informacje prawne pakietu Plus"><a href="/regulamin">Regulamin</a><a href="/polityka-prywatnosci">Polityka prywatności</a><a href="/odstapienie-od-umowy">Odstąpienie od umowy</a><a href="/informacje-prawne">Informacje o płatnościach</a></nav>
         </section>
       </section>

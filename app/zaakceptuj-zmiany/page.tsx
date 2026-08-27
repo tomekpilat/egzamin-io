@@ -20,6 +20,11 @@ export default function AcceptLegalChangesPage() {
   const [busy, setBusy] = useState(true);
   const [error, setError] = useState("");
 
+  function returnPath() {
+    const requested = new URLSearchParams(window.location.search).get("powrot") ?? "";
+    return requested.startsWith("/panel") && !requested.startsWith("//") ? requested : "/panel";
+  }
+
   useEffect(() => {
     let active = true;
     getSupabaseClient()
@@ -38,7 +43,7 @@ export default function AcceptLegalChangesPage() {
         if (profileError || !profile || !isUserRole(profile.role)) throw profileError ?? new Error("profile_not_found");
         const route = resolveAccountRoute(profile, LEGAL_VERSION);
         if (route !== "/zaakceptuj-zmiany") {
-          window.location.replace(route);
+          window.location.replace(route === "/panel" ? returnPath() : route);
           return;
         }
         if (active) setBusy(false);
@@ -62,7 +67,7 @@ export default function AcceptLegalChangesPage() {
       const supabase = await getSupabaseClient();
       const { error: acceptanceError } = await supabase.rpc("record_legal_acceptance", { accepted_version: LEGAL_VERSION });
       if (acceptanceError) throw acceptanceError;
-      window.location.replace("/panel");
+      window.location.replace(returnPath());
     } catch {
       setError("Nie udało się zapisać potwierdzenia. Spróbuj ponownie.");
       setBusy(false);

@@ -45,6 +45,8 @@ AI_USER_HASH_SECRET=<losowy sekret co najmniej 32 znaki>
 
 Pełna konfiguracja modelu, limitów i monitoringu znajduje się w [ai-tutor-mvp.md](ai-tutor-mvp.md).
 
+Płatności Stripe wymagają migracji bazy, jednorazowej ceny 149 zł, podpisanego webhooka i dodatkowych sekretów. Wykonaj instrukcję [stripe-payments-setup.md](stripe-payments-setup.md). Nie ustawiaj `PAYMENTS_ENABLED=true`, dopóki nie przejdziesz całej checklisty testowej i prawnej.
+
 Pełna konfiguracja bazy, Google i Facebooka jest opisana w [supabase-auth-setup.md](supabase-auth-setup.md).
 
 ## 3. DNS
@@ -104,6 +106,8 @@ Przy integracji przez GitHub App można włączyć automatyczne wdrażanie po ka
 - **Domena bez HTTPS:** upewnij się, że rekord DNS wskazuje na serwer Coolify i domena w panelu zaczyna się od `https://`.
 - **Aplikacja jest unhealthy:** otwórz logi kontenera i sprawdź `/api/health`; Docker daje serwerowi 20 sekund na start.
 - **Stara wersja po wdrożeniu:** użyj **Redeploy** z opcją przebudowania obrazu bez cache.
+- **Checkout pokazuje „sprzedaż nie jest jeszcze aktywna”:** sprawdź komplet `APP_URL`, `PLUS_ACCESS_UNTIL`, `STRIPE_SECRET_KEY`, `STRIPE_PRICE_ID_PLUS`, `STRIPE_WEBHOOK_SECRET` oraz `PAYMENTS_ENABLED=true`; po zmianie wykonaj pełny redeploy.
+- **Płatność jest w Stripe, ale Plus nie jest aktywny:** sprawdź dostarczenie webhooka i kod odpowiedzi w Stripe Workbench. Nie aktywuj planu ręcznie na podstawie strony sukcesu — ponów zdarzenie po usunięciu błędu.
 
 ## Dokumentacja Coolify
 

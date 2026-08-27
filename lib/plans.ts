@@ -11,17 +11,6 @@ export const PLAN_COMPARISON_ROWS = [
   ["Panel rodzica", "Cel tygodniowy", "Raport, trendy i rekomendacje"],
 ] as const;
 
-export function resolvePlusCheckout(checkoutUrl?: string) {
-  if (!checkoutUrl) return { enabled: false as const, url: null };
-  try {
-    const parsed = new URL(checkoutUrl);
-    if (parsed.protocol !== "https:") return { enabled: false as const, url: null };
-    return { enabled: true as const, url: parsed.toString() };
-  } catch {
-    return { enabled: false as const, url: null };
-  }
-}
-
 export function calculatePlusPackageEconomics(
   packagePrice = PLUS_PACKAGE_PRICE_PLN,
   tutoringHourlyPrice = TUTORING_REFERENCE_HOURLY_PRICE_PLN,

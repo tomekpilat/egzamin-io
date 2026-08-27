@@ -19,7 +19,7 @@ export default function PrivacyPage() {
       </div>
 
       <nav className="legal-toc" aria-label="Spis treści">
-        <b>Na tej stronie</b><a href="#administrator">Administrator</a><a href="#dane">Dane i źródła</a><a href="#cele">Cele i podstawy</a><a href="#dzieci">Dzieci i rodzice</a><a href="#ai">Nauczyciel AI</a><a href="#feedback">Feedback</a><a href="#newsletter">Alerty i lista pakietu Plus</a><a href="#analityka">Analityka GA4</a><a href="#odbiorcy">Dostawcy i transfery</a><a href="#retencja">Jak długo przechowujemy</a><a href="#prawa">Twoje prawa</a>
+        <b>Na tej stronie</b><a href="#administrator">Administrator</a><a href="#dane">Dane i źródła</a><a href="#cele">Cele i podstawy</a><a href="#platnosci">Płatności Stripe</a><a href="#dzieci">Dzieci i rodzice</a><a href="#ai">Nauczyciel AI</a><a href="#feedback">Feedback</a><a href="#newsletter">Alerty i lista pakietu Plus</a><a href="#analityka">Analityka GA4</a><a href="#odbiorcy">Dostawcy i transfery</a><a href="#retencja">Jak długo przechowujemy</a><a href="#prawa">Twoje prawa</a>
       </nav>
 
       <section className="legal-section" id="administrator">
@@ -38,7 +38,7 @@ export default function PrivacyPage() {
             <tr><td>Nauka</td><td>Odpowiedzi, wyniki, czas pracy, tematy, postęp, limity pytań</td><td>Z aktywności w usłudze</td></tr>
             <tr><td>Rozmowy z AI</td><td>Treść pytania, kontekst zadania, odpowiedź modelu, liczba tokenów, szacowany koszt i czas odpowiedzi</td><td>Od użytkownika, aplikacji i dostawcy modelu</td></tr>
             <tr><td>Rodzic i nauczyciel</td><td>Zaproszenia, powiązania kont, grupy, zestawy i raporty postępów</td><td>Od użytkowników i z ich aktywności</td></tr>
-            <tr><td>Płatności</td><td>Plan, status płatności, identyfikator transakcji, dane do dokumentu sprzedaży; bez pełnych danych karty</td><td>Od użytkownika i operatora płatności po uruchomieniu planu płatnego</td></tr>
+            <tr><td>Płatności Stripe</td><td>Kupujący rodzic i wskazane konto ucznia, e-mail, produkt, kwota, waluta, status, daty, wersja zaakceptowanych warunków, identyfikatory Checkout/płatności/klienta/obciążenia/faktury, adres dokumentu i informacje o zwrocie; dane rozliczeniowe podane w Stripe. egzaminio nie otrzymuje pełnego numeru karty ani CVC.</td><td>Od rodzica, aplikacji i Stripe podczas zakupu, potwierdzenia, reklamacji lub zwrotu</td></tr>
             <tr><td>Bezpieczeństwo</td><td>Adres IP, typ urządzenia i przeglądarki, zdarzenia logowania, błędy, identyfikatory sesji</td><td>Automatycznie z urządzenia i infrastruktury</td></tr>
             <tr><td>Feedback w aplikacji</td><td>Kategoria, opcjonalna ocena, treść opinii, rola konta, bieżący ekran i identyfikator zadania; adres e-mail tylko po zgodzie na kontakt</td><td>Od użytkownika i z kontekstu bieżącego ekranu</td></tr>
             <tr><td>Alerty rekrutacyjne i lista pakietu Plus</td><td>Adres e-mail, typ zapisu, wskazana szkoła lub klasa i rok rekrutacji, dokładna treść i wersja zgody, czas i źródło zapisu oraz status wypisu</td><td>Od osoby wypełniającej osobny formularz</td></tr>
@@ -65,6 +65,13 @@ export default function PrivacyPage() {
           </tbody>
         </table></div>
         <p>Podanie danych konta jest dobrowolne, ale bez e-maila lub zewnętrznego identyfikatora nie utworzymy konta. Dane oznaczone jako opcjonalne nie wpływają na dostęp do podstawowej usługi. Zgodę można wycofać równie łatwo, jak została udzielona.</p>
+      </section>
+
+      <section className="legal-section" id="platnosci">
+        <h2>3.1. Jak przetwarzamy płatności Stripe</h2>
+        <p>Zakup Pakietu Plus jest inicjowany przez konto rodzica i realizowany na hostowanej stronie Stripe. Do Stripe przekazujemy e-mail rodzica, nazwę produktu, cenę, walutę, niejawny techniczny identyfikator zamówienia oraz informację o okresie dostępu. Nie przekazujemy Stripe identyfikatora ani adresu e-mail dziecka. Stripe zbiera bezpośrednio dane metody płatności i rozliczeniowe. Nie zapisujemy w bazie pełnego numeru karty ani CVC.</p>
+        <p>Po podpisanym komunikacie Stripe zapisujemy status płatności, identyfikatory transakcji, linki do potwierdzenia lub faktury oraz kwotę zwrotu. Dane te służą wykonaniu umowy, aktywacji dostępu, obsłudze zwrotów i reklamacji, zapobieganiu nadużyciom oraz wykonaniu obowiązków podatkowych, rachunkowych i konsumenckich. Nie wykorzystujemy danych płatniczych do profilowania dziecka ani nie przekazujemy ich do nauczyciela AI lub Google Analytics.</p>
+        <p>Stripe może działać jako podmiot przetwarzający dane na nasze zlecenie oraz — w określonym przez własne obowiązki zakresie, np. przeciwdziałania oszustwom i obowiązków regulacyjnych — jako odrębny administrator. Szczegóły i właściwy podmiot Stripe zależą od miejsca działalności usługodawcy i konfiguracji konta. <mark>Przed uruchomieniem sprzedaży trzeba wpisać podmiot sprzedawcy, zaakceptować DPA Stripe i zweryfikować konfigurację podatkową.</mark></p>
       </section>
 
       <section className="legal-section" id="dzieci">
@@ -116,7 +123,8 @@ export default function PrivacyPage() {
           <li><b>Google Ireland Limited</b> — opcjonalny Google Analytics 4 po zgodzie. Google może korzystać z podmiotów w innych państwach; transfery mogą opierać się na decyzji stwierdzającej odpowiedni poziom ochrony lub standardowych klauzulach umownych. Przed produkcją administrator powinien zaakceptować właściwe warunki Google i udokumentować ocenę ustawień oraz transferów.</li>
           <li><b>Hosting i kopie zapasowe</b> — <mark>[UZUPEŁNIJ FAKTYCZNEGO DOSTAWCĘ, LOKALIZACJĘ I PODPROCESORÓW; Coolify jest oprogramowaniem, nie nazwą hostingu]</mark>.</li>
           <li><b>DeepSeek</b> — planowany dostawca modelu DeepSeek V4 Flash. Według polityki dostawcy dane mogą być przetwarzane w Chińskiej Republice Ludowej. <mark>Przed włączeniem produkcyjnym trzeba potwierdzić umowę powierzenia, podstawę transferu poza EOG, ocenę skutków transferu, retencję API oraz skuteczne wyłączenie używania treści do trenowania.</mark></li>
-          <li><b>E-mail, płatności i obsługa</b> — <mark>[UZUPEŁNIJ PRZED WŁĄCZENIEM KAŻDEJ USŁUGI]</mark>.</li>
+          <li><b>Stripe</b> — hostowany Checkout, autoryzacja płatności, przeciwdziałanie oszustwom, potwierdzenia, dokumenty i zwroty. Dla podmiotów z EOG usługę zwykle świadczy Stripe Payments Europe, Limited; właściwy podmiot i transfery należy potwierdzić w umowie konta. Stripe korzysta z podprocesorów i może przekazywać dane poza EOG na podstawie odpowiedniego mechanizmu, w tym standardowych klauzul umownych lub decyzji o adekwatności. <mark>Przed startem wpisz właściwą stronę umowy, zaakceptuj DPA i udokumentuj ocenę transferów.</mark></li>
+          <li><b>E-mail i obsługa</b> — <mark>[UZUPEŁNIJ PRZED WŁĄCZENIEM KAŻDEJ USŁUGI]</mark>.</li>
           <li>Organy publiczne — tylko gdy wymaga tego prawo.</li>
         </ul>
         <p>DeepSeek wskazuje, że bezpośrednio przetwarza i przechowuje dane w Chińskiej Republice Ludowej. Samo usunięcie identyfikatorów nie zastępuje wymaganej oceny prawnej transferu. Moduł AI nie powinien zostać włączony dla użytkowników produkcyjnych do czasu udokumentowania właściwego mechanizmu z rozdziału V RODO, warunków powierzenia i oceny ryzyka albo wyboru dostawcy zapewniającego akceptowalny region i warunki.</p>
@@ -139,7 +147,7 @@ export default function PrivacyPage() {
             <tr><td>Lokalny zapis wyboru analityki</td><td>180 dni lub do usunięcia danych witryny; po zmianie decyzji zapis zastępujemy aktualnym wyborem</td></tr>
             <tr><td>Kontakt i reklamacje</td><td>24 miesiące od zamknięcia sprawy lub przez okres dochodzenia/obrony roszczeń</td></tr>
             <tr><td>Zgody i ich wycofanie</td><td>Przez czas korzystania z podstawy zgody i okres niezbędny do wykazania zgodności lub obrony roszczeń</td></tr>
-            <tr><td>Dokumenty rozliczeniowe</td><td>Przez okres wymagany przez przepisy podatkowe i rachunkowe właściwe dla operatora</td></tr>
+            <tr><td>Zamówienia, statusy Stripe, zgody zakupowe, zwroty i dokumenty rozliczeniowe</td><td>Przez okres wykonania umowy, a następnie przez okres wymagany przez przepisy podatkowe i rachunkowe oraz do przedawnienia roszczeń. Usunięcie konta nie powoduje usunięcia danych, które musimy zachować z obowiązku prawnego lub dla roszczeń; po tym okresie są usuwane albo anonimizowane.</td></tr>
           </tbody>
         </table></div>
       </section>
@@ -159,7 +167,7 @@ export default function PrivacyPage() {
 
       <section className="legal-section legal-source-note">
         <h2>Oficjalne źródła</h2>
-        <p><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" target="_blank" rel="noreferrer">RODO — EUR-Lex</a>, <a href="https://eli.gov.pl/api/acts/DU/2024/1221/text.html" target="_blank" rel="noreferrer">Prawo komunikacji elektronicznej — art. 398–399</a>, <a href="https://uodo.gov.pl/pl/701/4467" target="_blank" rel="noreferrer">UODO o wycofaniu zgody</a>, <a href="https://support.google.com/analytics/answer/11593727" target="_blank" rel="noreferrer">dane zbierane przez Google Analytics</a>, <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noreferrer">jak Google wykorzystuje dane</a>, <a href="https://uodo.gov.pl/pl/493/2261" target="_blank" rel="noreferrer">prawa dzieci według UODO</a> i <a href="https://digital-strategy.ec.europa.eu/en/policies/guidelines-transparency-ai-generated-content" target="_blank" rel="noreferrer">przejrzystość AI — Komisja Europejska</a>.</p>
+        <p><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" target="_blank" rel="noreferrer">RODO — EUR-Lex</a>, <a href="https://stripe.com/legal/dpa" target="_blank" rel="noreferrer">Stripe Data Processing Agreement</a>, <a href="https://eli.gov.pl/api/acts/DU/2024/1221/text.html" target="_blank" rel="noreferrer">Prawo komunikacji elektronicznej — art. 398–399</a>, <a href="https://uodo.gov.pl/pl/701/4467" target="_blank" rel="noreferrer">UODO o wycofaniu zgody</a>, <a href="https://support.google.com/analytics/answer/11593727" target="_blank" rel="noreferrer">dane zbierane przez Google Analytics</a>, <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noreferrer">jak Google wykorzystuje dane</a>, <a href="https://uodo.gov.pl/pl/493/2261" target="_blank" rel="noreferrer">prawa dzieci według UODO</a> i <a href="https://digital-strategy.ec.europa.eu/en/policies/guidelines-transparency-ai-generated-content" target="_blank" rel="noreferrer">przejrzystość AI — Komisja Europejska</a>.</p>
       </section>
     </LegalShell>
   );

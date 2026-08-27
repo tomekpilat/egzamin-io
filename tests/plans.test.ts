@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { calculatePlusPackageEconomics, formatPln, PLAN_COMPARISON_ROWS, PLUS_AI_QUESTIONS_PER_DAY, PLUS_PACKAGE_PRICE_PLN, resolvePlusCheckout } from "@/lib/plans";
+import { calculatePlusPackageEconomics, formatPln, PLAN_COMPARISON_ROWS, PLUS_AI_QUESTIONS_PER_DAY, PLUS_PACKAGE_PRICE_PLN } from "@/lib/plans";
 
 describe("Plus package economics", () => {
   it("compares the one-time package with a transparent tutoring example", () => {
@@ -19,10 +19,4 @@ describe("Plus package economics", () => {
     expect(calculatePlusPackageEconomics(149, 100)).toMatchObject({ twoTutoringHours: 200, differenceVsTwoHours: 51, tutoringHoursEquivalent: 1.49 });
   });
 
-  it("enables only a configured HTTPS checkout", () => {
-    expect(resolvePlusCheckout()).toEqual({ enabled: false, url: null });
-    expect(resolvePlusCheckout("not-a-url")).toEqual({ enabled: false, url: null });
-    expect(resolvePlusCheckout("http://payments.example.com/plus")).toEqual({ enabled: false, url: null });
-    expect(resolvePlusCheckout("https://payments.example.com/plus")).toEqual({ enabled: true, url: "https://payments.example.com/plus" });
-  });
 });

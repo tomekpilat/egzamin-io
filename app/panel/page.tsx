@@ -6,6 +6,7 @@ import type { User } from "@supabase/supabase-js";
 import { ChevronDown, LogOut, Settings } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 import { FeedbackDialog } from "@/components/feedback-dialog";
+import { ParentPayments } from "@/components/parent-payments";
 import { ParentProgress } from "@/components/parent-progress";
 import { StudentPractice, type StudentView } from "@/components/student-practice";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -40,8 +41,8 @@ type Profile = {
 };
 
 type GuardianRequest = { request_id: string; student_id: string; student_display_name: string | null; student_email: string; requested_at: string; expires_at: string };
-type LinkedChild = { student_id: string; student_display_name: string | null; student_email: string; linked_at: string; weekly_goal: number; summary_email_enabled: boolean; cke_accommodation_code: CkeAccommodationCode; cke_accommodation_label: string };
-type ParentView = "start" | "progress" | "children" | "connect" | "settings";
+type LinkedChild = { student_id: string; student_display_name: string | null; student_email: string; linked_at: string; weekly_goal: number; summary_email_enabled: boolean; cke_accommodation_code: CkeAccommodationCode; cke_accommodation_label: string; plan_tier: "free" | "plus"; plan_valid_until: string | null };
+type ParentView = "start" | "progress" | "children" | "connect" | "payments" | "settings";
 
 type RoleCounts = Record<UserRole, number>;
 type AdminFeedback = {
@@ -177,6 +178,8 @@ function ParentPanel({ activeView, parentEmail, requests, linkedChildren, action
 
       {activeView === "progress" && <ParentProgress linkedChildren={linkedChildren} pendingRequests={requests.length} onConnect={() => onNavigate(requests.length ? "children" : "connect")} />}
 
+      {activeView === "payments" && <ParentPayments linkedChildren={linkedChildren} onConnect={() => onNavigate("connect")} />}
+
       {activeView === "connect" && <>
         <div className="dashboard-view-heading"><div><span className="dashboard-kicker dark-kicker">Połącz konto</span><h2>Zaproś dziecko w trzech krokach</h2></div></div>
         <Card className="parent-connect-card">
@@ -266,6 +269,7 @@ function AdminPanel({ counts, feedback, busy, feedbackBusyId, error, onGrantTeac
 }
 
 export default function DashboardPage() {
+  const [renderedAt] = useState(() => Date.now());
   const [user, setUser] = useState<User | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
   const [counts, setCounts] = useState<RoleCounts>(emptyCounts);
@@ -346,6 +350,7 @@ export default function DashboardPage() {
           setProfile(nextProfile);
           if (nextProfile.role === "parent") {
             await refreshParentData();
+            if (new URLSearchParams(window.location.search).get("widok") === "platnosci") setParentView("payments");
           } else if (nextProfile.role === "admin") {
             await Promise.all([refreshAdminCounts(), refreshAdminFeedback()]);
           }
@@ -488,6 +493,7 @@ export default function DashboardPage() {
     user?.user_metadata?.full_name ||
     user?.user_metadata?.name ||
     profile.email;
+  const parentPlusChildren = profile.role === "parent" ? linkedChildren.filter((child) => child.plan_tier === "plus" && (!child.plan_valid_until || new Date(child.plan_valid_until).getTime() > renderedAt)).length : 0;
   const focusMode = profile.role === "student" && studentView === "exercises";
 
   return (
@@ -509,6 +515,7 @@ export default function DashboardPage() {
             <button type="button" className={parentView === "progress" ? "active" : ""} aria-current={parentView === "progress" ? "page" : undefined} onClick={() => setParentView("progress")}><span>↗</span> Postępy</button>
             <button type="button" className={parentView === "children" ? "active" : ""} aria-current={parentView === "children" ? "page" : undefined} onClick={() => setParentView("children")}><span>✎</span> Dzieci</button>
             <button type="button" className={parentView === "connect" ? "active" : ""} aria-current={parentView === "connect" ? "page" : undefined} onClick={() => setParentView("connect")}><span>↗</span> Połącz konto</button>
+            <button type="button" className={parentView === "payments" ? "active" : ""} aria-current={parentView === "payments" ? "page" : undefined} onClick={() => setParentView("payments")}><span>zł</span> Płatności</button>
             <button type="button" className={parentView === "settings" ? "active" : ""} aria-current={parentView === "settings" ? "page" : undefined} onClick={() => setParentView("settings")}><span>⚙</span> Ustawienia</button>
           </> : profile.role === "student" ? <>
             <button type="button" className={studentView === "start" ? "active" : ""} aria-current={studentView === "start" ? "page" : undefined} onClick={() => setStudentView("start")}><span>⌂</span> Start</button>
@@ -522,7 +529,7 @@ export default function DashboardPage() {
             <a href="#ustawienia"><span>⚙</span> Ustawienia</a>
           </>}
         </nav>
-        <div className="sidebar-plan"><b>Wersja bezpłatna</b><span>3 pytania AI dziennie</span><i><em /></i><a href={profile.role === "parent" ? "/plan-plus#dla-rodzica" : profile.role === "student" ? "/plan-plus#dla-ucznia" : "/plan-plus"}>Poznaj pakiet Plus →</a></div>
+        <div className="sidebar-plan"><b>{parentPlusChildren ? `Pakiet Plus · ${parentPlusChildren}` : "Wersja bezpłatna"}</b><span>{parentPlusChildren ? "Aktywny dla połączonych dzieci" : "3 pytania AI dziennie"}</span><i><em /></i>{profile.role === "parent" ? <button type="button" onClick={() => setParentView("payments")}>{parentPlusChildren ? "Płatności i dokumenty →" : "Poznaj pakiet Plus →"}</button> : <a href={profile.role === "student" ? "/plan-plus#dla-ucznia" : "/plan-plus"}>Poznaj pakiet Plus →</a>}</div>
       </aside>}
 
       <div className="dashboard-main">
