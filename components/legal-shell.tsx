@@ -1,4 +1,5 @@
-import Link from "next/link";
+/* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
+
 import { BrandLogo } from "@/components/brand-logo";
 import { SiteHeader } from "@/components/site-header";
 
@@ -29,7 +30,7 @@ export function LegalShell({ title, description, currentPath, children, kicker =
           <span>Dokumenty</span>
           <nav>
             {legalLinks.map(([href, label]) => (
-              <Link href={href} key={href} className={currentPath === href ? "active" : ""} aria-current={currentPath === href ? "page" : undefined}>{label}</Link>
+              <a href={href} key={href} className={currentPath === href ? "active" : ""} aria-current={currentPath === href ? "page" : undefined}>{label}</a>
             ))}
           </nav>
           <p>Wersja robocza do konsultacji prawnej przed publicznym startem.</p>
@@ -43,7 +44,7 @@ export function LegalShell({ title, description, currentPath, children, kicker =
       </div>
       <footer className="legal-footer">
         <BrandLogo />
-        <div><Link href="/informacje-prawne">Informacje prawne</Link><Link href="/usun-konto">Usuń konto</Link><a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a><span>© 2026 egzaminio</span></div>
+        <div><a href="/informacje-prawne">Informacje prawne</a><a href="/usun-konto">Usuń konto</a><a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a><span>© 2026 egzaminio</span></div>
       </footer>
     </main>
   );

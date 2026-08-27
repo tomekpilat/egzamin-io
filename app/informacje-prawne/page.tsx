@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { LegalShell } from "@/components/legal-shell";
 import { LEGAL_UPDATED_LABEL } from "@/lib/legal";
 
@@ -27,7 +26,7 @@ export default function LegalHubPage() {
       </div>
       <div className="legal-cards">
         {documents.map(([href, title, description]) => (
-          <Link href={href} key={href}><span>Dokument</span><h2>{title}</h2><p>{description}</p><b>Czytaj →</b></Link>
+          <a href={href} key={href}><span>Dokument</span><h2>{title}</h2><p>{description}</p><b>Czytaj →</b></a>
         ))}
       </div>
       <section className="legal-section">
