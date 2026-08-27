@@ -6,13 +6,13 @@ import { SocialAuthButtons } from "@/components/social-auth-buttons";
 afterEach(cleanup);
 
 describe("SocialAuthButtons", () => {
-  it("uses recognizable provider labels and official-color brand marks", () => {
+  it("offers Google as the only currently available social provider", () => {
     const { container } = render(<SocialAuthButtons onSelect={() => undefined} />);
 
     expect(screen.getByRole("button", { name: "Kontynuuj z Google" })).toBeEnabled();
-    expect(screen.getByRole("button", { name: "Kontynuuj z Facebookiem" })).toBeEnabled();
     expect(container.querySelector('[data-brand-icon="google"]')).toBeInTheDocument();
-    expect(container.querySelector('[data-brand-icon="facebook"]')).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /Facebook/i })).not.toBeInTheDocument();
+    expect(container.querySelector('[data-brand-icon="facebook"]')).not.toBeInTheDocument();
   });
 
   it("starts the selected OAuth provider on click", async () => {
@@ -26,21 +26,19 @@ describe("SocialAuthButtons", () => {
     expect(onSelect).toHaveBeenCalledWith("google");
   });
 
-  it("locks both providers and announces the active loading state", () => {
+  it("locks Google and announces its loading state", () => {
     render(
       <SocialAuthButtons
-        pendingProvider="facebook"
+        pendingProvider="google"
         onSelect={() => undefined}
       />,
     );
 
     const googleButton = screen.getByRole("button", { name: "Kontynuuj z Google" });
-    const facebookButton = screen.getByRole("button", { name: "Kontynuuj z Facebookiem" });
 
     expect(googleButton).toBeDisabled();
-    expect(facebookButton).toBeDisabled();
-    expect(facebookButton).toHaveAttribute("aria-busy", "true");
-    expect(screen.getByText("Łączenie z Facebookiem…")).toBeInTheDocument();
+    expect(googleButton).toHaveAttribute("aria-busy", "true");
+    expect(screen.getByText("Łączenie z Google…")).toBeInTheDocument();
   });
 
   it("keeps keyboard focus available when idle", async () => {

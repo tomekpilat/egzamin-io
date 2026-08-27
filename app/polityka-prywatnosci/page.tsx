@@ -32,7 +32,7 @@ export default function PrivacyPage() {
         <div className="legal-table-wrap"><table>
           <thead><tr><th>Obszar</th><th>Przykładowe dane</th><th>Źródło</th></tr></thead>
           <tbody>
-            <tr><td>Konto i logowanie</td><td>E-mail, nazwa wyświetlana, identyfikator konta, dostawca logowania, znaczniki czasu, rola</td><td>Od Ciebie lub z Google/Facebook po wybraniu logowania społecznościowego</td></tr>
+            <tr><td>Konto i logowanie</td><td>E-mail, nazwa wyświetlana, identyfikator konta, dostawca logowania, znaczniki czasu, rola</td><td>Od Ciebie lub z Google po wybraniu logowania społecznościowego</td></tr>
             <tr><td>Konto ucznia</td><td>Wybrana rola, informacja i dowód zgody/upoważnienia opiekuna, powiązanie z kontem rodzica</td><td>Od ucznia i opiekuna</td></tr>
             <tr><td>Nauka</td><td>Odpowiedzi, wyniki, czas pracy, tematy, postęp, limity pytań</td><td>Z aktywności w usłudze</td></tr>
             <tr><td>Rozmowy z AI</td><td>Treść pytania, kontekst zadania, odpowiedź modelu, liczba tokenów, szacowany koszt i czas odpowiedzi</td><td>Od użytkownika, aplikacji i dostawcy modelu</td></tr>
@@ -108,7 +108,7 @@ export default function PrivacyPage() {
         <p>Dostęp otrzymują tylko podmioty potrzebne do działania usługi i osoby upoważnione:</p>
         <ul>
           <li><b>Supabase</b> — uwierzytelnianie i baza danych; <mark>[UZUPEŁNIJ REGION PROJEKTU I DPA]</mark>.</li>
-          <li><b>Google i Meta</b> — wyłącznie gdy użytkownik wybierze odpowiednie logowanie; dostawca przetwarza też dane według własnych zasad.</li>
+          <li><b>Google</b> — wyłącznie gdy użytkownik wybierze logowanie Google; dostawca przetwarza też dane według własnych zasad.</li>
           <li><b>Google Ireland Limited</b> — opcjonalny Google Analytics 4 po zgodzie. Google może korzystać z podmiotów w innych państwach; transfery mogą opierać się na decyzji stwierdzającej odpowiedni poziom ochrony lub standardowych klauzulach umownych. Przed produkcją administrator powinien zaakceptować właściwe warunki Google i udokumentować ocenę ustawień oraz transferów.</li>
           <li><b>Hosting i kopie zapasowe</b> — <mark>[UZUPEŁNIJ FAKTYCZNEGO DOSTAWCĘ, LOKALIZACJĘ I PODPROCESORÓW; Coolify jest oprogramowaniem, nie nazwą hostingu]</mark>.</li>
           <li><b>DeepSeek</b> — planowany dostawca modelu DeepSeek V4 Flash. Według polityki dostawcy dane mogą być przetwarzane w Chińskiej Republice Ludowej. <mark>Przed włączeniem produkcyjnym trzeba potwierdzić umowę powierzenia, podstawę transferu poza EOG, ocenę skutków transferu, retencję API oraz skuteczne wyłączenie używania treści do trenowania.</mark></li>

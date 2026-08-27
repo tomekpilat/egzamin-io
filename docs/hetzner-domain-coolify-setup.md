@@ -221,6 +221,8 @@ W Google Auth Platform:
 
 ## 9. Facebook OAuth
 
+> Status: przycisk Facebook jest tymczasowo wyłączony w egzamin.io. Włącz provider i przywróć przycisk dopiero po zakończeniu weryfikacji Meta oraz przełączeniu aplikacji w tryb Live.
+
 W Meta for Developers:
 
 1. Utwórz aplikację i dodaj Facebook Login.

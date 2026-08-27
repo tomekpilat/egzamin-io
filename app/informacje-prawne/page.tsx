@@ -15,7 +15,7 @@ const documents = [
   ["/polityka-cookies", "Cookies i pamięć urządzenia", "Niezbędna sesja oraz Google Analytics uruchamiane wyłącznie po dobrowolnej zgodzie."],
   ["/bezpieczenstwo-dzieci-ai", "Dzieci i AI", "Prostym językiem o błędach AI, zgodzie opiekuna, reklamach i bezpiecznych pytaniach."],
   ["/odstapienie-od-umowy", "Odstąpienie od umowy", "Informacja dla konsumenta i wzór oświadczenia przed uruchomieniem planu płatnego."],
-  ["/usun-konto", "Usunięcie konta i danych", "Procedura dla kont e-mail, Google i Facebook oraz zgód opiekuna."],
+  ["/usun-konto", "Usunięcie konta i danych", "Procedura dla kont e-mail i Google oraz zgód opiekuna."],
 ] as const;
 
 export default function LegalHubPage() {

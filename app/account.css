@@ -38,7 +38,7 @@
 .auth-tabs button.active { background: white; color: var(--ink); box-shadow: 0 3px 10px rgba(20,33,61,.09); }
 .auth-card-heading h2 { margin: 0; font-size: 28px; letter-spacing: -.04em; }
 .auth-card-heading p { margin: 7px 0 22px; color: var(--muted); font-size: 12px; }
-.social-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.social-buttons { display: grid; grid-template-columns: 1fr; gap: 10px; }
 .social-buttons .social-auth-button { width: 100%; min-width: 0; min-height: 40px; padding: 8px 12px; display: grid; grid-template-columns: 24px minmax(0, 1fr) 24px; align-items: center; gap: 10px; border: 1px solid #747775; border-radius: 10px; background: #fff; color: #1f1f1f; font-family: Arial, sans-serif; font-size: 14px; font-weight: 600; line-height: 20px; box-shadow: none; cursor: pointer; }
 .social-buttons .social-auth-button:hover:not(:disabled) { border-color: #5f6368; background: #f8f9fa; box-shadow: 0 1px 2px rgba(60,64,67,.18); }
 .social-buttons .social-auth-button:focus-visible { border-color: #1a73e8; outline: 3px solid rgba(26,115,232,.25); outline-offset: 2px; box-shadow: none; }
@@ -47,17 +47,11 @@
 .social-buttons .social-auth-button[data-provider="google"] .social-auth-icon { width: 20px; height: 20px; }
 .social-buttons .social-auth-button[data-provider="google"] .social-auth-copy { place-items: center start; text-align: left; }
 .social-buttons .social-auth-button[data-provider="google"] .social-auth-balance { display: none; }
-.social-buttons .social-auth-button[data-provider="facebook"] { padding: 0 12px; grid-template-columns: 20px minmax(0, 1fr); gap: 10px; border: 1px solid #1877f2; border-radius: 8px; background: #1877f2; color: #fff; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 700; line-height: 20px; letter-spacing: 0; }
-.social-buttons .social-auth-button[data-provider="facebook"]:hover:not(:disabled) { border-color: #166fe5; background: #166fe5; box-shadow: 0 1px 2px rgba(24,119,242,.24); }
-.social-buttons .social-auth-button[data-provider="facebook"] .social-auth-icon { width: 20px; height: 20px; }
-.social-buttons .social-auth-button[data-provider="facebook"] .social-auth-copy { place-items: center start; text-align: left; }
-.social-buttons .social-auth-button[data-provider="facebook"] .social-auth-balance { display: none; }
 .social-buttons .social-auth-button:disabled { opacity: .68; cursor: not-allowed; }
 .social-buttons .social-auth-button[aria-busy="true"] { opacity: 1; cursor: wait; }
 .social-auth-icon, .social-auth-balance { width: 24px; height: 24px; display: grid; place-items: center; }
 .social-brand-icon { width: 20px; height: 20px; display: block; flex: 0 0 auto; }
 .google-brand-icon { overflow: hidden; background: #fff url("/google-g-official.svg") center / 40px 40px no-repeat; }
-.facebook-brand-icon { border-radius: 50%; }
 .social-auth-copy { min-width: 0; display: grid; place-items: center; }
 .social-auth-copy > span { grid-area: 1 / 1; }
 .social-auth-label { overflow: hidden; max-width: 100%; text-overflow: ellipsis; white-space: nowrap; }
@@ -570,8 +564,6 @@
 .dark .social-buttons .social-auth-button:focus-visible { border-color: #8ab4f8; outline-color: rgba(138,180,248,.38); }
 .dark .social-buttons .social-auth-button[data-provider="google"] { border-color: #8e918f; background: #131314; color: #e3e3e3; }
 .dark .social-buttons .social-auth-button[data-provider="google"]:hover:not(:disabled) { border-color: #8e918f; background: #202124; }
-.dark .social-buttons .social-auth-button[data-provider="facebook"] { border-color: #1877f2; background: #1877f2; color: #fff; }
-.dark .social-buttons .social-auth-button[data-provider="facebook"]:hover:not(:disabled) { border-color: #166fe5; background: #166fe5; }
 .dark .role-picker label.selected, .dark .onboarding-roles button.selected { border-color: var(--coral); background: color-mix(in oklch, var(--accent) 65%, var(--card)); }
 .dark .dashboard-sidebar nav :is(a, button).active, .dark .legal-sidebar nav a.active { background: color-mix(in oklch, var(--accent) 65%, var(--card)); }
 .dark .dashboard-topbar { background: color-mix(in oklch, var(--card) 86%, transparent); }

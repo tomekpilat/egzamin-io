@@ -68,6 +68,8 @@ Jeśli używasz `www`, dodaj analogiczne adresy z `https://www.egzamin.io`.
 
 ## 5. Facebook
 
+> Status: logowanie Facebookiem jest tymczasowo wyłączone w interfejsie egzamin.io do czasu weryfikacji aplikacji przez Meta i przełączenia jej w tryb Live. Poniższe kroki zachowujemy jako instrukcję ponownego uruchomienia providera.
+
 1. Utwórz aplikację w Meta for Developers i dodaj Facebook Login.
 2. W **Valid OAuth Redirect URIs** wpisz ten sam callback Supabase:
 
