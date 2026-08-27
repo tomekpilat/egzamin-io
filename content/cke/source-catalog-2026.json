@@ -1,0 +1,3025 @@
+{
+  "schema_version": 1,
+  "exam_year": 2026,
+  "source_page": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2026-2/",
+  "generated_at": "2026-08-27T17:31:23.401Z",
+  "unique_files": 149,
+  "total_bytes": 605494236,
+  "formats": {
+    "docx": 3,
+    "dxb": 6,
+    "mp3": 18,
+    "pdf": 122
+  },
+  "subjects": [
+    "Język angielski",
+    "Język francuski",
+    "Język hiszpański",
+    "Język niemiecki",
+    "Język polski",
+    "Język rosyjski",
+    "Język włoski",
+    "Matematyka"
+  ],
+  "files": [
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/angielskiosma.dxb",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "angielskiosma.dxb",
+      "extension": "dxb",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-660-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niewidomych (czarnodruk) (OJAP-660-X-2605)",
+          "label": "Arkusz"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/angielskiosma.dxb",
+      "bytes": 31900,
+      "sha256": "785a36474c61e39ca77b2dbe47ceb17f0a50c5457d96cd2cf8462948ca2c0025",
+      "content_type": "application/octet-stream",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-100-200-400-500-660-K00-2605-transkrypcja.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-100-200-400-500-660-K00-2605-transkrypcja.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja X (OJAP-100-X-2605)",
+          "label": "Transkrypcja nagrań"
+        },
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-100-Y-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja Y (OJAP-100-Y-2605)",
+          "label": "Transkrypcja nagrań"
+        },
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-200-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z autyzmem, w tym z zespołem Aspergera (OJAP-200-X-2605)",
+          "label": "Transkrypcja nagrań"
+        },
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-400-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 16 pkt (OJAP-400-X-2605)",
+          "label": "Transkrypcja nagrań"
+        },
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-500-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 24 pkt (OJAP-500-X-2605)",
+          "label": "Transkrypcja nagrań"
+        },
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-660-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niewidomych (czarnodruk) (OJAP-660-X-2605)",
+          "label": "Transkrypcja nagrań"
+        },
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-K00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z zaburzeniem widzenia barw (OJAP-K00-X-2605)",
+          "label": "Transkrypcja nagrań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-100-200-400-500-660-K00-2605-transkrypcja.pdf",
+      "bytes": 279249,
+      "sha256": "8bfa6611b2f44b80b77b4ce37c6aed75ec46a89fa1962494b58b2e81139e7460",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-100-200-400-500-K00-2605-zasady.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-100-200-400-500-K00-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja X (OJAP-100-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        },
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-100-Y-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja Y (OJAP-100-Y-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        },
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-200-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z autyzmem, w tym z zespołem Aspergera (OJAP-200-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        },
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-400-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 16 pkt (OJAP-400-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        },
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-500-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 24 pkt (OJAP-500-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        },
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-K00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z zaburzeniem widzenia barw (OJAP-K00-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-100-200-400-500-K00-2605-zasady.pdf",
+      "bytes": 656029,
+      "sha256": "8375a5bcd7f971071a4258f9da60ea161bf6d344859b5e0b28ac62f23c197be5",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-100-2605.mp3",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-100-2605.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja X (OJAP-100-X-2605)",
+          "label": "Nagrania"
+        },
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-100-Y-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja Y (OJAP-100-Y-2605)",
+          "label": "Nagrania"
+        },
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-K00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z zaburzeniem widzenia barw (OJAP-K00-X-2605)",
+          "label": "Nagrania"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-100-2605.mp3",
+      "bytes": 20548637,
+      "sha256": "36bf2429a47a89e2573fc22c1c4327e67144df18231d3fd5247e9f317b2f697c",
+      "content_type": "audio/mpeg",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-100-WP-2605.mp3",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-100-WP-2605.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja X (OJAP-100-X-2605)",
+          "label": "Nagrania z wydłużonymi przerwami"
+        },
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-100-Y-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja Y (OJAP-100-Y-2605)",
+          "label": "Nagrania z wydłużonymi przerwami"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-100-WP-2605.mp3",
+      "bytes": 27098873,
+      "sha256": "187f0b59c40c4a6ff30a0a767b1a1b67cc63fa1b5a6bb733e1ffafa23add4f66",
+      "content_type": "audio/mpeg",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-100-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-100-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja X (OJAP-100-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-100-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1409755,
+      "sha256": "7386a788aef4bf4491b50292468e02d46e89e8744f20f1ac5ee49fed79e565af",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-100-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-100-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja X (OJAP-100-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-100-X-2605-zeszyt-zadan.pdf",
+      "bytes": 1550601,
+      "sha256": "ef25cb0794a49951101ad71851d2c6de8a244d7610d0b60d965c84e7e8ddf54d",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-100-Y-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-100-Y-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-100-Y-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja Y (OJAP-100-Y-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-100-Y-2605-karta-odpowiedzi.pdf",
+      "bytes": 1409754,
+      "sha256": "20b5c682ab17c5046bf554b403da7b123d0c63187e18676df27ded0bf751f165",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-100-Y-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-100-Y-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-100-Y-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja Y (OJAP-100-Y-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-100-Y-2605-zeszyt-zadan.pdf",
+      "bytes": 1550641,
+      "sha256": "7c62bc744264279b4b2679d44d42ab903a4f6d4a9a96b4ef439510515d031925",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-200-400-500-2605.mp3",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-200-400-500-2605.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-200-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z autyzmem, w tym z zespołem Aspergera (OJAP-200-X-2605)",
+          "label": "Nagrania"
+        },
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-400-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 16 pkt (OJAP-400-X-2605)",
+          "label": "Nagrania"
+        },
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-500-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 24 pkt (OJAP-500-X-2605)",
+          "label": "Nagrania"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-200-400-500-2605.mp3",
+      "bytes": 27098873,
+      "sha256": "187f0b59c40c4a6ff30a0a767b1a1b67cc63fa1b5a6bb733e1ffafa23add4f66",
+      "content_type": "audio/mpeg",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-200-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-200-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-200-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z autyzmem, w tym z zespołem Aspergera (OJAP-200-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-200-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1406770,
+      "sha256": "7ad048d46c39ab7234d31dd9ab45698c8393e111db2917a25864d4edc25c0a9a",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-200-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-200-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-200-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z autyzmem, w tym z zespołem Aspergera (OJAP-200-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-200-X-2605-zeszyt-zadan.pdf",
+      "bytes": 1521242,
+      "sha256": "c2f3b52d4f63b3cf309a86549d6424486d1bb973063af0c21919eea3bc1dd176",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-400-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-400-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-400-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 16 pkt (OJAP-400-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-400-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1406773,
+      "sha256": "5b102b9cce0c2002018618664c31d07175c038f635b3a9b0cbb8325da175bc57",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-400-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-400-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-400-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 16 pkt (OJAP-400-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-400-X-2605-zeszyt-zadan.pdf",
+      "bytes": 1385688,
+      "sha256": "c6dbf80a4bb063ea5e4e3b77b3cef4928628e17001b7ca405ecd31c43a7889b4",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-500-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-500-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-500-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 24 pkt (OJAP-500-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-500-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1406781,
+      "sha256": "2fcd28e637abca957ed37c55db36738b476ed084094195cb994e3ac5a759c7f8",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-500-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-500-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-500-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 24 pkt (OJAP-500-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-500-X-2605-zeszyt-zadan.pdf",
+      "bytes": 1445432,
+      "sha256": "ce26384d5c2705078274c8b6b0daa796ee1d336d7fa5fc951981dcff574f9a7f",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-600-2605.mp3",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-600-2605.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-660-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niewidomych (czarnodruk) (OJAP-660-X-2605)",
+          "label": "Nagrania"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-600-2605.mp3",
+      "bytes": 29506214,
+      "sha256": "3e5e9bdc6d2884c9d948bc4498b6a64c8a05df898c5288054f4eae2fad937b31",
+      "content_type": "audio/mpeg",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-660-2605-zasady.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-660-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-660-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niewidomych (czarnodruk) (OJAP-660-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-660-2605-zasady.pdf",
+      "bytes": 649965,
+      "sha256": "89bc58bab3dd178fee6311df7866bea518724c4af8871361f9e9135cae019f6c",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-660-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-660-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-660-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niewidomych (czarnodruk) (OJAP-660-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-660-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1406771,
+      "sha256": "737c3246befc2505a9f74619c761cc65d72160dbea0af9a8e354f040438f1f26",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-660-X-2605-zeszyt-zadan.docx",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-660-X-2605-zeszyt-zadan.docx",
+      "extension": "docx",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-660-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niewidomych (czarnodruk) (OJAP-660-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-660-X-2605-zeszyt-zadan.docx",
+      "bytes": 142987,
+      "sha256": "5c51b0c5dc869b4486a5032ed61b6d1fcb6eb57f4fdf1e2ac4630c0430d0d298",
+      "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-700-2605-zasady.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-700-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-700-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niesłyszących i słabosłyszących (OJAP-700-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-700-2605-zasady.pdf",
+      "bytes": 586519,
+      "sha256": "d3e0ce7ca25b40df594551cc9212244408bffff0dcb697d476402b8448a731f0",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-700-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-700-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-700-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niesłyszących i słabosłyszących (OJAP-700-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-700-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1405682,
+      "sha256": "38afbe02bd7bfd1987f03dab493dd3da8561f5b13626c44e639b6c87f45539b6",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-700-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-700-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-700-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niesłyszących i słabosłyszących (OJAP-700-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-700-X-2605-zeszyt-zadan.pdf",
+      "bytes": 1931697,
+      "sha256": "b5c91ef9cf02f4ff401122a5f7f9a64cd116d91c14b3723b5c2b48a2be8b90ff",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-800-2605-transkrypcja.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-800-2605-transkrypcja.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-800-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością intelektualną w stopniu lekkim (OJAP-800-X-2605)",
+          "label": "Transkrypcja nagrań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-800-2605-transkrypcja.pdf",
+      "bytes": 266422,
+      "sha256": "ea1d75aec69a301dda678802539e74264ec3cf8e4e43f5a6cbd9c477b24e94d5",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-800-2605-zasady.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-800-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-800-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością intelektualną w stopniu lekkim (OJAP-800-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-800-2605-zasady.pdf",
+      "bytes": 403907,
+      "sha256": "6856556b7fc2c70b5174202af78ad3c17f82ca68b57f381cdd61dce8c10ab579",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-800-2605.mp3",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-800-2605.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-800-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością intelektualną w stopniu lekkim (OJAP-800-X-2605)",
+          "label": "Nagrania"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-800-2605.mp3",
+      "bytes": 22498946,
+      "sha256": "b723d88825f96b1e8ca8a01c86793392c0297b4f73ef941b2ef94cdec6664bd9",
+      "content_type": "audio/mpeg",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-800-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-800-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-800-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością intelektualną w stopniu lekkim (OJAP-800-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-800-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1405882,
+      "sha256": "e770ee887e9e12fbf0464c852e8b84283a5faf8473117464fc140ccf088df6fd",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-800-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-800-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-800-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością intelektualną w stopniu lekkim (OJAP-800-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-800-X-2605-zeszyt-zadan.pdf",
+      "bytes": 2878556,
+      "sha256": "f685caaf7b60d317275ca8969f3fb84cb2e4a7a29ef6e1da883c0146da7895b0",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-900-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-900-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-900-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z afazją (OJAP-900-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-900-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1405574,
+      "sha256": "68fb9db6b72f5e0e2ac3fe5fdf33d87646fdedf66947fb3057788d4953ed9719",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-900-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-900-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-900-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z afazją (OJAP-900-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-900-X-2605-zeszyt-zadan.pdf",
+      "bytes": 2783061,
+      "sha256": "35cb6e14de755d059d28ed3a6a36b2a965705dc6a407457a7de1b123e2b05d06",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-K00-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-K00-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-K00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z zaburzeniem widzenia barw (OJAP-K00-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-K00-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1406853,
+      "sha256": "f600d9059c3b1b39d4352b0e836aabb9c37acba73f55c3252edf726153a30df8",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-K00-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-K00-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-K00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z zaburzeniem widzenia barw (OJAP-K00-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-K00-X-2605-zeszyt-zadan.pdf",
+      "bytes": 1637173,
+      "sha256": "ff82d1699eae6751238d83b4a311957d19f012326b36214ab758cc7017e68248",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-Q00-900-2605-transkrypcja.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-Q00-900-2605-transkrypcja.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-900-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z afazją (OJAP-900-X-2605)",
+          "label": "Transkrypcja nagrań"
+        },
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-Q00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością ruchową spowodowaną mózgowym porażeniem dziecięcym (OJAP-Q00-X-2605)",
+          "label": "Transkrypcja nagrań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-Q00-900-2605-transkrypcja.pdf",
+      "bytes": 273015,
+      "sha256": "c477fffed147ad71be74758b4f249471a4de0c1f42e9c6868b42ad50a25da8e8",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-Q00-900-2605-zasady.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-Q00-900-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-900-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z afazją (OJAP-900-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        },
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-Q00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością ruchową spowodowaną mózgowym porażeniem dziecięcym (OJAP-Q00-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-Q00-900-2605-zasady.pdf",
+      "bytes": 591118,
+      "sha256": "4c405d473db2daa4bd1e1bc1962bb83e1bdd7f21c23ccf95fe3135c04d7251d6",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-Q00-900-2605.mp3",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-Q00-900-2605.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-900-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z afazją (OJAP-900-X-2605)",
+          "label": "Nagrania"
+        },
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-Q00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością ruchową spowodowaną mózgowym porażeniem dziecięcym (OJAP-Q00-X-2605)",
+          "label": "Nagrania"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-Q00-900-2605.mp3",
+      "bytes": 25556390,
+      "sha256": "1b8aefc8007d34a667403001099dfe255d8f940a2f78a287622913823920dbf6",
+      "content_type": "audio/mpeg",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-Q00-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-Q00-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-Q00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością ruchową spowodowaną mózgowym porażeniem dziecięcym (OJAP-Q00-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-Q00-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1405746,
+      "sha256": "c5397c4bd7ebc1602408cd7928b7a8666e4f22e3db23554bf5db5981809180d0",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/OJAP-Q00-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "OJAP-Q00-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-Q00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością ruchową spowodowaną mózgowym porażeniem dziecięcym (OJAP-Q00-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/OJAP-Q00-X-2605-zeszyt-zadan.pdf",
+      "bytes": 2783837,
+      "sha256": "5cd2250643b27bc8f83b91d486fee629e0acf165d3fb7c4864d0a6a54fe426fc",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_angielski/tytangielskiosma.dxb",
+      "subject_directory": "jezyk_angielski",
+      "file_name": "tytangielskiosma.dxb",
+      "extension": "dxb",
+      "usages": [
+        {
+          "subject": "Język angielski",
+          "variant_code": "OJAP-660-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niewidomych (czarnodruk) (OJAP-660-X-2605)",
+          "label": "Strona tytułowa"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_angielski/tytangielskiosma.dxb",
+      "bytes": 13119,
+      "sha256": "5fdcb4f7838f313ef1e5c2b63c1acea8739a416d4c6032e29c586f67f3d2201e",
+      "content_type": "application/octet-stream",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_francuski/OJFP-100-2605-transkrypcja.pdf",
+      "subject_directory": "jezyk_francuski",
+      "file_name": "OJFP-100-2605-transkrypcja.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język francuski",
+          "variant_code": "OJFP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJFP-100-X-2605)",
+          "label": "Transkrypcja nagrań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_francuski/OJFP-100-2605-transkrypcja.pdf",
+      "bytes": 285321,
+      "sha256": "ddf7753fc633bb76b441f6d1dafccb10bf68ddf7650869f9d194fca83c2cf65e",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_francuski/OJFP-100-2605-zasady.pdf",
+      "subject_directory": "jezyk_francuski",
+      "file_name": "OJFP-100-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język francuski",
+          "variant_code": "OJFP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJFP-100-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_francuski/OJFP-100-2605-zasady.pdf",
+      "bytes": 602302,
+      "sha256": "38f8a5929b3f6be81376e02a7df4984325c3b72cac58d79e02ab78a28aac4c44",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_francuski/OJFP-100-2605.mp3",
+      "subject_directory": "jezyk_francuski",
+      "file_name": "OJFP-100-2605.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język francuski",
+          "variant_code": "OJFP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJFP-100-X-2605)",
+          "label": "Nagrania"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_francuski/OJFP-100-2605.mp3",
+      "bytes": 21738755,
+      "sha256": "ee80e76ae33a08eb3c20442d330d60295bd7e3c45c4a7485aedf1c10fd89c6c6",
+      "content_type": "audio/mpeg",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_francuski/OJFP-100-WP-2605.mp3",
+      "subject_directory": "jezyk_francuski",
+      "file_name": "OJFP-100-WP-2605.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język francuski",
+          "variant_code": "OJFP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJFP-100-X-2605)",
+          "label": "Nagrania z wydłużonymi przerwami"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_francuski/OJFP-100-WP-2605.mp3",
+      "bytes": 28107596,
+      "sha256": "c7d7c157ea14f31d9601346aba19adbbd01c9675285836c45cc52827fed4526a",
+      "content_type": "audio/mpeg",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_francuski/OJFP-100-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_francuski",
+      "file_name": "OJFP-100-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język francuski",
+          "variant_code": "OJFP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJFP-100-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_francuski/OJFP-100-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1409761,
+      "sha256": "a109faa3cd29ad97faa24595b67f41f05974103c822092b244fcf7c73474d351",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_francuski/OJFP-100-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_francuski",
+      "file_name": "OJFP-100-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język francuski",
+          "variant_code": "OJFP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJFP-100-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_francuski/OJFP-100-X-2605-zeszyt-zadan.pdf",
+      "bytes": 1975965,
+      "sha256": "e91a16b238f87fce1d35711387331f87534165c5d0d9a6192eee6d47c4d1dfef",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_hiszpanski/OJHP-100-2605-transkrypcja.pdf",
+      "subject_directory": "jezyk_hiszpanski",
+      "file_name": "OJHP-100-2605-transkrypcja.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język hiszpański",
+          "variant_code": "OJHP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJHP-100-X-2605)",
+          "label": "Transkrypcja nagrań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_hiszpanski/OJHP-100-2605-transkrypcja.pdf",
+      "bytes": 273129,
+      "sha256": "856527a4335d88c7486a1cb5f4dfc01be650a4d9da9f0baf30f81dbb891bdb40",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_hiszpanski/OJHP-100-2605-zasady.pdf",
+      "subject_directory": "jezyk_hiszpanski",
+      "file_name": "OJHP-100-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język hiszpański",
+          "variant_code": "OJHP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJHP-100-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_hiszpanski/OJHP-100-2605-zasady.pdf",
+      "bytes": 588727,
+      "sha256": "3043768df0cd88d4fc353bccf59a80985de7cf431dec68aef1c0f7f157b67a0b",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_hiszpanski/OJHP-100-2605.mp3",
+      "subject_directory": "jezyk_hiszpanski",
+      "file_name": "OJHP-100-2605.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język hiszpański",
+          "variant_code": "OJHP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJHP-100-X-2605)",
+          "label": "Nagrania"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_hiszpanski/OJHP-100-2605.mp3",
+      "bytes": 19146266,
+      "sha256": "e62aec7468fa3b33e76ef56e832082e9e2e43aebc90ec8930312f035a83c2b3c",
+      "content_type": "audio/mpeg",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_hiszpanski/OJHP-100-WP-2605.mp3",
+      "subject_directory": "jezyk_hiszpanski",
+      "file_name": "OJHP-100-WP-2605.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język hiszpański",
+          "variant_code": "OJHP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJHP-100-X-2605)",
+          "label": "Nagrania z wydłużonymi przerwami"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_hiszpanski/OJHP-100-WP-2605.mp3",
+      "bytes": 24877097,
+      "sha256": "ff10d00f16f40cc812c771f3e34f32a2e2c5db2c8086405f2b97ea2bbed02077",
+      "content_type": "audio/mpeg",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_hiszpanski/OJHP-100-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_hiszpanski",
+      "file_name": "OJHP-100-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język hiszpański",
+          "variant_code": "OJHP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJHP-100-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_hiszpanski/OJHP-100-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1409835,
+      "sha256": "35442c8dc751a30199a5c21e79e207bf6fbec0ca52c88039818ed361822050d6",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_hiszpanski/OJHP-100-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_hiszpanski",
+      "file_name": "OJHP-100-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język hiszpański",
+          "variant_code": "OJHP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJHP-100-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_hiszpanski/OJHP-100-X-2605-zeszyt-zadan.pdf",
+      "bytes": 1843251,
+      "sha256": "fcd5a6351b4a2ca11c05348c9c7a91e18193a2893ea4c3592ede4836cfa8be88",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_niemiecki/OJNP-100-200-2605-transkrypcja.pdf",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNP-100-200-2605-transkrypcja.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJNP-100-X-2605)",
+          "label": "Transkrypcja nagrań"
+        },
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-200-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z autyzmem, w tym z zespołem Aspergera (OJNP-200-X-2605)",
+          "label": "Transkrypcja nagrań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_niemiecki/OJNP-100-200-2605-transkrypcja.pdf",
+      "bytes": 276822,
+      "sha256": "f59404720307749a1b8255459db431d17379e47205bfde67581a87031a692a37",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_niemiecki/OJNP-100-200-2605-zasady.pdf",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNP-100-200-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJNP-100-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        },
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-200-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z autyzmem, w tym z zespołem Aspergera (OJNP-200-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_niemiecki/OJNP-100-200-2605-zasady.pdf",
+      "bytes": 713155,
+      "sha256": "a5de8e0cd356f864fb07407ec722e8dde73fd0839e4f59e7625656bc085b3ab4",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_niemiecki/OJNP-100-2605.mp3",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNP-100-2605.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJNP-100-X-2605)",
+          "label": "Nagrania"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_niemiecki/OJNP-100-2605.mp3",
+      "bytes": 19539497,
+      "sha256": "3906224fc41938746bedbfbf99297ff40cb4f8dbaf2b7c9806019624e3a1204a",
+      "content_type": "audio/mpeg",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_niemiecki/OJNP-100-WP-2605.mp3",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNP-100-WP-2605.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJNP-100-X-2605)",
+          "label": "Nagrania z wydłużonymi przerwami"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_niemiecki/OJNP-100-WP-2605.mp3",
+      "bytes": 22424058,
+      "sha256": "296fe1ff2e78d3c99e35e1776de0a698ad66fd159bc535f0532390f0d06e60b4",
+      "content_type": "audio/mpeg",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_niemiecki/OJNP-100-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNP-100-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJNP-100-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_niemiecki/OJNP-100-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1409817,
+      "sha256": "6b407abca29dc454e90fc1049b8ccbdb02bf5db9b62a16ccc301dd78e0ad461d",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_niemiecki/OJNP-100-X-2605-karta-rozwiazan.pdf",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNP-100-X-2605-karta-rozwiazan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJNP-100-X-2605)",
+          "label": "Karta rozwiązań zadań otwartych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_niemiecki/OJNP-100-X-2605-karta-rozwiazan.pdf",
+      "bytes": 3504328,
+      "sha256": "5aee022e0b720930678f678f8f7a1db0817ff43e9ab6969c69f34104ffd70086",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_niemiecki/OJNP-100-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNP-100-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJNP-100-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_niemiecki/OJNP-100-X-2605-zeszyt-zadan.pdf",
+      "bytes": 1673594,
+      "sha256": "bbc4dde18fae048f0208d97dd705c366b762b401f71707d7dabda7a4b2f8db6f",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_niemiecki/OJNP-200-400-500-2605.mp3",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNP-200-400-500-2605.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-200-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z autyzmem, w tym z zespołem Aspergera (OJNP-200-X-2605)",
+          "label": "Nagrania"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_niemiecki/OJNP-200-400-500-2605.mp3",
+      "bytes": 22424058,
+      "sha256": "296fe1ff2e78d3c99e35e1776de0a698ad66fd159bc535f0532390f0d06e60b4",
+      "content_type": "audio/mpeg",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_niemiecki/OJNP-200-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNP-200-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-200-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z autyzmem, w tym z zespołem Aspergera (OJNP-200-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_niemiecki/OJNP-200-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1406841,
+      "sha256": "4476dafc037536be110eab6d5e4b3cd6aa260a255b78cda7dde41e630c975ce0",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_niemiecki/OJNP-200-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNP-200-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-200-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z autyzmem, w tym z zespołem Aspergera (OJNP-200-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_niemiecki/OJNP-200-X-2605-zeszyt-zadan.pdf",
+      "bytes": 1815654,
+      "sha256": "304ecd00eac80daf896ec6c31f3d64faebd5b5ea259be0907fcaade3e41319cd",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_niemiecki/OJNP-800-2605-transkrypcja.pdf",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNP-800-2605-transkrypcja.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-800-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością intelektualną w stopniu lekkim (OJNP-800-X-2605)",
+          "label": "Transkrypcja nagrań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_niemiecki/OJNP-800-2605-transkrypcja.pdf",
+      "bytes": 271908,
+      "sha256": "aecb8b9e694cec9f5a1d33c755f27769aedb02e071e62b8ece1fc60d178857c1",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_niemiecki/OJNP-800-2605-zasady.pdf",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNP-800-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-800-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością intelektualną w stopniu lekkim (OJNP-800-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_niemiecki/OJNP-800-2605-zasady.pdf",
+      "bytes": 485532,
+      "sha256": "d7f2d4afb4b8b2caaf0aaa1956e487cb9f54b563254fd0117e51e83670bc204c",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_niemiecki/OJNP-800-2605.mp3",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNP-800-2605.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-800-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością intelektualną w stopniu lekkim (OJNP-800-X-2605)",
+          "label": "Nagrania"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_niemiecki/OJNP-800-2605.mp3",
+      "bytes": 24410057,
+      "sha256": "4a23ee23fd5ddc306f7705662601a60cc252c2b6e51e81f2ef90b4d8f56bcabf",
+      "content_type": "audio/mpeg",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_niemiecki/OJNP-800-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNP-800-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-800-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością intelektualną w stopniu lekkim (OJNP-800-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_niemiecki/OJNP-800-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1405879,
+      "sha256": "e20eb754e0fe8bea8b6ad15ae7380ac8888febe9ae1c3c1f042b8046e789c839",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_niemiecki/OJNP-800-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNP-800-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-800-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością intelektualną w stopniu lekkim (OJNP-800-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_niemiecki/OJNP-800-X-2605-zeszyt-zadan.pdf",
+      "bytes": 3520192,
+      "sha256": "9448cf6704d5ca110c218d04f18b32a4e44b06027c6b3b5908157ba0a3db0ae0",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-100-400-500-660-2605-zasady.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-100-400-500-660-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja X (OPOP-100-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        },
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-100-Y-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja Y (OPOP-100-Y-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        },
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-400-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 16 pkt (OPOP-400-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        },
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-500-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 24 pkt (OPOP-500-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        },
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-660-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niewidomych (czarnodruk) (OPOP-660-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-100-400-500-660-2605-zasady.pdf",
+      "bytes": 561984,
+      "sha256": "97da801836b3cc7467cbec4fe1c36ad25ba7096a813e3c0ae7c9c9524ae91ad8",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-100-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-100-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja X (OPOP-100-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-100-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 2668704,
+      "sha256": "47e5d00fae1b0045cd507563ec0fcb1e9dab0d7f8f91d1566086514421159590",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-100-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-100-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja X (OPOP-100-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-100-X-2605-zeszyt-zadan.pdf",
+      "bytes": 830314,
+      "sha256": "05d4076b2b6353058c40c59a28a8bfc456df2c593b18ecdacecc6935de4bb14a",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-100-Y-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-100-Y-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-100-Y-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja Y (OPOP-100-Y-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-100-Y-2605-karta-odpowiedzi.pdf",
+      "bytes": 2668704,
+      "sha256": "6272c6c7bab9a24a3c0b20aeb724134d864b692953e0bad67abbb273ca85531a",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-100-Y-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-100-Y-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-100-Y-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja Y (OPOP-100-Y-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-100-Y-2605-zeszyt-zadan.pdf",
+      "bytes": 836968,
+      "sha256": "693374aa38ad4ebfb54a19b6e92309326a9359769b72a12524e368c7b5fa4d1f",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-200-2605-zasady.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-200-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-200-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z autyzmem, w tym z zespołem Aspergera (OPOP-200-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-200-2605-zasady.pdf",
+      "bytes": 547125,
+      "sha256": "8f2667ee1d6c10663bd9380ffe395c8c3164517be646c98b31392a0951f7b291",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-200-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-200-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-200-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z autyzmem, w tym z zespołem Aspergera (OPOP-200-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-200-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 2418426,
+      "sha256": "f7b3498f3f871e5de20a9bd813dc1be55de05d6d6eecd3528daeb83224f2b22e",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-200-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-200-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-200-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z autyzmem, w tym z zespołem Aspergera (OPOP-200-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-200-X-2605-zeszyt-zadan.pdf",
+      "bytes": 951426,
+      "sha256": "f5dcbe64b27eb25f1fb9e93ee81884c6877dd6ccf36992d20a1889ee5541183c",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-400-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-400-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-400-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 16 pkt (OPOP-400-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-400-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 2406413,
+      "sha256": "8f83fc9fe108849d4840c9ad984a45fd001dc6efdad7e7aac29bca79a069bc40",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-400-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-400-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-400-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 16 pkt (OPOP-400-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-400-X-2605-zeszyt-zadan.pdf",
+      "bytes": 658490,
+      "sha256": "5b8e19ef19cf0f382d8dc8fa2d867ff3d064dd22afb416af76493afb4cd90ec2",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-500-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-500-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-500-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 24 pkt (OPOP-500-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-500-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 2407796,
+      "sha256": "18e11728d81957534a2c3c47c395a798890c173d2840524ae07ba53fe47820f7",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-500-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-500-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-500-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 24 pkt (OPOP-500-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-500-X-2605-zeszyt-zadan.pdf",
+      "bytes": 893478,
+      "sha256": "b29d69a6238561deccbcdd478a00ed04c75ac83a2aa39b5d571aeac017a24b9b",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-660-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-660-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-660-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niewidomych (czarnodruk) (OPOP-660-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-660-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 2409401,
+      "sha256": "cd07c3f428a8d886324565085dfd96ce67002bd9d4cf405417a9249c49e12ae9",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-660-X-2605-zeszyt-zadan.docx",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-660-X-2605-zeszyt-zadan.docx",
+      "extension": "docx",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-660-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niewidomych (czarnodruk) (OPOP-660-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-660-X-2605-zeszyt-zadan.docx",
+      "bytes": 83427,
+      "sha256": "0b74545760d523082151e0339cf83a12bd4f44a02a7d6b83e76313662deb0ed3",
+      "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-700-2605-zasady.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-700-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-700-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niesłyszących i słabosłyszących (OPOP-700-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-700-2605-zasady.pdf",
+      "bytes": 529398,
+      "sha256": "b5ddf463e63b01b678843ab31ceeaa6453ae8d5effc6e41645983ecd54328c1e",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-700-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-700-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-700-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niesłyszących i słabosłyszących (OPOP-700-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-700-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 2417100,
+      "sha256": "dd27561c63f65149f5b96691038c1dc7853618221ee0411b99fbfd01e22d62e5",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-700-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-700-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-700-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niesłyszących i słabosłyszących (OPOP-700-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-700-X-2605-zeszyt-zadan.pdf",
+      "bytes": 1121324,
+      "sha256": "e872c5846bc3e9ff1c90aec2c69f6bdd30c045a7b77ada7bb9eaf9613f81e5af",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-800-2605-zasady.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-800-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-800-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością intelektualną w stopniu lekkim (OPOP-800-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-800-2605-zasady.pdf",
+      "bytes": 501752,
+      "sha256": "600ca43fb375fe7398f1b7d1e87ae440b7a3a6a92c998c969887dd7f6eece90a",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-800-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-800-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-800-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością intelektualną w stopniu lekkim (OPOP-800-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-800-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 2359007,
+      "sha256": "8ef00fbe666f1d446caf8f188f9cc92bfcfa93d904fb22582bf6038406085c05",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-800-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-800-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-800-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością intelektualną w stopniu lekkim (OPOP-800-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-800-X-2605-zeszyt-zadan.pdf",
+      "bytes": 1086165,
+      "sha256": "09ed57ca65175e1412e0169f450c384e75ead5d9602cca3b94d76221671f30c1",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-900-2605-zasady.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-900-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-900-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z afazją (OPOP-900-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-900-2605-zasady.pdf",
+      "bytes": 484468,
+      "sha256": "eca879d6a99e35bbad07001ec70a66c7279daed5769c7562fb958d12e286c3a4",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-900-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-900-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-900-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z afazją (OPOP-900-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-900-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 2394349,
+      "sha256": "3eb405ebd8eb300eb9d9dbc02e59b920191258dcba2ea05bc914de49809e1bdf",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-900-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-900-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-900-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z afazją (OPOP-900-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-900-X-2605-zeszyt-zadan.pdf",
+      "bytes": 1192310,
+      "sha256": "cd00dc44df88a4dfb12ddc3921396fd200e2601ec050c864ca05afe956ec8489",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-C00-2605-zasady.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-C00-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-C00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów, którym ograniczona znajomość języka polskiego utrudnia zrozumienie czytanego tekstu (OPOP-C00-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-C00-2605-zasady.pdf",
+      "bytes": 546243,
+      "sha256": "a68b793596c4878b39911d0fd26dabd3e782cc07e0caa1696eb24d91867ac5fa",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-C00-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-C00-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-C00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów, którym ograniczona znajomość języka polskiego utrudnia zrozumienie czytanego tekstu (OPOP-C00-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-C00-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 2642552,
+      "sha256": "10fa2a3cb44d6795b8894e52cd7eeb62c36f22691a4528b9bc9f40d3ae10887d",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-C00-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-C00-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-C00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów, którym ograniczona znajomość języka polskiego utrudnia zrozumienie czytanego tekstu (OPOP-C00-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-C00-X-2605-zeszyt-zadan.pdf",
+      "bytes": 1068874,
+      "sha256": "cd100e4d984001adbeb1d759c3d58e1f80ad7d2a0a4e8419b7bd33e97ceb1368",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-K00-2605-zasady.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-K00-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-K00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla zdających z zaburzeniem widzenia barw (OPOP-K00-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-K00-2605-zasady.pdf",
+      "bytes": 555532,
+      "sha256": "5901e88c1e86e56d1ae6b1375e339d6828b99687684f4f0829dc31828eeb3527",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-K00-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-K00-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-K00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla zdających z zaburzeniem widzenia barw (OPOP-K00-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-K00-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 2406317,
+      "sha256": "12a3d6f3904d62e1a08478e22a803b11b211fab8cc45bcb00befa319df213c5f",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-K00-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-K00-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-K00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla zdających z zaburzeniem widzenia barw (OPOP-K00-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-K00-X-2605-zeszyt-zadan.pdf",
+      "bytes": 798539,
+      "sha256": "2607ceb4bb093da78f64134453ddccda5d811010636cedf29a6d657ef208217f",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-Q00-2605-zasady.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-Q00-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-Q00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością ruchową spowodowaną mózgowym porażeniem dziecięcym (OPOP-Q00-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-Q00-2605-zasady.pdf",
+      "bytes": 545275,
+      "sha256": "939e3d94ddab3012c19a143ebffca29c5832d825c5afca9ace5b7bae0411b7e8",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-Q00-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-Q00-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-Q00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością ruchową spowodowaną mózgowym porażeniem dziecięcym (OPOP-Q00-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-Q00-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 2394145,
+      "sha256": "7dcc48a6ae73ed94c6fcaff4dece92a70b2ff504bded9dd6d4e0d0c463c17470",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/OPOP-Q00-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_polski",
+      "file_name": "OPOP-Q00-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-Q00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością ruchową spowodowaną mózgowym porażeniem dziecięcym (OPOP-Q00-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/OPOP-Q00-X-2605-zeszyt-zadan.pdf",
+      "bytes": 1214362,
+      "sha256": "426798fb6f2399ac617c65a41c6459f68522e6b150a69f4ce305e204c0dff1ae",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/polskiosma.dxb",
+      "subject_directory": "jezyk_polski",
+      "file_name": "polskiosma.dxb",
+      "extension": "dxb",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-660-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niewidomych (czarnodruk) (OPOP-660-X-2605)",
+          "label": "Arkusz"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/polskiosma.dxb",
+      "bytes": 37101,
+      "sha256": "6b36326c867f62a0876289ef37b1dcac795d0999316d9157e6fc13c5c6b53b20",
+      "content_type": "application/octet-stream",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_polski/tytpolskiosma.dxb",
+      "subject_directory": "jezyk_polski",
+      "file_name": "tytpolskiosma.dxb",
+      "extension": "dxb",
+      "usages": [
+        {
+          "subject": "Język polski",
+          "variant_code": "OPOP-660-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niewidomych (czarnodruk) (OPOP-660-X-2605)",
+          "label": "Strona tytułowa"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_polski/tytpolskiosma.dxb",
+      "bytes": 13351,
+      "sha256": "6d0f918cd2f612b15e62fb3d8bfa8d0aca4cc8b08e6c009a46c4ccc8a79990c7",
+      "content_type": "application/octet-stream",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_rosyjski/OJRP-100-2605-transkrypcja.pdf",
+      "subject_directory": "jezyk_rosyjski",
+      "file_name": "OJRP-100-2605-transkrypcja.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język rosyjski",
+          "variant_code": "OJRP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJRP-100-X-2605)",
+          "label": "Transkrypcja nagrań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_rosyjski/OJRP-100-2605-transkrypcja.pdf",
+      "bytes": 356577,
+      "sha256": "49a33741246bf35ca2cb0f08944ecaeaa499da5e787372af886150ef8aa55106",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_rosyjski/OJRP-100-2605-zasady.pdf",
+      "subject_directory": "jezyk_rosyjski",
+      "file_name": "OJRP-100-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język rosyjski",
+          "variant_code": "OJRP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJRP-100-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_rosyjski/OJRP-100-2605-zasady.pdf",
+      "bytes": 804629,
+      "sha256": "9a17c70ada40f23b1be71115da147cd6a4860592b389b3c762cc8fb4364f1ff1",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_rosyjski/OJRP-100-2605.mp3",
+      "subject_directory": "jezyk_rosyjski",
+      "file_name": "OJRP-100-2605.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język rosyjski",
+          "variant_code": "OJRP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJRP-100-X-2605)",
+          "label": "Nagrania"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_rosyjski/OJRP-100-2605.mp3",
+      "bytes": 23729096,
+      "sha256": "8eec7262e85ab1ccbaf289cfe509b43f78e42e8a1f82ca050868aa74c2cfb49f",
+      "content_type": "audio/mpeg",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_rosyjski/OJRP-100-WP-2605.mp3",
+      "subject_directory": "jezyk_rosyjski",
+      "file_name": "OJRP-100-WP-2605.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język rosyjski",
+          "variant_code": "OJRP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJRP-100-X-2605)",
+          "label": "Nagrania z wydłużonymi przerwami"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_rosyjski/OJRP-100-WP-2605.mp3",
+      "bytes": 29478275,
+      "sha256": "bc503f876edc31d91b05bfb5787cd47ddd02373ba91d1d75332afb4baa7583d0",
+      "content_type": "audio/mpeg",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_rosyjski/OJRP-100-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_rosyjski",
+      "file_name": "OJRP-100-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język rosyjski",
+          "variant_code": "OJRP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJRP-100-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_rosyjski/OJRP-100-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1409961,
+      "sha256": "3c4997088fff71adda2d5a11f3ee42a27058fcb7203b05b32e596ca973550b7c",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_rosyjski/OJRP-100-X-2605-karta-rozwiazan.pdf",
+      "subject_directory": "jezyk_rosyjski",
+      "file_name": "OJRP-100-X-2605-karta-rozwiazan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język rosyjski",
+          "variant_code": "OJRP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJRP-100-X-2605)",
+          "label": "Karta rozwiązań zadań otwartych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_rosyjski/OJRP-100-X-2605-karta-rozwiazan.pdf",
+      "bytes": 3299897,
+      "sha256": "1fef85684a6b3bbda0ea1f46f043904d3c414b3042ad3f9b025192ac18a1edd3",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_rosyjski/OJRP-100-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_rosyjski",
+      "file_name": "OJRP-100-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język rosyjski",
+          "variant_code": "OJRP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJRP-100-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_rosyjski/OJRP-100-X-2605-zeszyt-zadan.pdf",
+      "bytes": 1818335,
+      "sha256": "47600b0adbfa487282986d21329d853e5800dde6909234e7fe71d5f98a3527cb",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_wloski/OJWP-100-2605-transkrypcja.pdf",
+      "subject_directory": "jezyk_wloski",
+      "file_name": "OJWP-100-2605-transkrypcja.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język włoski",
+          "variant_code": "OJWP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJWP-100-X-2605)",
+          "label": "Transkrypcja nagrań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_wloski/OJWP-100-2605-transkrypcja.pdf",
+      "bytes": 268994,
+      "sha256": "ea56876c67312c6ca6b2c71d9a6a306b2d6fb7db65b8a3d93af8ac93569c18e4",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_wloski/OJWP-100-2605-zasady.pdf",
+      "subject_directory": "jezyk_wloski",
+      "file_name": "OJWP-100-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język włoski",
+          "variant_code": "OJWP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJWP-100-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_wloski/OJWP-100-2605-zasady.pdf",
+      "bytes": 643761,
+      "sha256": "62198214b04a90ff3f2cd45c924426400acc8d99ef68fa6db8a4863f472cafff",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_wloski/OJWP-100-2605.mp3",
+      "subject_directory": "jezyk_wloski",
+      "file_name": "OJWP-100-2605.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język włoski",
+          "variant_code": "OJWP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJWP-100-X-2605)",
+          "label": "Nagrania"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_wloski/OJWP-100-2605.mp3",
+      "bytes": 21122429,
+      "sha256": "022b9c5a40072862738c301484310d32982863f389c53e169b743f870cb3623b",
+      "content_type": "audio/mpeg",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_wloski/OJWP-100-WP-2605.mp3",
+      "subject_directory": "jezyk_wloski",
+      "file_name": "OJWP-100-WP-2605.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język włoski",
+          "variant_code": "OJWP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJWP-100-X-2605)",
+          "label": "Nagrania z wydłużonymi przerwami"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_wloski/OJWP-100-WP-2605.mp3",
+      "bytes": 26853677,
+      "sha256": "92515316dcee3f083e3ff328107a47e7690d8be927245a908c17ed4f49a889bd",
+      "content_type": "audio/mpeg",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_wloski/OJWP-100-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_wloski",
+      "file_name": "OJWP-100-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język włoski",
+          "variant_code": "OJWP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJWP-100-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_wloski/OJWP-100-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1409898,
+      "sha256": "2e27a24d710170576462a0881c75e25eee90f2029fb853e637fc3b792c57a26d",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/jezyk_wloski/OJWP-100-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_wloski",
+      "file_name": "OJWP-100-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język włoski",
+          "variant_code": "OJWP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJWP-100-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/jezyk_wloski/OJWP-100-X-2605-zeszyt-zadan.pdf",
+      "bytes": 1913085,
+      "sha256": "bbaac94647121579d998adf3c401c4f1c84a123062f1434216ac0b456a618a2e",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/Karta-rozwiazan-zadan-otwartych-2605.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "Karta-rozwiazan-zadan-otwartych-2605.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja X (OMAP-100-X-2605)",
+          "label": "Karta rozwiązań zadań otwartych"
+        },
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-100-Y-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja Y (OMAP-100-Y-2605)",
+          "label": "Karta rozwiązań zadań otwartych"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/Karta-rozwiazan-zadan-otwartych-2605.pdf",
+      "bytes": 2410564,
+      "sha256": "cd7308328fdc669f55eac5b65ffac2329504a92dbff12b8170f8b6b50f756735",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/matematykaosma.dxb",
+      "subject_directory": "matematyka",
+      "file_name": "matematykaosma.dxb",
+      "extension": "dxb",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-660-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niewidomych (czarnodruk) (OMAP-660-X-2605)",
+          "label": "Arkusz"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/matematykaosma.dxb",
+      "bytes": 23354,
+      "sha256": "d4f74157f2edd46e905dae1e53ea7aa4f0e479467e5ceaac16b7def4af17228a",
+      "content_type": "application/octet-stream",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-100-2605-zasady.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-100-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja X (OMAP-100-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        },
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-100-Y-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja Y (OMAP-100-Y-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        },
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-200-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z autyzmem, w tym z zespołem Aspergera (OMAP-200-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-100-2605-zasady.pdf",
+      "bytes": 443494,
+      "sha256": "c42713ba58bcd75dfc4cea4ae3d592dab06fb4d168175f1e6a878162399af627",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-100-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-100-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja X (OMAP-100-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-100-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1401991,
+      "sha256": "a002fd150eaec32ec835b08d4dc50d3730e208bff08bec7d553b1a4d64ab95cc",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-100-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-100-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-100-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja X (OMAP-100-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-100-X-2605-zeszyt-zadan.pdf",
+      "bytes": 1289429,
+      "sha256": "1a984cba5fd8a97c36a62cae98fa5ff64c0a587f3ee974253fddb39ecb95ae8f",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-100-Y-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-100-Y-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-100-Y-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja Y (OMAP-100-Y-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-100-Y-2605-karta-odpowiedzi.pdf",
+      "bytes": 1401992,
+      "sha256": "69279da70003eca39dddc547c33d5ad765cc2d1d498fb91c5444c32a2d99b48b",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-100-Y-2605-zeszyt-zadan.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-100-Y-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-100-Y-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się wersja Y (OMAP-100-Y-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-100-Y-2605-zeszyt-zadan.pdf",
+      "bytes": 1299298,
+      "sha256": "081ff8ac6617830949744b09fc78e1291b65c24e261909e4277bc949f3a7d995",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-200-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-200-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-200-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z autyzmem, w tym z zespołem Aspergera (OMAP-200-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-200-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1401060,
+      "sha256": "2aa2e65f8ff92e50528a1d775e6e5f5043eba3ce2205c313d181c20aac8e4eab",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-200-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-200-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-200-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z autyzmem, w tym z zespołem Aspergera (OMAP-200-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-200-X-2605-zeszyt-zadan.pdf",
+      "bytes": 2234609,
+      "sha256": "958c5489f3822397632e882c1cc616671c16115e8797c25a4134100c7fac8986",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-400-2605-zasady.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-400-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-400-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 16 pkt (OMAP-400-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-400-2605-zasady.pdf",
+      "bytes": 443494,
+      "sha256": "c42713ba58bcd75dfc4cea4ae3d592dab06fb4d168175f1e6a878162399af627",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-400-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-400-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-400-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 16 pkt (OMAP-400-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-400-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1401136,
+      "sha256": "84c5f65ab18cab83263f9029dafd4143ed2c6fbf25903e5d7edca5655126730c",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-400-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-400-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-400-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 16 pkt (OMAP-400-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-400-X-2605-zeszyt-zadan.pdf",
+      "bytes": 3497393,
+      "sha256": "81a56efc4f34b77f1064817a289971f2fa5d5354274e822656d86bd5a9a2f3d4",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-500-2605-zasady.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-500-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-500-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 24 pkt (OMAP-500-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-500-2605-zasady.pdf",
+      "bytes": 428175,
+      "sha256": "cd4a560ebf6124f60e1563ce401afe976f042d6b85120dc6eb4b8820a76ae8b9",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-500-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-500-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-500-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 24 pkt (OMAP-500-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-500-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1401062,
+      "sha256": "e23771367631a0f329ad4d58189a12a01f832faecf0594bbcbb589b93cf82596",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-500-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-500-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-500-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 24 pkt (OMAP-500-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-500-X-2605-zeszyt-zadan.pdf",
+      "bytes": 3051142,
+      "sha256": "96a8a3b5b02c9d9a1cf45a3e64535cda4824e040307f081c13d3c6ead8703bee",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-660-2605-zasady.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-660-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-660-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niewidomych (czarnodruk) (OMAP-660-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-660-2605-zasady.pdf",
+      "bytes": 410839,
+      "sha256": "9164080fd547602d391a47e9e7a537cc7a7d5dc7190c9b5389760d6b59150a15",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-660-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-660-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-660-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niewidomych (czarnodruk) (OMAP-660-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-660-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1401057,
+      "sha256": "c9f4cd97267d857b559a39c331017196bfcf95fc784af8826edc63740a1cad04",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-660-X-2605-zeszyt-zadan.docx",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-660-X-2605-zeszyt-zadan.docx",
+      "extension": "docx",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-660-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niewidomych (czarnodruk) (OMAP-660-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-660-X-2605-zeszyt-zadan.docx",
+      "bytes": 184951,
+      "sha256": "a6c995825e6b10fae74209c08f03a4abfdee904bdb3a6f760aecdbf1d86b6d30",
+      "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-700-2605-zasady.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-700-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-700-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niesłyszących i słabosłyszących (OMAP-700-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-700-2605-zasady.pdf",
+      "bytes": 429235,
+      "sha256": "a3025dd083f4f0f7783cd12b4875d9876d4892d55cd32112c7113b2fe9f5c830",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-700-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-700-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-700-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niesłyszących i słabosłyszących (OMAP-700-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-700-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1401145,
+      "sha256": "3d501baf4844672ffbd4c1ae77a998ba132fb1c8134c0e23f8d6a65a6809a23b",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-700-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-700-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-700-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niesłyszących i słabosłyszących (OMAP-700-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-700-X-2605-zeszyt-zadan.pdf",
+      "bytes": 1929538,
+      "sha256": "bf0e626c1d0a5444e41e3f4a2c8aa85cab1dd3ed0665a4147c6438be7cfb5a8c",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-800-2605-zasady.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-800-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-800-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością intelektualną w stopniu lekkim (OMAP-800-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-800-2605-zasady.pdf",
+      "bytes": 383855,
+      "sha256": "3f0be1c3de149cd9a0070c40eb7210d4edcd47058f856274cfa74a419a9e2868",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-800-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-800-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-800-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością intelektualną w stopniu lekkim (OMAP-800-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-800-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1400731,
+      "sha256": "9eedbaf97f4d3ceae80ec31fbf9f53581440dbc21ccb868abeb350e0ca195b48",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-800-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-800-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-800-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością intelektualną w stopniu lekkim (OMAP-800-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-800-X-2605-zeszyt-zadan.pdf",
+      "bytes": 846893,
+      "sha256": "ac356501e20261e467b72553bfd1054c2861c9afc5ca94721860121d078bc5df",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-900-2605-zasady.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-900-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-900-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z afazją (OMAP-900-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-900-2605-zasady.pdf",
+      "bytes": 421504,
+      "sha256": "d0d7fde0efbcd55fe0414c42df7571affda3ad31b57ce7281d32773f807440d0",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-900-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-900-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-900-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z afazją (OMAP-900-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-900-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1400628,
+      "sha256": "cb15cf57d7e4b74740182d4f935e0411f2150eae87bfc425ef6e20bc7426544a",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-900-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-900-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-900-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z afazją (OMAP-900-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-900-X-2605-zeszyt-zadan.pdf",
+      "bytes": 3542560,
+      "sha256": "2bd8df2ec468b79adbfcdb76cd6a6e9037209afc862918ca2b68f9f6efde8f79",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-C00-2605-zasady.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-C00-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-C00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów, którym ograniczona znajomość języka polskiego utrudnia zrozumienie czytanego tekstu (OMAP-C00-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-C00-2605-zasady.pdf",
+      "bytes": 443494,
+      "sha256": "c42713ba58bcd75dfc4cea4ae3d592dab06fb4d168175f1e6a878162399af627",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-C00-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-C00-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-C00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów, którym ograniczona znajomość języka polskiego utrudnia zrozumienie czytanego tekstu (OMAP-C00-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-C00-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1401997,
+      "sha256": "d8e9fe17ac17b1c6f6273df17521ab212e08d39f9c8373c50f00463b0d6ca7bf",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-C00-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-C00-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-C00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów, którym ograniczona znajomość języka polskiego utrudnia zrozumienie czytanego tekstu (OMAP-C00-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-C00-X-2605-zeszyt-zadan.pdf",
+      "bytes": 1956466,
+      "sha256": "4a4f3c3931da6a63a03164ec850d1963f68ced9d284f9db377a19cf3543a45b8",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-K00-2605-zasady.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-K00-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-K00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla zdających z zaburzeniem widzenia barw (OMAP-K00-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-K00-2605-zasady.pdf",
+      "bytes": 442098,
+      "sha256": "73a9c90f608ed64e4f6356053981c571291f6f1c95c45d23e73d146eba037263",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-K00-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-K00-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-K00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla zdających z zaburzeniem widzenia barw (OMAP-K00-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-K00-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1401160,
+      "sha256": "0f73169dd9884783d7684b65fae16f3ed264f6dc6ff77b7fe3a907e6527e4a2a",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-K00-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-K00-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-K00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla zdających z zaburzeniem widzenia barw (OMAP-K00-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-K00-X-2605-zeszyt-zadan.pdf",
+      "bytes": 2146698,
+      "sha256": "a9311a783d1ef27d3704decb4015db724925254da7db33177ff77b67027d51ef",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-Q00-2605-zasady.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-Q00-2605-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-Q00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością ruchową spowodowaną mózgowym porażeniem dziecięcym (OMAP-Q00-X-2605)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-Q00-2605-zasady.pdf",
+      "bytes": 421504,
+      "sha256": "d0d7fde0efbcd55fe0414c42df7571affda3ad31b57ce7281d32773f807440d0",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-Q00-X-2605-karta-odpowiedzi.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-Q00-X-2605-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-Q00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością ruchową spowodowaną mózgowym porażeniem dziecięcym (OMAP-Q00-X-2605)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-Q00-X-2605-karta-odpowiedzi.pdf",
+      "bytes": 1400795,
+      "sha256": "26b403f78f5f42c50285950fb1914f356b775b6777cbf4880aaa14ab3636f3f3",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/OMAP-Q00-X-2605-zeszyt-zadan.pdf",
+      "subject_directory": "matematyka",
+      "file_name": "OMAP-Q00-X-2605-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-Q00-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów z niepełnosprawnością ruchową spowodowaną mózgowym porażeniem dziecięcym (OMAP-Q00-X-2605)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/OMAP-Q00-X-2605-zeszyt-zadan.pdf",
+      "bytes": 3540520,
+      "sha256": "b4da7ba07da5ba9cc7e5691eeb2d9038697bb830ac85d7cc46c1d9c1f68e4a8d",
+      "content_type": "application/pdf",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2026/matematyka/tytmatematykaosma.dxb",
+      "subject_directory": "matematyka",
+      "file_name": "tytmatematykaosma.dxb",
+      "extension": "dxb",
+      "usages": [
+        {
+          "subject": "Matematyka",
+          "variant_code": "OMAP-660-X-2605",
+          "audience": "Arkusz egzaminacyjny dla uczniów niewidomych (czarnodruk) (OMAP-660-X-2605)",
+          "label": "Strona tytułowa"
+        }
+      ],
+      "path": "content/cke/sources/2026/matematyka/tytmatematykaosma.dxb",
+      "bytes": 13112,
+      "sha256": "8258f46abfb036be983a953c3bf7b1ae150389dec36c9d1c2f37934bab2cb807",
+      "content_type": "application/octet-stream",
+      "status": "downloaded"
+    }
+  ]
+}

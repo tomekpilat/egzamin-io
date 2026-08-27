@@ -18,6 +18,7 @@
     "cke:stage": "node scripts/cke-import.mjs stage",
     "cke:hash": "node scripts/cke-import.mjs hash",
     "cke:workflow": "node scripts/cke-import.mjs",
+    "cke:download": "node scripts/cke-download-sources.mjs",
     "ai:generate": "node scripts/ai-generate-explanations.mjs",
     "ai:benchmark": "node scripts/ai-benchmark.mjs"
   },

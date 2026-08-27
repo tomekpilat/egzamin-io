@@ -39,5 +39,6 @@ yarn-error.log*
 /.wrangler/
 /outputs/
 /work/
+/content/cke/sources/
 /supabase/.temp/
 /supabase/.branches/
