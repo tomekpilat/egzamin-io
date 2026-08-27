@@ -100,7 +100,7 @@ export default function PrivacyPage() {
         <h2>8. Opcjonalna analityka Google Analytics 4</h2>
         <p>Po dobrowolnej zgodzie używamy Google Analytics 4, aby mierzyć odsłony i podstawowe etapy lejka MVP. Stosujemy podstawowy Consent Mode: przed zgodą i po odmowie tag Google nie jest ładowany, więc żadne pingi ani dane analityczne nie są wysyłane do Google. Zgodę zapisujemy lokalnie na urządzeniu, bez łączenia jej z profilem.</p>
         <p>Słownik jest zamknięty i obejmuje tylko: <code>page_view</code>, <code>signup_started</code>, <code>signup_completed</code>, <code>login_completed</code>, <code>practice_started</code>, <code>answer_checked</code>, <code>plan_plus_viewed</code> i <code>plan_plus_cta_clicked</code>. Nie wysyłamy e-maila, imienia, identyfikatora konta, roli dziecko/rodzic, szkoły, treści zadania, odpowiedzi, poprawności, wyniku, postępu ani rozmowy AI. Usuwamy query string, fragment URL, tokeny oraz segmenty przypominające identyfikatory.</p>
-        <p>Google Signals, personalizacja reklam, remarketing, połączenie z Google Ads i rozszerzony pomiar powinny pozostać wyłączone. Zgodę można wycofać przez stale dostępne „Ustawienia prywatności”; zatrzymamy przyszły pomiar i usuniemy cookies analityczne ustawione przez aplikację.</p>
+        <p>Google Signals, personalizacja reklam, remarketing, połączenie z Google Ads i rozszerzony pomiar powinny pozostać wyłączone. Zgodę można wycofać przez „Ustawienia prywatności” dostępne pod treścią strony; zatrzymamy przyszły pomiar i usuniemy cookies analityczne ustawione przez aplikację.</p>
       </section>
 
       <section className="legal-section" id="odbiorcy">

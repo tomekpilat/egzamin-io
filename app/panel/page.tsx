@@ -3,7 +3,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { User } from "@supabase/supabase-js";
-import { LogOut } from "lucide-react";
+import { ChevronDown, LogOut, Settings } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 import { FeedbackDialog } from "@/components/feedback-dialog";
 import { ParentProgress } from "@/components/parent-progress";
@@ -12,6 +12,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -442,6 +443,12 @@ export default function DashboardPage() {
     window.location.assign("/");
   }
 
+  function openAccountSettings() {
+    if (profile?.role === "parent") setParentView("settings");
+    else if (profile?.role === "student") setStudentView("settings");
+    window.setTimeout(() => document.getElementById("ustawienia")?.scrollIntoView({ behavior: "smooth", block: "start" }), 0);
+  }
+
   if (loading) {
     return <main className="dashboard-loading"><BrandLogo /><span>Przygotowujemy Twój panel…</span></main>;
   }
@@ -467,10 +474,15 @@ export default function DashboardPage() {
 
   return (
     <main className={`dashboard-page${focusMode ? " dashboard-focus-mode" : ""}`}>
-      <div className="dashboard-session" aria-label="Zalogowany użytkownik">
-        <div className="dashboard-account"><span>{displayName.slice(0, 2).toUpperCase()}</span><div><b>{displayName}</b><small>{profile.email}</small></div></div>
-        <Button variant="outline" type="button" onClick={signOut} aria-label="Wyloguj się"><LogOut aria-hidden="true" /><span>Wyloguj się</span></Button>
-      </div>
+      {!focusMode ? <DropdownMenu>
+        <DropdownMenuTrigger asChild><button type="button" className="dashboard-session" aria-label={`Menu konta: ${displayName}`}><span className="dashboard-account"><span className="dashboard-account-avatar">{displayName.slice(0, 2).toUpperCase()}</span><span className="dashboard-account-copy"><b>{displayName}</b><small>{profile.email}</small></span></span><ChevronDown className="dashboard-session-chevron" aria-hidden="true" /></button></DropdownMenuTrigger>
+        <DropdownMenuContent align="end" sideOffset={8} className="dashboard-account-menu">
+          <DropdownMenuLabel>{profile.email}</DropdownMenuLabel>
+          <DropdownMenuItem onSelect={openAccountSettings}><Settings aria-hidden="true" /> Ustawienia</DropdownMenuItem>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem className="dashboard-signout-item" onSelect={() => void signOut()}><LogOut aria-hidden="true" /> Wyloguj się</DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu> : null}
       {!focusMode && <aside className="dashboard-sidebar">
         <a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a>
         <nav aria-label="Panel">

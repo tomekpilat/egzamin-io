@@ -7,6 +7,7 @@ const component = readFileSync(join(root, "components/analytics-consent.tsx"), "
 const layout = readFileSync(join(root, "app/layout.tsx"), "utf8");
 const privacy = readFileSync(join(root, "app/polityka-prywatnosci/page.tsx"), "utf8");
 const cookies = readFileSync(join(root, "app/polityka-cookies/page.tsx"), "utf8");
+const styles = readFileSync(join(root, "app/globals.css"), "utf8");
 
 describe("GA4 basic consent contract", () => {
   it("keeps the tag outside server markup and creates it only after accepted state", () => {
@@ -32,6 +33,9 @@ describe("GA4 basic consent contract", () => {
     expect(component).toContain("Ustawienia prywatności");
     expect(component).toContain("clearGoogleAnalyticsCookies");
     expect(component).toContain("window.location.reload()");
+    const quickLinksRule = styles.match(/\.privacy-quick-links\s*\{([^}]*)\}/)?.[1] ?? "";
+    expect(quickLinksRule).not.toContain("position: fixed");
+    expect(quickLinksRule).toContain("border-top");
   });
 
   it("documents Google, consent, retention, cookies and prohibited education data", () => {

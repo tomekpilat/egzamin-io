@@ -22,15 +22,15 @@ describe("flat interface and persistent account session", () => {
     expect(offenders).toEqual([]);
   });
 
-  it("keeps the logged-in identity and sign-out action fixed outside focus-mode conditionals", () => {
+  it("keeps account actions in a dropdown and removes it from exercise focus mode", () => {
     const panel = readFileSync(join(root, "app/panel/page.tsx"), "utf8");
     const styles = readFileSync(join(root, "app/account.css"), "utf8");
-    const sessionIndex = panel.indexOf('className="dashboard-session"');
 
-    expect(sessionIndex).toBeGreaterThan(0);
-    expect(sessionIndex).toBeLessThan(panel.indexOf("{!focusMode && <aside"));
-    expect(panel).toContain('aria-label="Wyloguj się"');
-    expect(panel).toContain("onClick={signOut}");
+    expect(panel).toContain('{!focusMode ? <DropdownMenu>');
+    expect(panel).toContain('className="dashboard-session"');
+    expect(panel).toContain("<DropdownMenuItem onSelect={openAccountSettings}");
+    expect(panel).toContain('className="dashboard-signout-item"');
+    expect(panel).toContain("onSelect={() => void signOut()}");
     expect(styles).toMatch(/\.dashboard-session\s*\{[^}]*position:\s*fixed;[^}]*top:[^;}]+;[^}]*right:[^;}]+;/s);
   });
 });

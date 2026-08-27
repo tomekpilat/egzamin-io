@@ -503,8 +503,8 @@ mjx-container { max-width: 100%; color: inherit; }
 .analytics-consent-banner p { max-width: 610px; margin: 3px 0 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
 .analytics-consent-settings-link { padding: 0; border: 0; background: transparent; color: var(--coral-dark); font: inherit; font-weight: 750; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
 .analytics-consent-actions { display: grid; grid-template-columns: repeat(2, auto); gap: 8px; }
-.privacy-quick-links { position: fixed; z-index: 60; left: 14px; bottom: 12px; padding: 4px; display: flex; align-items: center; gap: 2px; border: 1px solid var(--border); border-radius: 999px; background: var(--card); }
-.privacy-quick-links :is(a, button) { padding: 6px 8px; border: 0; background: transparent; color: var(--muted); font-size: 12px; font-weight: 700; cursor: pointer; }
+.privacy-quick-links { width: min(1180px, calc(100% - 48px)); margin: 0 auto; padding: 10px 0 20px; display: flex; align-items: center; justify-content: flex-end; gap: 2px; border-top: 1px solid var(--border); color: var(--muted); }
+.privacy-quick-links :is(a, button) { padding: 5px 7px; border: 0; background: transparent; color: inherit; font-size: 11px; font-weight: 650; cursor: pointer; }
 .privacy-quick-links :is(a, button):hover { color: var(--foreground); }
 .analytics-settings-row { padding: 16px 0; display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; border-block: 1px solid var(--border); }
 .analytics-settings-row > div { display: grid; gap: 5px; }
