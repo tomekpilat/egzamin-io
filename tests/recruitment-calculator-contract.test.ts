@@ -36,11 +36,23 @@ describe("public recruitment calculator", () => {
     expect(page).toContain('rola=uczen');
   });
 
-  it("starts empty and explains the three-step flow with the threshold database highlighted", () => {
+  it("starts empty and exposes three linked, progressive steps", () => {
     expect(page).toContain("grades: [null, null, null, null]");
-    expect(page).toContain("Znajdź szkołę w naszej bazie");
+    expect(page).toContain('href="#kalkulator"');
+    expect(page).toContain('href="#szkola"');
+    expect(page).toContain('href="#wynik"');
+    expect(page).toContain('useState<CalculatorStep>("points")');
+    expect(page).toContain('goToStep("school")');
+    expect(page).toContain('goToStep("result")');
     expect(page).toContain("Baza progów");
-    expect(page).toContain("próg wpisze się sam");
+    expect(page).toContain("próg, rok i źródło uzupełnią się automatycznie");
+  });
+
+  it("lets visitors request a missing school threshold", () => {
+    expect(page).toContain("Nie ma szkoły lub klasy w bazie?");
+    expect(page).toContain('title="Zgłoś brakujące dane"');
+    expect(page).toContain('submitLabel="Zgłoś i powiadom mnie"');
+    expect(page).toContain('schoolName={targetName}');
   });
 
   it("uses verified school thresholds, a consent-backed alert and FAQ structured data", () => {

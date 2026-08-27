@@ -56,8 +56,8 @@ export function SchoolThresholdSearch({
       {open && (results.length > 0 || status !== "idle") && <div className="school-threshold-results" id={`${id}-results`} role="listbox">
         {results.map((record) => <button key={record.threshold_id} type="button" role="option" aria-selected="false" onClick={() => { onQueryChange(schoolThresholdLabel(record)); onSelect(record); setOpen(false); }}><CheckCircle2 aria-hidden="true" /><span><b>{record.school_name}</b><small>{record.city} · {record.class_name} · próg {record.recruitment_year}: {record.threshold_points} pkt</small></span></button>)}
         {status === "loading" && <p>Sprawdzam zweryfikowane progi…</p>}
-        {status === "empty" && <p>Nie znaleźliśmy jeszcze zweryfikowanego progu. Wpisz nazwę ręcznie i dodaj próg, jeśli go znasz.</p>}
-        {status === "error" && <p>Baza progów jest przygotowywana. Nadal możesz wpisać szkołę i próg ręcznie.</p>}
+        {status === "empty" && <p>Nie mamy jeszcze zweryfikowanego progu. Zostaw pełną nazwę szkoły i zgłoś ją w formularzu poniżej.</p>}
+        {status === "error" && <p>Nie udało się teraz przeszukać bazy. Możesz zgłosić szkołę poniżej albo wpisać znany próg ręcznie.</p>}
       </div>}
     </div>
   );

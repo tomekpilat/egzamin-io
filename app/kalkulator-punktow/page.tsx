@@ -32,6 +32,7 @@ const FAQS = [
 ];
 
 type ExamMode = "unknown" | "estimate";
+type CalculatorStep = "points" | "school" | "result";
 type CalculatorState = {
   polish: number; mathematics: number; foreignLanguage: number;
   grades: [RecruitmentGradeInput, RecruitmentGradeInput, RecruitmentGradeInput, RecruitmentGradeInput];
@@ -61,6 +62,7 @@ export default function RecruitmentCalculatorPage() {
   const [targetName, setTargetName] = useState("");
   const [threshold, setThreshold] = useState("");
   const [verifiedThreshold, setVerifiedThreshold] = useState<RecruitmentThresholdRecord | null>(null);
+  const [activeStep, setActiveStep] = useState<CalculatorStep>("points");
 
   const result = useMemo(() => calculateRecruitmentPoints({
     polishExamPercent: examMode === "estimate" ? form.polish : 0,
@@ -88,6 +90,13 @@ export default function RecruitmentCalculatorPage() {
     setForm(INITIAL_STATE); setExamMode("unknown"); setTargetName(""); setThreshold(""); setVerifiedThreshold(null);
   };
 
+  const goToStep = (step: CalculatorStep) => {
+    const sectionId = step === "points" ? "kalkulator" : step === "school" ? "szkola" : "wynik";
+    setActiveStep(step);
+    window.history.replaceState(null, "", `#${sectionId}`);
+    window.setTimeout(() => document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth", block: "start" }), 0);
+  };
+
   const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQS.map(({ question, answer }) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) };
 
   return (
@@ -97,10 +106,15 @@ export default function RecruitmentCalculatorPage() {
 
       <section className="calculator-hero"><div><Badge variant="secondary"><Calculator aria-hidden="true" /> Kalkulator 2027</Badge><h1>Kalkulator punktów<br />do liceum i technikum.</h1><p>Wpisz swoje dane, znajdź klasę w bazie progów i od razu zobacz, jakiego wyniku potrzebujesz. Bez logowania.</p><div className="calculator-source-inline"><ShieldCheck aria-hidden="true" /><span>Aktualne przeliczniki · progi ze wskazanym rokiem i źródłem</span></div></div></section>
 
-      <section className="calculator-steps" aria-label="Jak użyć kalkulatora"><div><span>1</span><p><b>Uzupełnij punkty</b><small>Oceny, egzamin i osiągnięcia.</small></p></div><div className="calculator-step-featured"><span>2</span><p><b>Znajdź szkołę w naszej bazie</b><small>Próg i źródło uzupełnią się automatycznie.</small></p></div><div><span>3</span><p><b>Porównaj wynik</b><small>Zobacz zapas albo brakujące punkty.</small></p></div></section>
+      <nav className="calculator-steps" aria-label="Etapy kalkulatora">
+        <a href="#kalkulator" aria-current={activeStep === "points" ? "step" : undefined} onClick={(event) => { event.preventDefault(); goToStep("points"); }}><span>1</span><p><b>Kalkulator</b><small>Uzupełnij punkty.</small></p></a>
+        <a href="#szkola" aria-current={activeStep === "school" ? "step" : undefined} onClick={(event) => { event.preventDefault(); goToStep("school"); }}><span>2</span><p><b>Szkoła</b><small>Wyszukaj lub zgłoś liceum.</small></p></a>
+        <a href="#wynik" aria-current={activeStep === "result" ? "step" : undefined} onClick={(event) => { event.preventDefault(); goToStep("result"); }}><span>3</span><p><b>Wynik</b><small>Porównaj punkty z progiem.</small></p></a>
+      </nav>
 
-      <div className="calculator-shell">
-        <div className="calculator-form-column">
+      <div className="calculator-shell" data-step={activeStep}>
+        {activeStep === "points" ? <section id="kalkulator" className="calculator-step-panel calculator-form-column" aria-labelledby="calculator-points-title">
+          <div className="calculator-step-heading"><Badge variant="outline">Krok 1 z 3</Badge><h2 id="calculator-points-title">Uzupełnij swoje punkty</h2><p>Najpierw policz egzamin, oceny i dodatkowe osiągnięcia. Dane nie są wysyłane ani zapisywane.</p></div>
           <Card className="calculator-input-card"><CardContent>
             <section className="calculator-input-section calculator-exam-section"><div className="calculator-section-heading"><BookOpenCheck aria-hidden="true" /><div><h2>Wynik egzaminu</h2><p>Możesz zacząć bez prognozy i uzupełnić ją później.</p></div><b>{formatPoints(result.exam.total)} / 100</b></div><div className="calculator-mode-options"><Button type="button" variant={examMode === "unknown" ? "default" : "outline"} onClick={() => setExamMode("unknown")}>Jeszcze nie znam</Button><Button type="button" variant={examMode === "estimate" ? "default" : "outline"} onClick={() => setExamMode("estimate")}>Mam prognozę</Button></div>{examMode === "estimate" ? <><div className="calculator-grid calculator-grid-three"><PercentField id="exam-polish" label="Język polski" value={form.polish} onChange={(polish) => setForm((c) => ({ ...c, polish }))} /><PercentField id="exam-mathematics" label="Matematyka" value={form.mathematics} onChange={(mathematics) => setForm((c) => ({ ...c, mathematics }))} /><PercentField id="exam-language" label="Język obcy" value={form.foreignLanguage} onChange={(foreignLanguage) => setForm((c) => ({ ...c, foreignLanguage }))} /></div><p className="calculator-formula">polski × 0,35 + matematyka × 0,35 + język obcy × 0,30</p></> : <p className="calculator-mode-note">W rekrutacji liczą się oceny na świadectwie ukończenia szkoły podstawowej, nie świadectwo z klasy VII.</p>}</section>
 
@@ -108,24 +122,24 @@ export default function RecruitmentCalculatorPage() {
 
             <section className="calculator-input-section"><div className="calculator-section-heading"><Trophy aria-hidden="true" /><div><h2>Dodatkowe punkty</h2><p>Wyróżnienie, wolontariat i osiągnięcia.</p></div><b>{formatPoints(result.certificate.honors + result.certificate.volunteering + result.certificate.achievements)} / 28</b></div><div className="calculator-extras"><div className="calculator-switch-row"><div><Label htmlFor="honors">Świadectwo z wyróżnieniem</Label><small>+7 punktów</small></div><Switch id="honors" checked={form.honors} onCheckedChange={(honors) => setForm((c) => ({ ...c, honors }))} /></div><div className="calculator-switch-row"><div><Label htmlFor="volunteering">Aktywność społeczna lub wolontariat</Label><small>+3 punkty</small></div><Switch id="volunteering" checked={form.volunteering} onCheckedChange={(volunteering) => setForm((c) => ({ ...c, volunteering }))} /></div><div className="calculator-achievements"><div><Label htmlFor="achievements">Szczególne osiągnięcia i konkursy</Label><small>Maksymalnie 18 punktów.</small></div><Input id="achievements" type="number" inputMode="decimal" min={0} max={18} value={form.achievements} onChange={(event) => setForm((c) => ({ ...c, achievements: Number(event.target.value) }))} /></div></div></section>
           </CardContent></Card>
-          <Button type="button" variant="ghost" className="calculator-reset" onClick={reset}><RotateCcw aria-hidden="true" /> Wyczyść kalkulator</Button>
-        </div>
+          <div className="calculator-step-actions"><Button type="button" variant="ghost" className="calculator-reset" onClick={reset}><RotateCcw aria-hidden="true" /> Wyczyść</Button><Button type="button" size="lg" onClick={() => goToStep("school")}>Dalej: wybierz szkołę <ArrowRight aria-hidden="true" /></Button></div>
+        </section> : null}
 
-        <aside className="calculator-result-column"><Card className="calculator-result-card"><CardHeader><Badge variant="outline">Twój wynik</Badge><CardTitle><strong>{formatPoints(result.total)}</strong> <span>punktów z 200</span></CardTitle></CardHeader><CardContent>
-          <div className="calculator-breakdown"><div><span>Egzamin {examMode === "unknown" ? <small>jeszcze niewpisany</small> : null}</span><b>{formatPoints(result.exam.total)} / 100</b></div><Progress value={result.exam.total} /><div><span>Świadectwo i osiągnięcia</span><b>{formatPoints(result.certificate.total)} / 100</b></div><Progress value={result.certificate.total} /></div>
-          <div className="calculator-target-fields">
-            <div className="calculator-threshold-intro"><Database aria-hidden="true" /><div><Badge>Baza progów</Badge><h2>Znajdź szkołę i konkretną klasę</h2><p>Wybierz wynik z naszej bazy. Pokażemy rok oraz źródło, a próg wpisze się sam.</p></div></div>
+        {activeStep !== "points" ? <section id={activeStep === "school" ? "szkola" : "wynik"} className="calculator-step-panel calculator-result-column" aria-labelledby={activeStep === "school" ? "calculator-school-title" : "calculator-result-title"}>
+          <div className="calculator-step-heading"><Badge variant="outline">Krok {activeStep === "school" ? "2" : "3"} z 3</Badge><h2 id={activeStep === "school" ? "calculator-school-title" : "calculator-result-title"}>{activeStep === "school" ? "Znajdź szkołę i klasę" : "Twój wynik"}</h2><p>{activeStep === "school" ? "Wyszukaj zweryfikowany próg. Jeśli nie mamy szkoły, zgłoś ją — postaramy się znaleźć dane i powiadomimy Cię e-mailem." : "Porównaj swoje punkty z wybranym progiem. Próg historyczny jest wskazówką, a nie gwarancją przyjęcia."}</p></div>
+          <Card className="calculator-result-card">{activeStep === "result" ? <CardHeader><Badge variant="outline">Suma punktów</Badge><CardTitle><strong>{formatPoints(result.total)}</strong> <span>punktów z 200</span></CardTitle></CardHeader> : null}<CardContent>
+          {activeStep === "result" ? <div className="calculator-breakdown"><div><span>Egzamin {examMode === "unknown" ? <small>jeszcze niewpisany</small> : null}</span><b>{formatPoints(result.exam.total)} / 100</b></div><Progress value={result.exam.total} /><div><span>Świadectwo i osiągnięcia</span><b>{formatPoints(result.certificate.total)} / 100</b></div><Progress value={result.certificate.total} /></div> : null}
+          {activeStep === "school" ? <div className="calculator-target-fields">
+            <div className="calculator-threshold-intro"><Database aria-hidden="true" /><div><Badge>Baza progów</Badge><h3>Wyszukaj liceum, technikum lub konkretną klasę</h3><p>Po wyborze próg, rok i źródło uzupełnią się automatycznie.</p></div></div>
             <SchoolThresholdSearch query={targetName} onQueryChange={(value) => { setTargetName(value); setVerifiedThreshold(null); }} onSelect={selectThreshold} />
-            <details className="calculator-manual-threshold"><summary>Nie ma szkoły w bazie? Wpisz próg ręcznie</summary><div><Label htmlFor="target-threshold">Próg z poprzedniego roku</Label><div className="calculator-number-input"><Input id="target-threshold" type="number" inputMode="decimal" min={0} max={200} value={threshold} onChange={(event) => { setThreshold(event.target.value); setVerifiedThreshold(null); }} placeholder="np. 172" /><span>pkt</span></div></div></details>
-            {verifiedThreshold ? <div className="calculator-verified-threshold"><ShieldCheck aria-hidden="true" /><span>Zweryfikowano: {verifiedThreshold.source_label}, {verifiedThreshold.recruitment_year}. <a href={verifiedThreshold.source_url} target="_blank" rel="noreferrer">Źródło ↗</a></span></div> : null}
-          </div>
+            {verifiedThreshold ? <div className="calculator-verified-threshold"><ShieldCheck aria-hidden="true" /><span>Wybrano: próg {verifiedThreshold.threshold_points} pkt · {verifiedThreshold.source_label}, {verifiedThreshold.recruitment_year}. <a href={verifiedThreshold.source_url} target="_blank" rel="noreferrer">Źródło ↗</a></span></div> : <div className="calculator-school-request"><h3>Nie ma szkoły lub klasy w bazie?</h3><p>Wpisz jej pełną nazwę i miasto w wyszukiwarce powyżej, a następnie wyślij zgłoszenie.</p><MarketingSignupForm subscriptionType="recruitment_thresholds" sourcePath="/kalkulator-punktow" schoolName={targetName} recruitmentYear={2027} title="Zgłoś brakujące dane" description={targetName ? `Sprawdzimy próg dla: ${targetName}.` : "Najpierw wpisz nazwę szkoły i klasy powyżej."} submitLabel="Zgłoś i powiadom mnie" compact /></div>}
+            <details className="calculator-manual-threshold"><summary>Znasz próg? Możesz wpisać go ręcznie</summary><div><Label htmlFor="target-threshold">Próg z poprzedniego roku</Label><div className="calculator-number-input"><Input id="target-threshold" type="number" inputMode="decimal" min={0} max={200} value={threshold} onChange={(event) => { setThreshold(event.target.value); setVerifiedThreshold(null); }} placeholder="np. 172" /><span>pkt</span></div></div></details>
+          </div> : null}
 
-          {examMode === "unknown" && examPointsNeeded !== null ? <div className={`calculator-gap ${examPointsNeeded <= 100 ? "" : "calculator-gap-neutral"}`}><Target aria-hidden="true" /><div><b>{examPointsNeeded <= 100 ? `Do wpisanego progu potrzeba około ${formatPoints(examPointsNeeded)} pkt z egzaminu.` : "Sam egzamin nie wystarczy przy tej prognozie świadectwa."}</b><p>Egzamin daje maksymalnie 100 punktów. To scenariusz, nie gwarancja przyjęcia.</p></div></div> : comparison ? <div className={`calculator-gap ${comparison.reached ? "calculator-gap-positive" : ""}`} aria-live="polite"><Target aria-hidden="true" /><div><b>{comparison.reached ? `Masz ${formatPoints(comparison.difference)} pkt zapasu.` : `Brakuje Ci ${formatPoints(comparison.difference)} pkt.`}</b><p>{comparison.reached ? `Względem wpisanego progu${targetName ? ` dla ${targetName}` : ""}. To nie gwarantuje przyjęcia.` : "Jeśli wpisane wyniki są prognozą, tę różnicę możesz jeszcze wypracować na egzaminie."}</p></div></div> : <div className="calculator-gap calculator-gap-neutral"><Info aria-hidden="true" /><div><b>Wybierz klasę albo dodaj próg.</b><p>Publikujemy tylko progi z zapisanym źródłem i datą weryfikacji.</p></div></div>}
+          {activeStep === "result" ? examMode === "unknown" && examPointsNeeded !== null ? <div className={`calculator-gap ${examPointsNeeded <= 100 ? "" : "calculator-gap-neutral"}`}><Target aria-hidden="true" /><div><b>{examPointsNeeded <= 100 ? `Do wpisanego progu potrzeba około ${formatPoints(examPointsNeeded)} pkt z egzaminu.` : "Sam egzamin nie wystarczy przy tej prognozie świadectwa."}</b><p>Egzamin daje maksymalnie 100 punktów. To scenariusz, nie gwarancja przyjęcia.</p></div></div> : comparison ? <div className={`calculator-gap ${comparison.reached ? "calculator-gap-positive" : ""}`} aria-live="polite"><Target aria-hidden="true" /><div><b>{comparison.reached ? `Masz ${formatPoints(comparison.difference)} pkt zapasu.` : `Brakuje Ci ${formatPoints(comparison.difference)} pkt.`}</b><p>{comparison.reached ? `Względem wpisanego progu${targetName ? ` dla ${targetName}` : ""}. To nie gwarantuje przyjęcia.` : "Jeśli wpisane wyniki są prognozą, tę różnicę możesz jeszcze wypracować na egzaminie."}</p></div></div> : <div className="calculator-gap calculator-gap-neutral"><Info aria-hidden="true" /><div><b>Nie wybrano jeszcze progu.</b><p>Wróć do kroku „Szkoła”, aby wyszukać klasę lub podać próg ręcznie.</p></div></div> : null}
 
-          <MarketingSignupForm subscriptionType="recruitment_thresholds" sourcePath="/kalkulator-punktow" schoolName={targetName} recruitmentYear={2027} title="Dostań alert o progach" description={targetName ? `Podaj e-mail, a damy znać, gdy pojawią się nowe dane dla: ${targetName}.` : "Podaj e-mail, a przypomnimy o progach rekrutacyjnych na 2027 rok."} submitLabel="Ustaw alert" compact />
-
-          <div className="calculator-plan-callout"><span>Egzamin to aż 100 z 200 punktów</span><h2>Zamień wynik w plan nauki.</h2><p>Ćwicz zadania CKE i pytaj AI dokładnie tam, gdzie utkniesz.</p><div className="calculator-role-actions"><Button size="lg" asChild><a href="/logowanie?tryb=rejestracja&rola=rodzic">Załóż konto rodzica <ArrowRight aria-hidden="true" /></a></Button><Button size="lg" variant="outline" asChild><a href="/logowanie?tryb=rejestracja&rola=uczen">Jestem uczniem</a></Button></div></div>
-        </CardContent></Card></aside>
+          {activeStep === "result" ? <div className="calculator-plan-callout"><span>Egzamin to aż 100 z 200 punktów</span><h2>Zamień wynik w plan nauki.</h2><p>Ćwicz zadania CKE i pytaj AI dokładnie tam, gdzie utkniesz.</p><div className="calculator-role-actions"><Button size="lg" asChild><a href="/logowanie?tryb=rejestracja&rola=rodzic">Załóż konto rodzica <ArrowRight aria-hidden="true" /></a></Button><Button size="lg" variant="outline" asChild><a href="/logowanie?tryb=rejestracja&rola=uczen">Jestem uczniem</a></Button></div></div> : null}
+        </CardContent></Card><div className="calculator-step-actions">{activeStep === "school" ? <><Button type="button" variant="outline" onClick={() => goToStep("points")}>Wróć do punktów</Button><Button type="button" size="lg" onClick={() => goToStep("result")}>Zobacz wynik <ArrowRight aria-hidden="true" /></Button></> : <><Button type="button" variant="outline" onClick={() => goToStep("school")}>Zmień szkołę</Button><Button type="button" variant="ghost" onClick={() => goToStep("points")}>Edytuj punkty</Button></>}</div></section> : null}
       </div>
 
       <article className="calculator-method calculator-guide" aria-labelledby="calculator-method-title">
