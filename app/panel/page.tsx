@@ -3,6 +3,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { User } from "@supabase/supabase-js";
+import { LogOut } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 import { FeedbackDialog } from "@/components/feedback-dialog";
 import { ParentProgress } from "@/components/parent-progress";
@@ -466,6 +467,10 @@ export default function DashboardPage() {
 
   return (
     <main className={`dashboard-page${focusMode ? " dashboard-focus-mode" : ""}`}>
+      <div className="dashboard-session" aria-label="Zalogowany użytkownik">
+        <div className="dashboard-account"><span>{displayName.slice(0, 2).toUpperCase()}</span><div><b>{displayName}</b><small>{profile.email}</small></div></div>
+        <Button variant="outline" type="button" onClick={signOut} aria-label="Wyloguj się"><LogOut aria-hidden="true" /><span>Wyloguj się</span></Button>
+      </div>
       {!focusMode && <aside className="dashboard-sidebar">
         <a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a>
         <nav aria-label="Panel">
@@ -488,13 +493,12 @@ export default function DashboardPage() {
           </>}
         </nav>
         <div className="sidebar-plan"><b>Wersja bezpłatna</b><span>3 pytania AI dziennie</span><i><em /></i><a href={profile.role === "parent" ? "/plan-plus#dla-rodzica" : profile.role === "student" ? "/plan-plus#dla-ucznia" : "/plan-plus"}>Poznaj pakiet Plus →</a></div>
-        <Button variant="ghost" className="sidebar-signout" type="button" onClick={signOut}>Wyloguj się</Button>
       </aside>}
 
       <div className="dashboard-main">
         {!focusMode && <header className="dashboard-topbar">
           <div><span>{roleLabels[profile.role]}</span><h1>Cześć, {firstName}!</h1></div>
-          <div className="dashboard-topbar-actions"><FeedbackDialog userEmail={profile.email} screenContext={`${profile.role}:${profile.role === "student" ? studentView : profile.role === "parent" ? parentView : "start"}`} /><div className="dashboard-account"><span>{displayName.slice(0, 2).toUpperCase()}</span><div><b>{displayName}</b><small>{profile.email}</small></div></div></div>
+          <div className="dashboard-topbar-actions"><FeedbackDialog userEmail={profile.email} screenContext={`${profile.role}:${profile.role === "student" ? studentView : profile.role === "parent" ? parentView : "start"}`} /></div>
         </header>}
         <div className={focusMode ? "dashboard-content dashboard-focus-content" : "dashboard-content"}>
           {profile.role === "student" && <StudentPractice activeView={studentView} onNavigate={setStudentView} />}

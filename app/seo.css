@@ -11,7 +11,7 @@
 .knowledge-hero > div:first-child > p, .knowledge-index-hero > p { max-width: 720px; margin: 0; color: var(--muted); font-size: 18px; line-height: 1.7; }
 .knowledge-updated { margin-top: 18px; display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 12px; }
 .knowledge-updated svg { width: 15px; height: 15px; }
-.knowledge-facts { width: 235px; display: grid; gap: 1px; overflow: hidden; border: 1px solid var(--border); border-radius: 18px; background: var(--border); box-shadow: 0 18px 48px rgba(20,33,61,.08); }
+.knowledge-facts { width: 235px; display: grid; gap: 1px; overflow: hidden; border: 1px solid var(--border); border-radius: 18px; background: var(--border); }
 .knowledge-facts div { min-height: 78px; padding: 16px 18px; display: grid; align-content: center; background: var(--card); }
 .knowledge-facts b { font-size: 24px; line-height: 1; }
 .knowledge-facts span { margin-top: 6px; color: var(--muted); font-size: 12px; }
@@ -23,7 +23,7 @@
 .knowledge-section > ul { margin: 21px 0 0; padding: 0; display: grid; gap: 10px; list-style: none; }
 .knowledge-section > ul li { display: flex; align-items: flex-start; gap: 10px; color: var(--foreground); font-size: 15px; line-height: 1.55; }
 .knowledge-section > ul svg { width: 18px; height: 18px; flex: 0 0 18px; margin-top: 2px; color: var(--mint); }
-.knowledge-example { margin-top: 24px; gap: 18px; border-color: color-mix(in oklch, var(--coral) 30%, var(--border)); background: color-mix(in oklch, var(--card) 94%, var(--coral)); box-shadow: none; }
+.knowledge-example { margin-top: 24px; gap: 18px; border-color: color-mix(in oklch, var(--coral) 30%, var(--border)); background: color-mix(in oklch, var(--card) 94%, var(--coral)); }
 .knowledge-example [data-slot="card-header"] { gap: 10px; }
 .knowledge-example [data-slot="badge"] { justify-self: start; }
 .knowledge-example [data-slot="card-title"] { font-size: 17px; line-height: 1.45; }
@@ -42,7 +42,7 @@
 .knowledge-sources a:hover { text-decoration: underline; }
 .knowledge-sources svg { width: 14px; height: 14px; }
 .knowledge-aside { position: sticky; top: 20px; display: grid; gap: 22px; }
-.knowledge-cta { gap: 18px; background: var(--ink); color: white; border: 0; box-shadow: 0 20px 50px rgba(20,33,61,.17); }
+.knowledge-cta { gap: 18px; background: var(--ink); color: white; border: 0; }
 .knowledge-cta [data-slot="card-header"] > svg { width: 29px; height: 29px; color: #ff9b84; }
 .knowledge-cta [data-slot="card-title"] { font-size: 23px; line-height: 1.17; letter-spacing: -.035em; }
 .knowledge-cta p { margin: 0 0 18px; color: #c7d0df; font-size: 13px; line-height: 1.6; }

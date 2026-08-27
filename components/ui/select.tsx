@@ -27,7 +27,7 @@ function SelectContent({ className, children, position = "popper", ...props }: R
       <SelectPrimitive.Content
         data-slot="select-content"
         position={position}
-        className={cn("z-50 max-h-80 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover text-popover-foreground shadow-md", position === "popper" && "data-[side=bottom]:translate-y-1 data-[side=top]:-translate-y-1", className)}
+        className={cn("z-50 max-h-80 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover text-popover-foreground", position === "popper" && "data-[side=bottom]:translate-y-1 data-[side=top]:-translate-y-1", className)}
         {...props}
       >
         <SelectPrimitive.ScrollUpButton className="flex h-7 items-center justify-center"><ChevronUpIcon className="size-4" /></SelectPrimitive.ScrollUpButton>

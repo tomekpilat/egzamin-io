@@ -18,7 +18,7 @@ function DialogContent({ className, children, showCloseButton = true, ...props }
   return (
     <DialogPortal>
       <DialogOverlay />
-      <DialogPrimitive.Content data-slot="dialog-content" className={cn("fixed left-1/2 top-1/2 z-50 grid max-h-[90vh] w-[calc(100%-2rem)] max-w-lg -translate-x-1/2 -translate-y-1/2 gap-4 overflow-y-auto rounded-xl border border-border bg-background p-6 text-foreground shadow-xl outline-none", className)} {...props}>
+      <DialogPrimitive.Content data-slot="dialog-content" className={cn("fixed left-1/2 top-1/2 z-50 grid max-h-[90vh] w-[calc(100%-2rem)] max-w-lg -translate-x-1/2 -translate-y-1/2 gap-4 overflow-y-auto rounded-xl border border-border bg-background p-6 text-foreground outline-none", className)} {...props}>
         {children}
         {showCloseButton && <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm p-1 opacity-70 outline-none transition-opacity hover:opacity-100 focus-visible:ring-2 focus-visible:ring-ring"><XIcon className="size-4" /><span className="sr-only">Zamknij</span></DialogPrimitive.Close>}
       </DialogPrimitive.Content>
