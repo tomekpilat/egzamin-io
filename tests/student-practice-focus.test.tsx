@@ -109,6 +109,7 @@ describe("StudentPractice focus mode", () => {
     render(<StudentPractice activeView="exercises" onNavigate={() => undefined} />);
 
     expect(await screen.findByRole("region", { name: "Tryb skupienia" })).toBeInTheDocument();
+    expect(screen.queryByText("Tryb skupienia")).not.toBeInTheDocument();
     expect(screen.getByText("1 z 2")).toBeInTheDocument();
     expect(screen.getByRole("progressbar", { name: "Postęp w bieżącym zestawie" })).toHaveAttribute("aria-valuenow", "50");
     expect(screen.getByRole("button", { name: "Poprzednie pytanie" })).toBeInTheDocument();

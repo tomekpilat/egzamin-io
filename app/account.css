@@ -473,7 +473,6 @@
 .practice-focus-shell { min-height: 100vh; background: var(--paper); color: var(--foreground); }
 .practice-focus-header { position: sticky; z-index: 15; top: 0; min-height: 88px; padding: 12px clamp(18px, 3vw, 42px); display: grid; grid-template-columns: minmax(360px, 1.2fr) minmax(220px, 1fr) minmax(200px, .7fr); align-items: center; gap: clamp(16px, 2.5vw, 32px); border-bottom: 1px solid var(--border); background: color-mix(in srgb, var(--paper) 92%, transparent); backdrop-filter: blur(14px); }
 .practice-focus-subject { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: end; gap: 3px 8px; }
-.practice-focus-subject > span { grid-column: 1 / -1; color: var(--coral-dark); font-size: 10px; font-weight: 850; letter-spacing: .09em; text-transform: uppercase; }
 .practice-focus-subject > div { min-width: 0; display: grid; grid-template-columns: auto minmax(115px, 1fr); align-items: center; gap: 7px; }
 .practice-focus-subject label { color: var(--muted); font-size: 10px; font-weight: 750; }
 .practice-focus-subject [data-slot="select-trigger"] { width: 100%; }
@@ -645,7 +644,7 @@
   .plan-plus-price-card [data-slot="card-content"] b { font-size: 38px; }
   .practice-focus-header { position: static; min-height: 0; padding: 12px 14px; grid-template-columns: 1fr auto; gap: 12px; }
   .practice-focus-subject { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
-  .practice-focus-subject > span, .practice-focus-subject label { display: none; }
+  .practice-focus-subject label { display: none; }
   .practice-focus-subject > div { display: block; }
   .practice-focus-subject [data-slot="select-trigger"] { min-width: 0; }
   .practice-focus-progress { grid-column: 1 / -1; grid-row: 2; }

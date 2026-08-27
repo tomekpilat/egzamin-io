@@ -476,7 +476,6 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
       {activeView === "exercises" && <section className="practice-focus-shell" aria-label="Tryb skupienia">
         <header className="practice-focus-header">
           <div className="practice-focus-subject">
-            <span>Tryb skupienia</span>
             <div><label htmlFor="practice-material">Rocznik</label><Select value={material} onValueChange={(value) => selectMaterial(value as MaterialFilter)} disabled={submitting}>
               <SelectTrigger id="practice-material" aria-label="Wybierz rocznik"><SelectValue /></SelectTrigger>
               <SelectContent>{materialOptions.map((item) => <SelectItem key={item.value} value={item.value}>{item.label}</SelectItem>)}</SelectContent>
