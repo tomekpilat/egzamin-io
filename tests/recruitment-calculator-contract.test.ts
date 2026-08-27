@@ -6,6 +6,7 @@ const root = process.cwd();
 const page = readFileSync(join(root, "app", "kalkulator-punktow", "page.tsx"), "utf8");
 const layout = readFileSync(join(root, "app", "kalkulator-punktow", "layout.tsx"), "utf8");
 const homepage = readFileSync(join(root, "app", "page.tsx"), "utf8");
+const styles = readFileSync(join(root, "app", "kalkulator-punktow", "calculator.css"), "utf8");
 
 describe("public recruitment calculator", () => {
   it("is discoverable from the homepage without requiring an account", () => {
@@ -46,6 +47,18 @@ describe("public recruitment calculator", () => {
     expect(page).toContain('goToStep("result")');
     expect(page).toContain("Baza progów");
     expect(page).toContain("próg, rok i źródło uzupełnią się automatycznie");
+  });
+
+  it("keeps the calculator flow compact and stable between steps", () => {
+    expect(page).toContain('id="calculator-flow"');
+    expect(page).toContain('id="calculator-flow-start"');
+    expect(page).toContain('document.getElementById("calculator-flow-start")');
+    expect(page).toContain('window.scrollTo({ top: flowTop, behavior: "auto" })');
+    expect(page).toContain("const flowTop = flow.offsetTop");
+    expect(page).not.toContain('behavior: "smooth"');
+    expect(page).not.toContain("<br />do liceum");
+    expect(styles).toMatch(/\.calculator-steps \{[^}]*position: sticky/);
+    expect(styles).toContain("grid-template-columns: repeat(3, minmax(0, 1fr))");
   });
 
   it("lets visitors request a missing school threshold", () => {

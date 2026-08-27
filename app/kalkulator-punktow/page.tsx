@@ -94,7 +94,13 @@ export default function RecruitmentCalculatorPage() {
     const sectionId = step === "points" ? "kalkulator" : step === "school" ? "szkola" : "wynik";
     setActiveStep(step);
     window.history.replaceState(null, "", `#${sectionId}`);
-    window.setTimeout(() => document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth", block: "start" }), 0);
+    window.setTimeout(() => {
+      const flow = document.getElementById("calculator-flow-start");
+      if (!flow) return;
+
+      const flowTop = flow.offsetTop;
+      if (window.scrollY > flowTop + 8) window.scrollTo({ top: flowTop, behavior: "auto" });
+    }, 0);
   };
 
   const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQS.map(({ question, answer }) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) };
@@ -104,9 +110,10 @@ export default function RecruitmentCalculatorPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <SiteHeader currentPath="/kalkulator-punktow" />
 
-      <section className="calculator-hero"><div><Badge variant="secondary"><Calculator aria-hidden="true" /> Kalkulator 2027</Badge><h1>Kalkulator punktów<br />do liceum i technikum.</h1><p>Wpisz swoje dane, znajdź klasę w bazie progów i od razu zobacz, jakiego wyniku potrzebujesz. Bez logowania.</p><div className="calculator-source-inline"><ShieldCheck aria-hidden="true" /><span>Aktualne przeliczniki · progi ze wskazanym rokiem i źródłem</span></div></div></section>
+      <section className="calculator-hero"><div><Badge variant="secondary"><Calculator aria-hidden="true" /> Kalkulator 2027</Badge><h1>Kalkulator punktów do liceum i technikum</h1><p>Policz punkty, wybierz klasę z bazy progów i sprawdź potrzebny wynik. Bez logowania.</p><div className="calculator-source-inline"><ShieldCheck aria-hidden="true" /><span>Aktualne przeliczniki · progi ze wskazanym rokiem i źródłem</span></div></div></section>
 
-      <nav className="calculator-steps" aria-label="Etapy kalkulatora">
+      <div id="calculator-flow-start" className="calculator-flow-start" aria-hidden="true" />
+      <nav id="calculator-flow" className="calculator-steps" aria-label="Etapy kalkulatora">
         <a href="#kalkulator" aria-current={activeStep === "points" ? "step" : undefined} onClick={(event) => { event.preventDefault(); goToStep("points"); }}><span>1</span><p><b>Kalkulator</b><small>Uzupełnij punkty.</small></p></a>
         <a href="#szkola" aria-current={activeStep === "school" ? "step" : undefined} onClick={(event) => { event.preventDefault(); goToStep("school"); }}><span>2</span><p><b>Szkoła</b><small>Wyszukaj lub zgłoś liceum.</small></p></a>
         <a href="#wynik" aria-current={activeStep === "result" ? "step" : undefined} onClick={(event) => { event.preventDefault(); goToStep("result"); }}><span>3</span><p><b>Wynik</b><small>Porównaj punkty z progiem.</small></p></a>
