@@ -207,6 +207,15 @@ mjx-container { max-width: 100%; color: inherit; }
 .subject-category-icon-english { --subject-tone: #e8f8f2; --subject-ink: #23765d; }
 .subject-category-icon-cke { --subject-tone: #f1edff; --subject-ink: #6850a4; }
 
+.cke-fit-section { width: min(1120px, calc(100% - 48px)); margin: 54px auto 0; padding: 28px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(310px, .8fr); align-items: center; gap: 20px 34px; border: 1px solid var(--border); border-radius: 22px; background: var(--card); }
+.cke-fit-section .section-kicker { margin-bottom: 8px; }
+.cke-fit-section h2 { margin: 0; font-size: clamp(28px, 3.5vw, 40px); line-height: 1.08; letter-spacing: -.045em; }
+.cke-fit-section p { max-width: 650px; margin: 10px 0 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.cke-fit-section p b { color: var(--foreground); }
+.cke-fit-options { display: flex; align-content: center; gap: 7px; flex-wrap: wrap; }
+.cke-fit-options span { padding: 7px 9px; border: 1px solid var(--border); border-radius: 999px; background: var(--secondary); color: var(--foreground); font-size: 11px; font-weight: 700; }
+.cke-fit-section > [data-slot="button"] { width: fit-content; }
+
 .recruitment-hook { width: min(1120px, calc(100% - 48px)); margin: 54px auto 0; padding: 24px; display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 22px; border: 1px solid var(--border); border-radius: 22px; background: color-mix(in oklch, var(--card) 92%, var(--coral)); }
 .recruitment-hook-copy .section-kicker { font-size: 11px; }
 .recruitment-hook-copy h2 { margin: 4px 0 3px; font-size: 24px; letter-spacing: -.035em; }
@@ -219,11 +228,16 @@ mjx-container { max-width: 100%; color: inherit; }
 .recruitment-hook-action:hover { background: var(--coral-dark); }
 
 @media (max-width: 900px) {
+  .cke-fit-section { grid-template-columns: 1fr; }
   .recruitment-hook { grid-template-columns: 1fr auto; }
   .recruitment-hook-example { display: none; }
 }
 
 @media (max-width: 680px) {
+  .cke-fit-section { width: calc(100% - 30px); margin-top: 34px; padding: 21px; gap: 17px; }
+  .cke-fit-section h2 { font-size: 27px; }
+  .cke-fit-section p { font-size: 13px; }
+  .cke-fit-section > [data-slot="button"] { width: 100%; }
   .recruitment-hook { width: calc(100% - 30px); margin-top: 34px; grid-template-columns: 1fr; gap: 15px; }
   .recruitment-hook-copy h2 { font-size: 21px; }
   .recruitment-hook-copy p { font-size: 13px; line-height: 1.5; }
@@ -514,6 +528,7 @@ mjx-container { max-width: 100%; color: inherit; }
 .dark .header-login { color: #d5ddea; }
 .dark .task-formula { color: #cbd5e7; }
 .dark .subject-strip { border-color: var(--border); background: #111a2c; }
+.dark .cke-fit-section { border-color: var(--border); background: var(--card); }
 .dark .subject-category { border-color: var(--border); background: #182238; color: #f0f3f8; }
 .dark .subject-category-icon { background: color-mix(in oklch, var(--subject-ink) 23%, #182238); color: color-mix(in oklch, var(--subject-ink) 58%, white); }
 .dark .streak-card, .dark .progress-card { background: rgba(24,34,54,.98); color: #f7f8fb; }

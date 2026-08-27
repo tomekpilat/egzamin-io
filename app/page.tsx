@@ -67,6 +67,12 @@ export default function Home() {
         {SUBJECT_CATEGORIES.map((category) => <div className="subject-category" key={category.key}><SubjectIcon subject={category.key} /><span>{category.label}</span></div>)}
       </section>
 
+      <section className="cke-fit-section" aria-labelledby="cke-fit-title">
+        <div><span className="section-kicker">Warianty zgodne z CKE</span><h2 id="cke-fit-title">Arkusze dopasowane do potrzeb ucznia.</h2><p>Rodzic wybiera oficjalny wariant CKE przy koncie dziecka. Dla ucznia z afazją aplikacja pokazuje wyłącznie arkusze oznaczone kodem CKE <b>900</b> — bez cichego przełączania na materiał standardowy.</p></div>
+        <div className="cke-fit-options" aria-label="Przykładowe warianty arkuszy CKE"><span>Standardowy · 100</span><span>Autyzm · 200</span><span>Słabowidzenie · 400/500</span><span>Afazja · 900</span><span>Niesłyszenie · 700</span><span>Widzenie barw · K00</span></div>
+        <Button variant="outline" asChild><a href="/logowanie?tryb=rejestracja&rola=rodzic">Skonfiguruj konto dziecka <ArrowRight aria-hidden="true" /></a></Button>
+      </section>
+
       <section className="recruitment-hook" aria-labelledby="recruitment-hook-title">
         <div className="recruitment-hook-copy"><span className="section-kicker">Darmowy kalkulator</span><h2 id="recruitment-hook-title">Ile masz punktów do liceum?</h2><p>Policz wynik do 200 punktów i porównaj go z progiem wybranej klasy. Bez logowania.</p></div>
         <div className="recruitment-hook-example" aria-hidden="true"><div><small>Przykład</small><b>151 / 200 pkt</b></div></div>

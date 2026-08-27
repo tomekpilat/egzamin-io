@@ -17,7 +17,7 @@ describe("parent panel actions", () => {
 
   it("supports consent decisions and child settings", () => {
     expect(panel).toContain('supabase.rpc(functionName, { target_request_id: requestId })');
-    expect(panel).toContain('supabase.rpc("update_guardian_preferences"');
+    expect(panel).toContain('supabase.rpc("update_child_learning_settings"');
     expect(panel).toContain("Ustawienia dziecka zostały zapisane.");
   });
 

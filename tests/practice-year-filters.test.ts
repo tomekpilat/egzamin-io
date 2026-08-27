@@ -15,6 +15,8 @@ function question(overrides: Partial<PracticeQuestion>): PracticeQuestion {
     exam_year: null,
     exam_session: null,
     exam_variant: null,
+    exam_accommodation_code: null,
+    exam_accommodation_label: null,
     source_document_id: null,
     paper_question_number: null,
     subject: "mathematics",

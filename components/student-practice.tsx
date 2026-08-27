@@ -12,6 +12,7 @@ import { getSupabaseClient } from "@/lib/supabase-browser";
 import { SubjectIcon, subjectLabels, type SubjectKey } from "@/components/subject-icon";
 import { AiTutor } from "@/components/ai-tutor";
 import { trackAnalyticsEvent } from "@/lib/analytics";
+import { DEFAULT_CKE_ACCOMMODATION, getCkeAccommodation, isCkeAccommodationCode, type CkeAccommodationCode } from "@/lib/cke-accommodations";
 
 export type StudentView = "start" | "exercises" | "progress" | "settings";
 type Subject = SubjectKey;
@@ -27,6 +28,8 @@ export type PracticeQuestion = {
   exam_year: number | null;
   exam_session: ExamSession | null;
   exam_variant: string | null;
+  exam_accommodation_code: CkeAccommodationCode | null;
+  exam_accommodation_label: string | null;
   source_document_id: string | null;
   paper_question_number: number | null;
   subject: Subject;
@@ -48,6 +51,8 @@ type PaperProgress = {
   exam_session: ExamSession;
   subject: Subject;
   variant_code: string;
+  accommodation_code: CkeAccommodationCode;
+  accommodation_label: string;
   source_label: string;
   total_questions: number;
   answered_questions: number;
@@ -112,6 +117,8 @@ function normalizeQuestion(value: Record<string, unknown>): PracticeQuestion {
     exam_year: value.exam_year == null ? null : Number(value.exam_year),
     exam_session: examSession ?? null,
     exam_variant: value.exam_variant == null ? null : String(value.exam_variant),
+    exam_accommodation_code: isCkeAccommodationCode(value.exam_accommodation_code) ? value.exam_accommodation_code : null,
+    exam_accommodation_label: value.exam_accommodation_label == null ? null : String(value.exam_accommodation_label),
     source_document_id: value.source_document_id == null ? null : String(value.source_document_id),
     paper_question_number: value.paper_question_number == null ? null : Number(value.paper_question_number),
     subject,
@@ -141,6 +148,8 @@ function normalizePaperProgress(value: Record<string, unknown>): PaperProgress {
     exam_session: session,
     subject,
     variant_code: String(value.variant_code),
+    accommodation_code: isCkeAccommodationCode(value.accommodation_code) ? value.accommodation_code : DEFAULT_CKE_ACCOMMODATION,
+    accommodation_label: String(value.accommodation_label),
     source_label: String(value.source_label),
     total_questions: Number(value.total_questions),
     answered_questions: Number(value.answered_questions),
@@ -177,7 +186,8 @@ export function formatQuestionSource(question: PracticeQuestion) {
   if (question.source_type === "demo") return "Zestaw demonstracyjny egzaminio";
   const session = question.exam_session ? sessionLabels[question.exam_session] : "arkusz CKE";
   const variant = question.exam_variant && question.exam_variant !== "standard" ? ` · wariant ${question.exam_variant}` : "";
-  return `CKE ${question.exam_year} · ${session}${variant}`;
+  const accommodation = question.exam_accommodation_label ? ` · ${question.exam_accommodation_label}` : "";
+  return `CKE ${question.exam_year} · ${session}${variant}${accommodation}`;
 }
 
 export function StudentPractice({ activeView, onNavigate }: { activeView: StudentView; onNavigate: (view: StudentView) => void }) {
@@ -186,6 +196,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
   const [subject, setSubject] = useState<SubjectFilter>("all");
   const [material, setMaterial] = useState<MaterialFilter>("demo");
   const [paperId, setPaperId] = useState("all");
+  const [accommodationCode, setAccommodationCode] = useState<CkeAccommodationCode>(DEFAULT_CKE_ACCOMMODATION);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [draftAnswer, setDraftAnswer] = useState<{ questionId: string; index: number } | null>(null);
   const [submittedAnswer, setSubmittedAnswer] = useState<(AnswerResult & { questionId: string }) | null>(null);
@@ -198,21 +209,24 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
     let active = true;
     getSupabaseClient()
       .then(async (supabase) => {
-        const [{ data, error: questionsError }, { data: progressData, error: progressError }] = await Promise.all([
+        const [{ data, error: questionsError }, { data: progressData, error: progressError }, { data: preferenceData, error: preferenceError }] = await Promise.all([
           supabase.rpc("get_practice_questions"),
           supabase.rpc("get_student_paper_progress"),
+          supabase.rpc("get_my_cke_preference"),
         ]);
-        if (questionsError || progressError) throw questionsError ?? progressError;
+        if (questionsError || progressError || preferenceError) throw questionsError ?? progressError ?? preferenceError;
         const loaded = ((data as Record<string, unknown>[] | null) ?? []).map(normalizeQuestion);
         const progress = ((progressData as Record<string, unknown>[] | null) ?? []).map(normalizePaperProgress);
+        const preference = (preferenceData as Record<string, unknown>[] | null)?.[0];
         if (active) {
           setQuestions(loaded);
           setPaperProgress(progress);
           setMaterial(defaultMaterialFilter(loaded));
+          setAccommodationCode(isCkeAccommodationCode(preference?.accommodation_code) ? preference.accommodation_code : DEFAULT_CKE_ACCOMMODATION);
         }
       })
       .catch(() => {
-        if (active) setError("Nie udało się pobrać zestawu demo. Administrator powinien zastosować najnowszą migrację Supabase.");
+        if (active) setError("Nie udało się pobrać materiałów. Administrator powinien zastosować najnowszą migrację Supabase.");
       })
       .finally(() => {
         if (active) setLoading(false);
@@ -259,6 +273,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
     [questions, subject, material, paperId],
   );
   const currentQuestion = filteredQuestions[questionIndex] ?? null;
+  const accommodation = getCkeAccommodation(accommodationCode);
   const answeredCount = questions.filter((question) => question.selected_answer !== null).length;
   const correctCount = questions.filter((question) => question.is_correct).length;
   const score = answeredCount ? Math.round((correctCount / answeredCount) * 100) : 0;
@@ -435,13 +450,14 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
           <div>
             <span className="dashboard-kicker">Arkusze CKE i zestaw demonstracyjny</span>
             <h2>{answeredCount ? "Kontynuuj tam, gdzie skończyłeś." : "Zacznij od jednego pytania."}</h2>
-            <p>Wybierz rok, arkusz i przedmiot. Oficjalne materiały CKE są zawsze wyraźnie oddzielone od ćwiczeń demonstracyjnych egzaminio.</p>
+            <p>Wybierz rok, arkusz i przedmiot. Serwujemy wyłącznie materiały zgodne z ustawionym wariantem CKE: <b>{accommodation.label}</b>.</p>
           </div>
           <div className="daily-ring"><b>{answeredCount}/{questions.length}</b><span>rozwiązanych</span></div>
         </section>
         <Card className="practice-launch-card">
-          <CardHeader><Badge variant="secondary">Wybór materiału</Badge><CardTitle>Co chcesz teraz ćwiczyć?</CardTitle><CardDescription>Dostępne lata i arkusze wynikają wyłącznie z materiałów opublikowanych w bazie.</CardDescription></CardHeader>
+          <CardHeader><Badge variant="secondary">Wybór materiału</Badge><CardTitle>Co chcesz teraz ćwiczyć?</CardTitle><CardDescription>Dostępne lata i arkusze wynikają wyłącznie z opublikowanych materiałów dla kodu CKE {accommodation.code}.</CardDescription></CardHeader>
           <CardContent>
+            {!questions.length && <Alert><AlertTitle>Brak opublikowanych arkuszy dla wariantu „{accommodation.label}”</AlertTitle><AlertDescription>Nie przełączamy Cię automatycznie na inny wariant. Rodzic może sprawdzić ustawienie w panelu „Dzieci”, a nowe dopasowane arkusze pojawią się po publikacji.</AlertDescription></Alert>}
             <div className="practice-launch-filters">
               <label htmlFor="practice-material-start">Rocznik
                 <Select value={material} onValueChange={(value) => selectMaterial(value as MaterialFilter)}>
@@ -467,7 +483,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
           </CardContent>
         </Card>
         <section className="dashboard-grid three-columns">
-          <article className="metric-card"><span>Pytania demo</span><b>{questions.length}</b><small>Trzy przedmioty w jednym zestawie.</small></article>
+          <article className="metric-card"><span>Dostępne pytania</span><b>{questions.length}</b><small>Wyłącznie z ustawionego wariantu CKE.</small></article>
           <article className="metric-card"><span>Poprawne odpowiedzi</span><b>{correctCount}</b><small>{answeredCount ? String(score) + "% skuteczności" : "Wynik pojawi się po pierwszym pytaniu."}</small></article>
           <article className="metric-card"><span>Do rozwiązania</span><b>{questions.length - answeredCount}</b><small>Postęp zapisujemy na koncie ucznia.</small></article>
         </section>
@@ -541,10 +557,15 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
           <div className="guardian-section-heading"><div><Badge variant="secondary">Arkusze CKE</Badge><h3 id="paper-progress-title">Wyniki według rocznika i arkusza</h3></div><small>Pełny arkusz liczymy osobno od sesji mieszających zadania.</small></div>
           {paperProgress.length ? <div className="practice-paper-grid">{paperProgress.map((paper) => {
             const statusLabel = paper.completion_status === "completed" ? "Ukończony" : paper.completion_status === "in_progress" ? "Rozpoczęty" : "Nierozpoczęty";
-            return <Card key={paper.progress_paper_id} className="practice-paper-card"><CardHeader><div className="practice-paper-title"><Badge variant={paper.completion_status === "completed" ? "default" : "outline"}>{statusLabel}</Badge><span>CKE {paper.exam_year} · {sessionLabels[paper.exam_session]}</span></div><div className="subject-card-heading compact"><SubjectIcon subject={paper.subject} /><div><CardTitle>{subjectLabels[paper.subject]}</CardTitle><CardDescription>{paper.source_label}</CardDescription></div></div></CardHeader><CardContent><div className="subject-progress-value"><b>{paper.accuracy_percent}%</b><span>{paper.correct_questions} poprawnych z {paper.answered_questions} rozwiązanych</span></div><Progress value={(paper.answered_questions / Math.max(paper.total_questions, 1)) * 100} aria-label={`Ukończenie arkusza ${paper.exam_year}: ${paper.answered_questions} z ${paper.total_questions}`} /></CardContent></Card>;
+            return <Card key={paper.progress_paper_id} className="practice-paper-card"><CardHeader><div className="practice-paper-title"><Badge variant={paper.completion_status === "completed" ? "default" : "outline"}>{statusLabel}</Badge><span>CKE {paper.exam_year} · {sessionLabels[paper.exam_session]} · kod {paper.accommodation_code}</span></div><div className="subject-card-heading compact"><SubjectIcon subject={paper.subject} /><div><CardTitle>{subjectLabels[paper.subject]}</CardTitle><CardDescription>{paper.accommodation_label} · {paper.source_label}</CardDescription></div></div></CardHeader><CardContent><div className="subject-progress-value"><b>{paper.accuracy_percent}%</b><span>{paper.correct_questions} poprawnych z {paper.answered_questions} rozwiązanych</span></div><Progress value={(paper.answered_questions / Math.max(paper.total_questions, 1)) * 100} aria-label={`Ukończenie arkusza ${paper.exam_year}: ${paper.answered_questions} z ${paper.total_questions}`} /></CardContent></Card>;
           })}</div> : <Card className="practice-paper-empty"><CardContent><b>Brak opublikowanych arkuszy CKE</b><p>Gdy pierwszy zweryfikowany arkusz zostanie zaimportowany, pojawi się tutaj jako osobny rocznik — bez mieszania z zestawem demo.</p></CardContent></Card>}
         </section>
       </>}
+
+      {activeView === "settings" && <Card className="student-cke-settings-card">
+        <CardHeader><Badge variant="secondary">Kryteria CKE</Badge><CardTitle>Twój wariant arkuszy</CardTitle><CardDescription>To ustawienie określa, które oficjalne arkusze mogą pojawić się na Twoim koncie.</CardDescription></CardHeader>
+        <CardContent><div className="student-cke-current"><span>Kod CKE {accommodation.code}</span><b>{accommodation.label}</b><p>{accommodation.audience}</p></div><Alert><AlertTitle>Ustawienie kontroluje rodzic</AlertTitle><AlertDescription>Rodzic może zmienić wariant przy Twoim koncie w panelu „Dzieci”. Nie prosimy o diagnozę ani dokumentację medyczną.</AlertDescription></Alert></CardContent>
+      </Card>}
     </>
   );
 }

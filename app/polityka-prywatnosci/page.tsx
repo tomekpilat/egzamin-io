@@ -34,6 +34,7 @@ export default function PrivacyPage() {
           <tbody>
             <tr><td>Konto i logowanie</td><td>E-mail, nazwa wyświetlana, identyfikator konta, dostawca logowania, znaczniki czasu, rola</td><td>Od Ciebie lub z Google po wybraniu logowania społecznościowego</td></tr>
             <tr><td>Konto ucznia</td><td>Wybrana rola, informacja i dowód zgody/upoważnienia opiekuna, powiązanie z kontem rodzica</td><td>Od ucznia i opiekuna</td></tr>
+            <tr><td>Wariant arkuszy CKE</td><td>Kod wybranego wariantu materiału, np. <code>100</code> lub <code>900</code>, konto rodzica dokonujące wyboru, czas ustawienia i potwierdzenie wymagane dla wariantu niestandardowego; bez diagnozy, orzeczenia i dokumentacji medycznej</td><td>Od połączonego rodzica</td></tr>
             <tr><td>Nauka</td><td>Odpowiedzi, wyniki, czas pracy, tematy, postęp, limity pytań</td><td>Z aktywności w usłudze</td></tr>
             <tr><td>Rozmowy z AI</td><td>Treść pytania, kontekst zadania, odpowiedź modelu, liczba tokenów, szacowany koszt i czas odpowiedzi</td><td>Od użytkownika, aplikacji i dostawcy modelu</td></tr>
             <tr><td>Rodzic i nauczyciel</td><td>Zaproszenia, powiązania kont, grupy, zestawy i raporty postępów</td><td>Od użytkowników i z ich aktywności</td></tr>
@@ -45,7 +46,7 @@ export default function PrivacyPage() {
             <tr><td>Kontakt</td><td>Treść wiadomości, adres kontaktowy, historia rozwiązania sprawy</td><td>Od osoby kontaktującej się</td></tr>
           </tbody>
         </table></div>
-        <p>Nie prosimy o dane szczególnej kategorii, numery PESEL, adres domowy ucznia ani informacje medyczne. Nie wpisuj ich do rozmowy z AI. Jeżeli trafią tam przypadkowo, mogą zostać usunięte lub zanonimizowane.</p>
+        <p>Nie prosimy o diagnozę, orzeczenie, dokumentację medyczną, PESEL ani adres domowy ucznia. Wybranie wariantu opisanego kryterium CKE może jednak ujawniać lub pozwalać wnioskować o zdrowiu albo szczególnych potrzebach edukacyjnych dziecka, dlatego kod przechowujemy w osobnej chronionej tabeli, nie przekazujemy go do analityki ani AI i wymagamy wyraźnego potwierdzenia rodzica. Nie wpisuj dodatkowych informacji zdrowotnych do rozmowy z AI.</p>
       </section>
 
       <section className="legal-section" id="cele">
@@ -54,6 +55,7 @@ export default function PrivacyPage() {
           <thead><tr><th>Cel</th><th>Podstawa</th></tr></thead>
           <tbody>
             <tr><td>Utworzenie konta, logowanie, ćwiczenia, zapis postępu i obsługa AI</td><td>Niezbędność do wykonania umowy lub działań przed jej zawarciem — art. 6 ust. 1 lit. b RODO</td></tr>
+            <tr><td>Dobór arkuszy do opcjonalnie wybranego niestandardowego wariantu CKE</td><td>Wyraźne, dobrowolne działanie połączonego rodzica i potwierdzenie dotyczące możliwego ujawnienia szczególnych potrzeb dziecka. Przed uruchomieniem produkcyjnym administrator i prawnik muszą potwierdzić właściwą przesłankę z art. 9 ust. 2 RODO oraz sposób dokumentowania zgody lub innej podstawy.</td></tr>
             <tr><td>Rozliczenia, rachunkowość, obowiązki konsumenckie i odpowiedzi organom</td><td>Obowiązek prawny — art. 6 ust. 1 lit. c RODO</td></tr>
             <tr><td>Bezpieczeństwo, zapobieganie nadużyciom, diagnostyka, obrona roszczeń i podstawowe statystyki usługi</td><td>Prawnie uzasadniony interes — art. 6 ust. 1 lit. f RODO, po teście równowagi uwzględniającym szczególną ochronę dzieci</td></tr>
             <tr><td>Przyjmowanie i analiza feedbacku, naprawa błędów oraz rozwój aplikacji</td><td>Prawnie uzasadniony interes w ulepszaniu i zabezpieczaniu usługi — art. 6 ust. 1 lit. f RODO; kontakt zwrotny następuje wyłącznie po dobrowolnej zgodzie — art. 6 ust. 1 lit. a RODO</td></tr>
@@ -70,6 +72,8 @@ export default function PrivacyPage() {
         <p>Usługa jest projektowana dla ósmoklasistów, dlatego stosujemy minimalizację danych, komunikaty zrozumiałe dla dziecka i ustawienia zapewniające wysoki poziom prywatności. Uczeń nie może sam oświadczyć zgody za rodzica: podaje osobny adres opiekuna, konto pozostaje zablokowane, a rodzic zatwierdza prośbę po zalogowaniu na własne konto. Zapisujemy datę, konto zatwierdzające i powiązanie rodzic–dziecko. Przed publicznym startem prawnik powinien potwierdzić, czy ten poziom weryfikacji jest wystarczający dla ostatecznego modelu usługi.</p>
         <ul>
           <li>Rodzic zobaczy po połączeniu konta postęp, regularność i obszary do powtórki.</li>
+          <li>Rodzic może wybrać kod wariantu materiału CKE. Przy kodzie niestandardowym otrzymuje dodatkowe wyjaśnienie i musi potwierdzić wybór; uczeń widzi aktywny wariant, ale nie zmienia go samodzielnie.</li>
+          <li>Po wyborze aplikacja udostępnia wyłącznie opublikowane arkusze oznaczone tym kodem. Brak materiału nie powoduje automatycznej podmiany na wariant standardowy.</li>
           <li>Treść prywatnych rozmów ucznia z AI nie będzie domyślnie wyświetlana rodzicowi, chyba że wymaga tego bezpieczeństwo, prawo lub uczeń sam ją udostępni.</li>
           <li>Nie kierujemy do dzieci reklam opartych na profilowaniu ani bezpośrednich wezwań do zakupu lub namawiania rodzica na zakup.</li>
           <li>Opiekun może wycofać zgodę i poprosić o usunięcie konta dziecka zgodnie z procedurą <a href="/usun-konto">usunięcia konta i danych</a>.</li>
@@ -125,6 +129,7 @@ export default function PrivacyPage() {
           <thead><tr><th>Dane</th><th>Planowany okres</th></tr></thead>
           <tbody>
             <tr><td>Konto, profil i postęp</td><td>Do usunięcia konta lub zakończenia umowy, następnie do 30 dni w systemach aktywnych i do 90 dni w rotacyjnych kopiach zapasowych</td></tr>
+            <tr><td>Wariant arkuszy CKE i potwierdzenie rodzica</td><td>Do zmiany na wariant standardowy, usunięcia konta lub cofnięcia właściwego potwierdzenia; minimalny dowód wcześniejszego wyboru wyłącznie przez okres potrzebny do wykazania zgodności lub obrony roszczeń</td></tr>
             <tr><td>Surowa treść rozmów z AI</td><td>90 dni, chyba że użytkownik usunie ją wcześniej, dłuższe zachowanie jest potrzebne do zgłoszenia lub prawo wymaga inaczej</td></tr>
             <tr><td>Zanonimizowane statystyki nauki</td><td>Bezterminowo, jeżeli nie pozwalają już zidentyfikować osoby</td></tr>
             <tr><td>Logi bezpieczeństwa</td><td>12 miesięcy, dłużej wyłącznie dla konkretnego incydentu lub roszczenia</td></tr>
