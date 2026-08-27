@@ -19,7 +19,7 @@ describe("learning steps section", () => {
   });
 
   it("keeps the cards compact on desktop and mobile", () => {
-    expect(styles).toContain(".step-card { position: relative; min-height: 160px; overflow: hidden; padding: 24px; display: grid; align-content: center;");
+    expect(styles).toContain(".step-card { position: relative; min-height: 160px; overflow: hidden; padding: 24px; display: grid; align-content: start; gap: 0;");
     expect(styles).toContain(".step-card { min-height: 150px; padding: 22px; }");
     expect(styles).toContain(".step-card { min-height: 150px; }");
   });
