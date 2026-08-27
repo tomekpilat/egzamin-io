@@ -118,6 +118,11 @@ mjx-container { max-width: 100%; color: inherit; }
 .desktop-nav a:hover { color: var(--ink); }
 .desktop-nav a[aria-current="page"] { color: var(--foreground); }
 .header-cta { padding: 10px 16px; border: 1px solid var(--border); border-radius: 10px; background: rgba(255,255,255,.54); font-size: 13px; font-weight: 700; }
+.header-actions { min-width: 211px; display: flex; align-items: center; justify-content: flex-end; gap: 16px; }
+.header-session-placeholder { width: 211px; height: 50px; }
+.header-account-session { min-height: 50px; max-width: 260px; padding: 6px 9px 6px 6px; display: flex; align-items: center; gap: 9px; border: 1px solid var(--border); border-radius: 13px; background: var(--card); color: var(--card-foreground); font: inherit; text-align: left; cursor: pointer; }
+.header-account-session:hover, .header-account-session[data-state="open"] { background: var(--accent); color: var(--accent-foreground); }
+.header-account-session[data-state="open"] .dashboard-session-chevron { transform: rotate(180deg); }
 
 .hero {
   width: min(1180px, calc(100% - 48px));
@@ -356,7 +361,7 @@ mjx-container { max-width: 100%; color: inherit; }
   .site-header, .hero { width: min(100% - 30px, 1180px); }
   .site-header { height: 72px; }
   .desktop-nav { display: none; }
-  .header-cta { padding: 9px 11px; }
+  .header-actions { min-width: auto; gap: 10px; }.header-session-placeholder { width: 44px; height: 44px; }.header-account-session { min-height: 44px; padding: 3px; gap: 3px; }.header-account-session .dashboard-account-copy, .header-account-session .dashboard-session-chevron { display: none; }.header-account-session .dashboard-account-avatar { width: 34px; height: 34px; }.header-cta { padding: 9px 11px; }
   .hero { padding: 44px 0 70px; }
   .hero h1 { font-size: clamp(43px, 14vw, 62px); }
   .hero-lead { font-size: 16px; }

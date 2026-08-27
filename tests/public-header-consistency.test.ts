@@ -26,6 +26,15 @@ describe("shared public site header", () => {
     }
   });
 
+  it("replaces login actions with the account menu when a Supabase session exists", () => {
+    expect(header).toContain("supabase.auth.getSession()");
+    expect(header).toContain("supabase.auth.onAuthStateChange");
+    expect(header).toContain("Przejdź do panelu");
+    expect(header).toContain("Wyloguj się");
+    expect(header).toContain('href="/panel"');
+    expect(header).toContain("header-session-placeholder");
+  });
+
   it("uses stable home anchors from every route", () => {
     expect(header).toContain('href: "/#dla-rodzica"');
     expect(header).toContain('href: "/#dostep"');
