@@ -23,7 +23,7 @@ describe("AI tutor end-to-end contract", () => {
     expect(route).toContain('supabase.rpc("fail_ai_tutor_request"');
     expect(route).toContain('supabase.rpc("complete_ai_tutor_request"');
     expect(practice).toContain("task-support");
-    expect(practice).toContain("<AiTutor questionId={currentQuestion.question_id} feedback={tutorFeedback}");
+    expect(practice).toContain('<AiTutor questionId={currentQuestion.question_id} feedback={tutorFeedback} aiEnabled={aiEnabled}');
   });
 
   it("loads chat state directly instead of relying on the broken legacy bootstrap RPC", () => {
@@ -49,6 +49,8 @@ describe("AI tutor end-to-end contract", () => {
     expect(component).toContain("Nie wpisuj danych osobowych");
     expect(component).toContain('href="/plan-plus#porownanie"');
     expect(route).toContain("pytanie nie zostało odliczone");
+    expect(route).toContain("requireActivePlusStudent");
+    expect(component).toContain("Wszystkie arkusze CKE są dostępne bezpłatnie");
   });
 
   it("expands an active conversation and keeps a usable chat viewport", () => {

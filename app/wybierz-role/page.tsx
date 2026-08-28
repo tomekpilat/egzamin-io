@@ -24,13 +24,13 @@ const choices: Array<{
     value: "student",
     title: "Jestem uczniem",
     description: "Chcę ćwiczyć do egzaminu",
-    detail: "Zadania CKE, podpowiedzi AI i codzienny plan.",
+    detail: "Wszystkie arkusze CKE i 15 interaktywnych pytań dziennie.",
   },
   {
     value: "parent",
     title: "Jestem rodzicem",
     description: "Chcę wspierać dziecko",
-    detail: "Raport postępów, regularność i obszary do powtórki.",
+    detail: "Zgoda na konto dziecka oraz postęp i AI po aktywacji Plus.",
   },
 ];
 
@@ -153,7 +153,7 @@ export default function ChooseRolePage() {
               <span className="role-choice-dot" aria-hidden="true" />
               <div>
                 <b>{choice.value === "student" ? "Uczeń" : "Rodzic lub opiekun"}</b>
-                <small>{choice.value === "student" ? "Rozwiązujesz zadania z arkuszy CKE, korzystasz ze wskazówek i tutora AI, śledzisz swój postęp." : "Zatwierdzasz konto dziecka, ustawiasz arkusz i cel tygodniowy, widzisz postęp, kupujesz Plus."}</small>
+                <small>{choice.value === "student" ? "Masz wszystkie arkusze CKE i 15 interaktywnych pytań dziennie. AI oraz postęp odblokowuje Plus." : "Zatwierdzasz konto dziecka, kupujesz Plus i wtedy widzisz postęp oraz wykorzystanie AI."}</small>
               </div>
             </button>
           ))}

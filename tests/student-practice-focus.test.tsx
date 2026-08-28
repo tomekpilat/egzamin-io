@@ -64,7 +64,7 @@ const questions = [
   },
 ];
 
-function prepareRpc(questionRows = questions, progressRows: Record<string, unknown>[] = [], submitResult?: (params: Record<string, unknown>) => Record<string, unknown>) {
+function prepareRpc(questionRows = questions, progressRows: Record<string, unknown>[] = [], submitResult?: (params: Record<string, unknown>) => Record<string, unknown>, access = { active_plan: "plus", practice_used_today: 0, practice_daily_limit: null, progress_enabled: true, ai_enabled: true }) {
   vi.stubGlobal("fetch", vi.fn().mockImplementation(async (_input: RequestInfo | URL, init?: RequestInit) => new Response(JSON.stringify(init?.method === "POST" ? {
     message: { id: "ai-response-1", role: "assistant", content: "Wyjaśnienie AI do aktualnego zadania.", created_at: "2026-08-28T10:00:00.000Z" },
     usage: { used: 1, limit: 3, remaining: 2, plan: "free" },
@@ -76,6 +76,7 @@ function prepareRpc(questionRows = questions, progressRows: Record<string, unkno
   }), { status: 200, headers: { "Content-Type": "application/json" } })));
   rpc.mockImplementation(async (name: string, params: Record<string, unknown>) => {
     if (name === "get_practice_questions") return { data: questionRows, error: null };
+    if (name === "get_student_practice_access") return { data: [access], error: null };
     if (name === "get_student_paper_progress") return { data: progressRows, error: null };
     if (name === "submit_practice_response") {
       return {
@@ -134,6 +135,20 @@ describe("StudentPractice focus mode", () => {
     expect(hasUnsavedPracticeAnswer("q1", null, { questionId: "q1", index: 2 })).toBe(true);
     expect(hasUnsavedPracticeAnswer("q1", 2, { questionId: "q1", index: 2 })).toBe(false);
     expect(hasUnsavedPracticeAnswer("q1", null, { questionId: "q2", index: 2 })).toBe(false);
+  });
+
+  it("keeps every paper visible in Free while gating AI, progress and the sixteenth daily check", async () => {
+    prepareRpc(questions, [], undefined, { active_plan: "free", practice_used_today: 15, practice_daily_limit: 15, progress_enabled: false, ai_enabled: false });
+    const { rerender } = render(<StudentPractice activeView="exercises" onNavigate={() => undefined} hasPlusAccess={false} />);
+
+    expect(await screen.findByText("0 / 15 sprawdzeń dziś")).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Ile wynosi 20% z 50?" })).toBeInTheDocument();
+    expect(screen.getByText(/Wszystkie arkusze CKE są dostępne bezpłatnie/)).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Limit 15 pytań wykorzystany" })).toBeDisabled();
+    expect(rpc).not.toHaveBeenCalledWith("get_student_paper_progress");
+
+    rerender(<StudentPractice activeView="progress" onNavigate={() => undefined} hasPlusAccess={false} />);
+    expect(screen.getByText("Śledzenie postępów jest dostępne w Plus")).toBeInTheDocument();
   });
 
   it("shows one question with minimal progress and keyboard answer navigation", async () => {
@@ -258,7 +273,7 @@ describe("StudentPractice focus mode", () => {
 
     expect(await screen.findByRole("combobox", { name: "Rocznik" })).toHaveTextContent("CKE 2025");
     expect(screen.getByText("1", { selector: ".practice-launch-summary b" })).toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Rozpocznij ćwiczenia →" }));
+    await user.click(screen.getByRole("button", { name: "Otwórz arkusz →" }));
     expect(await screen.findByRole("heading", { name: "Pytanie z 2025 roku" })).toBeInTheDocument();
     expect(screen.getByText(/CKE 2025 · termin główny · zadanie 1/)).toBeInTheDocument();
   });

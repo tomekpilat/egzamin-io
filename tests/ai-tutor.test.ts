@@ -80,6 +80,6 @@ describe("AI tutor validation and prompt", () => {
     expect(estimateDeepSeekCostMicrousd({ cacheHitInputTokens: 1000, cacheMissInputTokens: 2000, outputTokens: 500 })).toBe(423);
     expect(normalizeUsage(2, 3, "free")).toEqual({ used: 2, limit: 3, remaining: 1, plan: "free" });
     expect(normalizeUsage(60, 50, "plus")).toEqual({ used: 60, limit: 50, remaining: 0, plan: "plus" });
-    expect(normalizeUsage("bad", "bad", "unknown")).toEqual({ used: 0, limit: 3, remaining: 3, plan: "free" });
+    expect(normalizeUsage("bad", "bad", "unknown")).toEqual({ used: 0, limit: 0, remaining: 0, plan: "free" });
   });
 });

@@ -36,6 +36,8 @@ type Profile = {
   guardian_email: string | null;
   guardian_consent_at: string | null;
   teacher_verification_status: "not_required" | "pending" | "verified" | "rejected";
+  plan_tier: "free" | "plus";
+  plan_valid_until: string | null;
 };
 
 type GuardianRequest = { request_id: string; student_id: string; student_display_name: string | null; student_email: string; requested_at: string; expires_at: string };
@@ -328,7 +330,7 @@ export default function DashboardPage() {
 
           const { data, error: profileError } = await supabase
             .from("profiles")
-            .select("id,email,display_name,role,onboarding_completed,legal_version,guardian_email,guardian_consent_at,teacher_verification_status")
+            .select("id,email,display_name,role,onboarding_completed,legal_version,guardian_email,guardian_consent_at,teacher_verification_status,plan_tier,plan_valid_until")
             .eq("id", nextUser.id)
             .single();
 
@@ -490,6 +492,7 @@ export default function DashboardPage() {
     user?.user_metadata?.name ||
     profile.email;
   const parentPlusChildren = profile.role === "parent" ? linkedChildren.filter((child) => child.plan_tier === "plus" && (!child.plan_valid_until || new Date(child.plan_valid_until).getTime() > renderedAt)).length : 0;
+  const studentHasPlus = profile.role === "student" && profile.plan_tier === "plus" && (!profile.plan_valid_until || new Date(profile.plan_valid_until).getTime() > renderedAt);
   const parentViewLabels: Record<ParentView, string> = {
     start: "Przegląd",
     progress: "Postęp dziecka",
@@ -512,7 +515,7 @@ export default function DashboardPage() {
       : `${profile.role}:start`;
 
   if (focusMode) {
-    return <main className="task-route-shell"><StudentPractice activeView="exercises" onNavigate={setStudentView} /></main>;
+    return <main className="task-route-shell"><StudentPractice activeView="exercises" onNavigate={setStudentView} hasPlusAccess={studentHasPlus} /></main>;
   }
 
   return (
@@ -537,7 +540,7 @@ export default function DashboardPage() {
             <a href="#ustawienia">Ustawienia</a>
           </>}
         </nav>
-        <div className="sidebar-plan"><b>{parentPlusChildren ? `Pakiet Plus · ${parentPlusChildren}` : "Wersja bezpłatna"}</b><span>{parentPlusChildren ? "Aktywny dla połączonych dzieci" : "3 pytania AI dziennie"}</span><i><em /></i>{profile.role === "parent" ? <button type="button" onClick={() => setParentView("payments")}>{parentPlusChildren ? "Płatności i dokumenty →" : "Poznaj pakiet Plus →"}</button> : <a href="/plan-plus">Poznaj pakiet Plus →</a>}</div>
+        <div className="sidebar-plan"><b>{parentPlusChildren ? `Pakiet Plus · ${parentPlusChildren}` : "Wersja bezpłatna"}</b><span>{parentPlusChildren ? "Aktywny dla połączonych dzieci" : "15 interaktywnych pytań dziennie"}</span><i><em /></i>{profile.role === "parent" ? <button type="button" onClick={() => setParentView("payments")}>{parentPlusChildren ? "Płatności i dokumenty →" : "Poznaj pakiet Plus →"}</button> : <a href="/plan-plus">Poznaj pakiet Plus →</a>}</div>
         {profile.role === "parent" ? <nav className="dashboard-sidebar-legal" aria-label="Dokumenty i prywatność">
           <a href="/regulamin">Regulamin</a>
           <a href="/polityka-prywatnosci">Polityka prywatności</a>
@@ -572,7 +575,7 @@ export default function DashboardPage() {
         {!focusMode && profile.role === "student" && <header className="student-dashboard-topbar">
           <span>Konto ucznia <i aria-hidden="true">/</i> <b>{studentViewLabels[studentView]}</b></span>
           <div className="student-topbar-actions">
-            <a className="student-plan-pill" href="/plan-plus#dla-ucznia">Plan Free</a>
+            <a className="student-plan-pill" href="/plan-plus#dla-ucznia">{studentHasPlus ? "Pakiet Plus" : "Plan Free"}</a>
             <AccountMenu displayName={displayName} email={profile.email} triggerClassName="header-account-session" onSettings={openAccountSettings} onSignOut={() => void signOut()} />
           </div>
         </header>}
@@ -588,7 +591,7 @@ export default function DashboardPage() {
           <div><span>{roleLabels[profile.role]}</span><h1>Cześć, {firstName}!</h1></div>
         </header>}
         <div className={focusMode ? "dashboard-content dashboard-focus-content" : "dashboard-content"}>
-          {profile.role === "student" && <StudentPractice activeView={studentView} onNavigate={setStudentView} />}
+          {profile.role === "student" && <StudentPractice activeView={studentView} onNavigate={setStudentView} hasPlusAccess={studentHasPlus} />}
           {actionError && profile.role === "parent" && <Alert variant="destructive" className="dashboard-alert"><AlertDescription>{actionError}</AlertDescription></Alert>}
           {actionMessage && profile.role === "parent" && <Alert variant="success" className="dashboard-alert"><AlertDescription>{actionMessage}</AlertDescription></Alert>}
           {profile.role === "parent" && <ParentPanel activeView={parentView} parentEmail={profile.email} requests={guardianRequests} linkedChildren={linkedChildren} actionBusy={guardianActionBusy} onNavigate={setParentView} onApprove={(id) => void decideGuardianRequest(id, "approve")} onReject={(id) => void decideGuardianRequest(id, "reject")} onSavePreferences={(studentId, weeklyGoal) => void saveGuardianPreferences(studentId, weeklyGoal)} />}
@@ -601,7 +604,7 @@ export default function DashboardPage() {
               <CardContent className="account-settings-actions"><div className="account-theme-setting"><span>Motyw</span><ThemeSettings /></div></CardContent>
             </Card>
             <Card className="account-settings-card parent-settings-card">
-              <CardHeader><CardTitle>Pakiet Plus</CardTitle><CardDescription>Sprawdź pełną bazę arkuszy, rozszerzony dostęp do AI i szczegóły płatności.</CardDescription></CardHeader>
+              <CardHeader><CardTitle>Pakiet Plus</CardTitle><CardDescription>Odblokuj interaktywne ćwiczenia bez limitu, nauczyciela AI, śledzenie postępów i szczegóły płatności.</CardDescription></CardHeader>
               <CardContent className="account-settings-actions"><Button variant="outline" asChild><a href="/plan-plus#dla-rodzica">Poznaj pakiet Plus</a></Button></CardContent>
             </Card>
             <Card className="account-settings-card parent-settings-card parent-account-data-card">

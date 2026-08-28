@@ -22,7 +22,7 @@ export default function PlanPlusPage() {
           <div>
             <Badge variant="secondary">Pakiet Plus · dostępny</Badge>
             <h1>Regularna nauka bez dokładania presji.</h1>
-            <p>Pełna baza ćwiczeń, więcej rozmów z AI oraz plan powtórek dla ucznia. Rodzic widzi trend i konkretny następny krok.</p>
+            <p>Wszystkie arkusze pozostają bezpłatne. Plus odblokowuje interaktywne rozwiązywanie bez limitu, nauczyciela AI oraz śledzenie postępów.</p>
           </div>
           <Card className="plan-plus-price-card">
             <CardHeader><CardTitle>Pakiet Plus</CardTitle></CardHeader>
@@ -37,7 +37,7 @@ export default function PlanPlusPage() {
         <div className="plan-plus-role-grid">
           <Card id="dla-ucznia">
             <CardHeader><Badge variant="outline">Dla ucznia</Badge><CardTitle>Wiesz, co ćwiczyć dalej.</CardTitle></CardHeader>
-            <CardContent><p>Więcej pytań do AI, pełna baza zadań i powtórki dobrane do tematów, które wymagają uwagi.</p></CardContent>
+            <CardContent><p>Interaktywne rozwiązywanie bez limitu, nauczyciel AI i powtórki dobrane do tematów, które wymagają uwagi.</p></CardContent>
           </Card>
           <Card id="dla-rodzica">
             <CardHeader><Badge variant="outline">Dla rodzica</Badge><CardTitle>Widzisz postęp, nie prywatne rozmowy.</CardTitle></CardHeader>

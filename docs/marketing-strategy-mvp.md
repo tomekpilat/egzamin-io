@@ -16,7 +16,9 @@ Na start rekomendowany jest wąski, mierzalny produkt:
 - 120–180 ręcznie sprawdzonych zadań CKE,
 - tagowanie: temat, umiejętność, rok, trudność,
 - odpowiedź ucznia i natychmiastowa informacja zwrotna,
-- maksymalnie 3 pytania do AI dziennie w planie darmowym,
+- wszystkie arkusze dostępne w planie darmowym,
+- maksymalnie 15 interaktywnie sprawdzanych pytań dziennie w planie darmowym,
+- nauczyciel AI i śledzenie postępów w Pakiecie Plus,
 - cotygodniowy raport dla rodzica,
 - proste zestawy udostępniane przez nauczyciela,
 - płatność dopiero po potwierdzeniu aktywacji i retencji.
@@ -58,16 +60,16 @@ Pierwszych nauczycieli należy traktować jako radę produktu, a nie jako szerok
 
 ### Free
 
-- wybrane zadania,
-- 3 pytania AI dziennie,
-- podstawowy postęp,
+- pełny dostęp do wszystkich arkuszy,
+- 15 interaktywnie sprawdzanych pytań dziennie,
+- bez nauczyciela AI i trwałego śledzenia postępów,
 - jeden profil ucznia.
 
 ### Pakiet Plus
 
-- pełna baza i plan powtórek,
-- wyższy limit rozmów z AI,
-- raport rodzica,
+- interaktywne ćwiczenia bez limitu i plan powtórek,
+- 50 pytań do AI dziennie,
+- śledzenie postępów i panel rodzica,
 - inteligentne powtórki.
 
 Cena startowa: **149 zł jednorazowo za pakiet**, bez automatycznego odnowienia. W komunikacji porównuj ją z przykładowym kosztem dwóch godzin korepetycji po 80 zł, ale jasno zaznaczaj, że aplikacja wspiera regularną pracę i nie zastępuje indywidualnego nauczyciela.
@@ -80,10 +82,10 @@ Nie obniżać ceny przed sprawdzeniem, czy barierą jest cena, czy brak wartośc
 Treść / polecenie nauczyciela
 → darmowe konkretne zadanie
 → pierwsza odpowiedź
-→ pierwsze pytanie do AI
+→ wykorzystanie części darmowego limitu 15 pytań
 → założenie konta
 → 5 zadań w 7 dni
-→ cotygodniowy raport
+→ podgląd korzyści AI i śledzenia postępów
 → oferta Plus
 ```
 
@@ -91,7 +93,7 @@ Rejestracja nie powinna być pierwszym krokiem kampanii. Najpierw uczeń lub rod
 
 ## North Star i metryki MVP
 
-**North Star:** liczba uczniów tygodniowo, którzy wykonali minimum 5 zadań i zadali minimum 1 pytanie do AI.
+**North Star:** liczba uczniów tygodniowo, którzy interaktywnie sprawdzili minimum 5 zadań.
 
 Progi do przejścia z bety do płatnej akwizycji:
 
@@ -207,7 +209,7 @@ Nie wysyłać do analityki treści odpowiedzi, pytań do AI, adresu e-mail, nazw
 2. „Nauczyciel AI” kontra „Wyjaśnienie krok po kroku”.
 3. Rejestracja przed pierwszą podpowiedzią kontra po pierwszym wyjaśnieniu.
 4. Raport rodzica w piątek kontra niedzielę.
-5. Limit 3 pytań dziennie kontra 10 pytań tygodniowo.
+5. Limit 15 interaktywnych pytań dziennie kontra limit tygodniowy.
 6. Cena miesięczna kontra dostęp do egzaminu.
 
 Każdy eksperyment musi mieć jedną metrykę główną i minimalną próbę ustaloną przed startem.

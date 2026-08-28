@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
 
 import { useEffect, useMemo, useState } from "react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -14,6 +15,8 @@ export type ParentProgressChild = {
   student_display_name: string | null;
   student_email: string;
   weekly_goal: number;
+  plan_tier: "free" | "plus";
+  plan_valid_until: string | null;
 };
 
 type ProgressRange = 7 | 30 | 0;
@@ -98,6 +101,7 @@ export function normalizeParentProgress(value: Record<string, unknown>): ParentP
 }
 
 export function ParentProgress({ linkedChildren, pendingRequests, onConnect }: { linkedChildren: ParentProgressChild[]; pendingRequests: number; onConnect: () => void }) {
+  const [renderedAt] = useState(() => Date.now());
   const [selectedStudentId, setSelectedStudentId] = useState(linkedChildren[0]?.student_id ?? "");
   const [range, setRange] = useState<ProgressRange>(7);
   const [refreshKey, setRefreshKey] = useState(0);
@@ -105,6 +109,8 @@ export function ParentProgress({ linkedChildren, pendingRequests, onConnect }: {
   const effectiveStudentId = linkedChildren.some((child) => child.student_id === selectedStudentId)
     ? selectedStudentId
     : linkedChildren[0]?.student_id ?? "";
+  const selectedChild = linkedChildren.find((child) => child.student_id === effectiveStudentId) ?? linkedChildren[0];
+  const hasPlusAccess = Boolean(selectedChild?.plan_tier === "plus" && (!selectedChild.plan_valid_until || new Date(selectedChild.plan_valid_until).getTime() > renderedAt));
   const requestKey = `${effectiveStudentId}:${range}:${refreshKey}`;
   const loading = Boolean(effectiveStudentId) && result.key !== requestKey;
   const summary = result.key === requestKey ? result.summary : null;
@@ -112,7 +118,7 @@ export function ParentProgress({ linkedChildren, pendingRequests, onConnect }: {
   const aiUsageUnavailable = result.key === requestKey && result.aiUsageUnavailable;
 
   useEffect(() => {
-    if (!effectiveStudentId) return;
+    if (!effectiveStudentId || !hasPlusAccess) return;
 
     let active = true;
     getSupabaseClient()
@@ -141,9 +147,8 @@ export function ParentProgress({ linkedChildren, pendingRequests, onConnect }: {
     return () => {
       active = false;
     };
-  }, [effectiveStudentId, range, requestKey]);
+  }, [effectiveStudentId, hasPlusAccess, range, requestKey]);
 
-  const selectedChild = linkedChildren.find((child) => child.student_id === effectiveStudentId) ?? linkedChildren[0];
   const subjectStats = useMemo(() => new Map(summary?.subject_stats.map((item) => [item.subject, item]) ?? []), [summary]);
 
   if (!linkedChildren.length) {
@@ -168,7 +173,9 @@ export function ParentProgress({ linkedChildren, pendingRequests, onConnect }: {
         <div className="parent-range-selector"><span>Okres</span><div>{ranges.map((item) => <Button key={item.value} type="button" size="sm" variant={range === item.value ? "default" : "outline"} aria-pressed={range === item.value} onClick={() => setRange(item.value)}>{item.label}</Button>)}</div></div>
       </section>
 
-      {loading && <section className="parent-progress-loading" aria-live="polite"><Card><CardContent>Liczymy postęp dla wybranego okresu…</CardContent></Card></section>}
+      {!hasPlusAccess && <Card className="parent-empty-view parent-progress-empty"><CardHeader><Badge variant="secondary">Pakiet Plus</Badge><CardTitle>Śledzenie postępów jest dostępne w Plus</CardTitle><CardDescription>Wszystkie arkusze CKE pozostają bezpłatne. Plus pokazuje wyniki, regularność, tematy do powtórki i liczbę użyć nauczyciela AI.</CardDescription></CardHeader><CardContent><Button asChild><a href="/plan-plus#porownanie">Porównaj Free i Plus</a></Button></CardContent></Card>}
+
+      {hasPlusAccess && loading && <section className="parent-progress-loading" aria-live="polite"><Card><CardContent>Liczymy postęp dla wybranego okresu…</CardContent></Card></section>}
       {error && <Alert variant="destructive" className="dashboard-alert"><AlertTitle>Postępy są chwilowo niedostępne</AlertTitle><AlertDescription>{error}<Button variant="outline" size="sm" type="button" onClick={() => setRefreshKey((value) => value + 1)}>Spróbuj ponownie</Button></AlertDescription></Alert>}
       {!loading && !error && aiUsageUnavailable && <Alert className="dashboard-alert parent-ai-usage-warning"><AlertTitle>Postęp został wczytany</AlertTitle><AlertDescription>Licznik pytań do AI jest chwilowo niedostępny. Pozostałe wyniki są aktualne.</AlertDescription></Alert>}
 

@@ -11,15 +11,15 @@ import { Button } from "@/components/ui/button";
 import { PLUS_PACKAGE_PRICE_PLN } from "@/lib/plans";
 
 const FREE_FEATURES = [
-  "Wybrane zadania z arkuszy",
-  "3 pytania do tutora AI dziennie",
-  "Cel tygodniowy dla rodzica",
+  "Pełny dostęp do wszystkich arkuszy CKE",
+  "15 interaktywnych pytań dziennie",
+  "Bez karty i bez opłat",
 ] as const;
 
 const PLUS_FEATURES = [
-  "Pełna baza arkuszy 2019–2025",
+  "Interaktywne rozwiązywanie bez limitu",
   "50 pytań do tutora AI dziennie",
-  "Raporty, trendy i rekomendacje",
+  "Śledzenie postępów, trendy i powtórki",
 ] as const;
 
 export default function Home() {
@@ -60,7 +60,7 @@ export default function Home() {
           </div>
 
           <div className="design-task-preview" aria-label="Podgląd ćwiczenia">
-            <div className="design-task-bar"><span>CKE 2024 · Matematyka · zadanie 7</span><span>Zostały 2 z 3 pytań dziś</span></div>
+            <div className="design-task-bar"><span>CKE 2024 · Matematyka · zadanie 7</span><span>Nauczyciel AI · Pakiet Plus</span></div>
             <div className="design-task-content">
               <p>Trapez ma podstawy o długościach 8 cm i 12 cm oraz wysokość 5 cm. Oblicz pole tego trapezu.</p>
               <div className="design-task-answers" role="radiogroup" aria-label="Przykładowe odpowiedzi">
@@ -90,7 +90,7 @@ export default function Home() {
 
       <section id="rodzice" className="design-home-section design-home-section-card">
         <div className="design-home-container design-parent-section">
-          <h2>Rodzic widzi postęp, nie prywatne rozmowy</h2>
+          <h2>Rodzic widzi postęp, nie prywatne rozmowy — w Plus</h2>
           <div className="design-parent-grid">
             <div><CalendarDays aria-hidden="true" /><b>Regularność</b><span>Ile dni w tygodniu dziecko siadło do zadań.</span></div>
             <div><ListChecks aria-hidden="true" /><b>Tematy do powtórki</b><span>Konkretne zagadnienia z arkuszy.</span></div>
@@ -113,7 +113,7 @@ export default function Home() {
               <div>{PLUS_FEATURES.map((feature) => <span key={feature}><Check aria-hidden="true" />{feature}</span>)}</div>
             </article>
           </div>
-          <p>Plus kupuje rodzic dla wybranego dziecka, bez odnawiania. Godzina korepetycji to zwykle 80–120 zł.</p>
+          <p>Wszystkie arkusze są dostępne bezpłatnie. Plus kupuje rodzic dla wybranego dziecka, aby odblokować AI, śledzenie postępów i interaktywne ćwiczenia bez limitu. Godzina korepetycji to zwykle 80–120 zł.</p>
         </div>
       </section>
 

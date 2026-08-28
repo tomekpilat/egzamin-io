@@ -36,8 +36,8 @@ function progressRow(studentId: string, range = 7) {
 }
 
 const children = [
-  { student_id: "student-a", student_display_name: "Ala", student_email: "ala@example.com", weekly_goal: 5 },
-  { student_id: "student-b", student_display_name: "Bartek", student_email: "bartek@example.com", weekly_goal: 4 },
+  { student_id: "student-a", student_display_name: "Ala", student_email: "ala@example.com", weekly_goal: 5, plan_tier: "plus" as const, plan_valid_until: null },
+  { student_id: "student-b", student_display_name: "Bartek", student_email: "bartek@example.com", weekly_goal: 4, plan_tier: "plus" as const, plan_valid_until: null },
 ];
 
 describe("ParentProgress", () => {
@@ -108,6 +108,12 @@ describe("ParentProgress", () => {
   it("shows the connection state without calling progress RPC", () => {
     render(<ParentProgress linkedChildren={[]} pendingRequests={1} onConnect={() => undefined} />);
     expect(screen.getByText("Połączenie czeka na zatwierdzenie")).toBeInTheDocument();
+    expect(rpc).not.toHaveBeenCalled();
+  });
+
+  it("gates progress for a child on Free without calling aggregate RPCs", () => {
+    render(<ParentProgress linkedChildren={[{ ...children[0], plan_tier: "free" }]} pendingRequests={0} onConnect={() => undefined} />);
+    expect(screen.getByText("Śledzenie postępów jest dostępne w Plus")).toBeInTheDocument();
     expect(rpc).not.toHaveBeenCalled();
   });
 });

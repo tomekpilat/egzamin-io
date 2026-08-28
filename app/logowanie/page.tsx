@@ -22,8 +22,8 @@ type SignupStage = "role" | "form";
 type Notice = { type: "error" | "success"; message: string } | null;
 
 const ROLE_OPTIONS: Array<{ value: SelfServiceRole; title: string; description: string }> = [
-  { value: "student", title: "Uczeń", description: "Rozwiązujesz zadania z arkuszy CKE, korzystasz ze wskazówek i tutora AI, śledzisz swój postęp." },
-  { value: "parent", title: "Rodzic lub opiekun", description: "Zatwierdzasz konto dziecka, ustawiasz arkusz i cel tygodniowy, widzisz postęp, kupujesz Plus." },
+  { value: "student", title: "Uczeń", description: "Rozwiązujesz zadania z arkuszy CKE — wszystkie roczniki i 15 interaktywnych pytań dziennie. AI oraz postęp odblokowuje Plus." },
+  { value: "parent", title: "Rodzic lub opiekun", description: "Zatwierdzasz konto dziecka, kupujesz Plus i wtedy widzisz postęp oraz wykorzystanie AI." },
 ];
 
 function friendlyAuthError(message: string) {

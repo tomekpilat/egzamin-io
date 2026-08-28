@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { calculatePlusPackageEconomics, formatPln, PLAN_COMPARISON_ROWS, PLUS_AI_QUESTIONS_PER_DAY, PLUS_PACKAGE_PRICE_PLN } from "@/lib/plans";
+import { calculatePlusPackageEconomics, formatPln, FREE_PRACTICE_QUESTIONS_PER_DAY, PLAN_COMPARISON_ROWS, PLUS_AI_QUESTIONS_PER_DAY, PLUS_PACKAGE_PRICE_PLN } from "@/lib/plans";
 
 describe("Plus package economics", () => {
   it("compares the one-time package with a transparent tutoring example", () => {
@@ -10,9 +10,12 @@ describe("Plus package economics", () => {
 
   it("keeps the Plus AI limit explicit", () => {
     expect(PLUS_AI_QUESTIONS_PER_DAY).toBe(50);
+    expect(FREE_PRACTICE_QUESTIONS_PER_DAY).toBe(15);
     expect(PLAN_COMPARISON_ROWS).toContainEqual(["Cena", "0 zł", "149 zł / pakiet"]);
     expect(PLAN_COMPARISON_ROWS).toContainEqual(["Płatność", "Bez opłat", "Jednorazowa, bez odnowienia"]);
-    expect(PLAN_COMPARISON_ROWS).toContainEqual(["Pytania do AI", "3 dziennie", "50 dziennie"]);
+    expect(PLAN_COMPARISON_ROWS).toContainEqual(["Arkusze CKE", "Pełny dostęp", "Pełny dostęp"]);
+    expect(PLAN_COMPARISON_ROWS).toContainEqual(["Interaktywne rozwiązywanie", "15 pytań dziennie", "Bez limitu"]);
+    expect(PLAN_COMPARISON_ROWS).toContainEqual(["Nauczyciel AI", "Niedostępny", "50 pytań dziennie"]);
   });
 
   it("supports a different tutoring reference rate", () => {

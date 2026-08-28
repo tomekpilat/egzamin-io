@@ -1,4 +1,4 @@
-export const FREE_AI_QUESTIONS_PER_DAY = 3;
+export const FREE_AI_QUESTIONS_PER_DAY = 0;
 export const PLUS_AI_QUESTIONS_PER_DAY = 50;
 export const AI_MESSAGE_MAX_LENGTH = 600;
 export const AI_HISTORY_MESSAGE_LIMIT = 8;

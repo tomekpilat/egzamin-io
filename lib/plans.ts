@@ -1,14 +1,16 @@
 export const PLUS_PACKAGE_PRICE_PLN = 149;
+export const FREE_PRACTICE_QUESTIONS_PER_DAY = 15;
 export const PLUS_AI_QUESTIONS_PER_DAY = 50;
 export const TUTORING_REFERENCE_HOURLY_PRICE_PLN = 80;
 
 export const PLAN_COMPARISON_ROWS = [
   ["Cena", "0 zł", `${PLUS_PACKAGE_PRICE_PLN} zł / pakiet`],
   ["Płatność", "Bez opłat", "Jednorazowa, bez odnowienia"],
-  ["Zadania", "Wybrane zestawy", "Pełna baza ćwiczeń"],
-  ["Pytania do AI", "3 dziennie", `${PLUS_AI_QUESTIONS_PER_DAY} dziennie`],
-  ["Plan nauki", "Podstawowy postęp", "Plan i inteligentne powtórki"],
-  ["Panel rodzica", "Cel tygodniowy", "Trendy, użycie AI i rekomendacje"],
+  ["Arkusze CKE", "Pełny dostęp", "Pełny dostęp"],
+  ["Interaktywne rozwiązywanie", `${FREE_PRACTICE_QUESTIONS_PER_DAY} pytań dziennie`, "Bez limitu"],
+  ["Nauczyciel AI", "Niedostępny", `${PLUS_AI_QUESTIONS_PER_DAY} pytań dziennie`],
+  ["Śledzenie postępów", "Niedostępne", "Wyniki, trendy i powtórki"],
+  ["Panel rodzica", "Połączenie konta", "Postęp, użycie AI i rekomendacje"],
 ] as const;
 
 export function calculatePlusPackageEconomics(

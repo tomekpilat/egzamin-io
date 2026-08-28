@@ -66,7 +66,7 @@ function AiTutorConversation({
   feedback: AiTutorFeedback | null;
 }) {
   const [messages, setMessages] = useState<AiChatMessage[]>([]);
-  const [usage, setUsage] = useState<AiUsageStatus>(() => normalizeUsage(0, 3, "free"));
+  const [usage, setUsage] = useState<AiUsageStatus>(() => normalizeUsage(0, 50, "plus"));
   const [hints, setHints] = useState<string[]>([]);
   const [visibleHintCount, setVisibleHintCount] = useState(0);
   const [available, setAvailable] = useState(false);
@@ -201,9 +201,20 @@ function AiTutorConversation({
 export function AiTutor({
   questionId,
   feedback,
+  aiEnabled = true,
 }: {
   questionId: string;
   feedback: AiTutorFeedback | null;
+  aiEnabled?: boolean;
 }) {
+  if (!aiEnabled) {
+    const solutionSteps = feedback?.explanation.split(/(?<=[.!?])\s+/).map((step) => step.trim()).filter(Boolean) ?? [];
+    return <section className="task-help-panel" aria-label="Pomoc do zadania">
+      <div className="task-help-tabs" role="tablist" aria-label="Rodzaj pomocy"><button type="button" role="tab" aria-selected={Boolean(feedback)} disabled={!feedback}>Rozwiązanie</button><button type="button" role="tab" aria-selected={!feedback}>Tutor AI</button></div>
+      <div className="task-help-content">
+        {feedback ? <section className="task-help-view task-solution" aria-labelledby="answer-help-title-free"><div className="task-solution-heading"><b id="answer-help-title-free">Rozwiązanie krok po kroku</b><span>{Math.max(solutionSteps.length, 1)} {solutionSteps.length === 1 ? "krok" : "kroki"}</span></div><ol>{(solutionSteps.length ? solutionSteps : [feedback.explanation]).map((step, index) => <li key={`${index}-${step}`}><span>{index + 1}</span><div><b>{index === 0 ? "Zobacz sposób rozwiązania" : "Kolejny krok"}</b><p className="mathjax_process">{step}</p></div></li>)}</ol><div className="task-solution-answer"><span>ODPOWIEDŹ</span><b>{feedback.correctAnswer}</b></div><div className="task-tutor-limit"><div><b>Chcesz dopytać nauczyciela AI?</b><span>Rozmowy o zadaniu są dostępne w Pakiecie Plus.</span></div><Button variant="outline" asChild><a href="/plan-plus#porownanie">Poznaj pakiet Plus</a></Button></div></section> : <section className="task-help-view task-conversation" aria-labelledby="ai-plus-title"><div className="task-conversation-heading"><b id="ai-plus-title">Nauczyciel AI</b><small>Pakiet Plus</small></div><p className="task-help-placeholder">Wszystkie arkusze CKE są dostępne bezpłatnie. Pakiet Plus odblokowuje podpowiedzi i rozmowę z nauczycielem AI o aktualnym zadaniu.</p><Button asChild><a href="/plan-plus#porownanie">Zobacz, co daje Plus</a></Button></section>}
+      </div>
+    </section>;
+  }
   return <AiTutorConversation key={questionId} questionId={questionId} feedback={feedback} />;
 }

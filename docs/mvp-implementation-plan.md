@@ -189,7 +189,7 @@ Priorytet: P1/P2. Szacunkowo: 1 sprint + 4 tygodnie pilotażu.
 2. Potwierdzić zakres wykorzystania arkuszy CKE i grafik.
 3. Wybrać dostawcę AI, region, brak treningu na danych i budżet zapytań.
 4. Wybrać SMTP, monitoring i backup Supabase.
-5. Zatwierdzić definicję „3 darmowych pytań”: dziennie czy łącznie.
+5. Monitorować, czy limit 15 interaktywnych pytań dziennie daje uczniowi wystarczającą wartość przed zakupem Plus.
 6. Zdecydować, czy nauczyciel ma widzieć wynik pojedynczego ucznia, czy tylko agregat grupy.
 7. Dopiero potem wybrać operatora płatności i cenę Plus.
 

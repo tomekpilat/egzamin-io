@@ -15,6 +15,7 @@ import { AiTutor } from "@/components/ai-tutor";
 import { ThemeSettings } from "@/components/theme-settings";
 import { trackAnalyticsEvent } from "@/lib/analytics";
 import { CkeQuestionContent, type CkeContentBlock, type CkeQuestionAsset } from "@/components/cke-question-content";
+import { FREE_PRACTICE_QUESTIONS_PER_DAY } from "@/lib/plans";
 
 export type StudentView = "start" | "exercises" | "progress" | "settings";
 type Subject = SubjectKey;
@@ -85,6 +86,25 @@ type AnswerResult = {
   solved_count: number;
   correct_count: number;
 };
+
+type PracticeAccess = {
+  active_plan: "free" | "plus";
+  practice_used_today: number;
+  practice_daily_limit: number | null;
+  progress_enabled: boolean;
+  ai_enabled: boolean;
+};
+
+function normalizePracticeAccess(value: Record<string, unknown> | undefined, hasPlusAccess: boolean): PracticeAccess {
+  const isPlus = value?.active_plan === "plus" || (value?.active_plan == null && hasPlusAccess);
+  return {
+    active_plan: isPlus ? "plus" : "free",
+    practice_used_today: Math.max(0, Number(value?.practice_used_today) || 0),
+    practice_daily_limit: isPlus ? null : Math.max(0, Number(value?.practice_daily_limit) || FREE_PRACTICE_QUESTIONS_PER_DAY),
+    progress_enabled: isPlus,
+    ai_enabled: isPlus,
+  };
+}
 
 const subjects: { value: SubjectFilter; label: string }[] = [
   { value: "all", label: "Wszystkie" },
@@ -242,7 +262,7 @@ function useQuestionTimer(questionId: string | null, running: boolean) {
   return `${minutes}:${seconds}`;
 }
 
-export function StudentPractice({ activeView, onNavigate }: { activeView: StudentView; onNavigate: (view: StudentView) => void }) {
+export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }: { activeView: StudentView; onNavigate: (view: StudentView) => void; hasPlusAccess?: boolean }) {
   const [questions, setQuestions] = useState<PracticeQuestion[]>([]);
   const [paperProgress, setPaperProgress] = useState<PaperProgress[]>([]);
   const [subject, setSubject] = useState<SubjectFilter>("all");
@@ -256,22 +276,26 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+  const [access, setAccess] = useState<PracticeAccess>(() => normalizePracticeAccess(undefined, hasPlusAccess));
   const answerRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   useEffect(() => {
     let active = true;
     getSupabaseClient()
       .then(async (supabase) => {
-        const [{ data, error: questionsError }, { data: progressData, error: progressError }] = await Promise.all([
+        const [{ data, error: questionsError }, { data: accessData, error: accessError }, progressResult] = await Promise.all([
           supabase.rpc("get_practice_questions"),
-          supabase.rpc("get_student_paper_progress"),
+          supabase.rpc("get_student_practice_access"),
+          hasPlusAccess ? supabase.rpc("get_student_paper_progress") : Promise.resolve({ data: [], error: null }),
         ]);
-        if (questionsError || progressError) throw questionsError ?? progressError;
+        if (questionsError || accessError || progressResult.error) throw questionsError ?? accessError ?? progressResult.error;
         const loaded = ((data as Record<string, unknown>[] | null) ?? []).map(normalizeQuestion);
-        const progress = ((progressData as Record<string, unknown>[] | null) ?? []).map(normalizePaperProgress);
+        const progress = ((progressResult.data as Record<string, unknown>[] | null) ?? []).map(normalizePaperProgress);
+        const nextAccess = normalizePracticeAccess(((accessData as Record<string, unknown>[] | null) ?? [])[0], hasPlusAccess);
         if (active) {
           setQuestions(loaded);
           setPaperProgress(progress);
+          setAccess(nextAccess);
           setMaterial(defaultMaterialFilter(loaded));
         }
       })
@@ -284,7 +308,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
     return () => {
       active = false;
     };
-  }, []);
+  }, [hasPlusAccess]);
 
   const examYears = useMemo(
     () => Array.from(new Set(questions.flatMap((question) => question.source_type === "cke" && question.exam_year ? [question.exam_year] : []))).sort((a, b) => b - a),
@@ -329,6 +353,10 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
   const earnedPoints = questions.reduce((sum, question) => sum + (question.points_awarded ?? (question.is_correct ? 1 : 0)), 0);
   const availablePoints = questions.reduce((sum, question) => sum + ((question.selected_response !== null || question.selected_answer !== null) ? (question.max_points ?? question.scoring.max_points ?? 1) : 0), 0);
   const score = availablePoints ? Math.round((earnedPoints / availablePoints) * 100) : 0;
+  const practiceRemaining = access.practice_daily_limit === null ? null : Math.max(0, access.practice_daily_limit - access.practice_used_today);
+  const practiceLimitReached = practiceRemaining === 0;
+  const progressEnabled = access.progress_enabled;
+  const aiEnabled = access.ai_enabled;
   const reviewTopics = useMemo(() => {
     const byTopic = new Map<string, { subject: Subject; topic: string; answered: number; correct: number }>();
     questions.forEach((question) => {
@@ -526,10 +554,16 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
             : question,
         ),
       );
-      const { data: progressData, error: progressError } = await supabase.rpc("get_student_paper_progress");
-      if (!progressError) setPaperProgress(((progressData as Record<string, unknown>[] | null) ?? []).map(normalizePaperProgress));
-    } catch {
-      setError("Nie udało się zapisać odpowiedzi. Spróbuj ponownie.");
+      const { data: accessData } = await supabase.rpc("get_student_practice_access");
+      const nextAccess = normalizePracticeAccess(((accessData as Record<string, unknown>[] | null) ?? [])[0], hasPlusAccess);
+      setAccess(nextAccess);
+      if (nextAccess.progress_enabled) {
+        const { data: progressData, error: progressError } = await supabase.rpc("get_student_paper_progress");
+        if (!progressError) setPaperProgress(((progressData as Record<string, unknown>[] | null) ?? []).map(normalizePaperProgress));
+      }
+    } catch (submitFailure) {
+      const message = submitFailure instanceof Error ? submitFailure.message : String((submitFailure as { message?: unknown })?.message ?? "");
+      setError(message.includes("practice_daily_limit_reached") ? "Dzisiejszy limit 15 pytań został wykorzystany. Nadal możesz przeglądać wszystkie arkusze albo odblokować ćwiczenia bez limitu w Plus." : "Nie udało się zapisać odpowiedzi. Spróbuj ponownie.");
     } finally {
       setSubmitting(false);
     }
@@ -559,7 +593,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
   }
 
   if (loading) {
-    return <Card className="practice-loading"><CardContent>Ładujemy 50 pytań demonstracyjnych…</CardContent></Card>;
+    return <Card className="practice-loading"><CardContent>Ładujemy arkusze i zadania…</CardContent></Card>;
   }
 
   if (error && !questions.length) {
@@ -572,7 +606,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
         <section className="student-resume-grid">
           <Card className="student-resume-card">
             <CardHeader><CardDescription>{answeredCount ? `Ostatnio: ${material === "demo" ? "zestaw demonstracyjny" : material.replace("year:", "CKE ")}` : "Pierwsza sesja"}</CardDescription><CardTitle>{answeredCount ? "Wróć do nauki" : "Zacznij od jednego zadania"}</CardTitle></CardHeader>
-            <CardContent><p>{filteredQuestions.length ? `${Math.max(filteredQuestions.length - answeredCount, 0)} zadań czeka w wybranym materiale. Nie musisz kończyć całego arkusza podczas jednej sesji.` : "Wybierz dostępny materiał poniżej, aby rozpocząć."}</p><div><Button type="button" onClick={startPractice} disabled={!filteredQuestions.length}>{answeredCount ? "Kontynuuj arkusz" : "Rozpocznij"}</Button><Button variant="outline" type="button" onClick={() => onNavigate("progress")}>Zobacz wyniki</Button></div></CardContent>
+            <CardContent><p>{filteredQuestions.length ? `${filteredQuestions.length} zadań w wybranym materiale. Wszystkie arkusze są dostępne bezpłatnie${practiceRemaining === null ? "." : `, a dziś możesz interaktywnie sprawdzić jeszcze ${practiceRemaining} odpowiedzi.`}` : "Wybierz dostępny materiał poniżej, aby rozpocząć."}</p><div><Button type="button" onClick={startPractice} disabled={!filteredQuestions.length}>Otwórz arkusz</Button><Button variant="outline" type="button" onClick={() => onNavigate("progress")}>{progressEnabled ? "Zobacz wyniki" : "Śledzenie postępów w Plus"}</Button></div></CardContent>
           </Card>
           <Card className="student-summary-card"><CardContent><div><span>Rozwiązane zadania</span><b>{answeredCount}</b></div><div><span>Poprawne odpowiedzi</span><b>{score}%</b></div><div><span>Arkusze CKE</span><strong>{paperProgress.length}</strong><small>Dostępne roczniki i przedmioty</small></div></CardContent></Card>
         </section>
@@ -600,7 +634,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
                 </Select>
               </label>}
             </div>
-            <div className="practice-launch-summary"><div><b>{filteredQuestions.length}</b><span>{filteredQuestions.length === 1 ? "dostępne pytanie" : "dostępnych pytań"}</span></div><Button type="button" size="lg" onClick={startPractice} disabled={!filteredQuestions.length}>{answeredCount ? "Kontynuuj ćwiczenia" : "Rozpocznij ćwiczenia"} <span>→</span></Button></div>
+            <div className="practice-launch-summary"><div><b>{filteredQuestions.length}</b><span>{filteredQuestions.length === 1 ? "dostępne pytanie" : "dostępnych pytań"}{practiceRemaining !== null ? ` · ${practiceRemaining} z 15 sprawdzeń zostało dziś` : " · bez limitu w Plus"}</span></div><Button type="button" size="lg" onClick={startPractice} disabled={!filteredQuestions.length}>Otwórz arkusz <span>→</span></Button></div>
             {material === "demo" && <p className="practice-demo-note">To autorski zestaw demonstracyjny egzaminio — nie jest oficjalnym arkuszem CKE.</p>}
           </CardContent>
         </Card>
@@ -626,6 +660,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
             <span className="task-timer"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7.5V12l3 2" /></svg>{questionTime}</span>
             <span>Zadanie <strong>{currentQuestion ? questionIndex + 1 : "—"}</strong> z {filteredQuestions.length}</span>
             <Progress value={currentQuestion ? ((questionIndex + 1) / Math.max(filteredQuestions.length, 1)) * 100 : 0} aria-label="Postęp w bieżącym zestawie" />
+            {practiceRemaining !== null && <span>{practiceRemaining} / 15 sprawdzeń dziś</span>}
           </div>
         </header>
 
@@ -680,17 +715,19 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
             </div>}
 
             <footer className="task-actions">
-              <Button type="button" size="lg" onClick={answerResult ? () => moveQuestion(1) : () => void submitAnswer()} disabled={submitting || (!answerResult && (currentQuestion.question_type === "single_choice" ? selectedAnswer === null : currentQuestion.question_type === "multiple_choice" ? selectedIndices.length === 0 : writtenAnswer.trim().length === 0))}>{submitting ? "Zapisuję…" : answerResult ? "Następne zadanie" : currentQuestion.question_type === "single_choice" || currentQuestion.question_type === "multiple_choice" ? "Sprawdź odpowiedź" : "Pokaż rozwiązanie i kryteria"}</Button>
-              <span>{answerResult ? `Odpowiedź zapisana w postępie. Następne: zadanie ${(questionIndex + 1) % filteredQuestions.length + 1} z ${filteredQuestions.length}.` : currentQuestion.question_type === "single_choice" ? "Wybierz jedną odpowiedź." : currentQuestion.question_type === "multiple_choice" ? "Możesz zaznaczyć więcej niż jedną odpowiedź." : "Najpierw zapisz własny tok rozwiązania."}</span>
+              <Button type="button" size="lg" onClick={answerResult ? () => moveQuestion(1) : () => void submitAnswer()} disabled={submitting || (!answerResult && practiceLimitReached) || (!answerResult && (currentQuestion.question_type === "single_choice" ? selectedAnswer === null : currentQuestion.question_type === "multiple_choice" ? selectedIndices.length === 0 : writtenAnswer.trim().length === 0))}>{submitting ? "Zapisuję…" : answerResult ? "Następne zadanie" : practiceLimitReached ? "Limit 15 pytań wykorzystany" : currentQuestion.question_type === "single_choice" || currentQuestion.question_type === "multiple_choice" ? "Sprawdź odpowiedź" : "Pokaż rozwiązanie i kryteria"}</Button>
+              <span>{answerResult ? progressEnabled ? `Odpowiedź zapisana w postępie. Następne: zadanie ${(questionIndex + 1) % filteredQuestions.length + 1} z ${filteredQuestions.length}.` : `Odpowiedź sprawdzona. Stały zapis postępu jest dostępny w Plus.` : practiceLimitReached ? "Nadal możesz przeglądać wszystkie zadania. Nowe sprawdzenia będą dostępne jutro." : currentQuestion.question_type === "single_choice" ? "Wybierz jedną odpowiedź." : currentQuestion.question_type === "multiple_choice" ? "Możesz zaznaczyć więcej niż jedną odpowiedź." : "Najpierw zapisz własny tok rozwiązania."}</span>
               <nav aria-label="Nawigacja między zadaniami"><button type="button" aria-label="Poprzednie pytanie" onClick={() => moveQuestion(-1)} disabled={submitting || filteredQuestions.length < 2}>← Poprzednie</button><button type="button" aria-label="Następne pytanie" onClick={() => moveQuestion(1)} disabled={submitting || filteredQuestions.length < 2}>Następne →</button></nav>
             </footer>
           </main>
 
-          <aside className={`task-support${tutorFeedback ? " has-feedback" : ""}`} aria-label="Odpowiedź, podpowiedzi i rozmowa z AI"><AiTutor questionId={currentQuestion.question_id} feedback={tutorFeedback} /></aside>
+          <aside className={`task-support${tutorFeedback ? " has-feedback" : ""}`} aria-label="Odpowiedź, podpowiedzi i rozmowa z AI"><AiTutor questionId={currentQuestion.question_id} feedback={tutorFeedback} aiEnabled={aiEnabled} /></aside>
         </div>}
       </section>}
 
-      {activeView === "progress" && <section className="student-content-view student-progress-view" aria-labelledby="student-progress-title">
+      {activeView === "progress" && !progressEnabled && <section className="student-content-view student-progress-view" aria-labelledby="student-progress-gate-title"><div className="dashboard-view-heading"><div><h2 id="student-progress-gate-title">Twój postęp</h2><small>Wyniki, regularność i tematy do powtórki</small></div></div><Card className="parent-empty-view"><CardHeader><Badge variant="secondary">Pakiet Plus</Badge><CardTitle>Śledzenie postępów jest dostępne w Plus</CardTitle><CardDescription>W wersji Free masz pełny dostęp do wszystkich arkuszy i 15 interaktywnych pytań dziennie. Plus zapisuje wyniki i podpowiada, co powtórzyć.</CardDescription></CardHeader><CardContent><Button asChild><a href="/plan-plus#porownanie">Porównaj Free i Plus</a></Button></CardContent></Card></section>}
+
+      {activeView === "progress" && progressEnabled && <section className="student-content-view student-progress-view" aria-labelledby="student-progress-title">
         <div className="dashboard-view-heading"><div><h2 id="student-progress-title">Twój postęp</h2><small>Wyniki z arkuszy CKE i materiałów demonstracyjnych</small></div><Button variant="outline" type="button" onClick={() => onNavigate("exercises")}>Wróć do ćwiczeń</Button></div>
         <section className="dashboard-grid four-columns student-progress-metrics">
           <article className="metric-card"><span>Rozwiązane zadania</span><b>{answeredCount}</b><small>{questions.length - answeredCount} nadal czeka.</small></article>

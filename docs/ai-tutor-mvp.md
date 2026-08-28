@@ -4,8 +4,8 @@
 
 Nauczyciel AI pojawia się dopiero po sprawdzeniu odpowiedzi ucznia. Rozmowa jest zawsze przypisana do jednego zadania i korzysta z zatwierdzonego opracowania, a nie z samej wiedzy modelu.
 
-- plan Free: 3 udane pytania dziennie,
-- pakiet Plus: 50 udanych pytań dziennie,
+- plan Free: pełny dostęp do arkuszy i 15 interaktywnie sprawdzanych pytań dziennie, bez rozmów AI,
+- pakiet Plus: 50 udanych pytań do AI dziennie, interaktywne ćwiczenia bez limitu i śledzenie postępów,
 - limit jest rezerwowany atomowo w PostgreSQL, więc równoległe żądania go nie omijają,
 - awaria lub timeout modelu zwalnia rezerwację i nie zużywa pytania,
 - zapisujemy model, tokeny, szacowany koszt, czas odpowiedzi i status błędu,
@@ -13,7 +13,7 @@ Nauczyciel AI pojawia się dopiero po sprawdzeniu odpowiedzi ucznia. Rozmowa jes
 - model nie otrzymuje e-maila, nazwy profilu, wyników ani surowego identyfikatora konta,
 - oczywiste dane kontaktowe i treści alarmowe są zatrzymywane przed wywołaniem dostawcy.
 - pytanie musi odnosić się do bieżącego zadania, odpowiedzi lub kroku rozwiązania; polecenia niezwiązane z zadaniem i próby prompt injection są odrzucane przed rezerwacją limitu i wywołaniem modelu,
-- po 10 odrzuconych wiadomościach dziennie w planie Free lub 30 w Plus dalsze próby są blokowane do następnego dnia.
+- po 30 odrzuconych wiadomościach dziennie w Plus dalsze próby są blokowane do następnego dnia.
 
 ## Konfiguracja Coolify
 

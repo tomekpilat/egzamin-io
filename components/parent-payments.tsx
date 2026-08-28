@@ -167,7 +167,7 @@ export function ParentPayments({ linkedChildren, onConnect }: { linkedChildren: 
     {error && <Alert variant="destructive"><AlertTitle>Nie udało się wykonać operacji</AlertTitle><AlertDescription>{error}</AlertDescription></Alert>}
 
     {!linkedChildren.length ? <Card className="parent-payment-empty"><CardHeader><CardTitle>Najpierw połącz konto dziecka</CardTitle><CardDescription>Pakiet Plus jest przypisywany do konkretnego ucznia. Połącz konto, aby kupić dostęp i zobaczyć dokumenty płatności.</CardDescription></CardHeader><CardContent><Button type="button" onClick={onConnect}>Połącz konto dziecka</Button></CardContent></Card> : <Card className="parent-payment-checkout">
-      <CardHeader><div><Badge variant="secondary">Jednorazowo · bez abonamentu</Badge><CardTitle>Pakiet Plus — 149 zł</CardTitle><CardDescription>Pełna baza ćwiczeń, do 50 pytań do AI dziennie, plan nauki i powtórki.</CardDescription></div>{config?.accessUntil && <div className="payment-access-date"><span>Dostęp do</span><b>{formatDate(config.accessUntil)}</b></div>}</CardHeader>
+      <CardHeader><div><Badge variant="secondary">Jednorazowo · bez abonamentu</Badge><CardTitle>Pakiet Plus — 149 zł</CardTitle><CardDescription>Interaktywne ćwiczenia bez limitu, do 50 pytań do AI dziennie, śledzenie postępów i powtórki.</CardDescription></div>{config?.accessUntil && <div className="payment-access-date"><span>Dostęp do</span><b>{formatDate(config.accessUntil)}</b></div>}</CardHeader>
       <CardContent>
         <div className="payment-child-picker">
           <Label htmlFor="payment-student">Pakiet dla ucznia</Label>
