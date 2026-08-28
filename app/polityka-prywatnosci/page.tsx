@@ -78,7 +78,7 @@ export default function PrivacyPage() {
         <h2>4. Konta dzieci i rola rodzica</h2>
         <p>Usługa jest projektowana dla ósmoklasistów, dlatego stosujemy minimalizację danych, komunikaty zrozumiałe dla dziecka i ustawienia zapewniające wysoki poziom prywatności. Uczeń nie może sam oświadczyć zgody za rodzica: podaje osobny adres opiekuna, konto pozostaje zablokowane, a rodzic zatwierdza prośbę po zalogowaniu na własne konto. Zapisujemy datę, konto zatwierdzające i powiązanie rodzic–dziecko. Przed publicznym startem prawnik powinien potwierdzić, czy ten poziom weryfikacji jest wystarczający dla ostatecznego modelu usługi.</p>
         <ul>
-          <li>Rodzic zobaczy po połączeniu konta postęp, regularność i obszary do powtórki.</li>
+          <li>Rodzic zobaczy po połączeniu konta postęp, regularność, obszary do powtórki oraz liczbę zakończonych pytań do AI w wybranym okresie.</li>
           <li>Rodzic może wybrać kod wariantu materiału CKE. Przy kodzie niestandardowym otrzymuje dodatkowe wyjaśnienie i musi potwierdzić wybór; uczeń widzi aktywny wariant, ale nie zmienia go samodzielnie.</li>
           <li>Po wyborze aplikacja udostępnia wyłącznie opublikowane arkusze oznaczone tym kodem. Brak materiału nie powoduje automatycznej podmiany na wariant standardowy.</li>
           <li>Treść prywatnych rozmów ucznia z AI nie będzie domyślnie wyświetlana rodzicowi, chyba że wymaga tego bezpieczeństwo, prawo lub uczeń sam ją udostępni.</li>

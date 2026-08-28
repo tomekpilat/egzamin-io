@@ -446,16 +446,16 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
   return (
     <>
       {activeView === "start" && <>
-        <section className="dashboard-hero student-hero">
-          <div>
-            <span className="dashboard-kicker">Arkusze CKE i zestaw demonstracyjny</span>
-            <h2>{answeredCount ? "Kontynuuj tam, gdzie skończyłeś." : "Zacznij od jednego pytania."}</h2>
-            <p>Wybierz rok, arkusz i przedmiot. Serwujemy wyłącznie materiały zgodne z ustawionym wariantem CKE: <b>{accommodation.label}</b>.</p>
-          </div>
-          <div className="daily-ring"><b>{answeredCount}/{questions.length}</b><span>rozwiązanych</span></div>
+        <div className="dashboard-view-heading student-start-heading"><div><span className="dashboard-kicker dark-kicker">Panel ucznia</span><h2>Nauka</h2><small>Arkusze CKE i wyraźnie oznaczony zestaw demonstracyjny</small></div><Button variant="outline" type="button" onClick={() => onNavigate("progress")}>Twój postęp</Button></div>
+        <section className="student-resume-grid">
+          <Card className="student-resume-card">
+            <CardHeader><CardDescription>{answeredCount ? `Ostatnio: ${material === "demo" ? "zestaw demonstracyjny" : material.replace("year:", "CKE ")}` : "Pierwsza sesja"}</CardDescription><CardTitle>{answeredCount ? "Wróć do nauki" : "Zacznij od jednego zadania"}</CardTitle></CardHeader>
+            <CardContent><p>{filteredQuestions.length ? `${Math.max(filteredQuestions.length - answeredCount, 0)} zadań czeka w wybranym materiale. Nie musisz kończyć całego arkusza podczas jednej sesji.` : "Wybierz dostępny materiał poniżej, aby rozpocząć."}</p><div><Button type="button" onClick={startPractice} disabled={!filteredQuestions.length}>{answeredCount ? "Kontynuuj arkusz" : "Rozpocznij"}</Button><Button variant="outline" type="button" onClick={() => onNavigate("progress")}>Zobacz wyniki</Button></div></CardContent>
+          </Card>
+          <Card className="student-summary-card"><CardContent><div><span>Rozwiązane zadania</span><b>{answeredCount}</b></div><div><span>Poprawne odpowiedzi</span><b>{score}%</b></div><div><span>Twój arkusz CKE</span><strong>{accommodation.label} ({accommodation.code})</strong><small>Ustawia rodzic</small></div></CardContent></Card>
         </section>
         <Card className="practice-launch-card">
-          <CardHeader><Badge variant="secondary">Wybór materiału</Badge><CardTitle>Co chcesz teraz ćwiczyć?</CardTitle><CardDescription>Dostępne lata i arkusze wynikają wyłącznie z opublikowanych materiałów dla kodu CKE {accommodation.code}.</CardDescription></CardHeader>
+          <CardHeader><div><CardTitle>Wybierz materiał</CardTitle><CardDescription>Dostępne {questions.length} zadań · {questions.length - answeredCount} nierozwiązanych · wariant CKE {accommodation.code}</CardDescription></div></CardHeader>
           <CardContent>
             {!questions.length && <Alert><AlertTitle>Brak opublikowanych arkuszy dla wariantu „{accommodation.label}”</AlertTitle><AlertDescription>Nie przełączamy Cię automatycznie na inny wariant. Rodzic może sprawdzić ustawienie w panelu „Dzieci”, a nowe dopasowane arkusze pojawią się po publikacji.</AlertDescription></Alert>}
             <div className="practice-launch-filters">
@@ -482,11 +482,6 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
             {material === "demo" && <p className="practice-demo-note">To autorski zestaw demonstracyjny egzaminio — nie jest oficjalnym arkuszem CKE.</p>}
           </CardContent>
         </Card>
-        <section className="dashboard-grid three-columns">
-          <article className="metric-card"><span>Dostępne pytania</span><b>{questions.length}</b><small>Wyłącznie z ustawionego wariantu CKE.</small></article>
-          <article className="metric-card"><span>Poprawne odpowiedzi</span><b>{correctCount}</b><small>{answeredCount ? String(score) + "% skuteczności" : "Wynik pojawi się po pierwszym pytaniu."}</small></article>
-          <article className="metric-card"><span>Do rozwiązania</span><b>{questions.length - answeredCount}</b><small>Postęp zapisujemy na koncie ucznia.</small></article>
-        </section>
       </>}
 
       {activeView === "exercises" && <section className="practice-focus-shell" aria-label="Tryb skupienia">

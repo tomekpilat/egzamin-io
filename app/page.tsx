@@ -3,117 +3,118 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { ArrowRight, Lightbulb, MessageCircleQuestion, PencilLine } from "lucide-react";
+import { Calculator, CalendarDays, Check, CircleCheck, EyeOff, FileText, ListChecks, MessageCircleQuestion } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
-import { MarketingSignupForm } from "@/components/marketing-signup-form";
-import { MathFormula } from "@/components/math-formula";
 import { SiteHeader } from "@/components/site-header";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { SUBJECT_CATEGORIES, SubjectIcon } from "@/components/subject-icon";
-import { calculatePlusPackageEconomics, PLAN_COMPARISON_ROWS, PLUS_PACKAGE_PRICE_PLN } from "@/lib/plans";
+import { PLUS_PACKAGE_PRICE_PLN } from "@/lib/plans";
 
-const plusEconomics = calculatePlusPackageEconomics();
+const FREE_FEATURES = [
+  "Wybrane zadania z arkuszy",
+  "3 pytania do tutora AI dziennie",
+  "Cel tygodniowy dla rodzica",
+] as const;
+
+const PLUS_FEATURES = [
+  "Pełna baza arkuszy 2019–2025",
+  "50 pytań do tutora AI dziennie",
+  "Raporty, trendy i rekomendacje",
+] as const;
 
 export default function Home() {
   const [selectedAnswer, setSelectedAnswer] = useState("B");
-  const [hintExpanded, setHintExpanded] = useState(false);
-  const [demoReply, setDemoReply] = useState("6² to 36, a 8² to 64. Razem dają 100. Teraz szukamy liczby, której kwadrat to 100.");
 
   return (
-    <main>
+    <main className="design-home design-home-simple">
       <SiteHeader currentPath="/" />
 
-      <section className="hero" id="top">
-        <div className="hero-copy">
-          <div className="eyebrow"><span /> Przygotowanie do egzaminu ósmoklasisty</div>
-          <h1>Egzamin bez paniki.<br /><em>Krok po kroku.</em></h1>
-          <p className="hero-lead">Zadania CKE i nauczyciel AI, który tłumaczy dokładnie ten krok, na którym uczeń utknął.</p>
-          <div className="hero-actions"><Button size="lg" className="primary-action" asChild><a href="/logowanie?tryb=rejestracja">Wypróbuj za darmo <span>→</span></a></Button><a className="text-action" href="#jak-to-dziala">Zobacz jak działa <span>↓</span></a></div>
-          <div className="hero-trust"><span className="trust-avatars"><i>K</i><i>M</i><i>A</i></span><span><b>Start bez opłat</b><br />3 pytania do AI dziennie</span></div>
-        </div>
-
-        <div className="product-stage" aria-label="Podgląd ćwiczenia w aplikacji egzaminio">
-          <div className="stage-glow" />
-          <div className="product-window">
-            <div className="window-bar"><span className="mini-brand"><BrandLogo compact /></span><span className="lesson-count">Zadanie 2 z 6</span><span className="mini-avatar">KN</span></div>
-            <div className="product-body">
-              <section className="task-preview">
-                <div className="task-meta"><span>CKE</span> Matematyka · maj 2025</div>
-                <h2>Trójkąt prostokątny ma boki 6 cm i 8 cm. Ile ma przeciwprostokątna?</h2>
-                <MathFormula latex="x=\\sqrt{6^2+8^2}" display className="task-formula" />
-                <div className="triangle-figure" aria-hidden="true"><div className="triangle-shape" /><span className="side-six">6 cm</span><span className="side-eight">8 cm</span><span className="side-x">x</span></div>
-                <div className="answers" aria-label="Przykładowe odpowiedzi">
-                  {["A|7 cm", "B|10 cm", "C|12 cm", "D|14 cm"].map((answer) => {
-                    const [letter, value] = answer.split("|");
-                    return <Button variant="outline" type="button" key={letter} className={selectedAnswer === letter ? "chosen" : ""} aria-pressed={selectedAnswer === letter} onClick={() => setSelectedAnswer(letter)}>{letter}&nbsp; {value}</Button>;
-                  })}
-                </div>
-              </section>
-              <aside className="ai-preview">
-                <div className="ai-title"><span>AI</span><div><b>Nauczyciel obok</b><small>Wyjaśnia, nie wyręcza</small></div></div>
-                <div className="ai-message" aria-live="polite"><b>{hintExpanded ? "Jeszcze jeden krok" : "Mała podpowiedź"}</b>{hintExpanded ? "Skorzystaj z twierdzenia Pitagorasa: suma kwadratów krótszych boków daje kwadrat przeciwprostokątnej." : "Jaki wzór łączy trzy boki trójkąta prostokątnego?"}</div>
-                <Button variant="outline" type="button" className="ai-suggestion" onClick={() => setHintExpanded((value) => !value)}>{hintExpanded ? "Wróć" : "Nie pamiętam wzoru"}</Button>
-                <div className="ai-limit"><b>3</b> darmowe pytania dziennie</div>
-              </aside>
+      <section className="design-home-hero">
+        <div className="design-home-container design-home-hero-grid">
+          <div className="design-home-hero-copy">
+            <span className="design-eyebrow">Egzamin ósmoklasisty</span>
+            <h1>Prawdziwe zadania CKE i pomoc dokładnie tam, gdzie się zacięło</h1>
+            <div className="design-home-actions">
+              <Button size="lg" asChild><a href="/logowanie?tryb=rejestracja&rola=uczen">Zacznij jako uczeń</a></Button>
+              <Button size="lg" variant="outline" asChild><a href="#rodzice">Jestem rodzicem</a></Button>
+            </div>
+            <div className="design-home-trust" aria-label="Najważniejsze zasady">
+              <span><FileText aria-hidden="true" />Arkusze CKE 2019–2025</span>
+              <span><MessageCircleQuestion aria-hidden="true" />Pomoc bez gotowej odpowiedzi</span>
+              <span><EyeOff aria-hidden="true" />Rodzic nie czyta rozmów</span>
             </div>
           </div>
-          <div className="streak-card"><span>🔥</span><div><b>5 dni z rzędu</b><small>Dobry rytm, Kuba!</small></div></div>
-          <div className="progress-card"><b>68%</b><span>celu tygodniowego</span></div>
+          <div className="design-home-hero-image"><Image src="/uczen-nauka-logowanie.png" width={1536} height={1024} priority sizes="(max-width: 880px) 100vw, 460px" alt="Uczeń przy biurku z arkuszem i laptopem" /></div>
         </div>
       </section>
 
-      <section className="subject-strip" aria-label="Zakres przygotowań">
-        {SUBJECT_CATEGORIES.map((category) => <div className="subject-category" key={category.key}><SubjectIcon subject={category.key} /><span>{category.label}</span></div>)}
-      </section>
+      <section id="zadania" className="design-home-section">
+        <div className="design-home-container design-how-grid">
+          <div className="design-how-copy">
+            <h2>Rozwiąż → Zapytaj → Zrozum</h2>
+            <div className="design-process-list">
+              <div><span><FileText aria-hidden="true" /></span><p><strong>Rozwiąż.</strong> Wybierasz rok, przedmiot i arkusz.</p></div>
+              <div><span><MessageCircleQuestion aria-hidden="true" /></span><p><strong>Zapytaj.</strong> Wskazówka, kolejny krok albo prostszy przykład.</p></div>
+              <div><span><CircleCheck aria-hidden="true" /></span><p><strong>Zrozum.</strong> Widzisz rozwiązanie i pytasz, co poszło nie tak.</p></div>
+            </div>
+          </div>
 
-      <section className="cke-fit-section" aria-labelledby="cke-fit-title">
-        <div><span className="section-kicker">Warianty zgodne z CKE</span><h2 id="cke-fit-title">Arkusze dopasowane do potrzeb ucznia.</h2><p>Rodzic wybiera oficjalny wariant CKE przy koncie dziecka. Dla ucznia z afazją aplikacja pokazuje wyłącznie arkusze oznaczone kodem CKE <b>900</b> — bez cichego przełączania na materiał standardowy.</p></div>
-        <div className="cke-fit-options" aria-label="Przykładowe warianty arkuszy CKE"><span>Standardowy · 100</span><span>Autyzm · 200</span><span>Słabowidzenie · 400/500</span><span>Afazja · 900</span><span>Niesłyszenie · 700</span><span>Widzenie barw · K00</span></div>
-        <Button variant="outline" asChild><a href="/logowanie?tryb=rejestracja&rola=rodzic">Skonfiguruj konto dziecka <ArrowRight aria-hidden="true" /></a></Button>
-      </section>
-
-      <section className="recruitment-hook" aria-labelledby="recruitment-hook-title">
-        <div className="recruitment-hook-copy"><span className="section-kicker">Darmowy kalkulator</span><h2 id="recruitment-hook-title">Ile masz punktów do liceum?</h2><p>Policz wynik do 200 punktów i porównaj go z progiem wybranej klasy. Bez logowania.</p></div>
-        <div className="recruitment-hook-example" aria-hidden="true"><div><small>Przykład</small><b>151 / 200 pkt</b></div></div>
-        <Button size="lg" className="recruitment-hook-action" asChild><a href="/kalkulator-punktow">Policz swoje punkty <ArrowRight aria-hidden="true" /></a></Button>
-      </section>
-
-      <section className="section how-section" id="jak-to-dziala">
-        <div className="section-heading"><span className="section-kicker">Jak to działa</span><h2>Zadanie. Podpowiedź. Zrozumienie.</h2></div>
-        <div className="steps-grid">
-          <Card className="step-card"><div className="step-heading"><PencilLine aria-hidden="true" /><h3>Rozwiązujesz</h3></div><p>Prawdziwe zadanie z arkusza CKE.</p></Card>
-          <Card className="step-card step-navy"><div className="step-heading"><MessageCircleQuestion aria-hidden="true" /><h3>Pytasz</h3></div><p>AI pomaga dokładnie tam, gdzie utkniesz.</p></Card>
-          <Card className="step-card"><div className="step-heading"><Lightbulb aria-hidden="true" /><h3>Rozumiesz</h3></div><p>Wracasz do zadania i kończysz je samodzielnie.</p></Card>
+          <div className="design-task-preview" aria-label="Podgląd ćwiczenia">
+            <div className="design-task-bar"><span>CKE 2024 · Matematyka · zadanie 7</span><span>Zostały 2 z 3 pytań dziś</span></div>
+            <div className="design-task-content">
+              <p>Trapez ma podstawy o długościach 8 cm i 12 cm oraz wysokość 5 cm. Oblicz pole tego trapezu.</p>
+              <div className="design-task-answers" role="radiogroup" aria-label="Przykładowe odpowiedzi">
+                {["A|40 cm²", "B|50 cm²", "C|60 cm²"].map((answer) => {
+                  const [letter, value] = answer.split("|");
+                  const chosen = selectedAnswer === letter;
+                  return <button type="button" role="radio" aria-checked={chosen} className={chosen ? "selected" : ""} key={letter} onClick={() => setSelectedAnswer(letter)}><b>{letter}</b><span>{value}</span>{chosen && letter === "B" ? <small>Poprawna</small> : null}</button>;
+                })}
+              </div>
+              <div className="design-ai-hint"><b>Tutor AI</b><span>Najpierw dzielimy sumę podstaw przez 2. Ile wyjdzie?</span></div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="explain-section">
-        <div className="explain-demo">
-          <div className="demo-question"><span>Ty</span><p>Skąd wzięło się 100?</p></div>
-          <div className="demo-answer"><span className="demo-ai">AI</span><div><b>Spójrzmy tylko na ten krok.</b><p aria-live="polite">{demoReply}</p></div></div>
-          <div className="demo-chips"><Button variant="outline" type="button" onClick={() => setDemoReply("Pierwiastek odwraca podnoszenie do kwadratu. Skoro x² = 100, to x = 10.")}>Pokaż dalej</Button><Button variant="outline" type="button" onClick={() => setDemoReply("6² oznacza 6 · 6, czyli 36. Mała dwójka mówi: pomnóż liczbę przez samą siebie.")}>Co oznacza ²?</Button></div>
+      <section id="rodzice" className="design-home-section design-home-section-card">
+        <div className="design-home-container design-parent-section">
+          <h2>Rodzic widzi postęp, nie prywatne rozmowy</h2>
+          <div className="design-parent-grid">
+            <div><CalendarDays aria-hidden="true" /><b>Regularność</b><span>Ile dni w tygodniu dziecko siadło do zadań.</span></div>
+            <div><ListChecks aria-hidden="true" /><b>Tematy do powtórki</b><span>Konkretne zagadnienia z arkuszy.</span></div>
+            <div><EyeOff aria-hidden="true" /><b>Czego nie widzisz</b><span>Treści rozmów z tutorem AI.</span></div>
+          </div>
+          <Button asChild><a href="/logowanie?tryb=rejestracja&rola=rodzic">Załóż konto rodzica</a></Button>
         </div>
-        <div className="explain-copy"><span className="section-kicker">Pomoc bez gotowca</span><h2>Uczeń pyta własnymi słowami.</h2><ul><li><span>✓</span> Podpowiedzi zamiast odpowiedzi</li><li><span>✓</span> Język dla ósmoklasisty</li><li><span>✓</span> Dalsze pytania do jednego zadania</li></ul></div>
       </section>
 
-      <section className="family-story" id="dla-rodzica" aria-labelledby="family-story-title">
-        <Image src="/rodzic-i-uczen-nauka.png" width={1536} height={1024} sizes="(max-width: 900px) 100vw, 1120px" alt="Uczeń pracuje nad zadaniem przy wsparciu rodzica" />
-        <div className="family-story-copy"><span className="section-kicker">Panel rodzica</span><h2 id="family-story-title">Wspieraj rytm, nie kontroluj rozmów.</h2><p>Ustaw cel tygodniowy, zatwierdź konto dziecka i włącz raport e-mail. Treść rozmów z AI pozostaje prywatna.</p><div className="family-actions"><Button variant="secondary" asChild><a href="/logowanie?tryb=rejestracja&rola=rodzic">Załóż konto rodzica</a></Button><Button variant="outline" asChild><a href="/bezpieczenstwo-dzieci-ai">Jak chronimy dzieci</a></Button></div></div>
+      <section id="cennik" className="design-home-section">
+        <div className="design-home-container design-pricing-section">
+          <h2>Free i Plus</h2>
+          <div className="design-plan-grid">
+            <article className="design-plan-card">
+              <header><b>Free</b><strong>0 zł</strong></header>
+              <div>{FREE_FEATURES.map((feature) => <span key={feature}><Check aria-hidden="true" />{feature}</span>)}</div>
+            </article>
+            <article className="design-plan-card design-plan-card-plus">
+              <header><b>Plus</b><strong>{PLUS_PACKAGE_PRICE_PLN} zł <small>jednorazowo</small></strong></header>
+              <div>{PLUS_FEATURES.map((feature) => <span key={feature}><Check aria-hidden="true" />{feature}</span>)}</div>
+            </article>
+          </div>
+          <p>Plus kupuje rodzic dla wybranego dziecka, bez odnawiania. Godzina korepetycji to zwykle 80–120 zł.</p>
+        </div>
       </section>
 
-      <section className="section pricing-section" id="dostep">
-        <div className="section-heading"><span className="section-kicker">Prosty dostęp</span><h2>Free na start. Pakiet Plus do regularnej nauki.</h2><p>{PLUS_PACKAGE_PRICE_PLN} zł jednorazowo. Bez abonamentu i automatycznego odnowienia.</p></div>
-        <Card className="pricing-table-card">
-          <div className="pricing-table-head"><span>Porównanie</span><div><b>Free</b><small>0 zł</small></div><div className="plus-heading"><b>Pakiet Plus</b><small>{PLUS_PACKAGE_PRICE_PLN} zł / pakiet</small></div></div>
-          <div className="pricing-table" role="table" aria-label="Porównanie wersji Free i pakietu Plus">{PLAN_COMPARISON_ROWS.map(([feature, free, plus]) => <div className="pricing-row" role="row" key={feature}><b role="rowheader">{feature}</b><span role="cell">{free}</span><span role="cell">{plus}</span></div>)}</div>
-          <div className="pricing-value"><b>Czy pakiet się opłaca?</b><span>Dwie godziny korepetycji po {plusEconomics.tutoringHourlyPrice} zł kosztują {plusEconomics.twoTutoringHours} zł. Pakiet kosztuje {PLUS_PACKAGE_PRICE_PLN} zł — o {plusEconomics.differenceVsTwoHours} zł mniej — i wspiera regularną pracę między lekcjami. Nie zastępuje indywidualnego nauczyciela.</span></div>
-          <div className="pricing-actions"><Button asChild><a href="/logowanie?tryb=rejestracja">Zacznij za darmo</a></Button><Button variant="outline" asChild><a href="/plan-plus" data-analytics-event="plan_plus_cta_clicked">Poznaj pakiet Plus</a></Button></div>
-          <MarketingSignupForm subscriptionType="plus_waitlist" sourcePath="/" title="Powiadom mnie o starcie pakietu Plus" description="Zostaw e-mail. Napiszemy, gdy sprzedaż ruszy — bez zakładania konta." submitLabel="Dołącz do listy" compact />
-        </Card>
+      <section id="kalkulator" className="design-home-section design-home-section-card">
+        <div className="design-home-container design-dual-cta">
+          <div><Calculator aria-hidden="true" /><h2>Kalkulator punktów do liceum</h2><p>Bezpłatnie i bez konta. Sprawdź, ile punktów brakuje.</p><Button asChild><a href="/kalkulator-punktow">Policz punkty</a></Button></div>
+          <div><CircleCheck aria-hidden="true" /><h2>Zacznij od jednego arkusza</h2><p>Uczeń podaje e-mail rodzica, rodzic zatwierdza konto.</p><Button asChild><a href="/logowanie?tryb=rejestracja&rola=uczen">Zacznij jako uczeń</a></Button></div>
+        </div>
       </section>
 
-      <footer className="site-footer"><a className="brand" href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a><p>Ćwiczenia CKE, które naprawdę tłumaczą.</p><div><a href="/kalkulator-punktow">Kalkulator punktów</a><a href="/baza-wiedzy">Baza wiedzy</a><a href="/logowanie">Logowanie</a><a href="/informacje-prawne">Informacje prawne</a><a href="/bezpieczenstwo-dzieci-ai">Dzieci i AI</a><a href="mailto:kontakt@egzamin.io">Kontakt</a></div><small>© 2026 egzaminio · Niezależny projekt edukacyjny, niepowiązany z CKE.</small></footer>
+      <footer className="design-home-footer">
+        <div className="design-home-container design-footer-main"><div><a href="/" aria-label="egzaminio — strona główna"><BrandLogo compact /></a><span>Przygotowanie do egzaminu ósmoklasisty</span></div><div className="design-footer-links"><div><b>Produkt</b><a href="#zadania">Jak to działa</a><a href="#cennik">Cennik</a><a href="/kalkulator-punktow">Kalkulator punktów</a></div><div><b>Dokumenty</b><a href="/regulamin">Regulamin</a><a href="/polityka-prywatnosci">Polityka prywatności</a><a href="/polityka-cookies">Pliki cookie</a><a href="/bezpieczenstwo-dzieci-ai">Dzieci i AI</a></div><div><b>Kontakt</b><a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a><a href="/odstapienie-od-umowy">Odstąpienie od umowy</a></div></div></div>
+        <div className="design-footer-note"><div className="design-home-container">Zadania pochodzą z arkuszy CKE. Aplikacja nie zastępuje nauczyciela ani korepetytora.</div></div>
+      </footer>
     </main>
   );
 }

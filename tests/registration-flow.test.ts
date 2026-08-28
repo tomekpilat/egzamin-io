@@ -1,10 +1,10 @@
-import { existsSync, readFileSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 
 const login = readFileSync(join(process.cwd(), "app/logowanie/page.tsx"), "utf8");
 const onboarding = readFileSync(join(process.cwd(), "app/wybierz-role/page.tsx"), "utf8");
-const accountStyles = readFileSync(join(process.cwd(), "app/account.css"), "utf8");
+const redesignStyles = readFileSync(join(process.cwd(), "app/redesign.css"), "utf8");
 
 describe("simplified registration flow", () => {
   it("asks for the account role before showing registration methods", () => {
@@ -22,7 +22,7 @@ describe("simplified registration flow", () => {
     );
 
     expect(rolePicker).not.toContain("✓");
-    expect(accountStyles).not.toContain(".role-picker label.selected i");
+    expect(redesignStyles).toContain(".role-picker label.selected .role-choice-dot");
   });
 
   it("requires email and password confirmation", () => {
@@ -31,22 +31,21 @@ describe("simplified registration flow", () => {
     expect(login).toContain("validateSignupConfirmation(");
   });
 
-  it("explains both family journeys without teacher-account messaging", () => {
-    expect(login).toContain("Zapraszasz rodzica");
-    expect(login).toContain("Zapraszasz dziecko");
+  it("explains both roles without teacher-account messaging", () => {
+    expect(login).toContain("Rozwiązujesz zadania z arkuszy CKE");
+    expect(login).toContain("Zatwierdzasz konto dziecka");
     expect(login).not.toMatch(/kont(a|o) nauczyciel/i);
     expect(onboarding).not.toMatch(/dostęp nauczycielski/i);
   });
 
-  it("anchors the left column instead of vertically recentering it", () => {
-    expect(accountStyles).toMatch(/\.auth-shell \{[^}]*align-items: start;/);
-    expect(accountStyles).toContain(".auth-story { min-width: 0; }");
+  it("keeps the supplied fixed-width single-card composition", () => {
+    expect(redesignStyles).toMatch(/\.auth-shell \{[^}]*width: min\(560px,/);
+    expect(redesignStyles).toMatch(/\.auth-card \{[^}]*padding: 32px 36px;/);
   });
 
-  it("shows role-aware imagery on login and registration", () => {
-    expect(login).toContain('src: "/uczen-nauka-logowanie.png"');
-    expect(login).toContain('src: "/rodzic-i-uczen-nauka.png"');
-    expect(login).toContain('className="auth-story-image"');
-    expect(existsSync(join(process.cwd(), "public/uczen-nauka-logowanie.png"))).toBe(true);
+  it("does not mix the retired image-and-story login layout into the supplied design", () => {
+    expect(login).not.toContain('className="auth-story-image"');
+    expect(login).not.toContain("auth-journey");
+    expect(redesignStyles).toContain(".auth-story {\n  display: none;");
   });
 });

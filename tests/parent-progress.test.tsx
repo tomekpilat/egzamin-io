@@ -23,6 +23,7 @@ function progressRow(studentId: string, range = 7) {
     total_attempts: 8,
     accuracy_percent: 67,
     active_days: 3,
+    ai_questions_used: 5,
     weekly_goal: 5,
     weekly_sessions: 3,
     trend_percentage_points: 7,
@@ -43,19 +44,23 @@ describe("ParentProgress", () => {
   it("normalizes safe aggregate values", () => {
     const result = normalizeParentProgress(progressRow("student-a"));
     expect(result.solved_count).toBe(6);
+    expect(result.ai_questions_used).toBe(5);
     expect(result.subject_stats[0]).toEqual({ subject: "mathematics", solved: 6, correct: 4, accuracy: 67 });
     expect(result.focus_topics[0]?.topic).toBe("Równania");
   });
 
   it("loads the first child and switches children without mixing requests", async () => {
-    rpc.mockImplementation(async (_name: string, args: { target_student_id: string; requested_range_days: number }) => ({
-      data: [progressRow(args.target_student_id, args.requested_range_days)],
-      error: null,
-    }));
+    rpc.mockImplementation(async (name: string, args: { target_student_id: string; requested_range_days: number }) => name === "get_parent_child_ai_usage"
+      ? { data: [{ ai_questions_used: args.target_student_id === "student-b" ? 8 : 5 }], error: null }
+      : { data: [progressRow(args.target_student_id, args.requested_range_days)], error: null });
     const user = userEvent.setup();
     render(<ParentProgress linkedChildren={children} pendingRequests={0} onConnect={() => undefined} />);
 
     await waitFor(() => expect(rpc).toHaveBeenCalledWith("get_parent_child_progress", {
+      target_student_id: "student-a",
+      requested_range_days: 7,
+    }));
+    await waitFor(() => expect(rpc).toHaveBeenCalledWith("get_parent_child_ai_usage", {
       target_student_id: "student-a",
       requested_range_days: 7,
     }));
@@ -68,10 +73,9 @@ describe("ParentProgress", () => {
   });
 
   it("reloads the selected child for a 30-day range", async () => {
-    rpc.mockImplementation(async (_name: string, args: { target_student_id: string; requested_range_days: number }) => ({
-      data: [progressRow(args.target_student_id, args.requested_range_days)],
-      error: null,
-    }));
+    rpc.mockImplementation(async (name: string, args: { target_student_id: string; requested_range_days: number }) => name === "get_parent_child_ai_usage"
+      ? { data: [{ ai_questions_used: 5 }], error: null }
+      : { data: [progressRow(args.target_student_id, args.requested_range_days)], error: null });
     const user = userEvent.setup();
     render(<ParentProgress linkedChildren={children.slice(0, 1)} pendingRequests={0} onConnect={() => undefined} />);
 
@@ -80,6 +84,7 @@ describe("ParentProgress", () => {
       target_student_id: "student-a",
       requested_range_days: 30,
     }));
+    expect(await screen.findByText("Pytania do AI")).toBeInTheDocument();
   });
 
   it("shows the connection state without calling progress RPC", () => {

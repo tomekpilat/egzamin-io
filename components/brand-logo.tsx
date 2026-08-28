@@ -1,5 +1,3 @@
-const CHECK_MARK = "\u2713";
-
 export function BrandLogo({ compact = false }: { compact?: boolean }) {
   return (
     <span
@@ -11,7 +9,6 @@ export function BrandLogo({ compact = false }: { compact?: boolean }) {
         <span className="wordmark-main">egzamin</span>
         <span className="wordmark-io">io</span>
       </span>
-      <span className="wordmark-tick" aria-hidden="true">{CHECK_MARK}</span>
     </span>
   );
 }

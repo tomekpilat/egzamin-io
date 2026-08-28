@@ -7,9 +7,11 @@ const panel = readFileSync(join(process.cwd(), "app/panel/page.tsx"), "utf8");
 const landing = readFileSync(join(process.cwd(), "app/page.tsx"), "utf8");
 
 describe("Plan Plus screen", () => {
-  it("uses one shared plan comparison on the landing and dedicated page", () => {
+  it("uses the shared full comparison on the dedicated page and a compact landing comparison", () => {
     expect(page).toContain("PLAN_COMPARISON_ROWS.map");
-    expect(landing).toContain("PLAN_COMPARISON_ROWS.map");
+    expect(landing).toContain("FREE_FEATURES.map");
+    expect(landing).toContain("PLUS_FEATURES.map");
+    expect(landing).toContain("design-plan-grid");
     expect(page).toContain("PLUS_PACKAGE_PRICE_PLN");
     expect(page).toContain("calculatePlusPackageEconomics");
   });
@@ -27,7 +29,7 @@ describe("Plan Plus screen", () => {
     expect(page).not.toMatch(/href=["']\/checkout/);
     expect(page).toContain('subscriptionType="plus_waitlist"');
     expect(page).not.toContain("mailto:kontakt@egzamin.io?subject=Powiadom");
-    expect(landing).toContain('subscriptionType="plus_waitlist"');
+    expect(page).toContain('subscriptionType="plus_waitlist"');
   });
 
   it("supports an explicit payment CTA only after a valid checkout is configured", () => {
@@ -40,7 +42,7 @@ describe("Plan Plus screen", () => {
   it("compares the package with tutoring without claiming it replaces a teacher", () => {
     expect(page).toContain("dwie korepetycje kosztują");
     expect(page).toContain("nie zastępuje indywidualnego nauczyciela");
-    expect(landing).toContain("Dwie godziny korepetycji");
+    expect(landing).toContain("Godzina korepetycji to zwykle 80–120 zł");
   });
 
   it("links all required legal information and the panel return", () => {

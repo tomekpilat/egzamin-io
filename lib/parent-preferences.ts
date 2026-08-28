@@ -8,13 +8,12 @@ export function normalizeWeeklyGoal(value: unknown) {
 }
 
 export function summarizeParentPreferences(
-  children: Array<{ weekly_goal: number; summary_email_enabled: boolean }>,
+  children: Array<{ weekly_goal: number }>,
 ) {
   return children.reduce(
     (summary, child) => ({
       totalWeeklyGoal: summary.totalWeeklyGoal + normalizeWeeklyGoal(child.weekly_goal),
-      enabledReports: summary.enabledReports + (child.summary_email_enabled ? 1 : 0),
     }),
-    { totalWeeklyGoal: 0, enabledReports: 0 },
+    { totalWeeklyGoal: 0 },
   );
 }

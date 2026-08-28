@@ -3,11 +3,10 @@
 /* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { CheckCircle2, Lightbulb, RotateCcw, Send, ShieldCheck, Sparkles } from "lucide-react";
+import { RotateCcw, Send } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { AI_MESSAGE_MAX_LENGTH, normalizeUsage, validateTutorMessage, type AiChatMessage, type AiUsageStatus } from "@/lib/ai-tutor";
 import { getSupabaseClient } from "@/lib/supabase-browser";
@@ -26,6 +25,8 @@ type TutorPayload = {
   hints?: string[];
   error?: string;
 };
+
+type TutorTab = "hints" | "solution" | "ai";
 
 function TutorMessage({ message }: { message: AiChatMessage }) {
   const ref = useRef<HTMLParagraphElement>(null);
@@ -68,6 +69,8 @@ function AiTutorConversation({ questionId, feedback }: { questionId: string; fee
   const [loading, setLoading] = useState(true);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
+  const [activeTab, setActiveTab] = useState<TutorTab>(feedback ? "solution" : "hints");
+  const conversationRef = useRef<HTMLDivElement>(null);
 
   const loadTutor = useCallback(async () => {
     setLoading(true);
@@ -95,6 +98,11 @@ function AiTutorConversation({ questionId, feedback }: { questionId: string; fee
   useEffect(() => {
     queueMicrotask(() => void loadTutor());
   }, [loadTutor]);
+
+  useEffect(() => {
+    if (!conversationRef.current) return;
+    conversationRef.current.scrollTop = conversationRef.current.scrollHeight;
+  }, [messages]);
 
   async function sendMessage(value = input) {
     if (sending || usage.remaining <= 0 || !available) return;
@@ -129,37 +137,46 @@ function AiTutorConversation({ questionId, feedback }: { questionId: string; fee
   const quickQuestions = feedback
     ? ["Wytłumacz mi to prościej", "Daj mi tylko podpowiedź", "Dlaczego ta odpowiedź jest poprawna?"]
     : ["Daj mi tylko podpowiedź", "Co mam zrobić dalej?", "Wytłumacz mi to prościej"];
+  const displayedTab: TutorTab = feedback && activeTab === "hints"
+    ? "solution"
+    : !feedback && activeTab === "solution"
+      ? "hints"
+      : activeTab;
 
-  return <Card className="ai-tutor-card" aria-labelledby="ai-tutor-title">
-    <CardHeader>
-      <div className="ai-tutor-heading"><div className="ai-tutor-icon"><Sparkles aria-hidden="true" /></div><div><CardTitle id="ai-tutor-title">Pomoc do zadania</CardTitle><CardDescription>Najpierw podpowiedzi, potem wyjaśnienie i rozmowa z AI.</CardDescription></div><Badge variant={usage.remaining ? "secondary" : "outline"}>{usage.remaining} z {usage.limit} pytań AI</Badge></div>
-    </CardHeader>
+  return <Card className="ai-tutor-card" aria-label="Pomoc do zadania" data-conversation-active={messages.length > 0 ? "true" : "false"}>
+    <div className="ai-tutor-tabs" role="tablist" aria-label="Rodzaj pomocy">
+      <button type="button" role="tab" aria-selected={displayedTab === "hints"} onClick={() => setActiveTab("hints")} disabled={Boolean(feedback)}>Wskazówki</button>
+      <button type="button" role="tab" aria-selected={displayedTab === "solution"} onClick={() => setActiveTab("solution")} disabled={!feedback}>Rozwiązanie</button>
+      <button type="button" role="tab" aria-selected={displayedTab === "ai"} onClick={() => setActiveTab("ai")}>Tutor AI</button>
+    </div>
     <CardContent className="ai-tutor-content">
-      {!feedback && <section className="ai-assistance-section" aria-labelledby="hints-title">
-        <div className="ai-assistance-title"><Lightbulb aria-hidden="true" /><b id="hints-title">Podpowiedzi</b></div>
+      {displayedTab === "hints" && !feedback && <section className="ai-assistance-section" aria-labelledby="hints-title">
+        <p className="ai-panel-intro">Pomoc otwiera się po kolei. Rozwiązanie zobaczysz po sprawdzeniu odpowiedzi.</p>
+        <b id="hints-title" className="sr-only">Podpowiedzi</b>
         {loading ? <p className="ai-tutor-loading">Wczytujemy podpowiedzi…</p> : available ? <>
-          {visibleHintCount > 0 ? <ol className="ai-hints-list">{hints.slice(0, visibleHintCount).map((hint, index) => <li key={`${index}-${hint}`}>{hint}</li>)}</ol> : <p className="ai-assistance-placeholder">Odkrywaj wskazówki pojedynczo — bez zdradzania całego rozwiązania.</p>}
+          {visibleHintCount > 0 ? <ol className="ai-hints-list">{hints.slice(0, visibleHintCount).map((hint, index) => <li key={`${index}-${hint}`}><span>{index + 1}</span><div><b>{index === 0 ? "Mała wskazówka" : index === 1 ? "Kolejny krok" : "Prostszy przykład"}</b><p>{hint}</p></div></li>)}</ol> : <p className="ai-assistance-placeholder">Odkrywaj wskazówki pojedynczo — bez zdradzania całego rozwiązania.</p>}
           {visibleHintCount < hints.length ? <Button type="button" size="sm" variant="outline" onClick={() => setVisibleHintCount((count) => Math.min(count + 1, hints.length))}>{visibleHintCount ? "Pokaż kolejną" : "Pokaż podpowiedź"}</Button> : hints.length > 0 ? <small>To wszystkie podpowiedzi do tego zadania.</small> : null}
         </> : !error ? <p className="ai-assistance-placeholder">Podpowiedzi do tego zadania czekają na zatwierdzenie.</p> : null}
       </section>}
 
-      {feedback && <section className="ai-assistance-section" aria-labelledby="answer-help-title">
-        <div className="ai-assistance-title"><CheckCircle2 aria-hidden="true" /><b id="answer-help-title">Odpowiedź</b></div>
+      {displayedTab === "solution" && feedback && <section className="ai-assistance-section" aria-labelledby="answer-help-title">
+        <b id="answer-help-title" className="sr-only">Rozwiązanie</b>
         <Alert variant={feedback.isCorrect ? "success" : "warning"} className={`practice-feedback ${feedback.isCorrect ? "is-correct" : "is-incorrect"}`}><AlertTitle>{feedback.isCorrect ? "Dobra odpowiedź!" : "Jeszcze nie tym razem"}</AlertTitle><AlertDescription><b>Poprawna odpowiedź: {feedback.correctAnswer}</b><span>{feedback.explanation}</span></AlertDescription></Alert>
+        <Button type="button" variant="outline" onClick={() => setActiveTab("ai")}>Dopytaj tutora AI</Button>
       </section>}
 
-      <section className="ai-assistance-section ai-conversation-section" aria-labelledby="conversation-title">
-        <div className="ai-assistance-title"><Sparkles aria-hidden="true" /><div><b id="conversation-title">Zapytaj AI</b><span>Rozmowa dotyczy tylko tego zadania.</span></div></div>
+      {displayedTab === "ai" && <section className="ai-assistance-section ai-conversation-section" aria-labelledby="conversation-title">
+        <div className="ai-conversation-heading"><div><b id="conversation-title">Zapytaj tutora AI</b><span>Rozmowa dotyczy tylko tego zadania.</span></div><small>{usage.remaining} z {usage.limit} pytań AI</small></div>
         {loading ? <p className="ai-tutor-loading">Uruchamiamy nauczyciela AI…</p> : error ? <Alert variant="destructive"><AlertDescription><span>{error}</span><Button type="button" size="sm" variant="outline" onClick={() => void loadTutor()}><RotateCcw aria-hidden="true" /> Spróbuj ponownie</Button></AlertDescription></Alert> : !available ? <p className="ai-assistance-placeholder">Rozmowa będzie dostępna po zatwierdzeniu opracowania zadania.</p> : <>
-          {messages.length > 0 && <div className="ai-tutor-conversation" aria-live="polite">{messages.map((message) => <TutorMessage key={message.id} message={message} />)}</div>}
+          {messages.length > 0 && <div ref={conversationRef} className="ai-tutor-conversation" role="log" aria-label="Rozmowa z nauczycielem AI" aria-live="polite">{messages.map((message) => <TutorMessage key={message.id} message={message} />)}</div>}
           {!messages.length && usage.remaining > 0 && <div className="ai-tutor-quick">{quickQuestions.map((question) => <Button key={question} type="button" variant="outline" size="sm" onClick={() => void sendMessage(question)} disabled={sending}>{question}</Button>)}</div>}
           {usage.remaining > 0 ? <div className="ai-tutor-composer">
-            <Textarea value={input} onChange={(event) => setInput(event.target.value)} onKeyDown={(event) => { if (event.key === "Enter" && !event.shiftKey) { event.preventDefault(); void sendMessage(); } }} maxLength={AI_MESSAGE_MAX_LENGTH} rows={2} placeholder="Np. skąd wziął się ten krok?" aria-label="Pytanie do nauczyciela AI" disabled={sending} />
+            <Textarea value={input} onChange={(event) => setInput(event.target.value)} onKeyDown={(event) => { if (event.key === "Enter" && !event.shiftKey) { event.preventDefault(); void sendMessage(); } }} maxLength={AI_MESSAGE_MAX_LENGTH} rows={3} placeholder="Napisz, czego nie rozumiesz w tym zadaniu…" aria-label="Pytanie do nauczyciela AI" disabled={sending} />
             <Button type="button" size="icon" aria-label="Wyślij pytanie" onClick={() => void sendMessage()} disabled={sending || input.trim().length < 2}><Send aria-hidden="true" /></Button>
           </div> : <div className="ai-tutor-limit"><div><b>Dzisiejszy limit został wykorzystany</b><span>Nowe pytania będą dostępne jutro.</span></div>{usage.plan === "free" && <Button variant="outline" asChild><a href="/plan-plus#porownanie">Poznaj pakiet Plus</a></Button>}</div>}
         </>}
-      </section>
-      <p className="ai-tutor-privacy"><ShieldCheck aria-hidden="true" /> Nie wpisuj danych osobowych. AI nie otrzymuje profilu, e-maila ani postępów ucznia.</p>
+        <p className="ai-tutor-privacy">Nie wpisuj danych osobowych. Rodzic nie widzi treści rozmowy.</p>
+      </section>}
     </CardContent>
   </Card>;
 }

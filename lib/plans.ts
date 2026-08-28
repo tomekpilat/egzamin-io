@@ -8,7 +8,7 @@ export const PLAN_COMPARISON_ROWS = [
   ["Zadania", "Wybrane zestawy", "Pełna baza ćwiczeń"],
   ["Pytania do AI", "3 dziennie", `${PLUS_AI_QUESTIONS_PER_DAY} dziennie`],
   ["Plan nauki", "Podstawowy postęp", "Plan i inteligentne powtórki"],
-  ["Panel rodzica", "Cel tygodniowy", "Raport, trendy i rekomendacje"],
+  ["Panel rodzica", "Cel tygodniowy", "Trendy, użycie AI i rekomendacje"],
 ] as const;
 
 export function calculatePlusPackageEconomics(

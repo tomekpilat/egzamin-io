@@ -1,19 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Instrument_Sans, Source_Serif_4 } from "next/font/google";
 import { MathJaxProvider } from "@/components/mathjax-provider";
 import { AnalyticsConsent } from "@/components/analytics-consent";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
-import "./account.css";
-import "./seo.css";
+import "./redesign.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const instrumentSans = Instrument_Sans({
+  variable: "--font-instrument-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const sourceSerif = Source_Serif_4({
+  variable: "--font-source-serif",
   subsets: ["latin"],
 });
 
@@ -54,7 +53,7 @@ export default function RootLayout({
   return (
     <html lang="pl" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased mathjax_ignore`}
+        className={`${instrumentSans.variable} ${sourceSerif.variable} antialiased mathjax_ignore`}
       >
         <ThemeProvider>
           <MathJaxProvider>{children}</MathJaxProvider>

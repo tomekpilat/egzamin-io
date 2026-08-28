@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 
 const root = process.cwd();
 const header = readFileSync(join(root, "components/site-header.tsx"), "utf8");
-const styles = readFileSync(join(root, "app/globals.css"), "utf8");
+const styles = readFileSync(join(root, "app/redesign.css"), "utf8");
 const publicSurfaces = [
   "app/page.tsx",
   "app/logowanie/page.tsx",
@@ -17,7 +17,7 @@ const publicSurfaces = [
 
 describe("shared public site header", () => {
   it("keeps the same navigation and account actions on every public surface", () => {
-    for (const label of ["Kalkulator", "Baza wiedzy", "Dla rodzica", "Plany", "Zaloguj się", "Załóż konto"]) {
+    for (const label of ["Jak to działa", "Dla rodziców", "Kalkulator punktów", "Cennik", "Zaloguj się", "Załóż konto"]) {
       expect(header).toContain(label);
     }
 
@@ -35,13 +35,15 @@ describe("shared public site header", () => {
     expect(header).toContain("header-session-placeholder");
   });
 
-  it("uses stable home anchors from every route", () => {
-    expect(header).toContain('href: "/#dla-rodzica"');
-    expect(header).toContain('href: "/#dostep"');
+  it("uses the destinations from the simplified homepage with working routes", () => {
+    expect(header).toContain('href: "/#zadania"');
+    expect(header).toContain('href: "/#rodzice"');
+    expect(header).toContain('href: "/kalkulator-punktow"');
+    expect(header).toContain('href: "/#cennik"');
   });
 
   it("uses one desktop and mobile header height", () => {
-    expect(styles).toMatch(/\.site-header\s*\{[^}]*height:\s*82px;/s);
-    expect(styles).toMatch(/@media \(max-width:\s*680px\)[\s\S]*?\.site-header\s*\{\s*height:\s*72px;/);
+    expect(styles).toMatch(/\.site-header\s*\{[^}]*height:\s*70px;/s);
+    expect(styles).toMatch(/@media \(max-width:\s*680px\)[\s\S]*?\.site-header\s*\{\s*height:\s*64px;/);
   });
 });

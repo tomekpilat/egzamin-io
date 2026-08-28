@@ -45,7 +45,7 @@ export default function PlanPlusPage() {
           </Card>
           <Card id="dla-rodzica">
             <CardHeader><Badge variant="outline">Dla rodzica</Badge><CardTitle>Widzisz postęp, nie prywatne rozmowy.</CardTitle></CardHeader>
-            <CardContent><p>Trend, regularność, raport i jedna rekomendacja na tydzień — bez zaglądania dziecku przez ramię.</p></CardContent>
+            <CardContent><p>Trend, regularność, wykorzystanie AI i jedna rekomendacja na tydzień — bez zaglądania dziecku przez ramię.</p></CardContent>
           </Card>
         </div>
 

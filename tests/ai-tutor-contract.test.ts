@@ -51,8 +51,19 @@ describe("AI tutor end-to-end contract", () => {
     expect(route).toContain("pytanie nie zostało odliczone");
   });
 
+  it("expands an active conversation and keeps a usable chat viewport", () => {
+    expect(component).toContain('data-conversation-active={messages.length > 0 ? "true" : "false"}');
+    expect(component).toContain('role="log"');
+    expect(component).toContain('rows={3}');
+    expect(styles).toContain('.practice-focus-workspace:has(.ai-tutor-card[data-conversation-active="true"])');
+    expect(styles).toContain('.ai-tutor-card[data-conversation-active="true"] .ai-tutor-conversation');
+    expect(component).toContain("conversationRef.current.scrollTop = conversationRef.current.scrollHeight");
+  });
+
   it("shows hints first and replaces them with readable answer feedback", () => {
-    expect(component.indexOf('{!feedback && <section className="ai-assistance-section"')).toBeLessThan(component.indexOf('{feedback && <section className="ai-assistance-section"'));
+    expect(component).toContain('displayedTab === "hints" && !feedback');
+    expect(component).toContain('displayedTab === "solution" && feedback');
+    expect(component).toContain('feedback && activeTab === "hints"');
     expect(component).toContain('className={`practice-feedback ${feedback.isCorrect ? "is-correct" : "is-incorrect"}`}');
     expect(styles).toContain(".dark .practice-feedback.is-correct");
     expect(styles).toContain(".dark .practice-feedback.is-incorrect");

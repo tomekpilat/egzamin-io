@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
 
-import { ArrowRight, BookOpenCheck, CalendarDays, CheckCircle2, ExternalLink, Info, LibraryBig } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 import { SiteHeader } from "@/components/site-header";
 import { Badge } from "@/components/ui/badge";
@@ -54,7 +53,7 @@ export function SeoContentPage({ page }: { page: SeoPage }) {
       <article className="mathjax_process">
         <nav className="knowledge-breadcrumbs" aria-label="Okruszki"><a href="/">Strona główna</a><span>/</span><a href="/baza-wiedzy">Baza wiedzy</a><span>/</span><span>{page.category}</span></nav>
         <header className="knowledge-hero">
-          <div><Badge variant="secondary">{page.eyebrow}</Badge><h1>{page.heading}</h1><p>{page.lead}</p><div className="knowledge-updated"><CalendarDays aria-hidden="true" /> Zaktualizowano {page.updatedAt}</div></div>
+          <div><Badge variant="secondary">{page.eyebrow}</Badge><h1>{page.heading}</h1><p>{page.lead}</p><div className="knowledge-updated">Zaktualizowano {page.updatedAt}</div></div>
           <div className="knowledge-facts" aria-label="Najważniejsze liczby">{page.facts.map((fact) => <div key={fact.label}><b>{fact.value}</b><span>{fact.label}</span></div>)}</div>
         </header>
 
@@ -64,19 +63,19 @@ export function SeoContentPage({ page }: { page: SeoPage }) {
               <section key={section.title} className="knowledge-section">
                 <h2>{section.title}</h2>
                 {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-                {section.bullets && <ul>{section.bullets.map((bullet) => <li key={bullet}><CheckCircle2 aria-hidden="true" /><span>{bullet}</span></li>)}</ul>}
+                {section.bullets && <ul>{section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>}
                 {section.example && <Card className="knowledge-example"><CardHeader><Badge variant="outline">Przykład</Badge><CardTitle>{section.example.prompt}</CardTitle></CardHeader><CardContent><ol>{section.example.steps.map((step) => <li key={step}>{step}</li>)}</ol><b>{section.example.answer}</b></CardContent></Card>}
-                {section.note && <aside className="knowledge-note"><Info aria-hidden="true" /><p>{section.note}</p></aside>}
+                {section.note && <aside className="knowledge-note"><p>{section.note}</p></aside>}
               </section>
             ))}
 
             <section className="knowledge-faq" aria-labelledby="knowledge-faq-title"><h2 id="knowledge-faq-title">Najczęstsze pytania</h2>{page.faqs.map((faq) => <details key={faq.question}><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</section>
-            <section className="knowledge-sources" aria-labelledby="knowledge-sources-title"><h2 id="knowledge-sources-title">Źródła</h2><p>Informacje zmienne w czasie sprawdzamy w dokumentach instytucji odpowiedzialnych za egzamin i rekrutację.</p><ul>{page.sources.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{source.label}<ExternalLink aria-hidden="true" /></a></li>)}</ul></section>
+            <section className="knowledge-sources" aria-labelledby="knowledge-sources-title"><h2 id="knowledge-sources-title">Źródła</h2><p>Informacje zmienne w czasie sprawdzamy w dokumentach instytucji odpowiedzialnych za egzamin i rekrutację.</p><ul>{page.sources.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{source.label} ↗</a></li>)}</ul></section>
           </div>
 
           <aside className="knowledge-aside">
-            <Card className="knowledge-cta"><CardHeader><BookOpenCheck aria-hidden="true" /><CardTitle>{page.cta.title}</CardTitle></CardHeader><CardContent><p>{page.cta.body}</p><Button asChild><a href={page.cta.href}>{page.cta.label}<ArrowRight aria-hidden="true" /></a></Button></CardContent></Card>
-            {related.length > 0 && <nav className="knowledge-related" aria-label="Powiązane poradniki"><b>Przeczytaj również</b>{related.map((item) => <a key={item.path} href={item.path}>{item.heading}<ArrowRight aria-hidden="true" /></a>)}</nav>}
+            <Card className="knowledge-cta"><CardHeader><CardTitle>{page.cta.title}</CardTitle></CardHeader><CardContent><p>{page.cta.body}</p><Button asChild><a href={page.cta.href}>{page.cta.label}</a></Button></CardContent></Card>
+            {related.length > 0 && <nav className="knowledge-related" aria-label="Powiązane poradniki"><b>Przeczytaj również</b>{related.map((item) => <a key={item.path} href={item.path}>{item.heading}</a>)}</nav>}
           </aside>
         </div>
       </article>
@@ -90,8 +89,8 @@ export function SeoCategoryPage({ category }: { category: { slug: string; label:
   return (
     <main className="knowledge-page knowledge-index-page">
       <SeoHeader />
-      <section className="knowledge-index-hero"><Badge variant="secondary"><LibraryBig aria-hidden="true" /> {category.label}</Badge><h1>{category.heading}</h1><p>{category.description}</p></section>
-      <section className="knowledge-index-grid" aria-label={`Poradniki: ${category.label}`}>{pages.map((page) => <Card key={page.path}><CardHeader><Badge variant="outline">{page.category}</Badge><CardTitle>{page.heading}</CardTitle></CardHeader><CardContent><p>{page.description}</p><Button variant="ghost" asChild><a href={page.path}>Czytaj poradnik <ArrowRight aria-hidden="true" /></a></Button></CardContent></Card>)}</section>
+      <section className="knowledge-index-hero"><span className="knowledge-eyebrow">{category.label}</span><h1>{category.heading}</h1><p>{category.description}</p></section>
+      <section className="knowledge-index-grid" aria-label={`Poradniki: ${category.label}`}>{pages.map((page) => <a className="knowledge-category-card" key={page.path} href={page.path}><small>{page.category}</small><h2>{page.heading}</h2><p>{page.description}</p><span>Czytaj poradnik</span></a>)}</section>
       <SeoFooter />
     </main>
   );

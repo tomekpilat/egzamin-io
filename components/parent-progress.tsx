@@ -29,6 +29,7 @@ export type ParentProgressSummary = {
   total_attempts: number;
   accuracy_percent: number;
   active_days: number;
+  ai_questions_used: number;
   weekly_goal: number;
   weekly_sessions: number;
   trend_percentage_points: number;
@@ -84,6 +85,7 @@ export function normalizeParentProgress(value: Record<string, unknown>): ParentP
     total_attempts: numberValue(value.total_attempts),
     accuracy_percent: numberValue(value.accuracy_percent),
     active_days: numberValue(value.active_days),
+    ai_questions_used: numberValue(value.ai_questions_used),
     weekly_goal: Math.max(1, numberValue(value.weekly_goal)),
     weekly_sessions: numberValue(value.weekly_sessions),
     trend_percentage_points: numberValue(value.trend_percentage_points),
@@ -125,14 +127,16 @@ export function ParentProgress({ linkedChildren, pendingRequests, onConnect }: {
     let active = true;
     getSupabaseClient()
       .then(async (supabase) => {
-        const { data, error: progressError } = await supabase.rpc("get_parent_child_progress", {
-          target_student_id: effectiveStudentId,
-          requested_range_days: range,
-        });
-        if (progressError) throw progressError;
+        const args = { target_student_id: effectiveStudentId, requested_range_days: range };
+        const [{ data, error: progressError }, { data: aiUsage, error: aiUsageError }] = await Promise.all([
+          supabase.rpc("get_parent_child_progress", args),
+          supabase.rpc("get_parent_child_ai_usage", args),
+        ]);
+        if (progressError || aiUsageError) throw progressError ?? aiUsageError;
         const row = (data as Record<string, unknown>[] | null)?.[0];
+        const aiUsageRow = (aiUsage as Record<string, unknown>[] | null)?.[0];
         if (!row) throw new Error("missing_parent_progress");
-        if (active) setResult({ key: requestKey, summary: normalizeParentProgress(row), error: "" });
+        if (active) setResult({ key: requestKey, summary: normalizeParentProgress({ ...row, ai_questions_used: aiUsageRow?.ai_questions_used }), error: "" });
       })
       .catch(() => {
         if (active) setResult({ key: requestKey, summary: null, error: "Nie udało się pobrać postępów. Spróbuj ponownie za chwilę." });
@@ -171,12 +175,13 @@ export function ParentProgress({ linkedChildren, pendingRequests, onConnect }: {
       {loading && <section className="parent-progress-loading" aria-live="polite"><Card><CardContent>Liczymy postęp dla wybranego okresu…</CardContent></Card></section>}
       {error && <Alert variant="destructive" className="dashboard-alert"><AlertTitle>Postępy są chwilowo niedostępne</AlertTitle><AlertDescription>{error}<Button variant="outline" size="sm" type="button" onClick={() => setRefreshKey((value) => value + 1)}>Spróbuj ponownie</Button></AlertDescription></Alert>}
 
-      {!loading && !error && summary && summary.solved_count === 0 && <Card className="parent-empty-view parent-progress-empty"><CardHeader><CardTitle>Brak aktywności w tym okresie</CardTitle><CardDescription>{summary.recommendation}</CardDescription></CardHeader><CardContent><p>Gdy dziecko sprawdzi pierwszą odpowiedź, zobaczysz tutaj skuteczność, regularność i tematy do powtórki.</p></CardContent></Card>}
+      {!loading && !error && summary && summary.solved_count === 0 && summary.ai_questions_used === 0 && <Card className="parent-empty-view parent-progress-empty"><CardHeader><CardTitle>Brak aktywności w tym okresie</CardTitle><CardDescription>{summary.recommendation}</CardDescription></CardHeader><CardContent><p>Gdy dziecko sprawdzi pierwszą odpowiedź lub użyje pomocy AI, zobaczysz tutaj aktywność i tematy do powtórki.</p></CardContent></Card>}
 
-      {!loading && !error && summary && summary.solved_count > 0 && <>
-        <section className="dashboard-grid four-columns parent-progress-metrics">
+      {!loading && !error && summary && (summary.solved_count > 0 || summary.ai_questions_used > 0) && <>
+        <section className="dashboard-grid parent-progress-metrics">
           <article className="metric-card"><span>Rozwiązane zadania</span><b>{summary.solved_count}</b><small>{summary.total_attempts} wszystkich prób w okresie.</small></article>
           <article className="metric-card"><span>Skuteczność</span><b>{summary.accuracy_percent}%</b><small>{summary.correct_count} poprawnych ostatnich odpowiedzi.</small></article>
+          <article className="metric-card"><span>Pytania do AI</span><b>{summary.ai_questions_used}</b><small>Tylko liczba — bez treści rozmów.</small></article>
           <article className="metric-card"><span>Regularność</span><b>{summary.active_days} dni</b><small>Aktywne dni w wybranym okresie.</small></article>
           <article className="metric-card"><span>Trend</span><b className={trend > 0 ? "positive-trend" : trend < 0 ? "negative-trend" : ""}>{trend > 0 ? "+" : ""}{trend} pp</b><small>Zmiana względem poprzedniego porównywalnego okresu.</small></article>
         </section>

@@ -114,6 +114,16 @@ Kryteria wyjścia:
 - ręczny przegląd błędnych/niebezpiecznych odpowiedzi,
 - możliwość natychmiastowego wyłączenia AI feature flagą.
 
+### Backlog ucznia — własna lista powtórek
+
+- **Ręczne oznaczanie zadań do samodzielnej powtórki przez ucznia.** Funkcja jest niezależna od automatycznych inteligentnych powtórek z [GitHub #17](https://github.com/tomekpilat/egzamin-io/issues/17).
+- Na ekranie zadania uczeń może wybrać „Dodaj do powtórki”, zobaczyć stan „W powtórkach” oraz usunąć oznaczenie.
+- Osobny widok „Moje powtórki” pokazuje zapisane zadania i pozwala filtrować je według przedmiotu oraz roku/arkusza, a następnie ponownie rozpocząć rozwiązanie.
+- Jedno zadanie może znaleźć się na liście tylko raz; oznaczenia są przypisane do konta ucznia, synchronizowane między urządzeniami i chronione przez RLS.
+- Po poprawnym ponownym rozwiązaniu aplikacja pyta, czy usunąć zadanie z listy — nie usuwa go bez decyzji ucznia.
+- Lista respektuje aktywny wariant dostosowania CKE i dostępność materiału.
+- Kryteria akceptacji obejmują stany pusty/ładowanie/błąd, obsługę mobilną i klawiaturą oraz testy UI, trwałości danych, braku duplikatów i RLS.
+
 ## Etap 4 — realny panel rodzica
 
 Priorytet: P1. Szacunkowo: 1 sprint.
@@ -124,7 +134,7 @@ Zakres:
 - lista połączonych dzieci i wycofanie zgody,
 - tygodniowa regularność, czas nauki, ukończone sesje i tematy,
 - rekomendacja jednego obszaru do powtórki,
-- powiadomienie tygodniowe opt-in,
+- **Backlog ([GitHub #13](https://github.com/tomekpilat/egzamin-io/issues/13)):** automatyczny tygodniowy raport e-mail dla rodzica — osobna zgoda opt-in, podsumowanie regularności i postępu bez treści rozmów AI, łatwe wyłączenie, wypis, retry dostarczenia i monitoring błędów. Funkcja pozostaje wyłączona w MVP do czasu wdrożenia całego przepływu.
 - eksport i usunięcie danych dziecka,
 - brak prywatnych promptów i pełnej treści odpowiedzi.
 

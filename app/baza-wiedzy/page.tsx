@@ -1,9 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, LibraryBig } from "lucide-react";
 import { SeoFooter, SeoHeader } from "@/components/seo-content-page";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SEO_CATEGORIES, pagesForCategory } from "@/lib/seo-pages";
 
 export const metadata: Metadata = {
@@ -18,8 +14,8 @@ export default function KnowledgeBasePage() {
   return (
     <main className="knowledge-page knowledge-index-page">
       <SeoHeader />
-      <section className="knowledge-index-hero"><Badge variant="secondary"><LibraryBig aria-hidden="true" /> Baza wiedzy egzaminio</Badge><h1>Konkretna odpowiedź. Potem ćwiczenie.</h1><p>Aktualne terminy i zasady sprawdzamy w źródłach CKE oraz MEN. Tematy przedmiotowe wyjaśniamy na przykładach, bez gotowców do skopiowania.</p></section>
-      <section className="knowledge-category-grid" aria-label="Kategorie bazy wiedzy">{SEO_CATEGORIES.map((category) => { const count = pagesForCategory(category.label).length; return <Card key={category.slug}><CardHeader><Badge variant="outline">{count} {count === 1 ? "poradnik" : "poradniki"}</Badge><CardTitle>{category.heading}</CardTitle></CardHeader><CardContent><p>{category.description}</p><Button variant="ghost" asChild><a href={`/${category.slug}`}>Zobacz kategorię <ArrowRight aria-hidden="true" /></a></Button></CardContent></Card>; })}</section>
+      <section className="knowledge-index-hero"><span className="knowledge-eyebrow">Baza wiedzy egzaminio</span><h1>Konkretna odpowiedź. Potem ćwiczenie.</h1><p>Aktualne terminy i zasady sprawdzamy w źródłach CKE oraz MEN. Tematy przedmiotowe wyjaśniamy na przykładach, bez gotowców do skopiowania.</p></section>
+      <section className="knowledge-category-grid" aria-label="Kategorie bazy wiedzy">{SEO_CATEGORIES.map((category) => { const count = pagesForCategory(category.label).length; return <a className="knowledge-category-card" key={category.slug} href={`/${category.slug}`}><small>{count} {count === 1 ? "poradnik" : "poradniki"}</small><h2>{category.heading}</h2><p>{category.description}</p><span>Zobacz kategorię</span></a>; })}</section>
       <SeoFooter />
     </main>
   );

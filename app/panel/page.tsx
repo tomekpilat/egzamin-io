@@ -18,7 +18,6 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Switch } from "@/components/ui/switch";
 import { ThemeSettings } from "@/components/theme-settings";
 import { isUserRole, roleLabels, type UserRole } from "@/lib/roles";
 import { normalizeWeeklyGoal, summarizeParentPreferences } from "@/lib/parent-preferences";
@@ -68,9 +67,8 @@ const emptyCounts: RoleCounts = {
   admin: 0,
 };
 
-function ChildSettingsCard({ child, busy, onSave }: { child: LinkedChild; busy: boolean; onSave: (studentId: string, weeklyGoal: number, summaryEmailEnabled: boolean, accommodationCode: CkeAccommodationCode, confirmsSensitivePreference: boolean) => void }) {
+function ChildSettingsCard({ child, busy, onSave }: { child: LinkedChild; busy: boolean; onSave: (studentId: string, weeklyGoal: number, accommodationCode: CkeAccommodationCode, confirmsSensitivePreference: boolean) => void }) {
   const [weeklyGoal, setWeeklyGoal] = useState(child.weekly_goal);
-  const [summaryEnabled, setSummaryEnabled] = useState(child.summary_email_enabled);
   const [accommodationCode, setAccommodationCode] = useState<CkeAccommodationCode>(child.cke_accommodation_code);
   const [preferenceConfirmed, setPreferenceConfirmed] = useState(child.cke_accommodation_code !== "100");
   const childName = child.student_display_name || "Uczeń";
@@ -89,7 +87,6 @@ function ChildSettingsCard({ child, busy, onSave }: { child: LinkedChild; busy: 
         <div className="goal-overview"><div><b>Cel tygodniowy</b><span>{weeklyGoal} {weeklyGoal === 1 ? "sesja" : "sesji"} nauki</span></div></div>
         <div className="child-preference-grid">
           <Label htmlFor={`goal-${child.student_id}`}>Liczba sesji w tygodniu<Input id={`goal-${child.student_id}`} type="number" min={1} max={30} value={weeklyGoal} onChange={(event) => setWeeklyGoal(normalizeWeeklyGoal(event.target.value))} /></Label>
-          <div className="summary-preference"><div><Label htmlFor={`summary-${child.student_id}`}>Tygodniowe podsumowanie</Label><p>Powiadomienie e-mail bez treści rozmów z AI.</p></div><Switch id={`summary-${child.student_id}`} checked={summaryEnabled} onCheckedChange={setSummaryEnabled} /></div>
         </div>
         <div className="cke-preference-setting">
           <div><Badge variant="secondary">Kryteria CKE</Badge><h3>Wariant arkuszy</h3><p>To wybór materiału, nie pytanie o diagnozę. Uczeń otrzyma wyłącznie opublikowane arkusze oznaczone wybranym kodem CKE.</p></div>
@@ -102,14 +99,14 @@ function ChildSettingsCard({ child, busy, onSave }: { child: LinkedChild; busy: 
           <p className="cke-preference-audience">{accommodation.audience}</p>
           {accommodationCode !== "100" && <label className="cke-preference-confirmation" htmlFor={`cke-confirm-${child.student_id}`}><Checkbox id={`cke-confirm-${child.student_id}`} checked={preferenceConfirmed} onCheckedChange={(checked) => setPreferenceConfirmed(checked === true)} /><span>Wybieram ten wariant dobrowolnie i rozumiem, że ustawienie może ujawniać informacje o szczególnych potrzebach edukacyjnych dziecka.</span></label>}
         </div>
-        <div className="child-settings-actions"><Button type="button" onClick={() => onSave(child.student_id, weeklyGoal, summaryEnabled, accommodationCode, preferenceConfirmed)} disabled={busy || (accommodationCode !== "100" && !preferenceConfirmed)}>{busy ? "Zapisuję…" : "Zapisz ustawienia"}</Button><Button variant="outline" asChild><a href="/bezpieczenstwo-dzieci-ai">Jak chronimy to ustawienie</a></Button></div>
+        <div className="child-settings-actions"><Button type="button" onClick={() => onSave(child.student_id, weeklyGoal, accommodationCode, preferenceConfirmed)} disabled={busy || (accommodationCode !== "100" && !preferenceConfirmed)}>{busy ? "Zapisuję…" : "Zapisz ustawienia"}</Button><Button variant="outline" asChild><a href="/bezpieczenstwo-dzieci-ai">Jak chronimy to ustawienie</a></Button></div>
       </CardContent>
     </Card>
   );
 }
 
-function ParentPanel({ activeView, parentEmail, requests, linkedChildren, actionBusy, onNavigate, onApprove, onReject, onSavePreferences }: { activeView: ParentView; parentEmail: string; requests: GuardianRequest[]; linkedChildren: LinkedChild[]; actionBusy: string; onNavigate: (view: ParentView) => void; onApprove: (id: string) => void; onReject: (id: string) => void; onSavePreferences: (studentId: string, weeklyGoal: number, summaryEmailEnabled: boolean, accommodationCode: CkeAccommodationCode, confirmsSensitivePreference: boolean) => void }) {
-  const { totalWeeklyGoal, enabledReports } = summarizeParentPreferences(linkedChildren);
+function ParentPanel({ activeView, parentEmail, requests, linkedChildren, actionBusy, onNavigate, onApprove, onReject, onSavePreferences }: { activeView: ParentView; parentEmail: string; requests: GuardianRequest[]; linkedChildren: LinkedChild[]; actionBusy: string; onNavigate: (view: ParentView) => void; onApprove: (id: string) => void; onReject: (id: string) => void; onSavePreferences: (studentId: string, weeklyGoal: number, accommodationCode: CkeAccommodationCode, confirmsSensitivePreference: boolean) => void }) {
+  const { totalWeeklyGoal } = summarizeParentPreferences(linkedChildren);
   const [inviteStatus, setInviteStatus] = useState("");
   const invitePath = "/logowanie?tryb=rejestracja&rola=uczen";
   const publicInviteUrl = `https://egzamin.io${invitePath}`;
@@ -135,32 +132,25 @@ function ParentPanel({ activeView, parentEmail, requests, linkedChildren, action
   return (
     <>
       {activeView === "start" && <>
-        <section className="dashboard-hero parent-hero-dashboard">
-          <div>
-            <span className="dashboard-kicker">Panel rodzica</span>
-            <h2>{requests.length ? "Dziecko czeka na Twoją zgodę." : linkedChildren.length ? "Wspieraj bez zaglądania przez ramię." : "Połącz konto dziecka."}</h2>
-            <p>Zatwierdzasz konto we własnym panelu. Po połączeniu widzisz regularność i postęp, ale nie prywatną treść rozmów ucznia z AI.</p>
-            <Button type="button" onClick={() => onNavigate(linkedChildren.length ? "children" : "connect")}>{linkedChildren.length ? "Zobacz dzieci" : "Połącz konto dziecka"} <span>→</span></Button>
-          </div>
-          <div className="parent-illustration"><span>R</span><i>+</i><span>U</span></div>
-        </section>
-        {requests.length > 0 && <section className="guardian-requests" aria-labelledby="guardian-requests-title">
-          <div className="guardian-section-heading"><div><Badge variant="secondary">Wymaga decyzji</Badge><h3 id="guardian-requests-title">Prośby o zgodę opiekuna</h3></div><small>Sprawdź tożsamość dziecka poza serwisem przed zatwierdzeniem.</small></div>
+        <div className="dashboard-view-heading parent-overview-heading"><div><span className="dashboard-kicker dark-kicker">Panel rodzica</span><h2>Przegląd</h2><small>Aktualny stan połączonych kont i zgód</small></div><Button variant="outline" type="button" onClick={() => onNavigate("progress")}>Zobacz pełny postęp</Button></div>
+        {requests.length > 0 && <section className="guardian-requests parent-next-step" aria-labelledby="guardian-requests-title">
+          <div className="guardian-section-heading"><div><Badge>Najbliższy krok</Badge><h3 id="guardian-requests-title">Zatwierdź konto dziecka, żeby mogło zacząć naukę</h3></div><small>Sprawdź tożsamość dziecka poza serwisem.</small></div>
           {requests.map((request) => <article className="guardian-request-card" key={request.request_id}>
             <div className="guardian-avatar">{(request.student_display_name || request.student_email).slice(0, 2).toUpperCase()}</div>
             <div><b>{request.student_display_name || "Uczeń"}</b><span>{request.student_email}</span><small>Prośba z {new Date(request.requested_at).toLocaleDateString("pl-PL")}</small></div>
             <div className="guardian-request-actions"><Button size="sm" onClick={() => onApprove(request.request_id)} disabled={Boolean(actionBusy)}>Zatwierdź</Button><Button size="sm" variant="outline" onClick={() => onReject(request.request_id)} disabled={Boolean(actionBusy)}>Odrzuć</Button></div>
           </article>)}
         </section>}
-        {linkedChildren.length > 0 && <section className="dashboard-grid three-columns">
+        <section className="dashboard-grid three-columns parent-overview-metrics">
           <article className="metric-card"><span>Połączone konta</span><b>{linkedChildren.length}</b><small>Wyłącznie po zatwierdzonej prośbie.</small></article>
           <article className="metric-card"><span>Cel tygodniowy</span><b>{totalWeeklyGoal || "—"}</b><small>Łączna liczba zaplanowanych sesji.</small></article>
-          <article className="metric-card"><span>Raporty e-mail</span><b>{enabledReports}</b><small>Bez podglądu treści rozmów z AI.</small></article>
-        </section>}
-        <section className="dashboard-card empty-dashboard-card">
-          <span className="empty-icon">↗</span>
-          <div><h3>Tygodniowy raport bez pilnowania każdego zadania</h3><p>Po połączeniu kont pokażemy regularność, postęp w tematach i jedną konkretną rekomendację na kolejny tydzień.</p></div>
+          <article className="metric-card"><span>Prośby o zgodę</span><b>{requests.length}</b><small>{requests.length ? "Czekają na Twoją decyzję." : "Brak oczekujących próśb."}</small></article>
         </section>
+        <section className="dashboard-card parent-overview-children">
+          <div className="guardian-section-heading"><div><h3>Podłączone dzieci</h3><small>Postęp, wariant CKE i dostęp Plus ustawiasz osobno.</small></div><Button variant="outline" size="sm" type="button" onClick={() => onNavigate("connect")}>Podłącz kolejne</Button></div>
+          {linkedChildren.length ? <div className="parent-overview-child-list">{linkedChildren.map((child) => <button type="button" key={child.student_id} onClick={() => onNavigate("progress")}><span className="guardian-avatar">{(child.student_display_name || child.student_email).slice(0, 2).toUpperCase()}</span><span><b>{child.student_display_name || "Uczeń"}</b><small>{child.student_email} · {child.cke_accommodation_label}</small></span><Badge variant={child.plan_tier === "plus" ? "secondary" : "outline"}>{child.plan_tier === "plus" ? "Plus aktywny" : "Plan Free"}</Badge><em>Postęp</em></button>)}</div> : <div className="parent-overview-empty"><p>Nie ma jeszcze połączonych kont dzieci.</p><Button type="button" onClick={() => onNavigate("connect")}>Połącz konto dziecka</Button></div>}
+        </section>
+        <p className="parent-overview-privacy">Nie pokazujemy treści rozmów dziecka z tutorem AI. Widzisz liczby, tematy, wykorzystanie AI i regularność nauki.</p>
       </>}
 
       {activeView === "children" && <>
@@ -173,7 +163,7 @@ function ParentPanel({ activeView, parentEmail, requests, linkedChildren, action
             <div className="guardian-request-actions"><Button size="sm" onClick={() => onApprove(request.request_id)} disabled={Boolean(actionBusy)}>Zatwierdź</Button><Button size="sm" variant="outline" onClick={() => onReject(request.request_id)} disabled={Boolean(actionBusy)}>Odrzuć</Button></div>
           </article>)}
         </section>}
-        {linkedChildren.length > 0 ? <section className="linked-children"><div className="guardian-section-heading"><div><Badge variant="secondary">Ustawienia nauki</Badge><h3>Połączone konta dzieci</h3></div><small>Cel i podsumowania ustawiasz osobno dla każdego dziecka.</small></div>{linkedChildren.map((child) => <ChildSettingsCard key={child.student_id} child={child} busy={actionBusy === child.student_id} onSave={onSavePreferences} />)}</section> : <Card className="parent-empty-view"><CardHeader><CardTitle>Nie ma jeszcze połączonych kont</CardTitle><CardDescription>Wyślij dziecku link rejestracyjny. Po zatwierdzeniu prośby zobaczysz je tutaj.</CardDescription></CardHeader><CardContent><Button type="button" onClick={() => onNavigate("connect")}>Połącz konto dziecka</Button></CardContent></Card>}
+        {linkedChildren.length > 0 ? <section className="linked-children"><div className="guardian-section-heading"><div><Badge variant="secondary">Ustawienia nauki</Badge><h3>Połączone konta dzieci</h3></div><small>Cel i wariant arkuszy ustawiasz osobno dla każdego dziecka.</small></div>{linkedChildren.map((child) => <ChildSettingsCard key={child.student_id} child={child} busy={actionBusy === child.student_id} onSave={onSavePreferences} />)}</section> : <Card className="parent-empty-view"><CardHeader><CardTitle>Nie ma jeszcze połączonych kont</CardTitle><CardDescription>Wyślij dziecku link rejestracyjny. Po zatwierdzeniu prośby zobaczysz je tutaj.</CardDescription></CardHeader><CardContent><Button type="button" onClick={() => onNavigate("connect")}>Połącz konto dziecka</Button></CardContent></Card>}
       </>}
 
       {activeView === "progress" && <ParentProgress linkedChildren={linkedChildren} pendingRequests={requests.length} onConnect={() => onNavigate(requests.length ? "children" : "connect")} />}
@@ -394,7 +384,7 @@ export default function DashboardPage() {
     }
   }
 
-  async function saveGuardianPreferences(studentId: string, weeklyGoal: number, summaryEmailEnabled: boolean, accommodationCode: CkeAccommodationCode, confirmsSensitivePreference: boolean) {
+  async function saveGuardianPreferences(studentId: string, weeklyGoal: number, accommodationCode: CkeAccommodationCode, confirmsSensitivePreference: boolean) {
     setGuardianActionBusy(studentId);
     setActionError("");
     setActionMessage("");
@@ -403,7 +393,7 @@ export default function DashboardPage() {
       const { error: settingsError } = await supabase.rpc("update_child_learning_settings", {
         target_student_id: studentId,
         next_weekly_goal: weeklyGoal,
-        next_summary_email_enabled: summaryEmailEnabled,
+        next_summary_email_enabled: false,
         next_accommodation_code: accommodationCode,
         confirms_sensitive_preference: confirmsSensitivePreference,
       });
@@ -497,7 +487,7 @@ export default function DashboardPage() {
   const focusMode = profile.role === "student" && studentView === "exercises";
 
   return (
-    <main className={`dashboard-page${focusMode ? " dashboard-focus-mode" : ""}`}>
+    <main className={`dashboard-page dashboard-${profile.role}-page${focusMode ? " dashboard-focus-mode" : ""}`}>
       {!focusMode ? <DropdownMenu>
         <DropdownMenuTrigger asChild><button type="button" className="dashboard-session" aria-label={`Menu konta: ${displayName}`}><span className="dashboard-account"><span className="dashboard-account-avatar">{displayName.slice(0, 2).toUpperCase()}</span><span className="dashboard-account-copy"><b>{displayName}</b><small>{profile.email}</small></span></span><ChevronDown className="dashboard-session-chevron" aria-hidden="true" /></button></DropdownMenuTrigger>
         <DropdownMenuContent align="end" sideOffset={8} className="dashboard-account-menu">
@@ -507,41 +497,48 @@ export default function DashboardPage() {
           <DropdownMenuItem className="dashboard-signout-item" onSelect={() => void signOut()}><LogOut aria-hidden="true" /> Wyloguj się</DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu> : null}
-      {!focusMode && <aside className="dashboard-sidebar">
+      {!focusMode && profile.role === "parent" ? <FeedbackDialog userEmail={profile.email} screenContext={`parent:${parentView}`} /> : null}
+      {!focusMode && profile.role !== "student" && <aside className="dashboard-sidebar">
         <a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a>
+        <span className="dashboard-nav-label">{profile.role === "parent" ? "Panel rodzica" : profile.role === "teacher" ? "Panel nauczyciela" : "Administracja"}</span>
         <nav aria-label="Panel">
           {profile.role === "parent" ? <>
-            <button type="button" className={parentView === "start" ? "active" : ""} aria-current={parentView === "start" ? "page" : undefined} onClick={() => setParentView("start")}><span>⌂</span> Start</button>
-            <button type="button" className={parentView === "progress" ? "active" : ""} aria-current={parentView === "progress" ? "page" : undefined} onClick={() => setParentView("progress")}><span>↗</span> Postępy</button>
-            <button type="button" className={parentView === "children" ? "active" : ""} aria-current={parentView === "children" ? "page" : undefined} onClick={() => setParentView("children")}><span>✎</span> Dzieci</button>
-            <button type="button" className={parentView === "connect" ? "active" : ""} aria-current={parentView === "connect" ? "page" : undefined} onClick={() => setParentView("connect")}><span>↗</span> Połącz konto</button>
-            <button type="button" className={parentView === "payments" ? "active" : ""} aria-current={parentView === "payments" ? "page" : undefined} onClick={() => setParentView("payments")}><span>zł</span> Płatności</button>
-            <button type="button" className={parentView === "settings" ? "active" : ""} aria-current={parentView === "settings" ? "page" : undefined} onClick={() => setParentView("settings")}><span>⚙</span> Ustawienia</button>
-          </> : profile.role === "student" ? <>
-            <button type="button" className={studentView === "start" ? "active" : ""} aria-current={studentView === "start" ? "page" : undefined} onClick={() => setStudentView("start")}><span>⌂</span> Start</button>
-            <button type="button" className={studentView === "exercises" ? "active" : ""} aria-current={studentView === "exercises" ? "page" : undefined} onClick={() => setStudentView("exercises")}><span>✎</span> Ćwiczenia</button>
-            <button type="button" className={studentView === "progress" ? "active" : ""} aria-current={studentView === "progress" ? "page" : undefined} onClick={() => setStudentView("progress")}><span>↗</span> Postępy</button>
-            <button type="button" className={studentView === "settings" ? "active" : ""} aria-current={studentView === "settings" ? "page" : undefined} onClick={() => setStudentView("settings")}><span>⚙</span> Ustawienia</button>
+            <button type="button" className={parentView === "start" ? "active" : ""} aria-current={parentView === "start" ? "page" : undefined} onClick={() => setParentView("start")}>Przegląd</button>
+            <button type="button" className={parentView === "progress" ? "active" : ""} aria-current={parentView === "progress" ? "page" : undefined} onClick={() => setParentView("progress")}>Postęp dziecka</button>
+            <button type="button" className={parentView === "children" ? "active" : ""} aria-current={parentView === "children" ? "page" : undefined} onClick={() => setParentView("children")}>Dzieci</button>
+            <button type="button" className={parentView === "connect" ? "active" : ""} aria-current={parentView === "connect" ? "page" : undefined} onClick={() => setParentView("connect")}>Podłącz dziecko</button>
+            <button type="button" className={parentView === "payments" ? "active" : ""} aria-current={parentView === "payments" ? "page" : undefined} onClick={() => setParentView("payments")}>Płatności</button>
+            <button type="button" className={parentView === "settings" ? "active" : ""} aria-current={parentView === "settings" ? "page" : undefined} onClick={() => setParentView("settings")}>Ustawienia</button>
           </> : <>
-            <a className="active" href="/panel"><span>⌂</span> Start</a>
-            <a href="#zadania"><span>✎</span> {profile.role === "teacher" ? "Zestawy" : "Użytkownicy"}</a>
-            <a href="#postep"><span>↗</span> {profile.role === "admin" ? "Treści CKE" : "Postępy"}</a>
-            <a href="#ustawienia"><span>⚙</span> Ustawienia</a>
+            <a className="active" href="/panel">Start</a>
+            <a href="#zadania">{profile.role === "teacher" ? "Zestawy" : "Użytkownicy"}</a>
+            <a href="#postep">{profile.role === "admin" ? "Treści CKE" : "Postępy"}</a>
+            <a href="#ustawienia">Ustawienia</a>
           </>}
         </nav>
-        <div className="sidebar-plan"><b>{parentPlusChildren ? `Pakiet Plus · ${parentPlusChildren}` : "Wersja bezpłatna"}</b><span>{parentPlusChildren ? "Aktywny dla połączonych dzieci" : "3 pytania AI dziennie"}</span><i><em /></i>{profile.role === "parent" ? <button type="button" onClick={() => setParentView("payments")}>{parentPlusChildren ? "Płatności i dokumenty →" : "Poznaj pakiet Plus →"}</button> : <a href={profile.role === "student" ? "/plan-plus#dla-ucznia" : "/plan-plus"}>Poznaj pakiet Plus →</a>}</div>
+        <div className="sidebar-plan"><b>{parentPlusChildren ? `Pakiet Plus · ${parentPlusChildren}` : "Wersja bezpłatna"}</b><span>{parentPlusChildren ? "Aktywny dla połączonych dzieci" : "3 pytania AI dziennie"}</span><i><em /></i>{profile.role === "parent" ? <button type="button" onClick={() => setParentView("payments")}>{parentPlusChildren ? "Płatności i dokumenty →" : "Poznaj pakiet Plus →"}</button> : <a href="/plan-plus">Poznaj pakiet Plus →</a>}</div>
       </aside>}
 
+      {!focusMode && profile.role === "student" && <header className="student-app-header">
+        <a href="/" aria-label="egzaminio — strona główna"><BrandLogo compact /></a>
+        <nav aria-label="Panel ucznia">
+          <button type="button" className={studentView === "start" ? "active" : ""} aria-current={studentView === "start" ? "page" : undefined} onClick={() => setStudentView("start")}>Nauka</button>
+          <button type="button" className={studentView === "progress" ? "active" : ""} aria-current={studentView === "progress" ? "page" : undefined} onClick={() => setStudentView("progress")}>Postęp</button>
+          <button type="button" className={studentView === "settings" ? "active" : ""} aria-current={studentView === "settings" ? "page" : undefined} onClick={() => setStudentView("settings")}>Ustawienia</button>
+        </nav>
+        <span className="student-plan-badge">Plan Free</span>
+      </header>}
+
       <div className="dashboard-main">
-        {!focusMode && <header className="dashboard-topbar">
+        {!focusMode && profile.role !== "student" && profile.role !== "parent" && <header className="dashboard-topbar">
           <div><span>{roleLabels[profile.role]}</span><h1>Cześć, {firstName}!</h1></div>
-          <div className="dashboard-topbar-actions"><FeedbackDialog userEmail={profile.email} screenContext={`${profile.role}:${profile.role === "student" ? studentView : profile.role === "parent" ? parentView : "start"}`} /></div>
+          <div className="dashboard-topbar-actions"><FeedbackDialog userEmail={profile.email} screenContext={`${profile.role}:start`} /></div>
         </header>}
         <div className={focusMode ? "dashboard-content dashboard-focus-content" : "dashboard-content"}>
           {profile.role === "student" && <StudentPractice activeView={studentView} onNavigate={setStudentView} />}
           {actionError && profile.role === "parent" && <Alert variant="destructive" className="dashboard-alert"><AlertDescription>{actionError}</AlertDescription></Alert>}
           {actionMessage && profile.role === "parent" && <Alert variant="success" className="dashboard-alert"><AlertDescription>{actionMessage}</AlertDescription></Alert>}
-          {profile.role === "parent" && <ParentPanel activeView={parentView} parentEmail={profile.email} requests={guardianRequests} linkedChildren={linkedChildren} actionBusy={guardianActionBusy} onNavigate={setParentView} onApprove={(id) => void decideGuardianRequest(id, "approve")} onReject={(id) => void decideGuardianRequest(id, "reject")} onSavePreferences={(studentId, weeklyGoal, summaryEnabled, accommodationCode, confirmsSensitivePreference) => void saveGuardianPreferences(studentId, weeklyGoal, summaryEnabled, accommodationCode, confirmsSensitivePreference)} />}
+          {profile.role === "parent" && <ParentPanel activeView={parentView} parentEmail={profile.email} requests={guardianRequests} linkedChildren={linkedChildren} actionBusy={guardianActionBusy} onNavigate={setParentView} onApprove={(id) => void decideGuardianRequest(id, "approve")} onReject={(id) => void decideGuardianRequest(id, "reject")} onSavePreferences={(studentId, weeklyGoal, accommodationCode, confirmsSensitivePreference) => void saveGuardianPreferences(studentId, weeklyGoal, accommodationCode, confirmsSensitivePreference)} />}
           {profile.role === "teacher" && <TeacherPanel verificationStatus={profile.teacher_verification_status} />}
           {profile.role === "admin" && <AdminPanel counts={counts} feedback={adminFeedback} busy={adminActionBusy} feedbackBusyId={feedbackBusyId} error={adminActionError} onGrantTeacher={grantTeacherRole} onUpdateFeedback={(id, status) => void updateFeedbackStatus(id, status)} />}
           {((profile.role === "parent" && parentView === "settings") || (profile.role === "student" && studentView === "settings") || (profile.role !== "parent" && profile.role !== "student")) && <Card className="account-settings-card" id="ustawienia">

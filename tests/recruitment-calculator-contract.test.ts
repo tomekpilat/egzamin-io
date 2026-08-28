@@ -11,7 +11,7 @@ const styles = readFileSync(join(root, "app", "kalkulator-punktow", "calculator.
 describe("public recruitment calculator", () => {
   it("is discoverable from the homepage without requiring an account", () => {
     expect(homepage).toContain('href="/kalkulator-punktow"');
-    expect(homepage).toContain("Bez logowania");
+    expect(homepage).toContain("Bezpłatnie i bez konta");
     expect(page).not.toMatch(/requireAuth|getSession|supabase/);
   });
 

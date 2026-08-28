@@ -12,10 +12,10 @@ describe("parent preferences", () => {
 
   it("summarizes all linked children without exposing conversation data", () => {
     expect(summarizeParentPreferences([
-      { weekly_goal: 5, summary_email_enabled: true },
-      { weekly_goal: 8, summary_email_enabled: false },
-      { weekly_goal: 100, summary_email_enabled: true },
-    ])).toEqual({ totalWeeklyGoal: 43, enabledReports: 2 });
-    expect(summarizeParentPreferences([])).toEqual({ totalWeeklyGoal: 0, enabledReports: 0 });
+      { weekly_goal: 5 },
+      { weekly_goal: 8 },
+      { weekly_goal: 100 },
+    ])).toEqual({ totalWeeklyGoal: 43 });
+    expect(summarizeParentPreferences([])).toEqual({ totalWeeklyGoal: 0 });
   });
 });

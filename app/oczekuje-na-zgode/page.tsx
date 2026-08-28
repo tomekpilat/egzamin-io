@@ -3,12 +3,9 @@
 
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
-import { Clock3, MailCheck, ShieldCheck } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { getSupabaseClient } from "@/lib/supabase-browser";
 
 type ConsentStatus = {
@@ -60,28 +57,25 @@ export default function WaitingForGuardianPage() {
   return (
     <main className="consent-page">
       <div className="consent-top"><a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a></div>
-      <Card className="consent-card">
-        <CardHeader>
-          <Badge variant="secondary"><ShieldCheck size={13} /> Bezpieczne konto ucznia</Badge>
-          <CardTitle>Czekamy na zgodę rodzica</CardTitle>
-          <CardDescription>Konto ucznia jest utworzone, ale ćwiczenia i nauczyciel AI pozostają zablokowane do zatwierdzenia przez opiekuna.</CardDescription>
-        </CardHeader>
-        <CardContent className="consent-content">
-          <div className="consent-step"><MailCheck /><div><b>1. Opiekun zakłada konto rodzica</b><span>Powinien użyć adresu <strong>{status?.guardian_email ?? "podanego podczas rejestracji"}</strong>.</span></div></div>
-          <div className="consent-step"><ShieldCheck /><div><b>2. Zatwierdza prośbę w swoim panelu</b><span>Po zalogowaniu zobaczy imię i e-mail ucznia oraz datę prośby.</span></div></div>
-          <div className="consent-step"><Clock3 /><div><b>3. Konto odblokuje się automatycznie</b><span>Prośba jest ważna przez 30 dni. Nie prosimy ucznia o udawanie zgody opiekuna.</span></div></div>
-
-          {status?.request_status === "rejected" && <Alert variant="destructive"><AlertTitle>Prośba została odrzucona</AlertTitle><AlertDescription>Popraw adres opiekuna albo porozmawiaj z rodzicem przed wysłaniem kolejnej prośby.</AlertDescription></Alert>}
-          {status?.request_status === "withdrawn" && <Alert variant="warning"><AlertTitle>Zgoda została wycofana</AlertTitle><AlertDescription>Do dalszego korzystania potrzebne jest ponowne zatwierdzenie przez opiekuna.</AlertDescription></Alert>}
-          {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-
-          <div className="consent-actions">
-            <Button onClick={() => void refresh()} disabled={loading}>{loading ? "Sprawdzam…" : "Sprawdź, czy rodzic zatwierdził"}</Button>
-            <Button variant="outline" asChild><Link href="/wybierz-role">Popraw e-mail opiekuna</Link></Button>
-          </div>
-          <p className="consent-privacy">Rodzic otrzyma dostęp do postępów i regularności, ale nie do prywatnej treści rozmów ucznia z AI. <Link href="/bezpieczenstwo-dzieci-ai">Poznaj zasady ochrony dzieci →</Link></p>
-        </CardContent>
-      </Card>
+      <section className="consent-card">
+        <span className={`consent-status ${status?.request_status === "rejected" ? "rejected" : ""}`}>{status?.request_status === "rejected" ? "Prośba odrzucona" : "Oczekuje na zgodę rodzica"}</span>
+        <h1>{status?.request_status === "rejected" ? "Rodzic nie zatwierdził prośby" : `Czekamy na potwierdzenie od ${status?.guardian_email ?? "rodzica lub opiekuna"}`}</h1>
+        <p>{status?.request_status === "rejected" ? "Jeśli podany adres jest nieprawidłowy, popraw go i wyślij prośbę ponownie. Konto pozostaje zablokowane do czasu zgody opiekuna." : "Konto ucznia wymaga zatwierdzenia przez rodzica lub opiekuna. Opiekun powinien utworzyć konto na podany adres i zaakceptować prośbę w swoim panelu."}</p>
+        <div className="consent-visibility">
+          <b>Co rodzic zobaczy</b>
+          <span>Liczbę rozwiązanych zadań, poprawność, przedmioty, tematy do powtórki, wykorzystanie AI i regularność nauki.</span>
+          <b>Czego nie zobaczy</b>
+          <span>Treści Twoich rozmów z tutorem AI ani pojedynczych pytań, które mu zadajesz.</span>
+        </div>
+        {status?.request_status === "withdrawn" && <Alert variant="warning"><AlertTitle>Zgoda została wycofana</AlertTitle><AlertDescription>Do dalszego korzystania potrzebne jest ponowne zatwierdzenie przez opiekuna.</AlertDescription></Alert>}
+        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+        <div className="consent-actions">
+          <Button onClick={() => void refresh()} disabled={loading}>{loading ? "Sprawdzam…" : "Odśwież status"}</Button>
+          <Button variant="outline" asChild><Link href="/wybierz-role">Popraw e-mail rodzica</Link></Button>
+          <Button variant="ghost" asChild><Link href="/logowanie">Wróć do logowania</Link></Button>
+        </div>
+        <p className="consent-privacy"><Link href="/bezpieczenstwo-dzieci-ai">Poznaj zasady ochrony dzieci →</Link></p>
+      </section>
     </main>
   );
 }

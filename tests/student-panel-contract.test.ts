@@ -9,7 +9,7 @@ describe("student panel navigation", () => {
   it("defines a separate view for every student menu item", () => {
     expect(practice).toContain('export type StudentView = "start" | "exercises" | "progress" | "settings"');
     expect(panel).toContain('onClick={() => setStudentView("start")}');
-    expect(panel).toContain('onClick={() => setStudentView("exercises")}');
+    expect(practice).toContain('onNavigate("exercises")');
     expect(panel).toContain('onClick={() => setStudentView("progress")}');
     expect(panel).toContain('onClick={() => setStudentView("settings")}');
   });
@@ -38,8 +38,8 @@ describe("student panel navigation", () => {
 
   it("removes dashboard chrome while the student is solving a question", () => {
     expect(panel).toContain('const focusMode = profile.role === "student" && studentView === "exercises"');
-    expect(panel).toContain("{!focusMode && <aside");
-    expect(panel).toContain("{!focusMode && <header");
+    expect(panel).toContain('!focusMode && profile.role !== "student" && <aside');
+    expect(panel).toContain('!focusMode && profile.role === "student" && <header className="student-app-header"');
     expect(practice).toContain('className="practice-focus-shell"');
     expect(practice).toContain("hasUnsavedPracticeAnswer");
     expect(practice).toContain('window.addEventListener("beforeunload"');

@@ -10,10 +10,10 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
 import { getSupabaseClient } from "@/lib/supabase-browser";
 
 const navigation = [
-  { key: "calculator", label: "Kalkulator", href: "/kalkulator-punktow" },
-  { key: "knowledge", label: "Baza wiedzy", href: "/baza-wiedzy" },
-  { key: "parent", label: "Dla rodzica", href: "/#dla-rodzica" },
-  { key: "plans", label: "Plany", href: "/#dostep" },
+  { key: "how", label: "Jak to działa", href: "/#zadania" },
+  { key: "parent", label: "Dla rodziców", href: "/#rodzice" },
+  { key: "calculator", label: "Kalkulator punktów", href: "/kalkulator-punktow" },
+  { key: "pricing", label: "Cennik", href: "/#cennik" },
 ] as const;
 
 type HeaderAccount = {
@@ -34,8 +34,7 @@ function accountFromUser(user: User | null): HeaderAccount | null {
 
 function activeNavigationKey(currentPath?: string) {
   if (currentPath?.startsWith("/kalkulator-punktow")) return "calculator";
-  if (currentPath?.startsWith("/baza-wiedzy") || currentPath?.startsWith("/egzamin-osmoklasisty")) return "knowledge";
-  if (currentPath === "/plan-plus") return "plans";
+  if (currentPath === "/plan-plus") return "pricing";
   return null;
 }
 

@@ -9,11 +9,10 @@ const practice = readFileSync(join(root, "components", "student-practice.tsx"), 
 const privacy = readFileSync(join(root, "app", "polityka-prywatnosci", "page.tsx"), "utf8");
 
 describe("CKE accommodation UI", () => {
-  it("explains the feature unambiguously on the homepage", () => {
-    expect(homepage).toContain("Warianty zgodne z CKE");
-    expect(homepage).toContain("Dla ucznia z afazją");
-    expect(homepage).toContain("wyłącznie arkusze oznaczone kodem CKE");
-    expect(homepage).toContain("Skonfiguruj konto dziecka");
+  it("keeps the parent privacy promise on the simplified homepage", () => {
+    expect(homepage).toContain("Rodzic widzi postęp, nie prywatne rozmowy");
+    expect(homepage).toContain("Rodzic nie czyta rozmów");
+    expect(homepage).toContain('rola=rodzic');
   });
 
   it("lets a linked parent select and explicitly confirm a non-standard variant", () => {

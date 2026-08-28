@@ -12,7 +12,7 @@ describe("parent panel actions", () => {
     expect(panel).toContain("navigator.clipboard.writeText");
     expect(panel).toContain("Kopiuj mój e-mail");
     expect(panel).toContain("Wyślij e-mailem");
-    expect(login).toContain('searchParams.get("rola") === "rodzic"');
+    expect(login).toContain('requestedRole === "rodzic"');
   });
 
   it("supports consent decisions and child settings", () => {
@@ -41,5 +41,13 @@ describe("parent panel actions", () => {
 
   it("links visibly to child-safety information", () => {
     expect(panel).toContain('href="/bezpieczenstwo-dzieci-ai"');
+  });
+
+  it("keeps weekly e-mail reports out of the parent panel", () => {
+    expect(panel).not.toContain("Tygodniowe podsumowanie");
+    expect(panel).not.toContain("Raporty e-mail");
+    expect(panel).not.toContain("Tygodniowy raport");
+    expect(panel).toContain("Zobacz pełny postęp");
+    expect(panel).toContain("wykorzystanie AI");
   });
 });

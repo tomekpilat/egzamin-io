@@ -140,27 +140,22 @@ export default function ChooseRolePage() {
     <main className="onboarding-page">
       <div className="onboarding-top"><a className="onboarding-brand" href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a></div>
       <section className="onboarding-card">
-        <span className="section-kicker">Ostatni krok</span>
-        <h1>Jak chcesz korzystać z egzaminio?</h1>
-        <p>Na tej podstawie przygotujemy właściwy panel i pierwsze zadania.</p>
+        <div className="onboarding-heading"><BrandLogo compact /><h1>Kim jesteś?</h1><p>Wybierz rolę, żebyśmy pokazali Ci właściwy panel. Później nie da się jej zmienić samodzielnie.</p></div>
         <div className="onboarding-roles">
           {choices.map((choice) => (
-            <Button
+            <button
               type="button"
-              variant="outline"
               key={choice.value}
               className={role === choice.value ? "selected" : ""}
               onClick={() => setRole(choice.value)}
               aria-pressed={role === choice.value}
             >
-              <span>{choice.value === "student" ? "U" : "R"}</span>
+              <span className="role-choice-dot" aria-hidden="true" />
               <div>
-                <b>{choice.title}</b>
-                <em>{choice.description}</em>
-                <small>{choice.detail}</small>
+                <b>{choice.value === "student" ? "Uczeń" : "Rodzic lub opiekun"}</b>
+                <small>{choice.value === "student" ? "Rozwiązujesz zadania z arkuszy CKE, korzystasz ze wskazówek i tutora AI, śledzisz swój postęp." : "Zatwierdzasz konto dziecka, ustawiasz arkusz i cel tygodniowy, widzisz postęp, kupujesz Plus."}</small>
               </div>
-              <i>✓</i>
-            </Button>
+            </button>
           ))}
         </div>
         {role === "student" && (
@@ -176,8 +171,9 @@ export default function ChooseRolePage() {
         </div>
         {error && <Alert variant="destructive" className="auth-notice error"><AlertDescription role="status">{error}</AlertDescription></Alert>}
         <Button className="auth-submit" type="button" disabled={busy} onClick={saveRole}>
-          {busy ? "Chwila…" : "Przejdź do mojego panelu"}<span>→</span>
+          {busy ? "Chwila…" : "Dalej"}
         </Button>
+        <p className="auth-role-note">Konto ucznia wymaga zgody rodzica. Rozmowy z tutorem AI pozostają prywatne.</p>
       </section>
     </main>
   );
