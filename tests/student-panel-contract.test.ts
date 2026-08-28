@@ -36,7 +36,7 @@ describe("student panel navigation", () => {
     expect(practice).toContain('aria-label="Wybierz rocznik"');
     expect(practice).toContain('id="paper-progress-title"');
     expect(practice).toContain("formatQuestionSource(currentQuestion)");
-    expect(select).toContain('className={cn("z-[100]');
+    expect(select).toContain('className={cn("z-[120]');
   });
 
   it("removes dashboard chrome while the student is solving a question", () => {

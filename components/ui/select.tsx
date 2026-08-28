@@ -6,17 +6,26 @@ import { Select as SelectPrimitive } from "radix-ui";
 import { cn } from "@/lib/utils";
 
 const Select = SelectPrimitive.Root;
-const SelectValue = SelectPrimitive.Value;
+
+function SelectValue({ className, ...props }: React.ComponentProps<typeof SelectPrimitive.Value>) {
+  return (
+    <SelectPrimitive.Value
+      data-slot="select-value"
+      className={cn("min-w-0 flex-1 truncate text-left", className)}
+      {...props}
+    />
+  );
+}
 
 function SelectTrigger({ className, children, ...props }: React.ComponentProps<typeof SelectPrimitive.Trigger>) {
   return (
     <SelectPrimitive.Trigger
       data-slot="select-trigger"
-      className={cn("flex h-9 min-w-40 items-center justify-between gap-2 rounded-md border border-input bg-background px-3 py-2 text-sm font-semibold outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/40 disabled:cursor-not-allowed disabled:opacity-50", className)}
+      className={cn("flex h-9 min-w-0 items-center justify-between gap-2 overflow-hidden rounded-md border border-input bg-background px-3 py-2 text-sm font-semibold outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/40 disabled:cursor-not-allowed disabled:opacity-50", className)}
       {...props}
     >
       {children}
-      <SelectPrimitive.Icon asChild><ChevronDownIcon className="size-4 opacity-60" /></SelectPrimitive.Icon>
+      <SelectPrimitive.Icon asChild><ChevronDownIcon className="size-4 shrink-0 opacity-60" /></SelectPrimitive.Icon>
     </SelectPrimitive.Trigger>
   );
 }
@@ -27,7 +36,7 @@ function SelectContent({ className, children, position = "popper", ...props }: R
       <SelectPrimitive.Content
         data-slot="select-content"
         position={position}
-        className={cn("z-[100] max-h-80 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover text-popover-foreground", position === "popper" && "data-[side=bottom]:translate-y-1 data-[side=top]:-translate-y-1", className)}
+        className={cn("z-[120] max-h-80 min-w-[var(--radix-select-trigger-width)] overflow-hidden rounded-md border border-border bg-popover text-popover-foreground", position === "popper" && "data-[side=bottom]:translate-y-1 data-[side=top]:-translate-y-1", className)}
         {...props}
       >
         <SelectPrimitive.ScrollUpButton className="flex h-7 items-center justify-center"><ChevronUpIcon className="size-4" /></SelectPrimitive.ScrollUpButton>

@@ -7,6 +7,7 @@ const page = readFileSync(join(root, "app", "kalkulator-punktow", "page.tsx"), "
 const layout = readFileSync(join(root, "app", "kalkulator-punktow", "layout.tsx"), "utf8");
 const homepage = readFileSync(join(root, "app", "page.tsx"), "utf8");
 const styles = readFileSync(join(root, "app", "kalkulator-punktow", "calculator.css"), "utf8");
+const select = readFileSync(join(root, "components", "ui", "select.tsx"), "utf8");
 const requestForm = readFileSync(join(root, "components", "school-threshold-request-form.tsx"), "utf8");
 
 describe("public recruitment calculator", () => {
@@ -68,9 +69,24 @@ describe("public recruitment calculator", () => {
     expect(page).not.toContain('activeStep === "points" ? <header className="calculator-intro"');
     expect(styles).not.toContain('.calculator-app[data-step="school"]');
     expect(styles).toMatch(/\.calculator-app \{[^}]*overflow-anchor: none/);
+    expect(styles).toMatch(/\.calculator-app \{[^}]*width: min\(1120px, calc\(100% - 64px\)\)/);
     expect(styles).toMatch(/\.calculator-school-screen,[\s\S]*\.calculator-result-screen \{ width: min\(600px, 100%\); margin: 0 auto; \}/);
     expect(styles).toMatch(/\.calculator-steps \{[^}]*position: sticky/);
     expect(styles).toContain("grid-template-columns: repeat(3, minmax(0, 1fr))");
+  });
+
+  it("keeps grade dropdowns readable and presents the guide as a full-width section", () => {
+    expect(select).toContain('data-slot="select-value"');
+    expect(select).toContain("min-w-0 flex-1 truncate text-left");
+    expect(select).toContain("min-w-[var(--radix-select-trigger-width)]");
+    expect(styles).toContain("grid-template-columns: repeat(4, minmax(160px, 1fr))");
+    expect(styles).toMatch(/\.calculator-method \{[^}]*width: 100%/);
+    expect(styles).toMatch(/\.calculator-method \{[^}]*background: var\(--card\)/);
+    expect(styles).toMatch(/\.calculator-method \{[^}]*border: 0/);
+    expect(styles).toMatch(/\.calculator-method \{[^}]*border-top: 1px solid var\(--subtle-line\)/);
+    expect(styles).toMatch(/\.calculator-method \{[^}]*border-radius: 0/);
+    expect(styles).toMatch(/\.calculator-method-list \{[^}]*border: 0/);
+    expect(styles).toMatch(/\.calculator-method-list \{[^}]*border-radius: 0/);
   });
 
   it("uses the complete shared public footer", () => {
