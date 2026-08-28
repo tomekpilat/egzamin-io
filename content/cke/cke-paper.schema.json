@@ -38,6 +38,11 @@
         "notes": { "type": "string", "maxLength": 2000 }
       }
     },
+    "passages": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/passage" },
+      "default": []
+    },
     "questions": {
       "type": "array",
       "minItems": 1,
@@ -70,12 +75,26 @@
         "caption": { "type": "string" }
       }
     },
+    "passage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "paragraphs"],
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "title": { "type": "string", "minLength": 1 },
+        "author": { "type": "string", "minLength": 1 },
+        "paragraphs": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+        "footnotes": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "source": { "type": "string", "minLength": 1 }
+      }
+    },
     "contentBlock": {
       "oneOf": [
         { "type": "object", "additionalProperties": false, "required": ["type", "text"], "properties": { "type": { "const": "markdown" }, "text": { "type": "string" } } },
         { "type": "object", "additionalProperties": false, "required": ["type", "latex"], "properties": { "type": { "const": "math" }, "latex": { "type": "string" }, "display": { "type": "boolean", "default": true } } },
         { "type": "object", "additionalProperties": false, "required": ["type", "asset_id"], "properties": { "type": { "const": "image" }, "asset_id": { "$ref": "#/$defs/slug" } } },
-        { "type": "object", "additionalProperties": false, "required": ["type", "rows"], "properties": { "type": { "const": "table" }, "rows": { "type": "array", "minItems": 1, "items": { "type": "array", "minItems": 1, "items": { "type": "string" } } }, "header_rows": { "type": "integer", "minimum": 0, "default": 1 }, "caption": { "type": "string" } } }
+        { "type": "object", "additionalProperties": false, "required": ["type", "rows"], "properties": { "type": { "const": "table" }, "rows": { "type": "array", "minItems": 1, "items": { "type": "array", "minItems": 1, "items": { "type": "string" } } }, "header_rows": { "type": "integer", "minimum": 0, "default": 1 }, "caption": { "type": "string" } } },
+        { "type": "object", "additionalProperties": false, "required": ["type", "passage_id"], "properties": { "type": { "const": "passage" }, "passage_id": { "$ref": "#/$defs/slug" }, "default_open": { "type": "boolean", "default": false } } }
       ]
     },
     "question": {

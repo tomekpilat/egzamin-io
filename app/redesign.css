@@ -1002,6 +1002,15 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
 .cke-question-content { width: min(660px, 100%); display: grid; gap: 14px; color: var(--foreground); font-size: 15px; line-height: 1.65; }
 .cke-question-content p { margin: 0; }
 .cke-question-content .math-formula { overflow-x: auto; }
+.cke-passage-block { overflow: hidden; border: 1px solid var(--border); border-radius: 8px; background: var(--card); }
+.cke-passage-block summary { padding: 12px 14px; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 8px 12px; color: var(--foreground); cursor: pointer; }
+.cke-passage-block summary::marker { color: var(--quiet-copy); }
+.cke-passage-block summary > span { color: var(--brand); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.cke-passage-block summary > b { min-width: 0; font-size: 14px; font-weight: 650; }
+.cke-passage-block article { max-height: 460px; padding: 16px; overflow-y: auto; display: grid; gap: 12px; border-top: 1px solid var(--border); color: var(--muted-foreground); }
+.cke-passage-block article p { text-indent: 1.5em; }
+.cke-passage-block article small { display: block; color: var(--quiet-copy); font-size: 12px; }
+.cke-passage-block article cite { color: var(--quiet-copy); font-size: 12px; font-style: normal; text-align: right; }
 .cke-image-block { margin: 0; display: grid; gap: 8px; }
 .cke-image-block img { width: auto; max-width: 100%; max-height: 360px; object-fit: contain; object-position: left center; background: #fff; border: 1px solid var(--border); border-radius: 8px; }
 .cke-image-block figcaption,

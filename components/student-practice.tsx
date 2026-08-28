@@ -113,6 +113,11 @@ export function hasUnsavedPracticeAnswer(
   return Boolean(questionId && draftAnswer?.questionId === questionId && draftAnswer.index !== persistedAnswer);
 }
 
+export function countResponseWords(value: string) {
+  const normalized = value.trim();
+  return normalized ? normalized.split(/\s+/u).length : 0;
+}
+
 function normalizeQuestion(value: Record<string, unknown>): PracticeQuestion {
   const subject = value.subject;
   const sourceType = value.source_type;
@@ -360,6 +365,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
     : typeof currentQuestion?.selected_response?.text === "string"
       ? currentQuestion.selected_response.text
       : "";
+  const isPolishEssay = currentQuestion?.subject === "polish" && currentQuestion.paper_question_number === 18;
   const answerResult = currentQuestion && submittedAnswer?.questionId === currentQuestion.question_id
     ? submittedAnswer
     : currentQuestion?.grading_status && currentQuestion.explanation
@@ -670,8 +676,8 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
 
             {["numeric", "short_text", "long_text"].includes(currentQuestion.question_type) && <section className="task-written-response" aria-labelledby="written-answer-label">
               <label id="written-answer-label" htmlFor="written-answer">Twoje rozwiązanie</label>
-              <Textarea id="written-answer" value={writtenAnswer} onChange={(event) => setWrittenAnswer(event.target.value)} rows={currentQuestion.question_type === "long_text" ? 8 : 3} placeholder="Zapisz obliczenia, uzasadnienie i odpowiedź. Możesz używać zapisu matematycznego." disabled={submitting || Boolean(answerResult)} />
-              {!answerResult && <small>Po zapisaniu porównasz rozwiązanie z kryteriami CKE i samodzielnie przyznasz punkty.</small>}
+              <Textarea id="written-answer" value={writtenAnswer} onChange={(event) => setWrittenAnswer(event.target.value)} rows={isPolishEssay ? 20 : currentQuestion.question_type === "long_text" ? 8 : 3} placeholder={currentQuestion.subject === "mathematics" ? "Zapisz obliczenia, uzasadnienie i odpowiedź. Możesz używać zapisu matematycznego." : isPolishEssay ? "Napisz wypracowanie. Podziel tekst na akapity i pamiętaj o wszystkich warunkach wybranego tematu." : "Zapisz pełną odpowiedź i uzasadnienie, jeśli wymaga go polecenie."} disabled={submitting || Boolean(answerResult)} />
+              {!answerResult && <small>{isPolishEssay ? `Liczba słów: ${countResponseWords(writtenAnswer)} · wymagane co najmniej 200.` : "Po zapisaniu porównasz rozwiązanie z kryteriami CKE i samodzielnie przyznasz punkty."}</small>}
             </section>}
 
             {answerResult && <div className={`task-verdict ${answerResult.answer_is_correct === null ? "is-review" : answerResult.answer_is_correct ? "is-correct" : "is-incorrect"}`} data-comment-anchor="verdict">

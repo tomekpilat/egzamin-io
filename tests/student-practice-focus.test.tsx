@@ -2,6 +2,7 @@ import { cleanup, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import {
+  countResponseWords,
   hasUnsavedPracticeAnswer,
   StudentPractice,
   UNSAVED_ANSWER_MESSAGE,
@@ -105,6 +106,11 @@ afterEach(() => {
 });
 
 describe("StudentPractice focus mode", () => {
+  it("counts words in a Polish extended response", () => {
+    expect(countResponseWords("  Każdy może\nkształtować swoją przyszłość. ")).toBe(5);
+    expect(countResponseWords("   ")).toBe(0);
+  });
+
   it("renders the redesigned learning, progress and settings views with working actions", async () => {
     prepareRpc();
     const onNavigate = vi.fn();

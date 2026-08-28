@@ -7,7 +7,7 @@ import { pathToFileURL } from "node:url";
 const SUBJECTS = new Set(["mathematics", "polish", "english"]);
 const SESSIONS = new Set(["main", "additional"]);
 const QUESTION_TYPES = new Set(["single_choice", "multiple_choice", "numeric", "short_text", "long_text"]);
-const BLOCK_TYPES = new Set(["markdown", "math", "image", "table"]);
+const BLOCK_TYPES = new Set(["markdown", "math", "image", "table", "passage"]);
 const SHA256 = /^[a-f0-9]{64}$/;
 const SLUG = /^[a-z0-9][a-z0-9-]{2,119}$/;
 
@@ -29,9 +29,17 @@ function nonEmpty(value) {
 
 export function prepareManifest(input) {
   const manifest = structuredClone(input);
+  const passages = new Map((manifest.passages ?? []).map((passage) => [passage.id, passage]));
   if (Array.isArray(manifest.questions)) {
     manifest.questions = manifest.questions.map((question) => {
-      const normalized = { ...question };
+      const normalized = {
+        ...question,
+        content_blocks: (question.content_blocks ?? []).map((block) => {
+          if (block.type !== "passage" || !block.passage_id) return block;
+          const passage = passages.get(block.passage_id);
+          return passage ? { type: "passage", ...passage, default_open: block.default_open ?? false } : block;
+        }),
+      };
       delete normalized.source_checksum;
       return { ...normalized, source_checksum: sha256(canonicalJson(normalized)) };
     });
@@ -80,6 +88,18 @@ export function validateManifest(input) {
     if (!nonEmpty(permission.verified_by)) add("permission.verified_by", "wymagana osoba potwierdzająca zgodę");
     if (!nonEmpty(permission.verified_at) || Number.isNaN(Date.parse(permission.verified_at))) add("permission.verified_at", "wymagana data ISO 8601");
   }
+
+  const passages = input.passages ?? [];
+  const passageIds = new Set();
+  if (!Array.isArray(passages)) add("passages", "wymagana tablica");
+  else passages.forEach((passage, index) => {
+    const path = `passages[${index}]`;
+    if (!SLUG.test(passage?.id ?? "")) add(`${path}.id`, "niepoprawny identyfikator");
+    else if (passageIds.has(passage.id)) add(`${path}.id`, "duplikat identyfikatora");
+    passageIds.add(passage?.id);
+    if (!nonEmpty(passage?.title)) add(`${path}.title`, "wymagany tytuł");
+    if (!Array.isArray(passage?.paragraphs) || !passage.paragraphs.length || passage.paragraphs.some((paragraph) => !nonEmpty(paragraph))) add(`${path}.paragraphs`, "wymagana niepusta lista akapitów");
+  });
 
   const questions = input.questions;
   if (!Array.isArray(questions) || !questions.length) {
@@ -143,6 +163,7 @@ export function validateManifest(input) {
       if (block?.type === "image" && !assetIds.has(block.asset_id)) add(`${path}.content_blocks[${blockIndex}].asset_id`, "brak odpowiadającego zasobu");
       if (block?.type === "math" && !nonEmpty(block.latex)) add(`${path}.content_blocks[${blockIndex}].latex`, "wymagany zapis LaTeX");
       if (block?.type === "table" && !Array.isArray(block.rows)) add(`${path}.content_blocks[${blockIndex}].rows`, "wymagana tablica wierszy");
+      if (block?.type === "passage" && !passageIds.has(block.passage_id)) add(`${path}.content_blocks[${blockIndex}].passage_id`, "brak odpowiadającego tekstu źródłowego");
     });
   });
 

@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2026-main-polish-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2026-main-polish-100-x",
+    "source_document_id": "OPOP-100-X-2605",
+    "source_pdf_sha256": "05d4076b2b6353058c40c59a28a8bfc456df2c593b18ecdacecc6935de4bb14a",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2026-2/",
+    "source_label": "CKE 2026 · język polski · termin główny · wariant 100-X",
+    "exam_year": 2026,
+    "exam_session": "main",
+    "subject": "polish",
+    "variant_code": "100-X",
+    "question_count": 18,
+    "supplementary_sources": [
+      { "id": "cke-2026-polish-answer-card", "path": "content/cke/sources/2026/jezyk_polski/OPOP-100-X-2605-karta-odpowiedzi.pdf", "sha256": "47e5d00fae1b0045cd507563ec0fcb1e9dab0d7f8f91d1566086514421159590", "label": "Karta odpowiedzi, wersja X" },
+      { "id": "cke-2026-polish-scoring-rules", "path": "content/cke/sources/2026/jezyk_polski/OPOP-100-400-500-660-2605-zasady.pdf", "sha256": "97da801836b3cc7467cbec4fe1c36ad25ba7096a813e3c0ae7c9c9524ae91ad8", "label": "Zasady oceniania rozwiązań" }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [
+    {
+      "id": "przyjaciel-automateusza",
+      "author": "Stanisław Lem",
+      "title": "Przyjaciel Automateusza",
+      "paragraphs": [
+        "Pewien robot, mając wyruszyć w daleką a niebezpieczną drogę, posłyszał o wielce pożytecznym urządzeniu, które wynalazca jego nazwał elektrycznym przyjacielem. Pomyślał, że raźniej mu będzie na duszy, jeśli otrzyma towarzysza, choćby miała nim być tylko maszyna, udał się więc do wynalazcy i poprosił, aby opowiedział o sztucznym przyjacielu.",
+        "– Służę ci – odparł wynalazca. (Jak wiadomo, w bajkach wszyscy się „tykają”¹, nawet smoków nie tytułuje się panami i jedynie do królów trzeba się odzywać w liczbie mnogiej). To mówiąc, wyjął z kieszeni garść metalowych ziarenek, podobnych do drobnego śrutu.",
+        "– Co to jest? – zdziwił się robot. – A jak się nazywasz, bo zapomniałem cię o to zapytać we właściwym miejscu tej bajki? – spytał wynalazca. – Nazywam się Automateusz. – To dla mnie za długie, będę cię nazywał Automkiem. – Kiedy to od Automasza, ale niech ci będzie – odparł tamten.",
+        "– A zatem, mój zacny Automku, masz przed sobą garść elektroprzyjaciół. Musisz wiedzieć, że z powołania i specjalizacji jestem miniaturyzatorem. To znaczy urządzenia wielkie i ciężkie zmieniam na małe i przenośne. Każde takie ziarenko jest koncentratem elektrycznego myślenia, niezmiernie wszechstronnym i rozumnym. Nie powiem ci, że to geniusz, gdyż byłaby to przesada, podobna do fałszywej reklamy. Co prawda, zamiarem moim jest właśnie stworzyć elektrycznych geniuszów i nie spocznę, póki nie zrobię tak malutkich, aby ich można było nosić w kieszeni tysiące; dopiero kiedy wsypię ich do worków i będę sprzedawał na wagę, jak piasek, dopnę wymarzonego celu. Ale mniejsza o te moje plany na przyszłość, na razie sprzedaję elektroprzyjaciół na sztuki, i to niedrogo: za jednego biorę tyle, ile zaważy, w brylantach. Przyznasz chyba, jaka to umiarkowana cena, wziąwszy pod uwagę, że możesz takiego elektroprzyjaciela włożyć do ucha, gdzie będzie ci szeptał dobre rady i służył wszelką informacją. […] Czy bierzesz go? Gdybyś reflektował na tuzin, mógłbym odstąpić taniej…",
+        "– Nie, na razie wystarczy mi jeden – odparł Automateusz. – Ale chciałbym jeszcze wiedzieć, czego właściwie mogę się po nim spodziewać? Czy potrafi dopomóc w ciężkiej sytuacji życiowej?",
+        "– Jasne, przecież po to właśnie jest! – odparł pogodnie wynalazca. Podrzucił na dłoni garść ziaren, lśniących metalicznie, gdyż były sporządzone z rzadkich metali, i ciągnął: – Oczywiście, nie możesz liczyć na pomoc w sensie fizycznym, ale nie o nią przecież chodzi. Pokrzepiające uwagi, dobre i bystre rady, rozsądne refleksje, korzystne dla ciebie wskazania, napomnienia, przestrogi, jak również słowa otuchy, sentencje, dodające wiary we własne siły, oraz głębokie myśli, pozwalające sprostać każdej, jakiejkolwiek trudnej, a nawet groźnej sytuacji – oto tylko drobna część repertuaru moich elektroprzyjaciół. Są absolutnie oddani, wierni, stale przytomni, bo nigdy nie śpią, są też nad wyraz trwali, estetyczni, a sam widzisz, jacy poręczni! Więc jak, bierzesz tylko jednego?",
+        "– Tak – odparł Automateusz. – Powiedz mi jeszcze, proszę, co będzie, jeżeli mi go ktoś ukradnie? Czy wróci do mnie? Czy doprowadzi złodzieja do zguby? – Co to, to nie – odrzekł wynalazca. – Będzie mu służył tak samo pilnie i wiernie jak poprzednio tobie. Nie możesz wymagać zbyt wiele, mój Automku, nie opuści cię w biedzie, jeśli ty jego nie opuścisz. Ale to ci nie grozi, jeżeli tylko włożysz go do ucha i będziesz miał je zawsze zatkane watą…",
+        "– Dobrze – zgodził się Automateusz. – A jak mam do niego mówić? – Wcale nie musisz mówić, wystarczy, abyś bezdźwięcznie wyszeptał cokolwiek, a usłyszy cię doskonale. Co do jego imienia, to zwie się Wuch. Możesz mówić doń „mój Wuchu”, to wystarczy. – Doskonale – odparł Automateusz.",
+        "Zważyli Wucha, wynalazca otrzymał zań ładny brylancik, a robot, uspokojony, że ma już towarzysza, bliską duszę na daleką drogę, ruszył przed siebie."
+      ],
+      "footnotes": ["¹ Tykać się – zwracając się do kogoś, mówić mu ty; mówić komuś po imieniu."],
+      "source": "Stanisław Lem, Przyjaciel Automateusza, [w:] Bajki robotów, Kraków 2017."
+    },
+    {
+      "id": "wieczne-pioro",
+      "title": "Fragment lektury obowiązkowej",
+      "paragraphs": [
+        "Drugi wynalazek był jeszcze bardziej pomysłowy. Wynalazca nazwał go „wiecznym piórem”. […] Wystarczy powiedzieć, że za jego pomocą można było pisać farbą wielkie i grube litery na wysokości trzech do czterech metrów. Ku pochwale Rudego stwierdzić należy, że „wieczne pióro” było niewielkie i łatwo dawało się ukryć nawet pod marynarką. Dodać trzeba, że w czasie pisania „wiecznym piórem” zbyteczne było maczanie go co chwila w farbie. Całe słowo pisało się jednym zamachem."
+      ]
+    },
+    {
+      "id": "ksztaltowac-przyszlosc",
+      "author": "Stephen Hawking",
+      "title": "Czy możemy kształtować naszą przyszłość?",
+      "paragraphs": [
+        "Gdy pomyślę o geniuszu, od razu przychodzi mi do głowy Einstein². Skąd się wzięły jego genialne idee? Być może z połączenia takich cech jak wnikliwa intuicja, nieschematyczne myślenie i wybitny intelekt. Einstein potrafił zajrzeć pod powierzchnię rzeczywistości, aby dotrzeć do jej głębokiej struktury. Nie ulegał dyktatowi zdrowego rozsądku. Miał odwagę zgłębiać idee, które innym zdawały się niedorzeczne. I to wyzwoliło kreatywne moce jego umysłu, co zapewniło mu rangę największego geniusza nie tylko jego czasów, lecz także wszystkich czasów.",
+        "Sto lat później fizycy wiedzą znacznie więcej o wszechświecie aniżeli Einstein. Dysponujemy obecnie potężnymi narzędziami badawczymi, jak akceleratory cząstek³, superkomputery czy teleskopy kosmiczne. A jednak wyobraźnia nadal ma ogromne znaczenie. Dzięki niej możemy m.in. przemieszczać się bez ograniczeń w czasie i przestrzeni czy rozpatrywać najbardziej egzotyczne zjawiska przyrody.",
+        "Jako małego chłopca niezwykle interesowało mnie, jak rozmaite rzeczy działają. W owych czasach można było po prostu coś rozebrać i podpatrzeć mechanizm. Nie zawsze udawało się ponownie złożyć zabawki, które rozłożyłem na części, jednak niewątpliwie w ten sposób nauczyłem się więcej niż współcześnie chłopiec lub dziewczynka, którzy próbowali zrobić to samo ze smartfonem.",
+        "Moja obecna praca również polega na dociekaniu, jak coś działa, tyle że w znacznie większej skali. Już nie demontuję miniaturowych kolejek, lecz usiłuję dojść do tego, jak działa wszechświat. Jest to skomplikowane zajęcie, które fascynowało mnie i przyprawiało o dreszcz emocji przez całe moje dorosłe życie. Poszczęściło mi się, że żyłem w okresie wspaniałego rozkwitu obranej przeze mnie dyscypliny, kosmologii, która zajmuje się badaniem początków wszechświata.",
+        "Obecnie, dzięki pracom teoretycznym i sukcesom badań eksperymentalnych, kosmologia doprowadziła do tego, że wszechświat ma przed nami coraz mniej tajemnic. Jednak nadal są wielkie pytania, na które nie znamy odpowiedzi, i przed nami jest jeszcze wiele pracy.",
+        "Co więc czeka tych, którzy są młodzi w chwili obecnej? Mogę powiedzieć z pełnym przekonaniem, że ich przyszłość będzie uzależniona od nauki i techniki w większym stopniu niż wcześniejszych pokoleń. Będą oni musieli poznać naukę lepiej niż ktokolwiek przed nimi, gdyż będzie ona stanowić o ich codziennym życiu.",
+        "Tak naprawdę nie wiemy, na czym będzie polegać następne wielkie odkrycie naukowe ani kto tego dokona. Jeżeli ukażemy satysfakcję, jaką dają odkrycia, zastosujemy innowacyjne i przystępne sposoby upowszechniania wiedzy, to istotnie zwiększymy szansę na odnalezienie nowego Einsteina i zainspirowanie go do podjęcia pracy naukowej. Kimkolwiek on się okaże.",
+        "Pamiętajcie zatem, aby kierować wzrok ku gwiazdom, a nie – patrzeć na własne stopy. Próbujcie rozeznać się w tym, co widzicie, i zadawajcie sobie pytanie, dlaczego wszechświat w ogóle istnieje. Bądźcie dociekliwi. Najważniejsze, aby się nie poddawać. Puśćcie wodze swojej wyobraźni. Kształt przyszłości zależy od was."
+      ],
+      "footnotes": ["² Albert Einstein (1879–1955) – wybitny fizyk i matematyk, laureat Nagrody Nobla.", "³ Akcelerator cząstek – urządzenie służące do nadawania cząstkom elementarnym wielkich prędkości."],
+      "source": "Na podstawie: Stephen Hawking, Czy możemy kształtować naszą przyszłość?, przeł. Marek Krośniak, Poznań 2018."
+    }
+  ],
+  "questions": [
+    {
+      "id": "cke-2026-main-polish-100-x-q01", "number": "1", "sort_order": 1, "source_pages": [5, 6], "type": "multiple_choice", "topic": "Czytanie ze zrozumieniem", "difficulty": 1,
+      "prompt": "Na podstawie fragmentu „Przyjaciela Automateusza” oceń prawdziwość stwierdzeń: 1) Automateusz spotkał się z wynalazcą, aby nakłonić go do stworzenia elektrycznego przyjaciela. 2) Automateusz oczekiwał, że elektryczny przyjaciel będzie dla niego wsparciem podczas podróży.",
+      "answer_options": ["Stwierdzenie 1 — P", "Stwierdzenie 1 — F", "Stwierdzenie 2 — P", "Stwierdzenie 2 — F"], "answer_key": { "correct_indices": [1, 2] },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedzi F, P", "0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi"] },
+      "explanation": "Pierwsze zdanie jest fałszywe: Automateusz przyszedł poznać i kupić istniejące urządzenie. Drugie jest prawdziwe: szukał towarzysza i wsparcia na niebezpieczną podróż.",
+      "solution_steps": ["Znajdź powód wizyty Automateusza u wynalazcy.", "Porównaj oczekiwania bohatera z opisem pomocy elektroprzyjaciela.", "Zaznacz kolejno F i P."],
+      "hints": ["Urządzenie istniało już przed wizytą Automateusza.", "Zwróć uwagę na pytanie o pomoc w ciężkiej sytuacji życiowej."],
+      "content_blocks": [{ "type": "passage", "passage_id": "przyjaciel-automateusza", "default_open": true }], "assets": []
+    },
+    {
+      "id": "cke-2026-main-polish-100-x-q02", "number": "2", "sort_order": 2, "source_pages": [5, 6], "type": "single_choice", "topic": "Wyszukiwanie informacji", "difficulty": 1,
+      "prompt": "Która informacja jest niezgodna z treścią fragmentu „Przyjaciela Automateusza”?",
+      "answer_options": ["Wynalazca zamierzał kontynuować pracę nad miniaturyzowaniem elektrycznych przyjaciół.", "Wynalazca obiecał Automateuszowi, że elektryczny przyjaciel będzie mu zawsze wierny, niezależnie od okoliczności.", "Wynalazca wyposażył elektrycznego przyjaciela w umiejętność wspierania swojego towarzysza podróży.", "Wynalazca wyjaśnił Automateuszowi, że na cenę elektrycznego przyjaciela wpływa jego waga."], "answer_key": { "correct_index": 1 },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedź B", "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi"] },
+      "explanation": "Wynalazca wprost mówi, że po kradzieży Wuch służyłby złodziejowi równie wiernie. Wierność nie jest więc niezależna od okoliczności.",
+      "solution_steps": ["Sprawdź każdą informację w tekście.", "Odszukaj rozmowę o możliwej kradzieży Wucha.", "Wybierz odpowiedź B."],
+      "hints": ["Kluczowy jest fragment o tym, komu Wuch będzie służył po kradzieży.", "Porównaj słowo „zawsze” z warunkiem postawionym przez wynalazcę."],
+      "content_blocks": [{ "type": "passage", "passage_id": "przyjaciel-automateusza" }], "assets": []
+    },
+    {
+      "id": "cke-2026-main-polish-100-x-q03", "number": "3", "sort_order": 3, "source_pages": [5, 6, 7], "type": "single_choice", "topic": "Narrator i konwencja bajki", "difficulty": 1,
+      "prompt": "Wynalazca, używając sformułowania „Służę ci”, zwrócił się do Automateusza na „ty”, co według narratora jest zgodne z zasadami:",
+      "answer_options": ["przyjętymi w świecie bajek", "komunikowania się z robotami", "zwracania się do ludzi młodych", "obowiązującymi wśród znajomych"], "answer_key": { "correct_index": 0 },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedź A", "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi"] },
+      "explanation": "Narrator komentuje w nawiasie, że w bajkach wszyscy zwracają się do siebie na „ty”.",
+      "solution_steps": ["Odszukaj komentarz narratora zapisany w nawiasie.", "Ustal, jakiej konwencji dotyczy.", "Wybierz odpowiedź A."],
+      "hints": ["Odpowiedź znajduje się bezpośrednio po słowach „Służę ci”.", "Nie chodzi o roboty, lecz o rodzaj opowieści."],
+      "content_blocks": [{ "type": "passage", "passage_id": "przyjaciel-automateusza" }], "assets": []
+    },
+    {
+      "id": "cke-2026-main-polish-100-x-q04", "number": "4", "sort_order": 4, "source_pages": [5, 6, 7], "type": "long_text", "topic": "Argumentowanie", "difficulty": 2,
+      "prompt": "Perswazja to przekonywanie kogoś, aby zrobił coś lub zachował się w sposób, jakiego chce inna osoba. Sformułuj argument do tezy: „Wynalazca, z którym spotkał się Automateusz, dobrze opanował sztukę perswazji”. Odwołaj się do definicji i fragmentu utworu.",
+      "answer_key": { "accepted_results": ["Wynalazca wymienił zalety i korzystną cenę produktu, czym nakłonił Automateusza do zakupu Wucha."], "assessment": "rubric" },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – poprawne sformułowanie argumentu", "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi"] },
+      "explanation": "Pełny argument powinien wskazać zabieg perswazyjny wynalazcy i jego skutek: wyliczał zalety oraz przedstawiał cenę jako korzystną, dzięki czemu skłonił Automateusza do zakupu.",
+      "solution_steps": ["Nazwij działanie wynalazcy, np. wyliczanie zalet produktu.", "Pokaż, że miało przekonać Automateusza.", "Połącz działanie z efektem — zakupem Wucha."],
+      "hints": ["Argument nie może być tylko opisem małego rozmiaru urządzenia.", "Użyj schematu: działanie wynalazcy → przekonanie klienta → zakup."],
+      "content_blocks": [{ "type": "passage", "passage_id": "przyjaciel-automateusza" }], "assets": []
+    },
+    {
+      "id": "cke-2026-main-polish-100-x-q05", "number": "5", "sort_order": 5, "source_pages": [5, 6, 7], "type": "multiple_choice", "topic": "Narrator", "difficulty": 2,
+      "prompt": "Oceń prawdziwość stwierdzeń: 1) Z pierwszego akapitu wynika, że narrator wie, o czym myśli Automateusz. 2) Zdanie w nawiasie jest komentarzem narratora do pierwszej wypowiedzi wynalazcy.",
+      "answer_options": ["Stwierdzenie 1 — P", "Stwierdzenie 1 — F", "Stwierdzenie 2 — P", "Stwierdzenie 2 — F"], "answer_key": { "correct_indices": [0, 2] },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedzi P, P", "0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi"] },
+      "explanation": "Narrator przytacza myśl Automateusza, więc zna jego wnętrze. Nawias objaśnia formę „Służę ci”, dlatego jest komentarzem do wypowiedzi wynalazcy.",
+      "solution_steps": ["Sprawdź, czy narrator relacjonuje myśli bohatera.", "Ustal, do czego odnosi się zdanie w nawiasie.", "Zaznacz P i P."],
+      "hints": ["Czasownik „pomyślał” ujawnia wiedzę narratora.", "Nawias wyjaśnia zwracanie się na „ty”."],
+      "content_blocks": [{ "type": "passage", "passage_id": "przyjaciel-automateusza" }], "assets": []
+    },
+    {
+      "id": "cke-2026-main-polish-100-x-q06", "number": "6", "sort_order": 6, "source_pages": [8], "type": "multiple_choice", "topic": "Słowotwórstwo", "difficulty": 2,
+      "prompt": "Oceń prawdziwość stwierdzeń: 1) Wyrazy „brylant” i „brylancik” należą do tej samej rodziny wyrazów. 2) W wyrazie „brylancik” formant pełni tę samą funkcję co formant w wyrazie „ziarenko”.",
+      "answer_options": ["Stwierdzenie 1 — P", "Stwierdzenie 1 — F", "Stwierdzenie 2 — P", "Stwierdzenie 2 — F"], "answer_key": { "correct_indices": [0, 2] },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedzi P, P", "0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi"] },
+      "explanation": "„Brylancik” pochodzi od „brylant”, więc oba wyrazy tworzą rodzinę. Formanty -ik i -ko mają tu funkcję zdrabniającą.",
+      "solution_steps": ["Wskaż wyraz podstawowy dla „brylancik”.", "Określ znaczenie formantów w obu zdrobnieniach.", "Zaznacz P i P."],
+      "hints": ["Sprawdź wspólny rdzeń wyrazów.", "Oba wyrazy nazywają przedmiot mniejszy od podstawowego."],
+      "content_blocks": [], "assets": []
+    },
+    {
+      "id": "cke-2026-main-polish-100-x-q07", "number": "7", "sort_order": 7, "source_pages": [8], "type": "long_text", "topic": "Interpunkcja", "difficulty": 2,
+      "prompt": "Wstaw trzy brakujące przecinki: „Jeśli potrzebujesz towarzysza przyjdź do mnie. Możesz zyskać przyjaciela, który wesprze Cię w każdej sytuacji. Będzie wierny i stale przytomny, a przy tym estetyczny poręczny i trwały. Zapłacisz w brylantach – tyle, ile waży. Kupując kilku elektroprzyjaciół masz gwarancję korzystnego rabatu.”",
+      "answer_key": { "accepted_results": ["Jeśli potrzebujesz towarzysza, przyjdź do mnie. Będzie wierny i stale przytomny, a przy tym estetyczny, poręczny i trwały. Kupując kilku elektroprzyjaciół, masz gwarancję korzystnego rabatu."], "assessment": "rubric" },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – poprawne wpisanie trzech przecinków", "0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi"] },
+      "explanation": "Przecinki stawiamy po zdaniu podrzędnym „Jeśli potrzebujesz towarzysza”, między składnikami wyliczenia „estetyczny, poręczny” oraz po imiesłowowym równoważniku „Kupując kilku elektroprzyjaciół”.",
+      "solution_steps": ["Oddziel zdanie warunkowe od nadrzędnego.", "Rozdziel elementy wyliczenia cech.", "Oddziel imiesłowowy równoważnik zdania."],
+      "hints": ["Szukaj konstrukcji zaczynających się od „jeśli” i „kupując”.", "W wyliczeniu przecinek stoi między pierwszym i drugim przymiotnikiem."],
+      "content_blocks": [], "assets": []
+    },
+    {
+      "id": "cke-2026-main-polish-100-x-q08", "number": "8", "sort_order": 8, "source_pages": [5, 6, 9], "type": "long_text", "topic": "Składnia i przekształcanie zdań", "difficulty": 3,
+      "prompt": "8.1. Ustal, czy zdanie „Każde takie ziarenko jest koncentratem elektrycznego myślenia, niezmiernie wszechstronnym i rozumnym” jest pojedyncze czy złożone, oraz wskaż zdanie tego samego typu: C) „Gdybyś reflektował na tuzin, mógłbym odstąpić taniej” albo D) „A zatem, mój zacny Automku, masz przed sobą garść elektroprzyjaciół”. 8.2. Połącz w jedno zdanie wielokrotnie złożone, używając dwóch spójników z listy: czy, i, którzy, lub, ponieważ, więc: „Wynalazcy udało się stworzyć elektroprzyjaciół. Elektroprzyjaciele byli niewielkich rozmiarów. Elektroprzyjaciele mieścili się nawet w kieszeni”.",
+      "answer_key": { "accepted_results": ["8.1: pojedyncze i D (AD). 8.2: np. Wynalazcy udało się stworzyć elektroprzyjaciół i byli oni niewielkich rozmiarów, więc mieścili się nawet w kieszeni."], "assessment": "rubric" },
+      "scoring": { "max_points": 3, "rules": ["1 pkt – w 8.1 odpowiedzi A i D", "2 pkt – w 8.2 zachowany sens, dwa wymagane spójniki i poprawna interpunkcja", "1 pkt – w 8.2 zachowany sens, ale błąd interpunkcyjny albo użycie tylko jednego wymaganego spójnika", "0 pkt – rozwiązanie niepoprawne lub niepełne"] },
+      "explanation": "Pierwsze wypowiedzenie ma jedno orzeczenie, więc jest pojedyncze, tak jak odpowiedź D. W 8.2 trzeba zbudować zdanie wielokrotnie złożone, zachować wszystkie trzy informacje, użyć dwóch wskazanych spójników i poprawnej interpunkcji.",
+      "solution_steps": ["Policz orzeczenia w zdaniu z „ziarenkiem”.", "Porównaj je z wypowiedzeniami C i D.", "Połącz trzy informacje relacją dodawania i wyniku, np. „i…, więc…”."],
+      "hints": ["Słowa „jest koncentratem” tworzą jedno orzeczenie.", "Najprostsza konstrukcja do 8.2 wykorzystuje spójniki „i” oraz „więc”."],
+      "content_blocks": [{ "type": "passage", "passage_id": "przyjaciel-automateusza" }], "assets": []
+    },
+    {
+      "id": "cke-2026-main-polish-100-x-q09", "number": "9", "sort_order": 9, "source_pages": [10], "type": "long_text", "topic": "Mały Książę — przyjaźń", "difficulty": 2,
+      "prompt": "Wybierz dwa zdjęcia i wyjaśnij związek każdego z nich z tematem przyjaźni przedstawionej w „Małym Księciu” Antoine’a de Saint-Exupéry’ego. Podaj numery zdjęć oraz dwa wyjaśnienia.",
+      "answer_key": { "accepted_results": ["1 – kolor zboża przypominał Lisowi włosy Małego Księcia", "2 – Pilot i Mały Książę zaprzyjaźnili się na pustyni", "3 – ptaki umożliwiły podróż w poszukiwaniu przyjaciela", "4 – ukąszenie żmii miało umożliwić powrót do Róży", "5 – Róża była przyjaciółką Małego Księcia", "6 – Lis wyjaśnił Małemu Księciu znaczenie przyjaźni"], "assessment": "rubric" },
+      "scoring": { "max_points": 2, "rules": ["2 pkt – wyjaśnienie związku dwóch zdjęć z tematem przyjaźni w lekturze", "1 pkt – wyjaśnienie związku jednego zdjęcia", "0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi"] },
+      "explanation": "Każde wyjaśnienie musi odwoływać się do konkretnego wydarzenia lub relacji z lektury, nie tylko nazywać obiekt widoczny na zdjęciu.",
+      "solution_steps": ["Wybierz dwa symbole, których rolę w lekturze pamiętasz najlepiej.", "Dla każdego przypomnij postać lub wydarzenie.", "Wyjaśnij, jak ten element wiąże się z przyjaźnią."],
+      "hints": ["Najbardziej bezpośrednie są zdjęcia lisa i pustyni.", "Samo zdanie „lis symbolizuje przyjaźń” jest zbyt ogólne — przywołaj oswajanie."],
+      "content_blocks": [{ "type": "image", "asset_id": "q09-friendship-photos" }],
+      "assets": [{ "id": "q09-friendship-photos", "path": "public/cke/2026/polish/opop-100-x-2605/q09-friendship-photos.png", "sha256": "760461133981c4bd96cf43c26384687f8eedc53700cd44af268945c3380012d2", "alt": "Sześć ponumerowanych zdjęć: łan zboża, pustynia, lecące ptaki, żmija, róża i lis.", "caption": "Zdjęcia 1–6 z zadania 9 arkusza OPOP-100-X-2605." }]
+    },
+    {
+      "id": "cke-2026-main-polish-100-x-q10", "number": "10", "sort_order": 10, "source_pages": [11], "type": "long_text", "topic": "Kamienie na szaniec", "difficulty": 2,
+      "prompt": "10.1. Podaj tytuł lektury obowiązkowej, z której pochodzi fragment o „wiecznym piórze”. 10.2. Czy Rudy pracował nad wynalazkami, aby zaspokoić swoje ambicje? Przedstaw stanowisko i uzasadnij je, odwołując się do całego utworu.",
+      "answer_key": { "accepted_results": ["10.1: Kamienie na szaniec. 10.2: stanowisko tak lub nie wraz z uzasadnieniem pokazującym, że wynalazki służyły Małemu Sabotażowi i walce z okupantem."], "assessment": "rubric" },
+      "scoring": { "max_points": 2, "rules": ["1 pkt – poprawny tytuł „Kamienie na szaniec”", "1 pkt – stanowisko i uzasadnienie zawierające odwołanie do treści całego utworu", "0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi"] },
+      "explanation": "Fragment pochodzi z „Kamieni na szaniec”. Ocena motywacji może być różna, ale uzasadnienie musi odwołać się do całości: Rudy wykorzystywał pomysłowość przede wszystkim w służbie Małego Sabotażu i oporu przeciw okupantowi.",
+      "solution_steps": ["Rozpoznaj Rudego i realia Małego Sabotażu.", "Zapisz własne stanowisko.", "Podeprzyj je konkretną funkcją wynalazków w działaniach bohaterów."],
+      "hints": ["„Wieczne pióro” służyło do malowania dużych napisów.", "Uzasadnienie powinno wyjść poza sam cytowany fragment."],
+      "content_blocks": [{ "type": "passage", "passage_id": "wieczne-pioro", "default_open": true }], "assets": []
+    },
+    {
+      "id": "cke-2026-main-polish-100-x-q11", "number": "11", "sort_order": 11, "source_pages": [12, 13], "type": "long_text", "topic": "Kompozycja tekstu", "difficulty": 2,
+      "prompt": "Przyporządkuj pytania do akapitów tekstu Hawkinga. A) Czym pasjonował się Hawking w dzieciństwie? B) Jakie cechy charakteryzowały Einsteina jako naukowca? C) Do czego naukowcom może być potrzebna wyobraźnia? D) Co może zachęcić uczonych do podjęcia pracy naukowej? E) Czy kosmologia wyjaśniła już wszystkie zagadki wszechświata? Uzupełnij: akapit 3 — …, akapit 5 — …, akapit 7 — …",
+      "answer_key": { "accepted_results": ["3–A, 5–E, 7–D"], "assessment": "rubric" },
+      "scoring": { "max_points": 2, "rules": ["2 pkt – poprawne wpisanie trzech liter: 3–A, 5–E, 7–D", "1 pkt – poprawne wpisanie dwóch liter", "0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi"] },
+      "explanation": "Akapit 3 opisuje dziecięce zainteresowanie działaniem rzeczy, akapit 5 mówi o nierozwiązanych pytaniach kosmologii, a akapit 7 — o sposobach inspirowania przyszłych naukowców.",
+      "solution_steps": ["Streść jednym zdaniem każdy wskazany akapit.", "Dopasuj streszczenie do pytania.", "Zapisz 3–A, 5–E, 7–D."],
+      "hints": ["W akapicie 5 pojawia się wyrażenie „nadal są wielkie pytania”.", "Akapit 7 dotyczy upowszechniania wiedzy i inspiracji."],
+      "content_blocks": [{ "type": "passage", "passage_id": "ksztaltowac-przyszlosc", "default_open": true }], "assets": []
+    },
+    {
+      "id": "cke-2026-main-polish-100-x-q12", "number": "12", "sort_order": 12, "source_pages": [12, 13], "type": "single_choice", "topic": "Czytanie ze zrozumieniem", "difficulty": 1,
+      "prompt": "Które stwierdzenie jest zgodne z treścią tekstu Stephena Hawkinga?",
+      "answer_options": ["Połączenie wyobraźni i nauki prowadzi do lepszego poznania świata.", "Obecny stan wiedzy zniechęca ludzi do podejmowania badań naukowych.", "W kolejnych latach wpływ nauki i techniki na nasze życie będzie stopniowo malał.", "Dzięki pracy kosmologów uda się wkrótce odkryć wszystkie tajemnice wszechświata."], "answer_key": { "correct_index": 0 },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedź A", "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi"] },
+      "explanation": "Hawking podkreśla zarówno znaczenie narzędzi naukowych, jak i wyobraźni, dzięki którym można badać rzeczywistość i rozważać zjawiska niedostępne bezpośrednio.",
+      "solution_steps": ["Porównaj każde stwierdzenie z główną myślą tekstu.", "Odrzuć odpowiedzi sprzeczne z akapitami 5–7.", "Wybierz odpowiedź A."],
+      "hints": ["Autor mówi, że nauka będzie coraz ważniejsza.", "Kosmologia nadal nie zna odpowiedzi na wielkie pytania."],
+      "content_blocks": [{ "type": "passage", "passage_id": "ksztaltowac-przyszlosc" }], "assets": []
+    },
+    {
+      "id": "cke-2026-main-polish-100-x-q13", "number": "13", "sort_order": 13, "source_pages": [12, 13], "type": "single_choice", "topic": "Wnioskowanie z tekstu", "difficulty": 1,
+      "prompt": "Z pierwszego akapitu wynika, że autor uważa Einsteina za geniusza wszech czasów ze względu między innymi na:",
+      "answer_options": ["powszechnie uznane podejście do nauki", "odwagę i kreatywność w sposobie rozumowania", "opieranie się na zweryfikowanych wynikach badań", "dystans wobec postaw badawczych opartych na intuicji"], "answer_key": { "correct_index": 1 },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedź B", "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi"] },
+      "explanation": "Pierwszy akapit wprost wskazuje odwagę Einsteina w zgłębianiu niezwykłych idei oraz kreatywne moce jego umysłu.",
+      "solution_steps": ["Odszukaj cechy Einsteina wymienione przez Hawkinga.", "Porównaj je z odpowiedziami.", "Wybierz odpowiedź B."],
+      "hints": ["Szukaj słów „odwagę” i „kreatywne”.", "Einstein nie ulegał zdrowemu rozsądkowi, więc A i C nie pasują."],
+      "content_blocks": [{ "type": "passage", "passage_id": "ksztaltowac-przyszlosc" }], "assets": []
+    },
+    {
+      "id": "cke-2026-main-polish-100-x-q14", "number": "14", "sort_order": 14, "source_pages": [12, 13, 14], "type": "long_text", "topic": "Relacje między akapitami", "difficulty": 2,
+      "prompt": "Wyjaśnij, jaki związek zachodzi między treścią akapitów 3. i 4. tekstu Stephena Hawkinga.",
+      "answer_key": { "accepted_results": ["Akapit 4 rozwija treść akapitu 3: dziecięca dociekliwość Hawkinga przekształciła się w zawodowe badanie działania wszechświata."], "assessment": "rubric" },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – poprawne wyjaśnienie związku", "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi"] },
+      "explanation": "Akapit 3 opisuje źródło zainteresowania Hawkinga sposobem działania rzeczy, a akapit 4 pokazuje kontynuację tej samej dociekliwości w dorosłej pracy nad wszechświatem.",
+      "solution_steps": ["Nazwij temat akapitu 3.", "Nazwij temat akapitu 4.", "Określ relację: kontynuacja i rozwinięcie zainteresowania."],
+      "hints": ["Porównaj zabawki z akapitu 3 z wszechświatem z akapitu 4.", "Zwróć uwagę na słowo „również”."],
+      "content_blocks": [{ "type": "passage", "passage_id": "ksztaltowac-przyszlosc" }], "assets": []
+    },
+    {
+      "id": "cke-2026-main-polish-100-x-q15", "number": "15", "sort_order": 15, "source_pages": [12, 13, 14], "type": "long_text", "topic": "Lektury obowiązkowe", "difficulty": 3,
+      "prompt": "Spośród lektur obowiązkowych wybierz tę, której bohater kierował się zasadą „Najważniejsze, aby się nie poddawać”. Podaj tytuł lektury i bohatera. Uzasadnij wybór, przywołując sytuację z lektury.",
+      "answer_key": { "accepted_results": ["Np. Pan Tadeusz — Jacek Soplica: przez lata nie poddawał się w dążeniu do odkupienia win, służył jako emisariusz i opiekował się Zosią oraz Tadeuszem.", "Np. Kamienie na szaniec — Zośka: mimo wojny kontynuował działania sabotażowe przeciw okupantowi."], "assessment": "rubric" },
+      "scoring": { "max_points": 2, "rules": ["2 pkt – tytuł, bohater i poprawne uzasadnienie zilustrowane sytuacją z lektury", "1 pkt – tytuł, bohater i poprawne uzasadnienie bez konkretnej sytuacji", "0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi"] },
+      "explanation": "Możliwych jest wiele poprawnych wyborów. Najważniejsze, by tytuł i bohater byli poprawni, a przywołana konkretna sytuacja rzeczywiście pokazywała wytrwałość i wspierała uzasadnienie.",
+      "solution_steps": ["Wybierz bohatera, którego wytrwałość pamiętasz z konkretnego wydarzenia.", "Podaj dokładny tytuł i imię bohatera.", "Wyjaśnij, co zrobił mimo trudności i jaki był tego cel."],
+      "hints": ["Nie wystarczy napisać, że bohater „się nie poddawał”.", "Wybierz sytuację, którą potrafisz opisać bez błędu rzeczowego."],
+      "content_blocks": [{ "type": "passage", "passage_id": "ksztaltowac-przyszlosc" }], "assets": []
+    },
+    {
+      "id": "cke-2026-main-polish-100-x-q16", "number": "16", "sort_order": 16, "source_pages": [14], "type": "multiple_choice", "topic": "Części zdania", "difficulty": 2,
+      "prompt": "W zdaniu „Kształt przyszłości zależy od was” oceń prawdziwość stwierdzeń dotyczących wyrazu „przyszłości”: 1) pełni funkcję podmiotu; 2) pełni funkcję przydawki.",
+      "answer_options": ["Stwierdzenie 1 — P", "Stwierdzenie 1 — F", "Stwierdzenie 2 — P", "Stwierdzenie 2 — F"], "answer_key": { "correct_indices": [1, 2] },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedzi F, P", "0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi"] },
+      "explanation": "Podmiotem jest „kształt”. Wyraz „przyszłości” określa rzeczownik „kształt” i odpowiada na pytanie „kształt czego?”, więc jest przydawką.",
+      "solution_steps": ["Znajdź wykonawcę lub główny rzeczownik związany z orzeczeniem „zależy”.", "Zadaj pytanie od wyrazu „kształt” do „przyszłości”.", "Zaznacz F i P."],
+      "hints": ["Podmiotem jest wyraz w mianowniku.", "„Przyszłości” określa rzeczownik „kształt”."],
+      "content_blocks": [], "assets": []
+    },
+    {
+      "id": "cke-2026-main-polish-100-x-q17", "number": "17", "sort_order": 17, "source_pages": [15], "type": "long_text", "topic": "Ogłoszenie", "difficulty": 3,
+      "prompt": "Zredaguj ogłoszenie o wykładzie „Wybitni naukowcy”. Zachęć do udziału, używając dwóch argumentów, z których co najmniej jeden nawiązuje do tematyki wykładu. Zadbaj o poprawność językową, ortograficzną i interpunkcyjną.",
+      "answer_key": { "accepted_results": ["Ogłoszenie powinno wskazywać: kto ogłasza, komu, co, kiedy i gdzie; zawierać dwa argumenty zachęcające, w tym jeden związany z tematyką naukową."], "assessment": "rubric" },
+      "scoring": { "max_points": 3, "rules": ["2 pkt za treść i formę – dwa argumenty (co najmniej jeden o tematyce wykładu) oraz pięć elementów: kto, komu, co, kiedy, gdzie", "1 pkt za treść i formę – spełnione warunki argumentacji i cztery elementy formy", "1 pkt za poprawność – łącznie najwyżej dwa błędy językowe, ortograficzne i interpunkcyjne", "0 pkt w danym kryterium – niespełnienie warunków"] },
+      "explanation": "Najpierw sprawdź komplet informacji organizacyjnych, potem dwa różne argumenty zachęcające. Na końcu przeczytaj tekst pod kątem języka, ortografii i interpunkcji.",
+      "solution_steps": ["Podaj organizatora, odbiorców, temat, termin i miejsce.", "Dodaj dwa argumenty, z których jeden dotyczy wiedzy o wybitnych naukowcach.", "Zastosuj formę ogłoszenia i sprawdź poprawność zapisu."],
+      "hints": ["Możesz zacząć od „Samorząd Uczniowski zaprasza…”.", "Argument tematyczny może obiecywać poznanie odkryć lub pracy naukowców."],
+      "content_blocks": [], "assets": []
+    },
+    {
+      "id": "cke-2026-main-polish-100-x-q18", "number": "18", "sort_order": 18, "source_pages": [16, 17, 18, 19, 20, 21, 22], "type": "long_text", "topic": "Wypracowanie", "difficulty": 3,
+      "prompt": "Wybierz jeden temat i napisz wypracowanie liczące co najmniej 200 słów. Temat 1: przemówienie do rówieśników, w którym przekonasz ich, że każdy może kształtować swoją przyszłość; odwołaj się do wybranej lektury obowiązkowej i innego utworu literackiego. Temat 2: opowiadanie o spotkaniu z bohaterem wybranej lektury obowiązkowej; podczas wspólnej przygody znajdujecie przedmiot o niezwykłych właściwościach, dzięki któremu przygoda kończy się pomyślnie; wykaż znajomość lektury.",
+      "answer_key": { "assessment": "rubric", "minimum_words": 200, "themes": ["przemówienie argumentacyjne", "opowiadanie twórcze"] },
+      "scoring": { "max_points": 20, "rules": ["2 pkt – realizacja tematu i właściwa forma", "5 pkt – elementy retoryczne (temat 1) albo twórcze (temat 2)", "2 pkt – kompetencje literackie i kulturowe", "2 pkt – kompozycja tekstu", "2 pkt – styl", "4 pkt – język", "2 pkt – ortografia", "1 pkt – interpunkcja", "Praca w całości nie na temat, bez odwołania do lektury obowiązkowej, nieczytelna albo bez rozwinięcia otrzymuje 0 pkt", "Przy 180 słowach lub mniej oceniane są tylko realizacja tematu, elementy retoryczne/twórcze i kompetencje literackie"] },
+      "explanation": "Przed pisaniem wybierz formę i lektury, zaplanuj akapity oraz kluczowe przykłady. Po napisaniu sprawdź realizację każdego elementu polecenia, liczbę słów, logikę, język, ortografię i interpunkcję.",
+      "solution_steps": ["Wybierz temat i wypisz wszystkie warunki polecenia.", "Zaplanuj wstęp, rozwinięcie z funkcjonalnym użyciem lektury oraz zakończenie.", "Napisz co najmniej 200 słów, zachowując cechy przemówienia albo opowiadania.", "Przeczytaj pracę ponownie i popraw błędy."],
+      "hints": ["W przemówieniu potrzebujesz zwrotu do odbiorców i środków perswazyjnych; w opowiadaniu — logicznej fabuły i elementów twórczych.", "Nie streszczaj lektury. Wykorzystaj konkretne wydarzenia funkcjonalnie, aby realizować temat."],
+      "content_blocks": [], "assets": []
+    }
+  ]
+}
