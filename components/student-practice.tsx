@@ -10,7 +10,7 @@ import { Progress } from "@/components/ui/progress";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { getSupabaseClient } from "@/lib/supabase-browser";
-import { SubjectIcon, subjectLabels, type SubjectKey } from "@/components/subject-icon";
+import { isSubjectKey, SUBJECT_KEYS, SubjectIcon, subjectLabels, type SubjectKey } from "@/components/subject-icon";
 import { AiTutor } from "@/components/ai-tutor";
 import { ThemeSettings } from "@/components/theme-settings";
 import { trackAnalyticsEvent } from "@/lib/analytics";
@@ -96,6 +96,11 @@ const subjects: { value: SubjectFilter; label: string }[] = [
   { value: "mathematics", label: "Matematyka" },
   { value: "polish", label: "Język polski" },
   { value: "english", label: "Język angielski" },
+  { value: "french", label: "Język francuski" },
+  { value: "spanish", label: "Język hiszpański" },
+  { value: "german", label: "Język niemiecki" },
+  { value: "russian", label: "Język rosyjski" },
+  { value: "italian", label: "Język włoski" },
 ];
 
 const sessionLabels: Record<ExamSession, string> = {
@@ -121,7 +126,7 @@ export function countResponseWords(value: string) {
 function normalizeQuestion(value: Record<string, unknown>): PracticeQuestion {
   const subject = value.subject;
   const sourceType = value.source_type;
-  if (subject !== "mathematics" && subject !== "polish" && subject !== "english") {
+  if (!isSubjectKey(subject)) {
     throw new Error("invalid_subject");
   }
   if (sourceType !== "demo" && sourceType !== "cke") {
@@ -177,7 +182,7 @@ function normalizePaperProgress(value: Record<string, unknown>): PaperProgress {
   const subject = value.subject;
   const session = value.exam_session;
   const status = value.completion_status;
-  if (subject !== "mathematics" && subject !== "polish" && subject !== "english") throw new Error("invalid_subject");
+  if (!isSubjectKey(subject)) throw new Error("invalid_subject");
   if (session !== "main" && session !== "additional") throw new Error("invalid_exam_session");
   if (status !== "not_started" && status !== "in_progress" && status !== "completed") throw new Error("invalid_completion_status");
   return {
@@ -366,8 +371,8 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
       ? currentQuestion.selected_response.text
       : "";
   const isPolishEssay = currentQuestion?.subject === "polish" && currentQuestion.paper_question_number === 18;
-  const isEnglishEmail = currentQuestion?.subject === "english" && currentQuestion.paper_question_number === 14;
-  const isExtendedWriting = isPolishEssay || isEnglishEmail;
+  const isForeignLanguageEmail = Boolean(currentQuestion && !["mathematics", "polish"].includes(currentQuestion.subject) && currentQuestion.paper_question_number === 14);
+  const isExtendedWriting = isPolishEssay || isForeignLanguageEmail;
   const answerResult = currentQuestion && submittedAnswer?.questionId === currentQuestion.question_id
     ? submittedAnswer
     : currentQuestion?.grading_status && currentQuestion.explanation
@@ -678,7 +683,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
 
             {["numeric", "short_text", "long_text"].includes(currentQuestion.question_type) && <section className="task-written-response" aria-labelledby="written-answer-label">
               <label id="written-answer-label" htmlFor="written-answer">Twoje rozwiązanie</label>
-              <Textarea id="written-answer" value={writtenAnswer} onChange={(event) => setWrittenAnswer(event.target.value)} rows={isPolishEssay ? 20 : isEnglishEmail ? 14 : currentQuestion.question_type === "long_text" ? 8 : 3} placeholder={currentQuestion.subject === "mathematics" ? "Zapisz obliczenia, uzasadnienie i odpowiedź. Możesz używać zapisu matematycznego." : isPolishEssay ? "Napisz wypracowanie. Podziel tekst na akapity i pamiętaj o wszystkich warunkach wybranego tematu." : isEnglishEmail ? "Continue the e-mail in English and develop all three points." : "Zapisz pełną odpowiedź i uzasadnienie, jeśli wymaga go polecenie."} disabled={submitting || Boolean(answerResult)} />
+              <Textarea id="written-answer" value={writtenAnswer} onChange={(event) => setWrittenAnswer(event.target.value)} rows={isPolishEssay ? 20 : isForeignLanguageEmail ? 14 : currentQuestion.question_type === "long_text" ? 8 : 3} placeholder={currentQuestion.subject === "mathematics" ? "Zapisz obliczenia, uzasadnienie i odpowiedź. Możesz używać zapisu matematycznego." : isPolishEssay ? "Napisz wypracowanie. Podziel tekst na akapity i pamiętaj o wszystkich warunkach wybranego tematu." : isForeignLanguageEmail ? "Napisz e-mail w języku egzaminu i rozwiń wszystkie trzy podpunkty." : "Zapisz pełną odpowiedź i uzasadnienie, jeśli wymaga go polecenie."} disabled={submitting || Boolean(answerResult)} />
               {!answerResult && <small>{isExtendedWriting ? `Liczba słów: ${countResponseWords(writtenAnswer)} · ${isPolishEssay ? "wymagane co najmniej 200" : "wymagane 50–120"}.` : "Po zapisaniu porównasz rozwiązanie z kryteriami CKE i samodzielnie przyznasz punkty."}</small>}
             </section>}
 
@@ -711,7 +716,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
         <section className="student-progress-layout">
           <Card className="student-subject-overview">
             <CardHeader><CardTitle>Postęp według przedmiotu</CardTitle></CardHeader>
-            <CardContent>{(["mathematics", "polish", "english"] as Subject[]).map((item) => {
+            <CardContent>{SUBJECT_KEYS.filter((item) => questions.some((question) => question.subject === item)).map((item) => {
               const stats = subjectStats(item);
               const percent = stats.answered ? Math.round((stats.correct / stats.answered) * 100) : 0;
               return <div className="student-subject-row" key={item}><div className="subject-card-heading"><SubjectIcon subject={item} /><div><b>{subjectLabels[item]}</b><span>{stats.answered} zadań · {percent}% poprawnych</span></div></div><Progress value={(stats.answered / Math.max(stats.total, 1)) * 100} /></div>;

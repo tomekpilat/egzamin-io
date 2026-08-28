@@ -19,9 +19,11 @@ export type AiUsageStatus = {
   plan: "free" | "plus";
 };
 
+export type ForeignLanguageSubject = "english" | "french" | "spanish" | "german" | "russian" | "italian";
+
 export type TutorQuestionContext = {
   questionId: string;
-  subject: "mathematics" | "polish" | "english";
+  subject: "mathematics" | "polish" | ForeignLanguageSubject;
   topic: string;
   prompt: string;
   options: string[];
@@ -154,6 +156,11 @@ export function buildTutorSystemPrompt(context: TutorQuestionContext): string {
     mathematics: "Prowadź przez obliczenia małymi krokami. Wzory zapisuj wyłącznie jako MathJax: \\( ... \\) lub \\[ ... \\].",
     polish: "Odwołuj się tylko do treści zadania i zasad języka polskiego. Oddziel obserwację tekstu od wniosku.",
     english: "Wyjaśniaj po polsku, a przykłady angielskie podawaj krótko i poprawnie. Wskaż regułę oraz jeden przykład.",
+    french: "Wyjaśniaj po polsku, a przykłady francuskie podawaj krótko i poprawnie. Wskaż regułę oraz jeden przykład.",
+    spanish: "Wyjaśniaj po polsku, a przykłady hiszpańskie podawaj krótko i poprawnie. Wskaż regułę oraz jeden przykład.",
+    german: "Wyjaśniaj po polsku, a przykłady niemieckie podawaj krótko i poprawnie. Wskaż regułę oraz jeden przykład.",
+    russian: "Wyjaśniaj po polsku, a przykłady rosyjskie podawaj krótko i poprawnie. Wskaż regułę oraz jeden przykład.",
+    italian: "Wyjaśniaj po polsku, a przykłady włoskie podawaj krótko i poprawnie. Wskaż regułę oraz jeden przykład.",
   }[context.subject];
 
   return [

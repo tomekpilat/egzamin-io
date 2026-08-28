@@ -5,8 +5,8 @@ import { SUBJECT_CATEGORIES, SubjectIcon, subjectLabels } from "@/components/sub
 describe("subject icon system", () => {
   it("provides one semantic Lucide icon for every subject category", () => {
     const { container } = render(<>{SUBJECT_CATEGORIES.map((item) => <div key={item.key}><SubjectIcon subject={item.key} /><span>{item.label}</span></div>)}</>);
-    expect(SUBJECT_CATEGORIES.map((item) => item.label)).toEqual(["Matematyka", "Język polski", "Język angielski", "Arkusze CKE"]);
-    expect(container.querySelectorAll("svg")).toHaveLength(4);
+    expect(SUBJECT_CATEGORIES.map((item) => item.label)).toEqual(["Matematyka", "Język polski", "Język angielski", "Język francuski", "Język hiszpański", "Język niemiecki", "Język rosyjski", "Język włoski", "Arkusze CKE"]);
+    expect(container.querySelectorAll("svg")).toHaveLength(9);
     container.querySelectorAll("svg").forEach((icon) => expect(icon).toHaveAttribute("aria-hidden", "true"));
     expect(screen.getByText(subjectLabels.mathematics)).toBeInTheDocument();
   });

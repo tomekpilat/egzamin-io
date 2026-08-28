@@ -4,7 +4,7 @@ import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { pathToFileURL } from "node:url";
 
-const SUBJECTS = new Set(["mathematics", "polish", "english"]);
+const SUBJECTS = new Set(["mathematics", "polish", "english", "french", "spanish", "german", "russian", "italian"]);
 const SESSIONS = new Set(["main", "additional"]);
 const QUESTION_TYPES = new Set(["single_choice", "multiple_choice", "numeric", "short_text", "long_text"]);
 const BLOCK_TYPES = new Set(["markdown", "math", "image", "audio", "table", "passage"]);
@@ -67,7 +67,7 @@ export function validateManifest(input) {
     if (!nonEmpty(paper.source_label)) add("paper.source_label", "wymagana etykieta źródła");
     if (!Number.isInteger(paper.exam_year) || paper.exam_year < 2019 || paper.exam_year > 2100) add("paper.exam_year", "rok poza zakresem 2019–2100");
     if (!SESSIONS.has(paper.exam_session)) add("paper.exam_session", "dozwolone: main, additional");
-    if (!SUBJECTS.has(paper.subject)) add("paper.subject", "dozwolone: mathematics, polish, english");
+    if (!SUBJECTS.has(paper.subject)) add("paper.subject", `dozwolone: ${[...SUBJECTS].join(", ")}`);
     if (!nonEmpty(paper.variant_code)) add("paper.variant_code", "wymagany wariant, np. standard");
     if (!Number.isInteger(paper.question_count) || paper.question_count < 1) add("paper.question_count", "wymagana dodatnia liczba zadań");
     const supplementarySources = paper.supplementary_sources ?? [];

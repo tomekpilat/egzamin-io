@@ -78,11 +78,11 @@ export default function Home() {
 
       <section id="przedmioty" className="design-home-section design-subjects-section">
         <div className="design-home-container">
-          <div className="design-subjects-heading"><span className="design-eyebrow">Przedmioty</span><h2>Ćwiczysz dokładnie to, co pojawia się na egzaminie</h2><p>Matematyka, język polski i język angielski — w zadaniach z arkuszy CKE oraz krótkich sesjach dopasowanych do postępu.</p></div>
+          <div className="design-subjects-heading"><span className="design-eyebrow">Przedmioty</span><h2>Ćwiczysz dokładnie to, co pojawia się na egzaminie</h2><p>Matematyka, język polski i wszystkie języki obce dostępne na egzaminie — w zadaniach z arkuszy CKE.</p></div>
           <div className="design-subjects-grid">
             <article><SubjectIcon subject="mathematics" /><b>Matematyka</b><span>Zadania zamknięte i otwarte, obliczenia oraz geometria.</span></article>
             <article><SubjectIcon subject="polish" /><b>Język polski</b><span>Czytanie ze zrozumieniem, język i przygotowanie do wypowiedzi.</span></article>
-            <article><SubjectIcon subject="english" /><b>Język angielski</b><span>Środki językowe, funkcje językowe i wypowiedź pisemna.</span></article>
+            <article><SubjectIcon subject="english" /><b>Języki obce</b><span>Język angielski, francuski, hiszpański, niemiecki, rosyjski i włoski.</span></article>
             <article><FileText aria-hidden="true" /><b>Arkusze CKE</b><span>Materiały oznaczone rokiem, sesją i właściwym wariantem ucznia.</span></article>
           </div>
         </div>

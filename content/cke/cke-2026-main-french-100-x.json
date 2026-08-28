@@ -1,0 +1,641 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2026-main-french-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2026-main-french-100-x",
+    "source_document_id": "OJFP-100-X-2605",
+    "source_pdf_sha256": "e91a16b238f87fce1d35711387331f87534165c5d0d9a6192eee6d47c4d1dfef",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2026-2/",
+    "source_label": "CKE 2026 · język francuski · termin główny · wariant 100-X",
+    "exam_year": 2026,
+    "exam_session": "main",
+    "subject": "french",
+    "variant_code": "100-X",
+    "question_count": 14,
+    "supplementary_sources": [
+      {
+        "id": "cke-2026-french-recording",
+        "path": "content/cke/sources/2026/jezyk_francuski/OJFP-100-2605.mp3",
+        "sha256": "ee80e76ae33a08eb3c20442d330d60295bd7e3c45c4a7485aedf1c10fd89c6c6",
+        "label": "Oficjalne nagranie do zadań 1–4"
+      },
+      {
+        "id": "cke-2026-french-transcript",
+        "path": "content/cke/sources/2026/jezyk_francuski/OJFP-100-2605-transkrypcja.pdf",
+        "sha256": "ddf7753fc633bb76b441f6d1dafccb10bf68ddf7650869f9d194fca83c2cf65e",
+        "label": "Transkrypcja nagrań"
+      },
+      {
+        "id": "cke-2026-french-answer-card",
+        "path": "content/cke/sources/2026/jezyk_francuski/OJFP-100-X-2605-karta-odpowiedzi.pdf",
+        "sha256": "a109faa3cd29ad97faa24595b67f41f05974103c822092b244fcf7c73474d351",
+        "label": "Karta odpowiedzi, wersja X"
+      },
+      {
+        "id": "cke-2026-french-scoring-rules",
+        "path": "content/cke/sources/2026/jezyk_francuski/OJFP-100-2605-zasady.pdf",
+        "sha256": "38f8a5929b3f6be81376e02a7df4984325c3b72cac58d79e02ab78a28aac4c44",
+        "label": "Zasady oceniania rozwiązań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "questions": [
+    {
+      "id": "cke-2026-main-french-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        3,
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — wybór wielokrotny",
+      "difficulty": 2,
+      "prompt": "Usłyszysz dwukrotnie pięć tekstów. W zadaniach 1.1.–1.5., na podstawie informacji\nzawartych w nagraniu, z podanych odpowiedzi wybierz właściwą. Zakreśl jedną z liter:\nA, B albo C.\n1.1. Quel temps va-t-il faire en Bretagne ce soir ?\nA. B. C.\n1.2. Quel gâteau va préparer la mère pour la fête de son fils ?\nA. B. C.\n1.3. Où se trouvent les deux personnes qui parlent ?\nA. B. C.\n1.4. La fille parle\nA. d’un achat d’occasion.\nB. d’une belle découverte.\nC. d’une réunion de famille.\n1.5. La femme laisse ce message à Marc pour\nA. lui offrir son aide.\nB. lui demander comment il va.\nC. lui conseiller de consulter un médecin.",
+      "answer_key": {
+        "accepted_results": [
+          "C, A, C, B, B"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 5,
+        "rules": [
+          "Łącznie 5 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: C, A, C, B, B."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: C, A, C, B, B.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-options-page-3"
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-options-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2026/french/ojfp-100-x-2605/ojfp-100-2605.mp3",
+          "sha256": "ee80e76ae33a08eb3c20442d330d60295bd7e3c45c4a7485aedf1c10fd89c6c6",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka francuski.",
+          "caption": "Oficjalne nagranie CKE 2026 — język francuski, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        },
+        {
+          "id": "q01-options-page-3",
+          "path": "public/cke/2026/french/ojfp-100-x-2605/q01-options-page-3.png",
+          "sha256": "121fb85bf4f2143a79468fa4569cbb6db62f1062dee21e221c44a837e7fc4695",
+          "alt": "Strona 3 arkusza CKE z opcjami do zadania 1 z języka francuski.",
+          "caption": "Opcje tekstowe i obrazkowe do zadania 1.",
+          "mime_type": "image/png"
+        },
+        {
+          "id": "q01-options-page-4",
+          "path": "public/cke/2026/french/ojfp-100-x-2605/q01-options-page-4.png",
+          "sha256": "4347544a0ba82d134db392c7ff76531ccd1ce7dcdf170803496a6260e97addeb",
+          "alt": "Strona 4 arkusza CKE z opcjami do zadania 1 z języka francuski.",
+          "caption": "Opcje tekstowe i obrazkowe do zadania 1.",
+          "mime_type": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "cke-2026-main-french-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — dopasowywanie",
+      "difficulty": 2,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi na temat nieoczekiwanych spotkań.\nNa podstawie informacji zawartych w nagraniu dopasuj do każdej wypowiedzi\n(2.1.–2.4.) odpowiadające jej zdanie (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej wypowiedzi.\nLa personne qui parle\nA. s’est perdue dans la nature.\nB. a rendu service à une voisine.\nC. a partagé son plat avec un inconnu.\nD. a rencontré une famille exceptionnelle.\nE. a fait un cadeau à une femme et son bébé.\n2.1. 2.2. 2.3. 2.4.",
+      "answer_key": {
+        "accepted_results": [
+          "C, A, B, D"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: C, A, B, D."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: C, A, B, D.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2026/french/ojfp-100-x-2605/ojfp-100-2605.mp3",
+          "sha256": "ee80e76ae33a08eb3c20442d330d60295bd7e3c45c4a7485aedf1c10fd89c6c6",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka francuski.",
+          "caption": "Oficjalne nagranie CKE 2026 — język francuski, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        }
+      ]
+    },
+    {
+      "id": "cke-2026-main-french-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe — rozumienie ze słuchu",
+      "difficulty": 2,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi związane z jedzeniem (3.1.–3.4.). Do każdej\nz nich dobierz właściwą reakcję (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedna reakcja została podana dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. Je voudrais le plat du jour, s’il vous plaît.\nB. J’ai préparé ce dessert ce matin.\nC. Bien sûr, elles sont très faciles.\nD. Je vous conseille le poulet rôti.\nE. Je ne l’aime pas trop.\n3.1. 3.2. 3.3. 3.4.",
+      "answer_key": {
+        "accepted_results": [
+          "A, E, D, C"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: A, E, D, C."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: A, E, D, C.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2026/french/ojfp-100-x-2605/ojfp-100-2605.mp3",
+          "sha256": "ee80e76ae33a08eb3c20442d330d60295bd7e3c45c4a7485aedf1c10fd89c6c6",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka francuski.",
+          "caption": "Oficjalne nagranie CKE 2026 — język francuski, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        }
+      ]
+    },
+    {
+      "id": "cke-2026-main-french-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — uzupełnianie luk",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie informacje na temat parku narodowego Calanques.\nNa podstawie informacji zawartych w nagraniu uzupełnij luki 4.1.–4.3. w poniższych\nzdaniach, tak aby jak najbardziej precyzyjnie oddać sens wysłuchanego tekstu.\nLuki należy uzupełnić w języku francuskim.\nParfois, la marche dans le Parc national des Calanques peut être difficile à cause\n4.1. _____________________________________.\nL’entrée dans le Parc est 4.2. ______________________________ du 01/06 au 30/09.\nEn cas de journée rouge, les visites du Parc sont possibles seulement\nen 4.3. ____________________________.",
+      "answer_key": {
+        "accepted_results": [
+          "des journées chaudes; limitée; bateau"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: des journées chaudes; limitée; bateau."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: des journées chaudes; limitée; bateau.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2026/french/ojfp-100-x-2605/ojfp-100-2605.mp3",
+          "sha256": "ee80e76ae33a08eb3c20442d330d60295bd7e3c45c4a7485aedf1c10fd89c6c6",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka francuski.",
+          "caption": "Oficjalne nagranie CKE 2026 — język francuski, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        }
+      ]
+    },
+    {
+      "id": "cke-2026-main-french-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe",
+      "difficulty": 2,
+      "prompt": "Dla każdej z opisanych sytuacji (5.1.–5.4.) wybierz właściwą reakcję. Zakreśl jedną\nz liter: A, B albo C.\n5.1. Koleżanka pyta Cię, gdzie chcesz spędzić najbliższe wakacje. Co jej odpowiesz?\nA. Je rentre de mon voyage en France.\nB. Passe tes vacances en Italie !\nC. Je rêve d’aller en Espagne.\n5.2. Koleżanka z Francji dzwoni do Ciebie, ponieważ nie może skontaktować się\nz Twoim bratem. Prosi Cię o pomoc. Co jej odpowiesz?\nA. Je vais le chercher tout de suite.\nB. Montre-moi ton téléphone !\nC. Ça sonne occupé.\n5.3. Po raz pierwszy założyłeś/założyłaś nową koszulę i pokazujesz ją koledze.\nJak zapytasz go o zdanie na temat tej koszuli?\nA. Qu’est-ce que tu en penses ?\nB. Quelle chemise préfères-tu ?\nC. Où l’as-tu trouvée ?\n5.4. Chcesz ostrzec koleżankę przed groźnym psem Twojego sąsiada. Co jej powiesz?\nA. Ce chien est en danger !\nB. Ne touche pas à ce chien !\nC. Occupe-toi du chien de mon voisin !",
+      "answer_key": {
+        "accepted_results": [
+          "C, A, A, B"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: C, A, A, B."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: C, A, A, B.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2026-main-french-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe — uzupełnianie dialogów",
+      "difficulty": 2,
+      "prompt": "Uzupełnij dialogi. Wpisz w każdą lukę (6.1.–6.2.) brakujący fragment wypowiedzi, tak\naby otrzymać spójne i logiczne teksty. Luki należy uzupełnić w języku francuskim.\nD’habitude en bus.\nEt toi, Pierre, 6.1. ________\nPour moi, c’est plus\n______________________\nrapide que le tramway.\n______________ à l’école ?\nSelon toi, qu’est-ce que je 6.2. ________________ Peut-être la nouvelle\nrobe que tu as achetée\n______________________ pour le mariage de\nle mois dernier ?\nChloé ? Je n’ai pas d’idée.",
+      "answer_key": {
+        "accepted_results": [
+          "Comment vas-tu; porte / vais porter / porterai"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Łącznie 2 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: Comment vas-tu; porte / vais porter / porterai."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: Comment vas-tu; porte / vais porter / porterai.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2026-main-french-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        8,
+        9
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie tekstów pisanych",
+      "difficulty": 2,
+      "prompt": "Przeczytaj teksty. W zadaniach 7.1.–7.4. z podanych odpowiedzi wybierz właściwą,\nzgodną z treścią tekstu. Zakreśl jedną z liter: A, B albo C.\nMaman,\nnotre professeur de français m’a proposé\nun rôle dans le spectacle de fin d’année.\nJe suis très excitée ! Tous les élèves qui jouent\ndans ce spectacle se voient aujourd’hui, après\nles cours, pour discuter des détails. Je ne vais\ndonc pas rentrer ce soir pour le dîner. Mais\nne t’inquiète pas, j’ai bien mangé à la cantine.\nBisous\nHélène\n7.1. Ce soir, Hélène rentre plus tard car elle va\nA. dîner avec les acteurs du spectacle.\nB. voir une pièce de théâtre.\nC. participer à une réunion.\nDépart tôt le matin vers l’île de Sainte-Lucie\n(point de rendez-vous : devant l’entrée de l’hôtel)\n Découverte de la plus grande plantation de bananes de l’île\n Baignade au milieu d’une forêt sous un soleil tropical\n Excursion au pied d’un volcan en activité\nEn cas de mauvais temps : balade en minibus avec chauffeur-guide sur\nune route panoramique. Envie de participer ? Inscriptions à la réception\njusqu’à ce soir. Dernières places – faites vite !\n7.2. Ce texte est\nA. une liste de règles de sécurité en voyage.\nB. un fragment de guide touristique.\nC. une offre de visite.\nMes amis et moi, nous voulons monter un groupe de musique\net participer à un festival de rock. Nous avons tout : le soliste,\nles musiciens et les instruments, mais nous n’avons pas\nde bons textes. Si vous avez des histoires à raconter\net si vous aimez écrire, venez travailler avec nous.\nNotre groupe se retrouve chaque vendredi\nde 16h à 20h à la Maison de la Culture.\nŹródło: www.gear4music.fr\n7.3. L’auteur a écrit cette annonce pour\nA. inviter à participer à un projet artistique.\nB. faire la promotion d’un festival de rock.\nC. proposer sa candidature d’auteur de textes.\nACTUALITÉS COLLÈGE RENTRÉE 2026\nJournal de bord : qu’est-ce qu’on a fait en avril ?\nVendredi 10 avril : on a commencé par des calculs sur papier.\nMercredi 15 avril : le père de Ludovic a apporté au collège des morceaux de bois.\nLundi 20 avril : guidés par notre professeur, on a fait la construction ; ensuite,\non l’a remplie à l’aide de divers matériaux pour attirer les insectes ; on a tout fait pour\nles aider à passer les saisons à venir.\nMercredi 22 avril : ça y est, notre hôtel à insectes est prêt ; on l’a installé dans la cour\nde l’école à l’occasion de la Journée mondiale de la Terre.\nNa podstawie: www.ecoledunord.net\nŹródło: www.pierre-marie-curie-albert.ac-amiens.fr\n7.4. Ce texte présente les étapes\nA. d’une sortie en pleine nature.\nB. d’une initiative écologique.\nC. d’une fête du collège.",
+      "answer_key": {
+        "accepted_results": [
+          "C, C, A, B"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: C, C, A, B."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: C, C, A, B.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2026-main-french-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Spójność tekstu",
+      "difficulty": 2,
+      "prompt": "Przeczytaj tekst, z którego usunięto trzy zdania. Wpisz w każdą lukę (8.1.–8.3.) literę,\nktórą oznaczono brakujące zdanie (A–D), tak aby otrzymać spójny i logiczny tekst.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej luki.\nADOPTEZ UN ANIMAL !\nEst-ce que vous savez que vous aussi, vous pouvez devenir\nun vrai héros et adopter un animal ? Vous ne devez même pas\npartir loin. Il s’agit d’une adoption virtuelle.\nTout d’abord, venez sur le site du ZooParc de Beauval.\n8.1. _____ Ils sont tous mignons, alors il n’est pas facile de choisir,\nsurtout que vous pouvez chercher parmi plus de 40 animaux. Mais\nne vous inquiétez pas, on va vous aider à prendre cette décision.\nEnfin, consultez avec vos parents la somme que vous pourrez nous offrir chaque année.\n8.2. _____ Il varie selon vos possibilités. Cet argent permettra de financer des actions\nimportantes. En échange, vous recevrez un certificat d’adoption et des remerciements\npersonnalisés. 8.3. _____ Elle est organisée chaque année au ZooParc de Beauval. C’est\nl’occasion de réunir tous les amis de nos animaux.\nÊtes-vous prêts à nous aider ?\nNa podstawie: www.zoobeauval.com\nŹródło: www.play.google.com\nA. Le coût de l’adoption n’est jamais le même.\nB. Ensuite, trouvez l’animal que vous voudriez adopter.\nC. On vous invitera aussi à la journée des parents adoptifs.\nD. Voilà pourquoi le ZooParc de Beauval a choisi cet animal.",
+      "answer_key": {
+        "accepted_results": [
+          "B, A, C"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: B, A, C."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: B, A, C.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2026-main-french-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        11
+      ],
+      "type": "long_text",
+      "topic": "Wyszukiwanie informacji",
+      "difficulty": 2,
+      "prompt": "Przeczytaj opisy trzech nietypowych sportów (A–C) oraz zdania 9.1.–9.4. Do każdego\nzdania dopasuj właściwy opis. Wpisz rozwiązania do tabeli.\nUwaga! Jeden z opisów pasuje do dwóch zdań.\nDES SPORTS ORIGINAUX\nLe cycle-ball, un mélange entre le cyclisme et le football, oppose deux équipes de\ndeux joueurs. Chacun d’entre eux possède un vélo qui n’a pas de freins. Le match\nse joue en deux mi-temps de 7 minutes avec une petite balle. Elle est frappée avec\nA.\nla roue avant ou arrière. Les mains sont utilisées seulement quand un joueur défend\nle but. Enfin, la difficulté principale de cette discipline est que les participants doivent\ngarder tout le temps les pieds sur les pédales, même en cas de collisions.\nC’est une activité surprenante qui consiste à faire du sport pendant qu’on repasse\nses vêtements. Et le sport qu’on pratique ne doit pas être toujours le même ! On peut\nsurfer, faire de la course à pied, jouer un match de tennis, etc. sans s’arrêter de\nB.\nrepasser. C’est un Anglais qui a inventé ça en 1997. Un jour, il avait plein de\nchemises à repasser chez lui mais il voulait aussi faire de l’escalade. Il a donc\ndécidé de combiner ces deux activités et c’est comme ça que ce sport est né.\nConnaissez-vous « le Bubble Foot » ? Ce jeu original est une discipline facile\nà comprendre. Comme dans le football classique, les sportifs doivent marquer\nle maximum de buts avec leurs pieds. Par contre, le reste de leur corps est entouré\nC.\npar une grande bulle en plastique transparent. Les participants s’attaquent tout\nle temps mais, grâce à ces bulles, ils ne se font pas mal même s’ils tombent\npar terre. Ce sport est vraiment amusant !\nNa podstawie: www.le-velo-urbain.com, spotymag.spotyride.com, www.jeux-gonflables.net\nLes personnes qui pratiquent cette activité\n9.1. ont la possibilité de choisir chaque fois une discipline différente.\n9.2. ne peuvent pas toucher la terre avec leurs pieds.\n9.3. font du sport et une tâche ménagère en même temps.\n9.4. sont bien protégées contre les chocs.",
+      "answer_key": {
+        "accepted_results": [
+          "B, A, B, C"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: B, A, B, C."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: B, A, B, C.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2026-main-french-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        12,
+        13
+      ],
+      "type": "long_text",
+      "topic": "Przetwarzanie wypowiedzi",
+      "difficulty": 2,
+      "prompt": "Przeczytaj teksty 1. i 2. Uzupełnij we wpisie na blogu luki 10.1.–10.3. zgodnie z treścią\ntekstów, tak aby jak najbardziej precyzyjnie oddać sens podanych informacji. Luki\nnależy uzupełnić w języku polskim.\nTekst 1.\nVous cherchez une chocolaterie gourmande ? Vous aimerez sûrement le chocolat\nfabriqué par notre chocolatier.\nNotre Atelier du Chocolat est unique : vous pouvez y voir un arbre vivant qui mesure\ntrois mètres de haut et qui produit des fèves de cacao*. Elles sont ensuite utilisées\npour la fabrication de notre chocolat. C’est le seul arbre de ce type qu’on peut\nadmirer en France.\nUne autre attraction extraordinaire de notre Atelier est la fontaine à chocolat,\ninstallée au cœur de notre chocolaterie. Environ 280 kg de chocolat y sont versés\nen une heure. Un vrai bonheur pour les amateurs de chocolat !\nNous vous invitons à participer aux ateliers organisés sur place.\nPendant ces cours, vous pourrez :\n déguster du chocolat chaud\n fabriquer tout seuls des tasses en chocolat (à emporter)\n faire des photos souvenirs avec des lunettes fantaisie.\nNa podstawie: www.alexolivier.fr, www.swissactivities.com\nŹródło: www.pngplay.com, www.etsy.com\n* des fèves de cacao – ziarna kakaowca.\nTekst 2.\nUNE GIRAFE EN CHOCOLAT\nQuand on observe cette magnifique sculpture de girafe, il est\nvraiment difficile de découvrir sa composition. Il est même\npresque impossible d’imaginer qu’elle est faite uniquement…\nde chocolat !\nLe chef pâtissier, Amaury Guichon, n’a pas peur des défis.\nSa dernière création en chocolat est une girafe de 2,52 mètres\nde haut et de 72 kg.\nCe travail énorme a duré toute une semaine et a demandé\nau chef pâtissier d’être inventif pour arriver à un résultat\nsi impressionnant.\nLe premier jour, il a commencé à faire le corps de l’animal.\nIl a ensuite passé deux jours à la fabrication de la tête qui est\ntout à fait réaliste et a beaucoup de détails.\nNa podstawie: www.creapills.com\nWitam wszystkich amatorów czekolady! Chciałabym dzisiaj zachęcić Was do odwiedzenia\nwyjątkowego miejsca, jakim jest Atelier du Chocolat. To tam, na samym środku, po raz\npierwszy zobaczyłam 10.1. _________________________________ z płynną czekoladą.\nKolejna atrakcja to warsztaty, podczas których każdy uczestnik może wykonać\n10.2. ____________________________. Wspaniała pamiątka, i to z pysznej czekolady!\nWielkimi amatorami czekolady są nie tylko dzieci. Czy słyszeliście o światowej sławy\ncukierniku, który nazywa się Amaury Guichon? Jego ostatni wyczyn to czekoladowa\nżyrafa, wysoka na ponad 2,5 metra. Zrobił ją w ciągu 10.3. ________________________\n_______________________. Dziś to tyle. A następnym razem zamieszczę dla Was\nprzepis na wspaniały deser… oczywiście czekoladowy!\nŹródło: www.jadlonomia.com",
+      "answer_key": {
+        "accepted_results": [
+          "fontannę; filiżankę; tygodnia"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: fontannę; filiżankę; tygodnia."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: fontannę; filiżankę; tygodnia.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2026-main-french-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — wybór wyrazów",
+      "difficulty": 2,
+      "prompt": "Przeczytaj tekst. Spośród wyrazów podanych w ramce wybierz te, które są\npoprawnym uzupełnieniem luk 11.1.–11.3. Wpisz odpowiednią literę (A–F) obok\nnumeru każdej luki.\nUwaga! Trzy wyrazy zostały podane dodatkowo i nie pasują do żadnej luki.\nA. jamais B. joué C. penser D. réservé E. réussir F. toujours\nLE TAPIS ROUGE DU FESTIVAL DE CANNES\nLe tapis rouge est un véritable symbole dans l’univers du cinéma. Impossible de ne pas\n11.1. _____ au célèbre Festival de Cannes ! Mais est-ce que vous savez qu’il a son propre\nrouge ? En 2016, spécialement pour Cannes, on a même créé deux nouvelles variations\nde cette couleur.\nLe rouge appelé « Rosso » est installé sur la partie centrale du tapis, et le rouge\n« Teatro » est posé sur les côtés de l’allée centrale. Le premier, plus vif, est 11.2. _____\naux parties où apparaissent les stars. La seconde option, plus sombre, est destinée aux\nphotographes, journalistes et invités.\nPendant son histoire, ce tapis n’a pas 11.3. _____ été rouge, même si c’est une couleur\nde prestige, forte et symbolique. Pendant la première édition du Festival en 1946, puis\npendant quelques années, il était bleu. Aujourd’hui, le tapis bleu est un lointain souvenir.\nNa podstawie: www.grazia.fr, www.nicematin.com\nŹródło: www.francetelevisions.fr",
+      "answer_key": {
+        "accepted_results": [
+          "C, D, F"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: C, D, F."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: C, D, F.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2026-main-french-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        15
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — gramatyka i leksyka",
+      "difficulty": 2,
+      "prompt": "Przeczytaj tekst. Wybierz poprawne uzupełnienie luk 12.1.–12.3. Zakreśl jedną z liter:\nA, B albo C.\nLE MARCHÉ AUX PUCES\nPendant votre prochain voyage en France, allez aux Puces de Saint-Ouen, à côté\nde Paris ! Les Puces se composent de plusieurs marchés, situés dans de charmantes petites\nrues avec des ventes directement 12.1. _____ le trottoir. Là-bas, il y a une grande variété\nd’objets : bijoux, vêtements, antiquités, tableaux, etc.\nPour éviter la foule, il faut arriver vraiment tôt. Beaucoup de vendeurs n’acceptent pas\nles cartes bancaires, pensez alors à avoir de l’argent liquide. N’oubliez pas, non plus,\nde mettre de bonnes chaussures car vous allez 12.2. _____ marcher beaucoup.\nPréparez-vous pour une journée de shopping intense ! Découvrez et achetez des objets\nuniques 12.3. _____ du monde entier. Avec un peu de chance, vous pourrez même repartir\navec un objet de collection !\nNa podstawie: laptitefamillebaroudeuse.fr\n12.1.\nA. avec\nB. sous\nC. sur\n12.2.\nA. en\nB. y\nC. les\n12.3.\nA. venus\nB. viennent\nC. sont venus",
+      "answer_key": {
+        "accepted_results": [
+          "C, B, A"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: C, B, A."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: C, B, A.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2026-main-french-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Transformacje leksykalno-gramatyczne",
+      "difficulty": 3,
+      "prompt": "Uzupełnij zdania 13.1.–13.3. Wykorzystaj w odpowiedniej formie wyrazy podane\nw nawiasach. Nie należy zmieniać kolejności podanych wyrazów, trzeba natomiast –\njeśli jest to konieczne – dodać inne wyrazy, tak aby otrzymać zdania logiczne\ni gramatycznie poprawne. Wymagana jest pełna poprawność ortograficzna\nwpisywanych fragmentów.\nUwaga! W każdą lukę możesz wpisać maksymalnie cztery wyrazy, wliczając w to\nwyrazy już podane.\n13.1. Anne, tu viens demain à (anniversaire / Paul) _________________________________\n____________________________________________________________________ ?\n13.2. Je veux savoir (quel / journal) _____________________________________________\n____________________________________________ sportifs sont publiés en France.\n13.3. Va te coucher Yvonne, je vois que tu (être / fatigué) ____________________________\n_______________________________________________________ après le voyage.",
+      "answer_key": {
+        "accepted_results": [
+          "l’anniversaire de Paul; quels journaux; es fatiguée"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: l’anniversaire de Paul; quels journaux; es fatiguée."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: l’anniversaire de Paul; quels journaux; es fatiguée.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2026-main-french-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        16,
+        20
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna — e-mail",
+      "difficulty": 3,
+      "prompt": "Niedawno na lekcji języka francuskiego przedstawiłeś/przedstawiłaś prezentację.\nW e-mailu do koleżanki z Francji:\n napisz, o czym była Twoja prezentacja\n wyjaśnij, na czym polegał problem, który pojawił się podczas przygotowywania\ntej prezentacji\n poinformuj, jak nauczyciel zareagował na prezentację przedstawioną przez\nCiebie.\nNapisz swoją wypowiedź w języku francuskim. Podpisz się jako XYZ.\nRozwiń swoją wypowiedź w każdym z trzech podpunktów, tak aby osoba nieznająca\npolecenia w języku polskim uzyskała wszystkie wskazane w nim informacje. Pamiętaj, że\ndługość wypowiedzi powinna wynosić od 50 do 120 wyrazów (nie licząc wyrazów podanych\nna początku wypowiedzi). Oceniane są: umiejętność pełnego przekazania informacji,\nspójność, bogactwo językowe oraz poprawność językowa.",
+      "answer_key": {
+        "assessment": "rubric",
+        "minimum_words": 50,
+        "maximum_words": 120
+      },
+      "scoring": {
+        "max_points": 10,
+        "rules": [
+          "0–4 pkt – treść: odniesienie się do trzech podpunktów i ich rozwinięcie.",
+          "0–2 pkt – spójność i logika wypowiedzi.",
+          "0–2 pkt – zakres środków językowych.",
+          "0–2 pkt – poprawność środków językowych."
+        ]
+      },
+      "explanation": "Odpowiedź jest oceniana według oficjalnej skali CKE: treść, spójność, zakres i poprawność językowa.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    }
+  ]
+}

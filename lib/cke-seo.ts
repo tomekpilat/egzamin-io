@@ -6,7 +6,7 @@ export type CkeSeoIndexEntry = {
 export type CkeSeoPage = CkeSeoIndexEntry & {
   exam_year: number;
   exam_session: "main" | "additional";
-  subject: "mathematics" | "polish" | "english";
+  subject: "mathematics" | "polish" | "english" | "french" | "spanish" | "german" | "russian" | "italian";
   variant_code: string;
   source_label: string;
   source_url: string;
@@ -27,6 +27,11 @@ export const CKE_SUBJECT_LABELS: Record<CkeSeoPage["subject"], string> = {
   mathematics: "Matematyka",
   polish: "Język polski",
   english: "Język angielski",
+  french: "Język francuski",
+  spanish: "Język hiszpański",
+  german: "Język niemiecki",
+  russian: "Język rosyjski",
+  italian: "Język włoski",
 };
 
 function publicSupabaseConfig() {

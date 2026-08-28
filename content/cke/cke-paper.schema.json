@@ -21,7 +21,7 @@
         "source_label": { "type": "string", "minLength": 3 },
         "exam_year": { "type": "integer", "minimum": 2019, "maximum": 2100 },
         "exam_session": { "enum": ["main", "additional"] },
-        "subject": { "enum": ["mathematics", "polish", "english"] },
+        "subject": { "enum": ["mathematics", "polish", "english", "french", "spanish", "german", "russian", "italian"] },
         "variant_code": { "type": "string", "minLength": 1, "maxLength": 40 },
         "question_count": { "type": "integer", "minimum": 1 },
         "supplementary_sources": { "type": "array", "items": { "$ref": "#/$defs/sourceDocument" }, "default": [] }

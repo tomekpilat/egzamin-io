@@ -20,9 +20,9 @@ To jest kontrola operacyjna, nie opinia prawna. Zakres zgody powinien obejmować
 - formularz do skopiowania: `content/cke/manual-import.template.json`,
 - narzędzie: `scripts/cke-import.mjs`,
 - staging i workflow: migracje `20260825213000_cke_import_pipeline.sql` i `20260828120000_full_cke_question_types.sql`,
-- kompletne arkusze 2026: `content/cke/cke-2026-main-mathematics-100-x.json`, `content/cke/cke-2026-main-polish-100-x.json` i `content/cke/cke-2026-main-english-100-x.json`,
+- kompletne arkusze 2026: matematyka, język polski oraz sześć języków obcych (`english`, `french`, `spanish`, `german`, `russian`, `italian`) w plikach `content/cke/cke-2026-main-*-100-x.json`,
 - kompletne arkusze 2025: `content/cke/cke-2025-main-mathematics-100-x.json`, `content/cke/cke-2025-main-polish-100-x.json`, `content/cke/cke-2025-main-polish-100-y.json` i `content/cke/cke-2025-main-english-100-x.json`,
-- powtarzalne przygotowanie mediów: `scripts/extract-cke-2026-mathematics-assets.py`, `scripts/extract-cke-2026-polish-assets.py` i `scripts/extract-cke-2026-english-assets.py`.
+- powtarzalne przygotowanie mediów: `scripts/extract-cke-2026-mathematics-assets.py`, `scripts/extract-cke-2026-polish-assets.py`, `scripts/extract-cke-2026-english-assets.py` oraz `scripts/build-cke-2026-remaining-language-manifests.py`.
 - przygotowanie mediów i manifestów 2025: `scripts/extract-cke-2025-*-assets.py` oraz `scripts/build-cke-2025-manifests.mjs`.
 
 Manifest jest źródłem prawdy. Nie edytuj zadań bezpośrednio w tabeli `practice_questions`.
@@ -110,6 +110,11 @@ Gotowe arkusze OMAP-100-X-2605, OPOP-100-X-2605 i OJAP-100-X-2605 sprawdzisz pol
 npm run cke:validate -- content/cke/cke-2026-main-mathematics-100-x.json
 npm run cke:validate -- content/cke/cke-2026-main-polish-100-x.json
 npm run cke:validate -- content/cke/cke-2026-main-english-100-x.json
+npm run cke:validate -- content/cke/cke-2026-main-french-100-x.json
+npm run cke:validate -- content/cke/cke-2026-main-spanish-100-x.json
+npm run cke:validate -- content/cke/cke-2026-main-german-100-x.json
+npm run cke:validate -- content/cke/cke-2026-main-russian-100-x.json
+npm run cke:validate -- content/cke/cke-2026-main-italian-100-x.json
 ```
 
 Komplet 2025 sprawdzisz poleceniami:
@@ -149,6 +154,11 @@ Dla przygotowanych arkuszy 2026 użyj:
 npm run cke:stage -- content/cke/cke-2026-main-mathematics-100-x.json
 npm run cke:stage -- content/cke/cke-2026-main-polish-100-x.json
 npm run cke:stage -- content/cke/cke-2026-main-english-100-x.json
+npm run cke:stage -- content/cke/cke-2026-main-french-100-x.json
+npm run cke:stage -- content/cke/cke-2026-main-spanish-100-x.json
+npm run cke:stage -- content/cke/cke-2026-main-german-100-x.json
+npm run cke:stage -- content/cke/cke-2026-main-russian-100-x.json
+npm run cke:stage -- content/cke/cke-2026-main-italian-100-x.json
 ```
 
 Dla arkuszy 2025 użyj:

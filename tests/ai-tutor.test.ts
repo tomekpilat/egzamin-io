@@ -48,6 +48,8 @@ describe("AI tutor validation and prompt", () => {
     expect(prompt).toContain("MathJax");
     expect(buildTutorSystemPrompt({ ...context, subject: "polish" })).toContain("zasad języka polskiego");
     expect(buildTutorSystemPrompt({ ...context, subject: "english" })).toContain("Wyjaśniaj po polsku");
+    expect(buildTutorSystemPrompt({ ...context, subject: "german" })).toContain("przykłady niemieckie");
+    expect(buildTutorSystemPrompt({ ...context, subject: "russian" })).toContain("przykłady rosyjskie");
   });
 
   it("allows only questions tied to the current task or its solution", () => {
