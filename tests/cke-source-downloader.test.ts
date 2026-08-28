@@ -20,4 +20,19 @@ describe("CKE source downloader", () => {
     expect(audio?.url).toMatch(/^https:/);
     expect(audio?.usages.map((usage) => usage.variant_code)).toEqual(["OJAP-100-X-2605", "OJAP-200-X-2605"]);
   });
+
+  it("parses a historical CKE page using its requested year", () => {
+    const sourcePage = `
+      <p>Matematyka</p>
+      <p>Arkusz egzaminacyjny dla uczniów bez niepełnosprawności (OMAP-100-X-2505)</p>
+      <a href="http://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/matematyka/OMAP-100-X-2505-zeszyt-zadan.pdf">Zeszyt zadań egzaminacyjnych</a>
+    `;
+
+    const files = parseCkePage(sourcePage, "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2025-2/", 2025);
+    expect(files).toHaveLength(1);
+    expect(files[0]).toMatchObject({
+      subject_directory: "matematyka",
+      file_name: "OMAP-100-X-2505-zeszyt-zadan.pdf",
+    });
+  });
 });

@@ -1,0 +1,869 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2025-main-polish-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2025-main-polish-100-x",
+    "source_document_id": "OPOP-100-X-2505",
+    "source_pdf_sha256": "53dcf18cb3ea7e18b8422f0c5df2d9bdfeab6a09e0bb4c8af0646c40dc86e1f5",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2025-2/",
+    "source_label": "CKE 2025 · język polski · termin główny · wariant 100-X",
+    "exam_year": 2025,
+    "exam_session": "main",
+    "subject": "polish",
+    "variant_code": "100-X",
+    "question_count": 19,
+    "supplementary_sources": [
+      {
+        "id": "cke-2025-polish-x-answer-card",
+        "path": "content/cke/sources/2025/jezyk_polski/OPOP-100-X-2505-karta-odpowiedzi.pdf",
+        "sha256": "699aa28d203253cc9cc9f0ee0035bd01139c94accfcadec7ad29f817c6a2b862",
+        "label": "Karta odpowiedzi, wersja X"
+      },
+      {
+        "id": "cke-2025-polish-scoring-rules",
+        "path": "content/cke/sources/2025/jezyk_polski/OPOP-100-400-500-660-2505-zasady.pdf",
+        "sha256": "aea9acb1f3acf12f686e7c4ecdc95f571329ab3f2f903b1b9af95f7f78bfa99c",
+        "label": "Zasady oceniania rozwiązań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [
+    {
+      "id": "chlopcy-z-placu-broni-2025",
+      "title": "Chłopcy z Placu Broni",
+      "author": "Ferenc Molnár",
+      "paragraphs": [
+        "Wreszcie Pastorowie puścili go i Nemeczek wygramolił się ze stawu. Kiedy ujrzano go w ociekającym i zabłoconym ubraniu, wesołość wybuchła ze zdwojoną siłą. Prześcigano się w szyderstwach.",
+        "Nemeczek nie reagował na te kpiny. Gorzko się uśmiechał i wygładzał mokrą kurtkę. Wtedy podszedł do niego Gereb i, szczerząc zęby w szerokim uśmiechu i kiwając głową, zapytał: – No i co, dobrze było?",
+        "Nemeczek podniósł na niego swoje duże, niebieskie oczy i odparł, że było mu znacznie lepiej niż Gerebowi, kiedy stał na brzegu i wyśmiewał słabszego. Wolałby siedzieć w wodzie po szyję, niż knuć z wrogami swoich przyjaciół. Zapowiedział też, że wróci na wyspę i nie boi się nikogo z nich.",
+        "Przypomniał, że silniejszy zawsze wygrywa, lecz on sam nie musiał wchodzić do wody: wystarczyłoby przystać do czerwonych koszul. Nie zrobił tego, bo nigdy nie będzie zdrajcą. Wskazał Gereba, któremu śmiech uwiązł w gardle.",
+        "Odważnie, dumnie i ze spokojem patrzył Nemeczek Gerebowi prosto w oczy, a ten poczuł ogromny ciężar na duszy, spochmurniał i opuścił głowę. Wszyscy umilkli. Gdy Nemeczek zapytał, czy może odejść, nikt go nie zatrzymał.",
+        "Kiedy wszedł na most, Feri Acz rozkazał prezentować broń. Wartownicy i pozostali chłopcy stanęli na baczność i unieśli włócznie. Nikt się nie odzywał."
+      ],
+      "footnotes": [
+        "Kulki – używane w popularnej dawniej grze."
+      ],
+      "source": "Ferenc Molnár, Chłopcy z Placu Broni, tłum. Tadeusz Olszański, Warszawa 2007. Tekst w aplikacji zachowuje treść potrzebną do rozwiązania zadań."
+    },
+    {
+      "id": "czyim-jestes-przyjacielem",
+      "title": "Czyim jesteś przyjacielem?",
+      "author": "Anna Vivarelli",
+      "paragraphs": [
+        "Przyjaźń fascynuje filozofów od najdawniejszych czasów. Choć dziś można jednym kliknięciem zaprosić kogoś do grona znajomych, bycie czyimś przyjacielem nie jest tak proste, jak się wydaje.",
+        "Empedokles uważał przyjaźń za siłę utrzymującą w harmonii wszechświat i jego żywioły. Przyjaźń między dwiema osobami również może być harmonią łączącą zupełnie różne charaktery.",
+        "Arystoteles twierdził, że przyjaźń jest potrzebna każdemu i szczególnie ważna w młodości, aby nie popełniać błędów i stawać się lepszymi ludźmi. Mówił: „Kiedy dwóch idzie razem, każdy z nich lepiej działa i myśli”.",
+        "Pierwszy rodzaj przyjaźni opiera się na użyteczności. Jest wadliwy i szybko się kończy, bo nie wynika z prawdziwego uczucia.",
+        "Drugi rodzaj opiera się na przyjemności wspólnego spędzania czasu. Taka relacja także może wygasnąć, gdy ludzie dorastają i zmieniają zainteresowania.",
+        "Trzeci rodzaj to rzadka przyjaźń doskonała, oparta na bezinteresownych uczuciach. Nie zna zazdrości ani zawiści, pozwala dzielić sukces i ból, daje odwagę do upomnienia przyjaciela i przyjęcia krytyki."
+      ],
+      "source": "Na podstawie: Anna Vivarelli, Czyim jesteś przyjacielem?, tłum. E. Nicewicz-Staszowska, Wrocław 2018."
+    }
+  ],
+  "questions": [
+    {
+      "id": "cke-2025-main-polish-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        6
+      ],
+      "type": "multiple_choice",
+      "topic": "Czytanie ze zrozumieniem",
+      "difficulty": 2,
+      "prompt": "Oceń zdania: 1) Dochowanie wierności przyjaciołom wymaga odwagi. 2) Zachowanie Acza jest wyrazem lekceważenia przeciwnika.",
+      "answer_options": [
+        "Zdanie 1 — P",
+        "Zdanie 1 — F",
+        "Zdanie 2 — P",
+        "Zdanie 2 — F"
+      ],
+      "answer_key": {
+        "correct_indices": [
+          0,
+          3
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "Nemeczek ryzykuje dla przyjaciół, a Acz oddaje mu honor rozkazem prezentowania broni.",
+      "solution_steps": [
+        "Nemeczek ryzykuje dla przyjaciół, a Acz oddaje mu honor rozkazem prezentowania broni."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "chlopcy-z-placu-broni-2025",
+          "default_open": true
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-polish-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        6
+      ],
+      "type": "multiple_choice",
+      "topic": "Czytanie ze zrozumieniem",
+      "difficulty": 2,
+      "prompt": "Oceń zdania: 1) Postawa Nemeczka wpłynęła na zmianę zachowania przeciwników. 2) Nemeczek nie był pewny reakcji przeciwników.",
+      "answer_options": [
+        "Zdanie 1 — P",
+        "Zdanie 1 — F",
+        "Zdanie 2 — P",
+        "Zdanie 2 — F"
+      ],
+      "answer_key": {
+        "correct_indices": [
+          0,
+          2
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "Oba stwierdzenia są prawdziwe: przeciwnicy milkną i okazują szacunek, a Nemeczek dwukrotnie pyta, czy może odejść.",
+      "solution_steps": [
+        "Oba stwierdzenia są prawdziwe: przeciwnicy milkną i okazują szacunek, a Nemeczek dwukrotnie pyta, czy może odejść."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "chlopcy-z-placu-broni-2025",
+          "default_open": true
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-polish-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        6
+      ],
+      "type": "single_choice",
+      "topic": "Charakterystyka bohatera",
+      "difficulty": 2,
+      "prompt": "Która cecha charakteryzuje postawę Nemeczka w przytoczonym fragmencie?",
+      "answer_options": [
+        "zawiść",
+        "ciekawość",
+        "nieugiętość",
+        "nieodpowiedzialność"
+      ],
+      "answer_key": {
+        "correct_index": 2
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "Nemeczek nie ulega presji przeciwników i pozostaje wierny kolegom, dlatego wykazuje nieugiętość.",
+      "solution_steps": [
+        "Nemeczek nie ulega presji przeciwników i pozostaje wierny kolegom, dlatego wykazuje nieugiętość."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "chlopcy-z-placu-broni-2025",
+          "default_open": true
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-polish-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        7
+      ],
+      "type": "single_choice",
+      "topic": "Wyszukiwanie informacji",
+      "difficulty": 2,
+      "prompt": "Na które pytanie nie można znaleźć odpowiedzi w przytoczonym fragmencie?",
+      "answer_options": [
+        "Kto przytrzymywał Nemeczka w wodzie?",
+        "W jakim celu Nemeczek pojawił się na wyspie?",
+        "Jak Feri Acz zareagował na słowa Nemeczka?",
+        "Kogo Nemeczek oskarżył o nielojalność?"
+      ],
+      "answer_key": {
+        "correct_index": 1
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "Fragment nie wyjaśnia celu pojawienia się Nemeczka na wyspie.",
+      "solution_steps": [
+        "Fragment nie wyjaśnia celu pojawienia się Nemeczka na wyspie."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "chlopcy-z-placu-broni-2025",
+          "default_open": true
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-polish-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Argumentowanie",
+      "difficulty": 2,
+      "prompt": "Uzasadnij, że w opisanej sytuacji to Nemeczek okazał się silniejszy.",
+      "answer_key": {
+        "accepted_results": [
+          "odwaga moralna",
+          "wierność i odwaga"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "Nemeczek mimo przewagi przeciwników zachowuje odwagę i wierność. Jego słowa wywołują wstyd Gereba i szacunek czerwonych koszul.",
+      "solution_steps": [
+        "Nemeczek mimo przewagi przeciwników zachowuje odwagę i wierność. Jego słowa wywołują wstyd Gereba i szacunek czerwonych koszul."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "chlopcy-z-placu-broni-2025",
+          "default_open": true
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-polish-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Motywacja bohatera",
+      "difficulty": 2,
+      "prompt": "Wyjaśnij, dlaczego Gereb najpierw szczerzył zęby w uśmiechu, a potem śmiech uwiązł mu w gardle.",
+      "answer_key": {
+        "accepted_results": [
+          "najpierw drwił, potem poczuł wstyd po oskarżeniu o zdradę"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "Na początku Gereb drwił z bezbronnego Nemeczka. Potem Nemeczek publicznie nazwał jego zdradę, co wywołało wstyd i odebrało mu pewność siebie.",
+      "solution_steps": [
+        "Na początku Gereb drwił z bezbronnego Nemeczka. Potem Nemeczek publicznie nazwał jego zdradę, co wywołało wstyd i odebrało mu pewność siebie."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "chlopcy-z-placu-broni-2025",
+          "default_open": true
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-polish-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Lektury obowiązkowe",
+      "difficulty": 2,
+      "prompt": "Wybierz inną lekturę obowiązkową, której bohater zachował godną postawę w sytuacji zagrożenia. Podaj tytuł, bohatera i uzasadnij wybór konkretną sytuacją.",
+      "answer_key": {
+        "accepted_results": [
+          "poprawny tytuł, bohater i uzasadnienie zgodne z treścią lektury"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "2 pkt – poprawny tytuł i bohater oraz trafne uzasadnienie sytuacją z lektury.",
+          "1 pkt – dwa poprawne elementy odpowiedzi.",
+          "0 pkt – odpowiedź nietrafna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "Odpowiedź jest otwarta. Musi łączyć bohatera z konkretną sytuacją zagrożenia i wyjaśniać, na czym polegała jego godna postawa.",
+      "solution_steps": [
+        "Odpowiedź jest otwarta. Musi łączyć bohatera z konkretną sytuacją zagrożenia i wyjaśniać, na czym polegała jego godna postawa."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-polish-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        8
+      ],
+      "type": "multiple_choice",
+      "topic": "Słowniki i znaczenie wyrazów",
+      "difficulty": 2,
+      "prompt": "W jakim słowniku należy szukać znaczenia słowa „szyderstwa” i jakim wyrazem można je zastąpić?",
+      "answer_options": [
+        "słownik frazeologiczny",
+        "słownik języka polskiego",
+        "drwiny",
+        "napominania"
+      ],
+      "answer_key": {
+        "correct_indices": [
+          1,
+          2
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "Znaczenie pojedynczego wyrazu sprawdzamy w słowniku języka polskiego; szyderstwa to drwiny.",
+      "solution_steps": [
+        "Znaczenie pojedynczego wyrazu sprawdzamy w słowniku języka polskiego; szyderstwa to drwiny."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-polish-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        9
+      ],
+      "type": "multiple_choice",
+      "topic": "Fleksja czasownika",
+      "difficulty": 2,
+      "prompt": "Określ formę czasownika „przystać” w zdaniu „Wystarczyłoby przystać do was” i wybierz poprawną formę trzeciej osoby czasu przeszłego.",
+      "answer_options": [
+        "forma osobowa",
+        "forma nieosobowa",
+        "przystał",
+        "przystanął"
+      ],
+      "answer_key": {
+        "correct_indices": [
+          1,
+          2
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "Bezokolicznik jest formą nieosobową. Trzecia osoba liczby pojedynczej czasu przeszłego to „przystał”.",
+      "solution_steps": [
+        "Bezokolicznik jest formą nieosobową. Trzecia osoba liczby pojedynczej czasu przeszłego to „przystał”."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-polish-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        9
+      ],
+      "type": "long_text",
+      "topic": "Interpunkcja",
+      "difficulty": 2,
+      "prompt": "Wstaw trzy brakujące przecinki: „...znanym dziennikarzem o pomoc”, „wpadli na pomysł aby...”, „na ponad 40 języków co przyczyniło się...”.",
+      "answer_key": {
+        "accepted_results": [
+          "dziennikarzem, o pomoc; pomysł, aby; języków, co"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "Przecinki oddzielają dopowiedzenie oraz zdania podrzędne rozpoczynane przez „aby” i „co”.",
+      "solution_steps": [
+        "Przecinki oddzielają dopowiedzenie oraz zdania podrzędne rozpoczynane przez „aby” i „co”."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-polish-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        10,
+        11
+      ],
+      "type": "long_text",
+      "topic": "Rozpoznawanie lektur",
+      "difficulty": 2,
+      "prompt": "Połącz karty A–F w trzy pary odnoszące się do lektur obowiązkowych, podaj tytuły i wyjaśnij związek każdej ilustracji z utworem.",
+      "answer_key": {
+        "accepted_results": [
+          "A–F Mały Książę; B–C Pan Tadeusz; D–E Opowieść wigilijna lub Dziady cz. II"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "3 pkt – trzy poprawne pary, tytuły i wyjaśnienia.",
+          "2 pkt – dwa kompletne poprawne zestawienia.",
+          "1 pkt – jedno kompletne poprawne zestawienie.",
+          "0 pkt – brak poprawnego zestawienia."
+        ]
+      },
+      "explanation": "Przykładowy komplet: A–F „Mały Książę”, B–C „Pan Tadeusz”, D–E „Opowieść wigilijna” (dopuszczalne również „Dziady cz. II” przy trafnym uzasadnieniu).",
+      "solution_steps": [
+        "Przykładowy komplet: A–F „Mały Książę”, B–C „Pan Tadeusz”, D–E „Opowieść wigilijna” (dopuszczalne również „Dziady cz. II” przy trafnym uzasadnieniu)."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q11-literary-cards"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q11-literary-cards",
+          "path": "public/cke/2025/polish/opop-100-2505/q11-literary-cards.png",
+          "sha256": "0c9fe3366f51f7fa2a990310042a76864659eb13e7e72e5244ae37223ddc5736",
+          "alt": "Sześć kart ilustracyjnych: studnia i samolot, zamek, niedźwiedź w lesie, postać w łańcuchach, cmentarz oraz król na tronie.",
+          "caption": "Karty do zadania 11 arkusza OPOP-100-2505."
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-polish-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        13
+      ],
+      "type": "long_text",
+      "topic": "Streszczenie",
+      "difficulty": 2,
+      "prompt": "Uzupełnij streszczenie tekstu „Czyim jesteś przyjacielem?”: wskaż temat, pytanie otwierające, treść kolejnych akapitów i wniosek końcowy.",
+      "answer_key": {
+        "accepted_results": [
+          "przyjaźń; dlaczego interesowała filozofów; trzy rodzaje przyjaźni; przyjaźń doskonała jest rzadka"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "2 pkt – logiczne streszczenie uwzględniające temat, tok tekstu i zakończenie.",
+          "1 pkt – częściowe, ale zgodne z tekstem streszczenie.",
+          "0 pkt – odpowiedź niezgodna z tekstem albo brak."
+        ]
+      },
+      "explanation": "Tekst objaśnia poglądy filozofów na przyjaźń, przedstawia trzy rodzaje przyjaźni według Arystotelesa i kończy wnioskiem, że doskonała, bezinteresowna przyjaźń jest rzadka.",
+      "solution_steps": [
+        "Tekst objaśnia poglądy filozofów na przyjaźń, przedstawia trzy rodzaje przyjaźni według Arystotelesa i kończy wnioskiem, że doskonała, bezinteresowna przyjaźń jest rzadka."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "czyim-jestes-przyjacielem",
+          "default_open": true
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-polish-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        13
+      ],
+      "type": "multiple_choice",
+      "topic": "Czytanie ze zrozumieniem",
+      "difficulty": 2,
+      "prompt": "Oceń zdania: 1) Według Empedoklesa przyjaźń harmonizuje przeciwieństwa. 2) Według Arystotelesa należy przemilczać błędy przyjaciela.",
+      "answer_options": [
+        "Zdanie 1 — P",
+        "Zdanie 1 — F",
+        "Zdanie 2 — P",
+        "Zdanie 2 — F"
+      ],
+      "answer_key": {
+        "correct_indices": [
+          0,
+          3
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "Empedokles łączy przyjaźń z harmonią, natomiast Arystoteles uznaje, że przyjaciela należy upomnieć, gdy błądzi.",
+      "solution_steps": [
+        "Empedokles łączy przyjaźń z harmonią, natomiast Arystoteles uznaje, że przyjaciela należy upomnieć, gdy błądzi."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "czyim-jestes-przyjacielem",
+          "default_open": true
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-polish-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        13
+      ],
+      "type": "single_choice",
+      "topic": "Czytanie ze zrozumieniem",
+      "difficulty": 2,
+      "prompt": "Które zdanie jest niezgodne z treścią tekstu?",
+      "answer_options": [
+        "Różnica charakterów nie wyklucza trwałej przyjaźni.",
+        "Bezinteresowna przyjaźń jest rzadka.",
+        "Radość ze wspólnego czasu wystarczy, by relacja nie wygasła.",
+        "Przyjaźń była ważnym tematem dla filozofów."
+      ],
+      "answer_key": {
+        "correct_index": 2
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "Tekst mówi, że przyjaźń oparta wyłącznie na przyjemności wspólnego czasu w końcu wygasa.",
+      "solution_steps": [
+        "Tekst mówi, że przyjaźń oparta wyłącznie na przyjemności wspólnego czasu w końcu wygasa."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "czyim-jestes-przyjacielem",
+          "default_open": true
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-polish-100-x-q15",
+      "number": "15",
+      "sort_order": 15,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Mały Książę",
+      "difficulty": 2,
+      "prompt": "Fragment zaczyna się od słów lisa: „Proszę, oswój mnie”. Podaj tytuł lektury i wyjaśnij na przykładzie z utworu, co jest potrzebne, aby zyskać przyjaciela.",
+      "answer_key": {
+        "accepted_results": [
+          "Mały Książę; czas, cierpliwość, rytuał i odpowiedzialność"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "2 pkt – poprawny tytuł i trafne wyjaśnienie z przykładem.",
+          "1 pkt – poprawny tylko jeden element.",
+          "0 pkt – odpowiedź błędna albo brak."
+        ]
+      },
+      "explanation": "To „Mały Książę”. Oswojenie wymaga czasu, cierpliwości, regularnych spotkań i przyjęcia odpowiedzialności za stworzoną więź.",
+      "solution_steps": [
+        "To „Mały Książę”. Oswojenie wymaga czasu, cierpliwości, regularnych spotkań i przyjęcia odpowiedzialności za stworzoną więź."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-polish-100-x-q16",
+      "number": "16",
+      "sort_order": 16,
+      "source_pages": [
+        14
+      ],
+      "type": "single_choice",
+      "topic": "Składnia",
+      "difficulty": 2,
+      "prompt": "Jakim zdaniem jest wypowiedzenie: „Kiedy dwóch idzie razem, każdy z nich lepiej działa i myśli”?",
+      "answer_options": [
+        "pojedynczym",
+        "złożonym podrzędnie",
+        "wielokrotnie złożonym",
+        "złożonym współrzędnie"
+      ],
+      "answer_key": {
+        "correct_index": 2
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "Wypowiedzenie zawiera trzy orzeczenia: „idzie”, „działa” i „myśli”, dlatego jest wielokrotnie złożone.",
+      "solution_steps": [
+        "Wypowiedzenie zawiera trzy orzeczenia: „idzie”, „działa” i „myśli”, dlatego jest wielokrotnie złożone."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-polish-100-x-q17",
+      "number": "17",
+      "sort_order": 17,
+      "source_pages": [
+        14
+      ],
+      "type": "single_choice",
+      "topic": "Frazeologia",
+      "difficulty": 2,
+      "prompt": "Które powiedzenie wyraża podobną myśl do słów „Kiedy dwóch idzie razem, każdy z nich lepiej działa i myśli”?",
+      "answer_options": [
+        "Działać na dwa fronty",
+        "Co dwie głowy, to nie jedna",
+        "Trzymać dwie sroki za ogon",
+        "Upiec dwie pieczenie na jednym ogniu"
+      ],
+      "answer_key": {
+        "correct_index": 1
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "Powiedzenie „Co dwie głowy, to nie jedna” podkreśla korzyść ze wspólnego myślenia i działania.",
+      "solution_steps": [
+        "Powiedzenie „Co dwie głowy, to nie jedna” podkreśla korzyść ze wspólnego myślenia i działania."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-polish-100-x-q18",
+      "number": "18",
+      "sort_order": 18,
+      "source_pages": [
+        15
+      ],
+      "type": "long_text",
+      "topic": "Ogłoszenie",
+      "difficulty": 2,
+      "prompt": "Zredaguj ogłoszenie o spotkaniu uczniów chętnych do udziału w przedstawieniu „Przyjaciel na zawsze”. Zachęć do udziału dwoma argumentami, z których co najmniej jeden nawiązuje do tematyki spotkania.",
+      "answer_key": {
+        "accepted_results": [
+          "ogłoszenie zawierające kto, co, gdzie, kiedy i dwa argumenty"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "2 pkt – pełna realizacja treści i formy ogłoszenia.",
+          "1 pkt – poprawność językowa, ortograficzna i interpunkcyjna.",
+          "0 pkt – wypowiedź nie spełnia wymagań."
+        ]
+      },
+      "explanation": "Ogłoszenie powinno jasno podawać cel, termin i miejsce spotkania oraz zawierać dwa konkretne argumenty zachęcające.",
+      "solution_steps": [
+        "Ogłoszenie powinno jasno podawać cel, termin i miejsce spotkania oraz zawierać dwa konkretne argumenty zachęcające."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-polish-100-x-q19",
+      "number": "19",
+      "sort_order": 19,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Wypracowanie",
+      "difficulty": 2,
+      "prompt": "Wybierz temat: 1) przemówienie o przyjaźni łączącej różne charaktery z odwołaniem do lektury obowiązkowej i innego utworu; albo 2) opowiadanie o wspólnej przygodzie z bohaterem lektury i jego czynie godnym podziwu, wykorzystujące jedną z ilustracji. Napisz co najmniej 200 słów.",
+      "answer_key": {
+        "accepted_results": [
+          "wypowiedź zgodna z wybranym tematem, formą i kryteriami CKE"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 20,
+        "rules": [
+          "Do 20 pkt według kryteriów CKE: realizacja tematu, elementy twórcze lub retoryczne, kompetencje literackie i kulturowe, kompozycja, styl, język, ortografia i interpunkcja."
+        ]
+      },
+      "explanation": "Najpierw wybierz formę i zaplanuj tezę lub fabułę. Odwołaj się konkretnie do lektury, zachowaj spójną kompozycję i sprawdź, czy tekst ma minimum 200 słów.",
+      "solution_steps": [
+        "Najpierw wybierz formę i zaplanuj tezę lub fabułę. Odwołaj się konkretnie do lektury, zachowaj spójną kompozycję i sprawdź, czy tekst ma minimum 200 słów."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q19-story-prompts"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q19-story-prompts",
+          "path": "public/cke/2025/polish/opop-100-2505/q19-story-prompts.png",
+          "sha256": "7d6b3f8269d18c5fb18d4c50948496cbed916c7e5e57e4dd9b47d101fbb3e9fa",
+          "alt": "Dwie ilustracje do opowiadania: rozstanie wędrowców na rozstaju dróg oraz spotkanie podróżników w balonach.",
+          "caption": "Ilustracje do tematu 2 zadania 19 arkusza OPOP-100-2505."
+        }
+      ]
+    }
+  ]
+}

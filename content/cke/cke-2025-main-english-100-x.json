@@ -1,0 +1,699 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2025-main-english-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2025-main-english-100-x",
+    "source_document_id": "OJAP-100-X-2505",
+    "source_pdf_sha256": "27940300ff6c07af72233451fb3dc7caacac9655c0705aae4f152779dec1e2d9",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2025-2/",
+    "source_label": "CKE 2025 · język angielski · termin główny · wariant 100-X",
+    "exam_year": 2025,
+    "exam_session": "main",
+    "subject": "english",
+    "variant_code": "100-X",
+    "question_count": 14,
+    "supplementary_sources": [
+      {
+        "id": "cke-2025-english-answer-card",
+        "path": "content/cke/sources/2025/jezyk_angielski/OJAP-100-X-2505-karta-odpowiedzi.pdf",
+        "sha256": "bec2f1dee7ec3b0d9a78b5cced5343e852765504d1a065501c2ac9c00f3dcc0d",
+        "label": "Karta odpowiedzi, wersja X"
+      },
+      {
+        "id": "cke-2025-english-transcript",
+        "path": "content/cke/sources/2025/jezyk_angielski/OJAP-100-200-400-500-660-K00-2505_OJAU-100-2505-transkrypcja.pdf",
+        "sha256": "b325e0706b4bda8804fbb4f62dafaa32b393c90419c07fc39f5b42c3ae9ba350",
+        "label": "Transkrypcja nagrań"
+      },
+      {
+        "id": "cke-2025-english-scoring-rules",
+        "path": "content/cke/sources/2025/jezyk_angielski/OJAP-100-200-400-500-660-K00-2505-zasady.pdf",
+        "sha256": "c0adeef13dfb81be477b1a5e95499260dd6043e860740bd9b0ba90e499f48ff7",
+        "label": "Zasady oceniania rozwiązań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [
+    {
+      "id": "task-7-notices-2025",
+      "title": "Task 7 – short texts",
+      "paragraphs": [
+        "7.1 Sarah’s Blog: Last month Sarah took part in a school cooking competition. She sent in a toasted-sandwich recipe seen on TV, made it in the school cafeteria and met celebrity chef Tom Burns, who praised her sandwich. She did not reach the top three. Options: A won first prize; B met a famous person; C made a snack from her family cookbook.",
+        "7.2 Advertisement: Choose a personalised present such as a flash drive, power bank, mug, bag or calendar, and add your own photo or text. Options: A learn how to make a gadget; B find a birthday-party venue; C give someone a special gift.",
+        "7.3 Mum’s note: Jim should take Amy to her friend’s birthday party at the Kids’ Club on his way to football practice. Taxi money is on the kitchen table. Options: A give Jim instructions; B encourage Jim to go to training; C thank Jim for his help.",
+        "7.4 Holly’s World: Holly’s grandma’s café is losing customers to a new shopping centre, so Holly organises a singing competition in the café. Options: A Holly’s idea to make the café popular again; B an event at the shopping centre; C Holly’s work as a waitress."
+      ],
+      "source": "Materiały zadania 7, arkusz OJAP-100-X-2505."
+    },
+    {
+      "id": "task-8-chimney",
+      "title": "Discovery in a chimney",
+      "paragraphs": [
+        "While renovating a house in Surrey, a builder found an old envelope in an unused chimney. It contained a 70-year-old letter in which seven-year-old Tom asked Santa for coloured pencils and a woollen hat.",
+        "The builder posted a photo online to show how much times had changed. Tom, now an old man, recognised the letter and contacted him. The builder gave him a large box of pencils and a woollen hat.",
+        "Tom decided to give the pencils to a boy from a poor family and keep the hat as a reminder that dreams can come true."
+      ],
+      "source": "Na podstawie: newsinlevels.com."
+    },
+    {
+      "id": "task-9-museum-ships",
+      "title": "Museum ships",
+      "paragraphs": [
+        "A. The Mary Rose, Henry VIII’s flagship, sank in 1545 and was raised from the sea in 1982. It and the objects found inside can be seen in a Portsmouth museum.",
+        "B. The Cutty Sark opened to visitors in 1954. On board, people dressed as historical characters tell stories about the crew’s everyday life.",
+        "C. Francis Drake sailed around the world on the Pelican, later renamed the Golden Hinde. The original was destroyed; a copy built in 1973 lets visitors experience a sailor’s life."
+      ],
+      "source": "Na podstawie: maryrose.org, rmg.co.uk i goldenhinde.co.uk."
+    },
+    {
+      "id": "task-10-railway-children",
+      "title": "The Railway Children",
+      "paragraphs": [
+        "A theatre adaptation of Edith Nesbit’s novel is performed on a stage in an unused part of a real railway station. Bobbie, Peter and Phyllis move to the countryside after their father suddenly disappears. A real steam train appears in the last scene.",
+        "Mike writes that the tickets were expensive but worthwhile. After the play he could enter the steam train and then visited a station bookshop offering books at half price."
+      ],
+      "source": "Na podstawie: londontheatredirect.com i raisingteenstoday.com."
+    },
+    {
+      "id": "task-11-furry-champion",
+      "title": "A furry champion",
+      "paragraphs": [
+        "Paris is a twelve-year-old Beagle with a talent for catching footballs. Last year she broke the Guinness World Record for the largest number caught by a dog in one minute. She practises for fifteen minutes every afternoon. Her owner asks readers to let them know if their dogs can do similar tricks."
+      ],
+      "source": "Na podstawie: dogtime.com."
+    },
+    {
+      "id": "task-12-quilling",
+      "title": "Quilling – art for everyone",
+      "paragraphs": [
+        "Quilling is a way of creating pictures from coloured paper strips. You use scissors, glue and metal tools to hold the strips and give them the shapes you want. It may be difficult at first, but practice helps."
+      ],
+      "source": "Na podstawie: quillingcards.net, loveart.pl i amazon.in."
+    }
+  ],
+  "questions": [
+    {
+      "id": "cke-2025-main-english-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        3,
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu",
+      "difficulty": 2,
+      "prompt": "Wysłuchaj pięciu nagrań i zapisz odpowiedzi A, B lub C: 1.1 Co było w paczce? 1.2 Jak Jack pojedzie jutro do szkoły? 1.3 Skąd dzwoni dziewczyna? 1.4 Dziewczyna: A oferuje Jamesowi pomoc, B prosi Jamesa o zgodę, C zaprasza Jamesa na przyjęcie. 1.5 Chłopiec mówi o: A poleconym filmie, B sztuce widzianej w teatrze, C książce czytanej do szkoły.",
+      "answer_key": {
+        "accepted_results": [
+          "A C C B B",
+          "A,C,C,B,B"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 5,
+        "rules": [
+          "Po 1 pkt za każdą poprawną odpowiedź: 1.1 A, 1.2 C, 1.3 C, 1.4 B, 1.5 B."
+        ]
+      },
+      "explanation": "W paczce były buty sportowe; Jack pojedzie samochodem; dziewczyna dzwoni ze sklepu; rozmówca prosi Jamesa o zgodę; rozmowa dotyczy przedstawienia teatralnego.",
+      "solution_steps": [
+        "W paczce były buty sportowe; Jack pojedzie samochodem; dziewczyna dzwoni ze sklepu; rozmówca prosi Jamesa o zgodę; rozmowa dotyczy przedstawienia teatralnego."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "ojap-100-2505-recording"
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-picture-options"
+        }
+      ],
+      "assets": [
+        {
+          "id": "ojap-100-2505-recording",
+          "path": "public/cke/2025/english/ojap-100-x-2505/ojap-100-2505.mp3",
+          "sha256": "a5424a3c7e26ef526020ad96672f6654e23f6e076a650c34a76e6eb968882259",
+          "alt": "Oficjalne nagranie CKE do zadań 1–6 z języka angielskiego.",
+          "caption": "Nagranie do arkusza OJAP-100-X-2505.",
+          "mime_type": "audio/mpeg"
+        },
+        {
+          "id": "q01-picture-options",
+          "path": "public/cke/2025/english/ojap-100-x-2505/q01-picture-options.png",
+          "sha256": "ca57279bd9109e41357d63a4c693b85f7393732b146834b2b74c5a2f68bfaccf",
+          "alt": "Obrazkowe odpowiedzi do zadań 1.1–1.3: buty, słuchawki i koszulka; rower, autobus i samochód; gabinet lekarski, biblioteka i sklep spożywczy.",
+          "caption": "Ilustracje do zadania 1 arkusza OJAP-100-X-2505."
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-english-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu",
+      "difficulty": 2,
+      "prompt": "Dopasuj A–E do wypowiedzi 2.1–2.4: A While visiting the zoo, I did a written task. B I really enjoyed a film shown at the zoo. C I was surprised by what an animal was doing. D I couldn’t see something I was interested in. E I was scared by a noise when I was looking at some animals.",
+      "answer_key": {
+        "accepted_results": [
+          "D E A C",
+          "D,E,A,C"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Po 1 pkt: 2.1 D, 2.2 E, 2.3 A, 2.4 C."
+        ]
+      },
+      "explanation": "Pierwsza osoba przegapiła karmienie słonia, druga przestraszyła się hałasu, trzecia opisuje pisemne zadanie z lukami, a czwarta była zaskoczona małpą.",
+      "solution_steps": [
+        "Pierwsza osoba przegapiła karmienie słonia, druga przestraszyła się hałasu, trzecia opisuje pisemne zadanie z lukami, a czwarta była zaskoczona małpą."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "ojap-100-2505-recording"
+        }
+      ],
+      "assets": [
+        {
+          "id": "ojap-100-2505-recording",
+          "path": "public/cke/2025/english/ojap-100-x-2505/ojap-100-2505.mp3",
+          "sha256": "a5424a3c7e26ef526020ad96672f6654e23f6e076a650c34a76e6eb968882259",
+          "alt": "Oficjalne nagranie CKE do zadań 1–6 z języka angielskiego.",
+          "caption": "Nagranie do arkusza OJAP-100-X-2505.",
+          "mime_type": "audio/mpeg"
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-english-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe",
+      "difficulty": 2,
+      "prompt": "Dobierz reakcje A–E do wypowiedzi 3.1–3.4: A You may be right, but I prefer historical novels. B You’re welcome. I’m glad you liked it. C Oh, really? I need to congratulate him then. D Oh, thank you. It was easier than I expected. E Why don’t you take a detective story with you?",
+      "answer_key": {
+        "accepted_results": [
+          "E A D B",
+          "E,A,D,B"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Po 1 pkt: 3.1 E, 3.2 A, 3.3 D, 3.4 B."
+        ]
+      },
+      "explanation": "Klucz CKE do kolejnych reakcji to E, A, D, B.",
+      "solution_steps": [
+        "Klucz CKE do kolejnych reakcji to E, A, D, B."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "ojap-100-2505-recording"
+        }
+      ],
+      "assets": [
+        {
+          "id": "ojap-100-2505-recording",
+          "path": "public/cke/2025/english/ojap-100-x-2505/ojap-100-2505.mp3",
+          "sha256": "a5424a3c7e26ef526020ad96672f6654e23f6e076a650c34a76e6eb968882259",
+          "alt": "Oficjalne nagranie CKE do zadań 1–6 z języka angielskiego.",
+          "caption": "Nagranie do arkusza OJAP-100-X-2505.",
+          "mime_type": "audio/mpeg"
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-english-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu",
+      "difficulty": 2,
+      "prompt": "Uzupełnij notatkę na podstawie nagrania. Wpisz po angielsku brakujące informacje 4.1–4.3.",
+      "answer_key": {
+        "accepted_results": [
+          "cinema; pancakes; five",
+          "cinema,pancakes,5"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Po 1 pkt: 4.1 cinema, 4.2 pancakes, 4.3 five/5."
+        ]
+      },
+      "explanation": "W nagraniu padają kolejno informacje: cinema, pancakes oraz five.",
+      "solution_steps": [
+        "W nagraniu padają kolejno informacje: cinema, pancakes oraz five."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "ojap-100-2505-recording"
+        }
+      ],
+      "assets": [
+        {
+          "id": "ojap-100-2505-recording",
+          "path": "public/cke/2025/english/ojap-100-x-2505/ojap-100-2505.mp3",
+          "sha256": "a5424a3c7e26ef526020ad96672f6654e23f6e076a650c34a76e6eb968882259",
+          "alt": "Oficjalne nagranie CKE do zadań 1–6 z języka angielskiego.",
+          "caption": "Nagranie do arkusza OJAP-100-X-2505.",
+          "mime_type": "audio/mpeg"
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-english-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe",
+      "difficulty": 2,
+      "prompt": "Wybierz właściwe reakcje. 5.1 Odradzasz koledze film: A You aren’t allowed to watch it. B I can’t go and see it with you. C Don’t waste your time on it. 5.2 Częstujesz koleżankę tortem: A Help yourself. B Thanks a lot. C The same to you. 5.3 Wyrażasz opinię o koncercie: A That would be great. B It’s nice to hear about it. C I really enjoyed it. 5.4 Przyznajesz koledze rację: A You’re right. B You can’t be serious. C You should agree with me.",
+      "answer_key": {
+        "accepted_results": [
+          "C A C A",
+          "C,A,C,A"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Po 1 pkt: 5.1 C, 5.2 A, 5.3 C, 5.4 A."
+        ]
+      },
+      "explanation": "Odradzamy przez „Don’t waste your time”; częstujemy „Help yourself”; opinię wyraża „I really enjoyed it”; zgodę „You’re right”.",
+      "solution_steps": [
+        "Odradzamy przez „Don’t waste your time”; częstujemy „Help yourself”; opinię wyraża „I really enjoyed it”; zgodę „You’re right”."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-english-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Tłumaczenie fragmentów zdań",
+      "difficulty": 2,
+      "prompt": "Uzupełnij dialogi (maksymalnie trzy wyrazy): 6.1 He (born) ____ in Spain, but he lives in London. 6.2 Brian, (borrow) ____ your scooter this afternoon?",
+      "answer_key": {
+        "accepted_results": [
+          "was born; can I borrow",
+          "was born; could I borrow",
+          "was born; may I borrow"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Po 1 pkt: 6.1 was born; 6.2 can/could/may I borrow."
+        ]
+      },
+      "explanation": "Pierwsza luka wymaga czasu przeszłego „was born”, a druga uprzejmego pytania o pożyczenie: „Can/Could/May I borrow...?”.",
+      "solution_steps": [
+        "Pierwsza luka wymaga czasu przeszłego „was born”, a druga uprzejmego pytania o pożyczenie: „Can/Could/May I borrow...?”."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-english-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        8,
+        9
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie tekstów pisanych",
+      "difficulty": 2,
+      "prompt": "Przeczytaj cztery krótkie teksty i wybierz A, B lub C w zadaniach 7.1–7.4.",
+      "answer_key": {
+        "accepted_results": [
+          "B C A A",
+          "B,C,A,A"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Po 1 pkt: 7.1 B, 7.2 C, 7.3 A, 7.4 A."
+        ]
+      },
+      "explanation": "Teksty dotyczą kolejno celu ogłoszenia, spersonalizowanego prezentu, instrukcji mamy dla Jima oraz pomysłu Holly na uratowanie kawiarni.",
+      "solution_steps": [
+        "Teksty dotyczą kolejno celu ogłoszenia, spersonalizowanego prezentu, instrukcji mamy dla Jima oraz pomysłu Holly na uratowanie kawiarni."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "task-7-notices-2025",
+          "default_open": true
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-english-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Spójność tekstu",
+      "difficulty": 2,
+      "prompt": "Uzupełnij luki zdaniami: A To show how much times have changed, he posted a photo of the letter online. B He decided to give his new pencils to a boy from a poor family he knew. C The old man never met the builder, but decided to write a letter to him. D It was a dirty old envelope which contained a 70-year-old letter.",
+      "answer_key": {
+        "accepted_results": [
+          "D A B",
+          "D,A,B"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Po 1 pkt: 8.1 D, 8.2 A, 8.3 B."
+        ]
+      },
+      "explanation": "Najpierw opisano znalezioną kopertę (D), potem publikację zdjęcia (A), a na końcu decyzję Toma o oddaniu kredek (B).",
+      "solution_steps": [
+        "Najpierw opisano znalezioną kopertę (D), potem publikację zdjęcia (A), a na końcu decyzję Toma o oddaniu kredek (B)."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "task-8-chimney",
+          "default_open": true
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-english-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        11
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie tekstów pisanych",
+      "difficulty": 2,
+      "prompt": "Dopasuj opisy statków A–C do zdań: 9.1 postacie w kostiumach opowiadają o życiu na morzu; 9.2 zmieniono nazwę statku; 9.3 wydobyto go z dna; 9.4 zbudowano jego kopię.",
+      "answer_key": {
+        "accepted_results": [
+          "B C A C",
+          "B,C,A,C"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Po 1 pkt: 9.1 B, 9.2 C, 9.3 A, 9.4 C."
+        ]
+      },
+      "explanation": "Kostiumowe opowieści są na Cutty Sark; Golden Hinde zmienił nazwę i został odtworzony; Mary Rose wydobyto z dna.",
+      "solution_steps": [
+        "Kostiumowe opowieści są na Cutty Sark; Golden Hinde zmienił nazwę i został odtworzony; Mary Rose wydobyto z dna."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "task-9-museum-ships",
+          "default_open": true
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-english-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        12,
+        13
+      ],
+      "type": "long_text",
+      "topic": "Mediacja językowa",
+      "difficulty": 2,
+      "prompt": "Uzupełnij po polsku e-mail Ani: 10.1 scena znajduje się w nieużywanej części czego? 10.2 co stało się z ojcem dzieci? 10.3 co można było zrobić ze zniżką po przedstawieniu?",
+      "answer_key": {
+        "accepted_results": [
+          "stacji kolejowej; zniknął ich ojciec; kupić książki",
+          "dworca kolejowego; znika ich ojciec; kupić książki"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Po 1 pkt za sens: 10.1 stacji/dworca kolejowego; 10.2 znika/zniknął ich ojciec; 10.3 kupić książki."
+        ]
+      },
+      "explanation": "Scena jest na stacji kolejowej, zagadką jest zniknięcie ojca, a książki w hali dworca były sprzedawane za pół ceny.",
+      "solution_steps": [
+        "Scena jest na stacji kolejowej, zagadką jest zniknięcie ojca, a książki w hali dworca były sprzedawane za pół ceny."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "task-10-railway-children",
+          "default_open": true
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-english-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe",
+      "difficulty": 2,
+      "prompt": "Uzupełnij luki wyrazami A–F: A at, B every, C fastest, D give, E largest, F let.",
+      "answer_key": {
+        "accepted_results": [
+          "E B F",
+          "E,B,F"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Po 1 pkt: 11.1 E (largest), 11.2 B (every), 11.3 F (let)."
+        ]
+      },
+      "explanation": "Poprawne połączenia to „the largest number”, „every afternoon” i „let us know”.",
+      "solution_steps": [
+        "Poprawne połączenia to „the largest number”, „every afternoon” i „let us know”."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "task-11-furry-champion",
+          "default_open": true
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-english-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        15
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe",
+      "difficulty": 2,
+      "prompt": "W tekście o quillingu wybierz poprawne formy: 12.1 creating/created/create, 12.2 they/their/them, 12.3 at first/at all/at last.",
+      "answer_key": {
+        "accepted_results": [
+          "A C A",
+          "creating; them; at first"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Po 1 pkt: 12.1 A, 12.2 C, 12.3 A."
+        ]
+      },
+      "explanation": "Po „a way of” używamy gerundium „creating”; po „giving” dopełnienia „them”; początkową trudność opisuje „at first”.",
+      "solution_steps": [
+        "Po „a way of” używamy gerundium „creating”; po „giving” dopełnienia „them”; początkową trudność opisuje „at first”."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "task-12-quilling",
+          "default_open": true
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-english-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Tłumaczenie fragmentów zdań",
+      "difficulty": 2,
+      "prompt": "Przetłumacz fragmenty, wpisując maksymalnie trzy wyrazy: 13.1 „widziałeś” w pytaniu o Toma; 13.2 „rower mojego brata”; 13.3 „wystarczająco długie”.",
+      "answer_key": {
+        "accepted_results": [
+          "did you see; my brother's bike; long enough",
+          "did you see; my brother's bicycle; long enough"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Po 1 pkt: did you see; my brother’s bike/bicycle; long enough."
+        ]
+      },
+      "explanation": "Pytanie w Past Simple wymaga „did you see”; dopełniacz to „my brother’s”; przymiotnik przed „enough” daje „long enough”.",
+      "solution_steps": [
+        "Pytanie w Past Simple wymaga „did you see”; dopełniacz to „my brother’s”; przymiotnik przed „enough” daje „long enough”."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-english-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna",
+      "difficulty": 2,
+      "prompt": "Napisz e-mail po angielsku (50–120 słów) po powrocie z zagranicznej wycieczki szkolnej: wyjaśnij, dlaczego była udana; opisz problem grupy w drodze powrotnej; zaproś poznanego kolegę i zaproponuj wspólne spędzenie czasu. Podpisz się XYZ.",
+      "answer_key": {
+        "accepted_results": [
+          "e-mail zgodny z trzema podpunktami i kryteriami CKE"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 10,
+        "rules": [
+          "Do 4 pkt – treść; do 2 pkt – spójność i logika; do 2 pkt – zakres środków językowych; do 2 pkt – poprawność środków językowych."
+        ]
+      },
+      "explanation": "Rozwiń każdy z trzech podpunktów przynajmniej jednym dodatkowym szczegółem, zachowaj formę e-maila oraz limit 50–120 słów.",
+      "solution_steps": [
+        "Rozwiń każdy z trzech podpunktów przynajmniej jednym dodatkowym szczegółem, zachowaj formę e-maila oraz limit 50–120 słów."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [],
+      "assets": []
+    }
+  ]
+}

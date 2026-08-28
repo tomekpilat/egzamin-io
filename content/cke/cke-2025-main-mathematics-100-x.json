@@ -1,0 +1,987 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2025-main-mathematics-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2025-main-mathematics-100-x",
+    "source_document_id": "OMAP-100-X-2505",
+    "source_pdf_sha256": "1ed4eba4edf7e9a78b72b5a01e5825b8e7790f069427c36c4f3bb70c31338ac5",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2025-2/",
+    "source_label": "CKE 2025 · matematyka · termin główny · wariant 100-X",
+    "exam_year": 2025,
+    "exam_session": "main",
+    "subject": "mathematics",
+    "variant_code": "100-X",
+    "question_count": 21,
+    "supplementary_sources": [
+      {
+        "id": "cke-2025-mathematics-open-answer-card",
+        "path": "content/cke/sources/2025/matematyka/Karta-rozwiazan-zadan-matematyka-2505.pdf",
+        "sha256": "cbf4dd55665f88f0c2d087c3a5dbcf581257f288fb8eed38107df91c22570d7e",
+        "label": "Karta rozwiązań zadań otwartych 16–21"
+      },
+      {
+        "id": "cke-2025-mathematics-answer-card",
+        "path": "content/cke/sources/2025/matematyka/OMAP-100-X-2505-karta-odpowiedzi.pdf",
+        "sha256": "20e09d7265291c888f6ca34b30704322a256e48863bccad627bd23e90719992d",
+        "label": "Karta odpowiedzi, wersja X"
+      },
+      {
+        "id": "cke-2025-mathematics-scoring-rules",
+        "path": "content/cke/sources/2025/matematyka/OMAP-100-2505-zasady.pdf",
+        "sha256": "a76de95a56deb91f571a5c569dd8c2308df87bdbf5289620a1faaba84440e913",
+        "label": "Zasady oceniania rozwiązań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "questions": [
+    {
+      "id": "cke-2025-main-mathematics-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        4
+      ],
+      "type": "multiple_choice",
+      "topic": "Procenty i diagramy",
+      "difficulty": 2,
+      "prompt": "Deskorolka kosztuje 180 zł. Diagram pokazuje, ile Aldona odłożyła: styczeń 50 zł, luty 40 zł, marzec 60 zł, kwiecień 30 zł. Wybierz poprawne uzupełnienia obu zdań.",
+      "answer_options": [
+        "Styczeń i luty: 45%",
+        "Styczeń i luty: 50%",
+        "Marzec: o 10% więcej niż styczeń",
+        "Marzec: o 20% więcej niż styczeń"
+      ],
+      "answer_key": {
+        "correct_indices": [
+          1,
+          3
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "90 zł to 50% z 180 zł, a wzrost z 50 zł do 60 zł wynosi 20%.",
+      "solution_steps": [
+        "Dodaj oszczędności ze stycznia i lutego: 90 zł.",
+        "Oblicz 90/180 = 50%.",
+        "Oblicz (60−50)/50 = 20%."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q01-chart"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q01-chart",
+          "path": "public/cke/2025/mathematics/omap-100-x-2505/q01-savings-chart.png",
+          "sha256": "83b0aa1332474ebc40f924a54d9e4207753674e5a40a32c1ed9d121bd6d1f83a",
+          "alt": "Wykres słupkowy oszczędności: styczeń 50 zł, luty 40 zł, marzec 60 zł, kwiecień 30 zł.",
+          "caption": "Rysunek z arkusza OMAP-100-X-2505."
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-mathematics-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        4
+      ],
+      "type": "single_choice",
+      "topic": "Ułamki i działania",
+      "difficulty": 2,
+      "prompt": "Oblicz wartość wyrażenia (2,4 − 5 1/3) : (−2).",
+      "answer_options": [
+        "−1 8/15",
+        "−1 7/15",
+        "1 7/15",
+        "1 8/15"
+      ],
+      "answer_key": {
+        "correct_index": 2
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "2,4 = 12/5, więc 12/5 − 16/3 = −44/15. Dzielenie przez −2 daje 22/15 = 1 7/15.",
+      "solution_steps": [
+        "2,4 = 12/5, więc 12/5 − 16/3 = −44/15. Dzielenie przez −2 daje 22/15 = 1 7/15."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-mathematics-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        6
+      ],
+      "type": "single_choice",
+      "topic": "Podzielność",
+      "difficulty": 2,
+      "prompt": "Która z liczb 91, 92, 95, 97 przy dzieleniu przez 7 daje resztę 1?",
+      "answer_options": [
+        "91",
+        "92",
+        "95",
+        "97"
+      ],
+      "answer_key": {
+        "correct_index": 1
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "92 = 13 · 7 + 1, więc właściwa jest odpowiedź B.",
+      "solution_steps": [
+        "92 = 13 · 7 + 1, więc właściwa jest odpowiedź B."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-mathematics-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        6
+      ],
+      "type": "multiple_choice",
+      "topic": "Średnia arytmetyczna",
+      "difficulty": 2,
+      "prompt": "Średnia a, b, c, d wynosi 9, a średnia e i f wynosi 6. Wybierz poprawne uzupełnienia.",
+      "answer_options": [
+        "Suma a+b+c+d jest większa o 3",
+        "Suma a+b+c+d jest większa o 24",
+        "Średnia wszystkich sześciu liczb wynosi 8",
+        "Średnia wszystkich sześciu liczb wynosi 7,5"
+      ],
+      "answer_key": {
+        "correct_indices": [
+          1,
+          2
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "Pierwsza suma wynosi 36, druga 12, więc różnica to 24. Średnia wszystkich liczb to 48/6 = 8.",
+      "solution_steps": [
+        "Pierwsza suma wynosi 36, druga 12, więc różnica to 24. Średnia wszystkich liczb to 48/6 = 8."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-mathematics-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        6
+      ],
+      "type": "single_choice",
+      "topic": "Przekształcanie wzorów",
+      "difficulty": 2,
+      "prompt": "Obwód pięciokąta opisuje wzór L = 2a + 2b + c. Wyznacz a.",
+      "answer_options": [
+        "a = (L − 2b − c)/2",
+        "a = (L − 2b + c)/2",
+        "a = L + 2b − c",
+        "a = L − 2b − c"
+      ],
+      "answer_key": {
+        "correct_index": 0
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "Odejmujemy 2b i c od obu stron, a następnie dzielimy przez 2.",
+      "solution_steps": [
+        "Odejmujemy 2b i c od obu stron, a następnie dzielimy przez 2."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q05-pentagon"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q05-pentagon",
+          "path": "public/cke/2025/mathematics/omap-100-x-2505/q05-pentagon.png",
+          "sha256": "d451c35467917426982dedee34e451ce6aabb8a638a71e3f4f33379df03eae62",
+          "alt": "Pięciokąt o bokach oznaczonych a, a, b, b i c.",
+          "caption": "Rysunek z arkusza OMAP-100-X-2505."
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-mathematics-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        8
+      ],
+      "type": "single_choice",
+      "topic": "Wyrażenia algebraiczne",
+      "difficulty": 2,
+      "prompt": "Piłek białych jest cztery razy więcej niż fioletowych i o 3 mniej niż czarnych. Liczbę fioletowych oznaczono przez x. Które wyrażenie opisuje łączną liczbę piłek?",
+      "answer_options": [
+        "9x + 3",
+        "9x − 3",
+        "6x + 3",
+        "6x − 3"
+      ],
+      "answer_key": {
+        "correct_index": 0
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "Fioletowych jest x, białych 4x, a czarnych 4x+3. Razem 9x+3.",
+      "solution_steps": [
+        "Fioletowych jest x, białych 4x, a czarnych 4x+3. Razem 9x+3."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-mathematics-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        8
+      ],
+      "type": "multiple_choice",
+      "topic": "Pierwiastki",
+      "difficulty": 2,
+      "prompt": "Dane są K = (1/9)·√(1/16) − (1/16)·√(1/9) oraz L = 9√16 − 16√9. Oceń dwa zdania.",
+      "answer_options": [
+        "K ma wartość ujemną — P",
+        "K ma wartość ujemną — F",
+        "L jest większe od K — P",
+        "L jest większe od K — F"
+      ],
+      "answer_key": {
+        "correct_indices": [
+          1,
+          3
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "K = 1/144 > 0, natomiast L = 36 − 48 = −12, więc oba zdania są fałszywe.",
+      "solution_steps": [
+        "K = 1/144 > 0, natomiast L = 36 − 48 = −12, więc oba zdania są fałszywe."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-mathematics-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        8
+      ],
+      "type": "single_choice",
+      "topic": "Potęgi",
+      "difficulty": 2,
+      "prompt": "Zapisz 8⁶ : 4³ jako potęgę liczby 2.",
+      "answer_options": [
+        "2²",
+        "2³",
+        "2⁴",
+        "2¹²"
+      ],
+      "answer_key": {
+        "correct_index": 3
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "8⁶ : 4³ = (2³)⁶ : (2²)³ = 2¹⁸ : 2⁶ = 2¹².",
+      "solution_steps": [
+        "8⁶ : 4³ = (2³)⁶ : (2²)³ = 2¹⁸ : 2⁶ = 2¹²."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-mathematics-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        8
+      ],
+      "type": "single_choice",
+      "topic": "Prędkość, droga i czas",
+      "difficulty": 2,
+      "prompt": "Rowerzysta pokonał 100 m z prędkością 5 m/s. Ile trwał przejazd?",
+      "answer_options": [
+        "50 sekund",
+        "20 sekund",
+        "500 sekund",
+        "200 sekund"
+      ],
+      "answer_key": {
+        "correct_index": 1
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "Czas to droga podzielona przez prędkość: 100 : 5 = 20 sekund.",
+      "solution_steps": [
+        "Czas to droga podzielona przez prędkość: 100 : 5 = 20 sekund."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-mathematics-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        10
+      ],
+      "type": "single_choice",
+      "topic": "Prawdopodobieństwo",
+      "difficulty": 2,
+      "prompt": "Spośród 72 losów wygrywają numery 1–9 oraz 46–72. Jakie jest prawdopodobieństwo wylosowania pustego losu?",
+      "answer_options": [
+        "26/72",
+        "27/72",
+        "35/72",
+        "36/72"
+      ],
+      "answer_key": {
+        "correct_index": 3
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "Wygrywa 9 + 27 = 36 losów, więc puste są pozostałe 36. Prawdopodobieństwo to 36/72.",
+      "solution_steps": [
+        "Wygrywa 9 + 27 = 36 losów, więc puste są pozostałe 36. Prawdopodobieństwo to 36/72."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-mathematics-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        10
+      ],
+      "type": "multiple_choice",
+      "topic": "Trójkąt prostokątny",
+      "difficulty": 2,
+      "prompt": "W trójkącie prostokątnym ABC punkt D jest środkiem AB, AD = DB = 30 cm i DC = 50 cm. Oceń dwa zdania.",
+      "answer_options": [
+        "Pole DBC wynosi 600 cm² — P",
+        "Pole DBC wynosi 600 cm² — F",
+        "Pole ABC jest dwa razy większe od pola ADC — P",
+        "Pole ABC jest dwa razy większe od pola ADC — F"
+      ],
+      "answer_key": {
+        "correct_indices": [
+          0,
+          2
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "Z trójkąta DBC otrzymujemy BC = 40 cm, więc jego pole to 600 cm². Trójkąty ADC i DBC mają równe podstawy i tę samą wysokość, dlatego pole ABC jest dwa razy większe od pola ADC.",
+      "solution_steps": [
+        "Z trójkąta DBC otrzymujemy BC = 40 cm, więc jego pole to 600 cm². Trójkąty ADC i DBC mają równe podstawy i tę samą wysokość, dlatego pole ABC jest dwa razy większe od pola ADC."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q11-triangle"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q11-triangle",
+          "path": "public/cke/2025/mathematics/omap-100-x-2505/q11-right-triangle.png",
+          "sha256": "96a424d83f6dac53ae7163cefef5b7ebee468d716b881de703b59c1899e25b81",
+          "alt": "Trójkąt prostokątny ABC z punktem D w połowie boku AB; AD i DB mają po 30 cm, a DC 50 cm.",
+          "caption": "Rysunek z arkusza OMAP-100-X-2505."
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-mathematics-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        12
+      ],
+      "type": "multiple_choice",
+      "topic": "Oś liczbowa",
+      "difficulty": 2,
+      "prompt": "Na osi punkty A, B i C wyznaczają odcinek AC podzielony na sześć równych części. Na dwóch kreskach podano liczby 56 i 83. Oceń dwa zdania.",
+      "answer_options": [
+        "Współrzędna C jest parzysta — P",
+        "Współrzędna C jest parzysta — F",
+        "Współrzędna B jest mniejsza od 74 — P",
+        "Współrzędna B jest mniejsza od 74 — F"
+      ],
+      "answer_key": {
+        "correct_indices": [
+          1,
+          2
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "Różnica 83−56 = 27 obejmuje trzy równe odcinki, więc jeden ma długość 9. Otrzymujemy B = 65 i C = 101; pierwsze zdanie jest fałszywe, drugie prawdziwe.",
+      "solution_steps": [
+        "Różnica 83−56 = 27 obejmuje trzy równe odcinki, więc jeden ma długość 9. Otrzymujemy B = 65 i C = 101; pierwsze zdanie jest fałszywe, drugie prawdziwe."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q12-axis"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q12-axis",
+          "path": "public/cke/2025/mathematics/omap-100-x-2505/q12-number-line.png",
+          "sha256": "676dad251a72790c8f1e8afdfc2dd5bc1d20bd17c29f8057f162196cb077c11f",
+          "alt": "Oś liczbowa z punktami A, B, C i zaznaczonymi współrzędnymi 56 oraz 83.",
+          "caption": "Rysunek z arkusza OMAP-100-X-2505."
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-mathematics-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        12
+      ],
+      "type": "single_choice",
+      "topic": "Obwody figur",
+      "difficulty": 2,
+      "prompt": "Trapez ABCD podzielono na kwadrat AEGD o boku 6, trójkąt prostokątny EFG o bokach 6, 8, 10 i romb FBCG. Oblicz obwód trapezu.",
+      "answer_options": [
+        "56",
+        "72",
+        "88",
+        "120"
+      ],
+      "answer_key": {
+        "correct_index": 0
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "AB = 6+8+10 = 24, BC = 10, CD = 6+10 = 16, DA = 6. Obwód wynosi 56.",
+      "solution_steps": [
+        "AB = 6+8+10 = 24, BC = 10, CD = 6+10 = 16, DA = 6. Obwód wynosi 56."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q13-trapezoid"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q13-trapezoid",
+          "path": "public/cke/2025/mathematics/omap-100-x-2505/q13-trapezoid.png",
+          "sha256": "34e859ce4199c3e563e4f1bc5540743b1ee25ca11d292a272fbb2fb8faaa9a3b",
+          "alt": "Trapez złożony z kwadratu, trójkąta o bokach 6, 8, 10 oraz rombu.",
+          "caption": "Rysunek z arkusza OMAP-100-X-2505."
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-mathematics-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        14
+      ],
+      "type": "single_choice",
+      "topic": "Układ współrzędnych",
+      "difficulty": 2,
+      "prompt": "Trzy wierzchołki równoległoboku to A = (−3, −2), C = (4, 2), D = (−1, 2). Jakie współrzędne ma B?",
+      "answer_options": [
+        "(4, −2)",
+        "(3, −2)",
+        "(2, −2)",
+        "(6, −2)"
+      ],
+      "answer_key": {
+        "correct_index": 2
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "W równoległoboku A + C = B + D, więc B = A + C − D = (2, −2).",
+      "solution_steps": [
+        "W równoległoboku A + C = B + D, więc B = A + C − D = (2, −2)."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q14-plane"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q14-plane",
+          "path": "public/cke/2025/mathematics/omap-100-x-2505/q14-coordinate-plane.png",
+          "sha256": "a6466db7201c7707f3bb04be7dde2fc4b6d3885a45ab7d0bbc65112ffb7f93da",
+          "alt": "Układ współrzędnych z punktami A, C i D będącymi wierzchołkami równoległoboku.",
+          "caption": "Rysunek z arkusza OMAP-100-X-2505."
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-mathematics-100-x-q15",
+      "number": "15",
+      "sort_order": 15,
+      "source_pages": [
+        14
+      ],
+      "type": "single_choice",
+      "topic": "Pole prostopadłościanu",
+      "difficulty": 2,
+      "prompt": "Prostopadłościan ma wymiary 5 cm, 6 cm i 7 cm. Oblicz pole powierzchni całkowitej.",
+      "answer_options": [
+        "107 cm²",
+        "172 cm²",
+        "210 cm²",
+        "214 cm²"
+      ],
+      "answer_key": {
+        "correct_index": 3
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "1 pkt – odpowiedź zgodna z kluczem CKE.",
+          "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+        ]
+      },
+      "explanation": "2·(5·6 + 5·7 + 6·7) = 2·107 = 214 cm².",
+      "solution_steps": [
+        "2·(5·6 + 5·7 + 6·7) = 2·107 = 214 cm²."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q15-cuboid"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q15-cuboid",
+          "path": "public/cke/2025/mathematics/omap-100-x-2505/q15-cuboid.png",
+          "sha256": "99143b773e6fc8ef34eab22258197911f45bddca70d894c7a249c289467f2a2c",
+          "alt": "Prostopadłościan o krawędziach długości 5 cm, 6 cm i 7 cm.",
+          "caption": "Rysunek z arkusza OMAP-100-X-2505."
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-mathematics-100-x-q16",
+      "number": "16",
+      "sort_order": 16,
+      "source_pages": [
+        2
+      ],
+      "type": "long_text",
+      "topic": "Ułamki",
+      "difficulty": 2,
+      "prompt": "Liczbę 7/15 zapisano jako sumę trzech ułamków zwykłych. Jeden składnik to 1/5, a drugi 1/6. Uzasadnij, że trzeci składnik można zapisać jako ułamek o liczniku 1 i dodatnim całkowitym mianowniku.",
+      "answer_key": {
+        "accepted_results": [
+          "1/10",
+          "jedna dziesiąta"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "2 pkt – poprawna metoda i wynik 1/10.",
+          "1 pkt – poprawne sprowadzenie ułamków lub zapis działania prowadzącego do wyniku.",
+          "0 pkt – rozwiązanie błędne albo brak rozwiązania."
+        ]
+      },
+      "explanation": "7/15 − 1/5 − 1/6 = 14/30 − 6/30 − 5/30 = 3/30 = 1/10.",
+      "solution_steps": [
+        "7/15 − 1/5 − 1/6 = 14/30 − 6/30 − 5/30 = 3/30 = 1/10."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-mathematics-100-x-q17",
+      "number": "17",
+      "sort_order": 17,
+      "source_pages": [
+        3
+      ],
+      "type": "long_text",
+      "topic": "Równania tekstowe",
+      "difficulty": 2,
+      "prompt": "Andrzej ma o 28 plakatów więcej od Basi, a Marek ma trzy razy mniej plakatów od Basi. Andrzej i Marek mają razem dwa razy więcej plakatów od Basi. Oblicz, ile plakatów ma każda osoba.",
+      "answer_key": {
+        "accepted_results": [
+          "Andrzej 70, Basia 42, Marek 14",
+          "70,42,14"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "3 pkt – poprawna metoda i wyniki: Andrzej 70, Basia 42, Marek 14.",
+          "2 pkt – poprawne równanie i wyznaczenie liczby plakatów Basi.",
+          "1 pkt – poprawny zapis zależności między liczbami plakatów.",
+          "0 pkt – rozwiązanie błędne albo brak rozwiązania."
+        ]
+      },
+      "explanation": "Niech Basia ma x plakatów. Wtedy Andrzej ma x+28, Marek x/3, a równanie x+28+x/3=2x daje x=42. Zatem Andrzej ma 70, Basia 42, a Marek 14.",
+      "solution_steps": [
+        "Niech Basia ma x plakatów. Wtedy Andrzej ma x+28, Marek x/3, a równanie x+28+x/3=2x daje x=42. Zatem Andrzej ma 70, Basia 42, a Marek 14."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-mathematics-100-x-q18",
+      "number": "18",
+      "sort_order": 18,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Kąty w trapezie",
+      "difficulty": 2,
+      "prompt": "W trapezie ABCD odcinek CE wydziela równoległobok AECD i trójkąt EBC. Kąt ABC ma 48°, a BCE 57°. Oblicz miary kątów DAB, BCD i CDA.",
+      "answer_key": {
+        "accepted_results": [
+          "75°, 132°, 105°",
+          "75,132,105"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "2 pkt – wszystkie trzy poprawne miary: 75°, 132°, 105°.",
+          "1 pkt – poprawne wyznaczenie kąta CEB i co najmniej jednego kąta trapezu.",
+          "0 pkt – rozwiązanie błędne albo brak rozwiązania."
+        ]
+      },
+      "explanation": "W trójkącie EBC kąt CEB ma 75°. Z własności równoległoboku otrzymujemy DAB = 75°, CDA = 105°, a BCD = 105°+27° = 132°.",
+      "solution_steps": [
+        "W trójkącie EBC kąt CEB ma 75°. Z własności równoległoboku otrzymujemy DAB = 75°, CDA = 105°, a BCD = 105°+27° = 132°."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q18-trapezoid"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q18-trapezoid",
+          "path": "public/cke/2025/mathematics/omap-100-x-2505/q18-trapezoid.png",
+          "sha256": "30ae3381d34bf442101e5c6cb1498f1af02526b5a96c7eda8322b766dd4679d6",
+          "alt": "Trapez ABCD z punktem E na podstawie AB, odcinkiem CE oraz kątami 48 i 57 stopni.",
+          "caption": "Rysunek z arkusza OMAP-100-X-2505."
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-mathematics-100-x-q19",
+      "number": "19",
+      "sort_order": 19,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Skala i pola",
+      "difficulty": 2,
+      "prompt": "Mała kwadratowa tablica narysowana w skali 1:20 ma bok 3 cm. Duża prostokątna tablica ma rzeczywiste wymiary 240 cm i 90 cm. Ile razy pole dużej tablicy jest większe od pola małej?",
+      "answer_key": {
+        "accepted_results": [
+          "6 razy",
+          "6"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "2 pkt – poprawna metoda i wynik 6 razy.",
+          "1 pkt – poprawny rzeczywisty bok małej tablicy albo poprawne pola obu tablic.",
+          "0 pkt – rozwiązanie błędne albo brak rozwiązania."
+        ]
+      },
+      "explanation": "Rzeczywisty bok małej tablicy to 60 cm, więc jej pole wynosi 3600 cm². Pole dużej to 21600 cm², a iloraz wynosi 6.",
+      "solution_steps": [
+        "Rzeczywisty bok małej tablicy to 60 cm, więc jej pole wynosi 3600 cm². Pole dużej to 21600 cm², a iloraz wynosi 6."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-mathematics-100-x-q20",
+      "number": "20",
+      "sort_order": 20,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Pole wielokąta",
+      "difficulty": 2,
+      "prompt": "Kwadrat ABCD ma bok 15 cm. Boki AB i CD podzielono na trzy równe części, a AD i BC na pięć. Punkty E i F są zaznaczone jak na rysunku. Oblicz pole czworokąta AECF.",
+      "answer_key": {
+        "accepted_results": [
+          "105 cm²",
+          "105"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "3 pkt – poprawna metoda i wynik 105 cm².",
+          "2 pkt – poprawny podział pola kwadratu na odpowiednie trójkąty.",
+          "1 pkt – poprawne odczytanie długości potrzebnych odcinków.",
+          "0 pkt – rozwiązanie błędne albo brak rozwiązania."
+        ]
+      },
+      "explanation": "Od pola kwadratu 225 odejmujemy pola trójkątów ABE i ADF: 45 i 75. Otrzymujemy 225−45−75 = 105 cm².",
+      "solution_steps": [
+        "Od pola kwadratu 225 odejmujemy pola trójkątów ABE i ADF: 45 i 75. Otrzymujemy 225−45−75 = 105 cm²."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q20-square"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q20-square",
+          "path": "public/cke/2025/mathematics/omap-100-x-2505/q20-square.png",
+          "sha256": "4fae329fe537151b59201caf11537d06052d3f634055d97d0f89cca014592fba",
+          "alt": "Kwadrat ABCD z punktami E na boku BC i F na boku CD oraz odcinkami AE i AF.",
+          "caption": "Rysunek z arkusza OMAP-100-X-2505."
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-mathematics-100-x-q21",
+      "number": "21",
+      "sort_order": 21,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Ostrosłup",
+      "difficulty": 2,
+      "prompt": "W ostrosłupie prawidłowym czworokątnym wysokość ściany bocznej ma 12 cm, a pole tej ściany wynosi 108 cm². Oblicz sumę długości wszystkich krawędzi ostrosłupa.",
+      "answer_key": {
+        "accepted_results": [
+          "132 cm",
+          "132"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "3 pkt – poprawna metoda i wynik 132 cm.",
+          "2 pkt – poprawna długość krawędzi podstawy i rozpoczęte wyznaczanie krawędzi bocznej.",
+          "1 pkt – poprawna długość krawędzi podstawy 18 cm.",
+          "0 pkt – rozwiązanie błędne albo brak rozwiązania."
+        ]
+      },
+      "explanation": "Z 108 = a·12/2 otrzymujemy a = 18. Krawędź boczna ma długość √(12²+9²)=15. Suma to 4·18+4·15=132 cm.",
+      "solution_steps": [
+        "Z 108 = a·12/2 otrzymujemy a = 18. Krawędź boczna ma długość √(12²+9²)=15. Suma to 4·18+4·15=132 cm."
+      ],
+      "hints": [
+        "Wróć do danych z polecenia i rozwiąż zadanie etapami.",
+        "Sprawdź wynik z warunkami zadania."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q21-pyramid"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q21-pyramid",
+          "path": "public/cke/2025/mathematics/omap-100-x-2505/q21-pyramid.png",
+          "sha256": "d4eba8970bc0d3fa62dbe09cf3e4abd21f22737165aae06323992417cee46a49",
+          "alt": "Ostrosłup prawidłowy czworokątny z wysokością ściany bocznej równą 12 cm.",
+          "caption": "Rysunek z arkusza OMAP-100-X-2505."
+        }
+      ]
+    }
+  ]
+}

@@ -37,12 +37,17 @@ function normalizeUrl(value, pageUrl) {
   return url.href;
 }
 
-function subjectSlug(url) {
-  const match = new URL(url).pathname.match(/\/2026\/([^/]+)\//);
+function sourceYear(pageUrl) {
+  const match = new URL(pageUrl).pathname.match(/\/(20\d{2})(?:-\d+)?\/?$/);
+  return match?.[1] ?? String(new Date().getUTCFullYear());
+}
+
+function subjectSlug(url, year) {
+  const match = new URL(url).pathname.match(new RegExp(`/${year}/([^/]+)/`));
   return match?.[1] ?? "pozostale";
 }
 
-export function parseCkePage(html, pageUrl = DEFAULT_PAGE) {
+export function parseCkePage(html, pageUrl = DEFAULT_PAGE, year = Number(sourceYear(pageUrl))) {
   const files = new Map();
   let subject = null;
   let audience = null;
@@ -69,7 +74,7 @@ export function parseCkePage(html, pageUrl = DEFAULT_PAGE) {
     const href = token.match(/href=(?:"([^"]*)"|'([^']*)')/i)?.slice(1).find(Boolean);
     if (!href || !subject || !audience || !variantCode) continue;
     const url = normalizeUrl(href, pageUrl);
-    if (!url.includes("/Arkusze-egzaminacyjne/2026/")) continue;
+    if (!url.includes(`/Arkusze-egzaminacyjne/${year}/`)) continue;
     const label = decodeHtml(token);
     const usage = { subject, variant_code: variantCode, audience, label };
     const existing = files.get(url);
@@ -79,7 +84,7 @@ export function parseCkePage(html, pageUrl = DEFAULT_PAGE) {
     }
     files.set(url, {
       url,
-      subject_directory: subjectSlug(url),
+      subject_directory: subjectSlug(url, year),
       file_name: basename(new URL(url).pathname),
       extension: extname(new URL(url).pathname).slice(1).toLowerCase(),
       usages: [usage],
@@ -147,15 +152,18 @@ async function runPool(items, concurrency, worker) {
 }
 
 function parseArguments(args) {
-  const options = { page: DEFAULT_PAGE, year: 2026, concurrency: 4 };
+  const options = { page: DEFAULT_PAGE, year: null, concurrency: 4, variants: [] };
   for (const argument of args) {
     if (argument.startsWith("--page=")) options.page = argument.slice("--page=".length);
     else if (argument.startsWith("--year=")) options.year = Number(argument.slice("--year=".length));
     else if (argument.startsWith("--concurrency=")) options.concurrency = Number(argument.slice("--concurrency=".length));
+    else if (argument.startsWith("--variant=")) options.variants.push(argument.slice("--variant=".length));
     else throw new Error(`Nieznany argument: ${argument}`);
   }
+  options.year ??= Number(sourceYear(options.page));
   if (!Number.isInteger(options.year) || options.year < 2019) throw new Error("Niepoprawny rok.");
   if (!Number.isInteger(options.concurrency) || options.concurrency < 1 || options.concurrency > 8) throw new Error("Concurrency musi mieścić się w zakresie 1–8.");
+  if (options.variants.some((variant) => !/^[A-Z0-9-]+$/.test(variant))) throw new Error("Niepoprawny kod wariantu.");
   return options;
 }
 
@@ -163,7 +171,10 @@ async function main() {
   const options = parseArguments(process.argv.slice(2));
   const response = await fetchWithRetry(options.page);
   const html = await response.text();
-  const files = parseCkePage(html, options.page);
+  const parsedFiles = parseCkePage(html, options.page, options.year);
+  const files = options.variants.length
+    ? parsedFiles.filter((file) => file.usages.some((usage) => options.variants.includes(usage.variant_code)))
+    : parsedFiles;
   if (!files.length) throw new Error("Nie znaleziono dokumentów CKE — struktura strony mogła się zmienić.");
 
   const outputRoot = join(ROOT, "content", "cke", "sources", String(options.year));

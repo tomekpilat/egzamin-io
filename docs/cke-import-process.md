@@ -1,6 +1,6 @@
 # Ręczny import arkuszy CKE
 
-Ten proces przyjmuje ręcznie przepisany i sprawdzony manifest JSON. Nie wykonuje OCR, nie pobiera arkuszy i nigdy nie publikuje materiału automatycznie.
+Ten proces przyjmuje ręcznie przepisany i sprawdzony manifest JSON. Sam importer nie wykonuje OCR i nigdy nie publikuje materiału automatycznie. Oficjalne pliki źródłowe można pobrać osobnym, kontrolowanym narzędziem `scripts/cke-download-sources.mjs`.
 
 ## Założenie prawne
 
@@ -21,7 +21,9 @@ To jest kontrola operacyjna, nie opinia prawna. Zakres zgody powinien obejmować
 - narzędzie: `scripts/cke-import.mjs`,
 - staging i workflow: migracje `20260825213000_cke_import_pipeline.sql` i `20260828120000_full_cke_question_types.sql`,
 - kompletne arkusze 2026: `content/cke/cke-2026-main-mathematics-100-x.json`, `content/cke/cke-2026-main-polish-100-x.json` i `content/cke/cke-2026-main-english-100-x.json`,
+- kompletne arkusze 2025: `content/cke/cke-2025-main-mathematics-100-x.json`, `content/cke/cke-2025-main-polish-100-x.json`, `content/cke/cke-2025-main-polish-100-y.json` i `content/cke/cke-2025-main-english-100-x.json`,
 - powtarzalne przygotowanie mediów: `scripts/extract-cke-2026-mathematics-assets.py`, `scripts/extract-cke-2026-polish-assets.py` i `scripts/extract-cke-2026-english-assets.py`.
+- przygotowanie mediów i manifestów 2025: `scripts/extract-cke-2025-*-assets.py` oraz `scripts/build-cke-2025-manifests.mjs`.
 
 Manifest jest źródłem prawdy. Nie edytuj zadań bezpośrednio w tabeli `practice_questions`.
 
@@ -110,6 +112,15 @@ npm run cke:validate -- content/cke/cke-2026-main-polish-100-x.json
 npm run cke:validate -- content/cke/cke-2026-main-english-100-x.json
 ```
 
+Komplet 2025 sprawdzisz poleceniami:
+
+```bash
+npm run cke:validate -- content/cke/cke-2025-main-mathematics-100-x.json
+npm run cke:validate -- content/cke/cke-2025-main-polish-100-x.json
+npm run cke:validate -- content/cke/cke-2025-main-polish-100-y.json
+npm run cke:validate -- content/cke/cke-2025-main-english-100-x.json
+```
+
 Walidator sprawdza m.in.:
 
 - kompletność metadanych i zgody,
@@ -138,6 +149,15 @@ Dla przygotowanych arkuszy 2026 użyj:
 npm run cke:stage -- content/cke/cke-2026-main-mathematics-100-x.json
 npm run cke:stage -- content/cke/cke-2026-main-polish-100-x.json
 npm run cke:stage -- content/cke/cke-2026-main-english-100-x.json
+```
+
+Dla arkuszy 2025 użyj:
+
+```bash
+npm run cke:stage -- content/cke/cke-2025-main-mathematics-100-x.json
+npm run cke:stage -- content/cke/cke-2025-main-polish-100-x.json
+npm run cke:stage -- content/cke/cke-2025-main-polish-100-y.json
+npm run cke:stage -- content/cke/cke-2025-main-english-100-x.json
 ```
 
 Polecenie zwraca `import_batch_id`. Ten sam manifest i wersja mają ten sam efekt (`unchanged`). Zmiana zawartości bez podniesienia `manifest_version` jest odrzucana. Ten sam PDF przypisany do innego manifestu również jest odrzucany.
