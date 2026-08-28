@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Calculator, CalendarDays, Check, CircleCheck, EyeOff, FileText, ListChecks, MessageCircleQuestion } from "lucide-react";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { SubjectIcon } from "@/components/subject-icon";
 import { Button } from "@/components/ui/button";
 import { PLUS_PACKAGE_PRICE_PLN } from "@/lib/plans";
 
@@ -71,6 +72,18 @@ export default function Home() {
               </div>
               <div className="design-ai-hint"><b>Tutor AI</b><span>Najpierw dzielimy sumę podstaw przez 2. Ile wyjdzie?</span></div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="przedmioty" className="design-home-section design-subjects-section">
+        <div className="design-home-container">
+          <div className="design-subjects-heading"><span className="design-eyebrow">Przedmioty</span><h2>Ćwiczysz dokładnie to, co pojawia się na egzaminie</h2><p>Matematyka, język polski i język angielski — w zadaniach z arkuszy CKE oraz krótkich sesjach dopasowanych do postępu.</p></div>
+          <div className="design-subjects-grid">
+            <article><SubjectIcon subject="mathematics" /><b>Matematyka</b><span>Zadania zamknięte i otwarte, obliczenia oraz geometria.</span></article>
+            <article><SubjectIcon subject="polish" /><b>Język polski</b><span>Czytanie ze zrozumieniem, język i przygotowanie do wypowiedzi.</span></article>
+            <article><SubjectIcon subject="english" /><b>Język angielski</b><span>Środki językowe, funkcje językowe i wypowiedź pisemna.</span></article>
+            <article><FileText aria-hidden="true" /><b>Arkusze CKE</b><span>Materiały oznaczone rokiem, sesją i właściwym wariantem ucznia.</span></article>
           </div>
         </div>
       </section>

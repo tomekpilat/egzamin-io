@@ -570,9 +570,9 @@ export default function DashboardPage() {
           <button type="button" className={studentView === "progress" ? "active" : ""} aria-current={studentView === "progress" ? "page" : undefined} onClick={() => setStudentView("progress")}><ChartNoAxesColumnIncreasing className="student-nav-icon" aria-hidden="true" /><span>Postęp</span></button>
           <button type="button" className={studentView === "settings" ? "active" : ""} aria-current={studentView === "settings" ? "page" : undefined} onClick={() => setStudentView("settings")}><SettingsIcon className="student-nav-icon" aria-hidden="true" /><span>Ustawienia</span></button>
         </nav>
-        <button type="button" className="student-session-card" onClick={() => setStudentView("start")}>
+        <button type="button" className="student-session-card" onClick={() => setStudentView("exercises")}>
           <span>Dzisiejsza sesja</span>
-          <b>Gotowy do nauki</b>
+          <b>Gotowy do nauki <span aria-hidden="true">→</span></b>
           <i aria-hidden="true"><em /></i>
           <small>Cel tygodniowy ustawia rodzic.</small>
         </button>
@@ -617,8 +617,8 @@ export default function DashboardPage() {
               <CardContent className="account-settings-actions"><div className="account-theme-setting"><span>Motyw</span><ThemeSettings /></div></CardContent>
             </Card>
             <Card className="account-settings-card parent-settings-card">
-              <CardHeader><CardTitle>Plan i prywatność</CardTitle><CardDescription>Dokumenty oraz ustawienia związane z korzystaniem z egzaminio.</CardDescription></CardHeader>
-              <CardContent className="account-settings-actions"><Button variant="outline" asChild><a href="/plan-plus#dla-rodzica">Poznaj pakiet Plus</a></Button><Button variant="outline" asChild><a href="/polityka-prywatnosci">Polityka prywatności</a></Button><Button variant="outline" asChild><a href="/bezpieczenstwo-dzieci-ai">Dzieci i AI</a></Button></CardContent>
+              <CardHeader><CardTitle>Pakiet Plus</CardTitle><CardDescription>Sprawdź pełną bazę arkuszy, rozszerzony dostęp do AI i szczegóły płatności.</CardDescription></CardHeader>
+              <CardContent className="account-settings-actions"><Button variant="outline" asChild><a href="/plan-plus#dla-rodzica">Poznaj pakiet Plus</a></Button></CardContent>
             </Card>
             <Card className="account-settings-card parent-settings-card parent-account-data-card">
               <CardHeader><CardTitle>Konto i dane</CardTitle><CardDescription>Usunięcie konta obejmuje także powiązania i postępy dzieci. Dokumenty księgowe przechowujemy zgodnie z obowiązującymi przepisami.</CardDescription></CardHeader>

@@ -49,6 +49,9 @@
 .student-session-card:hover { background: var(--secondary); }
 .student-session-card > span { color: var(--muted-copy); font-size: 13px; }
 .student-session-card > b { font-size: 15px; font-weight: 600; }
+.student-session-card > b { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.student-session-card > b span { color: var(--brand); transition: transform .15s ease; }
+.student-session-card:hover > b span { transform: translateX(3px); }
 .student-session-card > i { height: 6px; overflow: hidden; background: var(--secondary); border-radius: 999px; }
 .student-session-card > i em { display: block; width: 24%; height: 100%; background: var(--brand); border-radius: inherit; }
 .student-session-card > small { color: var(--quiet-copy); font-size: 12px; }

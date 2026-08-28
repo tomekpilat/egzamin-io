@@ -29,6 +29,14 @@ describe("simplified registration flow", () => {
     expect(login).toContain('id="auth-email-confirmation"');
     expect(login).toContain('id="auth-password-confirmation"');
     expect(login).toContain("validateSignupConfirmation(");
+    expect(login).toContain("Adresy e-mail nie są takie same.");
+    expect(login).toContain("Hasła nie są takie same.");
+    expect(login).toContain('mode === "signup" && !signupReady');
+  });
+
+  it("keeps the supplied compact signup form without a second redundant heading", () => {
+    expect(login).toContain('mode === "login" && <div className="auth-card-heading"');
+    expect(login).not.toContain('mode === "signup" ? "Utwórz konto" : "Dobrze Cię widzieć"');
   });
 
   it("explains both roles without teacher-account messaging", () => {

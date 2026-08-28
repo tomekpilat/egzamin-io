@@ -80,6 +80,7 @@ describe("redesigned parent panel", () => {
     await user.click(screen.getByRole("button", { name: "Ustawienia" }));
     expect(screen.getByRole("heading", { name: "Ustawienia" })).toBeInTheDocument();
     expect(screen.getByText("Motyw systemowy")).toBeInTheDocument();
-    expect(screen.getAllByRole("link", { name: "Polityka prywatności" })).toSatisfy((links: HTMLElement[]) => links.every((link) => link.getAttribute("href") === "/polityka-prywatnosci"));
+    expect(screen.getAllByRole("link", { name: "Polityka prywatności" })).toHaveLength(1);
+    expect(screen.getByRole("link", { name: "Polityka prywatności" })).toHaveAttribute("href", "/polityka-prywatnosci");
   });
 });

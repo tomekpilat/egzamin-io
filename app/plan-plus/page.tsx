@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
 
-import { MarketingSignupForm } from "@/components/marketing-signup-form";
 import { SiteHeader } from "@/components/site-header";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -10,13 +9,10 @@ import {
   PLAN_COMPARISON_ROWS,
   PLUS_PACKAGE_PRICE_PLN,
 } from "@/lib/plans";
-import { resolvePaymentRuntimeConfig } from "@/lib/payments";
 
 const economics = calculatePlusPackageEconomics();
 
 export default function PlanPlusPage() {
-  const payments = resolvePaymentRuntimeConfig();
-
   return (
     <main className="plan-plus-page">
       <SiteHeader currentPath="/plan-plus" />
@@ -24,7 +20,7 @@ export default function PlanPlusPage() {
       <section className="plan-plus-shell">
         <div className="plan-plus-hero">
           <div>
-            <Badge variant="secondary">Pakiet Plus{payments.enabled ? " · dostępny" : " · wkrótce"}</Badge>
+            <Badge variant="secondary">Pakiet Plus · dostępny</Badge>
             <h1>Regularna nauka bez dokładania presji.</h1>
             <p>Pełna baza ćwiczeń, więcej rozmów z AI oraz plan powtórek dla ucznia. Rodzic widzi trend i konkretny następny krok.</p>
           </div>
@@ -55,13 +51,12 @@ export default function PlanPlusPage() {
             {PLAN_COMPARISON_ROWS.map(([feature, free, plus]) => <div className="pricing-row" role="row" key={feature}><b role="rowheader">{feature}</b><span role="cell">{free}</span><span role="cell">{plus}</span></div>)}
           </div>
           <div className="pricing-value"><b>Czy pakiet się opłaca?</b><span>Przy przykładowej stawce {economics.tutoringHourlyPrice} zł za godzinę dwie korepetycje kosztują {economics.twoTutoringHours} zł. Pakiet Plus kosztuje {PLUS_PACKAGE_PRICE_PLN} zł jednorazowo, czyli o {economics.differenceVsTwoHours} zł mniej. Wspiera codzienną naukę, ale nie zastępuje indywidualnego nauczyciela.</span></div>
-          <div className="pricing-actions">{payments.enabled ? <Button asChild><a href="/panel?widok=platnosci" data-analytics-event="plan_plus_cta_clicked">Zamawiam pakiet i płacę {PLUS_PACKAGE_PRICE_PLN} zł</a></Button> : <Button asChild><a href="#lista-plus" data-analytics-event="plan_plus_cta_clicked">Powiadom mnie o starcie</a></Button>}<Button variant="outline" asChild><a href="/panel">Zostań przy wersji Free</a></Button></div>
-          {!payments.enabled ? <div id="lista-plus"><MarketingSignupForm subscriptionType="plus_waitlist" sourcePath="/plan-plus" title="Lista oczekujących na pakiet Plus" description="Podaj e-mail. Powiadomimy Cię o starcie sprzedaży i cenie — bez pobierania płatności." submitLabel="Powiadom mnie o starcie" /></div> : null}
+          <div className="pricing-actions"><Button asChild><a href="/panel?widok=platnosci" data-analytics-event="plan_plus_cta_clicked">Zamawiam pakiet i płacę {PLUS_PACKAGE_PRICE_PLN} zł</a></Button><Button variant="outline" asChild><a href="/panel">Zostań przy wersji Free</a></Button></div>
         </Card>
 
         <section className="plan-plus-terms" aria-labelledby="plan-plus-terms-title">
           <h2 id="plan-plus-terms-title">Najważniejsze zasady</h2>
-          <p>{payments.enabled ? `Pakiet nie odnawia się automatycznie. Dostęp trwa do ${new Intl.DateTimeFormat("pl-PL", { dateStyle: "long", timeZone: "Europe/Warsaw" }).format(new Date(payments.accessUntil!))}. Przed zamówieniem sprawdź zakres pakietu i zasady odstąpienia.` : "Przed uruchomieniem sprzedaży pokażemy dokładny zakres pakietu oraz datę rozpoczęcia i zakończenia dostępu. Zakup zostanie uruchomiony dopiero po wdrożeniu bezpiecznych płatności."}</p>
+          <p>Pakiet nie odnawia się automatycznie. Jest dostępny od razu po skutecznej płatności. Dokładną datę zakończenia dostępu zobaczysz przed zamówieniem. Sprawdź także zakres pakietu i zasady odstąpienia.</p>
           <nav aria-label="Informacje prawne pakietu Plus"><a href="/regulamin">Regulamin</a><a href="/polityka-prywatnosci">Polityka prywatności</a><a href="/odstapienie-od-umowy">Odstąpienie od umowy</a><a href="/informacje-prawne">Informacje o płatnościach</a></nav>
         </section>
       </section>

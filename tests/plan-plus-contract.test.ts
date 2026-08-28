@@ -23,18 +23,12 @@ describe("Plan Plus screen", () => {
     expect(page).toContain('id="dla-ucznia"');
   });
 
-  it("uses a waitlist before payments instead of a dead checkout", () => {
-    expect(page).toContain("Powiadom mnie o starcie");
-    expect(page).toContain('payments.enabled ? " · dostępny" : " · wkrótce"');
-    expect(page).not.toMatch(/href=["']\/checkout/);
-    expect(page).toContain('subscriptionType="plus_waitlist"');
-    expect(page).not.toContain("mailto:kontakt@egzamin.io?subject=Powiadom");
-    expect(page).toContain('subscriptionType="plus_waitlist"');
-  });
-
-  it("supports an explicit payment CTA only after a valid checkout is configured", () => {
-    expect(page).toContain("resolvePaymentRuntimeConfig()");
+  it("presents Plus as immediately available without a launch waitlist", () => {
+    expect(page).toContain("Pakiet Plus · dostępny");
+    expect(page).not.toContain("Powiadom mnie o starcie");
+    expect(page).not.toContain('subscriptionType="plus_waitlist"');
     expect(page).toContain('href="/panel?widok=platnosci"');
+    expect(page).toContain("dostępny od razu po skutecznej płatności");
     expect(page).toContain("Pakiet nie odnawia się automatycznie");
     expect(page).toContain("Zamawiam pakiet i płacę");
   });

@@ -73,6 +73,11 @@ describe("public recruitment calculator", () => {
     expect(styles).toMatch(/\.calculator-school-screen,[\s\S]*\.calculator-result-screen \{ width: min\(600px, 100%\); margin: 0 auto; \}/);
     expect(styles).toMatch(/\.calculator-steps \{[^}]*position: sticky/);
     expect(styles).toContain("grid-template-columns: repeat(3, minmax(0, 1fr))");
+    expect(page).toContain("1. Oblicz punkty");
+    expect(page).toContain("2. Znajdź szkołę");
+    expect(page).toContain("3. Porównaj wynik");
+    expect(page).not.toContain("Punkty · ${formatPoints(points)}");
+    expect(page.match(/<SchoolThresholdSearch query=/g)).toHaveLength(1);
   });
 
   it("keeps grade dropdowns readable and presents the guide as a full-width section", () => {

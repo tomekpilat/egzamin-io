@@ -52,7 +52,10 @@ describe("recruitment calculator screens", () => {
     expect(screen.getByText("−83")).toBeInTheDocument();
     expect(screen.getByText(/system rekrutacji Kraków, 2025/)).toBeInTheDocument();
 
-    await user.click(screen.getByRole("link", { name: /1\. Punkty/ }));
+    expect(screen.getByRole("link", { name: "1. Oblicz punkty" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "2. Znajdź szkołę" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "3. Porównaj wynik" })).toBeInTheDocument();
+    await user.click(screen.getByRole("link", { name: "1. Oblicz punkty" }));
     expect(screen.getByLabelText("Polski (%)")).toHaveValue(78);
     expect(screen.getByLabelText("Matematyka (%)")).toHaveValue(64);
     expect(screen.getByLabelText("Język obcy (%)")).toHaveValue(85);

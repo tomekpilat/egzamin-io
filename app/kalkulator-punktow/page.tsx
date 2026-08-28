@@ -63,11 +63,11 @@ function GradeField({ id, label, value, onChange }: { id: string; label: string;
   return <div className="calculator-field"><Label htmlFor={id}>{label}</Label><Select value={value === null ? "" : String(value)} onValueChange={(next) => onChange(Number(next) as RecruitmentGrade)}><SelectTrigger id={id} className="calculator-grade-trigger"><SelectValue placeholder="Wybierz" /></SelectTrigger><SelectContent>{GRADES.map((grade) => <SelectItem key={grade} value={String(grade)}>{GRADE_LABELS[grade]}</SelectItem>)}</SelectContent></Select></div>;
 }
 
-function CalculatorSteps({ activeStep, points, targetName, onNavigate }: { activeStep: CalculatorStep; points: number; targetName: string; onNavigate: (step: CalculatorStep) => void }) {
+function CalculatorSteps({ activeStep, onNavigate }: { activeStep: CalculatorStep; onNavigate: (step: CalculatorStep) => void }) {
   return <nav id="calculator-flow" className="calculator-steps" aria-label="Etapy kalkulatora">
-    <a href="#kalkulator" aria-current={activeStep === "points" ? "step" : undefined} onClick={(event) => { event.preventDefault(); onNavigate("points"); }}><b>1. {activeStep === "points" ? "Oblicz punkty" : `Punkty · ${formatPoints(points)}`}</b></a>
-    <a href="#szkola" aria-current={activeStep === "school" ? "step" : undefined} onClick={(event) => { event.preventDefault(); onNavigate("school"); }}><b>2. {activeStep === "result" && targetName ? targetName : "Znajdź szkołę"}</b></a>
-    <a href="#wynik" aria-current={activeStep === "result" ? "step" : undefined} onClick={(event) => { event.preventDefault(); onNavigate("result"); }}><b>3. {activeStep === "result" ? "Porównaj" : "Porównaj wynik"}</b></a>
+    <a href="#kalkulator" aria-current={activeStep === "points" ? "step" : undefined} onClick={(event) => { event.preventDefault(); onNavigate("points"); }}><b>1. Oblicz punkty</b></a>
+    <a href="#szkola" aria-current={activeStep === "school" ? "step" : undefined} onClick={(event) => { event.preventDefault(); onNavigate("school"); }}><b>2. Znajdź szkołę</b></a>
+    <a href="#wynik" aria-current={activeStep === "result" ? "step" : undefined} onClick={(event) => { event.preventDefault(); onNavigate("result"); }}><b>3. Porównaj wynik</b></a>
   </nav>;
 }
 
@@ -129,7 +129,7 @@ export default function RecruitmentCalculatorPage() {
       <div id="calculator-flow-start" className="calculator-flow-start" aria-hidden="true" />
       <section className="calculator-app" data-step={activeStep}>
         <header className="calculator-intro"><h1>Kalkulator punktów do liceum</h1><p>Bez zakładania konta. Maksymalnie 200 punktów: 100 z egzaminu i 100 ze świadectwa oraz osiągnięć.</p></header>
-        <CalculatorSteps activeStep={activeStep} points={result.total} targetName={targetName} onNavigate={goToStep} />
+        <CalculatorSteps activeStep={activeStep} onNavigate={goToStep} />
 
         {activeStep === "points" ? <section id="kalkulator" className="calculator-screen calculator-points-screen" aria-label="Oblicz punkty">
           <div className="calculator-points-layout">

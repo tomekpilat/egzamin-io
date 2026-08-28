@@ -52,6 +52,18 @@ export default function LoginPage() {
   const [pendingProvider, setPendingProvider] = useState<SocialProvider | null>(null);
   const [notice, setNotice] = useState<Notice>(null);
   const busy = emailBusy || pendingProvider !== null;
+  const emailMismatch = Boolean(emailConfirmation) && email.trim().toLowerCase() !== emailConfirmation.trim().toLowerCase();
+  const passwordMismatch = Boolean(passwordConfirmation) && password !== passwordConfirmation;
+  const signupReady = Boolean(
+    email.trim() &&
+    emailConfirmation.trim() &&
+    password.length >= 8 &&
+    passwordConfirmation.length >= 8 &&
+    !emailMismatch &&
+    !passwordMismatch &&
+    acceptedTerms &&
+    (role === "parent" || (guardianEmail.trim() && guardianEmail.trim().toLowerCase() !== email.trim().toLowerCase())),
+  );
 
   useEffect(() => {
     if (mode === "signup") trackAnalyticsEvent("signup_started");
@@ -147,21 +159,21 @@ export default function LoginPage() {
         ) : (
           <div className="auth-card">
             <div className="auth-tabs" role="tablist" aria-label="Dostęp do konta"><Button type="button" variant="ghost" role="tab" className={mode === "login" ? "active" : ""} aria-selected={mode === "login"} onClick={() => changeMode("login")}>Zaloguj się</Button><Button type="button" variant="ghost" role="tab" className={mode === "signup" ? "active" : ""} aria-selected={mode === "signup"} onClick={() => changeMode("signup")}>Utwórz konto</Button></div>
-            <div className="auth-card-heading"><h1>{mode === "signup" ? "Utwórz konto" : "Dobrze Cię widzieć"}</h1><p>{mode === "signup" ? `${role === "student" ? "Konto ucznia" : "Konto rodzica lub opiekuna"} · bez karty płatniczej.` : "Zaloguj się i wróć do swojego planu nauki."}</p></div>
+            {mode === "login" && <div className="auth-card-heading"><h1>Dobrze Cię widzieć</h1><p>Zaloguj się i wróć do swojego planu nauki.</p></div>}
             {mode === "signup" && <button type="button" className="auth-change-role" onClick={() => setSignupStage("role")}>← Zmień rolę · {role === "student" ? "Uczeń" : "Rodzic lub opiekun"}</button>}
             <SocialAuthButtons disabled={emailBusy} pendingProvider={pendingProvider} onSelect={handleSocial} />
             <div className="auth-divider"><span>albo e-mailem</span></div>
             <form className="auth-form" onSubmit={handleSubmit}>
               <div className={mode === "signup" ? "registration-fields" : "login-fields"}>
                 <Label htmlFor="auth-email">Twój e-mail<Input id="auth-email" type="email" value={email} onChange={(event) => setEmail(event.target.value)} maxLength={254} autoComplete="email" placeholder="twoj@email.pl" required /></Label>
-                {mode === "signup" && <Label htmlFor="auth-email-confirmation">Powtórz e-mail<Input id="auth-email-confirmation" type="email" value={emailConfirmation} onChange={(event) => setEmailConfirmation(event.target.value)} maxLength={254} autoComplete="email" placeholder="Wpisz ten sam e-mail" aria-invalid={Boolean(emailConfirmation) && email.trim().toLowerCase() !== emailConfirmation.trim().toLowerCase()} required /></Label>}
+                {mode === "signup" && <Label htmlFor="auth-email-confirmation" className={emailMismatch ? "auth-field-invalid" : ""}>Powtórz e-mail<Input id="auth-email-confirmation" type="email" value={emailConfirmation} onChange={(event) => setEmailConfirmation(event.target.value)} maxLength={254} autoComplete="email" placeholder="Wpisz ten sam e-mail" aria-invalid={emailMismatch} aria-describedby={emailMismatch ? "auth-email-confirmation-error" : undefined} required />{emailMismatch && <small id="auth-email-confirmation-error" className="auth-field-error">Adresy e-mail nie są takie same.</small>}</Label>}
                 <Label htmlFor="auth-password">Hasło<Input id="auth-password" type="password" value={password} onChange={(event) => setPassword(event.target.value)} minLength={8} maxLength={128} autoComplete={mode === "signup" ? "new-password" : "current-password"} placeholder={mode === "signup" ? "Minimum 8 znaków" : "Twoje hasło"} required /></Label>
-                {mode === "signup" && <Label htmlFor="auth-password-confirmation">Powtórz hasło<Input id="auth-password-confirmation" type="password" value={passwordConfirmation} onChange={(event) => setPasswordConfirmation(event.target.value)} minLength={8} maxLength={128} autoComplete="new-password" placeholder="Wpisz to samo hasło" aria-invalid={Boolean(passwordConfirmation) && password !== passwordConfirmation} required /></Label>}
+                {mode === "signup" && <Label htmlFor="auth-password-confirmation" className={passwordMismatch ? "auth-field-invalid" : ""}>Powtórz hasło<Input id="auth-password-confirmation" type="password" value={passwordConfirmation} onChange={(event) => setPasswordConfirmation(event.target.value)} minLength={8} maxLength={128} autoComplete="new-password" placeholder="Wpisz to samo hasło" aria-invalid={passwordMismatch} aria-describedby={passwordMismatch ? "auth-password-confirmation-error" : undefined} required />{passwordMismatch && <small id="auth-password-confirmation-error" className="auth-field-error">Hasła nie są takie same.</small>}</Label>}
               </div>
               {mode === "signup" && role === "student" && <Label htmlFor="guardian-email">E-mail rodzica lub opiekuna<Input id="guardian-email" type="email" value={guardianEmail} onChange={(event) => setGuardianEmail(event.target.value)} maxLength={254} autoComplete="email" placeholder="np. anna.n@example.com" required /><small className="guardian-help">Wyślemy tam prośbę o zgodę. Bez niej nie odblokujemy zadań ani tutora AI.</small></Label>}
               {mode === "signup" && <div className="check-row"><Checkbox id="accepted-terms" checked={acceptedTerms} onCheckedChange={(checked) => setAcceptedTerms(checked === true)} /><label htmlFor="accepted-terms">Akceptuję <a href="/regulamin" target="_blank">regulamin</a> i <a href="/polityka-prywatnosci" target="_blank">politykę prywatności</a>.</label></div>}
               {notice && <Alert variant={notice.type === "error" ? "destructive" : "success"} className={`auth-notice ${notice.type}`}><AlertDescription role="status" aria-live="polite">{notice.message}</AlertDescription></Alert>}
-              <Button className="auth-submit" type="submit" disabled={busy}>{emailBusy ? "Chwila…" : mode === "signup" ? "Utwórz konto" : "Zaloguj się"}</Button>
+              <Button className="auth-submit" type="submit" disabled={busy || (mode === "signup" && !signupReady)}>{emailBusy ? "Chwila…" : mode === "signup" ? "Utwórz konto" : "Zaloguj się"}</Button>
             </form>
           </div>
         )}

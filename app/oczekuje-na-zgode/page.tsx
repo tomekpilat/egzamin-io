@@ -19,6 +19,7 @@ export default function WaitingForGuardianPage() {
   const [status, setStatus] = useState<ConsentStatus | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const requestDate = status?.requested_at ? new Intl.DateTimeFormat("pl-PL", { dateStyle: "long", timeZone: "Europe/Warsaw" }).format(new Date(status.requested_at)) : null;
 
   const refresh = useCallback(async () => {
     setLoading(true);
@@ -60,7 +61,7 @@ export default function WaitingForGuardianPage() {
       <section className="consent-card">
         <span className={`consent-status ${status?.request_status === "rejected" ? "rejected" : ""}`}>{status?.request_status === "rejected" ? "Prośba odrzucona" : "Oczekuje na zgodę rodzica"}</span>
         <h1>{status?.request_status === "rejected" ? "Rodzic nie zatwierdził prośby" : `Czekamy na potwierdzenie od ${status?.guardian_email ?? "rodzica lub opiekuna"}`}</h1>
-        <p>{status?.request_status === "rejected" ? "Jeśli podany adres jest nieprawidłowy, popraw go i wyślij prośbę ponownie. Konto pozostaje zablokowane do czasu zgody opiekuna." : "Konto ucznia wymaga zatwierdzenia przez rodzica lub opiekuna. Opiekun powinien utworzyć konto na podany adres i zaakceptować prośbę w swoim panelu."}</p>
+        <p>{status?.request_status === "rejected" ? "Jeśli podany adres jest nieprawidłowy, popraw go i wyślij prośbę ponownie. Konto pozostaje zablokowane do czasu zgody opiekuna." : `Masz mniej niż 16 lat, więc konto musi zatwierdzić rodzic lub opiekun. ${requestDate ? `Wysłaliśmy prośbę ${requestDate}. ` : ""}Wystarczy, że utworzy konto na podany adres i kliknie „Zatwierdź”.`}</p>
         <div className="consent-visibility">
           <b>Co rodzic zobaczy</b>
           <span>Liczbę rozwiązanych zadań, poprawność, przedmioty, tematy do powtórki, wykorzystanie AI i regularność nauki.</span>

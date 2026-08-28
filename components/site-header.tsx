@@ -11,7 +11,6 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
 import { getSupabaseClient } from "@/lib/supabase-browser";
 
 const navigation = [
-  { key: "subjects", label: "Przedmioty", href: "/#zadania" },
   { key: "parent", label: "Dla rodziców", href: "/#rodzice" },
   { key: "calculator", label: "Kalkulator", href: "/kalkulator-punktow" },
   { key: "knowledge", label: "Baza wiedzy", href: "/baza-wiedzy" },

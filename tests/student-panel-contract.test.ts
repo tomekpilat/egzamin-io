@@ -66,5 +66,8 @@ describe("student panel navigation", () => {
     expect(practice).toContain("<ThemeSettings />");
     expect(studentStyles).toContain("grid-template-columns: 250px minmax(0, 1fr)");
     expect(studentStyles).toContain(".dashboard-student-page .student-resume-grid");
+    expect(panel).toContain('className="student-session-card" onClick={() => setStudentView("exercises")}');
+    expect(styles).toContain(".dark .task-answer.is-correct");
+    expect(styles).toContain(".dark .task-answer.is-incorrect");
   });
 });
