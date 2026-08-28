@@ -86,7 +86,9 @@ function AiTutorConversation({ questionId, feedback }: { questionId: string; fee
       if (!response.ok) throw new Error(data.error || "Nie udało się uruchomić pomocy AI.");
       setMessages(data.messages ?? []);
       if (data.usage) setUsage(data.usage);
-      setHints(data.hints ?? []);
+      const nextHints = data.hints ?? [];
+      setHints(nextHints);
+      setVisibleHintCount(nextHints.length ? 1 : 0);
       setAvailable(data.available === true);
     } catch (loadError) {
       setError(loadError instanceof Error ? loadError.message : "Nie udało się uruchomić pomocy AI.");
@@ -153,10 +155,15 @@ function AiTutorConversation({ questionId, feedback }: { questionId: string; fee
       {displayedTab === "hints" && !feedback && <section className="ai-assistance-section" aria-labelledby="hints-title">
         <p className="ai-panel-intro">Pomoc otwiera się po kolei. Rozwiązanie zobaczysz po sprawdzeniu odpowiedzi.</p>
         <b id="hints-title" className="sr-only">Podpowiedzi</b>
-        {loading ? <p className="ai-tutor-loading">Wczytujemy podpowiedzi…</p> : available ? <>
+        {loading ? <div className="ai-tutor-loading" aria-label="Wczytujemy podpowiedzi"><span /><span /><span /></div> : error ? <Alert variant="destructive"><AlertDescription><span>{error}</span><Button type="button" size="sm" variant="outline" onClick={() => void loadTutor()}><RotateCcw aria-hidden="true" /> Spróbuj ponownie</Button></AlertDescription></Alert> : available ? <>
           {visibleHintCount > 0 ? <ol className="ai-hints-list">{hints.slice(0, visibleHintCount).map((hint, index) => <li key={`${index}-${hint}`}><span>{index + 1}</span><div><b>{index === 0 ? "Mała wskazówka" : index === 1 ? "Kolejny krok" : "Prostszy przykład"}</b><p>{hint}</p></div></li>)}</ol> : <p className="ai-assistance-placeholder">Odkrywaj wskazówki pojedynczo — bez zdradzania całego rozwiązania.</p>}
-          {visibleHintCount < hints.length ? <Button type="button" size="sm" variant="outline" onClick={() => setVisibleHintCount((count) => Math.min(count + 1, hints.length))}>{visibleHintCount ? "Pokaż kolejną" : "Pokaż podpowiedź"}</Button> : hints.length > 0 ? <small>To wszystkie podpowiedzi do tego zadania.</small> : null}
-        </> : !error ? <p className="ai-assistance-placeholder">Podpowiedzi do tego zadania czekają na zatwierdzenie.</p> : null}
+          {visibleHintCount < hints.length ? <div className="ai-hint-steps" aria-label="Pokaż podpowiedź">{hints.slice(visibleHintCount).map((_hint, offset) => {
+            const index = visibleHintCount + offset;
+            const isNext = offset === 0;
+            return <Button key={index} type="button" variant="outline" onClick={() => setVisibleHintCount(index + 1)} disabled={!isNext}><span><b>{index + 1}</b>{index === 1 ? "Wyjaśnij kolejny krok" : "Prostszy przykład"}</span><em>{isNext ? "Pokaż" : "Po kolei"}</em></Button>;
+          })}</div> : hints.length > 0 ? <small>To wszystkie podpowiedzi do tego zadania.</small> : <p className="ai-assistance-placeholder">Nie ma jeszcze podpowiedzi do tego zadania.</p>}
+        </> : <p className="ai-assistance-placeholder">Podpowiedzi do tego zadania czekają na zatwierdzenie.</p>}
+        {!loading && available && <button type="button" className="ai-tutor-launch" onClick={() => setActiveTab("ai")}><span><b>Zapytaj tutora AI</b><small>{usage.remaining} z {usage.limit} pytań AI</small></span><span>Napisz, czego nie rozumiesz w tym zadaniu… <b>↑</b></span><small>Tutor odpowiada tylko na pytania o to zadanie. Rodzic nie widzi treści rozmowy.</small></button>}
       </section>}
 
       {displayedTab === "solution" && feedback && <section className="ai-assistance-section" aria-labelledby="answer-help-title">

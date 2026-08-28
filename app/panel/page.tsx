@@ -60,6 +60,28 @@ type AdminFeedback = {
   feedback_created_at: string;
 };
 
+function AccountMenu({ displayName, email, className = "", onSettings, onSignOut }: { displayName: string; email: string; className?: string; onSettings: () => void; onSignOut: () => void }) {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <button type="button" className={`dashboard-session ${className}`.trim()} aria-label={`Menu konta: ${displayName}`}>
+          <span className="dashboard-account">
+            <span className="dashboard-account-avatar">{displayName.slice(0, 2).toUpperCase()}</span>
+            <span className="dashboard-account-copy"><b>{displayName}</b><small>{email}</small></span>
+          </span>
+          <ChevronDown className="dashboard-session-chevron" aria-hidden="true" />
+        </button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end" sideOffset={8} className="dashboard-account-menu">
+        <DropdownMenuLabel>{email}</DropdownMenuLabel>
+        <DropdownMenuItem onSelect={onSettings}><Settings aria-hidden="true" /> Ustawienia</DropdownMenuItem>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem className="dashboard-signout-item" onSelect={onSignOut}><LogOut aria-hidden="true" /> Wyloguj się</DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
+
 const emptyCounts: RoleCounts = {
   student: 0,
   parent: 0,
@@ -132,9 +154,9 @@ function ParentPanel({ activeView, parentEmail, requests, linkedChildren, action
   return (
     <>
       {activeView === "start" && <>
-        <div className="dashboard-view-heading parent-overview-heading"><div><span className="dashboard-kicker dark-kicker">Panel rodzica</span><h2>Przegląd</h2><small>Aktualny stan połączonych kont i zgód</small></div><Button variant="outline" type="button" onClick={() => onNavigate("progress")}>Zobacz pełny postęp</Button></div>
+        <div className="dashboard-view-heading parent-overview-heading"><div><h2>Przegląd</h2><small>Połączone konta, zgody i najważniejsze informacje</small></div><Button variant="outline" type="button" onClick={() => onNavigate("progress")}>Zobacz pełny postęp</Button></div>
         {requests.length > 0 && <section className="guardian-requests parent-next-step" aria-labelledby="guardian-requests-title">
-          <div className="guardian-section-heading"><div><Badge>Najbliższy krok</Badge><h3 id="guardian-requests-title">Zatwierdź konto dziecka, żeby mogło zacząć naukę</h3></div><small>Sprawdź tożsamość dziecka poza serwisem.</small></div>
+          <div className="guardian-section-heading"><div><span className="parent-next-step-label">Następny krok</span><h3 id="guardian-requests-title">Zatwierdź konto dziecka, żeby mogło zacząć naukę</h3></div><small>Sprawdź tożsamość dziecka poza serwisem.</small></div>
           {requests.map((request) => <article className="guardian-request-card" key={request.request_id}>
             <div className="guardian-avatar">{(request.student_display_name || request.student_email).slice(0, 2).toUpperCase()}</div>
             <div><b>{request.student_display_name || "Uczeń"}</b><span>{request.student_email}</span><small>Prośba z {new Date(request.requested_at).toLocaleDateString("pl-PL")}</small></div>
@@ -488,15 +510,7 @@ export default function DashboardPage() {
 
   return (
     <main className={`dashboard-page dashboard-${profile.role}-page${focusMode ? " dashboard-focus-mode" : ""}`}>
-      {!focusMode ? <DropdownMenu>
-        <DropdownMenuTrigger asChild><button type="button" className="dashboard-session" aria-label={`Menu konta: ${displayName}`}><span className="dashboard-account"><span className="dashboard-account-avatar">{displayName.slice(0, 2).toUpperCase()}</span><span className="dashboard-account-copy"><b>{displayName}</b><small>{profile.email}</small></span></span><ChevronDown className="dashboard-session-chevron" aria-hidden="true" /></button></DropdownMenuTrigger>
-        <DropdownMenuContent align="end" sideOffset={8} className="dashboard-account-menu">
-          <DropdownMenuLabel>{profile.email}</DropdownMenuLabel>
-          <DropdownMenuItem onSelect={openAccountSettings}><Settings aria-hidden="true" /> Ustawienia</DropdownMenuItem>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem className="dashboard-signout-item" onSelect={() => void signOut()}><LogOut aria-hidden="true" /> Wyloguj się</DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu> : null}
+      {!focusMode && profile.role !== "parent" && profile.role !== "student" ? <AccountMenu displayName={displayName} email={profile.email} className="dashboard-session-floating" onSettings={openAccountSettings} onSignOut={() => void signOut()} /> : null}
       {!focusMode && profile.role === "parent" ? <FeedbackDialog userEmail={profile.email} screenContext={`parent:${parentView}`} /> : null}
       {!focusMode && profile.role !== "student" && <aside className="dashboard-sidebar">
         <a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a>
@@ -504,6 +518,7 @@ export default function DashboardPage() {
         <nav aria-label="Panel">
           {profile.role === "parent" ? <>
             <button type="button" className={parentView === "start" ? "active" : ""} aria-current={parentView === "start" ? "page" : undefined} onClick={() => setParentView("start")}>Przegląd</button>
+            <button type="button" className="dashboard-nav-with-count" onClick={() => setParentView("children")}><span>Prośby o zgodę</span>{guardianRequests.length > 0 && <b>{guardianRequests.length}</b>}</button>
             <button type="button" className={parentView === "progress" ? "active" : ""} aria-current={parentView === "progress" ? "page" : undefined} onClick={() => setParentView("progress")}>Postęp dziecka</button>
             <button type="button" className={parentView === "children" ? "active" : ""} aria-current={parentView === "children" ? "page" : undefined} onClick={() => setParentView("children")}>Dzieci</button>
             <button type="button" className={parentView === "connect" ? "active" : ""} aria-current={parentView === "connect" ? "page" : undefined} onClick={() => setParentView("connect")}>Podłącz dziecko</button>
@@ -517,6 +532,7 @@ export default function DashboardPage() {
           </>}
         </nav>
         <div className="sidebar-plan"><b>{parentPlusChildren ? `Pakiet Plus · ${parentPlusChildren}` : "Wersja bezpłatna"}</b><span>{parentPlusChildren ? "Aktywny dla połączonych dzieci" : "3 pytania AI dziennie"}</span><i><em /></i>{profile.role === "parent" ? <button type="button" onClick={() => setParentView("payments")}>{parentPlusChildren ? "Płatności i dokumenty →" : "Poznaj pakiet Plus →"}</button> : <a href="/plan-plus">Poznaj pakiet Plus →</a>}</div>
+        {profile.role === "parent" ? <AccountMenu displayName={displayName} email={profile.email} className="dashboard-sidebar-account" onSettings={openAccountSettings} onSignOut={() => void signOut()} /> : null}
       </aside>}
 
       {!focusMode && profile.role === "student" && <header className="student-app-header">
@@ -526,7 +542,7 @@ export default function DashboardPage() {
           <button type="button" className={studentView === "progress" ? "active" : ""} aria-current={studentView === "progress" ? "page" : undefined} onClick={() => setStudentView("progress")}>Postęp</button>
           <button type="button" className={studentView === "settings" ? "active" : ""} aria-current={studentView === "settings" ? "page" : undefined} onClick={() => setStudentView("settings")}>Ustawienia</button>
         </nav>
-        <span className="student-plan-badge">Plan Free</span>
+        <div className="student-header-account"><span className="student-plan-badge">Plan Free</span><AccountMenu displayName={displayName} email={profile.email} className="student-account-trigger" onSettings={openAccountSettings} onSignOut={() => void signOut()} /></div>
       </header>}
 
       <div className="dashboard-main">

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight, LogOut } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -277,6 +277,21 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
   const answeredCount = questions.filter((question) => question.selected_answer !== null).length;
   const correctCount = questions.filter((question) => question.is_correct).length;
   const score = answeredCount ? Math.round((correctCount / answeredCount) * 100) : 0;
+  const reviewTopics = useMemo(() => {
+    const byTopic = new Map<string, { subject: Subject; topic: string; answered: number; correct: number }>();
+    questions.forEach((question) => {
+      if (question.selected_answer === null) return;
+      const key = `${question.subject}:${question.topic}`;
+      const current = byTopic.get(key) ?? { subject: question.subject, topic: question.topic, answered: 0, correct: 0 };
+      current.answered += 1;
+      if (question.is_correct) current.correct += 1;
+      byTopic.set(key, current);
+    });
+    return Array.from(byTopic.values())
+      .map((item) => ({ ...item, accuracy: Math.round((item.correct / item.answered) * 100) }))
+      .sort((a, b) => a.accuracy - b.accuracy || b.answered - a.answered)
+      .slice(0, 3);
+  }, [questions]);
   const selectedAnswer = currentQuestion && draftAnswer?.questionId === currentQuestion.question_id ? draftAnswer.index : currentQuestion?.selected_answer ?? null;
   const answerResult = currentQuestion && submittedAnswer?.questionId === currentQuestion.question_id
     ? submittedAnswer
@@ -486,24 +501,23 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
 
       {activeView === "exercises" && <section className="practice-focus-shell" aria-label="Tryb skupienia">
         <header className="practice-focus-header">
-          <div className="practice-focus-subject">
-            <div><label htmlFor="practice-material">Rocznik</label><Select value={material} onValueChange={(value) => selectMaterial(value as MaterialFilter)} disabled={submitting}>
-              <SelectTrigger id="practice-material" aria-label="Wybierz rocznik"><SelectValue /></SelectTrigger>
-              <SelectContent>{materialOptions.map((item) => <SelectItem key={item.value} value={item.value}>{item.label}</SelectItem>)}</SelectContent>
-            </Select></div>
-            <div><label htmlFor="practice-subject">Przedmiot</label><Select value={subject} onValueChange={(value) => selectSubject(value as SubjectFilter)} disabled={submitting}>
-              <SelectTrigger id="practice-subject" aria-label="Wybierz przedmiot"><SelectValue /></SelectTrigger>
-              <SelectContent>{availableSubjects.map((item) => <SelectItem key={item.value} value={item.value}>{item.label}</SelectItem>)}</SelectContent>
-            </Select></div>
+          <div className="practice-focus-context">
+            <Button type="button" variant="outline" className="practice-focus-exit" aria-label="Zakończ" onClick={exitPractice} disabled={submitting}><ChevronLeft aria-hidden="true" /><span>Wyjdź</span></Button>
+            <div className="practice-focus-subject">
+              <div><label htmlFor="practice-material">Rocznik</label><Select value={material} onValueChange={(value) => selectMaterial(value as MaterialFilter)} disabled={submitting}>
+                <SelectTrigger id="practice-material" aria-label="Wybierz rocznik"><SelectValue /></SelectTrigger>
+                <SelectContent>{materialOptions.map((item) => <SelectItem key={item.value} value={item.value}>{item.label}</SelectItem>)}</SelectContent>
+              </Select></div>
+              <div><label htmlFor="practice-subject">Przedmiot</label><Select value={subject} onValueChange={(value) => selectSubject(value as SubjectFilter)} disabled={submitting}>
+                <SelectTrigger id="practice-subject" aria-label="Wybierz przedmiot"><SelectValue /></SelectTrigger>
+                <SelectContent>{availableSubjects.map((item) => <SelectItem key={item.value} value={item.value}>{item.label}</SelectItem>)}</SelectContent>
+              </Select></div>
+            </div>
+            {currentQuestion && <span className="practice-focus-paper-label">{currentQuestion.source_type === "cke" ? `${currentQuestion.exam_accommodation_label || "Arkusz CKE"} · ${currentQuestion.exam_session ? sessionLabels[currentQuestion.exam_session] : "sesja główna"}` : "Zestaw demonstracyjny"}</span>}
           </div>
           <div className="practice-focus-progress" aria-live="polite">
-            <div><span>{currentQuestion ? subjectLabels[currentQuestion.subject] : "Ćwiczenia"}</span><b>{currentQuestion ? `${questionIndex + 1} z ${filteredQuestions.length}` : "—"}</b></div>
+            <div><span>Zadanie</span><b>{currentQuestion ? `${questionIndex + 1} z ${filteredQuestions.length}` : "—"}</b></div>
             <Progress value={currentQuestion ? ((questionIndex + 1) / Math.max(filteredQuestions.length, 1)) * 100 : 0} aria-label="Postęp w bieżącym zestawie" />
-          </div>
-          <div className="practice-focus-controls">
-            <Button type="button" size="icon" variant="ghost" aria-label="Poprzednie pytanie" onClick={() => moveQuestion(-1)} disabled={submitting || filteredQuestions.length < 2}><ChevronLeft aria-hidden="true" /></Button>
-            <Button type="button" size="icon" variant="ghost" aria-label="Następne pytanie" onClick={() => moveQuestion(1)} disabled={submitting || filteredQuestions.length < 2}><ChevronRight aria-hidden="true" /></Button>
-            <Button type="button" variant="outline" className="practice-focus-exit" onClick={exitPractice} disabled={submitting}><LogOut aria-hidden="true" /><span>Zakończ</span></Button>
           </div>
         </header>
         <div className="practice-focus-stage">
@@ -512,7 +526,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
           {currentQuestion && <div className="practice-focus-workspace">
             <Card className="practice-question-card practice-focus-question-card">
               <CardHeader>
-                <div className="practice-meta"><Badge variant="outline">{subjectLabels[currentQuestion.subject]}</Badge><span>{currentQuestion.topic}</span><span>Poziom {currentQuestion.difficulty}/3</span></div>
+                <div className="practice-meta"><Badge variant="outline">{currentQuestion.source_type === "cke" ? "Arkusz CKE" : "Demo"}</Badge><Badge variant="outline">{currentQuestion.topic}</Badge><span>{currentQuestion.source_type === "cke" ? `Egzamin ósmoklasisty ${currentQuestion.exam_year ?? ""}` : subjectLabels[currentQuestion.subject]}{currentQuestion.paper_question_number ? ` · zadanie ${currentQuestion.paper_question_number}` : ""}</span></div>
                 <h1 data-slot="card-title">{currentQuestion.prompt}</h1>
                 <CardDescription>Pytanie {questionIndex + 1} z {filteredQuestions.length} · {formatQuestionSource(currentQuestion)}{currentQuestion.paper_question_number ? ` · zadanie ${currentQuestion.paper_question_number}` : ""}</CardDescription>
               </CardHeader>
@@ -521,32 +535,40 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
                   {currentQuestion.options.map((option, index) => {
                     const correct = answerResult?.answer_correct_index === index;
                     const incorrect = Boolean(answerResult) && selectedAnswer === index && !correct;
-                    const answerClass = ["practice-answer", selectedAnswer === index && "selected", correct && "correct", incorrect && "incorrect"].filter(Boolean).join(" ");
-                    return <button key={option} ref={(element) => { answerRefs.current[index] = element; }} type="button" role="radio" aria-checked={selectedAnswer === index} tabIndex={selectedAnswer === index || (selectedAnswer === null && index === 0) ? 0 : -1} className={answerClass} onClick={() => selectAnswer(index)} onKeyDown={(event) => handleAnswerKeyDown(event, index)} disabled={submitting}><b>{String.fromCharCode(65 + index)}</b><span>{option}</span></button>;
+                    const muted = Boolean(answerResult) && !correct && !incorrect;
+                    const answerClass = ["practice-answer", selectedAnswer === index && "selected", correct && "correct", incorrect && "incorrect", muted && "muted"].filter(Boolean).join(" ");
+                    return <button key={option} ref={(element) => { answerRefs.current[index] = element; }} type="button" role="radio" aria-checked={selectedAnswer === index} tabIndex={selectedAnswer === index || (selectedAnswer === null && index === 0) ? 0 : -1} className={answerClass} onClick={() => selectAnswer(index)} onKeyDown={(event) => handleAnswerKeyDown(event, index)} disabled={submitting}><b>{String.fromCharCode(65 + index)}</b><span>{option}</span>{incorrect && <em>Twoja odpowiedź</em>}{correct && <em>Poprawna</em>}</button>;
                   })}
                 </div>
-                <div className="practice-actions"><Button type="button" size="lg" onClick={() => void submitAnswer()} disabled={selectedAnswer === null || submitting}>{submitting ? "Sprawdzam…" : answerResult ? "Sprawdź ponownie" : "Sprawdź odpowiedź"}</Button>{answerResult && <Button type="button" size="lg" variant="outline" onClick={() => moveQuestion(1)}>Następne pytanie <ChevronRight aria-hidden="true" /></Button>}</div>
+                <div className="practice-actions"><Button type="button" size="lg" onClick={() => void submitAnswer()} disabled={selectedAnswer === null || submitting}>{submitting ? "Sprawdzam…" : answerResult ? "Sprawdź ponownie" : "Sprawdź odpowiedź"}</Button><span>Odpowiedź zapisujemy dopiero po sprawdzeniu.</span><div><Button type="button" variant="outline" aria-label="Poprzednie pytanie" onClick={() => moveQuestion(-1)} disabled={submitting || filteredQuestions.length < 2}><ChevronLeft aria-hidden="true" /> Poprzednie</Button><Button type="button" variant="outline" aria-label="Następne pytanie" onClick={() => moveQuestion(1)} disabled={submitting || filteredQuestions.length < 2}>Następne <ChevronRight aria-hidden="true" /></Button></div></div>
               </CardContent>
             </Card>
             <aside className="practice-support-panel" aria-label="Odpowiedź, podpowiedzi i rozmowa z AI"><AiTutor questionId={currentQuestion.question_id} feedback={tutorFeedback} /></aside>
           </div>}
-          <p className="practice-save-note" role="status">Odpowiedź zapisuje się na koncie po kliknięciu „Sprawdź odpowiedź”.</p>
         </div>
       </section>}
 
       {activeView === "progress" && <>
-        <div className="dashboard-view-heading"><div><span className="dashboard-kicker dark-kicker">Postępy</span><h2>Twój wynik w zestawie demo</h2></div><Button variant="outline" type="button" onClick={() => onNavigate("exercises")}>Wróć do ćwiczeń</Button></div>
-        <section className="dashboard-grid three-columns">
-          <article className="metric-card"><span>Rozwiązane pytania</span><b>{answeredCount}/{questions.length}</b><small>{questions.length - answeredCount} pozostało w zestawie.</small></article>
-          <article className="metric-card"><span>Poprawne odpowiedzi</span><b>{correctCount}</b><small>Liczymy ostatnią odpowiedź dla każdego pytania.</small></article>
-          <article className="metric-card"><span>Skuteczność</span><b>{score}%</b><small>Spróbuj ponownie, aby poprawić wynik.</small></article>
+        <div className="dashboard-view-heading"><div><h2>Twój postęp</h2><small>Wyniki z arkuszy CKE i materiałów demonstracyjnych</small></div><Button variant="outline" type="button" onClick={() => onNavigate("exercises")}>Wróć do ćwiczeń</Button></div>
+        <section className="dashboard-grid four-columns student-progress-metrics">
+          <article className="metric-card"><span>Rozwiązane zadania</span><b>{answeredCount}</b><small>{questions.length - answeredCount} nadal czeka.</small></article>
+          <article className="metric-card"><span>Poprawne odpowiedzi</span><b>{correctCount}</b><small>Liczymy ostatnią odpowiedź.</small></article>
+          <article className="metric-card"><span>Skuteczność</span><b>{score}%</b><small>Ze sprawdzonych zadań.</small></article>
+          <article className="metric-card"><span>Arkusze CKE</span><b>{paperProgress.filter((paper) => paper.completion_status !== "not_started").length}</b><small>Rozpoczęte lub ukończone.</small></article>
         </section>
-        <section className="practice-subject-progress">
-          {(["mathematics", "polish", "english"] as Subject[]).map((item) => {
-            const stats = subjectStats(item);
-            const percent = stats.answered ? Math.round((stats.correct / stats.answered) * 100) : 0;
-            return <Card key={item}><CardHeader><div className="subject-card-heading"><SubjectIcon subject={item} /><div><CardTitle>{subjectLabels[item]}</CardTitle><CardDescription>{stats.answered} z {stats.total} rozwiązanych</CardDescription></div></div></CardHeader><CardContent><div className="subject-progress-value"><b>{percent}%</b><span>{stats.correct} poprawnych</span></div><Progress value={(stats.answered / Math.max(stats.total, 1)) * 100} /></CardContent></Card>;
-          })}
+        <section className="student-progress-layout">
+          <Card className="student-subject-overview">
+            <CardHeader><CardTitle>Postęp według przedmiotu</CardTitle></CardHeader>
+            <CardContent>{(["mathematics", "polish", "english"] as Subject[]).map((item) => {
+              const stats = subjectStats(item);
+              const percent = stats.answered ? Math.round((stats.correct / stats.answered) * 100) : 0;
+              return <div className="student-subject-row" key={item}><div className="subject-card-heading"><SubjectIcon subject={item} /><div><b>{subjectLabels[item]}</b><span>{stats.answered} zadań · {percent}% poprawnych</span></div></div><Progress value={(stats.answered / Math.max(stats.total, 1)) * 100} /></div>;
+            })}</CardContent>
+          </Card>
+          <Card className="student-review-card">
+            <CardHeader><CardTitle>Do powtórki</CardTitle><CardDescription>Tematy z najniższą skutecznością.</CardDescription></CardHeader>
+            <CardContent>{reviewTopics.length ? reviewTopics.map((topic) => <div key={`${topic.subject}:${topic.topic}`}><span><b>{topic.topic}</b><small>{subjectLabels[topic.subject]} · {topic.correct} z {topic.answered} poprawnych</small></span><Badge variant="outline">{topic.accuracy}%</Badge></div>) : <p>Po pierwszych sprawdzonych zadaniach pokażemy tutaj tematy do krótkiej powtórki.</p>}</CardContent>
+          </Card>
         </section>
         <section className="practice-paper-progress" aria-labelledby="paper-progress-title">
           <div className="guardian-section-heading"><div><Badge variant="secondary">Arkusze CKE</Badge><h3 id="paper-progress-title">Wyniki według rocznika i arkusza</h3></div><small>Pełny arkusz liczymy osobno od sesji mieszających zadania.</small></div>

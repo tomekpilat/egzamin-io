@@ -24,13 +24,16 @@ describe("flat interface and persistent account session", () => {
 
   it("keeps account actions in a dropdown and removes it from exercise focus mode", () => {
     const panel = readFileSync(join(root, "app/panel/page.tsx"), "utf8");
-    const styles = readFileSync(join(root, "app/account.css"), "utf8");
+    const styles = readFileSync(join(root, "app/redesign.css"), "utf8");
 
-    expect(panel).toContain('{!focusMode ? <DropdownMenu>');
-    expect(panel).toContain('className="dashboard-session"');
-    expect(panel).toContain("<DropdownMenuItem onSelect={openAccountSettings}");
+    expect(panel).toContain("function AccountMenu(");
+    expect(panel).toContain('className={`dashboard-session ${className}`.trim()}');
+    expect(panel).toContain("<DropdownMenuItem onSelect={onSettings}");
     expect(panel).toContain('className="dashboard-signout-item"');
-    expect(panel).toContain("onSelect={() => void signOut()}");
-    expect(styles).toMatch(/\.dashboard-session\s*\{[^}]*position:\s*fixed;[^}]*top:[^;}]+;[^}]*right:[^;}]+;/s);
+    expect(panel).toContain('!focusMode && profile.role !== "parent" && profile.role !== "student"');
+    expect(panel).toContain('!focusMode && profile.role === "student"');
+    expect(panel).toContain('!focusMode && profile.role !== "student"');
+    expect(styles).toMatch(/\.dashboard-session-floating\s*\{[^}]*position:\s*fixed;[^}]*top:[^;}]+;[^}]*right:[^;}]+;/s);
+    expect(styles).toMatch(/\.dashboard-sidebar-account\s*\{[^}]*margin-top:\s*auto;/s);
   });
 });

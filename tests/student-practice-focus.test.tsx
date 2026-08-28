@@ -118,6 +118,10 @@ describe("StudentPractice focus mode", () => {
     expect(screen.getByRole("button", { name: "Zakończ" })).toBeInTheDocument();
     expect(screen.getByRole("complementary", { name: "Odpowiedź, podpowiedzi i rozmowa z AI" })).toBeInTheDocument();
     expect(screen.getByText("Podpowiedzi")).toBeInTheDocument();
+    expect(await screen.findByText("Zamień procent na ułamek.")).toBeInTheDocument();
+    expect(screen.queryByText("Pomnóż przez liczbę.")).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: /Wyjaśnij kolejny krok/ }));
+    expect(screen.getByText("Pomnóż przez liczbę.")).toBeInTheDocument();
 
     const answers = screen.getAllByRole("radio");
     answers[0].focus();
