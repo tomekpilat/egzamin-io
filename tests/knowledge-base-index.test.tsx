@@ -13,7 +13,12 @@ describe("redesigned knowledge base index", () => {
     expect(screen.getByRole("heading", { name: "Konkretna odpowiedź. Potem ćwiczenie." })).toBeInTheDocument();
     expect(screen.getByText("17 poradników")).toBeInTheDocument();
     expect(screen.getByText("6 kategorii")).toBeInTheDocument();
-    expect(container.querySelectorAll(".knowledge-list-card")).toHaveLength(17);
+    expect(container.querySelectorAll(".knowledge-list-card")).toHaveLength(2);
+    expect(screen.getByRole("button", { name: /Punkty, progi i wybór szkoły/ })).toHaveAttribute("aria-expanded", "true");
+
+    await user.click(screen.getByRole("button", { name: /Matematyka krok po kroku/ }));
+    expect(container.querySelectorAll(".knowledge-list-card")).toHaveLength(3);
+    expect(screen.getByRole("button", { name: /Punkty, progi i wybór szkoły/ })).toHaveAttribute("aria-expanded", "false");
 
     await user.click(screen.getByRole("button", { name: "Matematyka · 3" }));
     expect(screen.getByRole("heading", { name: "Matematyka krok po kroku" })).toBeInTheDocument();
@@ -21,8 +26,11 @@ describe("redesigned knowledge base index", () => {
     expect(container.querySelectorAll(".knowledge-list-card")).toHaveLength(3);
     expect(screen.getByText("3 poradniki w tej kategorii")).toBeInTheDocument();
 
+    await user.click(screen.getByRole("button", { name: /Matematyka krok po kroku/ }));
+    expect(container.querySelectorAll(".knowledge-list-card")).toHaveLength(0);
+
     await user.click(screen.getByRole("button", { name: "Wszystkie" }));
-    expect(container.querySelectorAll(".knowledge-list-card")).toHaveLength(17);
+    expect(screen.getAllByRole("heading", { level: 2 })).toHaveLength(7);
   });
 
   it("keeps category, article and learning destinations as real links", () => {

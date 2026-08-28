@@ -11,7 +11,7 @@ describe("shadcn/ui setup", () => {
     expect(config.aliases.ui).toBe("@/components/ui");
   });
 
-  it.each(["alert", "badge", "button", "card", "checkbox", "dialog", "dropdown-menu", "input", "label", "progress", "radio-group", "select", "switch", "textarea"])("provides the %s primitive locally", (name) => {
+  it.each(["accordion", "alert", "badge", "button", "card", "checkbox", "dialog", "dropdown-menu", "input", "label", "progress", "radio-group", "select", "switch", "textarea"])("provides the %s primitive locally", (name) => {
     expect(existsSync(join(process.cwd(), "components", "ui", `${name}.tsx`))).toBe(true);
   });
 });
