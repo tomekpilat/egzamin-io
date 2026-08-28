@@ -40,7 +40,7 @@ Nie commituj pliku przed sprawdzeniem, czy zgoda pozwala przechowywać pełną t
 Uzupełnij:
 
 - rok, przedmiot, termin i wariant,
-- kod dostosowania CKE widoczny w identyfikatorze arkusza (np. `100` dla wariantu standardowego albo `900` dla afazji),
+- standardowy kod arkusza CKE `100` widoczny w identyfikatorze dokumentu,
 - oficjalny URL i kod dokumentu widoczny na arkuszu,
 - dokładną liczbę zadań,
 - każde zadanie w kolejności arkusza,
@@ -55,13 +55,9 @@ Stabilne identyfikatory nie mogą się zmieniać między wersjami. Zalecany wzó
 cke-<rok>-<termin>-<przedmiot>-<wariant>-q<numer>
 ```
 
-### Kod dostosowania a wersja arkusza
+### Zakres MVP
 
-Kod dostosowania i wersja arkusza opisują dwie różne cechy. Przykładowo `900` oznacza materiał przeznaczony dla uczniów z afazją, natomiast `X` albo `Y` jest wersją konkretnego arkusza. Nie zapisuj `X/Y` jako kodu dostosowania.
-
-Pole `paper.source_document_id` albo `paper.variant_code` musi zawierać oficjalny kod dostosowania oddzielony myślnikami, np. `OMAP-900-2605` lub `900-X`. Podczas publikacji baza automatycznie zapisze osobno `accommodation_code` i `paper_version`. Jeśli kodu brakuje, arkusz zostanie oznaczony jako standardowy (`100`), dlatego zgodność tego pola z dokumentem CKE należy zawsze sprawdzić przed publikacją.
-
-Po wybraniu przez rodzica niestandardowego wariantu uczeń otrzymuje wyłącznie opublikowane arkusze z dokładnie tym samym kodem. System celowo nie przełącza go po cichu na wariant standardowy, gdy nie ma pasujących materiałów.
+Pierwsza wersja produktu publikuje wyłącznie standardowe arkusze z kodem `100`. Litera `X` albo `Y` nadal oznacza wersję konkretnego arkusza i pozostaje częścią identyfikatora źródłowego. Inne typy materiałów nie są obecnie obsługiwane ani konfigurowane na koncie ucznia.
 
 ## 2. Sumy kontrolne
 
@@ -230,7 +226,7 @@ Operacja wyłącza arkusz i jego zadania, ale zachowuje historię importu i pow�
 
 - [ ] Zgoda CKE obejmuje ten materiał i sposób użycia.
 - [ ] URL, kod dokumentu i SHA-256 odpowiadają właściwemu PDF.
-- [ ] Kod dostosowania CKE oraz wersja `X/Y` zostały zapisane oddzielnie i odpowiadają oznaczeniom dokumentu.
+- [ ] Dokument jest standardowym arkuszem z kodem `100`, a wersja `X/Y` odpowiada oznaczeniu źródłowemu.
 - [ ] `question_count` odpowiada pełnemu arkuszowi.
 - [ ] Każde zadanie ma prawidłowy numer strony.
 - [ ] Treść, odpowiedzi i zasady punktacji porównano z oryginałem.

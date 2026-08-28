@@ -14,7 +14,6 @@ import { isSubjectKey, SUBJECT_KEYS, SubjectIcon, subjectLabels, type SubjectKey
 import { AiTutor } from "@/components/ai-tutor";
 import { ThemeSettings } from "@/components/theme-settings";
 import { trackAnalyticsEvent } from "@/lib/analytics";
-import { DEFAULT_CKE_ACCOMMODATION, getCkeAccommodation, isCkeAccommodationCode, type CkeAccommodationCode } from "@/lib/cke-accommodations";
 import { CkeQuestionContent, type CkeContentBlock, type CkeQuestionAsset } from "@/components/cke-question-content";
 
 export type StudentView = "start" | "exercises" | "progress" | "settings";
@@ -33,8 +32,6 @@ export type PracticeQuestion = {
   exam_year: number | null;
   exam_session: ExamSession | null;
   exam_variant: string | null;
-  exam_accommodation_code: CkeAccommodationCode | null;
-  exam_accommodation_label: string | null;
   source_document_id: string | null;
   paper_question_number: number | null;
   subject: Subject;
@@ -65,8 +62,6 @@ type PaperProgress = {
   exam_session: ExamSession;
   subject: Subject;
   variant_code: string;
-  accommodation_code: CkeAccommodationCode;
-  accommodation_label: string;
   source_label: string;
   total_questions: number;
   answered_questions: number;
@@ -151,8 +146,6 @@ function normalizeQuestion(value: Record<string, unknown>): PracticeQuestion {
     exam_year: value.exam_year == null ? null : Number(value.exam_year),
     exam_session: examSession ?? null,
     exam_variant: value.exam_variant == null ? null : String(value.exam_variant),
-    exam_accommodation_code: isCkeAccommodationCode(value.exam_accommodation_code) ? value.exam_accommodation_code : null,
-    exam_accommodation_label: value.exam_accommodation_label == null ? null : String(value.exam_accommodation_label),
     source_document_id: value.source_document_id == null ? null : String(value.source_document_id),
     paper_question_number: value.paper_question_number == null ? null : Number(value.paper_question_number),
     subject,
@@ -191,8 +184,6 @@ function normalizePaperProgress(value: Record<string, unknown>): PaperProgress {
     exam_session: session,
     subject,
     variant_code: String(value.variant_code),
-    accommodation_code: isCkeAccommodationCode(value.accommodation_code) ? value.accommodation_code : DEFAULT_CKE_ACCOMMODATION,
-    accommodation_label: String(value.accommodation_label),
     source_label: String(value.source_label),
     total_questions: Number(value.total_questions),
     answered_questions: Number(value.answered_questions),
@@ -232,8 +223,7 @@ export function formatQuestionSource(question: PracticeQuestion) {
   if (question.source_type === "demo") return "Zestaw demonstracyjny egzaminio";
   const session = question.exam_session ? sessionLabels[question.exam_session] : "arkusz CKE";
   const variant = question.exam_variant && question.exam_variant !== "standard" ? ` · wariant ${question.exam_variant}` : "";
-  const accommodation = question.exam_accommodation_label ? ` · ${question.exam_accommodation_label}` : "";
-  return `CKE ${question.exam_year} · ${session}${variant}${accommodation}`;
+  return `CKE ${question.exam_year} · ${session}${variant}`;
 }
 
 function useQuestionTimer(questionId: string | null, running: boolean) {
@@ -258,7 +248,6 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
   const [subject, setSubject] = useState<SubjectFilter>("all");
   const [material, setMaterial] = useState<MaterialFilter>("demo");
   const [paperId, setPaperId] = useState("all");
-  const [accommodationCode, setAccommodationCode] = useState<CkeAccommodationCode>(DEFAULT_CKE_ACCOMMODATION);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [draftAnswer, setDraftAnswer] = useState<{ questionId: string; index: number } | null>(null);
   const [draftMultiple, setDraftMultiple] = useState<{ questionId: string; indices: number[] } | null>(null);
@@ -273,20 +262,17 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
     let active = true;
     getSupabaseClient()
       .then(async (supabase) => {
-        const [{ data, error: questionsError }, { data: progressData, error: progressError }, { data: preferenceData, error: preferenceError }] = await Promise.all([
+        const [{ data, error: questionsError }, { data: progressData, error: progressError }] = await Promise.all([
           supabase.rpc("get_practice_questions"),
           supabase.rpc("get_student_paper_progress"),
-          supabase.rpc("get_my_cke_preference"),
         ]);
-        if (questionsError || progressError || preferenceError) throw questionsError ?? progressError ?? preferenceError;
+        if (questionsError || progressError) throw questionsError ?? progressError;
         const loaded = ((data as Record<string, unknown>[] | null) ?? []).map(normalizeQuestion);
         const progress = ((progressData as Record<string, unknown>[] | null) ?? []).map(normalizePaperProgress);
-        const preference = (preferenceData as Record<string, unknown>[] | null)?.[0];
         if (active) {
           setQuestions(loaded);
           setPaperProgress(progress);
           setMaterial(defaultMaterialFilter(loaded));
-          setAccommodationCode(isCkeAccommodationCode(preference?.accommodation_code) ? preference.accommodation_code : DEFAULT_CKE_ACCOMMODATION);
         }
       })
       .catch(() => {
@@ -338,7 +324,6 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
   );
   const currentQuestion = filteredQuestions[questionIndex] ?? null;
   const questionTime = useQuestionTimer(currentQuestion?.question_id ?? null, activeView === "exercises");
-  const accommodation = getCkeAccommodation(accommodationCode);
   const answeredCount = questions.filter((question) => question.selected_response !== null || question.selected_answer !== null).length;
   const correctCount = questions.filter((question) => question.is_correct).length;
   const earnedPoints = questions.reduce((sum, question) => sum + (question.points_awarded ?? (question.is_correct ? 1 : 0)), 0);
@@ -589,12 +574,12 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
             <CardHeader><CardDescription>{answeredCount ? `Ostatnio: ${material === "demo" ? "zestaw demonstracyjny" : material.replace("year:", "CKE ")}` : "Pierwsza sesja"}</CardDescription><CardTitle>{answeredCount ? "Wróć do nauki" : "Zacznij od jednego zadania"}</CardTitle></CardHeader>
             <CardContent><p>{filteredQuestions.length ? `${Math.max(filteredQuestions.length - answeredCount, 0)} zadań czeka w wybranym materiale. Nie musisz kończyć całego arkusza podczas jednej sesji.` : "Wybierz dostępny materiał poniżej, aby rozpocząć."}</p><div><Button type="button" onClick={startPractice} disabled={!filteredQuestions.length}>{answeredCount ? "Kontynuuj arkusz" : "Rozpocznij"}</Button><Button variant="outline" type="button" onClick={() => onNavigate("progress")}>Zobacz wyniki</Button></div></CardContent>
           </Card>
-          <Card className="student-summary-card"><CardContent><div><span>Rozwiązane zadania</span><b>{answeredCount}</b></div><div><span>Poprawne odpowiedzi</span><b>{score}%</b></div><div><span>Twój arkusz CKE</span><strong>{accommodation.label} ({accommodation.code})</strong><small>Ustawia rodzic</small></div></CardContent></Card>
+          <Card className="student-summary-card"><CardContent><div><span>Rozwiązane zadania</span><b>{answeredCount}</b></div><div><span>Poprawne odpowiedzi</span><b>{score}%</b></div><div><span>Arkusze CKE</span><strong>{paperProgress.length}</strong><small>Dostępne roczniki i przedmioty</small></div></CardContent></Card>
         </section>
         <Card className="practice-launch-card">
-          <CardHeader><div><CardTitle>Wybierz materiał</CardTitle><CardDescription>Dostępne {questions.length} zadań · {questions.length - answeredCount} nierozwiązanych · wariant CKE {accommodation.code}</CardDescription></div></CardHeader>
+          <CardHeader><div><CardTitle>Wybierz materiał</CardTitle><CardDescription>Dostępne {questions.length} zadań · {questions.length - answeredCount} nierozwiązanych</CardDescription></div></CardHeader>
           <CardContent>
-            {!questions.length && <Alert><AlertTitle>Brak opublikowanych arkuszy dla wariantu „{accommodation.label}”</AlertTitle><AlertDescription>Nie przełączamy Cię automatycznie na inny wariant. Rodzic może sprawdzić ustawienie w panelu „Dzieci”, a nowe dopasowane arkusze pojawią się po publikacji.</AlertDescription></Alert>}
+            {!questions.length && <Alert><AlertTitle>Brak opublikowanych arkuszy</AlertTitle><AlertDescription>Materiały pojawią się tutaj po ich zweryfikowaniu i publikacji.</AlertDescription></Alert>}
             <div className="practice-launch-filters">
               <label htmlFor="practice-material-start">Rocznik
                 <Select value={material} onValueChange={(value) => selectMaterial(value as MaterialFilter)}>
@@ -634,7 +619,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
                 <SelectTrigger aria-label="Wybierz przedmiot"><SelectValue /></SelectTrigger>
                 <SelectContent>{availableSubjects.map((item) => <SelectItem key={item.value} value={item.value}>{item.label}</SelectItem>)}</SelectContent>
               </Select>
-              {currentQuestion && <span>· {currentQuestion.source_type === "cke" ? `${currentQuestion.exam_accommodation_label || "Arkusz CKE"} · ${currentQuestion.exam_session ? sessionLabels[currentQuestion.exam_session] : "sesja główna"}` : "Zestaw demonstracyjny"}</span>}
+              {currentQuestion && <span>· {currentQuestion.source_type === "cke" ? `Arkusz CKE · ${currentQuestion.exam_session ? sessionLabels[currentQuestion.exam_session] : "sesja główna"}` : "Zestaw demonstracyjny"}</span>}
             </div>
           </div>
           <div className="task-progress" aria-live="polite">
@@ -731,18 +716,14 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
           <div className="guardian-section-heading"><div><Badge variant="secondary">Arkusze CKE</Badge><h3 id="paper-progress-title">Wyniki według rocznika i arkusza</h3></div><small>Pełny arkusz liczymy osobno od sesji mieszających zadania.</small></div>
           {paperProgress.length ? <div className="practice-paper-grid">{paperProgress.map((paper) => {
             const statusLabel = paper.completion_status === "completed" ? "Ukończony" : paper.completion_status === "in_progress" ? "Rozpoczęty" : "Nierozpoczęty";
-            return <Card key={paper.progress_paper_id} className="practice-paper-card"><CardHeader><div className="practice-paper-title"><Badge variant={paper.completion_status === "completed" ? "default" : "outline"}>{statusLabel}</Badge><span>CKE {paper.exam_year} · {sessionLabels[paper.exam_session]} · kod {paper.accommodation_code}</span></div><div className="subject-card-heading compact"><SubjectIcon subject={paper.subject} /><div><CardTitle>{subjectLabels[paper.subject]}</CardTitle><CardDescription>{paper.accommodation_label} · {paper.source_label}</CardDescription></div></div></CardHeader><CardContent><div className="subject-progress-value"><b>{paper.score_percent}%</b><span>{paper.earned_points} z {paper.available_points} pkt · {paper.answered_questions} z {paper.total_questions} zadań</span></div><Progress value={(paper.answered_questions / Math.max(paper.total_questions, 1)) * 100} aria-label={`Ukończenie arkusza ${paper.exam_year}: ${paper.answered_questions} z ${paper.total_questions}`} /></CardContent></Card>;
+            return <Card key={paper.progress_paper_id} className="practice-paper-card"><CardHeader><div className="practice-paper-title"><Badge variant={paper.completion_status === "completed" ? "default" : "outline"}>{statusLabel}</Badge><span>CKE {paper.exam_year} · {sessionLabels[paper.exam_session]}</span></div><div className="subject-card-heading compact"><SubjectIcon subject={paper.subject} /><div><CardTitle>{subjectLabels[paper.subject]}</CardTitle><CardDescription>{paper.source_label}</CardDescription></div></div></CardHeader><CardContent><div className="subject-progress-value"><b>{paper.score_percent}%</b><span>{paper.earned_points} z {paper.available_points} pkt · {paper.answered_questions} z {paper.total_questions} zadań</span></div><Progress value={(paper.answered_questions / Math.max(paper.total_questions, 1)) * 100} aria-label={`Ukończenie arkusza ${paper.exam_year}: ${paper.answered_questions} z ${paper.total_questions}`} /></CardContent></Card>;
           })}</div> : <Card className="practice-paper-empty"><CardContent><b>Brak opublikowanych arkuszy CKE</b><p>Gdy pierwszy zweryfikowany arkusz zostanie zaimportowany, pojawi się tutaj jako osobny rocznik — bez mieszania z zestawem demo.</p></CardContent></Card>}
         </section>
       </section>}
 
       {activeView === "settings" && <section className="student-content-view student-settings-view" id="ustawienia" aria-labelledby="student-settings-title">
-        <Card className="student-cke-settings-card">
-          <CardHeader><Badge variant="secondary">Kryteria CKE</Badge><CardTitle id="student-settings-title">Twój wariant arkuszy</CardTitle><CardDescription>To ustawienie określa, które oficjalne arkusze mogą pojawić się na Twoim koncie.</CardDescription></CardHeader>
-          <CardContent><div className="student-cke-current"><span>Kod CKE {accommodation.code}</span><b>{accommodation.label}</b><p>{accommodation.audience}</p></div><Alert><AlertTitle>Ustawienie kontroluje rodzic</AlertTitle><AlertDescription>Rodzic może zmienić wariant przy Twoim koncie w panelu „Dzieci”. Nie prosimy o diagnozę ani dokumentację medyczną.</AlertDescription></Alert></CardContent>
-        </Card>
         <Card className="account-settings-card student-account-settings-card">
-          <CardHeader><CardTitle>Ustawienia konta</CardTitle><CardDescription>Motyw, prywatność i zarządzanie danymi w jednym miejscu.</CardDescription></CardHeader>
+          <CardHeader><CardTitle id="student-settings-title">Ustawienia konta</CardTitle><CardDescription>Motyw, prywatność i zarządzanie danymi w jednym miejscu.</CardDescription></CardHeader>
           <CardContent className="student-account-settings-content">
             <div className="account-theme-setting"><span>Wygląd aplikacji</span><ThemeSettings /></div>
             <div className="student-account-links"><Button variant="outline" asChild><a href="/plan-plus#dla-ucznia">Poznaj pakiet Plus</a></Button><Button variant="outline" asChild><a href="/polityka-prywatnosci">Polityka prywatności</a></Button><Button variant="outline" className="student-delete-account" asChild><a href="/usun-konto">Usuń konto i dane</a></Button></div>

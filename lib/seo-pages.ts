@@ -97,8 +97,8 @@ export const SEO_PAGES: SeoPage[] = [
     facts: [{ value: "10–12.05", label: "termin główny" }, { value: "9:00", label: "start każdego dnia" }, { value: "6.07", label: "wyniki" }],
     sections: [
       { title: "Terminy egzaminu 2027", paragraphs: ["Język polski odbędzie się 10 maja, matematyka 11 maja, a język obcy nowożytny 12 maja. Termin dodatkowy zaplanowano na 9–11 czerwca."], bullets: ["10 maja — język polski, 9:00", "11 maja — matematyka, 9:00", "12 maja — język obcy, 9:00"] },
-      { title: "Ile trwa egzamin?", paragraphs: ["Standardowy czas to 150 minut z języka polskiego, 125 minut z matematyki oraz 110 minut z języka obcego. Przy przyznanym dostosowaniu czas może być dłuższy."], bullets: ["polski — 150 minut", "matematyka — 125 minut", "język obcy — 110 minut"] },
-      { title: "Co zabrać", paragraphs: ["Na każdy egzamin potrzebny jest długopis lub pióro z czarnym tuszem. Na matematykę dodatkowo linijka. CKE wskazuje, że rysunków nie wykonuje się ołówkiem, a długopisy zmazywalne są niedozwolone."], note: "Kalkulator nie jest standardowo dozwolony. Wyjątek może dotyczyć przyznanego dostosowania." },
+      { title: "Ile trwa egzamin?", paragraphs: ["Czas to 150 minut z języka polskiego, 125 minut z matematyki oraz 110 minut z języka obcego."], bullets: ["polski — 150 minut", "matematyka — 125 minut", "język obcy — 110 minut"] },
+      { title: "Co zabrać", paragraphs: ["Na każdy egzamin potrzebny jest długopis lub pióro z czarnym tuszem. Na matematykę dodatkowo linijka. CKE wskazuje, że rysunków nie wykonuje się ołówkiem, a długopisy zmazywalne są niedozwolone."], note: "Kalkulator nie jest dozwolony na standardowym egzaminie." },
       { title: "Czy można nie zdać E8?", paragraphs: ["Nie ma minimalnego progu zdawalności, więc egzaminu nie można nie zdać. Trzeba jednak do niego przystąpić, aby ukończyć szkołę podstawową, a wynik ma duże znaczenie w rekrutacji."] },
     ],
     faqs: [
@@ -155,7 +155,7 @@ SEO_PAGES.push(
     ],
     faqs: [
       { question: "Jak szybko policzyć 10% liczby?", answer: "Podziel liczbę przez 10. Dla 240 jest to 24." },
-      { question: "Czy przy procentach można używać kalkulatora na E8?", answer: "Standardowo nie. Na matematykę uczeń przynosi czarny długopis i linijkę; kalkulator może wynikać jedynie z indywidualnego dostosowania." },
+      { question: "Czy przy procentach można używać kalkulatora na E8?", answer: "Nie. Na matematykę uczeń przynosi czarny długopis i linijkę." },
     ],
     sources: [ckeMath, ckeEquipment],
     related: ["/matematyka/twierdzenie-pitagorasa-zadania", "/matematyka/zadania-otwarte", "/egzamin-osmoklasisty-2027"],

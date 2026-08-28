@@ -11,8 +11,6 @@ const child = {
   linked_at: "2026-08-01T00:00:00Z",
   weekly_goal: 5,
   summary_email_enabled: false,
-  cke_accommodation_code: "100",
-  cke_accommodation_label: "arkusz standardowy",
   plan_tier: "free",
   plan_valid_until: null,
 };
@@ -70,6 +68,7 @@ describe("redesigned parent panel", () => {
     expect(screen.getByRole("heading", { name: "Dzieci" })).toBeInTheDocument();
     expect(screen.getByText("Kasia Nowak")).toBeInTheDocument();
     expect(screen.getByRole("combobox", { name: "Liczba sesji w tygodniu" })).toBeInTheDocument();
+    expect(screen.queryByText("Wariant arkuszy")).not.toBeInTheDocument();
     expect(screen.getByRole("banner")).toHaveTextContent("Dzieci");
 
     await user.click(screen.getByRole("button", { name: "Podłącz dziecko" }));

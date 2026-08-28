@@ -845,16 +845,12 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
 .parent-connect-card,
 .parent-empty-view,
 .account-settings-card,
-.student-cke-settings-card,
 .practice-launch-card,
 .practice-paper-card,
 .parent-payment-checkout,
 .parent-payment-history { margin-bottom: 18px; background: var(--card); border-color: var(--border); }
 .child-card-title-row { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center; }
 .child-settings-content { display: grid; gap: 18px; }
-.cke-preference-setting { padding: 18px; background: var(--surface-soft); border: 1px solid var(--subtle-line); border-radius: 9px; }
-.cke-preference-setting p,
-.cke-preference-audience { color: var(--muted-copy); }
 .child-settings-actions,
 .parent-connect-actions,
 .account-settings-actions { display: flex; flex-wrap: wrap; gap: 9px; }

@@ -103,7 +103,6 @@
 .dashboard-student-page .student-review-card,
 .dashboard-student-page .practice-paper-card,
 .dashboard-student-page .practice-paper-empty,
-.dashboard-student-page .student-cke-settings-card,
 .dashboard-student-page .student-account-settings-card { padding: 0; gap: 0; }
 .dashboard-student-page .student-resume-card [data-slot="card-header"] { padding: 26px 28px 0; gap: 10px; }
 .dashboard-student-page .student-resume-card [data-slot="card-description"] { color: var(--muted-copy); font-size: 15px; }
@@ -173,12 +172,6 @@
 .dashboard-student-page .student-settings-view [data-slot="card-title"] { font-size: 24px; }
 .dashboard-student-page .student-settings-view [data-slot="card-description"] { color: var(--muted-copy); font-size: 15px; }
 .dashboard-student-page .student-settings-view [data-slot="card-content"] { padding: 20px 28px 26px; }
-.dashboard-student-page .student-cke-current { padding: 0; gap: 6px; background: transparent; border: 0; border-radius: 0; }
-.dashboard-student-page .student-cke-current span { color: var(--muted-copy); font-size: 14px; letter-spacing: 0; text-transform: none; }
-.dashboard-student-page .student-cke-current b { font-size: 17px; }
-.dashboard-student-page .student-cke-current p { color: var(--muted-copy); font-size: 16px; }
-.dashboard-student-page .student-cke-settings-card [data-slot="card-content"] { display: grid; gap: 18px; }
-.dashboard-student-page .student-cke-settings-card [data-slot="alert"] { padding: 18px 20px; background: var(--surface-soft); }
 .dashboard-student-page .student-account-settings-content { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px 34px; }
 .dashboard-student-page .account-theme-setting { display: flex; flex-direction: column; align-items: flex-start; gap: 11px; }
 .dashboard-student-page .account-theme-setting > span { color: var(--muted-copy); font-size: 16px; }

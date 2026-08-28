@@ -121,7 +121,7 @@ Kryteria wyjścia:
 - Osobny widok „Moje powtórki” pokazuje zapisane zadania i pozwala filtrować je według przedmiotu oraz roku/arkusza, a następnie ponownie rozpocząć rozwiązanie.
 - Jedno zadanie może znaleźć się na liście tylko raz; oznaczenia są przypisane do konta ucznia, synchronizowane między urządzeniami i chronione przez RLS.
 - Po poprawnym ponownym rozwiązaniu aplikacja pyta, czy usunąć zadanie z listy — nie usuwa go bez decyzji ucznia.
-- Lista respektuje aktywny wariant dostosowania CKE i dostępność materiału.
+- Lista respektuje dostępność opublikowanego standardowego arkusza CKE.
 - Kryteria akceptacji obejmują stany pusty/ładowanie/błąd, obsługę mobilną i klawiaturą oraz testy UI, trwałości danych, braku duplikatów i RLS.
 
 ## Etap 4 — realny panel rodzica

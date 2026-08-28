@@ -77,7 +77,6 @@ function prepareRpc(questionRows = questions, progressRows: Record<string, unkno
   rpc.mockImplementation(async (name: string, params: Record<string, unknown>) => {
     if (name === "get_practice_questions") return { data: questionRows, error: null };
     if (name === "get_student_paper_progress") return { data: progressRows, error: null };
-    if (name === "get_my_cke_preference") return { data: [{ accommodation_code: "100", accommodation_label: "Wariant standardowy" }], error: null };
     if (name === "submit_practice_response") {
       return {
         data: [submitResult?.(params) ?? {
@@ -126,7 +125,6 @@ describe("StudentPractice focus mode", () => {
     expect(screen.getByText("Do powtórki", { selector: '[data-slot="card-title"]' })).toBeInTheDocument();
 
     rerender(<StudentPractice activeView="settings" onNavigate={onNavigate} />);
-    expect(screen.getByText("Twój wariant arkuszy", { selector: '[data-slot="card-title"]' })).toBeInTheDocument();
     expect(screen.getByText("Ustawienia konta", { selector: '[data-slot="card-title"]' })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Polityka prywatności" })).toHaveAttribute("href", "/polityka-prywatnosci");
     expect(screen.getByRole("link", { name: "Usuń konto i dane" })).toHaveAttribute("href", "/usun-konto");

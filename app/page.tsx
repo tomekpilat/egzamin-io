@@ -83,7 +83,7 @@ export default function Home() {
             <article><SubjectIcon subject="mathematics" /><b>Matematyka</b><span>Zadania zamknięte i otwarte, obliczenia oraz geometria.</span></article>
             <article><SubjectIcon subject="polish" /><b>Język polski</b><span>Czytanie ze zrozumieniem, język i przygotowanie do wypowiedzi.</span></article>
             <article><SubjectIcon subject="english" /><b>Języki obce</b><span>Język angielski, francuski, hiszpański, niemiecki, rosyjski i włoski.</span></article>
-            <article><FileText aria-hidden="true" /><b>Arkusze CKE</b><span>Materiały oznaczone rokiem, sesją i właściwym wariantem ucznia.</span></article>
+            <article><FileText aria-hidden="true" /><b>Arkusze CKE</b><span>Materiały oznaczone rokiem, przedmiotem i sesją egzaminu.</span></article>
           </div>
         </div>
       </section>

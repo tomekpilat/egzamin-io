@@ -7,31 +7,34 @@ const homepage = readFileSync(join(root, "app", "page.tsx"), "utf8");
 const panel = readFileSync(join(root, "app", "panel", "page.tsx"), "utf8");
 const practice = readFileSync(join(root, "components", "student-practice.tsx"), "utf8");
 const privacy = readFileSync(join(root, "app", "polityka-prywatnosci", "page.tsx"), "utf8");
+const childSafety = readFileSync(join(root, "app", "bezpieczenstwo-dzieci-ai", "page.tsx"), "utf8");
 
-describe("CKE accommodation UI", () => {
+describe("standard CKE papers in the MVP UI", () => {
   it("keeps the parent privacy promise on the simplified homepage", () => {
     expect(homepage).toContain("Rodzic widzi postęp, nie prywatne rozmowy");
     expect(homepage).toContain("Rodzic nie czyta rozmów");
     expect(homepage).toContain('rola=rodzic');
   });
 
-  it("lets a linked parent select and explicitly confirm a non-standard variant", () => {
-    expect(panel).toContain("CKE_ACCOMMODATIONS.map");
-    expect(panel).toContain("confirms_sensitive_preference");
+  it("keeps only the weekly learning goal in child settings", () => {
     expect(panel).toContain('supabase.rpc("update_child_learning_settings"');
-    expect(panel).toContain("ustawienie może ujawniać informacje o szczególnych potrzebach edukacyjnych dziecka");
+    expect(panel).toContain('next_accommodation_code: "100"');
+    expect(panel).not.toContain("CKE_ACCOMMODATIONS");
+    expect(panel).not.toContain("Materiał przeznaczony dla");
+    expect(panel).not.toContain("Wariant arkuszy");
   });
 
-  it("shows the selected profile to the student and never promises a silent fallback", () => {
-    expect(practice).toContain('supabase.rpc("get_my_cke_preference")');
-    expect(practice).toContain("Nie przełączamy Cię automatycznie na inny wariant");
-    expect(practice).toContain("Ustawienie kontroluje rodzic");
-    expect(practice).toContain("exam_accommodation_label");
+  it("does not load or show a material profile in the student panel", () => {
+    expect(practice).not.toContain('supabase.rpc("get_my_cke_preference")');
+    expect(practice).not.toContain("Twój wariant arkuszy");
+    expect(practice).not.toContain("Ustawienie kontroluje rodzic");
+    expect(practice).not.toContain("exam_accommodation_label");
   });
 
-  it("documents the sensitive-data implications", () => {
-    expect(privacy).toContain("może jednak ujawniać lub pozwalać wnioskować o zdrowiu");
-    expect(privacy).toContain("art. 9 ust. 2 RODO");
-    expect(privacy).toContain("nie przekazujemy go do analityki ani AI");
+  it("removes the discontinued feature from user-facing legal information", () => {
+    expect(privacy).not.toContain("Wariant arkuszy CKE");
+    expect(privacy).not.toContain("art. 9 ust. 2 RODO");
+    expect(childSafety).not.toContain("Wariant arkuszy według kryteriów CKE");
+    expect(childSafety).not.toContain("afazją");
   });
 });

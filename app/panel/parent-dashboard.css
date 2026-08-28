@@ -120,11 +120,6 @@
 .dashboard-parent-page .parent-weekly-setting { display: grid; grid-template-columns: 150px minmax(240px, 1fr); align-items: center; gap: 20px; }
 .dashboard-parent-page .parent-weekly-setting > label { color: var(--muted-copy); font-size: 14px; font-weight: 400; }
 .dashboard-parent-page .parent-weekly-setting [data-slot="select-trigger"] { width: 100%; min-height: 42px; }
-.dashboard-parent-page .cke-preference-setting { padding: 20px 22px; gap: 12px 20px; background: var(--surface-soft); border-color: var(--subtle-line); }
-.dashboard-parent-page .cke-preference-setting h3 { margin-top: 10px; font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif; font-size: 20px; }
-.dashboard-parent-page .cke-preference-setting p { font-size: 14px; line-height: 1.6; }
-.dashboard-parent-page .cke-preference-setting > label:not(.cke-preference-confirmation) { font-size: 14px; font-weight: 400; }
-.dashboard-parent-page .cke-preference-setting [data-slot="select-trigger"] { min-height: 40px; }
 .dashboard-parent-page .child-settings-actions [data-slot="button"] { min-height: 42px; padding-inline: 20px; font-size: 14px; }
 
 .dashboard-parent-page .parent-connect-card { margin: 0; overflow: hidden; }

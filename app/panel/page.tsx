@@ -14,7 +14,6 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Checkbox } from "@/components/ui/checkbox";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -26,7 +25,6 @@ import { getSupabaseClient } from "@/lib/supabase-browser";
 import { LEGAL_VERSION } from "@/lib/legal";
 import { FEEDBACK_CATEGORIES, feedbackStatusLabels, type FeedbackStatus } from "@/lib/feedback";
 import { resolveAccountRoute } from "@/lib/account-routing";
-import { CKE_ACCOMMODATIONS, getCkeAccommodation, type CkeAccommodationCode } from "@/lib/cke-accommodations";
 
 type Profile = {
   id: string;
@@ -41,7 +39,7 @@ type Profile = {
 };
 
 type GuardianRequest = { request_id: string; student_id: string; student_display_name: string | null; student_email: string; requested_at: string; expires_at: string };
-type LinkedChild = { student_id: string; student_display_name: string | null; student_email: string; linked_at: string; weekly_goal: number; summary_email_enabled: boolean; cke_accommodation_code: CkeAccommodationCode; cke_accommodation_label: string; plan_tier: "free" | "plus"; plan_valid_until: string | null };
+type LinkedChild = { student_id: string; student_display_name: string | null; student_email: string; linked_at: string; weekly_goal: number; summary_email_enabled: boolean; plan_tier: "free" | "plus"; plan_valid_until: string | null };
 type ParentView = "start" | "progress" | "children" | "connect" | "payments" | "settings";
 
 type RoleCounts = Record<UserRole, number>;
@@ -84,12 +82,9 @@ const emptyCounts: RoleCounts = {
   admin: 0,
 };
 
-function ChildSettingsCard({ child, busy, onSave }: { child: LinkedChild; busy: boolean; onSave: (studentId: string, weeklyGoal: number, accommodationCode: CkeAccommodationCode, confirmsSensitivePreference: boolean) => void }) {
+function ChildSettingsCard({ child, busy, onSave }: { child: LinkedChild; busy: boolean; onSave: (studentId: string, weeklyGoal: number) => void }) {
   const [weeklyGoal, setWeeklyGoal] = useState(child.weekly_goal);
-  const [accommodationCode, setAccommodationCode] = useState<CkeAccommodationCode>(child.cke_accommodation_code);
-  const [preferenceConfirmed, setPreferenceConfirmed] = useState(child.cke_accommodation_code !== "100");
   const childName = child.student_display_name || "Uczeń";
-  const accommodation = getCkeAccommodation(accommodationCode);
   const weeklyGoalOptions = Array.from(new Set([weeklyGoal, 3, 4, 5, 6, 7])).sort((left, right) => left - right);
 
   return (
@@ -110,24 +105,13 @@ function ChildSettingsCard({ child, busy, onSave }: { child: LinkedChild; busy: 
             <SelectContent>{weeklyGoalOptions.map((option) => <SelectItem key={option} value={String(option)}>{option}</SelectItem>)}</SelectContent>
           </Select>
         </div>
-        <div className="cke-preference-setting">
-          <div><Badge variant="secondary">Kryteria CKE</Badge><h3>Wariant arkuszy</h3><p>To wybór materiału, nie pytanie o diagnozę. Uczeń otrzyma wyłącznie opublikowane arkusze oznaczone wybranym kodem CKE.</p></div>
-          <Label htmlFor={`cke-accommodation-${child.student_id}`}>Materiał przeznaczony dla
-            <Select value={accommodationCode} onValueChange={(value) => { setAccommodationCode(value as CkeAccommodationCode); setPreferenceConfirmed(value === "100"); }}>
-              <SelectTrigger id={`cke-accommodation-${child.student_id}`}><SelectValue /></SelectTrigger>
-              <SelectContent>{CKE_ACCOMMODATIONS.map((item) => <SelectItem key={item.code} value={item.code}>{item.label} · kod {item.code}</SelectItem>)}</SelectContent>
-            </Select>
-          </Label>
-          <p className="cke-preference-audience">{accommodation.audience}</p>
-          {accommodationCode !== "100" && <label className="cke-preference-confirmation" htmlFor={`cke-confirm-${child.student_id}`}><Checkbox id={`cke-confirm-${child.student_id}`} checked={preferenceConfirmed} onCheckedChange={(checked) => setPreferenceConfirmed(checked === true)} /><span>Wybieram ten wariant dobrowolnie i rozumiem, że ustawienie może ujawniać informacje o szczególnych potrzebach edukacyjnych dziecka.</span></label>}
-        </div>
-        <div className="child-settings-actions"><Button type="button" onClick={() => onSave(child.student_id, weeklyGoal, accommodationCode, preferenceConfirmed)} disabled={busy || (accommodationCode !== "100" && !preferenceConfirmed)}>{busy ? "Zapisuję…" : "Zapisz ustawienia"}</Button><Button variant="outline" asChild><a href="/bezpieczenstwo-dzieci-ai">Jak chronimy to ustawienie</a></Button></div>
+        <div className="child-settings-actions"><Button type="button" onClick={() => onSave(child.student_id, weeklyGoal)} disabled={busy}>{busy ? "Zapisuję…" : "Zapisz ustawienia"}</Button></div>
       </CardContent>
     </Card>
   );
 }
 
-function ParentPanel({ activeView, parentEmail, requests, linkedChildren, actionBusy, onNavigate, onApprove, onReject, onSavePreferences }: { activeView: ParentView; parentEmail: string; requests: GuardianRequest[]; linkedChildren: LinkedChild[]; actionBusy: string; onNavigate: (view: ParentView) => void; onApprove: (id: string) => void; onReject: (id: string) => void; onSavePreferences: (studentId: string, weeklyGoal: number, accommodationCode: CkeAccommodationCode, confirmsSensitivePreference: boolean) => void }) {
+function ParentPanel({ activeView, parentEmail, requests, linkedChildren, actionBusy, onNavigate, onApprove, onReject, onSavePreferences }: { activeView: ParentView; parentEmail: string; requests: GuardianRequest[]; linkedChildren: LinkedChild[]; actionBusy: string; onNavigate: (view: ParentView) => void; onApprove: (id: string) => void; onReject: (id: string) => void; onSavePreferences: (studentId: string, weeklyGoal: number) => void }) {
   const { totalWeeklyGoal } = summarizeParentPreferences(linkedChildren);
   const [inviteStatus, setInviteStatus] = useState("");
   const invitePath = "/logowanie?tryb=rejestracja&rola=uczen";
@@ -169,8 +153,8 @@ function ParentPanel({ activeView, parentEmail, requests, linkedChildren, action
           <article className="metric-card"><span>Prośby o zgodę</span><b>{requests.length}</b><small>{requests.length ? "Czekają na Twoją decyzję." : "Brak oczekujących próśb."}</small></article>
         </section>
         <section className="dashboard-card parent-overview-children">
-          <div className="guardian-section-heading"><div><h3>Podłączone dzieci</h3><small>Postęp, wariant CKE i dostęp Plus ustawiasz osobno.</small></div><Button variant="outline" size="sm" type="button" onClick={() => onNavigate("connect")}>Podłącz kolejne</Button></div>
-          {linkedChildren.length ? <div className="parent-overview-child-list">{linkedChildren.map((child) => <button type="button" key={child.student_id} onClick={() => onNavigate("progress")}><span className="guardian-avatar">{(child.student_display_name || child.student_email).slice(0, 2).toUpperCase()}</span><span><b>{child.student_display_name || "Uczeń"}</b><small>{child.student_email} · {child.cke_accommodation_label}</small></span><Badge variant={child.plan_tier === "plus" ? "secondary" : "outline"}>{child.plan_tier === "plus" ? "Plus aktywny" : "Plan Free"}</Badge><em>Postęp</em></button>)}</div> : <div className="parent-overview-empty"><p>Nie ma jeszcze połączonych kont dzieci.</p><Button type="button" onClick={() => onNavigate("connect")}>Połącz konto dziecka</Button></div>}
+          <div className="guardian-section-heading"><div><h3>Podłączone dzieci</h3><small>Postęp, cel tygodniowy i dostęp Plus ustawiasz osobno.</small></div><Button variant="outline" size="sm" type="button" onClick={() => onNavigate("connect")}>Podłącz kolejne</Button></div>
+          {linkedChildren.length ? <div className="parent-overview-child-list">{linkedChildren.map((child) => <button type="button" key={child.student_id} onClick={() => onNavigate("progress")}><span className="guardian-avatar">{(child.student_display_name || child.student_email).slice(0, 2).toUpperCase()}</span><span><b>{child.student_display_name || "Uczeń"}</b><small>{child.student_email}</small></span><Badge variant={child.plan_tier === "plus" ? "secondary" : "outline"}>{child.plan_tier === "plus" ? "Plus aktywny" : "Plan Free"}</Badge><em>Postęp</em></button>)}</div> : <div className="parent-overview-empty"><p>Nie ma jeszcze połączonych kont dzieci.</p><Button type="button" onClick={() => onNavigate("connect")}>Połącz konto dziecka</Button></div>}
         </section>
         <p className="parent-overview-privacy">Nie pokazujemy treści rozmów dziecka z tutorem AI. Widzisz liczby, tematy, wykorzystanie AI i regularność nauki.</p>
       </section>}
@@ -185,7 +169,7 @@ function ParentPanel({ activeView, parentEmail, requests, linkedChildren, action
             <div className="guardian-request-actions"><Button size="sm" onClick={() => onApprove(request.request_id)} disabled={Boolean(actionBusy)}>Zatwierdź</Button><Button size="sm" variant="outline" onClick={() => onReject(request.request_id)} disabled={Boolean(actionBusy)}>Odrzuć</Button></div>
           </article>)}
         </section>}
-        {linkedChildren.length > 0 ? <section className="linked-children"><div className="guardian-section-heading"><div><Badge variant="secondary">Ustawienia nauki</Badge><h3>Połączone konta dzieci</h3></div><small>Cel i wariant arkuszy ustawiasz osobno dla każdego dziecka.</small></div>{linkedChildren.map((child) => <ChildSettingsCard key={child.student_id} child={child} busy={actionBusy === child.student_id} onSave={onSavePreferences} />)}</section> : <Card className="parent-empty-view"><CardHeader><CardTitle>Nie ma jeszcze połączonych kont</CardTitle><CardDescription>Wyślij dziecku link rejestracyjny. Po zatwierdzeniu prośby zobaczysz je tutaj.</CardDescription></CardHeader><CardContent><Button type="button" onClick={() => onNavigate("connect")}>Połącz konto dziecka</Button></CardContent></Card>}
+        {linkedChildren.length > 0 ? <section className="linked-children"><div className="guardian-section-heading"><div><Badge variant="secondary">Ustawienia nauki</Badge><h3>Połączone konta dzieci</h3></div><small>Cel tygodniowy ustawiasz osobno dla każdego dziecka.</small></div>{linkedChildren.map((child) => <ChildSettingsCard key={child.student_id} child={child} busy={actionBusy === child.student_id} onSave={onSavePreferences} />)}</section> : <Card className="parent-empty-view"><CardHeader><CardTitle>Nie ma jeszcze połączonych kont</CardTitle><CardDescription>Wyślij dziecku link rejestracyjny. Po zatwierdzeniu prośby zobaczysz je tutaj.</CardDescription></CardHeader><CardContent><Button type="button" onClick={() => onNavigate("connect")}>Połącz konto dziecka</Button></CardContent></Card>}
       </section>}
 
       {activeView === "progress" && <ParentProgress linkedChildren={linkedChildren} pendingRequests={requests.length} onConnect={() => onNavigate(requests.length ? "children" : "connect")} />}
@@ -406,7 +390,7 @@ export default function DashboardPage() {
     }
   }
 
-  async function saveGuardianPreferences(studentId: string, weeklyGoal: number, accommodationCode: CkeAccommodationCode, confirmsSensitivePreference: boolean) {
+  async function saveGuardianPreferences(studentId: string, weeklyGoal: number) {
     setGuardianActionBusy(studentId);
     setActionError("");
     setActionMessage("");
@@ -416,12 +400,12 @@ export default function DashboardPage() {
         target_student_id: studentId,
         next_weekly_goal: weeklyGoal,
         next_summary_email_enabled: false,
-        next_accommodation_code: accommodationCode,
-        confirms_sensitive_preference: confirmsSensitivePreference,
+        next_accommodation_code: "100",
+        confirms_sensitive_preference: false,
       });
       if (settingsError) throw settingsError;
       await refreshParentData();
-      setActionMessage(`Ustawienia dziecka zostały zapisane. Aktywny wariant CKE: ${getCkeAccommodation(accommodationCode).label}.`);
+      setActionMessage("Ustawienia dziecka zostały zapisane.");
     } catch {
       setActionError("Nie udało się zapisać ustawień dziecka. Spróbuj ponownie.");
     } finally {
@@ -607,7 +591,7 @@ export default function DashboardPage() {
           {profile.role === "student" && <StudentPractice activeView={studentView} onNavigate={setStudentView} />}
           {actionError && profile.role === "parent" && <Alert variant="destructive" className="dashboard-alert"><AlertDescription>{actionError}</AlertDescription></Alert>}
           {actionMessage && profile.role === "parent" && <Alert variant="success" className="dashboard-alert"><AlertDescription>{actionMessage}</AlertDescription></Alert>}
-          {profile.role === "parent" && <ParentPanel activeView={parentView} parentEmail={profile.email} requests={guardianRequests} linkedChildren={linkedChildren} actionBusy={guardianActionBusy} onNavigate={setParentView} onApprove={(id) => void decideGuardianRequest(id, "approve")} onReject={(id) => void decideGuardianRequest(id, "reject")} onSavePreferences={(studentId, weeklyGoal, accommodationCode, confirmsSensitivePreference) => void saveGuardianPreferences(studentId, weeklyGoal, accommodationCode, confirmsSensitivePreference)} />}
+          {profile.role === "parent" && <ParentPanel activeView={parentView} parentEmail={profile.email} requests={guardianRequests} linkedChildren={linkedChildren} actionBusy={guardianActionBusy} onNavigate={setParentView} onApprove={(id) => void decideGuardianRequest(id, "approve")} onReject={(id) => void decideGuardianRequest(id, "reject")} onSavePreferences={(studentId, weeklyGoal) => void saveGuardianPreferences(studentId, weeklyGoal)} />}
           {profile.role === "teacher" && <TeacherPanel verificationStatus={profile.teacher_verification_status} />}
           {profile.role === "admin" && <AdminPanel counts={counts} feedback={adminFeedback} busy={adminActionBusy} feedbackBusyId={feedbackBusyId} error={adminActionError} onGrantTeacher={grantTeacherRole} onUpdateFeedback={(id, status) => void updateFeedbackStatus(id, status)} />}
           {profile.role === "parent" && parentView === "settings" && <section className="parent-content-view parent-settings-view" id="ustawienia" aria-labelledby="parent-settings-title">
