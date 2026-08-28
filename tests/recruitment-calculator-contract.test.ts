@@ -57,6 +57,10 @@ describe("public recruitment calculator", () => {
     expect(page).toContain("const flowTop = flow.offsetTop");
     expect(page).not.toContain('behavior: "smooth"');
     expect(page).not.toContain("<br />do liceum");
+    expect(page).toContain("calculator-certificate-card");
+    expect(page).toContain("calculator-live-score");
+    expect(page).toContain("calculator-comparison-summary");
+    expect(page).toContain("calculator-comparison-scale");
     expect(styles).toMatch(/\.calculator-steps \{[^}]*position: sticky/);
     expect(styles).toContain("grid-template-columns: repeat(3, minmax(0, 1fr))");
   });

@@ -59,7 +59,17 @@ async function readPayload(response: Response): Promise<TutorPayload> {
   }
 }
 
-function AiTutorConversation({ questionId, feedback }: { questionId: string; feedback: AiTutorFeedback | null }) {
+function AiTutorConversation({
+  questionId,
+  feedback,
+  onNext,
+  canGoNext,
+}: {
+  questionId: string;
+  feedback: AiTutorFeedback | null;
+  onNext?: () => void;
+  canGoNext: boolean;
+}) {
   const [messages, setMessages] = useState<AiChatMessage[]>([]);
   const [usage, setUsage] = useState<AiUsageStatus>(() => normalizeUsage(0, 3, "free"));
   const [hints, setHints] = useState<string[]>([]);
@@ -146,8 +156,8 @@ function AiTutorConversation({ questionId, feedback }: { questionId: string; fee
       : activeTab;
 
   return <Card className="ai-tutor-card" aria-label="Pomoc do zadania" data-conversation-active={messages.length > 0 ? "true" : "false"}>
-    <div className="ai-tutor-tabs" role="tablist" aria-label="Rodzaj pomocy">
-      <button type="button" role="tab" aria-selected={displayedTab === "hints"} onClick={() => setActiveTab("hints")} disabled={Boolean(feedback)}>Wskazówki</button>
+    <div className="ai-tutor-tabs" role="tablist" aria-label="Rodzaj pomocy" data-has-feedback={feedback ? "true" : "false"}>
+      {!feedback && <button type="button" role="tab" aria-selected={displayedTab === "hints"} onClick={() => setActiveTab("hints")}>Wskazówki</button>}
       <button type="button" role="tab" aria-selected={displayedTab === "solution"} onClick={() => setActiveTab("solution")} disabled={!feedback}>Rozwiązanie</button>
       <button type="button" role="tab" aria-selected={displayedTab === "ai"} onClick={() => setActiveTab("ai")}>Tutor AI</button>
     </div>
@@ -169,7 +179,10 @@ function AiTutorConversation({ questionId, feedback }: { questionId: string; fee
       {displayedTab === "solution" && feedback && <section className="ai-assistance-section" aria-labelledby="answer-help-title">
         <b id="answer-help-title" className="sr-only">Rozwiązanie</b>
         <Alert variant={feedback.isCorrect ? "success" : "warning"} className={`practice-feedback ${feedback.isCorrect ? "is-correct" : "is-incorrect"}`}><AlertTitle>{feedback.isCorrect ? "Dobra odpowiedź!" : "Jeszcze nie tym razem"}</AlertTitle><AlertDescription><b>Poprawna odpowiedź: {feedback.correctAnswer}</b><span>{feedback.explanation}</span></AlertDescription></Alert>
-        <Button type="button" variant="outline" onClick={() => setActiveTab("ai")}>Dopytaj tutora AI</Button>
+        <div className="ai-solution-actions">
+          <Button type="button" variant="outline" onClick={() => setActiveTab("ai")}>Zapytaj tutora</Button>
+          <Button type="button" onClick={onNext} disabled={!canGoNext}>Następne zadanie</Button>
+        </div>
       </section>}
 
       {displayedTab === "ai" && <section className="ai-assistance-section ai-conversation-section" aria-labelledby="conversation-title">
@@ -188,6 +201,16 @@ function AiTutorConversation({ questionId, feedback }: { questionId: string; fee
   </Card>;
 }
 
-export function AiTutor({ questionId, feedback }: { questionId: string; feedback: AiTutorFeedback | null }) {
-  return <AiTutorConversation key={questionId} questionId={questionId} feedback={feedback} />;
+export function AiTutor({
+  questionId,
+  feedback,
+  onNext,
+  canGoNext = false,
+}: {
+  questionId: string;
+  feedback: AiTutorFeedback | null;
+  onNext?: () => void;
+  canGoNext?: boolean;
+}) {
+  return <AiTutorConversation key={questionId} questionId={questionId} feedback={feedback} onNext={onNext} canGoNext={canGoNext} />;
 }

@@ -3,17 +3,17 @@
 
 import { useEffect, useState } from "react";
 import type { User } from "@supabase/supabase-js";
-import { ChevronDown, LayoutDashboard, LogOut } from "lucide-react";
+import { ChevronDown, LayoutDashboard, LogOut, Menu } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { getSupabaseClient } from "@/lib/supabase-browser";
 
 const navigation = [
-  { key: "how", label: "Jak to działa", href: "/#zadania" },
+  { key: "subjects", label: "Przedmioty", href: "/#zadania" },
   { key: "parent", label: "Dla rodziców", href: "/#rodzice" },
-  { key: "calculator", label: "Kalkulator punktów", href: "/kalkulator-punktow" },
-  { key: "pricing", label: "Cennik", href: "/#cennik" },
+  { key: "calculator", label: "Kalkulator", href: "/kalkulator-punktow" },
+  { key: "knowledge", label: "Baza wiedzy", href: "/baza-wiedzy" },
 ] as const;
 
 type HeaderAccount = {
@@ -34,7 +34,7 @@ function accountFromUser(user: User | null): HeaderAccount | null {
 
 function activeNavigationKey(currentPath?: string) {
   if (currentPath?.startsWith("/kalkulator-punktow")) return "calculator";
-  if (currentPath === "/plan-plus") return "pricing";
+  if (currentPath?.startsWith("/baza-wiedzy") || currentPath?.startsWith("/egzamin-osmoklasisty")) return "knowledge";
   return null;
 }
 
@@ -88,6 +88,10 @@ export function SiteHeader({ currentPath }: { currentPath?: string }) {
           <a href={item.href} key={item.key} aria-current={activeKey === item.key ? "page" : undefined}>{item.label}</a>
         ))}
       </nav>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild><button type="button" className="mobile-nav-trigger" aria-label="Otwórz menu"><Menu aria-hidden="true" /><span>Menu</span></button></DropdownMenuTrigger>
+        <DropdownMenuContent align="start" sideOffset={8} className="mobile-nav-menu">{navigation.map((item) => <DropdownMenuItem key={item.key} asChild><a href={item.href} aria-current={activeKey === item.key ? "page" : undefined}>{item.label}</a></DropdownMenuItem>)}</DropdownMenuContent>
+      </DropdownMenu>
       <div className="header-actions">
         {!sessionReady ? <div className="header-session-placeholder" aria-hidden="true" /> : account ? <DropdownMenu>
           <DropdownMenuTrigger asChild><button type="button" className="header-account-session" aria-label={`Menu konta: ${account.displayName}`}><span className="dashboard-account"><span className="dashboard-account-avatar">{account.displayName.slice(0, 2).toUpperCase()}</span><span className="dashboard-account-copy"><b>{account.displayName}</b><small>{account.email}</small></span></span><ChevronDown className="dashboard-session-chevron" aria-hidden="true" /></button></DropdownMenuTrigger>

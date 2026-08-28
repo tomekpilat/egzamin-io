@@ -169,6 +169,10 @@ describe("StudentPractice focus mode", () => {
     }));
     expect(await screen.findByText("Dobra odpowiedź!")).toBeInTheDocument();
     expect(screen.getByText("Poprawna odpowiedź: B. 10")).toBeInTheDocument();
+    expect(screen.queryByRole("tab", { name: "Wskazówki" })).not.toBeInTheDocument();
+    expect(screen.getByRole("radio", { name: "B 10 Poprawna" })).toBeDisabled();
+    await user.click(screen.getByRole("button", { name: "Następne zadanie" }));
+    expect(screen.getByRole("heading", { name: "Które słowo jest rzeczownikiem?" })).toBeInTheDocument();
 
     await user.click(screen.getByRole("button", { name: "Zakończ" }));
     expect(confirm).not.toHaveBeenCalled();

@@ -64,6 +64,9 @@ describe("AI tutor end-to-end contract", () => {
     expect(component).toContain('displayedTab === "hints" && !feedback');
     expect(component).toContain('displayedTab === "solution" && feedback');
     expect(component).toContain('feedback && activeTab === "hints"');
+    expect(component).toContain('data-has-feedback={feedback ? "true" : "false"}');
+    expect(component).toContain("Następne zadanie");
+    expect(practice).toContain('className={`practice-support-panel${tutorFeedback ? " has-feedback" : ""}`}');
     expect(component).toContain('className={`practice-feedback ${feedback.isCorrect ? "is-correct" : "is-incorrect"}`}');
     expect(styles).toContain(".dark .practice-feedback.is-correct");
     expect(styles).toContain(".dark .practice-feedback.is-incorrect");

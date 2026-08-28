@@ -17,7 +17,7 @@ const publicSurfaces = [
 
 describe("shared public site header", () => {
   it("keeps the same navigation and account actions on every public surface", () => {
-    for (const label of ["Jak to działa", "Dla rodziców", "Kalkulator punktów", "Cennik", "Zaloguj się", "Załóż konto"]) {
+    for (const label of ["Przedmioty", "Dla rodziców", "Kalkulator", "Baza wiedzy", "Zaloguj się", "Załóż konto"]) {
       expect(header).toContain(label);
     }
 
@@ -33,13 +33,14 @@ describe("shared public site header", () => {
     expect(header).toContain("Wyloguj się");
     expect(header).toContain('href="/panel"');
     expect(header).toContain("header-session-placeholder");
+    expect(header).toContain("mobile-nav-trigger");
   });
 
-  it("uses the destinations from the simplified homepage with working routes", () => {
+  it("restores the established public destinations with working routes", () => {
     expect(header).toContain('href: "/#zadania"');
     expect(header).toContain('href: "/#rodzice"');
     expect(header).toContain('href: "/kalkulator-punktow"');
-    expect(header).toContain('href: "/#cennik"');
+    expect(header).toContain('href: "/baza-wiedzy"');
   });
 
   it("uses one desktop and mobile header height", () => {
