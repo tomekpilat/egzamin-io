@@ -87,6 +87,22 @@ describe("ParentProgress", () => {
     expect(await screen.findByText("Pytania do AI")).toBeInTheDocument();
   });
 
+  it("still renders child progress when the optional AI usage RPC is unavailable", async () => {
+    rpc.mockImplementation(async (name: string, args: { target_student_id: string; requested_range_days: number }) => {
+      if (name === "get_parent_child_ai_usage") return { data: null, error: { code: "PGRST202", message: "function not found" } };
+      const row = progressRow(args.target_student_id, args.requested_range_days);
+      delete (row as Partial<typeof row>).ai_questions_used;
+      return { data: [row], error: null };
+    });
+
+    render(<ParentProgress linkedChildren={children.slice(0, 1)} pendingRequests={0} onConnect={() => undefined} />);
+
+    expect(await screen.findByText("Postęp został wczytany")).toBeInTheDocument();
+    expect(screen.getByText("Rozwiązane zadania")).toBeInTheDocument();
+    expect(screen.getByText("6")).toBeInTheDocument();
+    expect(screen.queryByText("Postępy są chwilowo niedostępne")).not.toBeInTheDocument();
+  });
+
   it("shows the connection state without calling progress RPC", () => {
     render(<ParentProgress linkedChildren={[]} pendingRequests={1} onConnect={() => undefined} />);
     expect(screen.getByText("Połączenie czeka na zatwierdzenie")).toBeInTheDocument();

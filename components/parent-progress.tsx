@@ -112,7 +112,7 @@ export function ParentProgress({ linkedChildren, pendingRequests, onConnect }: {
   const [selectedStudentId, setSelectedStudentId] = useState(linkedChildren[0]?.student_id ?? "");
   const [range, setRange] = useState<ProgressRange>(7);
   const [refreshKey, setRefreshKey] = useState(0);
-  const [result, setResult] = useState<{ key: string; summary: ParentProgressSummary | null; error: string }>({ key: "", summary: null, error: "" });
+  const [result, setResult] = useState<{ key: string; summary: ParentProgressSummary | null; error: string; aiUsageUnavailable: boolean }>({ key: "", summary: null, error: "", aiUsageUnavailable: false });
   const effectiveStudentId = linkedChildren.some((child) => child.student_id === selectedStudentId)
     ? selectedStudentId
     : linkedChildren[0]?.student_id ?? "";
@@ -120,6 +120,7 @@ export function ParentProgress({ linkedChildren, pendingRequests, onConnect }: {
   const loading = Boolean(effectiveStudentId) && result.key !== requestKey;
   const summary = result.key === requestKey ? result.summary : null;
   const error = result.key === requestKey ? result.error : "";
+  const aiUsageUnavailable = result.key === requestKey && result.aiUsageUnavailable;
 
   useEffect(() => {
     if (!effectiveStudentId) return;
@@ -132,14 +133,20 @@ export function ParentProgress({ linkedChildren, pendingRequests, onConnect }: {
           supabase.rpc("get_parent_child_progress", args),
           supabase.rpc("get_parent_child_ai_usage", args),
         ]);
-        if (progressError || aiUsageError) throw progressError ?? aiUsageError;
+        if (progressError) throw progressError;
         const row = (data as Record<string, unknown>[] | null)?.[0];
         const aiUsageRow = (aiUsage as Record<string, unknown>[] | null)?.[0];
         if (!row) throw new Error("missing_parent_progress");
-        if (active) setResult({ key: requestKey, summary: normalizeParentProgress({ ...row, ai_questions_used: aiUsageRow?.ai_questions_used }), error: "" });
+        const aiQuestionsUsed = aiUsageError ? row.ai_questions_used : aiUsageRow?.ai_questions_used;
+        if (active) setResult({
+          key: requestKey,
+          summary: normalizeParentProgress({ ...row, ai_questions_used: aiQuestionsUsed }),
+          error: "",
+          aiUsageUnavailable: Boolean(aiUsageError) && row.ai_questions_used == null,
+        });
       })
       .catch(() => {
-        if (active) setResult({ key: requestKey, summary: null, error: "Nie udało się pobrać postępów. Spróbuj ponownie za chwilę." });
+        if (active) setResult({ key: requestKey, summary: null, error: "Nie udało się pobrać postępów. Spróbuj ponownie za chwilę.", aiUsageUnavailable: false });
       });
 
     return () => {
@@ -174,6 +181,7 @@ export function ParentProgress({ linkedChildren, pendingRequests, onConnect }: {
 
       {loading && <section className="parent-progress-loading" aria-live="polite"><Card><CardContent>Liczymy postęp dla wybranego okresu…</CardContent></Card></section>}
       {error && <Alert variant="destructive" className="dashboard-alert"><AlertTitle>Postępy są chwilowo niedostępne</AlertTitle><AlertDescription>{error}<Button variant="outline" size="sm" type="button" onClick={() => setRefreshKey((value) => value + 1)}>Spróbuj ponownie</Button></AlertDescription></Alert>}
+      {!loading && !error && aiUsageUnavailable && <Alert className="dashboard-alert parent-ai-usage-warning"><AlertTitle>Postęp został wczytany</AlertTitle><AlertDescription>Licznik pytań do AI jest chwilowo niedostępny. Pozostałe wyniki są aktualne.</AlertDescription></Alert>}
 
       {!loading && !error && summary && summary.solved_count === 0 && summary.ai_questions_used === 0 && <Card className="parent-empty-view parent-progress-empty"><CardHeader><CardTitle>Brak aktywności w tym okresie</CardTitle><CardDescription>{summary.recommendation}</CardDescription></CardHeader><CardContent><p>Gdy dziecko sprawdzi pierwszą odpowiedź lub użyje pomocy AI, zobaczysz tutaj aktywność i tematy do powtórki.</p></CardContent></Card>}
 
@@ -181,7 +189,7 @@ export function ParentProgress({ linkedChildren, pendingRequests, onConnect }: {
         <section className="dashboard-grid parent-progress-metrics">
           <article className="metric-card"><span>Rozwiązane zadania</span><b>{summary.solved_count}</b><small>{summary.total_attempts} wszystkich prób w okresie.</small></article>
           <article className="metric-card"><span>Skuteczność</span><b>{summary.accuracy_percent}%</b><small>{summary.correct_count} poprawnych ostatnich odpowiedzi.</small></article>
-          <article className="metric-card"><span>Pytania do AI</span><b>{summary.ai_questions_used}</b><small>Tylko liczba — bez treści rozmów.</small></article>
+          <article className="metric-card"><span>Pytania do AI</span><b>{aiUsageUnavailable ? "—" : summary.ai_questions_used}</b><small>{aiUsageUnavailable ? "Licznik chwilowo niedostępny." : "Tylko liczba — bez treści rozmów."}</small></article>
           <article className="metric-card"><span>Regularność</span><b>{summary.active_days} dni</b><small>Aktywne dni w wybranym okresie.</small></article>
           <article className="metric-card"><span>Trend</span><b className={trend > 0 ? "positive-trend" : trend < 0 ? "negative-trend" : ""}>{trend > 0 ? "+" : ""}{trend} pp</b><small>Zmiana względem poprzedniego porównywalnego okresu.</small></article>
         </section>
