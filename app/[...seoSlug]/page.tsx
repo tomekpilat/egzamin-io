@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SeoCategoryPage, SeoContentPage } from "@/components/seo-content-page";
 import { SEO_CATEGORIES, SEO_PAGES, getSeoCategory, getSeoPage } from "@/lib/seo-pages";
+import "./knowledge-article.css";
 
 type RouteProps = { params: Promise<{ seoSlug: string[] }> };
 

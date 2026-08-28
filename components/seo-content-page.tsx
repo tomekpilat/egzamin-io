@@ -1,14 +1,36 @@
 /* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
 
+import { ArticleReadingProgress, ArticleTableOfContents } from "@/components/knowledge-article-navigation";
 import { BrandLogo } from "@/components/brand-logo";
 import { SiteHeader } from "@/components/site-header";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { type SeoPage, pagesForCategory, relatedSeoPages } from "@/lib/seo-pages";
+import { SEO_CATEGORIES, type SeoPage, pagesForCategory, relatedSeoPages } from "@/lib/seo-pages";
 
 function JsonLd({ value }: { value: object }) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(value).replace(/</g, "\\u003c") }} />;
+}
+
+function sectionId(title: string) {
+  return title
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/ł/g, "l")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
+function readingTime(page: SeoPage) {
+  const words = [page.lead, ...page.sections.flatMap((section) => [section.title, ...section.paragraphs, ...(section.bullets ?? [])]), ...page.faqs.flatMap((faq) => [faq.question, faq.answer])]
+    .join(" ")
+    .trim()
+    .split(/\s+/).length;
+  return Math.max(4, Math.ceil(words / 180));
+}
+
+function categoryHref(page: SeoPage) {
+  if (page.category === "Arkusze") return "/arkusze";
+  return `/${SEO_CATEGORIES.find((category) => category.label === page.category)?.slug ?? "baza-wiedzy"}`;
 }
 
 export function SeoHeader() {
@@ -23,6 +45,13 @@ export function SeoFooter() {
 
 export function SeoContentPage({ page }: { page: SeoPage }) {
   const related = relatedSeoPages(page);
+  const categoryUrl = categoryHref(page);
+  const timeToRead = readingTime(page);
+  const tableOfContents = [
+    ...page.sections.map((section) => ({ id: sectionId(section.title), label: section.title })),
+    { id: "najczestsze-pytania", label: "Najczęstsze pytania" },
+    { id: "zrodla", label: "Źródła" },
+  ];
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -47,37 +76,72 @@ export function SeoContentPage({ page }: { page: SeoPage }) {
   const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: page.faqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) };
 
   return (
-    <main className="knowledge-page">
+    <main className="knowledge-page knowledge-article-page">
       <JsonLd value={articleJsonLd} /><JsonLd value={breadcrumbJsonLd} /><JsonLd value={faqJsonLd} />
       <SeoHeader />
-      <article className="mathjax_process">
-        <nav className="knowledge-breadcrumbs" aria-label="Okruszki"><a href="/">Strona główna</a><span>/</span><a href="/baza-wiedzy">Baza wiedzy</a><span>/</span><span>{page.category}</span></nav>
-        <header className="knowledge-hero">
-          <div><Badge variant="secondary">{page.eyebrow}</Badge><h1>{page.heading}</h1><p>{page.lead}</p><div className="knowledge-updated">Zaktualizowano {page.updatedAt}</div></div>
-          <div className="knowledge-facts" aria-label="Najważniejsze liczby">{page.facts.map((fact) => <div key={fact.label}><b>{fact.value}</b><span>{fact.label}</span></div>)}</div>
-        </header>
+      <ArticleReadingProgress />
 
-        <div className="knowledge-layout">
-          <div className="knowledge-content">
+      <article className="knowledge-article-shell mathjax_process">
+        <div className="knowledge-article-main">
+          <nav className="knowledge-breadcrumbs knowledge-article-breadcrumbs" aria-label="Okruszki">
+            <a href="/">Strona główna</a><span aria-hidden="true">/</span><a href="/baza-wiedzy">Baza wiedzy</a><span aria-hidden="true">/</span><a href={categoryUrl}>{page.category}</a>
+          </nav>
+
+          <header className="knowledge-article-hero">
+            <span className="knowledge-article-eyebrow">{page.eyebrow}</span>
+            <h1>{page.heading}</h1>
+            <p>{page.lead}</p>
+            <div className="knowledge-article-meta">
+              <span>Zaktualizowano {page.updatedAt}</span><i aria-hidden="true">·</i><span>{timeToRead} min czytania</span><i aria-hidden="true">·</i><span>Klasa 8</span>
+            </div>
+          </header>
+
+          <div className="knowledge-article-facts" aria-label="Najważniejsze informacje">
+            {page.facts.map((fact) => <div key={fact.label}><b>{fact.value}</b><span>{fact.label}</span></div>)}
+          </div>
+
+          <div className="knowledge-article-content">
             {page.sections.map((section) => (
-              <section key={section.title} className="knowledge-section">
+              <section id={sectionId(section.title)} key={section.title} className="knowledge-article-section">
                 <h2>{section.title}</h2>
                 {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-                {section.bullets && <ul>{section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>}
-                {section.example && <Card className="knowledge-example"><CardHeader><Badge variant="outline">Przykład</Badge><CardTitle>{section.example.prompt}</CardTitle></CardHeader><CardContent><ol>{section.example.steps.map((step) => <li key={step}>{step}</li>)}</ol><b>{section.example.answer}</b></CardContent></Card>}
-                {section.note && <aside className="knowledge-note"><p>{section.note}</p></aside>}
+                {section.bullets && <ol className="knowledge-article-steps">{section.bullets.map((bullet, index) => <li key={bullet}><span aria-hidden="true">{index + 1}</span><p>{bullet}</p></li>)}</ol>}
+                {section.example && <div className="knowledge-article-example">
+                  <header><span>Przykład</span><b>{section.example.prompt}</b></header>
+                  <div>{section.example.steps.map((step, index) => <p key={step}><span>{index + 1}.</span><b>{step}</b></p>)}<strong>{section.example.answer}</strong></div>
+                </div>}
+                {section.note && <aside className="knowledge-article-note"><p>{section.note}</p></aside>}
               </section>
             ))}
 
-            <section className="knowledge-faq" aria-labelledby="knowledge-faq-title"><h2 id="knowledge-faq-title">Najczęstsze pytania</h2>{page.faqs.map((faq) => <details key={faq.question}><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</section>
-            <section className="knowledge-sources" aria-labelledby="knowledge-sources-title"><h2 id="knowledge-sources-title">Źródła</h2><p>Informacje zmienne w czasie sprawdzamy w dokumentach instytucji odpowiedzialnych za egzamin i rekrutację.</p><ul>{page.sources.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{source.label} ↗</a></li>)}</ul></section>
-          </div>
+            <section id="najczestsze-pytania" className="knowledge-article-section knowledge-article-faq" aria-labelledby="knowledge-faq-title">
+              <h2 id="knowledge-faq-title">Najczęstsze pytania</h2>
+              <div>{page.faqs.map((faq) => <article key={faq.question}><h3>{faq.question}</h3><p>{faq.answer}</p></article>)}</div>
+            </section>
 
-          <aside className="knowledge-aside">
-            <Card className="knowledge-cta"><CardHeader><CardTitle>{page.cta.title}</CardTitle></CardHeader><CardContent><p>{page.cta.body}</p><Button asChild><a href={page.cta.href}>{page.cta.label}</a></Button></CardContent></Card>
-            {related.length > 0 && <nav className="knowledge-related" aria-label="Powiązane poradniki"><b>Przeczytaj również</b>{related.map((item) => <a key={item.path} href={item.path}>{item.heading}</a>)}</nav>}
-          </aside>
+            <section id="zrodla" className="knowledge-article-section knowledge-article-sources" aria-labelledby="knowledge-sources-title">
+              <h2 id="knowledge-sources-title">Źródła</h2>
+              <p>Informacje zmienne w czasie sprawdzamy w dokumentach instytucji odpowiedzialnych za egzamin i rekrutację.</p>
+              <div>{page.sources.map((source) => <a key={source.url} href={source.url} target="_blank" rel="noreferrer"><span>{source.label}</span><i aria-hidden="true">↗</i></a>)}</div>
+            </section>
+
+            <aside className="knowledge-article-cta">
+              <div><h2>{page.cta.title}</h2><p>{page.cta.body}</p></div>
+              <Button asChild><a href={page.cta.href}>{page.cta.label}</a></Button>
+            </aside>
+
+            {related.length > 0 && <nav className="knowledge-article-related" aria-label="Powiązane poradniki">
+              <b>Przeczytaj również</b>
+              <div>{related.map((item) => <a key={item.path} href={item.path}><span><small>{item.eyebrow}</small><strong>{item.heading}</strong></span><i aria-hidden="true">→</i></a>)}</div>
+            </nav>}
+          </div>
         </div>
+
+        <aside className="knowledge-article-aside">
+          <ArticleTableOfContents items={tableOfContents} />
+          <div className="knowledge-article-practice"><b>Sprawdź się w zadaniach</b><p>{page.cta.body}</p><Button variant="outline" asChild><a href={page.cta.href}>{page.cta.label}</a></Button></div>
+          <div className="knowledge-article-freshness"><b>Aktualność treści</b><p>Terminy i zasady sprawdzamy w dokumentach CKE i MEN. Ostatni przegląd: {page.updatedAt}.</p></div>
+        </aside>
       </article>
       <SeoFooter />
     </main>
