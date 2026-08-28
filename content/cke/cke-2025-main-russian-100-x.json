@@ -1,0 +1,646 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2025-main-russian-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2025-main-russian-100-x",
+    "source_document_id": "OJRP-100-X-2505",
+    "source_pdf_sha256": "c43d113ca35ee8a8e7c218a5d07d679608c3e58c7e7e198d7caeff9b36a4d902",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2025-2/",
+    "source_label": "CKE 2025 · język rosyjski · termin główny · wariant 100-X",
+    "exam_year": 2025,
+    "exam_session": "main",
+    "subject": "russian",
+    "variant_code": "100-X",
+    "question_count": 14,
+    "supplementary_sources": [
+      {
+        "id": "cke-2025-russian-recording",
+        "path": "content/cke/sources/2025/jezyk_rosyjski/OJRP-100-2505_OJRU-100-2505.mp3",
+        "sha256": "6e0d761e7104513efd0e0a8d9583610c51ce16643220e590e8b97147ebb9307e",
+        "label": "Oficjalne nagranie do zadań 1–4"
+      },
+      {
+        "id": "cke-2025-russian-transcript",
+        "path": "content/cke/sources/2025/jezyk_rosyjski/OJRP-100-2505_OJRU-100-2505-transkrypcja.pdf",
+        "sha256": "f82f057175150f64a79aa60931625c9e84c64b04122b153cedc20abadf9e6443",
+        "label": "Transkrypcja nagrań"
+      },
+      {
+        "id": "cke-2025-russian-answer-card",
+        "path": "content/cke/sources/2025/jezyk_rosyjski/OJRP-100-X-2505-karta-odpowiedzi.pdf",
+        "sha256": "9518c05fe0cd1924ef2e46201d55e02cc0396b3f26bdeeb09f512b1f6c81c373",
+        "label": "Karta odpowiedzi, wersja X"
+      },
+      {
+        "id": "cke-2025-russian-scoring-rules",
+        "path": "content/cke/sources/2025/jezyk_rosyjski/OJRP-100-2505-zasady.pdf",
+        "sha256": "d6c377d562ff9ed9b022ba2da39bd07a1e3db4d02c381eef6925adb29dc2356d",
+        "label": "Zasady oceniania rozwiązań"
+      },
+      {
+        "id": "cke-2025-russian-open-answer-card",
+        "path": "content/cke/sources/2025/jezyk_rosyjski/OJRP-100-X-2505-karta-rozwiazan.pdf",
+        "sha256": "f910477fc6ba9bd6cb0184fc17f22cd323a735600a37475595bebf2e35eac53e",
+        "label": "Karta rozwiązań zadań otwartych"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "questions": [
+    {
+      "id": "cke-2025-main-russian-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        4,
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — wybór wielokrotny",
+      "difficulty": 2,
+      "prompt": "Usłyszysz dwukrotnie pięć tekstów. W zadaniach 1.1.–1.5., na podstawie informacji\nzawartych w nagraniu, z podanych odpowiedzi wybierz właściwą. Zakreśl jedną z liter:\nA, B albo C.\n1.1. В котором часу девушка планирует встретиться с продавцом пианино?\nA. B. C.\n1.2. Какую фигуру из снега слепил Матвей?\nA. B. C.\n1.3. Где разговаривают друзья?\nA. B. C.\n1.4. Автор текста\nA. просит о помощи.\nB. приглашает на матч.\nC. рекламирует одежду.\n1.5. Этот текст о\nA. новом зоопарке.\nB. детской больнице.\nC. городском кинотеатре.",
+      "answer_key": {
+        "accepted_results": [
+          "A, B, C, A, B"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 5,
+        "rules": [
+          "Łącznie 5 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: A, B, C, A, B."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: A, B, C, A, B.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-options-page-4"
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-options-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2025/russian/ojrp-100-x-2505/ojrp-100-2505.mp3",
+          "sha256": "6e0d761e7104513efd0e0a8d9583610c51ce16643220e590e8b97147ebb9307e",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka rosyjski.",
+          "caption": "Oficjalne nagranie CKE 2025 — język rosyjski, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        },
+        {
+          "id": "q01-options-page-4",
+          "path": "public/cke/2025/russian/ojrp-100-x-2505/q01-options-page-4.png",
+          "sha256": "7be198f982a0a0b7b0bfec892c31241be32fe6f0f1b5052c855589cb09e9d326",
+          "alt": "Strona 4 arkusza CKE z opcjami do zadania 1 z języka rosyjski.",
+          "caption": "Opcje tekstowe i obrazkowe do zadania 1.",
+          "mime_type": "image/png"
+        },
+        {
+          "id": "q01-options-page-5",
+          "path": "public/cke/2025/russian/ojrp-100-x-2505/q01-options-page-5.png",
+          "sha256": "217da1327447f208017bf37c4cb39590c3843f42167534eab9d909f7e0c20808",
+          "alt": "Strona 5 arkusza CKE z opcjami do zadania 1 z języka rosyjski.",
+          "caption": "Opcje tekstowe i obrazkowe do zadania 1.",
+          "mime_type": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-russian-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — dopasowywanie",
+      "difficulty": 2,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi na temat uprawiania sportu. Na podstawie\ninformacji zawartych w nagraniu dopasuj do każdej wypowiedzi (2.1.–2.4.)\nodpowiadające jej zdanie (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. Я могу тренироваться в удобное для меня время.\nB. Тренер был доволен моим результатом.\nC. Моё решение ребятам не понравилось.\nD. Дружба помогает нам выигрывать.\nE. Девочки подарили мне цветы.\n2.1. 2.2. 2.3. 2.4.",
+      "answer_key": {
+        "accepted_results": [
+          "C, E, A, D"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: C, E, A, D."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: C, E, A, D.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2025/russian/ojrp-100-x-2505/ojrp-100-2505.mp3",
+          "sha256": "6e0d761e7104513efd0e0a8d9583610c51ce16643220e590e8b97147ebb9307e",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka rosyjski.",
+          "caption": "Oficjalne nagranie CKE 2025 — język rosyjski, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-russian-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe — rozumienie ze słuchu",
+      "difficulty": 2,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi związane z pogodą (3.1.–3.4.). Do każdej\nz nich dobierz właściwą reakcję (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedna reakcja została podana dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. Я люблю, когда идёт снег.\nB. Нет, не бери, сегодня дождя не будет.\nC. Если будет солнце, пойдём на пляж.\nD. К сожалению, я оставил куртку дома.\nE. Наверное, не скоро, всё небо в тучах.\n3.1. 3.2. 3.3. 3.4.",
+      "answer_key": {
+        "accepted_results": [
+          "C, A, E, B"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: C, A, E, B."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: C, A, E, B.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2025/russian/ojrp-100-x-2505/ojrp-100-2505.mp3",
+          "sha256": "6e0d761e7104513efd0e0a8d9583610c51ce16643220e590e8b97147ebb9307e",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka rosyjski.",
+          "caption": "Oficjalne nagranie CKE 2025 — język rosyjski, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-russian-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        2
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — uzupełnianie luk",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie wypowiedź prowadzącego program telewizyjny. Na podstawie\ninformacji zawartych w nagraniu odpowiedz krótko na pytania 4.1.–4.3., tak aby jak\nnajbardziej precyzyjnie oddać sens wysłuchanego tekstu. Na pytania należy odpowiedzieć\nw języku rosyjskim.\n4.1. Где учится Паша?\n.e Z\nn a\na in _______________________________________________________________________ p is\ne\nc\ny\nn\no a\ną m\nd\nę a\nb\ne\nrg\nin\nin e\ną k m 4.2. С какой профессией Паша знакомил телезрителей в мае? s ie p\na o\nr\na\nz\no\nz\na\nra\np\ne\n_______________________________________________________________________ m\nk\nis\ne\ną\nn\nn\nig\nra\nie\nb ę\nm d\na n\ny\ną\no c\ne\ns ip 4.3. Откуда Паша будет вести следующий выпуск передачи «Есть такая профессия»? n ia\na n\nZ e\n.\n_______________________________________________________________________",
+      "answer_key": {
+        "accepted_results": [
+          "в лицее; ветеринара; из школьной столовой"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: в лицее; ветеринара; из школьной столовой."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: в лицее; ветеринара; из школьной столовой.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2025/russian/ojrp-100-x-2505/ojrp-100-2505.mp3",
+          "sha256": "6e0d761e7104513efd0e0a8d9583610c51ce16643220e590e8b97147ebb9307e",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka rosyjski.",
+          "caption": "Oficjalne nagranie CKE 2025 — język rosyjski, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-russian-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe",
+      "difficulty": 2,
+      "prompt": "Dla każdej z opisanych sytuacji (5.1.–5.4.) wybierz właściwą reakcję. Zakreśl jedną\nz liter: A, B albo C.\n5.1. Koleżanka zaprasza Cię na spacer. Jak się zgodzisz?\nA. Отличная идея, но у меня другие планы.\nB. Спасибо, может, в другой раз.\nC. С удовольствием, охотно.\n5.2. Kolega kupuje kurtkę zimową. Jak wyrazisz opinię na jej temat?\nA. Миша, у меня модная куртка.\nB. Миша, это очень красивая куртка.\nC. Миша, мой друг продал зимнюю куртку.\n5.3. Chcesz zapytać koleżankę o czas trwania koncertu. Co powiesz?\nA. Как долго идёт концерт?\nB. В котором часу начинается концерт?\nC. Сколько времени осталось до концерта?\n5.4. Dzwonisz do kolegi i chcesz się dowiedzieć, jak on się ma. Jak go o to zapytasz?\nA. Кто у тебя дома?\nB. Что у тебя есть?\nC. Как твои дела?",
+      "answer_key": {
+        "accepted_results": [
+          "C, B, A, C"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: C, B, A, C."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: C, B, A, C.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-russian-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        3
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe — uzupełnianie dialogów",
+      "difficulty": 2,
+      "prompt": "Uzupełnij dialogi 6.1.–6.2. Wpisz w każdą lukę brakujący fragment wypowiedzi, tak aby\notrzymać spójne i logiczne teksty. Luki należy uzupełnić w języku rosyjskim.\n.e\nn a in\ne\nc\nZ\na p is\ny\nn\no a\ną m\nd ę b a rg\ne in\nin\ną\nk\nm\ne\ns\nie\np\na r a\nz\no p\no z a\nra\nm\ne is\ne\nk ą\nn\nn ie\nig b\nra\nm\nę\nd ą\na o\nn c\ny s ip e n ia\na n\nZ e\n.\n.e\nn a in\ne\nc\nZ\na p is\ny\nn\no a\ną m\nd ę b a rg\ne in\nin\ną\nk\nm\ne\ns\nie\np\na r a\nz\no p\no z a\nra\nm\ne is\ne\nk ą\nn\nn ie\nig b\nra\nm\nę\nd ą\na o\nn c\ny s ip e n ia\na n\nZ e\n.",
+      "answer_key": {
+        "accepted_results": [
+          "сколько стоит; что у вас болит / что у Вас болит"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Łącznie 2 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: сколько стоит; что у вас болит / что у Вас болит."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: сколько стоит; что у вас болит / что у Вас болит.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-russian-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        8,
+        9
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie tekstów pisanych",
+      "difficulty": 2,
+      "prompt": "Przeczytaj teksty. W zadaniach 7.1.–7.4. z podanych odpowiedzi wybierz właściwą,\nzgodną z treścią tekstu. Zakreśl jedną z liter: A, B albo C.\n7.1. Семён просит сестру прислать\nСестра, помоги!\nУ меня по расписанию A. электронный адрес знакомого.\nследующий урок –\nB. его домашнюю работу.\nанглийский. Я вчера весь\nC. расписание её уроков.\nвечер писал на компьютере\nсочинение «Мой необычный\nзнакомый», которое нам\nзадали на дом, но забыл его\nраспечатать.\nПредставляешь, опять будет\nединица! Сестра, выручай!\nВойди в мой компьютер\nи отправь сочинение на мой\nимейл. ПОЖАЛУЙСТА!\nСемён\nŹródło: oneapple.com.ua\nДорогие друзья, если вы любите читать и взяли в путешествие книгу,\nпредлагаем принять участие в нашем конкурсе\n«СЕЛФИ С КНИГОЙ»!\nДля этого:\n сфотографируйтесь с книгой в своём купе или\nв нашем вагоне-ресторане,\n придумайте для фотографии оригинальное\nназвание,\n пришлите селфи на адрес: rzd@poczta.ru.\nПассажиры – авторы лучших фотографий –\nполучат бесплатные билеты на поездку\nв Москву.\nНе откладывайте! Прямо сейчас, во время поездки,\nсделайте селфи и примите участие в конкурсе!\nŹródło: 1.bp.blogspot.com\n7.2. Этот плакат можно увидеть в\nA. поезде.\nB. турбюро.\nC. библиотеке.\nПривет, друзья!\nВ пятницу в Доме молодёжи выступит известная группа «Вперёд». А это значит,\nчто хорошее настроение и позитивная энергия гарантированы! К сожалению,\nв кассах билетов уже нет. Но выход есть! Организаторы ищут помощников, которые\nво время концерта будут следить за порядком в зрительном зале. Нужно ещё пять\nчеловек. Пишите на мой адрес как можно быстрее. Не пожалеете! Бесплатный вход\nна концерт гарантирован!\nДенис\n7.3. Денис\nA. жалуется на организаторов концерта.\nB. советует, как попасть на концерт.\nC. хочет купить билеты на концерт.\nРита, ты представляешь, я вчера пошла со знакомыми в кино. Фильм так себе –\nпрошлогодняя комедия. Зато кинозал – отличный! Убрали старые кресла. Помнишь,\nкак они скрипели?! Теперь вместо них стоят такие удобные, с подставками под\nнапитки и попкорн! И расстояние между рядами стало больше. Даже Антон мог\nвытянуть свои длинные ноги. А экран знаешь какой? Огромный! Кстати, в холле\nпоставили билетные автоматы, так что никаких касс и очередей. В общем, мне всё\nочень понравилось! Маша\n7.4. Маша пишет о/об\nA. новом фильме.\nB. знакомстве в кинозале.\nC. изменениях в кинотеатре.",
+      "answer_key": {
+        "accepted_results": [
+          "B, A, B, C"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: B, A, B, C."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: B, A, B, C.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-russian-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Spójność tekstu",
+      "difficulty": 2,
+      "prompt": "Przeczytaj tekst, z którego usunięto trzy zdania. Wpisz w każdą lukę (8.1.–8.3.) literę,\nktórą oznaczono brakujące zdanie (A–D), tak aby otrzymać spójny i logiczny tekst.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej luki.\nТАЛАНТЛИВЫЙ ПОПУГАЙ\nПопугай у нас появился случайно. Как-то мама вышла на балкон и увидела\nпопугая. 8.1. _____ Выбрал в ней моё любимое кресло, уселся на него и решил, что\nэто его новый дом. С тех пор птица стала членом нашей семьи. Мы назвали попугая\nКешей и купили ему большую клетку. Он быстро научился её открывать и выходить на\nпрогулку по квартире.\nВсе в семье переживали по этому поводу, потому что у нас жили два вечно\nголодных кота. 8.2. _____ Очень громко – мяукали во весь голос. Мама постоянно\nговорила нам с сестрой: «Кто-нибудь, покормите котов! Сколько можно\nнапоминать?!»\nИ вот однажды коты решили поймать Кешу, который спокойно сидел в клетке. Они\nпробовали просунуть к нему лапы. Бедный Кеша забился в самый дальний угол\nи вдруг как закричит: «Покормите котов! Кто-нибудь, покормите котов!!!» 8.3. _____\nОн прокричал их так громко, что коты от страха спрятались в шкаф. После этого\nКеша стал повторять всё, что услышал.\nNa podstawie: www.anekdot.ru\nA. Это были его первые слова в нашем доме.\nB. Они всё время ходили по кухне и просили есть.\nC. Именно поэтому мама сразу же с нами согласилась.\nD. Он пролетел у неё над головой и попал прямо в комнату.",
+      "answer_key": {
+        "accepted_results": [
+          "D, B, A"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: D, B, A."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: D, B, A.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-russian-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        11
+      ],
+      "type": "long_text",
+      "topic": "Wyszukiwanie informacji",
+      "difficulty": 2,
+      "prompt": "Przeczytaj trzy teksty o muzeach (A–C) oraz zdania 9.1.–9.4. Do każdego zdania\ndopasuj właściwy tekst. Wpisz rozwiązania do tabeli.\nUwaga! Jeden z tekstów pasuje do dwóch zdań.\nМУЗЕИ ПРИГЛАШАЮТ В СКАЗКУ\nВ Финляндии на острове Кайло находится музей под открытым небом «Страна\nмуми-троллей». Экскурсию лучше всего начать с посещения высокой башни.\nСверху открывается прекрасный вид на сказочный парк. Ты увидишь муми-\nдомики, мосты и аллеи, по которым гуляют герои популярной серии книг\nA.\nписательницы Туве Янсон. Когда спустишься с башни, ты сможешь\nпознакомиться с Маленькой Мю, Муми-папой или Муми-мамой. Дети верят,\nчто это настоящие муми-тролли из мультфильма, а не актёры. Поэтому лучше\nдержать правду в секрете.\nМузей Гарри Поттера, который находится недалеко от Лондона, ежедневно\nпосещает около шести тысяч человек. Герой романов писательницы Джоан\nРоулинг очень популярен. Музей состоит из павильонов: Большой зал\nХогвартса, Запретный лес, Платформа 9¾. Есть и павильон, в котором\nB.\nпоказывают, как снимались спецэффекты. Ведь узнать секреты кино хотят\nмногие. Здесь тебе покажут, как сделать так, чтобы зрители поверили, что\nпортреты на стенах могут оживать, мебель двигаться, а Гарри Поттер во время\nсоревнований может смело летать на метле высоко в небе.\nИсторию о необыкновенной няне Мэри Поппинс придумала Памела Трэверс.\nЕсли ты любишь её творчество, посети австралийский город Мариборо.\nИменно там открыли дом-музей писательницы, где можно узнать об\nC. интересных фактах из её жизни. Около дома находится парк. Каждое лето\nмузей приглашает туда всех желающих на Фестиваль Мэри Поппинс. Во время\nпраздника здесь устраивают конкурс на самый оригинальный костюм и самый\nкрасочный рисунок на асфальте.\nNa podstawie: zhiznteatr.mirtesen.ru\n9.1. Этот музей организует творческие соревнования для гостей.\n9.2. Здесь посетителям предлагают посмотреть на музей с высоты.\n9.3. В этом музее можно познакомиться с биографией писательницы.\n9.4. В этом музее посетителям раскроют тайны съёмок фильма.",
+      "answer_key": {
+        "accepted_results": [
+          "C, A, C, B"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: C, A, C, B."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: C, A, C, B.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-russian-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        4,
+        5
+      ],
+      "type": "long_text",
+      "topic": "Przetwarzanie wypowiedzi",
+      "difficulty": 2,
+      "prompt": "Przeczytaj tekst. Uzupełnij w e-mailu luki 10.1.–10.3. zgodnie z treścią tekstu, tak aby jak\nnajbardziej precyzyjnie oddać sens podanych informacji. Luki należy uzupełnić w języku\npolskim.\nЧто такое «День крокодила»?\nЭто бесплатный марафон по рисованию. Почему «День крокодила»? А почему бы и нет!\nНаша фантазия – наш «крокодил»!\nКто ведёт марафон?\nЯ – Элина Эллис – автор и иллюстратор детских книг и просто весёлый человек.\n Марафон длится 3 недели: с 14 апреля по 2 мая.\n Каждый понедельник на моей странице вы найдёте новый пост с заданиями\nна очередную неделю.\n Вы рисуете пять дней (минимум по 15 минут ежедневно), в пятницу вечером\nвыкладываете свои работы здесь. Суббота и воскресенье – выходной.\n 6 мая, во вторник, я подведу итоги марафона и выберу победителя. Им станет один\nиз тех, кто будет регулярно публиковать свои рисунки и представит минимум десять\nработ. Победитель получит в награду мою книгу, а также один бесплатный урок\nрисования.\n Так что, друзья, готовьте кисти, краски, бумагу – и вперёд!\nNa podstawie: illustrator-uroki.com\nWYPEŁNIA UCZEŃ\nMiejsce na naklejkę.\nSprawdź, czy kod na naklejce to\nO - 1 0 0 .\nKOD UCZNIA PESEL\nJeżeli tak – przyklej naklejkę.\nJeżeli nie – zgłoś to nauczycielowi.\n.e Z\nn a\na p\nin\ne\nc\nis\ny\nn\no a\ną m\nd\nę a\nb\ne\nrg\nin\nin e\ną\nk\nm\nCześć Babciu!\ns ie\np\na o\nr\na z\no\nMówiłaś, że mam zdolności plastyczne. Postanowiłam to sprawdzić. Zapisałam się na\nz\na ra\np m\ne k\nis\ne\ndarmowy internetowy maraton rysowania „Dzień Krokodyla”. Tę śmieszną nazwę ą\nn\nn\nig\nra wymyśliła nasza prowadząca. To bardzo fajna osoba! Zaczynamy już w przyszłym\nie\nb ę\nm d\na n y tygodniu.\ną\no c e\ns n\nip ia\na n\nZ Zawsze w 10.1. ___________________________________ na stronie internetowej e\n.\nmaratonu będą pojawiać się nowe zadania. Tego samego dnia już możemy zacząć je\nwykonywać. Żeby powalczyć o pierwsze miejsce, w ciągu trzech tygodni muszę\nprzygotować co najmniej 10.2. ___________________________________ prac\ni zamieścić je na stronie maratonu. Zwycięzca dostanie od prowadzącej w nagrodę\n10.3. ___________________________________ i jedną bezpłatną lekcję rysunku.\n.e Z\nn a Mam nadzieję, że uda mi się wygrać. Trzymaj za mnie kciuki. a p\nin\ne\nc\nis\ny\nn\no\ną\nBuziaczki, Ania a\nm\nd\nę a\nb\ne\nrg\nin\nin e\ną\nk\ns ie\nm p\na o\nr\na\nz\no\nz\na\nra\np m\ne k\nis\ne\ną\nn\nn\nig\nra\nie\nb ę\nm d\na n\ny\ną\no c\ne\ns n\nip ia\na n\nZ e\n.",
+      "answer_key": {
+        "accepted_results": [
+          "poniedziałek/poniedziałki; 10/dziesięć; jej książkę"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: poniedziałek/poniedziałki; 10/dziesięć; jej książkę."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: poniedziałek/poniedziałki; 10/dziesięć; jej książkę.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-russian-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        12
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — wybór wyrazów",
+      "difficulty": 2,
+      "prompt": "Przeczytaj tekst. Spośród wyrazów podanych w ramce wybierz te, które są\npoprawnym uzupełnieniem luk 11.1.–11.3. Wpisz odpowiednią literę (A–F) obok\nnumeru każdej luki.\nUwaga! Trzy wyrazy zostały podane dodatkowo i nie pasują do żadnej luki.\nA. будущем B. виды C. выходишь D. номера E. прошлом F. садишься\nВОЛГОГРАДСКИЙ МЕТРОТРАМ\nВсем нам хорошо знакомы такие 11.1. _____\nтранспорта, как метро и трамвай. А вот в городе\nВолгограде есть метротрам! Это скоростной трамвай,\nкоторый ездит не только по улицам города, но и под\nземлёй, как метро.\nПредставь себе: 11.2. _____ в трамвай, покупаешь\nбилет и въезжаешь в тоннель. Под землёй находится пять станций. Волгоградский\nскоростной трамвай считается одним из самых уникальных в мире. Говорят, что\nв 11.3. _____ в Волгограде построят настоящее метро и метротрам исчезнет. А жаль…\nNa podstawie: dzen.ru\nŹródło: 2000foto.ru",
+      "answer_key": {
+        "accepted_results": [
+          "B, F, A"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: B, F, A."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: B, F, A.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-russian-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        13
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — gramatyka i leksyka",
+      "difficulty": 2,
+      "prompt": "Przeczytaj tekst. Wybierz poprawne uzupełnienie luk 12.1.–12.3. Zakreśl jedną z liter:\nA, B albo C.\nНОЧЬ В АПАРТАМЕНТАХ ИЗ КУБИКОВ ЛЕГО\nВ городе Биллунд в Дании появились апартаменты,\nв которых всё сделано из кубиков лего. Фирма,\nкоторая сдаёт эту квартиру, организовала конкурс.\nЕсли вы 12.1. _____ принять в нём участие, нужно\nответить на простой вопрос. Он звучит так: «Если бы\nвам предложили бесконечное количество деталей\nлего, что бы вы построили?». Тот, кто пришлёт самый интересный ответ, сможет\nвместе с семьёй не только посмотреть 12.2. _____ квартиру, но и провести в ней\nсовершенно бесплатно одну ночь.\nПеред тем как лечь спать, счастливчики получат возможность полюбоваться\nапартаментами. Можно будет включить лампу из лего, отдохнуть в 12.3. _____ из лего,\nпоесть за столом из лего… Интересно, а блюда тоже будут сделаны из элементов\nлего?\nNa podstawie: livingintravels.com\n12.1.\nA. хотят\nB. хотим\nC. хотите\n12.2.\nA. необычную\nB. необычной\nC. необычная\n12.3.\nA. креслу\nB. кресле\nC. кресло",
+      "answer_key": {
+        "accepted_results": [
+          "C, A, B"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: C, A, B."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: C, A, B.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-russian-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Transformacje leksykalno-gramatyczne",
+      "difficulty": 3,
+      "prompt": "Uzupełnij zdania 13.1.–13.3. Wykorzystaj w odpowiedniej formie wyrazy podane\nw nawiasach. Nie należy zmieniać kolejności podanych wyrazów, trzeba natomiast – jeśli\njest to konieczne – dodać inne wyrazy, tak aby otrzymać zdania logiczne i gramatycznie\npoprawne. Wymagana jest pełna poprawność ortograficzna wpisywanych fragmentów.\nUwaga! W każdą lukę możesz wpisać maksymalnie trzy wyrazy, wliczając w to wyrazy już\npodane.\n.e\nn a in\ne c 13.1. По вечерам я (гулять / собака) ____________________________________________\nZ\na p is\ny n\no a\ną m\nd ę b в парке. a rg\ne in\nin\ną\ne\ns\nie\nk\nm p\na r a z 13.2. У моего друга нет (эти / журналы) _________________________________________. o z a ra\no m\np\ne\nk\ną\nis e n n ie\nig b\nra 13.3. Мама, не переживай, мы (позвонить / среда) ________________________________ ę d\nm ą\na n\ny s\nip\n______________________________________.\no c e\nn ia\nn\na e\nZ .",
+      "answer_key": {
+        "accepted_results": [
+          "гуляю / гулял / гуляла с собакой; этих журналов; позвоним в среду"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: гуляю / гулял / гуляла с собакой; этих журналов; позвоним в среду."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: гуляю / гулял / гуляла с собакой; этих журналов; позвоним в среду.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-russian-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna — e-mail",
+      "difficulty": 3,
+      "prompt": "Bierzesz udział w szkolnej wymianie międzynarodowej. Napisz e-mail do\nrosyjskojęzycznego kolegi, którego będziesz gościć u siebie. W e-mailu:\n• przedstaw koledze swoje zainteresowania\n• wyjaśnij mu, w jaki sposób Twoja rodzina przygotowuje się na jego przyjazd\n• opisz pokój, w którym będzie on mieszkał podczas pobytu w Polsce.\nNapisz swoją wypowiedź w języku rosyjskim. Podpisz się jako XYZ.\nRozwiń swoją wypowiedź w każdym z trzech podpunktów, tak aby osoba nieznająca polecenia\nw języku polskim uzyskała wszystkie wskazane w nim informacje. Pamiętaj, że długość\nwypowiedzi powinna wynosić od 50 do 120 wyrazów (nie licząc wyrazów podanych na\npoczątku wypowiedzi). Oceniane są: umiejętność pełnego przekazania informacji, spójność,\nbogactwo językowe oraz poprawność językowa.",
+      "answer_key": {
+        "assessment": "rubric",
+        "minimum_words": 50,
+        "maximum_words": 120
+      },
+      "scoring": {
+        "max_points": 10,
+        "rules": [
+          "0–4 pkt – treść: odniesienie się do trzech podpunktów i ich rozwinięcie.",
+          "0–2 pkt – spójność i logika wypowiedzi.",
+          "0–2 pkt – zakres środków językowych.",
+          "0–2 pkt – poprawność środków językowych."
+        ]
+      },
+      "explanation": "Odpowiedź jest oceniana według oficjalnej skali CKE: treść, spójność, zakres i poprawność językowa.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    }
+  ]
+}

@@ -1,0 +1,641 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2025-main-italian-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2025-main-italian-100-x",
+    "source_document_id": "OJWP-100-X-2505",
+    "source_pdf_sha256": "231e41fa6d92bed116ccf1283afea7eebdfa8ab933aea734e7991a747538fb76",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2025-2/",
+    "source_label": "CKE 2025 · język włoski · termin główny · wariant 100-X",
+    "exam_year": 2025,
+    "exam_session": "main",
+    "subject": "italian",
+    "variant_code": "100-X",
+    "question_count": 14,
+    "supplementary_sources": [
+      {
+        "id": "cke-2025-italian-recording",
+        "path": "content/cke/sources/2025/jezyk_wloski/OJWP-100-2505_OJWU-100-2505.mp3",
+        "sha256": "6fba0c7cad364b253e64698beedbb20d9fbd51fc1d6a8f7ede46bf5fd6b4647a",
+        "label": "Oficjalne nagranie do zadań 1–4"
+      },
+      {
+        "id": "cke-2025-italian-transcript",
+        "path": "content/cke/sources/2025/jezyk_wloski/OJWP-100-2505_OJWU-100-2505-transkrypcja.pdf",
+        "sha256": "01fd5cbe8ed23c36128bf2bc802950ca0d0e193c5b5532f130e3cd3bb5453b0a",
+        "label": "Transkrypcja nagrań"
+      },
+      {
+        "id": "cke-2025-italian-answer-card",
+        "path": "content/cke/sources/2025/jezyk_wloski/OJWP-100-X-2505-karta-odpowiedzi.pdf",
+        "sha256": "99db30160e783eb1dbb52fbb240c0ed35ee53ab27f3f8fc3a3cc8e9518f4f1df",
+        "label": "Karta odpowiedzi, wersja X"
+      },
+      {
+        "id": "cke-2025-italian-scoring-rules",
+        "path": "content/cke/sources/2025/jezyk_wloski/OJWP-100-2505-zasady.pdf",
+        "sha256": "5e7e26a16d563eb8c071702889cefa85d458f31b230b5562836776958c210630",
+        "label": "Zasady oceniania rozwiązań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "questions": [
+    {
+      "id": "cke-2025-main-italian-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        3,
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — wybór wielokrotny",
+      "difficulty": 2,
+      "prompt": "Usłyszysz dwukrotnie pięć tekstów. W zadaniach 1.1.–1.5., na podstawie informacji\nzawartych w nagraniu, z podanych odpowiedzi wybierz właściwą. Zakreśl jedną z liter:\nA, B albo C.\n1.1. Perché il signore corre?\nA. B. C.\n1.2. Quale foto deve mandare Stefano alla ragazza?\nA. B. C.\n1.3. Che cosa sta facendo il ragazzo?\nA. B. C.\n1.4. La ragazza parla\nA. della biblioteca della scuola.\nB. del salotto di casa sua.\nC. di una caffetteria.\n1.5. Il ragazzo telefona a Laura per\nA. presentare un’idea.\nB. fare gli auguri per il compleanno.\nC. chiedere un’opinione su un videogioco.",
+      "answer_key": {
+        "accepted_results": [
+          "B, A, C, C, A"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 5,
+        "rules": [
+          "Łącznie 5 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: B, A, C, C, A."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: B, A, C, C, A.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-options-page-3"
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-options-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2025/italian/ojwp-100-x-2505/ojwp-100-2505.mp3",
+          "sha256": "6fba0c7cad364b253e64698beedbb20d9fbd51fc1d6a8f7ede46bf5fd6b4647a",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka włoski.",
+          "caption": "Oficjalne nagranie CKE 2025 — język włoski, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        },
+        {
+          "id": "q01-options-page-3",
+          "path": "public/cke/2025/italian/ojwp-100-x-2505/q01-options-page-3.png",
+          "sha256": "5ed7ea2307f2b760a7952f7fd3c8298258b4b94ec46ab8868e10247dca5189d3",
+          "alt": "Strona 3 arkusza CKE z opcjami do zadania 1 z języka włoski.",
+          "caption": "Opcje tekstowe i obrazkowe do zadania 1.",
+          "mime_type": "image/png"
+        },
+        {
+          "id": "q01-options-page-4",
+          "path": "public/cke/2025/italian/ojwp-100-x-2505/q01-options-page-4.png",
+          "sha256": "5af7ab2868ebba5b4fd86fb843d981c80dab246955002a7cc3a3a1809f170516",
+          "alt": "Strona 4 arkusza CKE z opcjami do zadania 1 z języka włoski.",
+          "caption": "Opcje tekstowe i obrazkowe do zadania 1.",
+          "mime_type": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-italian-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — dopasowywanie",
+      "difficulty": 2,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi na temat koncertów. Na podstawie informacji\nzawartych w nagraniu dopasuj do każdej wypowiedzi (2.1.–2.4.) odpowiadające jej\nzdanie (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej wypowiedzi.\nQuesta persona dice che\nA. vuole diventare musicista.\nB. ha invitato qualcuno al concerto.\nC. ha comprato un biglietto per un’amica.\nD. non è andata al concerto perché stava male.\nE. durante il concerto ha cantato con la cantante.\n2.1. 2.2. 2.3. 2.4.",
+      "answer_key": {
+        "accepted_results": [
+          "B, D, E, A"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: B, D, E, A."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: B, D, E, A.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2025/italian/ojwp-100-x-2505/ojwp-100-2505.mp3",
+          "sha256": "6fba0c7cad364b253e64698beedbb20d9fbd51fc1d6a8f7ede46bf5fd6b4647a",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka włoski.",
+          "caption": "Oficjalne nagranie CKE 2025 — język włoski, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-italian-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe — rozumienie ze słuchu",
+      "difficulty": 2,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi związane ze sportem (3.1.–3.4.). Do każdej\nz nich dobierz właściwą reakcję (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedna reakcja została podana dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. Perché non ho tempo per praticarlo.\nB. Non so esattamente, ma presto.\nC. La maglietta della mia squadra.\nD. Io invece ho paura dell’acqua.\nE. Non c’è problema, volentieri.\n3.1. 3.2. 3.3. 3.4.",
+      "answer_key": {
+        "accepted_results": [
+          "B, E, D, C"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: B, E, D, C."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: B, E, D, C.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2025/italian/ojwp-100-x-2505/ojwp-100-2505.mp3",
+          "sha256": "6fba0c7cad364b253e64698beedbb20d9fbd51fc1d6a8f7ede46bf5fd6b4647a",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka włoski.",
+          "caption": "Oficjalne nagranie CKE 2025 — język włoski, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-italian-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — uzupełnianie luk",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie dialog na temat pracy w szkole. Na podstawie informacji\nzawartych w nagraniu uzupełnij luki w zdaniach 4.1.–4.3., tak aby jak najbardziej\nprecyzyjnie oddać sens wysłuchanego tekstu. Luki należy uzupełnić w języku\nwłoskim.\n4.1. La signora Bertini lavora a scuola da ____________________________________ anni.\n4.2. Secondo la signora Bertini, in passato i ragazzi erano così _______________________\n_______________________________________________ come i ragazzi di oggi.\n4.3. La signora Bertini di professione fa la _______________________________________.",
+      "answer_key": {
+        "accepted_results": [
+          "40 / quaranta; rumorosi; cuoca"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: 40 / quaranta; rumorosi; cuoca."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: 40 / quaranta; rumorosi; cuoca.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2025/italian/ojwp-100-x-2505/ojwp-100-2505.mp3",
+          "sha256": "6fba0c7cad364b253e64698beedbb20d9fbd51fc1d6a8f7ede46bf5fd6b4647a",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka włoski.",
+          "caption": "Oficjalne nagranie CKE 2025 — język włoski, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-italian-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe",
+      "difficulty": 2,
+      "prompt": "Dla każdej z opisanych sytuacji (5.1.–5.4.) wybierz właściwą reakcję. Zakreśl jedną\nz liter: A, B albo C.\n5.1. Chcesz polecić koledze lodziarnię w Twoim mieście. Co mu powiesz?\nA. In centro il gelato costa caro.\nB. Lì hanno tanti gusti, devi andarci.\nC. Preferisco il cioccolato alla vaniglia.\n5.2. Jesteś pod wrażeniem umiejętności sportowych Twojej koleżanki. Jak ją\npochwalisz?\nA. Secondo me devi allenarti ancora.\nB. Vorrei essere bravo/brava come te.\nC. Per me fare troppo sport non è sano.\n5.3. Chcesz wysłać koleżance pocztówkę z wakacji. Jak zapytasz ją o adres?\nA. Di chi è questo indirizzo?\nB. Ti scrivo il mio indirizzo?\nC. Qual è il tuo indirizzo?\n5.4. Wchodzisz z kolegą do sali kinowej. Jak przypomnisz mu o zakazie używania\ntelefonów komórkowych?\nA. Qui bisogna spegnere il cellulare!\nB. Ricordati di telefonarmi più tardi!\nC. Porta con te il tuo telefonino!",
+      "answer_key": {
+        "accepted_results": [
+          "B, B, C, A"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: B, B, C, A."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: B, B, C, A.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-italian-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe — uzupełnianie dialogów",
+      "difficulty": 2,
+      "prompt": "Uzupełnij dialogi 6.1.–6.2. Wpisz w każdą lukę brakujący fragment wypowiedzi, tak aby\notrzymać spójne i logiczne teksty. Luki należy uzupełnić w języku włoskim.\n6.1. X: Salve, mi chiamo Luca.\nY: ___________________________________ di conoscerti, sono Maria.\n6.2. X: Guarda, sono stanca e non ho voglia di uscire.\nY: Allora, tu ___________________________________ a casa a leggere e io vado\nda solo a fare la spesa.",
+      "answer_key": {
+        "accepted_results": [
+          "Piacere; resta / rimani"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Łącznie 2 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: Piacere; resta / rimani."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: Piacere; resta / rimani.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-italian-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        8,
+        9
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie tekstów pisanych",
+      "difficulty": 2,
+      "prompt": "Przeczytaj teksty. W zadaniach 7.1.–7.4. z podanych odpowiedzi wybierz właściwą,\nzgodną z treścią tekstu. Zakreśl jedną z liter: A, B albo C.\nCiao Anna, come va?\nUffa! Quanto sono stanca! Sono venuti a trovarci i miei cugini dalla\nSpagna e devo occuparmi di loro per tutta la settimana. Non mi\nlasciano in pace neanche per un minuto. Poi, non parlano bene\nitaliano ed è difficile capire quello che dicono.\nCosa fate domani?\nAndiamo al mare. Faremo il bagno e prenderemo il sole.\nBuona idea!\n7.1. Anna scrive che\nA. è facile per lei capire i suoi cugini.\nB. vuole portare i suoi cugini in spiaggia.\nC. sta passando una settimana tranquilla.\n10 marzo, 14:00\n@Albino 123 7.2. L’annuncio di Albino interessa\nCiao a tutti! a una persona che\nQualcuno di voi cerca una borsa piccola?\nA. vuole comprare una borsa.\nForse questa vi interesserà. È utile per\nB. ha perso una borsa.\nle piccole gite per portarci dentro i soldi,\nC. potrebbe prestargli una borsa.\ni documenti e il telefonino. Praticamente\nnuova. Prezzo da stabilire. Sotto metto\nla sua foto. La mia mail: albino123@xyz\nPaola Ciao a tutti!\nRossi\nCome sapete, venerdì prossimo organizziamo un ballo a scuola. Molti ragazzi\nstanno preparando questo evento. Io personalmente ho fatto delle luci speciali\nper creare un’atmosfera ideale. Il problema è che sono tante e pesano molto.\nQuindi non so in che modo portarle da casa mia a scuola. Cosa posso fare in\nquesta situazione? Avete un’idea? Aspetto le vostre proposte.\n7.3. Paola scrive per\nA. offrire aiuto.\nB. invitare a un evento.\nC. chiedere un consiglio.\nDIVERTIMENTI IN CUCINA\nEcco una ricetta semplice. Gli ingredienti sono più o meno quelli che servono per fare\nla pasta fresca. Sicuramente si trovano nei vostri armadietti.\n• 1 bicchiere di farina\n• 1 bicchiere di sale\n• un po’ d’acqua.\nMescolate tutto insieme, create una palla e lasciatela mezz’ora in frigo.\nCon questa massa create poi animali, fiori e tutte le forme che desiderate. Potete\nasciugarle all’aria per 24 ore oppure in forno a 60° per qualche ora.\nAlla fine colorate le vostre opere d’arte come piace a voi. Sarà un bel regalo di Natale\no di compleanno. Attenzione però: ovviamente non sono da mangiare!\n7.4. In questo testo l’autore parla di come\nA. cucinare un piatto italiano.\nB. fare da soli delle figure.\nC. organizzare una festa.",
+      "answer_key": {
+        "accepted_results": [
+          "B, A, C, B"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: B, A, C, B."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: B, A, C, B.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-italian-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Spójność tekstu",
+      "difficulty": 2,
+      "prompt": "Przeczytaj tekst, z którego usunięto trzy zdania. Wpisz w każdą lukę (8.1.–8.3.) literę,\nktórą oznaczono brakujące zdanie (A–D), tak aby otrzymać spójny i logiczny tekst.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej luki.\nLA SIESTA\nNegli ultimi anni la siesta è diventata molto popolare in tutto il mondo. 8.1. _____ Adesso\nla gente fa la siesta anche in altri Paesi dell’Europa e dell’Asia.\nGli esperti dicono che fare la siesta è una cosa naturale e sana. Riposare dopo pranzo fa\nbene alla salute. Grazie alla siesta siamo meno stressati, più allegri e più contenti della vita.\nPossiamo concentrarci meglio quando dobbiamo studiare per prepararci per gli esami\no quando lavoriamo. 8.2. _____ Tutto il contrario, è necessario fare la siesta per avere più\nforza ed energia. Oggi, negli Stati Uniti, in Cina o in Giappone ci sono uffici e fabbriche dove\nle persone che ci lavorano hanno a disposizione delle sale speciali per la siesta. 8.3. _____\nÈ il tempo che basta per sentirsi in forma e tornare a lavorare con nuovo entusiasmo.\nNa podstawie: www.cosasdesalud.es\nA. Quindi non è vero che così perdiamo tempo.\nB. In questo modo possono cominciare a lavorare più tardi.\nC. In questi posti i lavoratori possono rilassarsi per trenta minuti.\nD. Prima era un’abitudine tipica della Spagna e dell’America Latina.",
+      "answer_key": {
+        "accepted_results": [
+          "D, A, C"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: D, A, C."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: D, A, C.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-italian-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        11
+      ],
+      "type": "long_text",
+      "topic": "Wyszukiwanie informacji",
+      "difficulty": 2,
+      "prompt": "Przeczytaj trzy teksty dotyczące map (A–C) oraz pytania 9.1.–9.4. Do każdego pytania\ndopasuj właściwy tekst. Wpisz rozwiązania do tabeli.\nUwaga! Jeden z tekstów pasuje do dwóch pytań.\nLE MAPPE\nIl professore di geografia ci ha dato uno strano compito: inventare un’isola e fare una\nmappa fisica del terreno. All’inizio mi sembrava facile, ma quando ho cominciato\nA. a lavorare ho visto che in realtà era abbastanza complicato. Però adesso sono molto\ncontento. Ho imparato tanto facendo questo progetto. Secondo me è utile fare un\nesercizio simile in classe.\nIl mese scorso abbiamo fatto un viaggio in macchina. Siamo andati a trovare un\namico di mio padre che abita su un’isola. La sua casa si trova in campagna, lontano\ndalle grandi città. All’inizio tutto andava bene perché seguivamo le istruzioni della\nB.\nmappa sul cellulare. Però dopo è arrivata la pioggia e un vento forte e i cellulari\nhanno smesso di funzionare. Ci siamo persi e il viaggio è durato un’ora più del\nprevisto. Ma è stata una vera avventura!\nPoco tempo fa i miei nonni hanno comprato un grande comò del XIX secolo. In uno\ndei cassetti hanno trovato la mappa di un’isola con delle indicazioni dove era\nC.\nnascosta una cassa con monete d’oro e d’argento. La mappa è molto dettagliata,\nperò nessuno sa dov’è esattamente questa isola. Ma io la voglio trovare a tutti i costi.\nIn quale testo la persona dice che\n9.1. a causa del brutto tempo si è trovata in una situazione difficile?\n9.2. è soddisfatta del risultato del suo lavoro?\n9.3. ha intenzione di cercare un posto?\n9.4. è andata da qualcuno che vive su un’isola?",
+      "answer_key": {
+        "accepted_results": [
+          "B, A, C, B"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: B, A, C, B."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: B, A, C, B.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-italian-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        12,
+        13
+      ],
+      "type": "long_text",
+      "topic": "Przetwarzanie wypowiedzi",
+      "difficulty": 2,
+      "prompt": "Przeczytaj tekst. Uzupełnij w e-mailu luki 10.1.–10.3. zgodnie z treścią tekstu, tak aby\njak najbardziej precyzyjnie oddać sens podanych informacji. Luki należy uzupełnić\nw języku polskim.\nUNA GITA IN KAYAK\nAvete mai pensato di fare una gita con un kayak che\navete costruito voi con le vostre mani? Vi presento\nun’offerta di vacanza che ho trovato in internet.\nQuest’estate il Kayak Club organizza un laboratorio\nper ragazzi che vi permetterà di fare il vostro kayak dalla\nA alla Z. Il club offre tutti i materiali necessari e gli\nattrezzi. Ovviamente vi aiuteranno gli istruttori esperti.\nIl laboratorio inizia a fine giugno. Per fare un kayak ci\nvogliono cinquanta ore. La prima settimana di luglio tutti\ni kayak saranno già pronti e i ragazzi e gli istruttori\nnavigheranno lungo il fiume. Durante il viaggio, che\ndurerà dieci giorni, tutto il gruppo potrà ammirare dai kayak la bellezza della natura.\nI partecipanti dormiranno in tenda e mangeranno piatti regionali nelle fattorie vicine.\nPer il ritorno ci sono a disposizione macchine speciali che trasporteranno i kayak.\nI ragazzi invece prenderanno un treno che li porterà in città.\nQuesta avventura è ideale per tutte le persone che amano la natura, vogliono imparare\ncose nuove e allo stesso tempo riposare in modo attivo.\nSiete interessati?\nCliccate qui per vedere i dettagli dell’offerta!\nNa podstawie: www.kayakingspain.com\nWiadomość \nOd: Michał\nDo: Tomek\nTemat: wakacje w kajaku\nCześć, Tomku!\nJuż wiem, co będziemy robić podczas wakacji we Włoszech!\nZnalazłem świetną ofertę spływu kajakiem. Najlepsze jest to, że kajak trzeba\n10.1. __________________________________________. Zajmuje to 50 godzin.\nKiedy kajak będzie już gotowy, w pierwszych dniach lipca wyruszymy na spływ.\nBędziemy płynąć rzeką po kilka godzin dziennie, z przerwami na posiłki, i spać\nw 10.2. ___________________________________________. Oczywiście nie można\nwracać kajakiem tą samą drogą, ale i o to nie musimy się martwić, bo z powrotem\nbędziemy podróżować 10.3. __________________________________________.\nPrześlę Ci link z ofertą, żebyś mógł sprawdzić szczegóły.\nPozdrawiam\nMichał",
+      "answer_key": {
+        "accepted_results": [
+          "zrobić samemu/samodzielnie; namiotach; pociągiem"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: zrobić samemu/samodzielnie; namiotach; pociągiem."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: zrobić samemu/samodzielnie; namiotach; pociągiem.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-italian-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — wybór wyrazów",
+      "difficulty": 2,
+      "prompt": "Przeczytaj tekst. Spośród wyrazów podanych w ramce wybierz te, które są\npoprawnym uzupełnieniem luk 11.1.–11.3. Wpisz odpowiednią literę (A–F) obok\nnumeru każdej luki.\nUwaga! Trzy wyrazy zostały podane dodatkowo i nie pasują do żadnej luki.\nA. comprare B. pieni C. ricevere D. semplici E. usano F. vanno\nUNA COLAZIONE GRATUITA\nLa metropolitana di Tokyo è il più popolare mezzo di trasporto della capitale\ngiapponese. Ogni giorno quasi nove milioni di persone la 11.1. _____ per andare\na scuola o al lavoro. Tra le 8:00 e le 9:00 di mattina i vagoni della metro sono così\n11.2. _____ di gente che il viaggio diventa poco comodo o sicuro.\nPer cambiare la situazione la società di trasporti ha avuto un’idea geniale. Per\nmotivare le persone a prendere il treno prima delle 7:30, offre gratis la colazione in\nuno dei bar della città. Però, per 11.3. _____ questo regalo almeno duemila persone\ndevono registrarsi all’iniziativa. Secondo voi questa idea piacerà agli abitanti di\nTokyo?\nNa podstawie: www.ilmessaggero.it",
+      "answer_key": {
+        "accepted_results": [
+          "E, B, C"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: E, B, C."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: E, B, C.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-italian-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        15
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — gramatyka i leksyka",
+      "difficulty": 2,
+      "prompt": "Przeczytaj tekst. Wybierz poprawne uzupełnienie luk 12.1.–12.3. Zakreśl jedną z liter:\nA, B albo C.\nQUANTO VERAMENTE COSTANO I VESTITI?\nSpesso compriamo vestiti a basso prezzo e siamo sicuri di risparmiare. Ma ha senso\ncomprare un paio di scarpe da 10 euro che ci serviranno soltanto 12.1. _____ volte? Forse\nè meglio spendere un po’ di più e usarle più a lungo? Insomma, come calcolare il vero\nprezzo dei vestiti? In realtà è molto facile. Nel negozio, prima di andare alla cassa, ognuno\ndi voi deve farsi questa domanda: “Ma io 12.2. _____ almeno 100 volte quello che voglio\ncomprare?” Se rispondete di sì, allora state facendo 12.3. _____ scelta giusta. Questo\ncalcolo funziona non solo con i vestiti, ma anche con altri prodotti. Provate voi stessi!\n12.1.\nA. poco\nB. pochi\nC. poche\n12.2.\nA. metterò\nB. metterete\nC. metteranno\n12.3.\nA. lo\nB. l’\nC. la",
+      "answer_key": {
+        "accepted_results": [
+          "C, A, C"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: C, A, C."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: C, A, C.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-italian-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Transformacje leksykalno-gramatyczne",
+      "difficulty": 3,
+      "prompt": "Przetłumacz na język włoski fragmenty podane w nawiasach, tak aby otrzymać zdania\nlogiczne i gramatycznie poprawne. Wymagana jest pełna poprawność ortograficzna\nwpisywanych fragmentów zdań.\nUwaga! W każdą lukę możesz wpisać maksymalnie cztery wyrazy.\n13.1. Mario, tu (skąd jesteś) _________________________________________________?\n13.2. Ragazzi, (otwórzcie wasze zeszyty) ______________________________________\n_____________________________________ e scrivete il tema della lezione!\n13.3. Dimmi (ile czasu) _____________________________________________ ti serve per\npreparare la torta.",
+      "answer_key": {
+        "accepted_results": [
+          "di dove sei / da dove vieni; aprite i vostri quaderni; quanto tempo"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: di dove sei / da dove vieni; aprite i vostri quaderni; quanto tempo."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: di dove sei / da dove vieni; aprite i vostri quaderni; quanto tempo.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-italian-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        16,
+        20
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna — e-mail",
+      "difficulty": 3,
+      "prompt": "Bierzesz udział w szkolnej wymianie międzynarodowej. Napisz e-mail do\nwłoskojęzycznego kolegi, którego będziesz gościć u siebie. W e-mailu:\n• przedstaw koledze swoje zainteresowania\n• wyjaśnij mu, w jaki sposób Twoja rodzina przygotowuje się na jego przyjazd\n• opisz pokój, w którym będzie mieszkał podczas pobytu w Polsce.\nNapisz swoją wypowiedź w języku włoskim. Podpisz się jako XYZ.\nRozwiń swoją wypowiedź w każdym z trzech podpunktów, tak aby osoba nieznająca\npolecenia w języku polskim uzyskała wszystkie wskazane w nim informacje. Pamiętaj, że\ndługość wypowiedzi powinna wynosić od 50 do 120 wyrazów (nie licząc wyrazów podanych\nna początku wypowiedzi). Oceniane są: umiejętność pełnego przekazania informacji,\nspójność, bogactwo językowe oraz poprawność językowa.",
+      "answer_key": {
+        "assessment": "rubric",
+        "minimum_words": 50,
+        "maximum_words": 120
+      },
+      "scoring": {
+        "max_points": 10,
+        "rules": [
+          "0–4 pkt – treść: odniesienie się do trzech podpunktów i ich rozwinięcie.",
+          "0–2 pkt – spójność i logika wypowiedzi.",
+          "0–2 pkt – zakres środków językowych.",
+          "0–2 pkt – poprawność środków językowych."
+        ]
+      },
+      "explanation": "Odpowiedź jest oceniana według oficjalnej skali CKE: treść, spójność, zakres i poprawność językowa.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    }
+  ]
+}

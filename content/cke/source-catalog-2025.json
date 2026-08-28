@@ -2,16 +2,21 @@
   "schema_version": 1,
   "exam_year": 2025,
   "source_page": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2025-2/",
-  "generated_at": "2026-08-28T21:38:17.903Z",
-  "unique_files": 18,
-  "total_bytes": 67358730,
+  "generated_at": "2026-08-28T22:48:04.938Z",
+  "unique_files": 67,
+  "total_bytes": 362800923,
   "formats": {
-    "mp3": 2,
-    "pdf": 16
+    "mp3": 12,
+    "pdf": 55
   },
   "subjects": [
     "Język angielski",
+    "Język francuski",
+    "Język hiszpański",
+    "Język niemiecki",
     "Język polski",
+    "Język rosyjski",
+    "Język włoski",
     "Matematyka"
   ],
   "files": [
@@ -67,8 +72,7 @@
       "path": "content/cke/sources/2025/jezyk_angielski/OJAP-100-200-400-500-660-K00-2505_OJAU-100-2505-transkrypcja.pdf",
       "bytes": 127938,
       "sha256": "b325e0706b4bda8804fbb4f62dafaa32b393c90419c07fc39f5b42c3ae9ba350",
-      "content_type": "application/pdf",
-      "status": "downloaded"
+      "status": "existing"
     },
     {
       "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_angielski/OJAP-100-200-400-500-660-K00-2505-zasady.pdf",
@@ -122,8 +126,7 @@
       "path": "content/cke/sources/2025/jezyk_angielski/OJAP-100-200-400-500-660-K00-2505-zasady.pdf",
       "bytes": 496848,
       "sha256": "c0adeef13dfb81be477b1a5e95499260dd6043e860740bd9b0ba90e499f48ff7",
-      "content_type": "application/pdf",
-      "status": "downloaded"
+      "status": "existing"
     },
     {
       "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_angielski/OJAP-100-2505_OJAU-100-2505.mp3",
@@ -153,8 +156,7 @@
       "path": "content/cke/sources/2025/jezyk_angielski/OJAP-100-2505_OJAU-100-2505.mp3",
       "bytes": 20241725,
       "sha256": "a5424a3c7e26ef526020ad96672f6654e23f6e076a650c34a76e6eb968882259",
-      "content_type": "audio/mpeg",
-      "status": "downloaded"
+      "status": "existing"
     },
     {
       "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_angielski/OJAP-100-WP-2505_OJAU-100-WP-2505.mp3",
@@ -178,8 +180,7 @@
       "path": "content/cke/sources/2025/jezyk_angielski/OJAP-100-WP-2505_OJAU-100-WP-2505.mp3",
       "bytes": 26636837,
       "sha256": "952468b6bf30080c5047f6b9223085dd341cc61441a14f3f73ad5285e006b333",
-      "content_type": "audio/mpeg",
-      "status": "downloaded"
+      "status": "existing"
     },
     {
       "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_angielski/OJAP-100-X-2505-karta-odpowiedzi.pdf",
@@ -197,8 +198,7 @@
       "path": "content/cke/sources/2025/jezyk_angielski/OJAP-100-X-2505-karta-odpowiedzi.pdf",
       "bytes": 1409523,
       "sha256": "bec2f1dee7ec3b0d9a78b5cced5343e852765504d1a065501c2ac9c00f3dcc0d",
-      "content_type": "application/pdf",
-      "status": "downloaded"
+      "status": "existing"
     },
     {
       "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_angielski/OJAP-100-X-2505-zeszyt-zadan.pdf",
@@ -216,8 +216,7 @@
       "path": "content/cke/sources/2025/jezyk_angielski/OJAP-100-X-2505-zeszyt-zadan.pdf",
       "bytes": 2698507,
       "sha256": "27940300ff6c07af72233451fb3dc7caacac9655c0705aae4f152779dec1e2d9",
-      "content_type": "application/pdf",
-      "status": "downloaded"
+      "status": "existing"
     },
     {
       "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_angielski/OJAU-100-2505-zasady.pdf",
@@ -235,8 +234,7 @@
       "path": "content/cke/sources/2025/jezyk_angielski/OJAU-100-2505-zasady.pdf",
       "bytes": 486342,
       "sha256": "c1ab6114d018ba68e4b045763f34d60c71f3a38d83c2618d960223ec7e9a7f5e",
-      "content_type": "application/pdf",
-      "status": "downloaded"
+      "status": "existing"
     },
     {
       "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_angielski/OJAU-100-X-2505-karta-odpowiedzi.pdf",
@@ -254,8 +252,7 @@
       "path": "content/cke/sources/2025/jezyk_angielski/OJAU-100-X-2505-karta-odpowiedzi.pdf",
       "bytes": 1419626,
       "sha256": "ba126688b764764e189dea95c3b1c291418c90940b8039102aecdb6cf8d0418a",
-      "content_type": "application/pdf",
-      "status": "downloaded"
+      "status": "existing"
     },
     {
       "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_angielski/OJAU-100-X-2505-zeszyt-zadan.pdf",
@@ -273,8 +270,553 @@
       "path": "content/cke/sources/2025/jezyk_angielski/OJAU-100-X-2505-zeszyt-zadan.pdf",
       "bytes": 2596170,
       "sha256": "2a7f0241e02042d4294886e0999be30977017a9e2a4e6817691d63eb7c038a0d",
-      "content_type": "application/pdf",
-      "status": "downloaded"
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_francuski/OJFP-100-2505_OJFU-100-2505-transkrypcja.pdf",
+      "subject_directory": "jezyk_francuski",
+      "file_name": "OJFP-100-2505_OJFU-100-2505-transkrypcja.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język francuski",
+          "variant_code": "OJFP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJFP-100-X-2505)",
+          "label": "Transkrypcja nagrań"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_francuski/OJFP-100-2505_OJFU-100-2505-transkrypcja.pdf",
+      "bytes": 142472,
+      "sha256": "d779a82289d8002033f03142a120eb503ee993f9d35cda6bd4acaff072db5675",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_francuski/OJFP-100-2505_OJFU-100-2505.mp3",
+      "subject_directory": "jezyk_francuski",
+      "file_name": "OJFP-100-2505_OJFU-100-2505.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język francuski",
+          "variant_code": "OJFP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJFP-100-X-2505)",
+          "label": "Nagrania"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_francuski/OJFP-100-2505_OJFU-100-2505.mp3",
+      "bytes": 22033991,
+      "sha256": "c902ea47bc0fdd5ade4f99e38f3beac23722c4b9c719e61fe054232bada2c69d",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_francuski/OJFP-100-2505-zasady.pdf",
+      "subject_directory": "jezyk_francuski",
+      "file_name": "OJFP-100-2505-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język francuski",
+          "variant_code": "OJFP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJFP-100-X-2505)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_francuski/OJFP-100-2505-zasady.pdf",
+      "bytes": 485849,
+      "sha256": "5805c4987a253c2f075f548e232803f8fa95d4aff7b64f33c6dbbd28badc26ff",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_francuski/OJFP-100-WP-2505_OJFU-100-WP-2505.mp3",
+      "subject_directory": "jezyk_francuski",
+      "file_name": "OJFP-100-WP-2505_OJFU-100-WP-2505.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język francuski",
+          "variant_code": "OJFP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJFP-100-X-2505)",
+          "label": "Nagrania z wydłużonymi przerwami"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_francuski/OJFP-100-WP-2505_OJFU-100-WP-2505.mp3",
+      "bytes": 28420763,
+      "sha256": "af8473a5035f5c9f3d0fe9e3ad7500c211d75832d3d8bc6f079e0189f2f5c5d5",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_francuski/OJFP-100-X-2505-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_francuski",
+      "file_name": "OJFP-100-X-2505-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język francuski",
+          "variant_code": "OJFP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJFP-100-X-2505)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_francuski/OJFP-100-X-2505-karta-odpowiedzi.pdf",
+      "bytes": 1409528,
+      "sha256": "9f535429cddaaaa6091edcee782e854b520fc6849b65082d51a4917dd80d543d",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_francuski/OJFP-100-X-2505-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_francuski",
+      "file_name": "OJFP-100-X-2505-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język francuski",
+          "variant_code": "OJFP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJFP-100-X-2505)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_francuski/OJFP-100-X-2505-zeszyt-zadan.pdf",
+      "bytes": 4295140,
+      "sha256": "5283fdf6eb4572ccacf363a6329f15282be4670c77ae860bf145e37e820f9d61",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_francuski/OJFU-100-2505-zasady.pdf",
+      "subject_directory": "jezyk_francuski",
+      "file_name": "OJFU-100-2505-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język francuski",
+          "variant_code": "OJFP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJFP-100-X-2505)",
+          "label": "Zasady oceniania rozwiązań zadań dla uczniów będących obywatelami Ukrainy"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_francuski/OJFU-100-2505-zasady.pdf",
+      "bytes": 508784,
+      "sha256": "9a792d47b27550e88feac3aac0c93a436140fdd0fb40398ee8db0a701dec2be6",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_francuski/OJFU-100-X-2505-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_francuski",
+      "file_name": "OJFU-100-X-2505-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język francuski",
+          "variant_code": "OJFP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJFP-100-X-2505)",
+          "label": "Karta odpowiedzi dla uczniów będących obywatelami Ukrainy"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_francuski/OJFU-100-X-2505-karta-odpowiedzi.pdf",
+      "bytes": 1419619,
+      "sha256": "384b33b8a4fc761d7ec187bc954c92297095f25d260493941ce5026a670798f8",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_francuski/OJFU-100-X-2505-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_francuski",
+      "file_name": "OJFU-100-X-2505-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język francuski",
+          "variant_code": "OJFP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJFP-100-X-2505)",
+          "label": "Zeszyt zadań egzaminacyjnych dla uczniów będących obywatelami Ukrainy"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_francuski/OJFU-100-X-2505-zeszyt-zadan.pdf",
+      "bytes": 4027126,
+      "sha256": "ae2ebbc6f7fcb8bc357a94c94a809e72b62142bb62f3e0080cdc9924da04a975",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_hiszpanski/OJHP-100-2505_OJHU-100-2505-transkrypcja.pdf",
+      "subject_directory": "jezyk_hiszpanski",
+      "file_name": "OJHP-100-2505_OJHU-100-2505-transkrypcja.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język hiszpański",
+          "variant_code": "OJHP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJHP-100-X-2505)",
+          "label": "Transkrypcja nagrań"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_hiszpanski/OJHP-100-2505_OJHU-100-2505-transkrypcja.pdf",
+      "bytes": 134324,
+      "sha256": "e9e3b7bf0ae3d79f8b88ce53640e31d48b079eb3f2a6b3e0caf02b67de89db8d",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_hiszpanski/OJHP-100-2505_OJHU-100-2505.mp3",
+      "subject_directory": "jezyk_hiszpanski",
+      "file_name": "OJHP-100-2505_OJHU-100-2505.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język hiszpański",
+          "variant_code": "OJHP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJHP-100-X-2505)",
+          "label": "Nagrania"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_hiszpanski/OJHP-100-2505_OJHU-100-2505.mp3",
+      "bytes": 20514443,
+      "sha256": "d90b53fe50eb6c34f90dcc576c9b640b03ef500da8e07b53f23b7f184b303ac3",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_hiszpanski/OJHP-100-2505-zasady.pdf",
+      "subject_directory": "jezyk_hiszpanski",
+      "file_name": "OJHP-100-2505-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język hiszpański",
+          "variant_code": "OJHP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJHP-100-X-2505)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_hiszpanski/OJHP-100-2505-zasady.pdf",
+      "bytes": 458158,
+      "sha256": "11770b5a356adab1347655ea72a99f5870f1b05e04a484f1c2bd888aaa355536",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_hiszpanski/OJHP-100-WP-2505_OJHU-100-WP-2505.mp3",
+      "subject_directory": "jezyk_hiszpanski",
+      "file_name": "OJHP-100-WP-2505_OJHU-100-WP-2505.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język hiszpański",
+          "variant_code": "OJHP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJHP-100-X-2505)",
+          "label": "Nagrania z wydłużonymi przerwami"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_hiszpanski/OJHP-100-WP-2505_OJHU-100-WP-2505.mp3",
+      "bytes": 26906636,
+      "sha256": "6cb5b74e1d9e77ab433bb411fbacd7b71c8bbba67627030f5cf10d657b2e119d",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_hiszpanski/OJHP-100-X-2505-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_hiszpanski",
+      "file_name": "OJHP-100-X-2505-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język hiszpański",
+          "variant_code": "OJHP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJHP-100-X-2505)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_hiszpanski/OJHP-100-X-2505-karta-odpowiedzi.pdf",
+      "bytes": 1409608,
+      "sha256": "65b373633743cb2599d31e297edc278e690415dbd82ee85c2e1481043d1c5142",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_hiszpanski/OJHP-100-X-2505-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_hiszpanski",
+      "file_name": "OJHP-100-X-2505-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język hiszpański",
+          "variant_code": "OJHP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJHP-100-X-2505)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_hiszpanski/OJHP-100-X-2505-zeszyt-zadan.pdf",
+      "bytes": 2168322,
+      "sha256": "ef4f61b3a5372b385afce59cac67b409a0503cf0a1534498b6cd1869adbf8c4b",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_hiszpanski/OJHU-100-2505-zasady.pdf",
+      "subject_directory": "jezyk_hiszpanski",
+      "file_name": "OJHU-100-2505-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język hiszpański",
+          "variant_code": "OJHP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJHP-100-X-2505)",
+          "label": "Zasady oceniania rozwiązań zadań dla uczniów będących obywatelami Ukrainy"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_hiszpanski/OJHU-100-2505-zasady.pdf",
+      "bytes": 471710,
+      "sha256": "f63bb924d0371c816dcf0b4aead0ad0c5fd5a726ae2c9125e602e9c753de2549",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_hiszpanski/OJHU-100-X-2505-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_hiszpanski",
+      "file_name": "OJHU-100-X-2505-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język hiszpański",
+          "variant_code": "OJHP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJHP-100-X-2505)",
+          "label": "Karta odpowiedzi dla uczniów będących obywatelami Ukrainy"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_hiszpanski/OJHU-100-X-2505-karta-odpowiedzi.pdf",
+      "bytes": 1419700,
+      "sha256": "85c6dc8f4f06d039bb8ef292c30dae18a17f0991ff680df095431be35273c198",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_hiszpanski/OJHU-100-X-2505-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_hiszpanski",
+      "file_name": "OJHU-100-X-2505-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język hiszpański",
+          "variant_code": "OJHP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJHP-100-X-2505)",
+          "label": "Zeszyt zadań egzaminacyjnych dla uczniów będących obywatelami Ukrainy"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_hiszpanski/OJHU-100-X-2505-zeszyt-zadan.pdf",
+      "bytes": 1977995,
+      "sha256": "9840e88cc65d2bb7628ff2c4ec36b5c7b884ed2da17f66e5c3f58a90fb33653f",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_niemiecki/OJNP-100-200-400-2505_OJNU-100-2505-transkrypcja.pdf",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNP-100-200-400-2505_OJNU-100-2505-transkrypcja.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJNP-100-X-2505)",
+          "label": "Transkrypcja nagrań"
+        },
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-200-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów z autyzmem, w tym z zespołem Aspergera (OJNP-200-X-2505)",
+          "label": "Transkrypcja nagrań"
+        },
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-400-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 16 pkt (OJNP-400-X-2505)",
+          "label": "Transkrypcja nagrań"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_niemiecki/OJNP-100-200-400-2505_OJNU-100-2505-transkrypcja.pdf",
+      "bytes": 126607,
+      "sha256": "0eba850c246da35c09b2e5680fa5461172df2f3af5866ce87e3cf5ee221d734c",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_niemiecki/OJNP-100-200-400-2505-zasady.pdf",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNP-100-200-400-2505-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJNP-100-X-2505)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        },
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-200-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów z autyzmem, w tym z zespołem Aspergera (OJNP-200-X-2505)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        },
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-400-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów słabowidzących_czcionka 16 pkt (OJNP-400-X-2505)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_niemiecki/OJNP-100-200-400-2505-zasady.pdf",
+      "bytes": 474726,
+      "sha256": "872ab3b06318e6d87b7b190a75a6ac8af9992dc5497878a3f838c731d60e4848",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_niemiecki/OJNP-100-2505_OJNU-100-2505.mp3",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNP-100-2505_OJNU-100-2505.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJNP-100-X-2505)",
+          "label": "Nagrania"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_niemiecki/OJNP-100-2505_OJNU-100-2505.mp3",
+      "bytes": 20475245,
+      "sha256": "ffa52f882d12684381b16fd8cb4099f3041a085dc234dd46d347e6e89d493994",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_niemiecki/OJNP-100-WP-2505_OJNU-100-WP-2505.mp3",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNP-100-WP-2505_OJNU-100-WP-2505.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJNP-100-X-2505)",
+          "label": "Nagrania z wydłużonymi przerwami"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_niemiecki/OJNP-100-WP-2505_OJNU-100-WP-2505.mp3",
+      "bytes": 26861183,
+      "sha256": "0f64ba4ab53e4e72f4ca572539a66dea51ef87a3672116a234edc41e47ac84c5",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_niemiecki/OJNP-100-X-2505-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNP-100-X-2505-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJNP-100-X-2505)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_niemiecki/OJNP-100-X-2505-karta-odpowiedzi.pdf",
+      "bytes": 1409588,
+      "sha256": "376a66fa184fb1643d3ae523e28f80cb67118c3a317dc8ec3e28d29f2d744020",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_niemiecki/OJNP-100-X-2505-karta-rozwiazan.pdf",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNP-100-X-2505-karta-rozwiazan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJNP-100-X-2505)",
+          "label": "Karta rozwiązań zadań otwartych"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_niemiecki/OJNP-100-X-2505-karta-rozwiazan.pdf",
+      "bytes": 2805553,
+      "sha256": "ff4e44830d7b0643c40a018f81cfcd027855ee0b946fea6fc2f7ee40ceb76159",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_niemiecki/OJNP-100-X-2505-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNP-100-X-2505-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJNP-100-X-2505)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_niemiecki/OJNP-100-X-2505-zeszyt-zadan.pdf",
+      "bytes": 2572414,
+      "sha256": "c51008bae5ed46fc1ab459a3fe69cbdf12fb47fa9fc13ea577ffb8a6392aa4a6",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_niemiecki/OJNU-100-2505-zasady.pdf",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNU-100-2505-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJNP-100-X-2505)",
+          "label": "Zasady oceniania rozwiązań zadań dla uczniów będących obywatelami Ukrainy"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_niemiecki/OJNU-100-2505-zasady.pdf",
+      "bytes": 477984,
+      "sha256": "a0b7a3e0d68c92f58541de69c4d45a5a0b69b4b6f7399872207b548d0d6f9969",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_niemiecki/OJNU-100-X-2505-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNU-100-X-2505-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJNP-100-X-2505)",
+          "label": "Karta odpowiedzi dla uczniów będących obywatelami Ukrainy"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_niemiecki/OJNU-100-X-2505-karta-odpowiedzi.pdf",
+      "bytes": 1419684,
+      "sha256": "94a1e1105c872e805cae7fa9ee40230b760d28f7ce4fc4a9a44e7dfbe42f1d92",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_niemiecki/OJNU-100-X-2505-karta-rozwiazan.pdf",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNU-100-X-2505-karta-rozwiazan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJNP-100-X-2505)",
+          "label": "Karta rozwiązań zadań otwartych dla uczniów będących obywatelami Ukrainy"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_niemiecki/OJNU-100-X-2505-karta-rozwiazan.pdf",
+      "bytes": 419239,
+      "sha256": "f0c60200c47907dc0dfa41cf2c107ae39525b5305411de56048a8bfc2c0cdae7",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_niemiecki/OJNU-100-X-2505-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_niemiecki",
+      "file_name": "OJNU-100-X-2505-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język niemiecki",
+          "variant_code": "OJNP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJNP-100-X-2505)",
+          "label": "Zeszyt zadań egzaminacyjnych dla uczniów będących obywatelami Ukrainy"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_niemiecki/OJNU-100-X-2505-zeszyt-zadan.pdf",
+      "bytes": 2636908,
+      "sha256": "87a4b7a9ca9ee6e0ac5f8d10417e8970f9cc0ff139a3fd59cb65851c2a18b043",
+      "status": "existing"
     },
     {
       "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_polski/OPOP-100-400-500-660-2505-zasady.pdf",
@@ -316,8 +858,7 @@
       "path": "content/cke/sources/2025/jezyk_polski/OPOP-100-400-500-660-2505-zasady.pdf",
       "bytes": 586130,
       "sha256": "aea9acb1f3acf12f686e7c4ecdc95f571329ab3f2f903b1b9af95f7f78bfa99c",
-      "content_type": "application/pdf",
-      "status": "downloaded"
+      "status": "existing"
     },
     {
       "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_polski/OPOP-100-X-2505-karta-odpowiedzi.pdf",
@@ -335,8 +876,7 @@
       "path": "content/cke/sources/2025/jezyk_polski/OPOP-100-X-2505-karta-odpowiedzi.pdf",
       "bytes": 1402983,
       "sha256": "699aa28d203253cc9cc9f0ee0035bd01139c94accfcadec7ad29f817c6a2b862",
-      "content_type": "application/pdf",
-      "status": "downloaded"
+      "status": "existing"
     },
     {
       "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_polski/OPOP-100-X-2505-zeszyt-zadan.pdf",
@@ -354,8 +894,7 @@
       "path": "content/cke/sources/2025/jezyk_polski/OPOP-100-X-2505-zeszyt-zadan.pdf",
       "bytes": 1042940,
       "sha256": "53dcf18cb3ea7e18b8422f0c5df2d9bdfeab6a09e0bb4c8af0646c40dc86e1f5",
-      "content_type": "application/pdf",
-      "status": "downloaded"
+      "status": "existing"
     },
     {
       "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_polski/OPOP-100-Y-2505-karta-odpowiedzi.pdf",
@@ -373,8 +912,7 @@
       "path": "content/cke/sources/2025/jezyk_polski/OPOP-100-Y-2505-karta-odpowiedzi.pdf",
       "bytes": 1402965,
       "sha256": "8ee62a9f5e21321cf63e5a849b387fb05ff14735eaec894580656faa10705824",
-      "content_type": "application/pdf",
-      "status": "downloaded"
+      "status": "existing"
     },
     {
       "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_polski/OPOP-100-Y-2505-zeszyt-zadan.pdf",
@@ -392,8 +930,368 @@
       "path": "content/cke/sources/2025/jezyk_polski/OPOP-100-Y-2505-zeszyt-zadan.pdf",
       "bytes": 1043086,
       "sha256": "7fb90082ef892db432ed383794d79b3526c83ebaeedea3c0736e794d2d1ab828",
-      "content_type": "application/pdf",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_rosyjski/OJRP-100-2505_OJRU-100-2505-transkrypcja.pdf",
+      "subject_directory": "jezyk_rosyjski",
+      "file_name": "OJRP-100-2505_OJRU-100-2505-transkrypcja.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język rosyjski",
+          "variant_code": "OJRP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJRP-100-X-2505)",
+          "label": "Transkrypcja nagrań"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_rosyjski/OJRP-100-2505_OJRU-100-2505-transkrypcja.pdf",
+      "bytes": 169495,
+      "sha256": "f82f057175150f64a79aa60931625c9e84c64b04122b153cedc20abadf9e6443",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_rosyjski/OJRP-100-2505_OJRU-100-2505.mp3",
+      "subject_directory": "jezyk_rosyjski",
+      "file_name": "OJRP-100-2505_OJRU-100-2505.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język rosyjski",
+          "variant_code": "OJRP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJRP-100-X-2505)",
+          "label": "Nagrania"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_rosyjski/OJRP-100-2505_OJRU-100-2505.mp3",
+      "bytes": 20386424,
+      "sha256": "6e0d761e7104513efd0e0a8d9583610c51ce16643220e590e8b97147ebb9307e",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_rosyjski/OJRP-100-2505-zasady.pdf",
+      "subject_directory": "jezyk_rosyjski",
+      "file_name": "OJRP-100-2505-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język rosyjski",
+          "variant_code": "OJRP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJRP-100-X-2505)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_rosyjski/OJRP-100-2505-zasady.pdf",
+      "bytes": 504263,
+      "sha256": "d6c377d562ff9ed9b022ba2da39bd07a1e3db4d02c381eef6925adb29dc2356d",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_rosyjski/OJRP-100-WP-2505_OJRU-100-WP-2505.mp3",
+      "subject_directory": "jezyk_rosyjski",
+      "file_name": "OJRP-100-WP-2505_OJRU-100-WP-2505.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język rosyjski",
+          "variant_code": "OJRP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJRP-100-X-2505)",
+          "label": "Nagrania z wydłużonymi przerwami"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_rosyjski/OJRP-100-WP-2505_OJRU-100-WP-2505.mp3",
+      "bytes": 26788625,
+      "sha256": "954c45261c0208df3a6227c47f927dba9549cec505f4230b1ce17cf611dc9b16",
+      "content_type": "audio/mpeg",
       "status": "downloaded"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_rosyjski/OJRP-100-X-2505-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_rosyjski",
+      "file_name": "OJRP-100-X-2505-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język rosyjski",
+          "variant_code": "OJRP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJRP-100-X-2505)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_rosyjski/OJRP-100-X-2505-karta-odpowiedzi.pdf",
+      "bytes": 1409728,
+      "sha256": "9518c05fe0cd1924ef2e46201d55e02cc0396b3f26bdeeb09f512b1f6c81c373",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_rosyjski/OJRP-100-X-2505-karta-rozwiazan.pdf",
+      "subject_directory": "jezyk_rosyjski",
+      "file_name": "OJRP-100-X-2505-karta-rozwiazan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język rosyjski",
+          "variant_code": "OJRP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJRP-100-X-2505)",
+          "label": "Karta rozwiązań zadań otwartych"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_rosyjski/OJRP-100-X-2505-karta-rozwiazan.pdf",
+      "bytes": 4086761,
+      "sha256": "f910477fc6ba9bd6cb0184fc17f22cd323a735600a37475595bebf2e35eac53e",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_rosyjski/OJRP-100-X-2505-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_rosyjski",
+      "file_name": "OJRP-100-X-2505-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język rosyjski",
+          "variant_code": "OJRP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJRP-100-X-2505)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_rosyjski/OJRP-100-X-2505-zeszyt-zadan.pdf",
+      "bytes": 1939382,
+      "sha256": "c43d113ca35ee8a8e7c218a5d07d679608c3e58c7e7e198d7caeff9b36a4d902",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_rosyjski/OJRU-100-2505-zasady.pdf",
+      "subject_directory": "jezyk_rosyjski",
+      "file_name": "OJRU-100-2505-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język rosyjski",
+          "variant_code": "OJRP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJRP-100-X-2505)",
+          "label": "Zasady oceniania rozwiązań zadań dla uczniów będących obywatelami Ukrainy"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_rosyjski/OJRU-100-2505-zasady.pdf",
+      "bytes": 523856,
+      "sha256": "02f2d5eb4b38dfde5c3b1d79361a7fe9a993fe32dad6e55aa972feaf434458ad",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_rosyjski/OJRU-100-X-2505-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_rosyjski",
+      "file_name": "OJRU-100-X-2505-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język rosyjski",
+          "variant_code": "OJRP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJRP-100-X-2505)",
+          "label": "Karta odpowiedzi dla uczniów będących obywatelami Ukrainy"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_rosyjski/OJRU-100-X-2505-karta-odpowiedzi.pdf",
+      "bytes": 1419829,
+      "sha256": "1711fdfec67e19b54cd546b131f7f9361848e0de5ce4580591540052990e61eb",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_rosyjski/OJRU-100-X-2505-karta-rozwiazan.pdf",
+      "subject_directory": "jezyk_rosyjski",
+      "file_name": "OJRU-100-X-2505-karta-rozwiazan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język rosyjski",
+          "variant_code": "OJRP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJRP-100-X-2505)",
+          "label": "Karta rozwiązań zadań otwartych dla uczniów będących obywatelami Ukrainy"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_rosyjski/OJRU-100-X-2505-karta-rozwiazan.pdf",
+      "bytes": 4004206,
+      "sha256": "a328617dd27f73857d0d0b86eee7d29844aeb382f86fd3653f3085091c04d044",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_rosyjski/OJRU-100-X-2505-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_rosyjski",
+      "file_name": "OJRU-100-X-2505-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język rosyjski",
+          "variant_code": "OJRP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJRP-100-X-2505)",
+          "label": "Zeszyt zadań egzaminacyjnych dla uczniów będących obywatelami Ukrainy"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_rosyjski/OJRU-100-X-2505-zeszyt-zadan.pdf",
+      "bytes": 3032517,
+      "sha256": "49f0f2e258409a738a3008f0e0e72299caa82d9fb2e43dfcceaf24d60a4a363e",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_wloski/OJWP-100-2505_OJWU-100-2505-transkrypcja.pdf",
+      "subject_directory": "jezyk_wloski",
+      "file_name": "OJWP-100-2505_OJWU-100-2505-transkrypcja.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język włoski",
+          "variant_code": "OJWP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJWP-100-X-2505)",
+          "label": "Transkrypcja nagrań"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_wloski/OJWP-100-2505_OJWU-100-2505-transkrypcja.pdf",
+      "bytes": 120890,
+      "sha256": "01fd5cbe8ed23c36128bf2bc802950ca0d0e193c5b5532f130e3cd3bb5453b0a",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_wloski/OJWP-100-2505_OJWU-100-2505.mp3",
+      "subject_directory": "jezyk_wloski",
+      "file_name": "OJWP-100-2505_OJWU-100-2505.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język włoski",
+          "variant_code": "OJWP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJWP-100-X-2505)",
+          "label": "Nagrania"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_wloski/OJWP-100-2505_OJWU-100-2505.mp3",
+      "bytes": 19941902,
+      "sha256": "6fba0c7cad364b253e64698beedbb20d9fbd51fc1d6a8f7ede46bf5fd6b4647a",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_wloski/OJWP-100-2505-zasady.pdf",
+      "subject_directory": "jezyk_wloski",
+      "file_name": "OJWP-100-2505-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język włoski",
+          "variant_code": "OJWP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJWP-100-X-2505)",
+          "label": "Zasady oceniania rozwiązań zadań"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_wloski/OJWP-100-2505-zasady.pdf",
+      "bytes": 438771,
+      "sha256": "5e7e26a16d563eb8c071702889cefa85d458f31b230b5562836776958c210630",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_wloski/OJWP-100-WP-2505_OJWU-100-WP-2505.mp3",
+      "subject_directory": "jezyk_wloski",
+      "file_name": "OJWP-100-WP-2505_OJWU-100-WP-2505.mp3",
+      "extension": "mp3",
+      "usages": [
+        {
+          "subject": "Język włoski",
+          "variant_code": "OJWP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJWP-100-X-2505)",
+          "label": "Nagrania z wydłużonymi przerwami"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_wloski/OJWP-100-WP-2505_OJWU-100-WP-2505.mp3",
+      "bytes": 26071802,
+      "sha256": "b50f6a72b725d44335006c0625ca8c6d649881944a71bc8a53f2da72c816eaec",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_wloski/OJWP-100-X-2505-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_wloski",
+      "file_name": "OJWP-100-X-2505-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język włoski",
+          "variant_code": "OJWP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJWP-100-X-2505)",
+          "label": "Karta odpowiedzi"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_wloski/OJWP-100-X-2505-karta-odpowiedzi.pdf",
+      "bytes": 1409665,
+      "sha256": "99db30160e783eb1dbb52fbb240c0ed35ee53ab27f3f8fc3a3cc8e9518f4f1df",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_wloski/OJWP-100-X-2505-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_wloski",
+      "file_name": "OJWP-100-X-2505-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język włoski",
+          "variant_code": "OJWP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJWP-100-X-2505)",
+          "label": "Zeszyt zadań egzaminacyjnych"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_wloski/OJWP-100-X-2505-zeszyt-zadan.pdf",
+      "bytes": 1864265,
+      "sha256": "231e41fa6d92bed116ccf1283afea7eebdfa8ab933aea734e7991a747538fb76",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_wloski/OJWU-100-2505-zasady.pdf",
+      "subject_directory": "jezyk_wloski",
+      "file_name": "OJWU-100-2505-zasady.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język włoski",
+          "variant_code": "OJWP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJWP-100-X-2505)",
+          "label": "Zasady oceniania rozwiązań zadań dla uczniów będących obywatelami Ukrainy"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_wloski/OJWU-100-2505-zasady.pdf",
+      "bytes": 449246,
+      "sha256": "5c2afbe917daa1574f7dbbba039b16a161ec196325e19ff509ba92e2d3903061",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_wloski/OJWU-100-X-2505-karta-odpowiedzi.pdf",
+      "subject_directory": "jezyk_wloski",
+      "file_name": "OJWU-100-X-2505-karta-odpowiedzi.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język włoski",
+          "variant_code": "OJWP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJWP-100-X-2505)",
+          "label": "Karta odpowiedzi dla uczniów będących obywatelami Ukrainy"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_wloski/OJWU-100-X-2505-karta-odpowiedzi.pdf",
+      "bytes": 1419751,
+      "sha256": "bb3f82348fc6c254ae61c39ed6387412432dacae1d2434df65310180e9b6aa29",
+      "status": "existing"
+    },
+    {
+      "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/jezyk_wloski/OJWU-100-X-2505-zeszyt-zadan.pdf",
+      "subject_directory": "jezyk_wloski",
+      "file_name": "OJWU-100-X-2505-zeszyt-zadan.pdf",
+      "extension": "pdf",
+      "usages": [
+        {
+          "subject": "Język włoski",
+          "variant_code": "OJWP-100-X-2505",
+          "audience": "Arkusz egzaminacyjny dla uczniów bez niepełnosprawności i uczniów ze specyficznymi trudnościami w uczeniu się (OJWP-100-X-2505)",
+          "label": "Zeszyt zadań egzaminacyjnych dla uczniów będących obywatelami Ukrainy"
+        }
+      ],
+      "path": "content/cke/sources/2025/jezyk_wloski/OJWU-100-X-2505-zeszyt-zadan.pdf",
+      "bytes": 1577516,
+      "sha256": "4addc1b4ae83a6688bb771ae772999625c57728c17702453fd1c29a4c4e2944d",
+      "status": "existing"
     },
     {
       "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/matematyka/Karta-rozwiazan-zadan-matematyka-2505.pdf",
@@ -417,8 +1315,7 @@
       "path": "content/cke/sources/2025/matematyka/Karta-rozwiazan-zadan-matematyka-2505.pdf",
       "bytes": 2437538,
       "sha256": "cbf4dd55665f88f0c2d087c3a5dbcf581257f288fb8eed38107df91c22570d7e",
-      "content_type": "application/pdf",
-      "status": "downloaded"
+      "status": "existing"
     },
     {
       "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/matematyka/OMAP-100-2505-zasady.pdf",
@@ -442,8 +1339,7 @@
       "path": "content/cke/sources/2025/matematyka/OMAP-100-2505-zasady.pdf",
       "bytes": 444713,
       "sha256": "a76de95a56deb91f571a5c569dd8c2308df87bdbf5289620a1faaba84440e913",
-      "content_type": "application/pdf",
-      "status": "downloaded"
+      "status": "existing"
     },
     {
       "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/matematyka/OMAP-100-X-2505-karta-odpowiedzi.pdf",
@@ -461,8 +1357,7 @@
       "path": "content/cke/sources/2025/matematyka/OMAP-100-X-2505-karta-odpowiedzi.pdf",
       "bytes": 1401840,
       "sha256": "20e09d7265291c888f6ca34b30704322a256e48863bccad627bd23e90719992d",
-      "content_type": "application/pdf",
-      "status": "downloaded"
+      "status": "existing"
     },
     {
       "url": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2025/matematyka/OMAP-100-X-2505-zeszyt-zadan.pdf",
@@ -480,8 +1375,7 @@
       "path": "content/cke/sources/2025/matematyka/OMAP-100-X-2505-zeszyt-zadan.pdf",
       "bytes": 1483019,
       "sha256": "1ed4eba4edf7e9a78b72b5a01e5825b8e7790f069427c36c4f3bb70c31338ac5",
-      "content_type": "application/pdf",
-      "status": "downloaded"
+      "status": "existing"
     }
   ]
 }

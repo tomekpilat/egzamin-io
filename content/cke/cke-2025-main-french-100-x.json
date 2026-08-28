@@ -1,0 +1,642 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2025-main-french-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2025-main-french-100-x",
+    "source_document_id": "OJFP-100-X-2505",
+    "source_pdf_sha256": "5283fdf6eb4572ccacf363a6329f15282be4670c77ae860bf145e37e820f9d61",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2025-2/",
+    "source_label": "CKE 2025 · język francuski · termin główny · wariant 100-X",
+    "exam_year": 2025,
+    "exam_session": "main",
+    "subject": "french",
+    "variant_code": "100-X",
+    "question_count": 14,
+    "supplementary_sources": [
+      {
+        "id": "cke-2025-french-recording",
+        "path": "content/cke/sources/2025/jezyk_francuski/OJFP-100-2505_OJFU-100-2505.mp3",
+        "sha256": "c902ea47bc0fdd5ade4f99e38f3beac23722c4b9c719e61fe054232bada2c69d",
+        "label": "Oficjalne nagranie do zadań 1–4"
+      },
+      {
+        "id": "cke-2025-french-transcript",
+        "path": "content/cke/sources/2025/jezyk_francuski/OJFP-100-2505_OJFU-100-2505-transkrypcja.pdf",
+        "sha256": "d779a82289d8002033f03142a120eb503ee993f9d35cda6bd4acaff072db5675",
+        "label": "Transkrypcja nagrań"
+      },
+      {
+        "id": "cke-2025-french-answer-card",
+        "path": "content/cke/sources/2025/jezyk_francuski/OJFP-100-X-2505-karta-odpowiedzi.pdf",
+        "sha256": "9f535429cddaaaa6091edcee782e854b520fc6849b65082d51a4917dd80d543d",
+        "label": "Karta odpowiedzi, wersja X"
+      },
+      {
+        "id": "cke-2025-french-scoring-rules",
+        "path": "content/cke/sources/2025/jezyk_francuski/OJFP-100-2505-zasady.pdf",
+        "sha256": "5805c4987a253c2f075f548e232803f8fa95d4aff7b64f33c6dbbd28badc26ff",
+        "label": "Zasady oceniania rozwiązań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "questions": [
+    {
+      "id": "cke-2025-main-french-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        4,
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — wybór wielokrotny",
+      "difficulty": 2,
+      "prompt": "Usłyszysz dwukrotnie pięć tekstów. W zadaniach 1.1.–1.5., na podstawie informacji\nzawartych w nagraniu, z podanych odpowiedzi wybierz właściwą. Zakreśl jedną z liter:\nA, B albo C.\n1.1. Quelle glace achète le garçon ?\nA. B. C.\n1.2. Qu’est-ce que la fille décide de visiter ?\nA. B. C.\n1.3. Où sont les deux personnes qui parlent ?\nA. B. C.\n1.4. La personne parle\nA. d’un spectacle de théâtre.\nB. d’une compétition sportive.\nC. d’un concert de musique.\n1.5. Le père de Cathy\nA. lui donne un conseil.\nB. lui propose une sortie.\nC. lui demande un petit service.",
+      "answer_key": {
+        "accepted_results": [
+          "B, B, C, B, A"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 5,
+        "rules": [
+          "Łącznie 5 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: B, B, C, B, A."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: B, B, C, B, A.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-options-page-4"
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-options-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2025/french/ojfp-100-x-2505/ojfp-100-2505.mp3",
+          "sha256": "c902ea47bc0fdd5ade4f99e38f3beac23722c4b9c719e61fe054232bada2c69d",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka francuski.",
+          "caption": "Oficjalne nagranie CKE 2025 — język francuski, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        },
+        {
+          "id": "q01-options-page-4",
+          "path": "public/cke/2025/french/ojfp-100-x-2505/q01-options-page-4.png",
+          "sha256": "3de119645b7eaa05ed74356cbbf65f47712d9a997743ffc051536f5c4ba7ea04",
+          "alt": "Strona 4 arkusza CKE z opcjami do zadania 1 z języka francuski.",
+          "caption": "Opcje tekstowe i obrazkowe do zadania 1.",
+          "mime_type": "image/png"
+        },
+        {
+          "id": "q01-options-page-5",
+          "path": "public/cke/2025/french/ojfp-100-x-2505/q01-options-page-5.png",
+          "sha256": "bc1bffca230f03deb3bd11d4b5aedcadfb4ea8dec4f672be72dfe398d843abec",
+          "alt": "Strona 5 arkusza CKE z opcjami do zadania 1 z języka francuski.",
+          "caption": "Opcje tekstowe i obrazkowe do zadania 1.",
+          "mime_type": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-french-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — dopasowywanie",
+      "difficulty": 2,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi na temat obowiązków domowych (les tâches\nménagères). Na podstawie informacji zawartych w nagraniu dopasuj do każdej\nwypowiedzi (2.1.–2.4.) odpowiadające jej zdanie (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej wypowiedzi.\nCette personne dit qu’elle\nA. voudrait faire le ménage moins souvent.\nB. est satisfaite d’un appareil électroménager.\nC. décide de changer ses mauvaises habitudes.\nD. a choisi un jour de la semaine pour le ménage.\nE. a inventé un jeu qui rend le ménage plus agréable.\n2.1. 2.2. 2.3. 2.4.",
+      "answer_key": {
+        "accepted_results": [
+          "C, B, A, E"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: C, B, A, E."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: C, B, A, E.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2025/french/ojfp-100-x-2505/ojfp-100-2505.mp3",
+          "sha256": "c902ea47bc0fdd5ade4f99e38f3beac23722c4b9c719e61fe054232bada2c69d",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka francuski.",
+          "caption": "Oficjalne nagranie CKE 2025 — język francuski, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-french-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe — rozumienie ze słuchu",
+      "difficulty": 2,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi związane z ubraniami (3.1.–3.4.). Do każdej\nz nich dobierz właściwą reakcję (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedna reakcja została podana dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. C’est gentil, mais je ne suis pas libre.\nB. Regarde dans le couloir, sur la commode.\nC. Oui, elle fait partie de notre nouvelle collection.\nD. Vous pouvez répéter ? Je vous dois combien ?\nE. Oui, je voudrais voir un pantalon noir, s’il vous plaît.\n3.1. 3.2. 3.3. 3.4.",
+      "answer_key": {
+        "accepted_results": [
+          "E, B, D, A"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: E, B, D, A."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: E, B, D, A.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2025/french/ojfp-100-x-2505/ojfp-100-2505.mp3",
+          "sha256": "c902ea47bc0fdd5ade4f99e38f3beac23722c4b9c719e61fe054232bada2c69d",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka francuski.",
+          "caption": "Oficjalne nagranie CKE 2025 — język francuski, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-french-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — uzupełnianie luk",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie fragment wywiadu z piosenkarką o imieniu Meryl. Na podstawie\ninformacji zawartych w nagraniu uzupełnij luki 4.1.–4.3. w poniższych zdaniach, tak\naby jak najbardziej precyzyjnie oddać sens wysłuchanego tekstu. Luki należy\nuzupełnić w języku francuskim.\nMeryl a créé sa première chanson de rap à l’âge de 4.1. _________________________ ans.\nAu début, les 4.2. _________________________________________ de Meryl s’opposaient\nà sa décision de faire de la musique.\nMeryl a écrit le texte de la chanson Johnny dans 4.3. _______________________________.",
+      "answer_key": {
+        "accepted_results": [
+          "11 / onze; grands-parents; l’avion"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: 11 / onze; grands-parents; l’avion."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: 11 / onze; grands-parents; l’avion.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2025/french/ojfp-100-x-2505/ojfp-100-2505.mp3",
+          "sha256": "c902ea47bc0fdd5ade4f99e38f3beac23722c4b9c719e61fe054232bada2c69d",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka francuski.",
+          "caption": "Oficjalne nagranie CKE 2025 — język francuski, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-french-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe",
+      "difficulty": 2,
+      "prompt": "Dla każdej z opisanych sytuacji (5.1.–5.4.) wybierz właściwą reakcję. Zakreśl jedną\nz liter: A, B albo C.\n5.1. Podczas pobytu nad jeziorem widzisz, że kolega chce wskoczyć do wody\nw niedozwolonym miejscu. Jak go ostrzeżesz?\nA. Du courage !\nB. N’aie pas peur !\nC. Arrête, tu es fou !\n5.2. W parku nieznajomy pyta, czy może usiąść obok Ciebie na ławce.\nCo mu odpowiesz?\nA. Allez-y, cette place est libre !\nB. Vous avez pris ma place !\nC. Mettez-vous à sa place !\n5.3. Kolega zaprasza Cię do siebie na wieczór filmowy. Nie możesz przyjść.\nJak mu odmówisz?\nA. Ne viens pas ce soir !\nB. Une autre fois, d’accord ?\nC. Je n’ai pas encore vu ces films.\n5.4. Twój kolega uważa, że trzeba segregować śmieci. Zgadzasz się z nim.\nCo mu powiesz?\nA. Aucune idée !\nB. Tu as raison.\nC. C’est inutile.",
+      "answer_key": {
+        "accepted_results": [
+          "C, A, B, B"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: C, A, B, B."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: C, A, B, B.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-french-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe — uzupełnianie dialogów",
+      "difficulty": 2,
+      "prompt": "Uzupełnij dialogi. Wpisz w każdą lukę (6.1.–6.2.) brakujący fragment wypowiedzi, tak\naby otrzymać spójne i logiczne teksty. Luki należy uzupełnić w języku francuskim.\n6.1. ___________________\nce tableau !\nMoi aussi. Il est\nvraiment intéressant.\n6.2. __________________\n_____________________\nÇa ne fait rien,\npour mon retard. Il y a eu Nathalie ! On y va ?\nun problème chez moi.",
+      "answer_key": {
+        "accepted_results": [
+          "J’aime / J’adore / J’aime beaucoup / J’aime bien / Je suis fasciné par; Je suis (vraiment) désolée / Désolée / Je te demande pardon / Pardonne-moi / Excuse-moi / Je vous demande pardon / Pardonnez-moi / Excusez-moi"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Łącznie 2 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: J’aime / J’adore / J’aime beaucoup / J’aime bien / Je suis fasciné par; Je suis (vraiment) désolée / Désolée / Je te demande pardon / Pardonne-moi / Excuse-moi / Je vous demande pardon / Pardonnez-moi / Excusez-moi."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: J’aime / J’adore / J’aime beaucoup / J’aime bien / Je suis fasciné par; Je suis (vraiment) désolée / Désolée / Je te demande pardon / Pardonne-moi / Excuse-moi / Je vous demande pardon / Pardonnez-moi / Excusez-moi.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-french-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        9,
+        10
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie tekstów pisanych",
+      "difficulty": 2,
+      "prompt": "Przeczytaj teksty. W zadaniach 7.1.–7.4. z podanych odpowiedzi wybierz właściwą,\nzgodną z treścią tekstu. Zakreśl jedną z liter: A, B albo C.\nJulie Perez\nJe sais nager depuis mon enfance. À l’époque, je vivais\nà Marseille et j’adorais jouer toute seule sur la plage.\nMes parents ont vite compris que je devais apprendre\nà nager. J’ai donc pris des cours à la piscine, donnés\npar un champion de natation. Après, mon père m’a\nacheté un masque, ce qui m’a permis de plonger dans\nla mer.\nNa podstawie: fr.quora.com\nŹródło: conseilsport.decathlon.fr\n7.1. La fille a appris à nager\nA. avec un instructeur.\nB. avec son père.\nC. toute seule.\nLe célèbre « Bocuse d’Or », c’est un peu comme la Coupe du monde\nde la gastronomie. C’est une grande rencontre culinaire, organisée tous\nles deux ans à Lyon et connue dans le monde entier. Les meilleurs chefs\ncuisiniers doivent créer des plats très originaux, sur un thème précis. Cette\nfois-ci, c’est un menu à emporter. Le meilleur cuisinier gagne la prestigieuse\nstatuette « Le Bocuse d’Or ».\nNa podstawie: www.lyoncapitale.fr\n7.2. Dans ce texte, on parle\nA. d’un restaurant connu.\nB. d’une célèbre école de cuisine.\nC. d’une compétition de cuisine renommée.\nLes chaussures proposées dans les magasins\nse ressemblent toutes. Mais il y a une solution.\nOn vous offre la possibilité de porter une paire unique au monde !\nPersonnalisation artistique.\nDécoration à la main, selon vos goûts.\nQue faire alors pour avoir les chaussures de vos rêves ?\n• Allez sur notre site : www.chaussuresdemesreves.fr.\n• Venez directement avec votre paire de baskets dans notre atelier :\n5, Pl. du Marché Couvert, Le Puy-en-Velay.\nNa podstawie: www.empreinteponote.fr\n7.3. Ce texte est\nA. un fragment d’un catalogue de produits pour les artistes.\nB. une carte d’invitation pour l’ouverture d’un magasin.\nC. la publicité d’un service exceptionnel.\nSalut Alice,\nJe viens d’apprendre que\nmes parents partent en\nweek-end. Ma grand-mère\nva venir chez nous pour ces\ndeux jours ! Elle m’a permis\nd’inviter quelques amis\nsamedi après-midi.\nTu es libre ? J’aimerais bien\norganiser un barbecue\n7.4. Monique écrit à Alice pour\net toi, tu fais les meilleures\nA. lui proposer quelque chose.\nsaucisses grillées au\nmonde ! À bientôt, j’espère ! B. annuler une invitation.\nMonique C. lui offrir son aide.",
+      "answer_key": {
+        "accepted_results": [
+          "A, C, C, A"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: A, C, C, A."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: A, C, C, A.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-french-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        11
+      ],
+      "type": "long_text",
+      "topic": "Spójność tekstu",
+      "difficulty": 2,
+      "prompt": "Przeczytaj tekst, z którego usunięto trzy zdania. Wpisz w każdą lukę (8.1.–8.3.) literę,\nktórą oznaczono brakujące zdanie (A–D), tak aby otrzymać spójny i logiczny tekst.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej luki.\nUNE EXPÉDITION PAS COMME LES AUTRES\nLa semaine dernière, trois étudiants de Toulouse\nsont partis en expédition sur le lac Victoria, le plus\ngrand lac d’Afrique. 8.1. _____ Une équipe du projet\nl’a fabriqué avec des déchets en plastique ramassés\nsur des plages.\nPendant leur voyage, ces jeunes feront des arrêts\npour rencontrer les habitants des villes qui se trouvent\nau bord du lac. 8.2. _____ Effectivement, sa présence dans les eaux du lac Victoria en fait\nl’un des lacs les plus pollués du monde. Voilà pourquoi cette expédition envoie un message\nsimple mais important aux autorités locales : « Sauvez le lac Victoria le plus vite possible. »\nLa valeur éducative de l’événement ne se limitera pas seulement aux habitants de\nl’Afrique. Pendant l’expédition, les jeunes Français réaliseront des vidéos et prendront des\nphotos. 8.3. _____ Et c’est grâce à ces sites que près de 300 écoles françaises auront\nla possibilité de suivre régulièrement ce voyage exceptionnel.\nNa podstawie: www.20minutes.fr\nA. Ils parleront avec eux des dangers du plastique.\nB. Ce n’est pas une expédition classique en Afrique.\nC. Jusqu’au 30 mars, ils navigueront à bord d’un bateau spécial.\nD. Elles seront publiées sur les réseaux sociaux de l’équipe de navigateurs.",
+      "answer_key": {
+        "accepted_results": [
+          "C, A, D"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: C, A, D."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: C, A, D.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-french-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        12
+      ],
+      "type": "long_text",
+      "topic": "Wyszukiwanie informacji",
+      "difficulty": 2,
+      "prompt": "Przeczytaj trzy wpisy na forum na temat kursów z zakresu nowoczesnych technologii\n(A–C) oraz zdania 9.1.–9.4. Do każdego zdania dopasuj właściwy wpis. Wpisz\nrozwiązania do tabeli.\nUwaga! Jeden z wpisów pasuje do dwóch zdań.\nLES COURS POUR ADOS\nPendant mes dernières vacances scolaires, j’ai assisté à un cours de dessin\nnumérique. C’était presque parfait ! Pendant deux semaines, j’ai appris à utiliser\ndifférents programmes pour dessiner. Il n’est absolument pas obligatoire de savoir\nA.\ntravailler sur ordinateur. Vous allez tout apprendre ! Le cours est intensif, une demi-\njournée, 5 fois par semaine, du lundi au vendredi. Vous allez recevoir gratuitement\ntous les outils nécessaires. Malheureusement, les groupes sont assez nombreux.\nDepuis 6 mois, je fréquente un cours de création de musique électronique. Les\ngroupes comptent de trois à cinq personnes. On s’amuse bien ! Je recommande\nB. ce cours plutôt aux ados qui sont bons en informatique. Avec une leçon de\n60 minutes par semaine, on n’a pas le temps d’apprendre à utiliser une souris !\nAttention : le matériel nécessaire pour le cours est à acheter séparément.\nJe viens de finir un cours de création de sites Internet et j’en suis ravi ! Les\nrencontres en tête-à-tête avec le professeur étaient géniales : il m’expliquait tout\npatiemment. Si vous n’êtes pas débutant(e) en informatique et si vous désirez\nC.\nvraiment progresser, ce cours sera idéal pour vous. Il est un peu plus cher qu’un\ncours en groupe et il faut aussi dépenser un peu d’argent pour le matériel. Il y a\nquatre rencontres virtuelles d’une heure et demie par semaine.\nNa podstawie: www.digi-activity.com; blog.allegromusique.fr; www.hostinger.fr\nCe cours va intéresser une personne qui\n9.1. cherche des leçons individuelles.\n9.2. ne veut pas dépenser de l’argent pour le matériel.\n9.3. peut consacrer une heure maximum par semaine pour se perfectionner.\n9.4. est débutante en informatique.",
+      "answer_key": {
+        "accepted_results": [
+          "C, A, B, A"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: C, A, B, A."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: C, A, B, A.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-french-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        13,
+        14,
+        15
+      ],
+      "type": "long_text",
+      "topic": "Przetwarzanie wypowiedzi",
+      "difficulty": 2,
+      "prompt": "Przeczytaj teksty 1. i 2. Uzupełnij w e-mailu luki 10.1.–10.3. zgodnie z treścią tekstów,\ntak aby jak najbardziej precyzyjnie oddać sens podanych informacji. Luki należy\nuzupełnić w języku polskim.\nTekst 1.\nhttps://www.sapinnoel.be\nL’HISTOIRE DES\nL’histoire des pulls de Noël commence aux États-Unis au début du XXe siècle :\nles grands-mères sont les premières à les fabriquer. Avec le temps, ce sont\nles grands magasins qui proposent aux clients leurs propres pulls de Noël.\n« Quand on décide de les produire en masse dans les années 1980,\nils deviennent populaires mais seulement aux États-Unis et au Canada »,\nexplique l’auteur d’un livre sur les pulls de Noël. Leur succès mondial commence\nen 2001 avec la sortie d’une comédie romantique où un acteur porte un pull de\nNoël ridicule. Le vêtement devient vite célèbre sur tous les continents. En France,\non organise même le championnat du monde du pull moche.\nNa podstawie: frenchmorning.com; www.liberation.fr; www.sapinnoel.be\nŹródło: www.centpourcent-vosges.fr\nTekst 2.\nNOS CHERS JEUNES AMIS,\nCréée en 2011 sur les réseaux sociaux, la journée internationale du\npull de Noël est devenue une tradition fêtée chaque année le 3ème\nvendredi de décembre. Célébrons ensemble cette journée encore\nune fois, pendant un grand bal organisé le 4 janvier pour fêter la fin\nde notre camp d’hiver.\nMettez vos plus beaux pulls de Noël colorés\net n’ayez pas peur du ridicule ! Pendant le bal,\nun jury choisira le plus beau pull de Noël\net il récompensera la personne la mieux\nhabillée par un prix spécial : des chaussettes\nd’hiver amusantes ! Mais ce ne sera pas\nla seule attraction de la soirée.\nÀ la fin de la fête, vous aurez la chance de participer\nà un grand concours de karaoké. Des diplômes\nsont prévus pour tous les participants !\nRENDEZ-VOUS\nLE SAMEDI 4 JANVIER 2025\nÀ 18 HEURES.\nLES RESPONSABLES\nDU CAMP À MEGÈVE\nNa podstawie: www.petitpapanoel.be\nŹródło: www.artemio.be; pl.pinterest.com\nkarolina@abc.pl\nświąteczne swetry\nCześć Karolino!\nWczoraj wróciłam z obozu językowego we Francji w miejscowości Megève. Dużo się\ndziało. Na razie zdradzę Ci jedynie, że na zakończenie obozu zorganizowano dla nas\nuroczysty bal. Jedną z jego atrakcji był nietypowy konkurs, w którym mieliśmy założyć\nswetry ozdobione motywami świątecznymi. Od razu zaczęłam szperać na ich temat\nw internecie. Wiedziałaś na przykład, że te swetry stały się popularne na całym świecie\nza sprawą 10.1. ________________________________________________________?\nWyobraź sobie, że mają one swoje święto obchodzone co roku, dokładnie\n10.2. _________________________________________________________________.\nNiestety nie wygrałam konkursu na najpiękniejszy świąteczny sweter, ale byłam blisko.\nSzczęśliwa zwyciężczyni dostała 10.3. ______________________________________.\nJej pomysł na strój był bardzo oryginalny. Ja z kolei zajęłam pierwsze miejsce\nw konkursie karaoke! Jestem z siebie bardzo dumna!\nPozdrawiam\nAnia",
+      "answer_key": {
+        "accepted_results": [
+          "komedii (romantycznej) / filmu; w 3. piątek grudnia / w trzeci piątek grudnia; (śmieszne/zimowe) skarpety/skarpetki"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: komedii (romantycznej) / filmu; w 3. piątek grudnia / w trzeci piątek grudnia; (śmieszne/zimowe) skarpety/skarpetki."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: komedii (romantycznej) / filmu; w 3. piątek grudnia / w trzeci piątek grudnia; (śmieszne/zimowe) skarpety/skarpetki.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-french-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — wybór wyrazów",
+      "difficulty": 2,
+      "prompt": "Przeczytaj tekst. Spośród wyrazów podanych w ramce wybierz te, które są\npoprawnym uzupełnieniem luk 11.1.–11.3. Wpisz odpowiednią literę (A–F) obok\nnumeru każdej luki.\nUwaga! Trzy wyrazy zostały podane dodatkowo i nie pasują do żadnej luki.\nA. connaît B. magasin C. magazine D. mesure E. pèse F. porte\nLA PLUS PETITE MAISON DE PARIS\nAu n° 39 de la rue du Château-d’Eau, dans le 10e\narrondissement, vous pouvez voir l’une des maisons les plus\nétonnantes de Paris. Bloquée entre deux immeubles, elle\n11.1. _____ un peu moins d’un mètre cinquante de large sur\ncinq mètres de haut. C’est la plus petite maison de Paris.\nMalgré sa petite taille, c’est bien une habitation indépendante.\nOn 11.2. _____ son histoire : au rez-de-chaussée,\nun cordonnier avait une boutique pendant toute la seconde\nmoitié du XIXe siècle. Aujourd’hui, c’est un 11.3. _____ de\nvêtements qui fait un peu plus de 4 mètres carrés ! Non loin\nde là, à environ 1 kilomètre, vous pouvez aussi découvrir\nla rue des Degrés, la rue la plus courte de Paris.\nNa podstawie: www.unjourdeplusaparis.com\nŹródło: www.boucheaoreille.org",
+      "answer_key": {
+        "accepted_results": [
+          "D, A, B"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: D, A, B."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: D, A, B.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-french-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        17
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — gramatyka i leksyka",
+      "difficulty": 2,
+      "prompt": "Przeczytaj tekst. Wybierz poprawne uzupełnienie luk 12.1.–12.3. Zakreśl jedną z liter:\nA, B albo C.\nLE PODCAST « HARRY POTTER »\nVous voulez connaître les histoires de l’univers magique de Harry Potter mais vous\nhésitez à 12.1. _____ les sept tomes ? Le format livre audio ne vous convient pas du tout ?\nPour vous aider, nous avons créé le podcast Harry Potter. Le récit est très bien préparé.\nChapitre par chapitre, on 12.2. _____ raconte les aventures du sympathique personnage\nprincipal de la célèbre série écrite par J. K. Rowling.\nNotre podcast existe en deux versions : une heure (classique) ou vingt minutes (la série\nd’été). Vous pouvez donc l’écouter facilement au cours d’un long trajet 12.3. _____ voiture\nou bien pendant une séance de sport.\nNa podstawie: www.lefigaro.fr\n12.1.\nA. lisez\nB. lire\nC. lisent\n12.2.\nA. y\nB. le\nC. en\n12.3.\nA. dans\nB. à\nC. en",
+      "answer_key": {
+        "accepted_results": [
+          "B, A, C"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: B, A, C."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: B, A, C.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-french-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        18
+      ],
+      "type": "long_text",
+      "topic": "Transformacje leksykalno-gramatyczne",
+      "difficulty": 3,
+      "prompt": "Przetłumacz na język francuski fragmenty podane w nawiasach, tak aby otrzymać\nzdania logiczne i gramatycznie poprawne. Wymagana jest pełna poprawność\nortograficzna wpisywanych fragmentów zdań.\n13.1. Robert habite au Canada mais (urodził się) ____________________________ à Paris.\n13.2. Nous sommes en retard (ponieważ) _______________________ la route est bloquée.\n13.3. Sylvie, (wypij szybko) ______________________________________ ce médicament !",
+      "answer_key": {
+        "accepted_results": [
+          "il est né / est né; parce que / car; bois vite"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: il est né / est né; parce que / car; bois vite."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: il est né / est né; parce que / car; bois vite.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-french-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        18,
+        24
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna — e-mail",
+      "difficulty": 3,
+      "prompt": "Bierzesz udział w szkolnej wymianie międzynarodowej. Napisz e-mail do\nfrancuskojęzycznego kolegi, którego będziesz gościć u siebie. W e-mailu:\n• przedstaw koledze swoje zainteresowania\n• wyjaśnij mu, w jaki sposób Twoja rodzina przygotowuje się na jego przyjazd\n• opisz pokój, w którym będzie on mieszkał podczas pobytu w Polsce.\nNapisz swoją wypowiedź w języku francuskim. Podpisz się jako XYZ.\nRozwiń swoją wypowiedź w każdym z trzech podpunktów, tak aby osoba nieznająca\npolecenia w języku polskim uzyskała wszystkie wskazane w nim informacje. Pamiętaj, że\ndługość wypowiedzi powinna wynosić od 50 do 120 wyrazów (nie licząc wyrazów podanych\nna początku wypowiedzi). Oceniane są: umiejętność pełnego przekazania informacji,\nspójność, bogactwo językowe oraz poprawność językowa.",
+      "answer_key": {
+        "assessment": "rubric",
+        "minimum_words": 50,
+        "maximum_words": 120
+      },
+      "scoring": {
+        "max_points": 10,
+        "rules": [
+          "0–4 pkt – treść: odniesienie się do trzech podpunktów i ich rozwinięcie.",
+          "0–2 pkt – spójność i logika wypowiedzi.",
+          "0–2 pkt – zakres środków językowych.",
+          "0–2 pkt – poprawność środków językowych."
+        ]
+      },
+      "explanation": "Odpowiedź jest oceniana według oficjalnej skali CKE: treść, spójność, zakres i poprawność językowa.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    }
+  ]
+}

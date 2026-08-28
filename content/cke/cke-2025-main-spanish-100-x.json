@@ -1,0 +1,641 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2025-main-spanish-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2025-main-spanish-100-x",
+    "source_document_id": "OJHP-100-X-2505",
+    "source_pdf_sha256": "ef4f61b3a5372b385afce59cac67b409a0503cf0a1534498b6cd1869adbf8c4b",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2025-2/",
+    "source_label": "CKE 2025 · język hiszpański · termin główny · wariant 100-X",
+    "exam_year": 2025,
+    "exam_session": "main",
+    "subject": "spanish",
+    "variant_code": "100-X",
+    "question_count": 14,
+    "supplementary_sources": [
+      {
+        "id": "cke-2025-spanish-recording",
+        "path": "content/cke/sources/2025/jezyk_hiszpanski/OJHP-100-2505_OJHU-100-2505.mp3",
+        "sha256": "d90b53fe50eb6c34f90dcc576c9b640b03ef500da8e07b53f23b7f184b303ac3",
+        "label": "Oficjalne nagranie do zadań 1–4"
+      },
+      {
+        "id": "cke-2025-spanish-transcript",
+        "path": "content/cke/sources/2025/jezyk_hiszpanski/OJHP-100-2505_OJHU-100-2505-transkrypcja.pdf",
+        "sha256": "e9e3b7bf0ae3d79f8b88ce53640e31d48b079eb3f2a6b3e0caf02b67de89db8d",
+        "label": "Transkrypcja nagrań"
+      },
+      {
+        "id": "cke-2025-spanish-answer-card",
+        "path": "content/cke/sources/2025/jezyk_hiszpanski/OJHP-100-X-2505-karta-odpowiedzi.pdf",
+        "sha256": "65b373633743cb2599d31e297edc278e690415dbd82ee85c2e1481043d1c5142",
+        "label": "Karta odpowiedzi, wersja X"
+      },
+      {
+        "id": "cke-2025-spanish-scoring-rules",
+        "path": "content/cke/sources/2025/jezyk_hiszpanski/OJHP-100-2505-zasady.pdf",
+        "sha256": "11770b5a356adab1347655ea72a99f5870f1b05e04a484f1c2bd888aaa355536",
+        "label": "Zasady oceniania rozwiązań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "questions": [
+    {
+      "id": "cke-2025-main-spanish-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        3,
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — wybór wielokrotny",
+      "difficulty": 2,
+      "prompt": "Usłyszysz dwukrotnie pięć tekstów. W zadaniach 1.1.–1.5., na podstawie informacji\nzawartych w nagraniu, z podanych odpowiedzi wybierz właściwą. Zakreśl jedną z liter:\nA, B albo C.\n1.1. ¿Por qué está corriendo el hombre?\nA. B. C.\n1.2. ¿Qué foto tiene que mandar Pedro a la chica?\nA. B. C.\n1.3. ¿Qué está haciendo el chico?\nA. B. C.\n1.4. La chica habla\nA. de la biblioteca escolar.\nB. del salón de su casa.\nC. de una cafetería.\n1.5. El chico llama a su amigo para\nA. presentarle una idea.\nB. felicitarle por su cumpleaños.\nC. pedirle su opinión sobre un videojuego.",
+      "answer_key": {
+        "accepted_results": [
+          "B, A, A, C, A"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 5,
+        "rules": [
+          "Łącznie 5 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: B, A, A, C, A."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: B, A, A, C, A.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-options-page-3"
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-options-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2025/spanish/ojhp-100-x-2505/ojhp-100-2505.mp3",
+          "sha256": "d90b53fe50eb6c34f90dcc576c9b640b03ef500da8e07b53f23b7f184b303ac3",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka hiszpański.",
+          "caption": "Oficjalne nagranie CKE 2025 — język hiszpański, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        },
+        {
+          "id": "q01-options-page-3",
+          "path": "public/cke/2025/spanish/ojhp-100-x-2505/q01-options-page-3.png",
+          "sha256": "89c3a13e96082a8d7b83f5c2d783d2418d8678032ab9e59bd1bfbeae33d3e1b9",
+          "alt": "Strona 3 arkusza CKE z opcjami do zadania 1 z języka hiszpański.",
+          "caption": "Opcje tekstowe i obrazkowe do zadania 1.",
+          "mime_type": "image/png"
+        },
+        {
+          "id": "q01-options-page-4",
+          "path": "public/cke/2025/spanish/ojhp-100-x-2505/q01-options-page-4.png",
+          "sha256": "cf7ce60132c85438d29a6c563e40fb8d97b2fb391d4e88afc27e751b4b666ff1",
+          "alt": "Strona 4 arkusza CKE z opcjami do zadania 1 z języka hiszpański.",
+          "caption": "Opcje tekstowe i obrazkowe do zadania 1.",
+          "mime_type": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-spanish-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — dopasowywanie",
+      "difficulty": 2,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi na temat muzyki. Na podstawie informacji\nzawartych w nagraniu dopasuj do każdej wypowiedzi (2.1.–2.4.) odpowiadające jej\nzdanie (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej wypowiedzi.\nEsta persona dice que\nA. no tiene talento musical.\nB. no pudo ir a un concierto.\nC. invitó a alguien a un evento.\nD. inesperadamente ganó algo.\nE. cambió de opinión sobre algo.\n2.1. 2.2. 2.3. 2.4.",
+      "answer_key": {
+        "accepted_results": [
+          "D, B, A, E"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: D, B, A, E."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: D, B, A, E.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2025/spanish/ojhp-100-x-2505/ojhp-100-2505.mp3",
+          "sha256": "d90b53fe50eb6c34f90dcc576c9b640b03ef500da8e07b53f23b7f184b303ac3",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka hiszpański.",
+          "caption": "Oficjalne nagranie CKE 2025 — język hiszpański, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-spanish-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe — rozumienie ze słuchu",
+      "difficulty": 2,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi związane ze sportem (3.1.–3.4.). Do każdej\nz nich dobierz właściwą reakcję (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedna reakcja została podana dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. La camiseta de mi equipo favorito, claro está.\nB. Pues a mí me pareció fantástico.\nC. No sé exactamente, pero pronto.\nD. Sí, jugaron muy bien.\nE. ¡Felicidades!\n3.1. 3.2. 3.3. 3.4.",
+      "answer_key": {
+        "accepted_results": [
+          "C, E, B, A"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: C, E, B, A."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: C, E, B, A.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2025/spanish/ojhp-100-x-2505/ojhp-100-2505.mp3",
+          "sha256": "d90b53fe50eb6c34f90dcc576c9b640b03ef500da8e07b53f23b7f184b303ac3",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka hiszpański.",
+          "caption": "Oficjalne nagranie CKE 2025 — język hiszpański, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-spanish-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — uzupełnianie luk",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie wywiad na temat pracy w szkole. Na podstawie informacji\nzawartych w nagraniu uzupełnij luki w zdaniach 4.1.–4.3., tak aby jak najbardziej\nprecyzyjnie oddać sens wysłuchanego tekstu. Luki należy uzupełnić w języku\nhiszpańskim.\n4.1. La señora Delgado trabaja en el colegio desde hace ____________________________\naños.\n4.2. Según la señora Delgado, en el pasado los chicos comían _______________________\nque los chicos de hoy.\n4.3. De profesión la señora Delgado es _________________________________________.",
+      "answer_key": {
+        "accepted_results": [
+          "cuarenta; más; cocinera"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: cuarenta; más; cocinera."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: cuarenta; más; cocinera.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2025/spanish/ojhp-100-x-2505/ojhp-100-2505.mp3",
+          "sha256": "d90b53fe50eb6c34f90dcc576c9b640b03ef500da8e07b53f23b7f184b303ac3",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka hiszpański.",
+          "caption": "Oficjalne nagranie CKE 2025 — język hiszpański, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-spanish-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe",
+      "difficulty": 2,
+      "prompt": "Dla każdej z opisanych sytuacji (5.1.–5.4.) wybierz właściwą reakcję. Zakreśl jedną\nz liter: A, B albo C.\n5.1. Koleżanka pyta Cię, co sądzisz o znanej w Twoim mieście cukierni. Co jej\nodpowiesz?\nA. Me encanta hacer tartas de fruta.\nB. No entiendo por qué es tan popular.\nC. Hay una pastelería nueva en mi calle.\n5.2. Chcesz wysłać koleżance pocztówkę z wakacji. Jak zapytasz ją o adres?\nA. ¿Te doy mi dirección?\nB. ¿En qué dirección vas?\nC. ¿Cuál es tu dirección?\n5.3. Jesteś pod wrażeniem umiejętności pływackich Twojego kolegi. Jak go\npochwalisz?\nA. Debes entrenar más.\nB. Me gustaría nadar tan bien como tú.\nC. Creo que nadar todos los días no es sano.\n5.4. Wchodzisz z kolegą do sali kinowej. Jak przypomnisz mu o zakazie używania\ntelefonów komórkowych?\nA. ¿Has apagado el móvil?\nB. Por favor, ¡coge el teléfono!\nC. Mejor llévate el smartphone.",
+      "answer_key": {
+        "accepted_results": [
+          "B, C, B, A"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: B, C, B, A."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: B, C, B, A.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-spanish-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe — uzupełnianie dialogów",
+      "difficulty": 2,
+      "prompt": "Uzupełnij dialogi 6.1.–6.2. Wpisz w każdą lukę brakujący fragment wypowiedzi, tak aby\notrzymać spójne i logiczne teksty. Luki należy uzupełnić w języku hiszpańskim.\nUwaga! W każdą lukę możesz wpisać maksymalnie trzy wyrazy.\n6.1. X: Perdone, profesora, ¿___________________________________ piętro en español?\nY: Hay dos palabras: piso o planta.\n6.2. X: Buenos días, me llamo Pablo Vargas.\nY: Yo soy Pablo Jiménez. ______________________________________ de conocerle.\nX: Mucho gusto.",
+      "answer_key": {
+        "accepted_results": [
+          "cómo se dice; Encantado / Me alegro"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Łącznie 2 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: cómo se dice; Encantado / Me alegro."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: cómo se dice; Encantado / Me alegro.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-spanish-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        8,
+        9
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie tekstów pisanych",
+      "difficulty": 2,
+      "prompt": "Przeczytaj teksty. W zadaniach 7.1.–7.4. z podanych odpowiedzi wybierz właściwą,\nzgodną z treścią tekstu. Zakreśl jedną z liter: A, B albo C.\nROSA: ¡Uff, qué cansada estoy! Han venido mis primos de\nFrancia y he tenido que ocuparme de ellos todo el fin de semana.\nSon unos pequeños tiranos. No me dejan tranquila ni un momento.\nAdemás, hablan una mezcla de francés y español que no\nentiendo.\nTOMÁS: ¿Y cuándo se van?\nROSA: El jueves.\nTOMÁS: ¿Has ido con ellos a un parque de atracciones?\nROSA: No, pero es buena idea. Lo haré mañana. ¡Gracias!\n7.1. Rosa dice que\nA. se comunica bien con sus primos.\nB. ha pasado un fin de semana tranquilo.\nC. llevará a sus primos a un lugar divertido.\n10 de marzo, 14:00\n@Amelia123\n¡Hola!\n¿Estás buscando un bolso pequeño para\nllevar solo lo más necesario: dinero,\ndocumentos y el teléfono?\nSeguro que este te gustará. Es prácticamente\nnuevo. Aquí tienes una foto. 7.2. Amelia se dirige a una persona\ninteresada en\nA. recuperar su bolso.\nB. comprar un bolso.\nPrecio a negociar.\nC. vender un bolso.\nMi dirección es: amelia123@xyz.com\nPaula Hola, amigos:\nRobles Como sabéis, este fin de semana organizamos un baile escolar. Muchos\nestudiantes participan en los preparativos para este evento. Yo personalmente\nvoy a preparar luces especiales para crear ambiente. Lo que pasa es que\nno sé cómo llevarlas al colegio (mi familia no tiene coche). ¿Me ayudáis\na solucionar este problema? Espero vuestras propuestas.\n7.3. Paula escribe este texto para\nA. invitar a un evento.\nB. dar un consejo.\nC. pedir un favor.\nJugando en la cocina:\nAquí tenéis una receta muy sencilla. Los ingredientes son más o menos los mismos que\nlos que necesitamos para hacer pasta y seguro que los tenéis en casa.\n• 1 vaso de harina\n• 1 vaso de sal\n• un poco de agua\nMezcláis todos los ingredientes y formáis una bola que ponéis en la nevera por más\no menos media hora.\nCon esta masa hacéis todo lo que queráis: animales, flores, casas, platos... y luego\nlos ponéis a secar al aire libre durante 24 horas o, si preferís, en el horno a 60oC\ndurante 4 o 5 horas.\nAl final, pintáis vuestras obras de arte. Será un bonito regalo de Navidad o de\ncumpleaños, pero cuidado: NO SON PARA COMER\n¡Que lo paséis bien!\n7.4. El autor de este texto habla de cómo\nA. organizar una fiesta.\nB. preparar un postre.\nC. hacer unas figuras.",
+      "answer_key": {
+        "accepted_results": [
+          "C, B, C, C"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: C, B, C, C."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: C, B, C, C.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-spanish-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Spójność tekstu",
+      "difficulty": 2,
+      "prompt": "Przeczytaj tekst, z którego usunięto trzy zdania. Wpisz w każdą lukę (8.1.–8.3.) literę,\nktórą oznaczono brakujące zdanie (A–D), tak aby otrzymać spójny i logiczny tekst.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej luki.\nLA SIESTA\nEn las últimas décadas, la siesta se ha hecho muy popular en todo el mundo. 8.1. _____\nAhora cada vez más gente duerme la siesta también en otros países.\nLos expertos dicen que es un hábito muy natural y sano. Gracias a la siesta, baja\nel estrés, mejora nuestro estado de ánimo y la memoria. 8.2. _____ Todo lo contrario:\nnos ayuda a concentrarnos en los estudios o en el trabajo. Hoy en día, en Estados Unidos,\nChina o Japón hay centros de trabajo con salas especiales para echarse la siesta*.\n8.3. _____ Después de estos quince o veinte minutos de descanso trabajan mejor y con\nmás ganas.\nNa podstawie: www.cosasdesalud.es\n* Echarse la siesta – dormir la siesta.\nA. Tienen más fuerza para seguir trabajando.\nB. Por eso, dormir la siesta no significa perder el tiempo.\nC. Allí los trabajadores pueden relajarse y recuperar la energía.\nD. Antes solo era una costumbre típica de España, Italia e Hispanoamérica.",
+      "answer_key": {
+        "accepted_results": [
+          "D, B, C"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: D, B, C."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: D, B, C.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-spanish-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        11
+      ],
+      "type": "long_text",
+      "topic": "Wyszukiwanie informacji",
+      "difficulty": 2,
+      "prompt": "Przeczytaj trzy teksty dotyczące map (A–C) oraz pytania 9.1.–9.4. Do każdego pytania\ndopasuj właściwy tekst. Wpisz rozwiązania do tabeli.\nUwaga! Jeden z tekstów pasuje do dwóch pytań.\nMAPAS\nEl profesor de Geografía nos dio una tarea extraña que me pareció completamente\ninútil: inventar una isla y hacer un mapa físico de ella. Cuando empecé el trabajo,\nA. creía que era fácil, pero resultó muy complicado. Sin embargo, ahora estoy muy\ncontento. En tres días aprendí más que durante todo el semestre. Me gustaría hacer\ncosas parecidas más frecuentemente.\nEl mes pasado viajé con mi padre a un pequeño pueblo situado en un bosque.\nAl principio del viaje todo iba bien porque papá seguía el mapa virtual en su móvil.\nB. De repente, empezó una tormenta y perdimos la conexión con Internet. Papá tenía\ntambién un viejo mapa de papel. Leerlo no fue nada fácil. Nos perdimos varias\nveces. Al final llegamos, pero fue una verdadera aventura.\nA mis abuelos les encantan los muebles antiguos. Hace poco se han comprado\nun cofre del siglo XVIII. Dentro había un mapa de un bosque con una cruz roja en\nC. el medio. La leyenda del mapa decía que la cruz indicaba el lugar en el que había\nun tesoro: una caja con monedas de oro. Lo malo es que no decía dónde estaba\nese bosque. ¡Qué pena! ¡Me gustaría tanto encontrar un tesoro!\n¿En cuál de los textos su autor\n9.1. se lamenta de no poder realizar su deseo?\n9.2. cambió de opinión sobre una actividad?\n9.3. se refiere a los gustos de sus familiares?\n9.4. informa de las consecuencias de un cambio del tiempo atmosférico?",
+      "answer_key": {
+        "accepted_results": [
+          "C, A, C, B"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: C, A, C, B."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: C, A, C, B.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-spanish-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        12,
+        13
+      ],
+      "type": "long_text",
+      "topic": "Przetwarzanie wypowiedzi",
+      "difficulty": 2,
+      "prompt": "Przeczytaj tekst. Uzupełnij w e-mailu do Michała luki 10.1.–10.3. zgodnie z treścią\ntekstu, tak aby jak najbardziej precyzyjnie oddać sens podanych informacji. Luki\nnależy uzupełnić w języku polskim.\nUNAS VACACIONES INTERESANTES\n¿Has pensado alguna vez en hacer un viaje en kayak,\nademás, un kayak que has hecho tú mismo con tus\npropias manos? Con la propuesta que os presento hoy\neso resulta posible.\nEl Club Canoa organiza este verano un taller\nespecial en el que podrás fabricar tu propia canoa.\nAdemás de todos los materiales y herramientas\nnecesarios, el club ofrece la ayuda de sus expertos.\nEl taller, de 50 horas, tendrá lugar durante las dos\núltimas semanas de junio. A principios del mes\nsiguiente empezará el viaje en kayak, que durará\n12 días.\nDurante el trayecto los participantes dormirán en tiendas de campaña y ellos mismos\nprepararán sus comidas. Los organizadores garantizan coches especiales que\ntransportarán las tiendas de campaña y el equipaje de los participantes.\nRecomiendo esta aventura en canoa a gente que ama la naturaleza, quiere aprender\ncosas nuevas y prefiere descansar de manera activa.\n¿Estás interesado? Haz clic aquí para conocer los detalles de esta oferta.\nNa podstawie: www.kayakingspain.com\nMichał@cbd.pl\nWakacje w kajaku\nCześć Michał!\nJuż wiem, co będziemy robić w wakacje. Znalazłem na pewnym blogu super ofertę spływu\nkajakiem. Najciekawsze jest to, że kajak trzeba 10.1. _____________________________\n_____________________. Ale o tym pogadamy później. Spływ zaczyna się w pierwszych\ndniach 10.2. ______________________ i trwa około dwóch tygodni. Podoba mi się spanie\nw namiotach, ale trochę mnie martwi, że podczas spływu będziemy musieli samodzielnie\n10.3. ____________________________________. Nie jestem w tym dobry. Na szczęście,\nspecjalne samochody będą woziły nasze rzeczy. To spore udogodnienie.\nPrześlę Ci link z ofertą, żebyś mógł sprawdzić szczegóły.\nPozdrawiam\nAndrzej",
+      "answer_key": {
+        "accepted_results": [
+          "samodzielnie/samemu zrobić; lipca; przygotowywać posiłki/jedzenie"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: samodzielnie/samemu zrobić; lipca; przygotowywać posiłki/jedzenie."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: samodzielnie/samemu zrobić; lipca; przygotowywać posiłki/jedzenie.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-spanish-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — wybór wyrazów",
+      "difficulty": 2,
+      "prompt": "Przeczytaj tekst. Spośród wyrazów podanych w ramce wybierz te, które są\npoprawnym uzupełnieniem luk 11.1.–11.3. Wpisz odpowiednią literę (A–F) obok\nnumeru każdej luki.\nUwaga! Trzy wyrazy zostały podane dodatkowo i nie pasują do żadnej luki.\nA. antes B. dentro C. libres D. llenos E. salir F. entrar\nDESAYUNO GRATUITO\nEl metro de Tokio es el transporte público más popular para moverse por la capital\njaponesa. Cada día casi 9 millones de personas lo utilizan para ir al trabajo\no al colegio. Entre las 8:00 y las 9:00 los trenes siempre están tan 11.1. _____ de\ngente que el viaje no es cómodo.\nPara cambiar esta situación, el Ayuntamiento de la ciudad ha tenido una idea\ninteresante: durante un mes, a los pasajeros que viajen 11.2. _____ de las 7:30 de\nla mañana se les ofrece un desayuno gratis. Solo hay que registrarse en la página\nweb indicada e ir a uno de los bares especiales donde lo sirven. Muchos habitantes\nde Tokio han decidido 11.3. _____ de casa más temprano para poder disfrutar\ndel sabroso desayuno.\nNa podstawie: www.ilmessaggero.it",
+      "answer_key": {
+        "accepted_results": [
+          "D, A, E"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: D, A, E."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: D, A, E.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-spanish-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        15
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — gramatyka i leksyka",
+      "difficulty": 2,
+      "prompt": "Przeczytaj tekst. Wybierz poprawne uzupełnienie luk 12.1.–12.3. Zakreśl jedną z liter:\nA, B albo C.\n¿CUÁNTO CUESTA DE VERDAD LA ROPA?\nCuando compramos ropa barata, estamos 12.1. _____ de que hacemos bien\ny ahorramos dinero. ¿Pero de verdad vale la pena comprar un par de zapatos\n12.2. _____ diez euros, ponérnoslos unas pocas veces y tirarlos a la basura?\nSi gastamos un poco más, tendremos zapatos de mejor calidad que podremos\n12.3. _____ más tiempo. Lo mismo se refiere a muchos otros artículos. Un precio bajo\nno siempre significa ahorro.\n12.1.\nA. solos\nB. serios\nC. seguros\n12.2.\nA. por\nB. para\nC. sobre\n12.3.\nA. usar\nB. hacer\nC. practicar",
+      "answer_key": {
+        "accepted_results": [
+          "C, A, A"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: C, A, A."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: C, A, A.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-spanish-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Transformacje leksykalno-gramatyczne",
+      "difficulty": 3,
+      "prompt": "Przetłumacz na język hiszpański fragmenty podane w nawiasach, tak aby otrzymać\nzdania logiczne i gramatycznie poprawne. Wymagana jest pełna poprawność\nortograficzna wpisywanych fragmentów zdań.\nUwaga! W każdą lukę możesz wpisać maksymalnie trzy wyrazy.\n13.1. Ayer (poszedłem do lekarza) ______________________________________________\ncon mi madre.\n13.2. Perdone, ¿(gdzie są) ___________________________________________ los baños?\n13.3. ¿Puedes (powiedzieć mi) ________________________________________ qué haces\npor aquí?",
+      "answer_key": {
+        "accepted_results": [
+          "fui al médico / fui al doctor; dónde están / dónde se encuentran; decirme"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: fui al médico / fui al doctor; dónde están / dónde se encuentran; decirme."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: fui al médico / fui al doctor; dónde están / dónde se encuentran; decirme.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-spanish-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        16,
+        20
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna — e-mail",
+      "difficulty": 3,
+      "prompt": "Bierzesz udział w szkolnej wymianie międzynarodowej. Napisz e-mail\ndo hiszpańskojęzycznego kolegi, którego będziesz gościć u siebie. W e-mailu:\n• przedstaw koledze swoje zainteresowania\n• wyjaśnij mu, w jaki sposób Twoja rodzina przygotowuje się na jego przyjazd\n• opisz pokój, w którym będzie mieszkał podczas pobytu w Polsce.\nNapisz swoją wypowiedź w języku hiszpańskim. Podpisz się jako XYZ.\nRozwiń swoją wypowiedź w każdym z trzech podpunktów, tak aby osoba nieznająca\npolecenia w języku polskim uzyskała wszystkie wskazane w nim informacje. Pamiętaj, że\ndługość wypowiedzi powinna wynosić od 50 do 120 wyrazów (nie licząc wyrazów podanych\nna początku wypowiedzi). Oceniane są: umiejętność pełnego przekazania informacji,\nspójność, bogactwo językowe oraz poprawność językowa.",
+      "answer_key": {
+        "assessment": "rubric",
+        "minimum_words": 50,
+        "maximum_words": 120
+      },
+      "scoring": {
+        "max_points": 10,
+        "rules": [
+          "0–4 pkt – treść: odniesienie się do trzech podpunktów i ich rozwinięcie.",
+          "0–2 pkt – spójność i logika wypowiedzi.",
+          "0–2 pkt – zakres środków językowych.",
+          "0–2 pkt – poprawność środków językowych."
+        ]
+      },
+      "explanation": "Odpowiedź jest oceniana według oficjalnej skali CKE: treść, spójność, zakres i poprawność językowa.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    }
+  ]
+}

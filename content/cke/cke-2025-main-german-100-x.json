@@ -1,0 +1,646 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2025-main-german-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2025-main-german-100-x",
+    "source_document_id": "OJNP-100-X-2505",
+    "source_pdf_sha256": "c51008bae5ed46fc1ab459a3fe69cbdf12fb47fa9fc13ea577ffb8a6392aa4a6",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2025-2/",
+    "source_label": "CKE 2025 · język niemiecki · termin główny · wariant 100-X",
+    "exam_year": 2025,
+    "exam_session": "main",
+    "subject": "german",
+    "variant_code": "100-X",
+    "question_count": 14,
+    "supplementary_sources": [
+      {
+        "id": "cke-2025-german-recording",
+        "path": "content/cke/sources/2025/jezyk_niemiecki/OJNP-100-2505_OJNU-100-2505.mp3",
+        "sha256": "ffa52f882d12684381b16fd8cb4099f3041a085dc234dd46d347e6e89d493994",
+        "label": "Oficjalne nagranie do zadań 1–4"
+      },
+      {
+        "id": "cke-2025-german-transcript",
+        "path": "content/cke/sources/2025/jezyk_niemiecki/OJNP-100-200-400-2505_OJNU-100-2505-transkrypcja.pdf",
+        "sha256": "0eba850c246da35c09b2e5680fa5461172df2f3af5866ce87e3cf5ee221d734c",
+        "label": "Transkrypcja nagrań"
+      },
+      {
+        "id": "cke-2025-german-answer-card",
+        "path": "content/cke/sources/2025/jezyk_niemiecki/OJNP-100-X-2505-karta-odpowiedzi.pdf",
+        "sha256": "376a66fa184fb1643d3ae523e28f80cb67118c3a317dc8ec3e28d29f2d744020",
+        "label": "Karta odpowiedzi, wersja X"
+      },
+      {
+        "id": "cke-2025-german-scoring-rules",
+        "path": "content/cke/sources/2025/jezyk_niemiecki/OJNP-100-200-400-2505-zasady.pdf",
+        "sha256": "872ab3b06318e6d87b7b190a75a6ac8af9992dc5497878a3f838c731d60e4848",
+        "label": "Zasady oceniania rozwiązań"
+      },
+      {
+        "id": "cke-2025-german-open-answer-card",
+        "path": "content/cke/sources/2025/jezyk_niemiecki/OJNP-100-X-2505-karta-rozwiazan.pdf",
+        "sha256": "ff4e44830d7b0643c40a018f81cfcd027855ee0b946fea6fc2f7ee40ceb76159",
+        "label": "Karta rozwiązań zadań otwartych"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "questions": [
+    {
+      "id": "cke-2025-main-german-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        4,
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — wybór wielokrotny",
+      "difficulty": 2,
+      "prompt": "Usłyszysz dwukrotnie pięć tekstów. W zadaniach 1.1.–1.5., na podstawie informacji\nzawartych w nagraniu, z podanych odpowiedzi wybierz właściwą. Zakreśl jedną z liter:\nA, B albo C.\n1.1. Was essen die Mädchen zu Abend?\nA. B. C.\n1.2. Was sammelt Thomas?\nA. B. C.\n1.3. Wo ist Blanca jetzt?\nA. B. C.\n1.4. Worüber sprechen die Personen?\nA. Über Leons Schule.\nB. Über Leons Training.\nC. Über Leons Krankheit.\n1.5. Warum ruft der Junge Claudia an?\nA. Er kritisiert ein Buch.\nB. Er lädt sie zu einem Film ein.\nC. Er gratuliert ihr zum Gewinn.",
+      "answer_key": {
+        "accepted_results": [
+          "A, B, B, C, B"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 5,
+        "rules": [
+          "Łącznie 5 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: A, B, B, C, B."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: A, B, B, C, B.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-options-page-4"
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-options-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2025/german/ojnp-100-x-2505/ojnp-100-2505.mp3",
+          "sha256": "ffa52f882d12684381b16fd8cb4099f3041a085dc234dd46d347e6e89d493994",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka niemiecki.",
+          "caption": "Oficjalne nagranie CKE 2025 — język niemiecki, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        },
+        {
+          "id": "q01-options-page-4",
+          "path": "public/cke/2025/german/ojnp-100-x-2505/q01-options-page-4.png",
+          "sha256": "8efb6f99040472167d87a7fcbc74b1e818809977791bb30280798cfd14f3152e",
+          "alt": "Strona 4 arkusza CKE z opcjami do zadania 1 z języka niemiecki.",
+          "caption": "Opcje tekstowe i obrazkowe do zadania 1.",
+          "mime_type": "image/png"
+        },
+        {
+          "id": "q01-options-page-5",
+          "path": "public/cke/2025/german/ojnp-100-x-2505/q01-options-page-5.png",
+          "sha256": "7d900fa48155cd0ef58d4781df999553896d4ba7ace6464e02e74bc11bfcf1ab",
+          "alt": "Strona 5 arkusza CKE z opcjami do zadania 1 z języka niemiecki.",
+          "caption": "Opcje tekstowe i obrazkowe do zadania 1.",
+          "mime_type": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-german-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — dopasowywanie",
+      "difficulty": 2,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi na temat spędzania wakacji. Na podstawie\ninformacji zawartych w nagraniu dopasuj do każdej wypowiedzi (2.1.–2.4.)\nodpowiadające jej zdanie (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej wypowiedzi.\nDiese Person\nA. reist in diesen Ferien nicht.\nB. macht den ganzen Tag Sport.\nC. braucht einen neuen Rucksack.\nD. hat den ersten Platz bekommen.\nE. kann etwas in einer neuen Sprache sagen.\n2.1. 2.2. 2.3. 2.4.",
+      "answer_key": {
+        "accepted_results": [
+          "D, E, B, A"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: D, E, B, A."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: D, E, B, A.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2025/german/ojnp-100-x-2505/ojnp-100-2505.mp3",
+          "sha256": "ffa52f882d12684381b16fd8cb4099f3041a085dc234dd46d347e6e89d493994",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka niemiecki.",
+          "caption": "Oficjalne nagranie CKE 2025 — język niemiecki, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-german-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe — rozumienie ze słuchu",
+      "difficulty": 2,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi dotyczące miejsca zamieszkania (3.1.–3.4.).\nDo każdej z nich dobierz właściwą reakcję (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedna reakcja została podana dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. In Frankfurt.\nB. Sie stehen im Keller.\nC. Sehr schön und groß.\nD. Nur zwei, dazu Küche und Bad.\nE. Klar! Am besten in unserem Garten.\n3.1. 3.2. 3.3. 3.4.",
+      "answer_key": {
+        "accepted_results": [
+          "A, D, E, C"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: A, D, E, C."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: A, D, E, C.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2025/german/ojnp-100-x-2505/ojnp-100-2505.mp3",
+          "sha256": "ffa52f882d12684381b16fd8cb4099f3041a085dc234dd46d347e6e89d493994",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka niemiecki.",
+          "caption": "Oficjalne nagranie CKE 2025 — język niemiecki, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-german-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        2
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — uzupełnianie luk",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie wypowiedź Daniela o wycieczce klasowej. Na podstawie informacji\nzawartych w nagraniu uzupełnij luki 4.1.–4.3. w zdaniach, tak aby jak najbardziej\nprecyzyjnie oddać sens wysłuchanego tekstu. Luki należy uzupełnić w języku\nniemieckim.\n.e Z\nn a Daniel besucht die 4.1. _____________________________ Klasse. a p\nin\ne\nc\nis\ny\nn\no a\ną m\nd ę b a rg\ne in\nin\ną\nk\nm\nDie Klassen sind mit dem 4.2. _____________________________ nach Hamburg gefahren.\ne\ns\nie\np\na r a\nz\no p\no z a\nra\nm\ne is\ne n\nk ą\nn ie\nig b\nra\nm\nIn der Philharmonie haben die Schüler von einer 4.3. _____________________________ ę\nd ą\na o\nn\ny\ndas Stadtpanorama fotografiert. c e\nn\ns ip\na Z\nia\nn e .",
+      "answer_key": {
+        "accepted_results": [
+          "7. / siebte; Bus; Plattform"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: 7. / siebte; Bus; Plattform."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: 7. / siebte; Bus; Plattform.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "public/cke/2025/german/ojnp-100-x-2505/ojnp-100-2505.mp3",
+          "sha256": "ffa52f882d12684381b16fd8cb4099f3041a085dc234dd46d347e6e89d493994",
+          "alt": "Pełne oficjalne nagranie CKE do zadań 1–4 z języka niemiecki.",
+          "caption": "Oficjalne nagranie CKE 2025 — język niemiecki, zadania 1–4",
+          "mime_type": "audio/mpeg"
+        }
+      ]
+    },
+    {
+      "id": "cke-2025-main-german-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe",
+      "difficulty": 2,
+      "prompt": "Dla każdej z opisanych sytuacji (5.1.–5.4.) wybierz właściwą reakcję. Zakreśl jedną\nz liter: A, B albo C.\n5.1. Nie jest dla Ciebie zrozumiałe, co powiedziała lekarka. Jak poprosisz ją\no powtórzenie informacji?\nA. Sie brauchen Ruhe!\nB. Ich verstehe Sie sehr gut!\nC. Sagen Sie das noch einmal!\n5.2. Kolega mówi Ci, że zgubił swoje dokumenty. Jak wyrazisz zrozumienie dla jego\ntrudnej sytuacji?\nA. So ein Pech!\nB. Das ist nett von dir!\nC. Vielen Dank!\n5.3. Chcesz przeprosić koleżankę za spóźnienie. Co jej powiesz?\nA. Aber gern!\nB. Danke, gleichfalls!\nC. Entschuldige bitte!\n5.4. Kolega zaprosił Cię na urodziny, ale musisz odmówić. Co mu powiesz?\nA. Er hat keine Idee.\nB. Ich kann leider nicht.\nC. Wir mögen Partys.",
+      "answer_key": {
+        "accepted_results": [
+          "C, A, C, B"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: C, A, C, B."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: C, A, C, B.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-german-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        3
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe — uzupełnianie dialogów",
+      "difficulty": 2,
+      "prompt": "Uzupełnij dialogi 6.1.–6.2. Wpisz w każdą lukę brakujący fragment wypowiedzi, tak aby\notrzymać spójne i logiczne teksty. Luki należy uzupełnić w języku niemieckim.\n.e Z\nn a\na p\nin\ne c 6.1. X: Was ist deine Lieblingsspeise?\nis\ny n\no a\ną m\nd ę b Y: Ich ____________________________________________________ am liebsten. a rg\ne in\nin e\ną\nk\nm\ns\nie\np\na r a\nz\no p\no z a\nra\nm\ne is\ne n\n6.2. X: Tante Luise, _________________________________ ich heute ins Kino gehen? k ą\nn ie\nig Y: Ja, kein Problem, aber mach zuerst die Hausaufgaben! b\nra\nm\nę\nd ą\na o\nn c\ny\ne\nn\ns ip\na Z\nia\nn e .",
+      "answer_key": {
+        "accepted_results": [
+          "mag / esse / habe oraz nazwa potrawy w języku niemieckim; darf / kann"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Łącznie 2 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: mag / esse / habe oraz nazwa potrawy w języku niemieckim; darf / kann."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: mag / esse / habe oraz nazwa potrawy w języku niemieckim; darf / kann.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-german-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        8,
+        9
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie tekstów pisanych",
+      "difficulty": 2,
+      "prompt": "Przeczytaj teksty. W zadaniach 7.1.–7.4. z podanych odpowiedzi wybierz właściwą,\nzgodną z treścią tekstu. Zakreśl jedną z liter: A, B albo C.\nIst das nicht faszinierend?\nSchon vor 400 Millionen Jahren gab es Spinnen auf der Erde. Sie lebten\nschon viel früher als Dinosaurier und Krokodile. Spinnen und Skorpione\nsind in der Gruppe der ersten Tiere auf der Welt. Dank ihrer genialen\nKonstruktion leben sie bis heute.\nNa podstawie: www.scinexx.de\n7.1. Welche Tiere lebten auf der Erde zuerst mit Spinnen zusammen?\nA. Krokodile.\nB. Dinosaurier.\nC. Skorpione.\nHi! Ich bin schon da und warte auf dich. Ich sitze auf dem\nroten Sofa links von der Ticketkasse. Die Eintrittskarten\nhabe ich gerade gekauft. Wir haben Plätze in der letzten\nReihe. Mega, oder? Kaufst du uns etwas zum Trinken?\n7.2. Wo ist der Autor des Textes?\nA. Im Bus.\nB. Im Kino.\nC. Im Restaurant.\n15.11., 12:11 Uhr | -Silbermond-\nHey,\nErik ist mein Zwillingsbruder. Eigentlich mag ich ihn, aber wir streiten sehr oft. Das nervt\nmich und ich möchte das ändern. Ich weiß aber nicht wie. Habt ihr eine Idee? Mein Bruder\nhat viele Freunde, die ihn jeden Tag besuchen. Sie sind dann laut und hören laute Musik.\nSie haben dann einen tollen Abend, aber ich kann dann gar nicht lernen. Und wenn meine\nFreunde kommen, gibt es immer Konflikte mit meinem Bruder. Was soll ich machen? Helft\nmir, bitte!\nNa podstawie: www.bke-beratung.de\n7.3. Warum schreibt der Autor den Post?\nA. Er fragt nach Tipps.\nB. Er empfiehlt ein Konzert.\nC. Er dankt für Kommentare.\nAusgabe Nr. 35\nS\nC\nH\nU\nL\nE\nX\nP\nR\nE\nSS\nDie neuesten Nachrichten aus der Albrecht-Dürer-Schule\nBesucht uns! Am besten im September! Da feiern wir das Apfelfest auf unserem Altmarkt.\nDort kann man in jedem Café leckeren Apfelkuchen essen. Kommt am besten mit dem\nZug! Nicht weit vom Bahnhof West ist ein Zoo. Der ist sehr interessant. Ein Stück weiter,\nin der Blumenstraße neben unserer Schule, wächst der älteste Baum in unserer Region.\nIn der Nähe gibt es auch einen hohen Kirchturm. Von oben kann man schöne Häuser bis\nzum Horizont sehen.\n(Jacob Gerner)\n7.4. Der Text ist über\nA. die Turniere an der frischen Luft.\nB. die Attraktionen einer Stadt.\nC. die Produktion von Obstsäften.",
+      "answer_key": {
+        "accepted_results": [
+          "C, B, A, B"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: C, B, A, B."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: C, B, A, B.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-german-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Spójność tekstu",
+      "difficulty": 2,
+      "prompt": "Przeczytaj tekst, z którego usunięto trzy zdania. Wpisz w każdą lukę (8.1.–8.3.) literę,\nktórą oznaczono brakujące zdanie (A–D), tak aby otrzymać spójny i logiczny tekst.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej luki.\n„TIMERIDE“ – EINE ZEITREISE DURCH KÖLN\nDer Name „TimeRide“ besteht aus den englischen Wörtern „time“ (Zeit) und „ride“ (Fahrt).\nWollt ihr eine Zeitreise machen? Dann lade ich euch ein! Wir beginnen die Fahrt mit\nSebastian und Jens. 8.1. _____ Deshalb wollen sie mit ihren eigenen Augen sehen, wie\nder Alltag vor hundert Jahren war.\nDie Zeitreise dauert 45 Minuten. Wir fangen an der Station Nr. 1 an. Hier ist das\nLichtspielhaus. 8.2. _____ In einem Saal läuft also ein Film über das alte Köln.\nAnfang des 20. Jahrhunderts hatte\njeder einen Hut auf. Deshalb ist\ndie zweite Station ein Geschäft, wo\neine Hutmacherin arbeitet. Hier kann\nman originelle Retro-Mode-Exponate\nsehen. 8.3. _____ Sie erklärt dabei,\nwie man damals Hüte machte.\nAn der dritten Station setzen wir\neine VR-Brille auf und steigen in eine alte Straßenbahn ein. Dann „fahren“ wir in einer\nComputersimulation durch das Köln im Jahr 1926.\nNa podstawie: www.duda.news\nŹródło: www.getyourguide.pl\nA. So nannte man früher das Kino.\nB. Die Frau zeigt den Kunden diese Modelle.\nC. In der Schule gab es damals strenge Disziplin.\nD. Diese Jungen sind sehr an Geschichte interessiert.",
+      "answer_key": {
+        "accepted_results": [
+          "D, A, B"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: D, A, B."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: D, A, B.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-german-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        11
+      ],
+      "type": "long_text",
+      "topic": "Wyszukiwanie informacji",
+      "difficulty": 2,
+      "prompt": "Przeczytaj trzy opisy robienia zakupów (A–C) oraz zdania 9.1.–9.4. Do każdego zdania\ndopasuj właściwy opis. Wpisz rozwiązania do tabeli.\nUwaga! Jeden z opisów pasuje do dwóch zdań.\nEINKAUFEN OHNE ABFALL\nHelene\nWir wohnen auf dem Land und der nächste Laden ist ein paar Kilometer entfernt.\nDas ist zu weit. Wir bestellen Lebensmittel online und am nächsten Tag bringt\nA.\nein Kurier sie zu uns nach Hause. Wir müssen nicht stundenlang in Supermärkten\neinkaufen. Alles ist frisch, aber leider in Plastik verpackt. Das gefällt mir nicht, denn\nso produzieren wir viel Müll.\nJana\nLeckeres und warmes Brot holt mein Vater von einem Bäcker auf dem Land. Der\nBäcker backt es selbst. Dieses Brot ist teuer, aber schmeckt uns am besten. Es ist in\nB.\nPapier verpackt. Andere Lebensmittel kaufen wir in Supermärkten. Freitags fahren\nwir mit unserem Wagen in ein Einkaufszentrum am Stadtrand. Dort können wir alles\nbekommen, aber man muss dort lange an den Kassen warten. Das hasse ich!\nMiriam\nWir kaufen in einem Bio-Laden ein. Hier gibt es alles unverpackt: egal ob Nudeln,\nReis, Kaffee, Süßigkeiten, Öl oder Waschmittel. Wir bringen Gläser, Kartons und\nC.\nFlaschen in den Laden mit. So haben wir weniger Müll zu Hause. Zum Einkaufen\nfahren wir mit den Fahrrädern. Die Sachen packen wir dann in große\nFahrradtaschen ein.\nNa podstawie: www.spiegel.de\nŹródło: www.amazon.pl\nDiese Familie\n9.1. kauft eine Sache dort, wo man sie macht.\n9.2. verliert keine Zeit für den Weg ins Geschäft.\n9.3. kauft Produkte ohne Verpackung.\n9.4. macht Einkäufe mit dem Auto.",
+      "answer_key": {
+        "accepted_results": [
+          "B, A, C, B"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Łącznie 4 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: B, A, C, B."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: B, A, C, B.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-german-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        4,
+        5
+      ],
+      "type": "long_text",
+      "topic": "Przetwarzanie wypowiedzi",
+      "difficulty": 2,
+      "prompt": "Przeczytaj tekst. Uzupełnij w wiadomości luki 10.1.–10.3. zgodnie z treścią tekstu, tak aby\njak najbardziej precyzyjnie oddać sens podanych informacji. Luki należy uzupełnić\nw języku polskim.\n2025\nInternationaler Fotopreis\nTeilnehmen können Einzelpersonen im Alter von 10 bis 25 Jahren mit Wohnsitz in\nder Europäischen Union. Wir suchen nach jungen Fotografen und Fotografinnen!\nDie Jury wählt die besten Fotos in drei Altersgruppen. In jeder\nGruppe gibt es immer zwei Gewinner. Das bedeutet, dass\ninsgesamt sechs Personen Preise bekommen. Bis zu 1000 Euro\nwarten auf die Sieger!\nUnser Wettbewerb dreht sich um das Thema Schulalltag. Du kannst\nBilder von Schulevents und -projekten oder Bilder voller Action aus\nden Schulpausen zeigen. Möglich sind auch Fotos aus deinem\nInstagram-Profil. Wähle einfach deine vier besten Bilder aus. Fotos\nzu politischen Themen sowie von berühmten Personen akzeptieren\nwir nicht.\nDie Gewinner bekommen eine Einladung zum festlichen Abschluss. Die Organisatoren\nbezahlen die Kosten für die Reise und das Zimmer mit Frühstück im Hostel. Das Mittagessen\nund das Abendbrot gehen auf Kosten der Teilnehmer.\nEinsendeschluss: 31. August 2025\nMehr Informationen hier\nŹródło: www.ww-kurier.de; www.freepik.com\nWYPEŁNIA UCZEŃ\nMiejsce na naklejkę.\nSprawdź, czy kod na naklejce to\nO - 1 0 0 .\nKOD UCZNIA PESEL\nJeżeli tak – przyklej naklejkę.\nJeżeli nie – zgłoś to nauczycielowi.\n.e Z\nn a\na p\nin is\ne y\nc o\ną d\nn a\nm\nę a\nb\ne\nin\nrg\nin\ne\ną s\nk ie\nm\np\na o\nr\na\nz\na\nz o Cześć Asiu, ra\np m\ne k\nis ą\ne n ig\nra\nmusimy koniecznie wziąć udział w świetnym konkursie! Można wygrać naprawdę dużo n ie\nb\nę\nm pieniędzy! d\na\nn\ną\no\ny s ip\na Z\nKonkurs jest przeprowadzany w kategoriach wiekowych, jest ich 10.1. ____________.\nc\ne n ia\nn e\nMy będziemy pewnie w najmłodszej. .\nKażdy uczestnik może wysłać cztery zrobione samodzielnie zdjęcia. Mogą to być\nzdjęcia z wydarzeń szkolnych, nie wolno jednak przesyłać zdjęć znanych osób ani\ndotyczących 10.2. ________________________________________.\nTy też spróbuj, może obie wygramy i pojedziemy na uroczyste zakończenie. Nie\nbędziemy musiały płacić za podróż, za pokój ani za 10.3. _______________________,\nponieważ organizatorzy fundują też ten jeden posiłek.\nCo o tym myślisz? Chyba warto spróbować? Przesyłam Ci link do info o tym konkursie.\n.e\nZ\nn a in\ne\nPozdrawiam a p is\ny\nc\no n\ną d Kasia\na\nm\nę b\ne in\ną\na rg\nin\ne\ns\nk\nm\na r a\nie\np o z a\nz\no\np\ne is\nra\nm\nk ą\ne n ig\nra\nm\nn ie\nb\nę d\na\nn\ną\no\ny s ip\na Z\nc e n ia\nn e\n.",
+      "answer_key": {
+        "accepted_results": [
+          "3 / trzy; polityki; śniadanie"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: 3 / trzy; polityki; śniadanie."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: 3 / trzy; polityki; śniadanie.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-german-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        12
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — wybór wyrazów",
+      "difficulty": 2,
+      "prompt": "Przeczytaj tekst. Spośród wyrazów podanych w ramce wybierz te, które są\npoprawnym uzupełnieniem luk 11.1.–11.3. Wpisz odpowiednią literę (A–F) obok\nnumeru każdej luki.\nUwaga! Trzy wyrazy zostały podane dodatkowo i nie pasują do żadnej luki.\nA. altes B. gutes C. liest D. Tür E. schreibt F. Schultasche\nBESSERE NOTEN DURCH RADFAHREN\nZweite Stunde. Mathe. Amelie (11) holt das Heft\nund das Buch aus der 11.1. _____ und legt\nalles vor sich auf den Tisch.\nIhr Klassenlehrer erklärt, was die Schüler tun\nsollen und 11.2. _____ die Aufgabe an\ndie Tafel. Amelie hört zu und tritt dabei langsam\nin die Pedale. Die Schülerin sitzt auf einem\nFitnessbike.\nIhre Klasse macht bei einem Projekt mit. Seit Beginn des Schuljahres fahren die Schüler\neine Unterrichtsstunde pro Tag Rad.\nWas soll das bringen? Der Schulleiter meint: „Gesunde Schüler, ein 11.3. _____\nKlassenklima und bessere Noten“. Und wie finden die Schüler den Unterricht auf dem\nRad? Amelie sagt: „Ich merke schon, dass ich aktiver am Unterricht mitmache, wenn ich\nauf dem Rad sitze“.\nNa podstawie: www.duda.news",
+      "answer_key": {
+        "accepted_results": [
+          "F, E, B"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: F, E, B."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: F, E, B.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-german-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        13
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — gramatyka i leksyka",
+      "difficulty": 2,
+      "prompt": "Przeczytaj tekst. Wybierz poprawne uzupełnienie luk 12.1.–12.3. Zakreśl jedną z liter:\nA, B albo C.\nDie Kuchenmesse\nWir möchten euch Frau Radka Homolka vorstellen!\nFrau Homolka – Patisserie & Brotback-Künstlerin − gibt bei der Kuchenmesse\nWorkshops.\nMeine Oma, sagt Frau Homolka, war Meisterin im Kuchenbacken und 12.1. _____\nLehrerin in der Küche. Gleich nach der Schule 12.2. _____ meine berufliche Karriere\nbegonnen, die zu meinem Hobby wurde. Ich habe verschiedene Torten gebacken und\ndekoriert.\nVor zwei Jahren habe ich ein paar alte Rezepte für Brot gefunden und kann jetzt auch Brot\nselbst backen. Ich freue 12.3. _____ schon auf eine schöne Zeit auf der Kuchenmesse.\nNa podstawie: www.facebook.com/kuchenmesse/posts\n12.1.\nA. mein\nB. meine\nC. meiner\n12.2.\nA. hast\nB. habt\nC. hat\n12.3.\nA. mich\nB. mir\nC. sich",
+      "answer_key": {
+        "accepted_results": [
+          "B, C, A"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: B, C, A."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: B, C, A.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-german-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Transformacje leksykalno-gramatyczne",
+      "difficulty": 3,
+      "prompt": "Przetłumacz na język niemiecki fragmenty podane w nawiasach, tak aby otrzymać zdania\nlogiczne i gramatycznie poprawne. Wymagana jest pełna poprawność ortograficzna\nwpisywanych fragmentów zdań.\n.e Z\nn a\na p\nin\ne\nc\nis\ny\nn\no a\ną 13.1. (Dzień dobry) ________________________________________________, Frau Meier! m\nd ę b a rg\ne in\nin e\ną\nk\nm\ns\nie\np\na r a\nz\no p\n13.2. Du (musisz) __________________________________________ zur Apotheke gehen. o z a\nra\nm\ne is\ne n\nk ą\nn ie\nig b\nra m 13.3. (Biegam) ____________________________________________________ oft im Park. ę d ą\na o\nn c\ny\ne\nn\ns ip\na Z\nia\nn e .",
+      "answer_key": {
+        "accepted_results": [
+          "Guten Morgen / Guten Tag; musst; Ich jogge / Ich laufe"
+        ],
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Łącznie 3 pkt; punktacja cząstkowa zgodnie z zasadami CKE. Klucz: Guten Morgen / Guten Tag; musst; Ich jogge / Ich laufe."
+        ]
+      },
+      "explanation": "Poprawny klucz według zasad oceniania CKE: Guten Morgen / Guten Tag; musst; Ich jogge / Ich laufe.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    },
+    {
+      "id": "cke-2025-main-german-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna — e-mail",
+      "difficulty": 3,
+      "prompt": "Bierzesz udział w szkolnej wymianie międzynarodowej. Napisz e-mail do\nniemieckojęzycznego kolegi, którego będziesz gościć u siebie. W e-mailu:\n• przedstaw koledze swoje zainteresowania\n• wyjaśnij mu, w jaki sposób Twoja rodzina przygotowuje się na jego przyjazd\n• opisz pokój, w którym będzie on mieszkał podczas pobytu w Polsce.\nNapisz swoją wypowiedź w języku niemieckim. Podpisz się jako XYZ.\nRozwiń swoją wypowiedź w każdym z trzech podpunktów, tak aby osoba nieznająca polecenia\nw języku polskim uzyskała wszystkie wskazane w nim informacje. Pamiętaj, że długość\nwypowiedzi powinna wynosić od 50 do 120 wyrazów (nie licząc wyrazów podanych na początku\nwypowiedzi). Oceniane są: umiejętność pełnego przekazania informacji, spójność, bogactwo\njęzykowe oraz poprawność językowa.",
+      "answer_key": {
+        "assessment": "rubric",
+        "minimum_words": 50,
+        "maximum_words": 120
+      },
+      "scoring": {
+        "max_points": 10,
+        "rules": [
+          "0–4 pkt – treść: odniesienie się do trzech podpunktów i ich rozwinięcie.",
+          "0–2 pkt – spójność i logika wypowiedzi.",
+          "0–2 pkt – zakres środków językowych.",
+          "0–2 pkt – poprawność środków językowych."
+        ]
+      },
+      "explanation": "Odpowiedź jest oceniana według oficjalnej skali CKE: treść, spójność, zakres i poprawność językowa.",
+      "solution_steps": [
+        "Przeczytaj polecenie i wszystkie odpowiedzi lub luki.",
+        "Wskaż fragment nagrania albo tekstu, który uzasadnia rozwiązanie.",
+        "Sprawdź odpowiedź z kluczem i przeanalizuj ewentualny błąd."
+      ],
+      "hints": [
+        "Najpierw określ, jakiej informacji wymaga polecenie.",
+        "W zadaniach językowych zwróć uwagę zarówno na znaczenie, jak i poprawność gramatyczną."
+      ],
+      "content_blocks": [],
+      "assets": []
+    }
+  ]
+}
