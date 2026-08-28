@@ -3,6 +3,7 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 
 const panel = readFileSync(join(process.cwd(), "app/panel/page.tsx"), "utf8");
+const parentStyles = readFileSync(join(process.cwd(), "app/panel/parent-dashboard.css"), "utf8");
 const login = readFileSync(join(process.cwd(), "app/logowanie/page.tsx"), "utf8");
 
 describe("parent panel actions", () => {
@@ -29,6 +30,19 @@ describe("parent panel actions", () => {
     expect(panel).toContain('onClick={() => setParentView("payments")}');
     expect(panel).toContain('parentView === "settings"');
     expect(panel).not.toContain('profile.role === "parent" ? "#polacz-dziecko"');
+  });
+
+  it("uses the supplied parent dashboard shell without removing existing views", () => {
+    expect(panel).toContain('className="parent-dashboard-topbar"');
+    expect(panel).toContain("Konto rodzica");
+    expect(panel).toContain("Płatności i faktury");
+    expect(panel).toContain("LayoutDashboard");
+    expect(panel).toContain("ChartNoAxesColumnIncreasing");
+    expect(panel).toContain("parent-plan-pill");
+    expect(parentStyles).toContain("grid-template-columns: 250px minmax(0, 1fr)");
+    expect(parentStyles).toContain("min-height: 63px");
+    expect(parentStyles).toContain("padding: 32px 36px 48px");
+    expect(parentStyles).not.toContain("box-shadow");
   });
 
   it("keeps plan, privacy and theme controls in their intended places", () => {

@@ -46,6 +46,14 @@ describe("Stripe payment flow contract", () => {
     expect(panel).toContain("Nie pobierzemy kolejnej płatności");
   });
 
+  it("shows a truthful payment summary in the redesigned parent panel", () => {
+    expect(panel).toContain('className="parent-payment-summary"');
+    expect(panel).toContain("Aktywne pakiety Plus");
+    expect(panel).toContain("Wartość zakupów");
+    expect(panel).toContain("Jednorazowy");
+    expect(panel).toContain("bez automatycznego odnowienia");
+  });
+
   it("discloses Stripe, withdrawals, no renewal and card-data minimization", () => {
     expect(legal).toContain("Stripe");
     expect(legal).toContain("automatycznego odnowienia");

@@ -153,7 +153,7 @@ export function ParentProgress({ linkedChildren, pendingRequests, onConnect }: {
   if (!linkedChildren.length) {
     return (
       <>
-        <div className="dashboard-view-heading"><div><span className="dashboard-kicker dark-kicker">Postępy</span><h2>Postępy dziecka</h2></div></div>
+        <div className="dashboard-view-heading"><div><h2>Postęp dziecka</h2><small>Wyniki, regularność i wykorzystanie pomocy AI</small></div></div>
         <Card className="parent-empty-view"><CardHeader><CardTitle>{pendingRequests ? "Połączenie czeka na zatwierdzenie" : "Najpierw połącz konto dziecka"}</CardTitle><CardDescription>{pendingRequests ? "Po zatwierdzeniu prośby pierwsze wyniki pojawią się tutaj automatycznie." : "Wyślij dziecku link rejestracyjny i zatwierdź relację, aby zobaczyć postęp."}</CardDescription></CardHeader><CardContent><Button type="button" onClick={onConnect}>{pendingRequests ? "Przejdź do próśb" : "Połącz konto dziecka"}</Button></CardContent></Card>
       </>
     );
@@ -165,7 +165,7 @@ export function ParentProgress({ linkedChildren, pendingRequests, onConnect }: {
 
   return (
     <>
-      <div className="dashboard-view-heading parent-progress-heading"><div><span className="dashboard-kicker dark-kicker">Postępy</span><h2>{childName}</h2></div>{summary?.latest_activity_at && <small>Ostatnia aktywność: {new Date(summary.latest_activity_at).toLocaleDateString("pl-PL")}</small>}</div>
+      <div className="dashboard-view-heading parent-progress-heading"><div><h2>{childName}</h2><small>Postęp dziecka i najważniejsze obszary nauki</small></div>{summary?.latest_activity_at && <small>Ostatnia aktywność: {new Date(summary.latest_activity_at).toLocaleDateString("pl-PL")}</small>}</div>
 
       <section className="parent-progress-toolbar" aria-label="Wybierz dziecko i okres">
         <div className="parent-child-selector"><span>Dziecko</span><div>{linkedChildren.map((child) => <Button key={child.student_id} type="button" size="sm" variant={effectiveStudentId === child.student_id ? "default" : "outline"} aria-pressed={effectiveStudentId === child.student_id} onClick={() => setSelectedStudentId(child.student_id)}>{child.student_display_name || child.student_email}</Button>)}</div></div>

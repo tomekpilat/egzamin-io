@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "./parent-dashboard.css";
 
 export const metadata: Metadata = {
   title: "Twój panel — egzaminio",

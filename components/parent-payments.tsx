@@ -116,6 +116,9 @@ export function ParentPayments({ linkedChildren, onConnect }: { linkedChildren: 
 
   const effectiveStudentId = linkedChildren.some((child) => child.student_id === selectedStudentId) ? selectedStudentId : linkedChildren[0]?.student_id ?? "";
   const selectedChild = useMemo(() => linkedChildren.find((child) => child.student_id === effectiveStudentId) ?? null, [effectiveStudentId, linkedChildren]);
+  const activePlusCount = linkedChildren.filter((child) => isActivePlus(child, renderedAt)).length;
+  const paidOrders = history.filter((item) => ["paid", "partially_refunded", "refunded"].includes(item.payment_status));
+  const paidTotal = paidOrders.reduce((sum, item) => sum + Math.max(0, item.amount_total - item.amount_refunded), 0);
   const checkoutCancelled = typeof window !== "undefined" && new URLSearchParams(window.location.search).get("checkout") === "anulowana";
   const canPurchase = Boolean(config?.enabled && selectedChild && !isActivePlus(selectedChild, renderedAt) && acceptedTerms && immediateAccess && !submitting);
 
@@ -152,7 +155,13 @@ export function ParentPayments({ linkedChildren, onConnect }: { linkedChildren: 
   }
 
   return <section className="parent-payments" aria-labelledby="parent-payments-title">
-    <div className="dashboard-view-heading"><div><span className="dashboard-kicker dark-kicker">Płatności</span><h2 id="parent-payments-title">Pakiet Plus i historia płatności</h2></div><Button variant="outline" type="button" onClick={() => void refresh()} disabled={loading}>Odśwież historię</Button></div>
+    <div className="dashboard-view-heading"><div><h2 id="parent-payments-title">Płatności</h2><small>Pakiet Plus, historia zakupów i dokumenty Stripe</small></div><Button variant="outline" type="button" onClick={() => void refresh()} disabled={loading}>Odśwież historię</Button></div>
+
+    <div className="parent-payment-summary" aria-label="Podsumowanie płatności">
+      <article><span>Aktywne pakiety Plus</span><b>{activePlusCount}</b><small>dla {linkedChildren.length} {linkedChildren.length === 1 ? "połączonego dziecka" : "połączonych dzieci"}</small></article>
+      <article><span>Wartość zakupów</span><b>{formatPaymentAmount(paidTotal, config?.currency ?? "pln")}</b><small>{paidOrders.length} {paidOrders.length === 1 ? "rozliczona płatność" : "rozliczonych płatności"}</small></article>
+      <article><span>Model płatności</span><b>Jednorazowy</b><small>149 zł · bez automatycznego odnowienia</small></article>
+    </div>
 
     {checkoutCancelled && <Alert><AlertTitle>Płatność nie została pobrana</AlertTitle><AlertDescription>Checkout został zamknięty. Możesz wrócić do zakupu w dowolnym momencie.</AlertDescription></Alert>}
     {error && <Alert variant="destructive"><AlertTitle>Nie udało się wykonać operacji</AlertTitle><AlertDescription>{error}</AlertDescription></Alert>}

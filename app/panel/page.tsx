@@ -3,7 +3,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { User } from "@supabase/supabase-js";
-import { ChevronDown, LogOut, Settings } from "lucide-react";
+import { ChartNoAxesColumnIncreasing, ChevronDown, CircleHelp, CreditCard, LayoutDashboard, LogOut, Settings as SettingsIcon, UserPlus, Users } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 import { FeedbackDialog } from "@/components/feedback-dialog";
 import { ParentPayments } from "@/components/parent-payments";
@@ -74,7 +74,7 @@ function AccountMenu({ displayName, email, className = "", onSettings, onSignOut
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" sideOffset={8} className="dashboard-account-menu">
         <DropdownMenuLabel>{email}</DropdownMenuLabel>
-        <DropdownMenuItem onSelect={onSettings}><Settings aria-hidden="true" /> Ustawienia</DropdownMenuItem>
+        <DropdownMenuItem onSelect={onSettings}><SettingsIcon aria-hidden="true" /> Ustawienia</DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem className="dashboard-signout-item" onSelect={onSignOut}><LogOut aria-hidden="true" /> Wyloguj się</DropdownMenuItem>
       </DropdownMenuContent>
@@ -176,7 +176,7 @@ function ParentPanel({ activeView, parentEmail, requests, linkedChildren, action
       </>}
 
       {activeView === "children" && <>
-        <div className="dashboard-view-heading"><div><span className="dashboard-kicker dark-kicker">Dzieci</span><h2>Postępy i ustawienia nauki</h2></div><Button type="button" onClick={() => onNavigate("connect")}>Połącz kolejne konto</Button></div>
+        <div className="dashboard-view-heading"><div><h2>Dzieci</h2><small>Połączone konta i indywidualne ustawienia nauki</small></div><Button type="button" onClick={() => onNavigate("connect")}>Dodaj dziecko</Button></div>
         {requests.length > 0 && <section className="guardian-requests" aria-labelledby="children-requests-title">
           <div className="guardian-section-heading"><div><Badge variant="secondary">Wymaga decyzji</Badge><h3 id="children-requests-title">Prośby o zgodę opiekuna</h3></div><small>Sprawdź tożsamość dziecka poza serwisem przed zatwierdzeniem.</small></div>
           {requests.map((request) => <article className="guardian-request-card" key={request.request_id}>
@@ -193,7 +193,7 @@ function ParentPanel({ activeView, parentEmail, requests, linkedChildren, action
       {activeView === "payments" && <ParentPayments linkedChildren={linkedChildren} onConnect={() => onNavigate("connect")} />}
 
       {activeView === "connect" && <>
-        <div className="dashboard-view-heading"><div><span className="dashboard-kicker dark-kicker">Połącz konto</span><h2>Zaproś dziecko w trzech krokach</h2></div></div>
+        <div className="dashboard-view-heading"><div><h2>Podłącz dziecko</h2><small>Zaproś ucznia i zatwierdź bezpieczne połączenie kont</small></div></div>
         <Card className="parent-connect-card">
           <CardHeader><Badge variant="secondary">Działa od razu</Badge><CardTitle>Połącz konto dziecka</CardTitle><CardDescription>Wyślij link i swój e-mail. Po rejestracji prośba o zgodę pojawi się w widoku „Dzieci”.</CardDescription></CardHeader>
           <CardContent><div className="parent-connect-steps"><span><b>1</b>Wyślij link</span><span><b>2</b>Dziecko wpisuje Twój e-mail</span><span><b>3</b>Zatwierdzasz prośbę</span></div><div className="parent-connect-actions"><Button type="button" onClick={() => void copyInvite()}>Kopiuj link dla dziecka</Button><Button variant="outline" type="button" onClick={() => void copyGuardianEmail()}>Kopiuj mój e-mail</Button><Button variant="outline" asChild><a href={`mailto:?subject=${encodeURIComponent("Zaproszenie do egzaminio")}&body=${encodeURIComponent(`Załóż konto ucznia przez ten link: ${publicInviteUrl}\nW polu opiekuna wpisz: ${parentEmail}`)}`}>Wyślij e-mailem</a></Button><Button variant="ghost" asChild><a href="/bezpieczenstwo-dzieci-ai">Jak chronimy dane?</a></Button></div>{inviteStatus && <p className="parent-invite-status" role="status">{inviteStatus}</p>}</CardContent>
@@ -506,6 +506,14 @@ export default function DashboardPage() {
     user?.user_metadata?.name ||
     profile.email;
   const parentPlusChildren = profile.role === "parent" ? linkedChildren.filter((child) => child.plan_tier === "plus" && (!child.plan_valid_until || new Date(child.plan_valid_until).getTime() > renderedAt)).length : 0;
+  const parentViewLabels: Record<ParentView, string> = {
+    start: "Przegląd",
+    progress: "Postęp dziecka",
+    children: "Dzieci",
+    connect: "Podłącz dziecko",
+    payments: "Płatności i faktury",
+    settings: "Ustawienia",
+  };
   const focusMode = profile.role === "student" && studentView === "exercises";
   const feedbackContext = profile.role === "parent"
     ? `parent:${parentView}`
@@ -523,16 +531,15 @@ export default function DashboardPage() {
       {!focusMode && profile.role !== "parent" && profile.role !== "student" ? <AccountMenu displayName={displayName} email={profile.email} className="dashboard-session-floating" onSettings={openAccountSettings} onSignOut={() => void signOut()} /> : null}
       {!focusMode && profile.role !== "student" && <aside className="dashboard-sidebar">
         <a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a>
-        <span className="dashboard-nav-label">{profile.role === "parent" ? "Panel rodzica" : profile.role === "teacher" ? "Panel nauczyciela" : "Administracja"}</span>
+        <span className="dashboard-nav-label">{profile.role === "parent" ? "Konto rodzica" : profile.role === "teacher" ? "Panel nauczyciela" : "Administracja"}</span>
         <nav aria-label="Panel">
           {profile.role === "parent" ? <>
-            <button type="button" className={parentView === "start" ? "active" : ""} aria-current={parentView === "start" ? "page" : undefined} onClick={() => setParentView("start")}>Przegląd</button>
-            <button type="button" className="dashboard-nav-with-count" onClick={() => setParentView("children")}><span>Prośby o zgodę</span>{guardianRequests.length > 0 && <b>{guardianRequests.length}</b>}</button>
-            <button type="button" className={parentView === "progress" ? "active" : ""} aria-current={parentView === "progress" ? "page" : undefined} onClick={() => setParentView("progress")}>Postęp dziecka</button>
-            <button type="button" className={parentView === "children" ? "active" : ""} aria-current={parentView === "children" ? "page" : undefined} onClick={() => setParentView("children")}>Dzieci</button>
-            <button type="button" className={parentView === "connect" ? "active" : ""} aria-current={parentView === "connect" ? "page" : undefined} onClick={() => setParentView("connect")}>Podłącz dziecko</button>
-            <button type="button" className={parentView === "payments" ? "active" : ""} aria-current={parentView === "payments" ? "page" : undefined} onClick={() => setParentView("payments")}>Płatności</button>
-            <button type="button" className={parentView === "settings" ? "active" : ""} aria-current={parentView === "settings" ? "page" : undefined} onClick={() => setParentView("settings")}>Ustawienia</button>
+            <button type="button" className={parentView === "start" ? "active" : ""} aria-current={parentView === "start" ? "page" : undefined} onClick={() => setParentView("start")}><LayoutDashboard className="parent-nav-icon" aria-hidden="true" /><span>Przegląd</span></button>
+            <button type="button" className={parentView === "progress" ? "active" : ""} aria-current={parentView === "progress" ? "page" : undefined} onClick={() => setParentView("progress")}><ChartNoAxesColumnIncreasing className="parent-nav-icon" aria-hidden="true" /><span>Postęp dziecka</span></button>
+            <button type="button" className={`${parentView === "children" ? "active " : ""}dashboard-nav-with-count`.trim()} aria-current={parentView === "children" ? "page" : undefined} onClick={() => setParentView("children")}><Users className="parent-nav-icon" aria-hidden="true" /><span>Dzieci</span>{guardianRequests.length > 0 && <b>{guardianRequests.length}</b>}</button>
+            <button type="button" className={parentView === "connect" ? "active" : ""} aria-current={parentView === "connect" ? "page" : undefined} onClick={() => setParentView("connect")}><UserPlus className="parent-nav-icon" aria-hidden="true" /><span>Podłącz dziecko</span></button>
+            <button type="button" className={parentView === "payments" ? "active" : ""} aria-current={parentView === "payments" ? "page" : undefined} onClick={() => setParentView("payments")}><CreditCard className="parent-nav-icon" aria-hidden="true" /><span>Płatności i faktury</span></button>
+            <button type="button" className={parentView === "settings" ? "active" : ""} aria-current={parentView === "settings" ? "page" : undefined} onClick={() => setParentView("settings")}><SettingsIcon className="parent-nav-icon" aria-hidden="true" /><span>Ustawienia</span></button>
           </> : <>
             <a className="active" href="/panel">Start</a>
             <a href="#zadania">{profile.role === "teacher" ? "Zestawy" : "Użytkownicy"}</a>
@@ -555,6 +562,13 @@ export default function DashboardPage() {
       </header>}
 
       <div className="dashboard-main">
+        {!focusMode && profile.role === "parent" && <header className="parent-dashboard-topbar">
+          <span>Konto rodzica <i aria-hidden="true">/</i> <b>{parentViewLabels[parentView]}</b></span>
+          <div>
+            <button type="button" className="parent-plan-pill" onClick={() => setParentView("payments")}>{parentPlusChildren ? `Pakiet Plus · ${parentPlusChildren} ${parentPlusChildren === 1 ? "dziecko" : "dzieci"}` : `Plan Free · ${linkedChildren.length} ${linkedChildren.length === 1 ? "dziecko" : "dzieci"}`}</button>
+            <a className="parent-help-link" href="mailto:kontakt@egzamin.io"><CircleHelp aria-hidden="true" />Pomoc</a>
+          </div>
+        </header>}
         {!focusMode && profile.role !== "student" && profile.role !== "parent" && <header className="dashboard-topbar">
           <div><span>{roleLabels[profile.role]}</span><h1>Cześć, {firstName}!</h1></div>
         </header>}
@@ -565,9 +579,24 @@ export default function DashboardPage() {
           {profile.role === "parent" && <ParentPanel activeView={parentView} parentEmail={profile.email} requests={guardianRequests} linkedChildren={linkedChildren} actionBusy={guardianActionBusy} onNavigate={setParentView} onApprove={(id) => void decideGuardianRequest(id, "approve")} onReject={(id) => void decideGuardianRequest(id, "reject")} onSavePreferences={(studentId, weeklyGoal, accommodationCode, confirmsSensitivePreference) => void saveGuardianPreferences(studentId, weeklyGoal, accommodationCode, confirmsSensitivePreference)} />}
           {profile.role === "teacher" && <TeacherPanel verificationStatus={profile.teacher_verification_status} />}
           {profile.role === "admin" && <AdminPanel counts={counts} feedback={adminFeedback} busy={adminActionBusy} feedbackBusyId={feedbackBusyId} error={adminActionError} onGrantTeacher={grantTeacherRole} onUpdateFeedback={(id, status) => void updateFeedbackStatus(id, status)} />}
-          {((profile.role === "parent" && parentView === "settings") || (profile.role === "student" && studentView === "settings") || (profile.role !== "parent" && profile.role !== "student")) && <Card className="account-settings-card" id="ustawienia">
+          {profile.role === "parent" && parentView === "settings" && <section className="parent-settings-view" id="ustawienia" aria-labelledby="parent-settings-title">
+            <div className="dashboard-view-heading"><div><h2 id="parent-settings-title">Ustawienia</h2><small>Wygląd, prywatność i zarządzanie kontem</small></div></div>
+            <Card className="account-settings-card parent-settings-card">
+              <CardHeader><CardTitle>Wygląd aplikacji</CardTitle><CardDescription>Motyw możesz dopasować do systemu albo wybrać ręcznie.</CardDescription></CardHeader>
+              <CardContent className="account-settings-actions"><div className="account-theme-setting"><span>Motyw</span><ThemeSettings /></div></CardContent>
+            </Card>
+            <Card className="account-settings-card parent-settings-card">
+              <CardHeader><CardTitle>Plan i prywatność</CardTitle><CardDescription>Dokumenty oraz ustawienia związane z korzystaniem z egzaminio.</CardDescription></CardHeader>
+              <CardContent className="account-settings-actions"><Button variant="outline" asChild><a href="/plan-plus#dla-rodzica">Poznaj pakiet Plus</a></Button><Button variant="outline" asChild><a href="/polityka-prywatnosci">Polityka prywatności</a></Button><Button variant="outline" asChild><a href="/bezpieczenstwo-dzieci-ai">Dzieci i AI</a></Button></CardContent>
+            </Card>
+            <Card className="account-settings-card parent-settings-card parent-account-data-card">
+              <CardHeader><CardTitle>Konto i dane</CardTitle><CardDescription>Usunięcie konta obejmuje także powiązania i postępy dzieci. Dokumenty księgowe przechowujemy zgodnie z obowiązującymi przepisami.</CardDescription></CardHeader>
+              <CardContent className="account-settings-actions"><Button variant="outline" asChild><a href="/usun-konto">Usuń konto i dane</a></Button></CardContent>
+            </Card>
+          </section>}
+          {((profile.role === "student" && studentView === "settings") || (profile.role !== "parent" && profile.role !== "student")) && <Card className="account-settings-card" id="ustawienia">
             <CardHeader><CardTitle>Ustawienia konta</CardTitle><CardDescription>Motyw, prywatność i zarządzanie danymi w jednym miejscu.</CardDescription></CardHeader>
-            <CardContent className="account-settings-actions"><div className="account-theme-setting"><span>Wygląd aplikacji</span><ThemeSettings /></div>{(profile.role === "parent" || profile.role === "student") && <Button variant="outline" asChild><a href={profile.role === "parent" ? "/plan-plus#dla-rodzica" : "/plan-plus#dla-ucznia"}>Poznaj pakiet Plus</a></Button>}<Button variant="outline" asChild><a href="/polityka-prywatnosci">Polityka prywatności</a></Button><Button variant="outline" asChild><a href="/usun-konto">Usuń konto i dane</a></Button></CardContent>
+            <CardContent className="account-settings-actions"><div className="account-theme-setting"><span>Wygląd aplikacji</span><ThemeSettings /></div>{profile.role === "student" && <Button variant="outline" asChild><a href="/plan-plus#dla-ucznia">Poznaj pakiet Plus</a></Button>}<Button variant="outline" asChild><a href="/polityka-prywatnosci">Polityka prywatności</a></Button><Button variant="outline" asChild><a href="/usun-konto">Usuń konto i dane</a></Button></CardContent>
           </Card>}
         </div>
       </div>
