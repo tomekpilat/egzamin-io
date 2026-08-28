@@ -1,6 +1,6 @@
 import { cleanup, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { afterEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import RecruitmentCalculatorPage from "@/app/kalkulator-punktow/page";
 
 vi.mock("@/components/site-header", () => ({ SiteHeader: () => <header>egzaminio</header> }));
@@ -23,7 +23,12 @@ vi.mock("@/components/school-threshold-search", () => ({
   })}>Wybierz V LO 1A</button>,
 }));
 
-afterEach(() => cleanup());
+beforeEach(() => vi.stubGlobal("scrollTo", vi.fn()));
+afterEach(() => {
+  cleanup();
+  vi.unstubAllGlobals();
+  window.history.replaceState(null, "", "/");
+});
 
 describe("recruitment calculator screens", () => {
   it("keeps entered points, selects a verified school and shows the sourced comparison", async () => {

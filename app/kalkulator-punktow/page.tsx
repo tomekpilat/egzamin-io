@@ -3,9 +3,9 @@
 
 import { useMemo, useState } from "react";
 import { Info, ShieldCheck } from "lucide-react";
-import { BrandLogo } from "@/components/brand-logo";
 import { SchoolThresholdRequestForm } from "@/components/school-threshold-request-form";
 import { SchoolThresholdSearch } from "@/components/school-threshold-search";
+import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -104,7 +104,8 @@ export default function RecruitmentCalculatorPage() {
       const flow = document.getElementById("calculator-flow-start");
       if (!flow) return;
       const flowTop = flow.offsetTop;
-      if (window.scrollY > flowTop + 8) window.scrollTo({ top: flowTop, behavior: "auto" });
+      const headerHeight = document.querySelector<HTMLElement>(".site-header")?.offsetHeight ?? 0;
+      window.scrollTo({ top: Math.max(0, flowTop - headerHeight), behavior: "auto" });
     }, 0);
   };
 
@@ -127,7 +128,7 @@ export default function RecruitmentCalculatorPage() {
 
       <div id="calculator-flow-start" className="calculator-flow-start" aria-hidden="true" />
       <section className="calculator-app" data-step={activeStep}>
-        {activeStep === "points" ? <header className="calculator-intro"><h1>Kalkulator punktów do liceum</h1><p>Bez zakładania konta. Maksymalnie 200 punktów: 100 z egzaminu i 100 ze świadectwa oraz osiągnięć.</p></header> : null}
+        <header className="calculator-intro"><h1>Kalkulator punktów do liceum</h1><p>Bez zakładania konta. Maksymalnie 200 punktów: 100 z egzaminu i 100 ze świadectwa oraz osiągnięć.</p></header>
         <CalculatorSteps activeStep={activeStep} points={result.total} targetName={targetName} onNavigate={goToStep} />
 
         {activeStep === "points" ? <section id="kalkulator" className="calculator-screen calculator-points-screen" aria-label="Oblicz punkty">
@@ -210,7 +211,7 @@ export default function RecruitmentCalculatorPage() {
         <nav aria-label="Oficjalne źródła zasad rekrutacji"><a href="https://eli.gov.pl/api/acts/DU/2024/989/text.html" target="_blank" rel="noreferrer">Tekst rozporządzenia ↗</a><a href="https://www.gov.pl/web/edukacja/zasady-przeprowadzania-postepowania-rekrutacyjnego-i-postepowania-uzupelniajacego-do-szkol-ponadpodstawowych" target="_blank" rel="noreferrer">Wyjaśnienie Ministerstwa Edukacji ↗</a></nav>
       </article>
 
-      <footer className="calculator-footer"><a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a><div><a href="/polityka-prywatnosci">Polityka prywatności</a><a href="mailto:kontakt@egzamin.io">Kontakt</a></div><small>© 2026 egzaminio · Niezależny projekt edukacyjny, niepowiązany z CKE.</small></footer>
+      <SiteFooter />
     </main>
   );
 }

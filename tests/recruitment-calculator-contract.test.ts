@@ -55,16 +55,27 @@ describe("public recruitment calculator", () => {
     expect(page).toContain('id="calculator-flow"');
     expect(page).toContain('id="calculator-flow-start"');
     expect(page).toContain('document.getElementById("calculator-flow-start")');
-    expect(page).toContain('window.scrollTo({ top: flowTop, behavior: "auto" })');
+    expect(page).toContain('window.scrollTo({ top: Math.max(0, flowTop - headerHeight), behavior: "auto" })');
     expect(page).toContain("const flowTop = flow.offsetTop");
+    expect(page).toContain('document.querySelector<HTMLElement>(".site-header")?.offsetHeight');
     expect(page).not.toContain('behavior: "smooth"');
     expect(page).not.toContain("<br />do liceum");
     expect(page).toContain("calculator-certificate-card");
     expect(page).toContain("calculator-live-score");
     expect(page).toContain("calculator-comparison-summary");
     expect(page).toContain("calculator-comparison-scale");
+    expect(page).toContain('<header className="calculator-intro">');
+    expect(page).not.toContain('activeStep === "points" ? <header className="calculator-intro"');
+    expect(styles).not.toContain('.calculator-app[data-step="school"]');
+    expect(styles).toMatch(/\.calculator-app \{[^}]*overflow-anchor: none/);
+    expect(styles).toMatch(/\.calculator-school-screen,[\s\S]*\.calculator-result-screen \{ width: min\(600px, 100%\); margin: 0 auto; \}/);
     expect(styles).toMatch(/\.calculator-steps \{[^}]*position: sticky/);
     expect(styles).toContain("grid-template-columns: repeat(3, minmax(0, 1fr))");
+  });
+
+  it("uses the complete shared public footer", () => {
+    expect(page).toContain("SiteFooter");
+    expect(page).toContain("<SiteFooter />");
   });
 
   it("lets visitors request a missing school threshold", () => {
