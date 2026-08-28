@@ -598,18 +598,18 @@ export default function DashboardPage() {
           {profile.role === "teacher" && <TeacherPanel verificationStatus={profile.teacher_verification_status} />}
           {profile.role === "admin" && <AdminPanel counts={counts} feedback={adminFeedback} busy={adminActionBusy} feedbackBusyId={feedbackBusyId} error={adminActionError} onGrantTeacher={grantTeacherRole} onUpdateFeedback={(id, status) => void updateFeedbackStatus(id, status)} />}
           {profile.role === "parent" && parentView === "settings" && <section className="parent-content-view parent-settings-view" id="ustawienia" aria-labelledby="parent-settings-title">
-            <div className="dashboard-view-heading"><div><h2 id="parent-settings-title">Ustawienia</h2><small>Wygląd, prywatność i zarządzanie kontem</small></div></div>
-            <Card className="account-settings-card parent-settings-card">
-              <CardHeader><CardTitle>Wygląd aplikacji</CardTitle><CardDescription>Motyw możesz dopasować do systemu albo wybrać ręcznie.</CardDescription></CardHeader>
-              <CardContent className="account-settings-actions"><div className="account-theme-setting"><span>Motyw</span><ThemeSettings /></div></CardContent>
-            </Card>
-            <Card className="account-settings-card parent-settings-card">
-              <CardHeader><CardTitle>Pakiet Plus</CardTitle><CardDescription>Odblokuj interaktywne ćwiczenia bez limitu, nauczyciela AI, śledzenie postępów i szczegóły płatności.</CardDescription></CardHeader>
-              <CardContent className="account-settings-actions"><Button variant="outline" asChild><a href="/plan-plus#dla-rodzica">Poznaj pakiet Plus</a></Button></CardContent>
-            </Card>
-            <Card className="account-settings-card parent-settings-card parent-account-data-card">
-              <CardHeader><CardTitle>Konto i dane</CardTitle><CardDescription>Usunięcie konta obejmuje także powiązania i postępy dzieci. Dokumenty księgowe przechowujemy zgodnie z obowiązującymi przepisami.</CardDescription></CardHeader>
-              <CardContent className="account-settings-actions"><Button variant="outline" asChild><a href="/usun-konto">Usuń konto i dane</a></Button></CardContent>
+            <Card className="account-settings-card parent-account-settings-card">
+              <CardHeader><CardTitle id="parent-settings-title">Ustawienia konta</CardTitle><CardDescription>Motyw, prywatność i zarządzanie danymi w jednym miejscu.</CardDescription></CardHeader>
+              <CardContent className="parent-account-settings-content">
+                <div className="account-theme-setting"><span>Wygląd aplikacji</span><ThemeSettings /></div>
+                <div className="parent-account-links">
+                  {parentPlusChildren
+                    ? <Button variant="outline" type="button" onClick={() => setParentView("payments")}>Płatności i dokumenty</Button>
+                    : <Button variant="outline" asChild><a href="/plan-plus#dla-rodzica">Poznaj pakiet Plus</a></Button>}
+                  <Button variant="outline" asChild><a href="/polityka-prywatnosci">Polityka prywatności</a></Button>
+                  <Button variant="outline" className="parent-delete-account" asChild><a href="/usun-konto">Usuń konto i dane</a></Button>
+                </div>
+              </CardContent>
             </Card>
           </section>}
           {(profile.role !== "parent" && profile.role !== "student") && <Card className="account-settings-card" id="ustawienia">

@@ -193,13 +193,19 @@
 .dashboard-parent-page .payment-history-empty span { max-width: 460px; color: var(--muted-copy); font-size: 14px; line-height: 1.5; }
 .dashboard-parent-page .payment-history-list > article { border-color: var(--subtle-line); border-radius: 9px; }
 
-.parent-settings-card { margin: 0; overflow: hidden; border-radius: 11px; }
-.parent-settings-card [data-slot="card-header"] { padding: 22px 24px; border-bottom: 1px solid var(--border); }
-.parent-settings-card [data-slot="card-content"] { padding: 22px 24px; }
-.parent-settings-card [data-slot="card-title"] { font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif; font-size: 21px; }
-.parent-settings-card [data-slot="card-description"] { color: var(--muted-copy); font-size: 14px; }
-.parent-settings-card .account-settings-actions [data-slot="button"] { min-height: 42px; padding-inline: 18px; font-size: 14px; }
-.parent-account-data-card .account-settings-actions [data-slot="button"] { color: var(--destructive); }
+.dashboard-parent-page .parent-account-settings-card { margin: 0; padding: 0; gap: 0; overflow: hidden; }
+.dashboard-parent-page .parent-settings-view [data-slot="card-header"] { padding: 26px 28px 0; gap: 7px; }
+.dashboard-parent-page .parent-settings-view [data-slot="card-title"] { font-family: inherit; font-size: 24px; }
+.dashboard-parent-page .parent-settings-view [data-slot="card-description"] { color: var(--muted-copy); font-size: 15px; }
+.dashboard-parent-page .parent-settings-view [data-slot="card-content"] { padding: 20px 28px 26px; }
+.dashboard-parent-page .parent-account-settings-content { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px 34px; }
+.dashboard-parent-page .parent-account-settings-content .account-theme-setting { display: flex; flex-direction: column; align-items: flex-start; gap: 11px; }
+.dashboard-parent-page .parent-account-settings-content .account-theme-setting > span { color: var(--muted-copy); font-size: 16px; }
+.dashboard-parent-page .parent-account-settings-content .theme-settings { padding: 5px; display: flex; gap: 4px; background: var(--surface-soft); border: 1px solid var(--border); border-radius: 10px; }
+.dashboard-parent-page .parent-account-settings-content .theme-settings [data-slot="button"] { min-height: 38px; padding-inline: 16px; }
+.dashboard-parent-page .parent-account-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.dashboard-parent-page .parent-account-links [data-slot="button"] { min-height: 42px; padding-inline: 18px; font-size: 14px; }
+.dashboard-parent-page .parent-delete-account { color: var(--destructive); }
 
 .dark .dashboard-parent-page .dashboard-sidebar nav button.active { color: var(--foreground); background: var(--secondary); border-color: var(--border); }
 
@@ -249,4 +255,7 @@
   .dashboard-parent-page .parent-connect-steps span:last-child { border-bottom: 0; }
   .dashboard-parent-page .payment-checkout-action { align-items: stretch; flex-direction: column; }
   .dashboard-parent-page .payment-checkout-action [data-slot="button"] { width: 100%; }
+  .dashboard-parent-page .parent-account-settings-content { align-items: stretch; flex-direction: column; }
+  .dashboard-parent-page .parent-account-links { flex-direction: column; }
+  .dashboard-parent-page .parent-account-links [data-slot="button"] { width: 100%; }
 }
