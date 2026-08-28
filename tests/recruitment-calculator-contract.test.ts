@@ -7,6 +7,7 @@ const page = readFileSync(join(root, "app", "kalkulator-punktow", "page.tsx"), "
 const layout = readFileSync(join(root, "app", "kalkulator-punktow", "layout.tsx"), "utf8");
 const homepage = readFileSync(join(root, "app", "page.tsx"), "utf8");
 const styles = readFileSync(join(root, "app", "kalkulator-punktow", "calculator.css"), "utf8");
+const requestForm = readFileSync(join(root, "components", "school-threshold-request-form.tsx"), "utf8");
 
 describe("public recruitment calculator", () => {
   it("is discoverable from the homepage without requiring an account", () => {
@@ -16,10 +17,10 @@ describe("public recruitment calculator", () => {
   });
 
   it("covers the complete 200-point formula and an optional target threshold", () => {
-    expect(page).toContain("Egzamin to aż 100 z 200 punktów");
+    expect(page).toContain("Maksymalnie 200 punktów: 100 z egzaminu i 100 ze świadectwa oraz osiągnięć");
     expect(page).toContain("Świadectwo z wyróżnieniem");
-    expect(page).toContain("Aktywność społeczna lub wolontariat");
-    expect(page).toContain("Szczególne osiągnięcia i konkursy");
+    expect(page).toContain("Wolontariat");
+    expect(page).toContain("Konkursy i osiągnięcia");
     expect(page).toContain('id="target-threshold"');
   });
 
@@ -30,9 +31,10 @@ describe("public recruitment calculator", () => {
     expect(page).toContain("Kalkulator nie zapisuje ocen ani procentów");
   });
 
-  it("supports an honest autumn forecast and separate parent/student paths", () => {
-    expect(page).toContain('type ExamMode = "unknown" | "estimate"');
-    expect(page).toContain("W rekrutacji liczą się oceny na świadectwie ukończenia szkoły podstawowej");
+  it("collects all three exam results and exposes separate parent/student paths", () => {
+    expect(page).toContain('id="exam-polish"');
+    expect(page).toContain('id="exam-mathematics"');
+    expect(page).toContain('id="exam-language"');
     expect(page).toContain('rola=rodzic');
     expect(page).toContain('rola=uczen');
   });
@@ -45,8 +47,8 @@ describe("public recruitment calculator", () => {
     expect(page).toContain('useState<CalculatorStep>("points")');
     expect(page).toContain('goToStep("school")');
     expect(page).toContain('goToStep("result")');
-    expect(page).toContain("Baza progów");
-    expect(page).toContain("próg, rok i źródło uzupełnią się automatycznie");
+    expect(page).toContain("SchoolThresholdSearch");
+    expect(page).toContain("sourceDescription");
   });
 
   it("keeps the calculator flow compact and stable between steps", () => {
@@ -66,15 +68,17 @@ describe("public recruitment calculator", () => {
   });
 
   it("lets visitors request a missing school threshold", () => {
-    expect(page).toContain("Nie ma szkoły lub klasy w bazie?");
-    expect(page).toContain('title="Zgłoś brakujące dane"');
-    expect(page).toContain('submitLabel="Zgłoś i powiadom mnie"');
-    expect(page).toContain('schoolName={targetName}');
+    expect(page).toContain("Nie ma Twojej szkoły? Zgłoś ją");
+    expect(page).toContain("SchoolThresholdRequestForm");
+    expect(requestForm).toContain("Szkoła lub klasa");
+    expect(requestForm).toContain("Miasto");
+    expect(requestForm).toContain("Twój e-mail");
   });
 
   it("uses verified school thresholds, a consent-backed alert and FAQ structured data", () => {
     expect(page).toContain("SchoolThresholdSearch");
-    expect(page).toContain('subscriptionType="recruitment_thresholds"');
+    expect(requestForm).toContain('subscriptionType: "recruitment_thresholds"');
+    expect(requestForm).toContain("MARKETING_CONSENT_VERSION");
     expect(page).toContain('"@type": "FAQPage"');
     expect(page).toContain("Tabela punktów za oceny");
   });
