@@ -19,7 +19,9 @@ To jest kontrola operacyjna, nie opinia prawna. Zakres zgody powinien obejmować
 - schemat: `content/cke/cke-paper.schema.json`,
 - formularz do skopiowania: `content/cke/manual-import.template.json`,
 - narzędzie: `scripts/cke-import.mjs`,
-- staging i workflow: migracja `20260825213000_cke_import_pipeline.sql`.
+- staging i workflow: migracje `20260825213000_cke_import_pipeline.sql` i `20260828120000_full_cke_question_types.sql`,
+- kompletny arkusz matematyczny 2026: `content/cke/cke-2026-main-mathematics-100-x.json`,
+- powtarzalne wycinanie ilustracji: `scripts/extract-cke-2026-mathematics-assets.py`.
 
 Manifest jest źródłem prawdy. Nie edytuj zadań bezpośrednio w tabeli `practice_questions`.
 
@@ -90,12 +92,18 @@ Typy odpowiedzi:
 - `short_text`,
 - `long_text`.
 
-Staging przechowuje wszystkie typy. Obecny ekran ucznia obsługuje produkcyjnie tylko `single_choice`. Próba przeniesienia arkusza zawierającego inne typy do aktywnej bazy zakończy się kontrolowanym błędem; dane pozostaną w stagingu do czasu wdrożenia odpowiedniego interfejsu i oceniania.
+Ekran ucznia obsługuje wszystkie wymienione typy. `single_choice` i `multiple_choice` są oceniane automatycznie. Dla `numeric`, `short_text` i `long_text` uczeń najpierw zapisuje własne rozwiązanie, następnie porównuje je ze zweryfikowanym rozwiązaniem i kryteriami CKE oraz zapisuje samoocenę punktową. Tutor AI pomaga przejść przez tok rozumowania, ale nie udaje oficjalnego egzaminatora.
 
 ## 4. Walidacja lokalna
 
 ```bash
 npm run cke:validate -- content/cke/cke-2025-main-mathematics-standard.json
+```
+
+Gotowy arkusz OMAP-100-X-2605 sprawdzisz poleceniem:
+
+```bash
+npm run cke:validate -- content/cke/cke-2026-main-mathematics-100-x.json
 ```
 
 Walidator sprawdza m.in.:
@@ -118,6 +126,12 @@ Uruchamiaj tylko na zaufanym komputerze. Klucz `service_role` omija RLS — nie 
 export SUPABASE_URL='https://PROJECT.supabase.co'
 export SUPABASE_SERVICE_ROLE_KEY='...'
 npm run cke:stage -- content/cke/cke-2025-main-mathematics-standard.json
+```
+
+Dla przygotowanego arkusza 2026 użyj:
+
+```bash
+npm run cke:stage -- content/cke/cke-2026-main-mathematics-100-x.json
 ```
 
 Polecenie zwraca `import_batch_id`. Ten sam manifest i wersja mają ten sam efekt (`unchanged`). Zmiana zawartości bez podniesienia `manifest_version` jest odrzucana. Ten sam PDF przypisany do innego manifestu również jest odrzucany.
@@ -147,7 +161,7 @@ Zalecana kontrola czterech oczu:
 
 ## 7. Import i osobna publikacja
 
-Dla arkusza składającego się wyłącznie z obsługiwanych zadań jednokrotnego wyboru:
+Dla arkusza, którego wszystkie typy zadań są obsługiwane przez bieżący ekran ucznia:
 
 ```bash
 npm run cke:workflow -- promote <BATCH_ID>

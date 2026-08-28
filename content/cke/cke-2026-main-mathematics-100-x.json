@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2026-main-mathematics-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2026-main-mathematics-100-x",
+    "source_document_id": "OMAP-100-X-2605",
+    "source_pdf_sha256": "1a984cba5fd8a97c36a62cae98fa5ff64c0a587f3ee974253fddb39ecb95ae8f",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2026-2/",
+    "source_label": "CKE 2026 · matematyka · termin główny · wariant 100-X",
+    "exam_year": 2026,
+    "exam_session": "main",
+    "subject": "mathematics",
+    "variant_code": "100-X",
+    "question_count": 20,
+    "supplementary_sources": [
+      { "id": "cke-2026-mathematics-open-answer-card", "path": "content/cke/sources/2026/matematyka/Karta-rozwiazan-zadan-otwartych-2605.pdf", "sha256": "cd7308328fdc669f55eac5b65ffac2329504a92dbff12b8170f8b6b50f756735", "label": "Karta rozwiązań zadań otwartych 15–20" },
+      { "id": "cke-2026-mathematics-answer-card", "path": "content/cke/sources/2026/matematyka/OMAP-100-X-2605-karta-odpowiedzi.pdf", "sha256": "a002fd150eaec32ec835b08d4dc50d3730e208bff08bec7d553b1a4d64ab95cc", "label": "Karta odpowiedzi, wersja X" },
+      { "id": "cke-2026-mathematics-scoring-rules", "path": "content/cke/sources/2026/matematyka/OMAP-100-2605-zasady.pdf", "sha256": "c42713ba58bcd75dfc4cea4ae3d592dab06fb4d168175f1e6a878162399af627", "label": "Zasady oceniania rozwiązań" }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "questions": [
+    {
+      "id": "cke-2026-main-mathematics-100-x-q01", "number": "1", "sort_order": 1, "source_pages": [4], "type": "single_choice", "topic": "Procenty i diagramy", "difficulty": 1,
+      "prompt": "Test z matematyki składa się z 40 zadań. Diagram pokazuje procentowy podział zadań na pięć działów. Liczba zadań z arytmetyki w tym teście jest równa:",
+      "answer_options": ["14", "18", "26", "35"], "answer_key": { "correct_index": 0 },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedź A", "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi"] },
+      "explanation": "Oznaczone części diagramu zajmują łącznie 65%, więc arytmetyka zajmuje 35%. Obliczamy 35% z 40: 0,35 · 40 = 14.",
+      "solution_steps": ["Dodaj podane udziały: 20% + 25% + 15% + 5% = 65%.", "Brakujący udział arytmetyki to 100% − 65% = 35%.", "Oblicz 0,35 · 40 = 14."],
+      "hints": ["Najpierw ustal, jakiego procentu brakuje do 100%.", "Zamień brakujący procent na ułamek dziesiętny i pomnóż przez 40."],
+      "content_blocks": [{ "type": "image", "asset_id": "q01-diagram" }],
+      "assets": [{ "id": "q01-diagram", "path": "public/cke/2026/mathematics/omap-100-x-2605/q01-diagram.png", "sha256": "6cfc32c3b95bdb4409eaf6451dfe2c44554b7ebad799d216101cff8adeb577fc", "alt": "Diagram kołowy: statystyka 20%, algebra 25%, planimetria 15%, stereometria 5% oraz niepodany udział arytmetyki.", "caption": "Diagram z zadania 1 arkusza OMAP-100-X-2605." }]
+    },
+    {
+      "id": "cke-2026-main-mathematics-100-x-q02", "number": "2", "sort_order": 2, "source_pages": [4], "type": "single_choice", "topic": "NWD i NWW", "difficulty": 1,
+      "prompt": "Ola otwiera szafkę czterocyfrowym kodem YXXY. X jest największym wspólnym dzielnikiem liczb 18 i 27, a Y najmniejszą wspólną wielokrotnością liczb 2 i 4. Jaki jest kod?",
+      "answer_options": ["4334", "4994", "8338", "8998"], "answer_key": { "correct_index": 1 },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedź B", "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi"] },
+      "explanation": "NWD(18, 27) = 9, więc X = 9. NWW(2, 4) = 4, więc Y = 4. Kod YXXY to 4994.",
+      "solution_steps": ["Wyznacz NWD(18, 27) = 9.", "Wyznacz NWW(2, 4) = 4.", "Wstaw cyfry do wzoru YXXY: 4994."],
+      "hints": ["X musi dzielić jednocześnie 18 i 27.", "Y ma być najmniejszą liczbą podzielną przez 2 i 4."], "content_blocks": [], "assets": []
+    },
+    {
+      "id": "cke-2026-main-mathematics-100-x-q03", "number": "3", "sort_order": 3, "source_pages": [4], "type": "single_choice", "topic": "Pierwiastki", "difficulty": 1,
+      "prompt": "Dane są liczby: w = √(100 − 64) − 2, x = 12 − √(64 + 36), y = √(25 − 16) − 3, z = 7 − √(9 + 16). Która z nich jest równa 0?",
+      "answer_options": ["w", "x", "y", "z"], "answer_key": { "correct_index": 2 },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedź C", "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi"] },
+      "explanation": "y = √(25 − 16) − 3 = √9 − 3 = 3 − 3 = 0.",
+      "solution_steps": ["Najpierw wykonaj działanie pod pierwiastkiem.", "Dla y otrzymujesz √9 − 3.", "Ponieważ √9 = 3, liczba y jest równa 0."],
+      "hints": ["Nie rozdzielaj pierwiastka na składniki; najpierw policz wyrażenie w nawiasie.", "Sprawdź wyrażenie z różnicą 25 − 16."],
+      "content_blocks": [{ "type": "math", "latex": "w=\\sqrt{100-64}-2,\\quad x=12-\\sqrt{64+36},\\quad y=\\sqrt{25-16}-3,\\quad z=7-\\sqrt{9+16}", "display": true }], "assets": []
+    },
+    {
+      "id": "cke-2026-main-mathematics-100-x-q04", "number": "4", "sort_order": 4, "source_pages": [6], "type": "single_choice", "topic": "Potęgi", "difficulty": 1,
+      "prompt": "Wartość wyrażenia 2⁵ · 3 · 3⁴ · 2³ jest równa wartości wyrażenia:",
+      "answer_options": ["2⁸ · 3⁵", "4⁸ · 9⁵", "2¹⁵ · 3⁴", "4¹⁵ · 9⁴"], "answer_key": { "correct_index": 0 },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedź A", "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi"] },
+      "explanation": "Mnożąc potęgi o tych samych podstawach, dodajemy wykładniki: 2⁵ · 2³ = 2⁸ oraz 3 · 3⁴ = 3⁵.",
+      "solution_steps": ["Zgrupuj potęgi o podstawie 2 i o podstawie 3.", "Dodaj wykładniki: 5 + 3 = 8 oraz 1 + 4 = 5.", "Otrzymujesz 2⁸ · 3⁵."],
+      "hints": ["Przestaw czynniki tak, by potęgi o tej samej podstawie stały obok siebie.", "Pamiętaj, że 3 = 3¹."], "content_blocks": [], "assets": []
+    },
+    {
+      "id": "cke-2026-main-mathematics-100-x-q05", "number": "5", "sort_order": 5, "source_pages": [6], "type": "single_choice", "topic": "Obliczenia procentowe", "difficulty": 1,
+      "prompt": "Kocur kosztuje x zł, a kotka y zł. Kocura kupiono ze zniżką 40%, a kotkę ze zniżką 20%. Które wyrażenie opisuje zapłaconą kwotę?",
+      "answer_options": ["0,4x + 0,2y", "0,2x + 0,4y", "0,8x + 0,6y", "0,6x + 0,8y"], "answer_key": { "correct_index": 3 },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedź D", "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi"] },
+      "explanation": "Po zniżce 40% zostaje do zapłaty 60% ceny kocura, czyli 0,6x. Po zniżce 20% zostaje 80% ceny kotki, czyli 0,8y.",
+      "solution_steps": ["Od 100% odejmij każdą zniżkę.", "Za kocura płacimy 60% ceny, a za kotkę 80% ceny.", "Suma to 0,6x + 0,8y."],
+      "hints": ["Zniżka nie jest kwotą, którą płacisz, lecz kwotą odejmowaną od ceny.", "Ile procent ceny zostaje po obniżce o 40%?"], "content_blocks": [], "assets": []
+    },
+    {
+      "id": "cke-2026-main-mathematics-100-x-q06", "number": "6", "sort_order": 6, "source_pages": [6], "type": "multiple_choice", "topic": "Parzystość liczb", "difficulty": 2,
+      "prompt": "W pudełku było 11 kul ponumerowanych od 1 do 11. Wylosowano pięć. Suma liczb na dowolnych dwóch kulach, które pozostały, jest parzysta. Wybierz dwa poprawne uzupełnienia.",
+      "answer_options": ["Zostały wyłącznie kule z liczbami nieparzystymi.", "Zostały wyłącznie kule z liczbami parzystymi.", "Suma liczb na pięciu wylosowanych kulach wynosi 30.", "Suma liczb na pięciu wylosowanych kulach wynosi 36."],
+      "answer_key": { "correct_indices": [0, 2] },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedzi A i C", "0 pkt – inny zestaw odpowiedzi albo brak odpowiedzi"] },
+      "explanation": "Aby każda suma dwóch pozostałych liczb była parzysta, wszystkie pozostałe liczby muszą mieć tę samą parzystość. Zostaje sześć kul, a wśród 1–11 jest sześć liczb nieparzystych, więc zostają właśnie one. Suma 1–11 to 66, suma nieparzystych to 36, zatem wylosowano kule o sumie 30.",
+      "solution_steps": ["Suma dwóch liczb jest parzysta, gdy obie mają tę samą parzystość.", "W zbiorze 1–11 jest sześć liczb nieparzystych i pięć parzystych, a pozostało sześć kul.", "Od sumy 66 odejmij sumę liczb nieparzystych 36; wynik to 30."],
+      "hints": ["Ile kul zostało i ile liczb parzystych oraz nieparzystych jest od 1 do 11?", "Policz sumę wszystkich numerów, a potem sumę numerów na pozostałych kulach."], "content_blocks": [], "assets": []
+    },
+    {
+      "id": "cke-2026-main-mathematics-100-x-q07", "number": "7", "sort_order": 7, "source_pages": [6], "type": "single_choice", "topic": "Równania", "difficulty": 2,
+      "prompt": "Do 10 koszy włożono łącznie 400 jabłek i pomarańczy. W każdym koszu jest tyle samo owoców, a jabłek jest o 6 więcej niż pomarańczy. Ile jabłek jest łącznie?",
+      "answer_options": ["210", "230", "240", "260"], "answer_key": { "correct_index": 1 },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedź B", "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi"] },
+      "explanation": "W jednym koszu jest 40 owoców. Jeśli pomarańczy jest p, to p + (p + 6) = 40, więc p = 17, a jabłek 23. W 10 koszach jest 230 jabłek.",
+      "solution_steps": ["Oblicz 400 : 10 = 40 owoców w koszu.", "Rozwiąż p + p + 6 = 40.", "W jednym koszu są 23 jabłka, więc łącznie 10 · 23 = 230."],
+      "hints": ["Najpierw policz liczbę owoców w jednym koszu.", "Dwie liczby mają sumę 40 i różnią się o 6."], "content_blocks": [], "assets": []
+    },
+    {
+      "id": "cke-2026-main-mathematics-100-x-q08", "number": "8", "sort_order": 8, "source_pages": [8], "type": "multiple_choice", "topic": "Wyrażenia algebraiczne", "difficulty": 1,
+      "prompt": "Sumę S = 1 + 2 + … + n oblicza się ze wzoru S = ½n(n + 1). Wybierz wartość sumy od 1 do 100 oraz poprawnie przekształconą postać wzoru.",
+      "answer_options": ["Suma od 1 do 100 wynosi 5001.", "Suma od 1 do 100 wynosi 5050.", "S = ½n² + 1", "S = ½n² + ½n"],
+      "answer_key": { "correct_indices": [1, 3] },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedzi B i D", "0 pkt – inny zestaw odpowiedzi albo brak odpowiedzi"] },
+      "explanation": "Dla n = 100 otrzymujemy S = ½ · 100 · 101 = 5050. Po wymnożeniu nawiasu S = ½(n² + n) = ½n² + ½n.",
+      "solution_steps": ["Podstaw n = 100 do wzoru.", "Oblicz połowę iloczynu 100 · 101.", "Rozmnożenie n(n + 1) daje n² + n."],
+      "hints": ["Najpierw wybierz odpowiedź liczbową, podstawiając n = 100.", "Zastosuj rozdzielność mnożenia względem dodawania."], "content_blocks": [{ "type": "math", "latex": "S=\\frac{1}{2}n(n+1)", "display": true }], "assets": []
+    },
+    {
+      "id": "cke-2026-main-mathematics-100-x-q09", "number": "9", "sort_order": 9, "source_pages": [8], "type": "single_choice", "topic": "Średnia arytmetyczna", "difficulty": 1,
+      "prompt": "Średnia dwóch liczb x i y jest równa 4, a średnia trzech liczb x, y, z jest równa 5. Liczba z jest równa:",
+      "answer_options": ["4", "5", "6", "7"], "answer_key": { "correct_index": 3 },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedź D", "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi"] },
+      "explanation": "Skoro średnia x i y wynosi 4, to x + y = 8. Średnia trzech liczb wynosi 5, więc x + y + z = 15. Stąd z = 15 − 8 = 7.",
+      "solution_steps": ["Zamień średnią dwóch liczb na ich sumę: 2 · 4 = 8.", "Zamień średnią trzech liczb na sumę: 3 · 5 = 15.", "Odejmij: z = 15 − 8 = 7."],
+      "hints": ["Średnia razy liczba składników daje ich sumę.", "Porównaj sumę dwóch liczb z sumą trzech."], "content_blocks": [], "assets": []
+    },
+    {
+      "id": "cke-2026-main-mathematics-100-x-q10", "number": "10", "sort_order": 10, "source_pages": [8], "type": "multiple_choice", "topic": "Trójkąt równoboczny", "difficulty": 1,
+      "prompt": "Dany jest trójkąt równoboczny o boku 2 cm. Oceń prawdziwość dwóch zdań.",
+      "answer_options": ["Wysokość trójkąta wynosi √3 cm — P.", "Wysokość trójkąta wynosi √3 cm — F.", "Pole trójkąta wynosi √3 cm² — P.", "Pole trójkąta wynosi √3 cm² — F."],
+      "answer_key": { "correct_indices": [0, 2] },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedzi P i P", "0 pkt – inny zestaw odpowiedzi albo brak odpowiedzi"] },
+      "explanation": "Wysokość trójkąta równobocznego o boku 2 wynosi 2√3/2 = √3. Pole to 2 · √3 / 2 = √3 cm², więc oba zdania są prawdziwe.",
+      "solution_steps": ["Zastosuj wzór h = a√3/2 dla a = 2.", "Oblicz pole jako ah/2.", "Oba otrzymane wyniki są równe √3."],
+      "hints": ["Wysokość dzieli trójkąt na dwa trójkąty prostokątne.", "Po obliczeniu wysokości użyj wzoru P = ah/2."], "content_blocks": [], "assets": []
+    },
+    {
+      "id": "cke-2026-main-mathematics-100-x-q11", "number": "11", "sort_order": 11, "source_pages": [10], "type": "single_choice", "topic": "Kąty w czworokącie", "difficulty": 2,
+      "prompt": "W czworokącie β = α + 70°, γ = 2α, a δ = 90°. Miara kąta β jest równa:",
+      "answer_options": ["50°", "85°", "120°", "155°"], "answer_key": { "correct_index": 2 },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedź C", "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi"] },
+      "explanation": "Suma kątów czworokąta to 360°. Równanie α + (α + 70°) + 2α + 90° = 360° daje α = 50°, więc β = 120°.",
+      "solution_steps": ["Zapisz sumę czterech kątów równą 360°.", "Rozwiąż 4α + 160° = 360°.", "Oblicz β = α + 70° = 120°."],
+      "hints": ["Suma kątów wewnętrznych czworokąta wynosi 360°.", "Zastąp β, γ i δ wyrażeniami zależnymi od α."], "content_blocks": [], "assets": []
+    },
+    {
+      "id": "cke-2026-main-mathematics-100-x-q12", "number": "12", "sort_order": 12, "source_pages": [10], "type": "multiple_choice", "topic": "Układ współrzędnych i odległość", "difficulty": 2,
+      "prompt": "Na mapie W oznacza wieżę, S schronisko, a M muzeum. Wieża leży 3 km na północ i 4 km na zachód od schroniska, a muzeum 5 km na wschód od schroniska. Oceń dwa zdania.",
+      "answer_options": ["Odległość S–M jest równa odległości S–W — P.", "Odległość S–M jest równa odległości S–W — F.", "Odległość M–W jest mniejsza niż 10 km — P.", "Odległość M–W jest mniejsza niż 10 km — F."],
+      "answer_key": { "correct_indices": [0, 2] },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedzi P i P", "0 pkt – inny zestaw odpowiedzi albo brak odpowiedzi"] },
+      "explanation": "SW jest przeciwprostokątną trójkąta o przyprostokątnych 3 i 4, więc SW = 5 km = SM. Między W i M różnica pozioma wynosi 9 km, a pionowa 3 km, więc WM = √90 km, czyli mniej niż 10 km.",
+      "solution_steps": ["Dla SW zastosuj twierdzenie Pitagorasa: √(3² + 4²) = 5.", "Dla WM odczytaj różnice położenia: 9 km i 3 km.", "√(9² + 3²) = √90 < 10."],
+      "hints": ["Odcinki tworzą trójkąty prostokątne na siatce.", "Porównując z 10, możesz porównać kwadraty długości."],
+      "content_blocks": [{ "type": "image", "asset_id": "q12-map" }],
+      "assets": [{ "id": "q12-map", "path": "public/cke/2026/mathematics/omap-100-x-2605/q12-map.png", "sha256": "64c9b280a278a814fb788e966da913902a97cbde4320f7e7bf27deb1f7f61319", "alt": "Siatka kilometrowa z punktami W, S i M oraz kierunkami świata.", "caption": "Mapa z zadania 12 arkusza OMAP-100-X-2605." }]
+    },
+    {
+      "id": "cke-2026-main-mathematics-100-x-q13", "number": "13", "sort_order": 13, "source_pages": [12], "type": "single_choice", "topic": "Pole trójkąta i kwadratu", "difficulty": 2,
+      "prompt": "Przekątna AD dzieli pięciokąt na trójkąt ADE i kwadrat ABCD. Pole trójkąta wynosi 28, a jego wysokość opuszczona na AD wynosi 7. Pole kwadratu jest równe:",
+      "answer_options": ["16", "32", "49", "64"], "answer_key": { "correct_index": 3 },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedź D", "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi"] },
+      "explanation": "Z równania 28 = AD · 7 / 2 otrzymujemy AD = 8. Odcinek AD jest bokiem kwadratu, więc jego pole wynosi 8² = 64.",
+      "solution_steps": ["Podstaw dane do wzoru na pole trójkąta.", "Rozwiąż 28 = AD · 7 / 2, otrzymując AD = 8.", "Pole kwadratu o boku 8 wynosi 64."],
+      "hints": ["Najpierw wyznacz długość wspólnego odcinka AD.", "AD jest zarazem podstawą trójkąta i bokiem kwadratu."],
+      "content_blocks": [{ "type": "image", "asset_id": "q13-pentagon" }],
+      "assets": [{ "id": "q13-pentagon", "path": "public/cke/2026/mathematics/omap-100-x-2605/q13-pentagon.png", "sha256": "a5df3c9f54ae5d7255844b225ab25f1658d9d508fedf7abe5b8758b414b7e92c", "alt": "Pięciokąt w kształcie domu z kwadratem ABCD i trójkątem ADE.", "caption": "Rysunek z zadania 13 arkusza OMAP-100-X-2605." }]
+    },
+    {
+      "id": "cke-2026-main-mathematics-100-x-q14", "number": "14", "sort_order": 14, "source_pages": [12], "type": "single_choice", "topic": "Pole prostopadłościanu", "difficulty": 2,
+      "prompt": "Trzy sześciany o krawędzi 5 ustawiono jeden na drugim, tworząc prostopadłościan. Pole jego powierzchni całkowitej jest równe:",
+      "answer_options": ["350", "375", "400", "450"], "answer_key": { "correct_index": 0 },
+      "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedź A", "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi"] },
+      "explanation": "Powstały prostopadłościan ma wymiary 5 × 5 × 15. Jego pole powierzchni to 2 · (25 + 75 + 75) = 350.",
+      "solution_steps": ["Ustal wymiary bryły: 5, 5 i 15.", "Zastosuj wzór 2(ab + ac + bc).", "Oblicz 2 · (25 + 75 + 75) = 350."],
+      "hints": ["Wysokość trzech sześcianów to 3 · 5.", "Policz pola trzech różnych par ścian i pomnóż sumę przez 2."],
+      "content_blocks": [{ "type": "image", "asset_id": "q14-prism" }],
+      "assets": [{ "id": "q14-prism", "path": "public/cke/2026/mathematics/omap-100-x-2605/q14-prism.png", "sha256": "1ed9d860553d8b24c81e7425691646494a013b914d12a28d7375e8907b81fd62", "alt": "Prostopadłościan utworzony z trzech jednakowych sześcianów ustawionych pionowo.", "caption": "Rysunek z zadania 14 arkusza OMAP-100-X-2605." }]
+    },
+    {
+      "id": "cke-2026-main-mathematics-100-x-q15", "number": "15", "sort_order": 15, "source_pages": [2], "type": "long_text", "topic": "Równania w zadaniu tekstowym", "difficulty": 2,
+      "prompt": "Ela przygotowała 160 kartek origami: 37 białych, niebieskich 1,5 raza więcej niż czerwonych, a zielonych o 10 mniej niż czerwonych. Oblicz liczbę kartek niebieskich. Zapisz obliczenia.",
+      "answer_key": { "accepted_results": ["57"], "assessment": "rubric" },
+      "scoring": { "max_points": 2, "rules": ["2 pkt – poprawna metoda, obliczenia i wynik 57", "1 pkt – poprawne równanie lub wyrażenie prowadzące do wyniku albo poprawnie rozpoczęta metoda prób", "0 pkt – rozwiązanie błędne albo brak rozwiązania"] },
+      "explanation": "Niech x oznacza liczbę czerwonych kartek. Wtedy x + 1,5x + (x − 10) + 37 = 160, więc 3,5x = 133 i x = 38. Niebieskich było 1,5 · 38 = 57.",
+      "solution_steps": ["Oznacz liczbę czerwonych kartek przez x.", "Zapisz x + 1,5x + (x − 10) + 37 = 160.", "Oblicz x = 38, a następnie 1,5 · 38 = 57."],
+      "hints": ["Najłatwiej przyjąć liczbę czerwonych kartek za niewiadomą.", "Zapisz liczbę niebieskich jako 1,5x, a zielonych jako x − 10."], "content_blocks": [], "assets": []
+    },
+    {
+      "id": "cke-2026-main-mathematics-100-x-q16", "number": "16", "sort_order": 16, "source_pages": [3], "type": "long_text", "topic": "Prędkość, droga i czas", "difficulty": 3,
+      "prompt": "Droga z Polanki do Dębiny przez Jodłowo ma 123 km. Odcinek Polanka–Jodłowo ma 48 km i samochód przejechał go w 40 minut. Dalej jechał z tą samą prędkością. Uzasadnij, że przejazd Jodłowo–Dębina trwał dłużej niż godzinę.",
+      "answer_key": { "accepted_results": ["62,5 min", "75 km > 72 km w godzinę"], "assessment": "rubric" },
+      "scoring": { "max_points": 3, "rules": ["3 pkt – poprawna metoda i uzasadniony wniosek, np. 62,5 min > 60 min", "2 pkt – poprawne wyznaczenie potrzebnej prędkości/drogi i rozpoczęcie porównania", "1 pkt – poprawny sposób obliczenia jednego kluczowego elementu, np. prędkości", "0 pkt – rozwiązanie błędne albo brak rozwiązania"] },
+      "explanation": "Do Dębiny pozostało 123 − 48 = 75 km. Samochód pokonuje 48 km w 40 min, więc 72 km w 60 min. Ponieważ 75 km > 72 km, przejazd musi trwać dłużej niż godzinę. Dokładnie trwa 75/72 h = 62,5 min.",
+      "solution_steps": ["Oblicz długość drugiego odcinka: 123 − 48 = 75 km.", "Przelicz prędkość: 48 km w 40 min oznacza 72 km w 60 min.", "Porównaj 75 km z 72 km lub oblicz czas 62,5 min."],
+      "hints": ["Najpierw oblicz długość drogi z Jodłowa do Dębiny.", "Sprawdź, ile kilometrów samochód przejechałby w 60 minut."], "content_blocks": [], "assets": []
+    },
+    {
+      "id": "cke-2026-main-mathematics-100-x-q17", "number": "17", "sort_order": 17, "source_pages": [4], "type": "long_text", "topic": "Statystyka i procenty", "difficulty": 3,
+      "prompt": "W Dniu Sportu każde dziecko brało udział w jednym turnieju. Łącznie dziewcząt było o 8 więcej niż chłopców. Oblicz, jaki procent wszystkich uczestników stanowiły dzieci z turnieju tenisa stołowego.",
+      "answer_key": { "accepted_results": ["29%"], "assessment": "rubric" },
+      "scoring": { "max_points": 3, "rules": ["3 pkt – poprawna metoda, obliczenia i wynik 29%", "2 pkt – poprawne liczby wszystkich uczestników oraz uczestników tenisa stołowego", "1 pkt – poprawne obliczenie jednej kluczowej liczby", "0 pkt – rozwiązanie błędne albo brak rozwiązania"] },
+      "explanation": "Chłopców było 46 + 16 + 34 = 96, a dziewcząt 104. Wszystkich uczestników było 200. W tenisie stołowym uczestniczyło 200 − (46 + 16 + 15 + 65) = 58 dzieci. To 58/200 · 100% = 29%.",
+      "solution_steps": ["Dodaj chłopców: 46 + 16 + 34 = 96.", "Dziewcząt było 104, więc wszystkich uczestników 200.", "W tenisie stołowym było 58 dzieci, czyli 29% z 200."],
+      "hints": ["Zacznij od sumy chłopców, bo wszystkie trzy liczby są podane.", "Liczbę uczestników tenisa możesz wyznaczyć, odejmując pozostałe turnieje od całości."],
+      "content_blocks": [{ "type": "table", "header_rows": 1, "caption": "Liczba uczestników turniejów", "rows": [["", "Piłka nożna", "Taniec", "Tenis stołowy"], ["Dziewczęta", "15", "65", "?"], ["Chłopcy", "46", "16", "34"]] }], "assets": []
+    },
+    {
+      "id": "cke-2026-main-mathematics-100-x-q18", "number": "18", "sort_order": 18, "source_pages": [5], "type": "long_text", "topic": "Objętość brył", "difficulty": 3,
+      "prompt": "Dany jest sześcian ABCDEFGH o krawędzi a. Punkt S jest środkiem krawędzi DH. Oblicz, ile razy objętość ostrosłupa ACDS jest mniejsza od objętości sześcianu. Zapisz obliczenia.",
+      "answer_key": { "accepted_results": ["12 razy"], "assessment": "rubric" },
+      "scoring": { "max_points": 2, "rules": ["2 pkt – poprawne obliczenie objętości i ustalenie, że jest 12 razy mniejsza", "1 pkt – poprawne wyrażenie opisujące objętość ostrosłupa w zależności od a", "0 pkt – rozwiązanie błędne, wyłącznie na konkretnych liczbach albo brak rozwiązania"] },
+      "explanation": "Podstawa ACD jest połową kwadratu o polu a², więc ma pole a²/2. Wysokość DS = a/2. Objętość ostrosłupa to 1/3 · a²/2 · a/2 = a³/12. Sześcian ma objętość a³, więc jest ona 12 razy większa.",
+      "solution_steps": ["Pole trójkąta ACD wynosi a²/2.", "Ponieważ S jest środkiem DH, wysokość DS = a/2.", "V = 1/3 · a²/2 · a/2 = a³/12, więc stosunek wynosi 12."],
+      "hints": ["Jako podstawę ostrosłupa wybierz trójkąt ACD.", "Wysokość ostrosłupa stanowi połowę krawędzi sześcianu."],
+      "content_blocks": [{ "type": "image", "asset_id": "q18-pyramid" }],
+      "assets": [{ "id": "q18-pyramid", "path": "public/cke/2026/mathematics/omap-100-x-2605/q18-pyramid.png", "sha256": "f8f3a2352edec4ef709fac4e5029b8608ce9c2ca047ff4fdffdad426f49b191b", "alt": "Sześcian ABCDEFGH z punktem S w połowie krawędzi DH i zaznaczonym ostrosłupem ACDS.", "caption": "Rysunek z zadania 18 arkusza OMAP-100-X-2605." }]
+    },
+    {
+      "id": "cke-2026-main-mathematics-100-x-q19", "number": "19", "sort_order": 19, "source_pages": [6], "type": "long_text", "topic": "Pole trapezu i obliczenia praktyczne", "difficulty": 3,
+      "prompt": "Ogródek ma kształt trapezu o podstawach 18 m i 12 m oraz wysokości 9 m. Jedno opakowanie nasion wystarcza na 25 m² i kosztuje 23,80 zł. Oblicz koszt najmniejszej liczby opakowań potrzebnych na cały ogródek.",
+      "answer_key": { "accepted_results": ["142,80 zł"], "assessment": "rubric" },
+      "scoring": { "max_points": 3, "rules": ["3 pkt – poprawna metoda, obliczenia i wynik 142,80 zł", "2 pkt – poprawne ustalenie minimalnej liczby 6 opakowań", "1 pkt – poprawne pole ogródka 135 m²", "0 pkt – rozwiązanie błędne albo brak rozwiązania"] },
+      "explanation": "Pole trapezu wynosi (18 + 12) · 9 / 2 = 135 m². Potrzeba 135/25 = 5,4, czyli co najmniej 6 opakowań. Koszt to 6 · 23,80 zł = 142,80 zł.",
+      "solution_steps": ["Oblicz pole trapezu: 135 m².", "Podziel przez wydajność opakowania: 135 : 25 = 5,4 i zaokrąglij w górę do 6.", "Oblicz 6 · 23,80 zł = 142,80 zł."],
+      "hints": ["Najpierw użyj wzoru na pole trapezu.", "Wynik liczby opakowań trzeba zaokrąglić w górę, bo nie można kupić części opakowania."], "content_blocks": [], "assets": []
+    },
+    {
+      "id": "cke-2026-main-mathematics-100-x-q20", "number": "20", "sort_order": 20, "source_pages": [7], "type": "long_text", "topic": "Twierdzenie Pitagorasa", "difficulty": 3,
+      "prompt": "Prostokąt ABCD o wymiarach 3 i 9 rozcięto na trapez prostokątny i trójkąt prostokątny równoramienny. Z figur złożono równoległobok KLMN. Oblicz jego obwód.",
+      "answer_key": { "accepted_results": ["18 + 2√18", "18 + 6√2"], "assessment": "rubric" },
+      "scoring": { "max_points": 3, "rules": ["3 pkt – poprawna metoda, obliczenia i wynik 18 + 6√2", "2 pkt – poprawny sposób obliczenia obwodu", "1 pkt – poprawna długość przeciwprostokątnej 3√2", "0 pkt – rozwiązanie błędne, pomiar linijką albo brak rozwiązania"] },
+      "explanation": "Przeciwprostokątna odciętego trójkąta ma długość √(3² + 3²) = 3√2. Dłuższy bok równoległoboku ma długość 9, a krótszy 3√2. Obwód wynosi 2 · (9 + 3√2) = 18 + 6√2.",
+      "solution_steps": ["Z twierdzenia Pitagorasa oblicz przekątny bok: √(3² + 3²) = 3√2.", "Rozpoznaj boki równoległoboku: 9 i 3√2.", "Oblicz 2 · (9 + 3√2) = 18 + 6√2."],
+      "hints": ["Najpierw znajdź przeciwprostokątną trójkąta o przyprostokątnych 3 i 3.", "Obwód równoległoboku to podwojona suma długości dwóch sąsiednich boków."],
+      "content_blocks": [{ "type": "image", "asset_id": "q20-figures" }],
+      "assets": [{ "id": "q20-figures", "path": "public/cke/2026/mathematics/omap-100-x-2605/q20-figures.png", "sha256": "ec6e87e9e53085b1630b48fa53ed9eb9fc1dfcb0960ad095aec82f8ad82d8b18", "alt": "Prostokąt ABCD oraz równoległobok KLMN utworzony z jego dwóch części.", "caption": "Rysunki z zadania 20 arkusza OMAP-100-X-2605." }]
+    }
+  ]
+}

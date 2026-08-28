@@ -62,6 +62,14 @@ export function validateManifest(input) {
     if (!SUBJECTS.has(paper.subject)) add("paper.subject", "dozwolone: mathematics, polish, english");
     if (!nonEmpty(paper.variant_code)) add("paper.variant_code", "wymagany wariant, np. standard");
     if (!Number.isInteger(paper.question_count) || paper.question_count < 1) add("paper.question_count", "wymagana dodatnia liczba zadań");
+    const supplementarySources = paper.supplementary_sources ?? [];
+    if (!Array.isArray(supplementarySources)) add("paper.supplementary_sources", "wymagana tablica");
+    else supplementarySources.forEach((source, index) => {
+      if (!SLUG.test(source?.id ?? "")) add(`paper.supplementary_sources[${index}].id`, "niepoprawny identyfikator");
+      if (!nonEmpty(source?.path) || source.path.startsWith("/") || source.path.includes("..")) add(`paper.supplementary_sources[${index}].path`, "wymagana bezpieczna ścieżka względna");
+      if (!SHA256.test(source?.sha256 ?? "")) add(`paper.supplementary_sources[${index}].sha256`, "wymagany SHA-256 pliku");
+      if (!nonEmpty(source?.label)) add(`paper.supplementary_sources[${index}].label`, "wymagana etykieta źródła");
+    });
   }
 
   const permission = input.permission;
@@ -101,13 +109,21 @@ export function validateManifest(input) {
     if (![1, 2, 3].includes(question.difficulty)) add(`${path}.difficulty`, "dozwolone wartości: 1, 2, 3");
     if (!nonEmpty(question.prompt)) add(`${path}.prompt`, "wymagana treść zadania");
     if (!nonEmpty(question.explanation)) add(`${path}.explanation`, "wymagane zweryfikowane wyjaśnienie");
+    if (!Array.isArray(question.solution_steps) || !question.solution_steps.length || question.solution_steps.some((step) => !nonEmpty(step))) add(`${path}.solution_steps`, "wymagana niepusta lista zweryfikowanych kroków");
+    if (!Array.isArray(question.hints) || !question.hints.length || question.hints.some((hint) => !nonEmpty(hint))) add(`${path}.hints`, "wymagana niepusta lista podpowiedzi");
     if (!question.answer_key || typeof question.answer_key !== "object" || Array.isArray(question.answer_key)) add(`${path}.answer_key`, "wymagany obiekt klucza odpowiedzi");
     if (!question.scoring || typeof question.scoring !== "object" || Array.isArray(question.scoring)) add(`${path}.scoring`, "wymagany obiekt punktacji");
+    if (!Number.isInteger(question.scoring?.max_points) || question.scoring.max_points < 1) add(`${path}.scoring.max_points`, "wymagana dodatnia liczba punktów");
 
     const options = question.answer_options ?? [];
     if (question.type === "single_choice") {
       if (!Array.isArray(options) || options.length !== 4 || options.some((option) => !nonEmpty(option))) add(`${path}.answer_options`, "zadanie single_choice wymaga czterech odpowiedzi tekstowych");
       if (!Number.isInteger(question.answer_key?.correct_index) || question.answer_key.correct_index < 0 || question.answer_key.correct_index > 3) add(`${path}.answer_key.correct_index`, "wymagany indeks 0–3");
+    }
+    if (question.type === "multiple_choice") {
+      if (!Array.isArray(options) || options.length < 2 || options.some((option) => !nonEmpty(option))) add(`${path}.answer_options`, "zadanie multiple_choice wymaga co najmniej dwóch odpowiedzi tekstowych");
+      const correctIndices = question.answer_key?.correct_indices;
+      if (!Array.isArray(correctIndices) || !correctIndices.length || correctIndices.some((item) => !Number.isInteger(item) || item < 0 || item >= options.length) || new Set(correctIndices).size !== correctIndices.length) add(`${path}.answer_key.correct_indices`, "wymagana unikalna lista indeksów mieszczących się w odpowiedziach");
     }
 
     const assets = Array.isArray(question.assets) ? question.assets : [];

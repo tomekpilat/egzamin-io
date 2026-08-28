@@ -8,18 +8,22 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
 import { getSupabaseClient } from "@/lib/supabase-browser";
 import { SubjectIcon, subjectLabels, type SubjectKey } from "@/components/subject-icon";
 import { AiTutor } from "@/components/ai-tutor";
 import { ThemeSettings } from "@/components/theme-settings";
 import { trackAnalyticsEvent } from "@/lib/analytics";
 import { DEFAULT_CKE_ACCOMMODATION, getCkeAccommodation, isCkeAccommodationCode, type CkeAccommodationCode } from "@/lib/cke-accommodations";
+import { CkeQuestionContent, type CkeContentBlock, type CkeQuestionAsset } from "@/components/cke-question-content";
 
 export type StudentView = "start" | "exercises" | "progress" | "settings";
 type Subject = SubjectKey;
 type SubjectFilter = "all" | Subject;
 export type MaterialFilter = "demo" | "all-cke" | `year:${number}`;
 type ExamSession = "main" | "additional";
+type QuestionType = "single_choice" | "multiple_choice" | "numeric" | "short_text" | "long_text";
+type GradingStatus = "auto" | "awaiting_self_assessment" | "self_assessed";
 
 export type PracticeQuestion = {
   question_id: string;
@@ -37,12 +41,21 @@ export type PracticeQuestion = {
   topic: string;
   prompt: string;
   options: string[];
+  question_type: QuestionType;
+  content_blocks: CkeContentBlock[];
+  assets: CkeQuestionAsset[];
+  scoring: { max_points?: number; rules?: string[] };
   difficulty: number;
   sort_order: number;
   selected_answer: number | null;
+  selected_response: Record<string, unknown> | null;
   is_correct: boolean | null;
+  points_awarded: number | null;
+  max_points: number | null;
+  grading_status: GradingStatus | null;
   attempt_count: number;
   correct_answer: number | null;
+  revealed_answer_key: Record<string, unknown> | null;
   explanation: string | null;
 };
 
@@ -59,14 +72,21 @@ type PaperProgress = {
   answered_questions: number;
   correct_questions: number;
   accuracy_percent: number;
+  earned_points: number;
+  available_points: number;
+  score_percent: number;
   completion_status: "not_started" | "in_progress" | "completed";
 };
 
 type AnswerResult = {
-  answer_is_correct: boolean;
-  answer_correct_index: number;
+  answer_is_correct: boolean | null;
+  answer_correct_index: number | null;
+  answer_key: Record<string, unknown>;
   answer_explanation: string;
   answer_attempt_count: number;
+  awarded_points: number | null;
+  question_max_points: number;
+  response_grading_status: GradingStatus;
   solved_count: number;
   correct_count: number;
 };
@@ -102,9 +122,12 @@ function normalizeQuestion(value: Record<string, unknown>): PracticeQuestion {
   if (sourceType !== "demo" && sourceType !== "cke") {
     throw new Error("invalid_source_type");
   }
-  if (!Array.isArray(value.options) || value.options.length !== 4) {
+  if (!Array.isArray(value.options)) {
     throw new Error("invalid_options");
   }
+  const questionType = value.question_type ?? "single_choice";
+  if (!["single_choice", "multiple_choice", "numeric", "short_text", "long_text"].includes(String(questionType))) throw new Error("invalid_question_type");
+  if ((questionType === "single_choice" || questionType === "multiple_choice") && value.options.length < 2) throw new Error("invalid_options");
   const examSession = value.exam_session;
   if (examSession != null && examSession !== "main" && examSession !== "additional") {
     throw new Error("invalid_exam_session");
@@ -126,12 +149,21 @@ function normalizeQuestion(value: Record<string, unknown>): PracticeQuestion {
     topic: String(value.topic),
     prompt: String(value.prompt),
     options: value.options.map(String),
+    question_type: questionType as QuestionType,
+    content_blocks: Array.isArray(value.content_blocks) ? value.content_blocks as CkeContentBlock[] : [],
+    assets: Array.isArray(value.assets) ? value.assets as CkeQuestionAsset[] : [],
+    scoring: value.scoring && typeof value.scoring === "object" ? value.scoring as PracticeQuestion["scoring"] : { max_points: 1 },
     difficulty: Number(value.difficulty),
     sort_order: Number(value.sort_order),
     selected_answer: value.selected_answer == null ? null : Number(value.selected_answer),
+    selected_response: value.selected_response && typeof value.selected_response === "object" ? value.selected_response as Record<string, unknown> : null,
     is_correct: value.is_correct == null ? null : Boolean(value.is_correct),
+    points_awarded: value.points_awarded == null ? null : Number(value.points_awarded),
+    max_points: value.max_points == null ? null : Number(value.max_points),
+    grading_status: value.grading_status == null ? null : value.grading_status as GradingStatus,
     attempt_count: Number(value.attempt_count ?? 0),
     correct_answer: value.correct_answer == null ? null : Number(value.correct_answer),
+    revealed_answer_key: value.revealed_answer_key && typeof value.revealed_answer_key === "object" ? value.revealed_answer_key as Record<string, unknown> : null,
     explanation: value.explanation == null ? null : String(value.explanation),
   };
 }
@@ -156,6 +188,9 @@ function normalizePaperProgress(value: Record<string, unknown>): PaperProgress {
     answered_questions: Number(value.answered_questions),
     correct_questions: Number(value.correct_questions),
     accuracy_percent: Number(value.accuracy_percent),
+    earned_points: Number(value.earned_points ?? 0),
+    available_points: Number(value.available_points ?? 0),
+    score_percent: Number(value.score_percent ?? value.accuracy_percent ?? 0),
     completion_status: status,
   };
 }
@@ -216,6 +251,8 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
   const [accommodationCode, setAccommodationCode] = useState<CkeAccommodationCode>(DEFAULT_CKE_ACCOMMODATION);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [draftAnswer, setDraftAnswer] = useState<{ questionId: string; index: number } | null>(null);
+  const [draftMultiple, setDraftMultiple] = useState<{ questionId: string; indices: number[] } | null>(null);
+  const [draftText, setDraftText] = useState<{ questionId: string; text: string } | null>(null);
   const [submittedAnswer, setSubmittedAnswer] = useState<(AnswerResult & { questionId: string }) | null>(null);
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
@@ -292,13 +329,15 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
   const currentQuestion = filteredQuestions[questionIndex] ?? null;
   const questionTime = useQuestionTimer(currentQuestion?.question_id ?? null, activeView === "exercises");
   const accommodation = getCkeAccommodation(accommodationCode);
-  const answeredCount = questions.filter((question) => question.selected_answer !== null).length;
+  const answeredCount = questions.filter((question) => question.selected_response !== null || question.selected_answer !== null).length;
   const correctCount = questions.filter((question) => question.is_correct).length;
-  const score = answeredCount ? Math.round((correctCount / answeredCount) * 100) : 0;
+  const earnedPoints = questions.reduce((sum, question) => sum + (question.points_awarded ?? (question.is_correct ? 1 : 0)), 0);
+  const availablePoints = questions.reduce((sum, question) => sum + ((question.selected_response !== null || question.selected_answer !== null) ? (question.max_points ?? question.scoring.max_points ?? 1) : 0), 0);
+  const score = availablePoints ? Math.round((earnedPoints / availablePoints) * 100) : 0;
   const reviewTopics = useMemo(() => {
     const byTopic = new Map<string, { subject: Subject; topic: string; answered: number; correct: number }>();
     questions.forEach((question) => {
-      if (question.selected_answer === null) return;
+      if (question.selected_response === null && question.selected_answer === null) return;
       const key = `${question.subject}:${question.topic}`;
       const current = byTopic.get(key) ?? { subject: question.subject, topic: question.topic, answered: 0, correct: 0 };
       current.answered += 1;
@@ -311,29 +350,49 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
       .slice(0, 3);
   }, [questions]);
   const selectedAnswer = currentQuestion && draftAnswer?.questionId === currentQuestion.question_id ? draftAnswer.index : currentQuestion?.selected_answer ?? null;
+  const selectedIndices = currentQuestion && draftMultiple?.questionId === currentQuestion.question_id
+    ? draftMultiple.indices
+    : Array.isArray(currentQuestion?.selected_response?.indices)
+      ? currentQuestion.selected_response.indices.map(Number)
+      : [];
+  const writtenAnswer = currentQuestion && draftText?.questionId === currentQuestion.question_id
+    ? draftText.text
+    : typeof currentQuestion?.selected_response?.text === "string"
+      ? currentQuestion.selected_response.text
+      : "";
   const answerResult = currentQuestion && submittedAnswer?.questionId === currentQuestion.question_id
     ? submittedAnswer
-    : currentQuestion?.correct_answer !== null && currentQuestion?.correct_answer !== undefined && currentQuestion.explanation
+    : currentQuestion?.grading_status && currentQuestion.explanation
       ? {
           questionId: currentQuestion.question_id,
-          answer_is_correct: Boolean(currentQuestion.is_correct),
+          answer_is_correct: currentQuestion.is_correct,
           answer_correct_index: currentQuestion.correct_answer,
+          answer_key: currentQuestion.revealed_answer_key ?? {},
           answer_explanation: currentQuestion.explanation,
           answer_attempt_count: currentQuestion.attempt_count,
+          awarded_points: currentQuestion.points_awarded,
+          question_max_points: currentQuestion.max_points ?? currentQuestion.scoring.max_points ?? 1,
+          response_grading_status: currentQuestion.grading_status,
           solved_count: answeredCount,
           correct_count: correctCount,
         }
       : null;
+  const correctIndices = Array.isArray(answerResult?.answer_key?.correct_indices) ? answerResult.answer_key.correct_indices.map(Number) : [];
   const tutorFeedback = currentQuestion && answerResult ? {
     isCorrect: answerResult.answer_is_correct,
-    correctAnswer: `${String.fromCharCode(65 + answerResult.answer_correct_index)}. ${currentQuestion.options[answerResult.answer_correct_index]}`,
+    correctAnswer: currentQuestion.question_type === "single_choice" && answerResult.answer_correct_index !== null
+      ? `${String.fromCharCode(65 + answerResult.answer_correct_index)}. ${currentQuestion.options[answerResult.answer_correct_index]}`
+      : currentQuestion.question_type === "multiple_choice"
+        ? correctIndices.map((index) => `${String.fromCharCode(65 + index)}. ${currentQuestion.options[index]}`).join(" · ")
+        : "Rozwiązanie otwarte · porównaj z kryteriami CKE",
     explanation: answerResult.answer_explanation,
   } : null;
   const hasUnsavedAnswer = hasUnsavedPracticeAnswer(
     currentQuestion?.question_id ?? null,
     currentQuestion?.selected_answer ?? null,
     draftAnswer,
-  );
+  ) || Boolean(currentQuestion && draftMultiple?.questionId === currentQuestion.question_id && JSON.stringify([...draftMultiple.indices].sort()) !== JSON.stringify(Array.isArray(currentQuestion.selected_response?.indices) ? [...currentQuestion.selected_response.indices].map(Number).sort() : []))
+    || Boolean(currentQuestion && draftText?.questionId === currentQuestion.question_id && draftText.text !== (typeof currentQuestion.selected_response?.text === "string" ? currentQuestion.selected_response.text : ""));
 
   useEffect(() => {
     if (!hasUnsavedAnswer) return;
@@ -349,12 +408,18 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
     return !hasUnsavedAnswer || window.confirm(UNSAVED_ANSWER_MESSAGE);
   }
 
+  function clearDrafts() {
+    setDraftAnswer(null);
+    setDraftMultiple(null);
+    setDraftText(null);
+  }
+
   function selectSubject(nextSubject: SubjectFilter) {
     if (nextSubject === subject || !confirmDraftDiscard()) return;
     setSubject(nextSubject);
     setPaperId("all");
     setQuestionIndex(0);
-    setDraftAnswer(null);
+    clearDrafts();
     setSubmittedAnswer(null);
     setError("");
   }
@@ -366,7 +431,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
     setPaperId("all");
     if (subject !== "all" && !nextQuestions.some((question) => question.subject === subject)) setSubject("all");
     setQuestionIndex(0);
-    setDraftAnswer(null);
+    clearDrafts();
     setSubmittedAnswer(null);
     setError("");
   }
@@ -375,7 +440,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
     if (nextPaperId === paperId || !confirmDraftDiscard()) return;
     setPaperId(nextPaperId);
     setQuestionIndex(0);
-    setDraftAnswer(null);
+    clearDrafts();
     setSubmittedAnswer(null);
     setError("");
   }
@@ -397,6 +462,21 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
     setSubmittedAnswer(null);
   }
 
+  function toggleMultipleAnswer(index: number) {
+    if (!currentQuestion) return;
+    const next = selectedIndices.includes(index)
+      ? selectedIndices.filter((item) => item !== index)
+      : [...selectedIndices, index].sort((a, b) => a - b);
+    setDraftMultiple({ questionId: currentQuestion.question_id, indices: next });
+    setSubmittedAnswer(null);
+  }
+
+  function setWrittenAnswer(text: string) {
+    if (!currentQuestion) return;
+    setDraftText({ questionId: currentQuestion.question_id, text });
+    setSubmittedAnswer(null);
+  }
+
   function handleAnswerKeyDown(event: React.KeyboardEvent<HTMLButtonElement>, index: number) {
     if (!["ArrowDown", "ArrowRight", "ArrowUp", "ArrowLeft"].includes(event.key)) return;
     event.preventDefault();
@@ -406,31 +486,43 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
     answerRefs.current[nextIndex]?.focus();
   }
 
-  async function submitAnswer() {
-    if (!currentQuestion || selectedAnswer === null) return;
+  async function submitAnswer(selfAwardedPoints?: number) {
+    if (!currentQuestion) return;
+    const response = currentQuestion.question_type === "single_choice"
+      ? selectedAnswer === null ? null : { index: selectedAnswer }
+      : currentQuestion.question_type === "multiple_choice"
+        ? selectedIndices.length ? { indices: selectedIndices } : null
+        : writtenAnswer.trim().length ? { text: writtenAnswer.trim() } : null;
+    if (!response) return;
     setSubmitting(true);
     setError("");
     try {
       const supabase = await getSupabaseClient();
-      const { data, error: submitError } = await supabase.rpc("submit_practice_answer", {
+      const { data, error: submitError } = await supabase.rpc("submit_practice_response", {
         target_question_id: currentQuestion.question_id,
-        selected_answer: selectedAnswer,
+        student_response: response,
+        self_awarded_points: selfAwardedPoints ?? null,
       });
       if (submitError) throw submitError;
       const result = (data as AnswerResult[] | null)?.[0];
       if (!result) throw new Error("missing_result");
       setSubmittedAnswer({ ...result, questionId: currentQuestion.question_id });
       trackAnalyticsEvent("answer_checked");
-      setDraftAnswer(null);
+      clearDrafts();
       setQuestions((current) =>
         current.map((question) =>
           question.question_id === currentQuestion.question_id
             ? {
                 ...question,
-                selected_answer: selectedAnswer,
+                selected_answer: currentQuestion.question_type === "single_choice" ? selectedAnswer : null,
+                selected_response: response,
                 is_correct: result.answer_is_correct,
+                points_awarded: result.awarded_points,
+                max_points: result.question_max_points,
+                grading_status: result.response_grading_status,
                 attempt_count: result.answer_attempt_count,
                 correct_answer: result.answer_correct_index,
+                revealed_answer_key: result.answer_key,
                 explanation: result.answer_explanation,
               }
             : question,
@@ -449,21 +541,21 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
     if (!filteredQuestions.length) return;
     if (!confirmDraftDiscard()) return;
     setQuestionIndex((current) => (current + direction + filteredQuestions.length) % filteredQuestions.length);
-    setDraftAnswer(null);
+    clearDrafts();
     setSubmittedAnswer(null);
     setError("");
   }
 
   function exitPractice() {
     if (!confirmDraftDiscard()) return;
-    setDraftAnswer(null);
+    clearDrafts();
     setSubmittedAnswer(null);
     onNavigate("start");
   }
 
   function subjectStats(target: Subject) {
     const available = questions.filter((question) => question.subject === target);
-    const answered = available.filter((question) => question.selected_answer !== null).length;
+    const answered = available.filter((question) => question.selected_response !== null || question.selected_answer !== null).length;
     const correct = available.filter((question) => question.is_correct).length;
     return { total: available.length, answered, correct };
   }
@@ -551,10 +643,11 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
 
             <div className="task-prompt">
               <h1 className="mathjax_process">{currentQuestion.prompt}</h1>
+              <CkeQuestionContent blocks={currentQuestion.content_blocks} assets={currentQuestion.assets} />
               <small>Pytanie {questionIndex + 1} z {filteredQuestions.length} · {formatQuestionSource(currentQuestion)}{currentQuestion.paper_question_number ? ` · zadanie ${currentQuestion.paper_question_number}` : ""}</small>
             </div>
 
-            <div className="task-answers" role="radiogroup" aria-label="Wybierz odpowiedź">
+            {currentQuestion.question_type === "single_choice" && <div className="task-answers" role="radiogroup" aria-label="Wybierz jedną odpowiedź">
               {currentQuestion.options.map((option, index) => {
                 const correct = answerResult?.answer_correct_index === index;
                 const incorrect = Boolean(answerResult) && selectedAnswer === index && !correct;
@@ -562,16 +655,35 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
                 const answerClass = ["task-answer", selectedAnswer === index && "is-selected", correct && "is-correct", incorrect && "is-incorrect", muted && "is-muted"].filter(Boolean).join(" ");
                 return <button key={option} ref={(element) => { answerRefs.current[index] = element; }} type="button" role="radio" aria-checked={selectedAnswer === index} tabIndex={selectedAnswer === index || (selectedAnswer === null && index === 0) ? 0 : -1} className={answerClass} onClick={() => selectAnswer(index)} onKeyDown={(event) => handleAnswerKeyDown(event, index)} disabled={submitting || Boolean(answerResult)}><b>{String.fromCharCode(65 + index)}</b><span>{option}</span>{incorrect && <em>Twoja odpowiedź</em>}{correct && <em>Poprawna</em>}</button>;
               })}
-            </div>
+            </div>}
 
-            {answerResult && <div className={`task-verdict ${answerResult.answer_is_correct ? "is-correct" : "is-incorrect"}`} data-comment-anchor="verdict">
-              <div><span>{answerResult.answer_is_correct ? "✓" : "✕"}</span><b>{answerResult.answer_is_correct ? "Dobrze" : "Jeszcze nie to"}</b><small>{answerResult.answer_is_correct ? "1 / 1 pkt" : "0 / 1 pkt"}</small></div>
-              <p>{answerResult.answer_is_correct ? answerResult.answer_explanation : `Poprawna odpowiedź: ${String.fromCharCode(65 + answerResult.answer_correct_index)}. ${currentQuestion.options[answerResult.answer_correct_index]}. ${answerResult.answer_explanation}`}</p>
+            {currentQuestion.question_type === "multiple_choice" && <div className="task-answers task-multiple-answers" role="group" aria-label="Wybierz wszystkie poprawne odpowiedzi">
+              {currentQuestion.options.map((option, index) => {
+                const selected = selectedIndices.includes(index);
+                const correct = Boolean(answerResult) && correctIndices.includes(index);
+                const incorrect = Boolean(answerResult) && selected && !correct;
+                const answerClass = ["task-answer", selected && "is-selected", correct && "is-correct", incorrect && "is-incorrect"].filter(Boolean).join(" ");
+                return <button key={`${index}-${option}`} type="button" role="checkbox" aria-checked={selected} className={answerClass} onClick={() => toggleMultipleAnswer(index)} disabled={submitting || Boolean(answerResult)}><b>{selected ? "✓" : String.fromCharCode(65 + index)}</b><span>{option}</span>{incorrect && <em>Twój wybór</em>}{correct && <em>Poprawna</em>}</button>;
+              })}
+              {!answerResult && <small className="task-answer-instruction">Zaznacz wszystkie odpowiedzi, które są prawdziwe.</small>}
+            </div>}
+
+            {["numeric", "short_text", "long_text"].includes(currentQuestion.question_type) && <section className="task-written-response" aria-labelledby="written-answer-label">
+              <label id="written-answer-label" htmlFor="written-answer">Twoje rozwiązanie</label>
+              <Textarea id="written-answer" value={writtenAnswer} onChange={(event) => setWrittenAnswer(event.target.value)} rows={currentQuestion.question_type === "long_text" ? 8 : 3} placeholder="Zapisz obliczenia, uzasadnienie i odpowiedź. Możesz używać zapisu matematycznego." disabled={submitting || Boolean(answerResult)} />
+              {!answerResult && <small>Po zapisaniu porównasz rozwiązanie z kryteriami CKE i samodzielnie przyznasz punkty.</small>}
+            </section>}
+
+            {answerResult && <div className={`task-verdict ${answerResult.answer_is_correct === null ? "is-review" : answerResult.answer_is_correct ? "is-correct" : "is-incorrect"}`} data-comment-anchor="verdict">
+              <div><span>{answerResult.answer_is_correct === null ? "↗" : answerResult.answer_is_correct ? "✓" : "✕"}</span><b>{answerResult.response_grading_status === "self_assessed" ? "Punkty zapisane" : answerResult.answer_is_correct === null ? "Porównaj rozwiązanie" : answerResult.answer_is_correct ? "Dobrze" : "Jeszcze nie to"}</b><small>{answerResult.awarded_points === null ? `— / ${answerResult.question_max_points} pkt` : `${answerResult.awarded_points} / ${answerResult.question_max_points} pkt`}</small></div>
+              <p className="mathjax_process">{answerResult.answer_is_correct === false && answerResult.answer_correct_index !== null ? `Poprawna odpowiedź: ${String.fromCharCode(65 + answerResult.answer_correct_index)}. ${currentQuestion.options[answerResult.answer_correct_index]}. ${answerResult.answer_explanation}` : answerResult.answer_explanation}</p>
+              {currentQuestion.scoring.rules?.length ? <section className="task-scoring-rules"><b>Kryteria punktowania CKE</b><ul>{currentQuestion.scoring.rules.map((rule) => <li key={rule}>{rule}</li>)}</ul></section> : null}
+              {answerResult.response_grading_status === "awaiting_self_assessment" && <div className="task-self-score"><b>Ile punktów spełnia Twoje rozwiązanie?</b><div>{Array.from({ length: answerResult.question_max_points + 1 }, (_, points) => <Button key={points} type="button" variant="outline" onClick={() => void submitAnswer(points)} disabled={submitting}>{points} {points === 1 ? "punkt" : "punkty"}</Button>)}</div><small>To samoocena na podstawie oficjalnych kryteriów — nie ocena wystawiona przez AI.</small></div>}
             </div>}
 
             <footer className="task-actions">
-              <Button type="button" size="lg" onClick={answerResult ? () => moveQuestion(1) : () => void submitAnswer()} disabled={!answerResult && (selectedAnswer === null || submitting)}>{submitting ? "Sprawdzam…" : answerResult ? "Następne zadanie" : "Sprawdź odpowiedź"}</Button>
-              <span>{answerResult ? `Wynik zapisany w postępie. Następne: zadanie ${(questionIndex + 1) % filteredQuestions.length + 1} z ${filteredQuestions.length}.` : selectedAnswer === null ? "Wybierz jedną z odpowiedzi, żeby sprawdzić." : "Odpowiedź zapisujemy dopiero po sprawdzeniu."}</span>
+              <Button type="button" size="lg" onClick={answerResult ? () => moveQuestion(1) : () => void submitAnswer()} disabled={submitting || (!answerResult && (currentQuestion.question_type === "single_choice" ? selectedAnswer === null : currentQuestion.question_type === "multiple_choice" ? selectedIndices.length === 0 : writtenAnswer.trim().length === 0))}>{submitting ? "Zapisuję…" : answerResult ? "Następne zadanie" : currentQuestion.question_type === "single_choice" || currentQuestion.question_type === "multiple_choice" ? "Sprawdź odpowiedź" : "Pokaż rozwiązanie i kryteria"}</Button>
+              <span>{answerResult ? `Odpowiedź zapisana w postępie. Następne: zadanie ${(questionIndex + 1) % filteredQuestions.length + 1} z ${filteredQuestions.length}.` : currentQuestion.question_type === "single_choice" ? "Wybierz jedną odpowiedź." : currentQuestion.question_type === "multiple_choice" ? "Możesz zaznaczyć więcej niż jedną odpowiedź." : "Najpierw zapisz własny tok rozwiązania."}</span>
               <nav aria-label="Nawigacja między zadaniami"><button type="button" aria-label="Poprzednie pytanie" onClick={() => moveQuestion(-1)} disabled={submitting || filteredQuestions.length < 2}>← Poprzednie</button><button type="button" aria-label="Następne pytanie" onClick={() => moveQuestion(1)} disabled={submitting || filteredQuestions.length < 2}>Następne →</button></nav>
             </footer>
           </main>
@@ -606,7 +718,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
           <div className="guardian-section-heading"><div><Badge variant="secondary">Arkusze CKE</Badge><h3 id="paper-progress-title">Wyniki według rocznika i arkusza</h3></div><small>Pełny arkusz liczymy osobno od sesji mieszających zadania.</small></div>
           {paperProgress.length ? <div className="practice-paper-grid">{paperProgress.map((paper) => {
             const statusLabel = paper.completion_status === "completed" ? "Ukończony" : paper.completion_status === "in_progress" ? "Rozpoczęty" : "Nierozpoczęty";
-            return <Card key={paper.progress_paper_id} className="practice-paper-card"><CardHeader><div className="practice-paper-title"><Badge variant={paper.completion_status === "completed" ? "default" : "outline"}>{statusLabel}</Badge><span>CKE {paper.exam_year} · {sessionLabels[paper.exam_session]} · kod {paper.accommodation_code}</span></div><div className="subject-card-heading compact"><SubjectIcon subject={paper.subject} /><div><CardTitle>{subjectLabels[paper.subject]}</CardTitle><CardDescription>{paper.accommodation_label} · {paper.source_label}</CardDescription></div></div></CardHeader><CardContent><div className="subject-progress-value"><b>{paper.accuracy_percent}%</b><span>{paper.correct_questions} poprawnych z {paper.answered_questions} rozwiązanych</span></div><Progress value={(paper.answered_questions / Math.max(paper.total_questions, 1)) * 100} aria-label={`Ukończenie arkusza ${paper.exam_year}: ${paper.answered_questions} z ${paper.total_questions}`} /></CardContent></Card>;
+            return <Card key={paper.progress_paper_id} className="practice-paper-card"><CardHeader><div className="practice-paper-title"><Badge variant={paper.completion_status === "completed" ? "default" : "outline"}>{statusLabel}</Badge><span>CKE {paper.exam_year} · {sessionLabels[paper.exam_session]} · kod {paper.accommodation_code}</span></div><div className="subject-card-heading compact"><SubjectIcon subject={paper.subject} /><div><CardTitle>{subjectLabels[paper.subject]}</CardTitle><CardDescription>{paper.accommodation_label} · {paper.source_label}</CardDescription></div></div></CardHeader><CardContent><div className="subject-progress-value"><b>{paper.score_percent}%</b><span>{paper.earned_points} z {paper.available_points} pkt · {paper.answered_questions} z {paper.total_questions} zadań</span></div><Progress value={(paper.answered_questions / Math.max(paper.total_questions, 1)) * 100} aria-label={`Ukończenie arkusza ${paper.exam_year}: ${paper.answered_questions} z ${paper.total_questions}`} /></CardContent></Card>;
           })}</div> : <Card className="practice-paper-empty"><CardContent><b>Brak opublikowanych arkuszy CKE</b><p>Gdy pierwszy zweryfikowany arkusz zostanie zaimportowany, pojawi się tutaj jako osobny rocznik — bez mieszania z zestawem demo.</p></CardContent></Card>}
         </section>
       </section>}

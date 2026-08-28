@@ -63,7 +63,7 @@ const questions = [
   },
 ];
 
-function prepareRpc(questionRows = questions, progressRows: Record<string, unknown>[] = []) {
+function prepareRpc(questionRows = questions, progressRows: Record<string, unknown>[] = [], submitResult?: (params: Record<string, unknown>) => Record<string, unknown>) {
   vi.stubGlobal("fetch", vi.fn().mockImplementation(async (_input: RequestInfo | URL, init?: RequestInit) => new Response(JSON.stringify(init?.method === "POST" ? {
     message: { id: "ai-response-1", role: "assistant", content: "Wyjaśnienie AI do aktualnego zadania.", created_at: "2026-08-28T10:00:00.000Z" },
     usage: { used: 1, limit: 3, remaining: 2, plan: "free" },
@@ -73,17 +73,21 @@ function prepareRpc(questionRows = questions, progressRows: Record<string, unkno
     available: true,
     hints: ["Zamień procent na ułamek.", "Pomnóż przez liczbę."],
   }), { status: 200, headers: { "Content-Type": "application/json" } })));
-  rpc.mockImplementation(async (name: string) => {
+  rpc.mockImplementation(async (name: string, params: Record<string, unknown>) => {
     if (name === "get_practice_questions") return { data: questionRows, error: null };
     if (name === "get_student_paper_progress") return { data: progressRows, error: null };
     if (name === "get_my_cke_preference") return { data: [{ accommodation_code: "100", accommodation_label: "Wariant standardowy" }], error: null };
-    if (name === "submit_practice_answer") {
+    if (name === "submit_practice_response") {
       return {
-        data: [{
+        data: [submitResult?.(params) ?? {
           answer_is_correct: true,
           answer_correct_index: 1,
+          answer_key: { correct_index: 1 },
           answer_explanation: "20% z 50 to 10.",
           answer_attempt_count: 1,
+          awarded_points: 1,
+          question_max_points: 1,
+          response_grading_status: "auto",
           solved_count: 1,
           correct_count: 1,
         }],
@@ -203,9 +207,10 @@ describe("StudentPractice focus mode", () => {
 
     await user.click(await screen.findByRole("radio", { name: "B 10" }));
     await user.click(screen.getByRole("button", { name: "Sprawdź odpowiedź" }));
-    await waitFor(() => expect(rpc).toHaveBeenCalledWith("submit_practice_answer", {
+    await waitFor(() => expect(rpc).toHaveBeenCalledWith("submit_practice_response", {
       target_question_id: "demo-mat-01",
-      selected_answer: 1,
+      student_response: { index: 1 },
+      self_awarded_points: null,
     }));
     expect(await screen.findByText("Dobrze")).toBeInTheDocument();
     expect(screen.getByText("B. 10")).toBeInTheDocument();
@@ -252,5 +257,51 @@ describe("StudentPractice focus mode", () => {
     await user.click(screen.getByRole("button", { name: "Rozpocznij ćwiczenia →" }));
     expect(await screen.findByRole("heading", { name: "Pytanie z 2025 roku" })).toBeInTheDocument();
     expect(screen.getByText(/CKE 2025 · termin główny · zadanie 1/)).toBeInTheDocument();
+  });
+
+  it("reveals the CKE rubric before saving a student's self-assessed score", async () => {
+    const openQuestion = {
+      ...questions[0],
+      question_id: "cke-2026-mat-q15",
+      source_type: "cke",
+      source_label: "CKE 2026 matematyka",
+      exam_paper_id: "cke-2026-main-mathematics-100-x",
+      exam_year: 2026,
+      exam_session: "main",
+      exam_variant: "100-X",
+      source_document_id: "OMAP-100-X-2605",
+      paper_question_number: 15,
+      question_type: "long_text",
+      prompt: "Oblicz liczbę kartek niebieskich.",
+      options: [],
+      scoring: { max_points: 2, rules: ["2 pkt – poprawna metoda i wynik 57", "1 pkt – poprawne równanie"] },
+      selected_response: null,
+      grading_status: null,
+    };
+    prepareRpc([openQuestion], [], (params) => ({
+      answer_is_correct: params.self_awarded_points == null ? null : params.self_awarded_points === 2,
+      answer_correct_index: null,
+      answer_key: { accepted_results: ["57"], assessment: "rubric" },
+      answer_explanation: "Z równania otrzymujemy 57 kartek.",
+      answer_attempt_count: 1,
+      awarded_points: params.self_awarded_points ?? null,
+      question_max_points: 2,
+      response_grading_status: params.self_awarded_points == null ? "awaiting_self_assessment" : "self_assessed",
+      solved_count: 1,
+      correct_count: 0,
+    }));
+    const user = userEvent.setup();
+    render(<StudentPractice activeView="exercises" onNavigate={() => undefined} />);
+
+    const response = await screen.findByRole("textbox", { name: "Twoje rozwiązanie" });
+    await user.type(response, "x + 1,5x + x - 10 + 37 = 160, więc 1,5x = 57");
+    await user.click(screen.getByRole("button", { name: "Pokaż rozwiązanie i kryteria" }));
+
+    expect(await screen.findByText("Porównaj rozwiązanie")).toBeInTheDocument();
+    expect(screen.getByText("Kryteria punktowania CKE")).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "2 punkty" }));
+    await waitFor(() => expect(rpc).toHaveBeenLastCalledWith("get_student_paper_progress"));
+    expect(await screen.findByText("Punkty zapisane")).toBeInTheDocument();
+    expect(screen.getByText("2 / 2 pkt")).toBeInTheDocument();
   });
 });

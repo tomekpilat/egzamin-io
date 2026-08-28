@@ -11,7 +11,7 @@ import { AI_MESSAGE_MAX_LENGTH, normalizeUsage, validateTutorMessage, type AiCha
 import { getSupabaseClient } from "@/lib/supabase-browser";
 
 export type AiTutorFeedback = {
-  isCorrect: boolean;
+  isCorrect: boolean | null;
   correctAnswer: string;
   explanation: string;
 };

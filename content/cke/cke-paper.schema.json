@@ -23,7 +23,8 @@
         "exam_session": { "enum": ["main", "additional"] },
         "subject": { "enum": ["mathematics", "polish", "english"] },
         "variant_code": { "type": "string", "minLength": 1, "maxLength": 40 },
-        "question_count": { "type": "integer", "minimum": 1 }
+        "question_count": { "type": "integer", "minimum": 1 },
+        "supplementary_sources": { "type": "array", "items": { "$ref": "#/$defs/sourceDocument" }, "default": [] }
       }
     },
     "permission": {
@@ -46,6 +47,17 @@
   "$defs": {
     "slug": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{2,119}$" },
     "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "sourceDocument": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "path", "sha256", "label"],
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "path": { "type": "string", "minLength": 1 },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "label": { "type": "string", "minLength": 1 }
+      }
+    },
     "asset": {
       "type": "object",
       "additionalProperties": false,
@@ -69,7 +81,7 @@
     "question": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "number", "sort_order", "source_pages", "type", "topic", "difficulty", "prompt", "answer_key", "scoring", "explanation"],
+      "required": ["id", "number", "sort_order", "source_pages", "type", "topic", "difficulty", "prompt", "answer_key", "scoring", "explanation", "solution_steps", "hints"],
       "properties": {
         "id": { "$ref": "#/$defs/slug" },
         "number": { "type": "string", "pattern": "^[0-9]+(\\.[0-9]+)?$" },
@@ -83,6 +95,8 @@
         "answer_key": { "type": "object" },
         "scoring": { "type": "object" },
         "explanation": { "type": "string", "minLength": 1 },
+        "solution_steps": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+        "hints": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
         "content_blocks": { "type": "array", "items": { "$ref": "#/$defs/contentBlock" }, "default": [] },
         "assets": { "type": "array", "items": { "$ref": "#/$defs/asset" }, "default": [] }
       },
@@ -94,6 +108,16 @@
             "properties": {
               "answer_options": { "minItems": 4, "maxItems": 4 },
               "answer_key": { "type": "object", "required": ["correct_index"], "properties": { "correct_index": { "type": "integer", "minimum": 0, "maximum": 3 } } }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "type": { "const": "multiple_choice" } }, "required": ["type"] },
+          "then": {
+            "required": ["answer_options"],
+            "properties": {
+              "answer_options": { "minItems": 2 },
+              "answer_key": { "type": "object", "required": ["correct_indices"], "properties": { "correct_indices": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "integer", "minimum": 0 } } } }
             }
           }
         }

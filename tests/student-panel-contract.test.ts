@@ -27,7 +27,7 @@ describe("student panel navigation", () => {
   it("loads questions and saves answers through authenticated database functions", () => {
     expect(practice).toContain('supabase.rpc("get_practice_questions")');
     expect(practice).toContain('supabase.rpc("get_student_paper_progress")');
-    expect(practice).toContain('supabase.rpc("submit_practice_answer"');
+    expect(practice).toContain('supabase.rpc("submit_practice_response"');
     expect(practice).toContain("answer_explanation");
   });
 

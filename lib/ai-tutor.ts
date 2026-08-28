@@ -166,7 +166,9 @@ export function buildTutorSystemPrompt(context: TutorQuestionContext): string {
     subjectInstruction,
     `Przedmiot: ${context.subject}. Temat: ${context.topic}.`,
     `Treść zadania: ${context.prompt}`,
-    `Odpowiedzi: ${context.options.map((option, index) => `${String.fromCharCode(65 + index)}. ${option}`).join(" | ")}`,
+    context.options.length
+      ? `Odpowiedzi: ${context.options.map((option, index) => `${String.fromCharCode(65 + index)}. ${option}`).join(" | ")}`
+      : "Typ odpowiedzi: zadanie otwarte. Pomagaj ocenić tok rozumowania według zatwierdzonych kryteriów; nie udawaj oficjalnego egzaminatora.",
     `Zatwierdzony klucz: ${JSON.stringify(context.answerKey)}`,
     `Zatwierdzone kroki: ${context.solutionSteps.join(" → ")}`,
     `Zatwierdzone podpowiedzi: ${context.hints.join(" | ")}`,

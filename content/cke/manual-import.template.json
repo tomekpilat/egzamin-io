@@ -34,6 +34,8 @@
       "answer_key": { "correct_index": 0 },
       "scoring": { "max_points": 1, "rules": ["1 pkt – poprawna odpowiedź", "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi"] },
       "explanation": "UZUPEŁNIJ ZWERYFIKOWANE WYJAŚNIENIE",
+      "solution_steps": ["UZUPEŁNIJ PIERWSZY KROK", "UZUPEŁNIJ KOLEJNY KROK"],
+      "hints": ["UZUPEŁNIJ DELIKATNĄ PODPOWIEDŹ", "UZUPEŁNIJ KOLEJNY KROK BEZ ZDRADZANIA WYNIKU"],
       "content_blocks": [
         { "type": "markdown", "text": "Treść pomocnicza." },
         { "type": "math", "latex": "x^2 + y^2 = z^2", "display": true },
@@ -61,6 +63,8 @@
       "answer_key": { "accepted_methods": ["UZUPEŁNIJ METODĘ"] },
       "scoring": { "max_points": 3, "rules": ["UZUPEŁNIJ KRYTERIA CKE"] },
       "explanation": "UZUPEŁNIJ ZWERYFIKOWANE ROZWIĄZANIE KROK PO KROKU",
+      "solution_steps": ["UZUPEŁNIJ PIERWSZY KROK", "UZUPEŁNIJ KOLEJNY KROK"],
+      "hints": ["UZUPEŁNIJ DELIKATNĄ PODPOWIEDŹ", "UZUPEŁNIJ KOLEJNY KROK BEZ ZDRADZANIA WYNIKU"],
       "content_blocks": [
         { "type": "table", "header_rows": 1, "caption": "UZUPEŁNIJ podpis tabeli", "rows": [["Kolumna 1", "Kolumna 2"], ["Wartość", "Wartość"]] }
       ],
