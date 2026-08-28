@@ -111,7 +111,7 @@ describe("StudentPractice focus mode", () => {
 
     expect(await screen.findByRole("region", { name: "Tryb skupienia" })).toBeInTheDocument();
     expect(screen.queryByText("Tryb skupienia")).not.toBeInTheDocument();
-    expect(screen.getByText("1 z 2")).toBeInTheDocument();
+    expect(screen.getByText((_content, element) => element?.textContent === "Zadanie 1 z 2")).toBeInTheDocument();
     expect(screen.getByRole("progressbar", { name: "Postęp w bieżącym zestawie" })).toHaveAttribute("aria-valuenow", "50");
     expect(screen.getByRole("button", { name: "Poprzednie pytanie" })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Następne pytanie" })).toBeInTheDocument();
@@ -167,9 +167,10 @@ describe("StudentPractice focus mode", () => {
       target_question_id: "demo-mat-01",
       selected_answer: 1,
     }));
-    expect(await screen.findByText("Dobra odpowiedź!")).toBeInTheDocument();
-    expect(screen.getByText("Poprawna odpowiedź: B. 10")).toBeInTheDocument();
-    expect(screen.queryByRole("tab", { name: "Wskazówki" })).not.toBeInTheDocument();
+    expect(await screen.findByText("Dobrze")).toBeInTheDocument();
+    expect(screen.getByText("B. 10")).toBeInTheDocument();
+    expect(screen.getByRole("tab", { name: "Wskazówki" })).toBeInTheDocument();
+    expect(screen.getByRole("tab", { name: "Rozwiązanie" })).toHaveAttribute("aria-selected", "true");
     expect(screen.getByRole("radio", { name: "B 10 Poprawna" })).toBeDisabled();
     await user.click(screen.getByRole("button", { name: "Następne zadanie" }));
     expect(screen.getByRole("heading", { name: "Które słowo jest rzeczownikiem?" })).toBeInTheDocument();

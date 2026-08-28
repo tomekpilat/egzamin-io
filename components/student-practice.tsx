@@ -190,6 +190,22 @@ export function formatQuestionSource(question: PracticeQuestion) {
   return `CKE ${question.exam_year} · ${session}${variant}${accommodation}`;
 }
 
+function useQuestionTimer(questionId: string | null, running: boolean) {
+  const [elapsedSeconds, setElapsedSeconds] = useState(0);
+
+  useEffect(() => {
+    if (!running || !questionId) return;
+    const startedAt = Date.now();
+    queueMicrotask(() => setElapsedSeconds(0));
+    const timer = window.setInterval(() => setElapsedSeconds(Math.floor((Date.now() - startedAt) / 1000)), 1_000);
+    return () => window.clearInterval(timer);
+  }, [questionId, running]);
+
+  const minutes = Math.floor(elapsedSeconds / 60).toString().padStart(2, "0");
+  const seconds = (elapsedSeconds % 60).toString().padStart(2, "0");
+  return `${minutes}:${seconds}`;
+}
+
 export function StudentPractice({ activeView, onNavigate }: { activeView: StudentView; onNavigate: (view: StudentView) => void }) {
   const [questions, setQuestions] = useState<PracticeQuestion[]>([]);
   const [paperProgress, setPaperProgress] = useState<PaperProgress[]>([]);
@@ -273,6 +289,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
     [questions, subject, material, paperId],
   );
   const currentQuestion = filteredQuestions[questionIndex] ?? null;
+  const questionTime = useQuestionTimer(currentQuestion?.question_id ?? null, activeView === "exercises");
   const accommodation = getCkeAccommodation(accommodationCode);
   const answeredCount = questions.filter((question) => question.selected_answer !== null).length;
   const correctCount = questions.filter((question) => question.is_correct).length;
@@ -499,53 +516,68 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
         </Card>
       </>}
 
-      {activeView === "exercises" && <section className="practice-focus-shell" aria-label="Tryb skupienia">
-        <header className="practice-focus-header">
-          <div className="practice-focus-context">
-            <Button type="button" variant="outline" className="practice-focus-exit" aria-label="Zakończ" onClick={exitPractice} disabled={submitting}><ChevronLeft aria-hidden="true" /><span>Wyjdź</span></Button>
-            <div className="practice-focus-subject">
-              <div><label htmlFor="practice-material">Rocznik</label><Select value={material} onValueChange={(value) => selectMaterial(value as MaterialFilter)} disabled={submitting}>
-                <SelectTrigger id="practice-material" aria-label="Wybierz rocznik"><SelectValue /></SelectTrigger>
+      {activeView === "exercises" && <section className="task-screen" aria-label="Tryb skupienia">
+        <header className="task-topbar">
+          <div className="task-topbar-context">
+            <button type="button" className="task-exit" aria-label="Zakończ" onClick={exitPractice} disabled={submitting}><ChevronLeft aria-hidden="true" /> Wyjdź</button>
+            <div className="task-filters">
+              <Select value={material} onValueChange={(value) => selectMaterial(value as MaterialFilter)} disabled={submitting}>
+                <SelectTrigger aria-label="Wybierz rocznik"><SelectValue /></SelectTrigger>
                 <SelectContent>{materialOptions.map((item) => <SelectItem key={item.value} value={item.value}>{item.label}</SelectItem>)}</SelectContent>
-              </Select></div>
-              <div><label htmlFor="practice-subject">Przedmiot</label><Select value={subject} onValueChange={(value) => selectSubject(value as SubjectFilter)} disabled={submitting}>
-                <SelectTrigger id="practice-subject" aria-label="Wybierz przedmiot"><SelectValue /></SelectTrigger>
+              </Select>
+              <Select value={subject} onValueChange={(value) => selectSubject(value as SubjectFilter)} disabled={submitting}>
+                <SelectTrigger aria-label="Wybierz przedmiot"><SelectValue /></SelectTrigger>
                 <SelectContent>{availableSubjects.map((item) => <SelectItem key={item.value} value={item.value}>{item.label}</SelectItem>)}</SelectContent>
-              </Select></div>
+              </Select>
+              {currentQuestion && <span>· {currentQuestion.source_type === "cke" ? `${currentQuestion.exam_accommodation_label || "Arkusz CKE"} · ${currentQuestion.exam_session ? sessionLabels[currentQuestion.exam_session] : "sesja główna"}` : "Zestaw demonstracyjny"}</span>}
             </div>
-            {currentQuestion && <span className="practice-focus-paper-label">{currentQuestion.source_type === "cke" ? `${currentQuestion.exam_accommodation_label || "Arkusz CKE"} · ${currentQuestion.exam_session ? sessionLabels[currentQuestion.exam_session] : "sesja główna"}` : "Zestaw demonstracyjny"}</span>}
           </div>
-          <div className="practice-focus-progress" aria-live="polite">
-            <div><span>Zadanie</span><b>{currentQuestion ? `${questionIndex + 1} z ${filteredQuestions.length}` : "—"}</b></div>
+          <div className="task-progress" aria-live="polite">
+            <span className="task-timer"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7.5V12l3 2" /></svg>{questionTime}</span>
+            <span>Zadanie <strong>{currentQuestion ? questionIndex + 1 : "—"}</strong> z {filteredQuestions.length}</span>
             <Progress value={currentQuestion ? ((questionIndex + 1) / Math.max(filteredQuestions.length, 1)) * 100 : 0} aria-label="Postęp w bieżącym zestawie" />
           </div>
         </header>
-        <div className="practice-focus-stage">
-          {error && <Alert variant="destructive" className="dashboard-alert"><AlertDescription>{error}</AlertDescription></Alert>}
-          {!currentQuestion && <Alert><AlertTitle>Brak pytań w tym przedmiocie</AlertTitle><AlertDescription>Wybierz inny przedmiot, aby kontynuować ćwiczenia.</AlertDescription></Alert>}
-          {currentQuestion && <div className="practice-focus-workspace">
-            <Card className="practice-question-card practice-focus-question-card">
-              <CardHeader>
-                <div className="practice-meta"><Badge variant="outline">{currentQuestion.source_type === "cke" ? "Arkusz CKE" : "Demo"}</Badge><Badge variant="outline">{currentQuestion.topic}</Badge><span>{currentQuestion.source_type === "cke" ? `Egzamin ósmoklasisty ${currentQuestion.exam_year ?? ""}` : subjectLabels[currentQuestion.subject]}{currentQuestion.paper_question_number ? ` · zadanie ${currentQuestion.paper_question_number}` : ""}</span></div>
-                <h1 data-slot="card-title">{currentQuestion.prompt}</h1>
-                <CardDescription>Pytanie {questionIndex + 1} z {filteredQuestions.length} · {formatQuestionSource(currentQuestion)}{currentQuestion.paper_question_number ? ` · zadanie ${currentQuestion.paper_question_number}` : ""}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="practice-answers" role="radiogroup" aria-label="Wybierz odpowiedź">
-                  {currentQuestion.options.map((option, index) => {
-                    const correct = answerResult?.answer_correct_index === index;
-                    const incorrect = Boolean(answerResult) && selectedAnswer === index && !correct;
-                    const muted = Boolean(answerResult) && !correct && !incorrect;
-                    const answerClass = ["practice-answer", selectedAnswer === index && "selected", correct && "correct", incorrect && "incorrect", muted && "muted"].filter(Boolean).join(" ");
-                    return <button key={option} ref={(element) => { answerRefs.current[index] = element; }} type="button" role="radio" aria-checked={selectedAnswer === index} tabIndex={selectedAnswer === index || (selectedAnswer === null && index === 0) ? 0 : -1} className={answerClass} onClick={() => selectAnswer(index)} onKeyDown={(event) => handleAnswerKeyDown(event, index)} disabled={submitting || Boolean(answerResult)}><b>{String.fromCharCode(65 + index)}</b><span>{option}</span>{incorrect && <em>Twoja odpowiedź</em>}{correct && <em>Poprawna</em>}</button>;
-                  })}
-                </div>
-                <div className="practice-actions">{!answerResult ? <><Button type="button" size="lg" onClick={() => void submitAnswer()} disabled={selectedAnswer === null || submitting}>{submitting ? "Sprawdzam…" : "Sprawdź odpowiedź"}</Button><span>Odpowiedź zapisujemy dopiero po sprawdzeniu.</span></> : <span className={`practice-answer-status ${answerResult.answer_is_correct ? "is-correct" : "is-incorrect"}`}>{answerResult.answer_is_correct ? "Odpowiedź poprawna" : "Odpowiedź sprawdzona"}</span>}<div><Button type="button" variant="outline" aria-label="Poprzednie pytanie" onClick={() => moveQuestion(-1)} disabled={submitting || filteredQuestions.length < 2}><ChevronLeft aria-hidden="true" /> Poprzednie</Button><Button type="button" variant="outline" aria-label="Następne pytanie" onClick={() => moveQuestion(1)} disabled={submitting || filteredQuestions.length < 2}>Następne <ChevronRight aria-hidden="true" /></Button></div></div>
-              </CardContent>
-            </Card>
-            <aside className={`practice-support-panel${tutorFeedback ? " has-feedback" : ""}`} aria-label="Odpowiedź, podpowiedzi i rozmowa z AI"><AiTutor questionId={currentQuestion.question_id} feedback={tutorFeedback} onNext={() => moveQuestion(1)} canGoNext={filteredQuestions.length > 1} /></aside>
-          </div>}
-        </div>
+
+        {error && <Alert variant="destructive" className="task-screen-alert"><AlertDescription>{error}</AlertDescription></Alert>}
+        {!currentQuestion && <div className="task-empty"><Alert><AlertTitle>Brak pytań w tym przedmiocie</AlertTitle><AlertDescription>Wybierz inny przedmiot, aby kontynuować ćwiczenia.</AlertDescription></Alert></div>}
+        {currentQuestion && <div className="task-workspace">
+          <main className="task-question">
+            <div className="task-question-meta">
+              <span>{currentQuestion.source_type === "cke" ? "Arkusz CKE" : "Demo"}</span>
+              <span>{currentQuestion.topic}</span>
+              <p>{currentQuestion.source_type === "cke" ? `Egzamin ósmoklasisty ${currentQuestion.exam_year ?? ""}` : subjectLabels[currentQuestion.subject]}{currentQuestion.paper_question_number ? ` · zadanie ${currentQuestion.paper_question_number}` : ""}</p>
+            </div>
+
+            <div className="task-prompt">
+              <h1 className="mathjax_process">{currentQuestion.prompt}</h1>
+              <small>Pytanie {questionIndex + 1} z {filteredQuestions.length} · {formatQuestionSource(currentQuestion)}{currentQuestion.paper_question_number ? ` · zadanie ${currentQuestion.paper_question_number}` : ""}</small>
+            </div>
+
+            <div className="task-answers" role="radiogroup" aria-label="Wybierz odpowiedź">
+              {currentQuestion.options.map((option, index) => {
+                const correct = answerResult?.answer_correct_index === index;
+                const incorrect = Boolean(answerResult) && selectedAnswer === index && !correct;
+                const muted = Boolean(answerResult) && !correct && !incorrect;
+                const answerClass = ["task-answer", selectedAnswer === index && "is-selected", correct && "is-correct", incorrect && "is-incorrect", muted && "is-muted"].filter(Boolean).join(" ");
+                return <button key={option} ref={(element) => { answerRefs.current[index] = element; }} type="button" role="radio" aria-checked={selectedAnswer === index} tabIndex={selectedAnswer === index || (selectedAnswer === null && index === 0) ? 0 : -1} className={answerClass} onClick={() => selectAnswer(index)} onKeyDown={(event) => handleAnswerKeyDown(event, index)} disabled={submitting || Boolean(answerResult)}><b>{String.fromCharCode(65 + index)}</b><span>{option}</span>{incorrect && <em>Twoja odpowiedź</em>}{correct && <em>Poprawna</em>}</button>;
+              })}
+            </div>
+
+            {answerResult && <div className={`task-verdict ${answerResult.answer_is_correct ? "is-correct" : "is-incorrect"}`} data-comment-anchor="verdict">
+              <div><span>{answerResult.answer_is_correct ? "✓" : "✕"}</span><b>{answerResult.answer_is_correct ? "Dobrze" : "Jeszcze nie to"}</b><small>{answerResult.answer_is_correct ? "1 / 1 pkt" : "0 / 1 pkt"}</small></div>
+              <p>{answerResult.answer_is_correct ? answerResult.answer_explanation : `Poprawna odpowiedź: ${String.fromCharCode(65 + answerResult.answer_correct_index)}. ${currentQuestion.options[answerResult.answer_correct_index]}. ${answerResult.answer_explanation}`}</p>
+            </div>}
+
+            <footer className="task-actions">
+              <Button type="button" size="lg" onClick={answerResult ? () => moveQuestion(1) : () => void submitAnswer()} disabled={!answerResult && (selectedAnswer === null || submitting)}>{submitting ? "Sprawdzam…" : answerResult ? "Następne zadanie" : "Sprawdź odpowiedź"}</Button>
+              <span>{answerResult ? `Wynik zapisany w postępie. Następne: zadanie ${(questionIndex + 1) % filteredQuestions.length + 1} z ${filteredQuestions.length}.` : selectedAnswer === null ? "Wybierz jedną z odpowiedzi, żeby sprawdzić." : "Odpowiedź zapisujemy dopiero po sprawdzeniu."}</span>
+              <nav aria-label="Nawigacja między zadaniami"><Button type="button" variant="outline" aria-label="Poprzednie pytanie" onClick={() => moveQuestion(-1)} disabled={submitting || filteredQuestions.length < 2}><ChevronLeft aria-hidden="true" /> Poprzednie</Button><Button type="button" variant="outline" aria-label="Następne pytanie" onClick={() => moveQuestion(1)} disabled={submitting || filteredQuestions.length < 2}>Następne <ChevronRight aria-hidden="true" /></Button></nav>
+            </footer>
+          </main>
+
+          <aside className={`task-support${tutorFeedback ? " has-feedback" : ""}`} aria-label="Odpowiedź, podpowiedzi i rozmowa z AI"><AiTutor questionId={currentQuestion.question_id} feedback={tutorFeedback} /></aside>
+        </div>}
       </section>}
 
       {activeView === "progress" && <>

@@ -40,7 +40,7 @@ describe("student panel navigation", () => {
     expect(panel).toContain('const focusMode = profile.role === "student" && studentView === "exercises"');
     expect(panel).toContain('!focusMode && profile.role !== "student" && <aside');
     expect(panel).toContain('!focusMode && profile.role === "student" && <header className="student-app-header"');
-    expect(practice).toContain('className="practice-focus-shell"');
+    expect(practice).toContain('className="task-screen"');
     expect(practice).toContain("hasUnsavedPracticeAnswer");
     expect(practice).toContain('window.addEventListener("beforeunload"');
   });
