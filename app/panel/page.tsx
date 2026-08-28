@@ -508,8 +508,12 @@ export default function DashboardPage() {
   const parentPlusChildren = profile.role === "parent" ? linkedChildren.filter((child) => child.plan_tier === "plus" && (!child.plan_valid_until || new Date(child.plan_valid_until).getTime() > renderedAt)).length : 0;
   const focusMode = profile.role === "student" && studentView === "exercises";
 
+  if (focusMode) {
+    return <main className="task-route-shell"><StudentPractice activeView="exercises" onNavigate={setStudentView} /></main>;
+  }
+
   return (
-    <main className={`dashboard-page dashboard-${profile.role}-page${focusMode ? " dashboard-focus-mode" : ""}`}>
+    <main className={`dashboard-page dashboard-${profile.role}-page`}>
       {!focusMode && profile.role !== "parent" && profile.role !== "student" ? <AccountMenu displayName={displayName} email={profile.email} className="dashboard-session-floating" onSettings={openAccountSettings} onSignOut={() => void signOut()} /> : null}
       {!focusMode && profile.role === "parent" ? <FeedbackDialog userEmail={profile.email} screenContext={`parent:${parentView}`} /> : null}
       {!focusMode && profile.role !== "student" && <aside className="dashboard-sidebar">

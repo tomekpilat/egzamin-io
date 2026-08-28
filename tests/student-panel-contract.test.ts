@@ -4,6 +4,7 @@ import { describe, expect, it } from "vitest";
 
 const panel = readFileSync(join(process.cwd(), "app/panel/page.tsx"), "utf8");
 const practice = readFileSync(join(process.cwd(), "components/student-practice.tsx"), "utf8");
+const styles = readFileSync(join(process.cwd(), "app/redesign.css"), "utf8");
 
 describe("student panel navigation", () => {
   it("defines a separate view for every student menu item", () => {
@@ -38,6 +39,11 @@ describe("student panel navigation", () => {
 
   it("removes dashboard chrome while the student is solving a question", () => {
     expect(panel).toContain('const focusMode = profile.role === "student" && studentView === "exercises"');
+    expect(panel).toContain('if (focusMode)');
+    expect(panel).toContain('className="task-route-shell"');
+    expect(panel).toContain('<StudentPractice activeView="exercises" onNavigate={setStudentView} />');
+    expect(styles).toContain(".task-route-shell { position: fixed;");
+    expect(styles).toContain("width: 100vw; max-width: none; height: 100dvh;");
     expect(panel).toContain('!focusMode && profile.role !== "student" && <aside');
     expect(panel).toContain('!focusMode && profile.role === "student" && <header className="student-app-header"');
     expect(practice).toContain('className="task-screen"');

@@ -937,9 +937,7 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
 .student-review-card small { color: var(--quiet-copy); font-size: 12px; }
 .student-review-card p { margin: 0; color: var(--muted-copy); font-size: 13px; line-height: 1.6; }
 
-.dashboard-focus-mode { position: fixed; z-index: 60; inset: 0; width: 100vw; height: 100dvh; min-height: 0; display: block; overflow: hidden; }
-.dashboard-focus-mode .dashboard-main,
-.dashboard-focus-content { width: 100%; height: 100%; min-height: 0; max-width: none; padding: 0; }
+.task-route-shell { position: fixed; z-index: 60; inset: 0; width: 100vw; max-width: none; height: 100dvh; min-height: 0; margin: 0; padding: 0; overflow: hidden; background: var(--background); }
 
 .task-screen { width: 100%; height: 100dvh; min-height: 0; display: grid; grid-template-rows: auto minmax(0, 1fr); overflow: hidden; color: var(--foreground); background: var(--background); }
 .task-topbar { min-height: 65px; padding: 14px 28px; display: flex; align-items: center; justify-content: space-between; gap: 24px; background: var(--card); border-bottom: 1px solid var(--subtle-line); }
@@ -1216,7 +1214,6 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
   .dashboard-page { grid-template-columns: 210px minmax(0, 1fr); }
   .dashboard-sidebar { width: 210px; }
   .dashboard-content { padding-inline: 24px; }
-  .dashboard-focus-content { padding: 0; }
   .task-workspace { grid-template-columns: minmax(0, 1fr) 400px; }
   .task-filters > span { display: none; }
   .task-question { padding-inline: 32px; }
@@ -1265,7 +1262,6 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
   .parent-progress-toolbar { align-items: stretch; flex-direction: column; }
   .parent-child-selector,
   .parent-range-selector { align-items: flex-start; flex-direction: column; }
-  .dashboard-focus-content { padding: 0; }
   .task-screen { overflow-y: auto; }
   .task-topbar { position: sticky; z-index: 70; top: 0; padding: 12px 16px; flex-direction: column; align-items: stretch; gap: 10px; }
   .task-topbar-context { justify-content: space-between; }
