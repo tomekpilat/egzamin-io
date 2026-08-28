@@ -3,7 +3,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { User } from "@supabase/supabase-js";
-import { ChartNoAxesColumnIncreasing, CircleHelp, CreditCard, LayoutDashboard, LogOut, Settings as SettingsIcon, UserPlus, Users } from "lucide-react";
+import { BookOpen, ChartNoAxesColumnIncreasing, CircleHelp, CreditCard, LayoutDashboard, LogOut, Settings as SettingsIcon, UserPlus, Users } from "lucide-react";
 import { AccountMenuTrigger } from "@/components/account-menu-trigger";
 import { BrandLogo } from "@/components/brand-logo";
 import { FeedbackDialog } from "@/components/feedback-dialog";
@@ -514,6 +514,12 @@ export default function DashboardPage() {
     payments: "Płatności i faktury",
     settings: "Ustawienia",
   };
+  const studentViewLabels: Record<StudentView, string> = {
+    start: "Nauka",
+    exercises: "Zadania",
+    progress: "Postęp",
+    settings: "Ustawienia",
+  };
   const focusMode = profile.role === "student" && studentView === "exercises";
   const feedbackContext = profile.role === "parent"
     ? `parent:${parentView}`
@@ -556,17 +562,36 @@ export default function DashboardPage() {
         </nav> : null}
       </aside>}
 
-      {!focusMode && profile.role === "student" && <header className="student-app-header">
-        <a href="/" aria-label="egzaminio — strona główna"><BrandLogo compact /></a>
+      {!focusMode && profile.role === "student" && <aside className="dashboard-sidebar student-dashboard-sidebar">
+        <a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a>
+        <span className="dashboard-nav-label">Konto ucznia</span>
         <nav aria-label="Panel ucznia">
-          <button type="button" className={studentView === "start" ? "active" : ""} aria-current={studentView === "start" ? "page" : undefined} onClick={() => setStudentView("start")}>Nauka</button>
-          <button type="button" className={studentView === "progress" ? "active" : ""} aria-current={studentView === "progress" ? "page" : undefined} onClick={() => setStudentView("progress")}>Postęp</button>
-          <button type="button" className={studentView === "settings" ? "active" : ""} aria-current={studentView === "settings" ? "page" : undefined} onClick={() => setStudentView("settings")}>Ustawienia</button>
+          <button type="button" className={studentView === "start" ? "active" : ""} aria-current={studentView === "start" ? "page" : undefined} onClick={() => setStudentView("start")}><BookOpen className="student-nav-icon" aria-hidden="true" /><span>Nauka</span></button>
+          <button type="button" className={studentView === "progress" ? "active" : ""} aria-current={studentView === "progress" ? "page" : undefined} onClick={() => setStudentView("progress")}><ChartNoAxesColumnIncreasing className="student-nav-icon" aria-hidden="true" /><span>Postęp</span></button>
+          <button type="button" className={studentView === "settings" ? "active" : ""} aria-current={studentView === "settings" ? "page" : undefined} onClick={() => setStudentView("settings")}><SettingsIcon className="student-nav-icon" aria-hidden="true" /><span>Ustawienia</span></button>
         </nav>
-        <div className="student-header-account"><span className="student-plan-badge">Plan Free</span><AccountMenu displayName={displayName} email={profile.email} className="student-account-trigger" onSettings={openAccountSettings} onSignOut={() => void signOut()} /></div>
-      </header>}
+        <button type="button" className="student-session-card" onClick={() => setStudentView("start")}>
+          <span>Dzisiejsza sesja</span>
+          <b>Gotowy do nauki</b>
+          <i aria-hidden="true"><em /></i>
+          <small>Cel tygodniowy ustawia rodzic.</small>
+        </button>
+        <nav className="dashboard-sidebar-legal" aria-label="Dokumenty i prywatność">
+          <a href="/regulamin">Regulamin</a>
+          <a href="/polityka-prywatnosci">Polityka prywatności</a>
+          <a href="/polityka-cookies">Pliki cookie</a>
+          <a href="/bezpieczenstwo-dzieci-ai">Dzieci i AI</a>
+        </nav>
+      </aside>}
 
       <div className="dashboard-main">
+        {!focusMode && profile.role === "student" && <header className="student-dashboard-topbar">
+          <span>Konto ucznia <i aria-hidden="true">/</i> <b>{studentViewLabels[studentView]}</b></span>
+          <div className="student-topbar-actions">
+            <a className="student-plan-pill" href="/plan-plus#dla-ucznia">Plan Free</a>
+            <AccountMenu displayName={displayName} email={profile.email} triggerClassName="header-account-session" onSettings={openAccountSettings} onSignOut={() => void signOut()} />
+          </div>
+        </header>}
         {!focusMode && profile.role === "parent" && <header className="parent-dashboard-topbar">
           <span>Konto rodzica <i aria-hidden="true">/</i> <b>{parentViewLabels[parentView]}</b></span>
           <div className="parent-topbar-actions">
@@ -600,9 +625,9 @@ export default function DashboardPage() {
               <CardContent className="account-settings-actions"><Button variant="outline" asChild><a href="/usun-konto">Usuń konto i dane</a></Button></CardContent>
             </Card>
           </section>}
-          {((profile.role === "student" && studentView === "settings") || (profile.role !== "parent" && profile.role !== "student")) && <Card className="account-settings-card" id="ustawienia">
+          {(profile.role !== "parent" && profile.role !== "student") && <Card className="account-settings-card" id="ustawienia">
             <CardHeader><CardTitle>Ustawienia konta</CardTitle><CardDescription>Motyw, prywatność i zarządzanie danymi w jednym miejscu.</CardDescription></CardHeader>
-            <CardContent className="account-settings-actions"><div className="account-theme-setting"><span>Wygląd aplikacji</span><ThemeSettings /></div>{profile.role === "student" && <Button variant="outline" asChild><a href="/plan-plus#dla-ucznia">Poznaj pakiet Plus</a></Button>}<Button variant="outline" asChild><a href="/polityka-prywatnosci">Polityka prywatności</a></Button><Button variant="outline" asChild><a href="/usun-konto">Usuń konto i dane</a></Button></CardContent>
+            <CardContent className="account-settings-actions"><div className="account-theme-setting"><span>Wygląd aplikacji</span><ThemeSettings /></div><Button variant="outline" asChild><a href="/polityka-prywatnosci">Polityka prywatności</a></Button><Button variant="outline" asChild><a href="/usun-konto">Usuń konto i dane</a></Button></CardContent>
           </Card>}
         </div>
       </div>

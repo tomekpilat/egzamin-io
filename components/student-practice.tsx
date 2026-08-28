@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -10,6 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { getSupabaseClient } from "@/lib/supabase-browser";
 import { SubjectIcon, subjectLabels, type SubjectKey } from "@/components/subject-icon";
 import { AiTutor } from "@/components/ai-tutor";
+import { ThemeSettings } from "@/components/theme-settings";
 import { trackAnalyticsEvent } from "@/lib/analytics";
 import { DEFAULT_CKE_ACCOMMODATION, getCkeAccommodation, isCkeAccommodationCode, type CkeAccommodationCode } from "@/lib/cke-accommodations";
 
@@ -476,8 +478,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
 
   return (
     <>
-      {activeView === "start" && <>
-        <div className="dashboard-view-heading student-start-heading"><div><span className="dashboard-kicker dark-kicker">Panel ucznia</span><h2>Nauka</h2><small>Arkusze CKE i wyraźnie oznaczony zestaw demonstracyjny</small></div><Button variant="outline" type="button" onClick={() => onNavigate("progress")}>Twój postęp</Button></div>
+      {activeView === "start" && <section className="student-content-view student-learning-view" aria-label="Nauka">
         <section className="student-resume-grid">
           <Card className="student-resume-card">
             <CardHeader><CardDescription>{answeredCount ? `Ostatnio: ${material === "demo" ? "zestaw demonstracyjny" : material.replace("year:", "CKE ")}` : "Pierwsza sesja"}</CardDescription><CardTitle>{answeredCount ? "Wróć do nauki" : "Zacznij od jednego zadania"}</CardTitle></CardHeader>
@@ -513,7 +514,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
             {material === "demo" && <p className="practice-demo-note">To autorski zestaw demonstracyjny egzaminio — nie jest oficjalnym arkuszem CKE.</p>}
           </CardContent>
         </Card>
-      </>}
+      </section>}
 
       {activeView === "exercises" && <section className="task-screen" aria-label="Tryb skupienia">
         <header className="task-topbar">
@@ -579,8 +580,8 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
         </div>}
       </section>}
 
-      {activeView === "progress" && <>
-        <div className="dashboard-view-heading"><div><h2>Twój postęp</h2><small>Wyniki z arkuszy CKE i materiałów demonstracyjnych</small></div><Button variant="outline" type="button" onClick={() => onNavigate("exercises")}>Wróć do ćwiczeń</Button></div>
+      {activeView === "progress" && <section className="student-content-view student-progress-view" aria-labelledby="student-progress-title">
+        <div className="dashboard-view-heading"><div><h2 id="student-progress-title">Twój postęp</h2><small>Wyniki z arkuszy CKE i materiałów demonstracyjnych</small></div><Button variant="outline" type="button" onClick={() => onNavigate("exercises")}>Wróć do ćwiczeń</Button></div>
         <section className="dashboard-grid four-columns student-progress-metrics">
           <article className="metric-card"><span>Rozwiązane zadania</span><b>{answeredCount}</b><small>{questions.length - answeredCount} nadal czeka.</small></article>
           <article className="metric-card"><span>Poprawne odpowiedzi</span><b>{correctCount}</b><small>Liczymy ostatnią odpowiedź.</small></article>
@@ -608,12 +609,21 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
             return <Card key={paper.progress_paper_id} className="practice-paper-card"><CardHeader><div className="practice-paper-title"><Badge variant={paper.completion_status === "completed" ? "default" : "outline"}>{statusLabel}</Badge><span>CKE {paper.exam_year} · {sessionLabels[paper.exam_session]} · kod {paper.accommodation_code}</span></div><div className="subject-card-heading compact"><SubjectIcon subject={paper.subject} /><div><CardTitle>{subjectLabels[paper.subject]}</CardTitle><CardDescription>{paper.accommodation_label} · {paper.source_label}</CardDescription></div></div></CardHeader><CardContent><div className="subject-progress-value"><b>{paper.accuracy_percent}%</b><span>{paper.correct_questions} poprawnych z {paper.answered_questions} rozwiązanych</span></div><Progress value={(paper.answered_questions / Math.max(paper.total_questions, 1)) * 100} aria-label={`Ukończenie arkusza ${paper.exam_year}: ${paper.answered_questions} z ${paper.total_questions}`} /></CardContent></Card>;
           })}</div> : <Card className="practice-paper-empty"><CardContent><b>Brak opublikowanych arkuszy CKE</b><p>Gdy pierwszy zweryfikowany arkusz zostanie zaimportowany, pojawi się tutaj jako osobny rocznik — bez mieszania z zestawem demo.</p></CardContent></Card>}
         </section>
-      </>}
+      </section>}
 
-      {activeView === "settings" && <Card className="student-cke-settings-card">
-        <CardHeader><Badge variant="secondary">Kryteria CKE</Badge><CardTitle>Twój wariant arkuszy</CardTitle><CardDescription>To ustawienie określa, które oficjalne arkusze mogą pojawić się na Twoim koncie.</CardDescription></CardHeader>
-        <CardContent><div className="student-cke-current"><span>Kod CKE {accommodation.code}</span><b>{accommodation.label}</b><p>{accommodation.audience}</p></div><Alert><AlertTitle>Ustawienie kontroluje rodzic</AlertTitle><AlertDescription>Rodzic może zmienić wariant przy Twoim koncie w panelu „Dzieci”. Nie prosimy o diagnozę ani dokumentację medyczną.</AlertDescription></Alert></CardContent>
-      </Card>}
+      {activeView === "settings" && <section className="student-content-view student-settings-view" id="ustawienia" aria-labelledby="student-settings-title">
+        <Card className="student-cke-settings-card">
+          <CardHeader><Badge variant="secondary">Kryteria CKE</Badge><CardTitle id="student-settings-title">Twój wariant arkuszy</CardTitle><CardDescription>To ustawienie określa, które oficjalne arkusze mogą pojawić się na Twoim koncie.</CardDescription></CardHeader>
+          <CardContent><div className="student-cke-current"><span>Kod CKE {accommodation.code}</span><b>{accommodation.label}</b><p>{accommodation.audience}</p></div><Alert><AlertTitle>Ustawienie kontroluje rodzic</AlertTitle><AlertDescription>Rodzic może zmienić wariant przy Twoim koncie w panelu „Dzieci”. Nie prosimy o diagnozę ani dokumentację medyczną.</AlertDescription></Alert></CardContent>
+        </Card>
+        <Card className="account-settings-card student-account-settings-card">
+          <CardHeader><CardTitle>Ustawienia konta</CardTitle><CardDescription>Motyw, prywatność i zarządzanie danymi w jednym miejscu.</CardDescription></CardHeader>
+          <CardContent className="student-account-settings-content">
+            <div className="account-theme-setting"><span>Wygląd aplikacji</span><ThemeSettings /></div>
+            <div className="student-account-links"><Button variant="outline" asChild><a href="/plan-plus#dla-ucznia">Poznaj pakiet Plus</a></Button><Button variant="outline" asChild><a href="/polityka-prywatnosci">Polityka prywatności</a></Button><Button variant="outline" className="student-delete-account" asChild><a href="/usun-konto">Usuń konto i dane</a></Button></div>
+          </CardContent>
+        </Card>
+      </section>}
     </>
   );
 }

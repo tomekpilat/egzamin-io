@@ -101,6 +101,27 @@ afterEach(() => {
 });
 
 describe("StudentPractice focus mode", () => {
+  it("renders the redesigned learning, progress and settings views with working actions", async () => {
+    prepareRpc();
+    const onNavigate = vi.fn();
+    const { rerender } = render(<StudentPractice activeView="start" onNavigate={onNavigate} />);
+
+    expect(await screen.findByRole("region", { name: "Nauka" })).toBeInTheDocument();
+    expect(screen.getByText("Zacznij od jednego zadania", { selector: '[data-slot="card-title"]' })).toBeInTheDocument();
+    expect(screen.getByText("Wybierz materiał", { selector: '[data-slot="card-title"]' })).toBeInTheDocument();
+
+    rerender(<StudentPractice activeView="progress" onNavigate={onNavigate} />);
+    expect(screen.getByRole("heading", { name: "Twój postęp" })).toBeInTheDocument();
+    expect(screen.getByText("Postęp według przedmiotu", { selector: '[data-slot="card-title"]' })).toBeInTheDocument();
+    expect(screen.getByText("Do powtórki", { selector: '[data-slot="card-title"]' })).toBeInTheDocument();
+
+    rerender(<StudentPractice activeView="settings" onNavigate={onNavigate} />);
+    expect(screen.getByText("Twój wariant arkuszy", { selector: '[data-slot="card-title"]' })).toBeInTheDocument();
+    expect(screen.getByText("Ustawienia konta", { selector: '[data-slot="card-title"]' })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Polityka prywatności" })).toHaveAttribute("href", "/polityka-prywatnosci");
+    expect(screen.getByRole("link", { name: "Usuń konto i dane" })).toHaveAttribute("href", "/usun-konto");
+  });
+
   it("detects only a changed, unsubmitted draft", () => {
     expect(hasUnsavedPracticeAnswer("q1", null, { questionId: "q1", index: 2 })).toBe(true);
     expect(hasUnsavedPracticeAnswer("q1", 2, { questionId: "q1", index: 2 })).toBe(false);
