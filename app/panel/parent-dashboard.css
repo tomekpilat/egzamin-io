@@ -61,10 +61,19 @@
 .parent-help-link svg { width: 15px; height: 15px; }
 .parent-plan-pill:hover,
 .parent-help-link:hover { color: var(--foreground); background: var(--surface-soft); text-decoration: none; }
-.dashboard-parent-page .dashboard-content { max-width: 1190px; padding: 32px 36px 48px; }
-.dashboard-parent-page .dashboard-view-heading { min-height: 0; margin: 0 0 24px; padding: 0; align-items: flex-end; border: 0; }
-.dashboard-parent-page .dashboard-view-heading h2 { margin: 0; font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif; font-size: 28px; line-height: 1.2; font-weight: 600; letter-spacing: -.01em; }
-.dashboard-parent-page .dashboard-view-heading small { margin-top: 5px; color: var(--muted-copy); font-size: 14px; }
+.dashboard-parent-page .dashboard-content { max-width: none; margin: 0; padding: 34px 34px 56px; }
+.dashboard-parent-page .parent-content-view { width: 100%; display: flex; flex-direction: column; gap: 20px; }
+.dashboard-parent-page .parent-overview-view,
+.dashboard-parent-page .parent-progress-view { max-width: 1172px; }
+.dashboard-parent-page .parent-children-view,
+.dashboard-parent-page .parent-payments-view { max-width: 1112px; }
+.dashboard-parent-page .parent-connect-view { max-width: 992px; }
+.dashboard-parent-page .parent-settings-view { max-width: 932px; }
+.dashboard-parent-page .dashboard-view-heading { min-height: 0; margin: 0; padding: 0; align-items: flex-start; border: 0; }
+.dashboard-parent-page .dashboard-view-heading > div { display: flex; flex-direction: column; gap: 6px; }
+.dashboard-parent-page .dashboard-view-heading h2 { margin: 0; font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif; font-size: 34px; line-height: 1.12; font-weight: 600; letter-spacing: -.02em; }
+.dashboard-parent-page .dashboard-view-heading small { margin: 0; color: var(--muted-copy); font-size: 15px; line-height: 1.45; }
+.dashboard-parent-page .dashboard-view-heading > [data-slot="button"] { min-height: 42px; padding-inline: 18px; font-size: 14px; }
 
 .dashboard-parent-page .metric-card,
 .dashboard-parent-page .dashboard-card,
@@ -77,51 +86,124 @@
   border-color: var(--border);
   border-radius: 11px;
 }
-.dashboard-parent-page .metric-card { min-height: 118px; padding: 20px 22px; gap: 6px; }
-.dashboard-parent-page .metric-card > span { color: var(--muted-copy); font-size: 13px; }
-.dashboard-parent-page .metric-card > b { font-size: 25px; }
-.dashboard-parent-page .metric-card small { color: var(--muted-copy); font-size: 13px; }
+.dashboard-parent-page .metric-card { min-height: 130px; padding: 20px 22px; gap: 10px; }
+.dashboard-parent-page .metric-card > span { color: var(--muted-copy); font-size: 14px; }
+.dashboard-parent-page .metric-card > b { font-size: 34px; line-height: 1; }
+.dashboard-parent-page .metric-card small { color: var(--quiet-copy); font-size: 13px; line-height: 1.5; }
 
-.dashboard-parent-page .parent-overview-metrics { gap: 16px; margin-top: 0; }
+.dashboard-parent-page .parent-overview-metrics { gap: 16px; margin: 0; }
 .dashboard-parent-page .parent-overview-children { border-radius: 11px; }
-.dashboard-parent-page .parent-overview-children > .guardian-section-heading { padding: 18px 24px; }
-.dashboard-parent-page .parent-overview-child-list > button { padding: 16px 24px; }
-.dashboard-parent-page .parent-overview-privacy { color: var(--muted-copy); font-size: 13px; }
+.dashboard-parent-page .parent-overview-children > .guardian-section-heading { padding: 22px 24px; }
+.dashboard-parent-page .parent-overview-children .guardian-section-heading h3 { font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif; font-size: 22px; }
+.dashboard-parent-page .parent-overview-child-list > button { padding: 18px 24px; }
+.dashboard-parent-page .parent-overview-child-list > button > span:nth-child(2) { gap: 2px; }
+.dashboard-parent-page .parent-overview-child-list > button > span:nth-child(2) b { font-size: 16px; }
+.dashboard-parent-page .parent-overview-child-list small { color: var(--muted-copy); font-size: 13px; }
+.dashboard-parent-page .parent-overview-child-list em { font-size: 14px; font-weight: 500; }
+.dashboard-parent-page .parent-overview-privacy { max-width: 820px; color: var(--quiet-copy); font-size: 14px; line-height: 1.6; }
 .dashboard-parent-page .parent-next-step { padding: 20px 24px; background: var(--brand-soft); border-color: var(--brand); border-radius: 11px; }
 
-.dashboard-parent-page .guardian-requests,
-.dashboard-parent-page .linked-children { gap: 14px; }
+.dashboard-parent-page .guardian-requests { gap: 14px; }
+.dashboard-parent-page .linked-children { margin: 0; padding: 0; gap: 14px; background: transparent; border: 0; border-radius: 0; }
+.dashboard-parent-page .linked-children > .guardian-section-heading { margin-bottom: 2px; align-items: flex-end; }
+.dashboard-parent-page .linked-children > .guardian-section-heading [data-slot="badge"] { margin-bottom: 5px; }
+.dashboard-parent-page .linked-children > .guardian-section-heading h3 { font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif; font-size: 24px; }
+.dashboard-parent-page .linked-children > .guardian-section-heading small { max-width: none; font-size: 13px; text-align: right; }
 .dashboard-parent-page .child-settings-card { overflow: hidden; }
-.dashboard-parent-page .child-settings-card [data-slot="card-header"] { padding: 22px 24px; border-bottom: 1px solid var(--subtle-line); }
-.dashboard-parent-page .child-settings-card [data-slot="card-content"] { padding: 22px 24px; }
-.dashboard-parent-page .child-card-title-row .guardian-avatar { width: 46px; height: 46px; border-radius: 999px; font-size: 14px; }
-.dashboard-parent-page .cke-preference-setting { background: var(--surface-soft); border-color: var(--subtle-line); }
+.dashboard-parent-page .child-settings-card [data-slot="card-header"] { padding: 20px 24px; border-bottom: 1px solid var(--subtle-line); }
+.dashboard-parent-page .child-settings-card [data-slot="card-content"] { padding: 24px; gap: 22px; }
+.dashboard-parent-page .child-card-title-row .guardian-avatar { width: 44px; height: 44px; border-radius: 999px; font-size: 13px; }
+.dashboard-parent-page .child-card-title-row [data-slot="card-title"] { font-size: 17px; }
+.dashboard-parent-page .child-card-title-row [data-slot="card-description"] { font-size: 14px; }
+.dashboard-parent-page .goal-overview > div { justify-content: flex-start; gap: 8px; font-size: 16px; }
+.dashboard-parent-page .goal-overview b { font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif; font-size: 18px; }
+.dashboard-parent-page .parent-weekly-setting { display: grid; grid-template-columns: 150px minmax(240px, 1fr); align-items: center; gap: 20px; }
+.dashboard-parent-page .parent-weekly-setting > label { color: var(--muted-copy); font-size: 14px; font-weight: 400; }
+.dashboard-parent-page .parent-weekly-setting [data-slot="select-trigger"] { width: 100%; min-height: 42px; }
+.dashboard-parent-page .cke-preference-setting { padding: 20px 22px; gap: 12px 20px; background: var(--surface-soft); border-color: var(--subtle-line); }
+.dashboard-parent-page .cke-preference-setting h3 { margin-top: 10px; font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif; font-size: 20px; }
+.dashboard-parent-page .cke-preference-setting p { font-size: 14px; line-height: 1.6; }
+.dashboard-parent-page .cke-preference-setting > label:not(.cke-preference-confirmation) { font-size: 14px; font-weight: 400; }
+.dashboard-parent-page .cke-preference-setting [data-slot="select-trigger"] { min-height: 40px; }
+.dashboard-parent-page .child-settings-actions [data-slot="button"] { min-height: 42px; padding-inline: 20px; font-size: 14px; }
 
-.dashboard-parent-page .parent-progress-toolbar { padding: 16px 18px; }
-.dashboard-parent-page .parent-progress-metrics { gap: 14px; }
-.dashboard-parent-page .parent-progress-metrics .metric-card { min-height: 128px; }
+.dashboard-parent-page .parent-connect-card { margin: 0; overflow: hidden; }
+.dashboard-parent-page .parent-connect-card [data-slot="card-header"] { padding: 24px 24px 16px; gap: 10px; }
+.dashboard-parent-page .parent-connect-card [data-slot="card-title"] { font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif; font-size: 22px; }
+.dashboard-parent-page .parent-connect-card [data-slot="card-description"] { max-width: 720px; font-size: 14px; line-height: 1.6; }
+.dashboard-parent-page .parent-connect-card [data-slot="card-content"] { padding: 0 24px 24px; }
+.dashboard-parent-page .parent-connect-steps { margin-top: 6px; }
+.dashboard-parent-page .parent-connect-steps span { min-height: 60px; padding: 18px 20px; color: var(--foreground); font-size: 15px; }
+.dashboard-parent-page .parent-connect-actions { margin-top: 22px; align-items: center; }
+.dashboard-parent-page .parent-connect-actions [data-slot="button"] { min-height: 42px; padding-inline: 20px; font-size: 14px; }
+.dashboard-parent-page .parent-connect-actions [data-slot="button"]:last-child { padding-inline: 6px; }
+
+.dashboard-parent-page .parent-progress-heading { align-items: flex-start; }
+.dashboard-parent-page .parent-progress-heading > small { padding-top: 8px; color: var(--muted-copy); font-size: 14px; }
+.dashboard-parent-page .parent-progress-toolbar { margin: 0; padding: 16px 20px; align-items: center; border-radius: 11px; }
+.dashboard-parent-page .parent-progress-toolbar > div { display: flex; align-items: center; gap: 16px; }
+.dashboard-parent-page .parent-progress-toolbar > div > span { color: var(--muted-copy); font-size: 14px; font-weight: 400; }
+.dashboard-parent-page .parent-progress-toolbar [data-slot="button"] { min-height: 38px; padding-inline: 16px; font-size: 14px; }
+.dashboard-parent-page .parent-progress-metrics { margin: 0; gap: 14px; }
+.dashboard-parent-page .parent-progress-metrics .metric-card { min-height: 132px; padding: 18px 20px; gap: 9px; }
+.dashboard-parent-page .parent-progress-metrics .metric-card > span { font-size: 13px; }
+.dashboard-parent-page .parent-progress-metrics .metric-card > b { font-size: 30px; }
 .dashboard-parent-page .parent-weekly-goal-card,
 .dashboard-parent-page .parent-topic-card { border-radius: 11px; }
+.dashboard-parent-page .parent-weekly-goal-card { margin: 0; gap: 16px; }
+.dashboard-parent-page .parent-weekly-goal-card [data-slot="card-header"] { padding: 22px 24px 0; }
+.dashboard-parent-page .parent-weekly-goal-card [data-slot="card-content"] { padding: 0 24px 22px; }
+.dashboard-parent-page .parent-weekly-goal-card [data-slot="card-title"] { font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif; font-size: 20px; }
+.dashboard-parent-page .parent-weekly-goal-card [data-slot="card-description"] { font-size: 14px; }
+.dashboard-parent-page .parent-subject-progress { margin: 0; padding: 22px 24px; gap: 18px; border-radius: 11px; }
+.dashboard-parent-page .parent-subject-progress > .guardian-section-heading { align-items: baseline; }
+.dashboard-parent-page .parent-subject-progress .guardian-section-heading h3 { font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif; font-size: 24px; }
+.dashboard-parent-page .parent-subject-progress .guardian-section-heading small { font-size: 13px; }
+.dashboard-parent-page .parent-subject-progress > div:last-child { gap: 14px; }
+.dashboard-parent-page .parent-subject-progress [data-slot="card"] { padding: 20px 22px; gap: 16px; background: var(--surface-soft); }
+.dashboard-parent-page .parent-subject-progress [data-slot="card-header"],
+.dashboard-parent-page .parent-subject-progress [data-slot="card-content"] { padding: 0; }
+.dashboard-parent-page .parent-subject-progress [data-slot="card-title"] { font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif; font-size: 18px; }
+.dashboard-parent-page .subject-progress-value b { font-size: 28px; }
+.dashboard-parent-page .subject-progress-value span { color: var(--quiet-copy); font-size: 13px; }
 
-.parent-payment-summary { margin-bottom: 16px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.parent-payment-summary { margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .parent-payment-summary article { min-width: 0; padding: 20px 22px; display: flex; flex-direction: column; gap: 7px; background: var(--card); border: 1px solid var(--border); border-radius: 11px; }
-.parent-payment-summary span,
-.parent-payment-summary small { color: var(--muted-copy); font-size: 13px; }
-.parent-payment-summary b { overflow: hidden; font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif; font-size: 25px; line-height: 1.1; font-weight: 600; text-overflow: ellipsis; white-space: nowrap; }
+.parent-payment-summary span { color: var(--muted-copy); font-size: 14px; }
+.parent-payment-summary small { color: var(--quiet-copy); font-size: 13px; }
+.parent-payment-summary b { overflow: hidden; font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif; font-size: 32px; line-height: 1.1; font-weight: 600; text-overflow: ellipsis; white-space: nowrap; }
 .dashboard-parent-page .parent-payment-checkout,
-.dashboard-parent-page .parent-payment-history { overflow: hidden; border-radius: 11px; }
+.dashboard-parent-page .parent-payment-history { margin: 0; overflow: hidden; border-radius: 11px; }
 .dashboard-parent-page .parent-payment-checkout [data-slot="card-header"],
-.dashboard-parent-page .parent-payment-history [data-slot="card-header"] { padding: 20px 24px; border-bottom: 1px solid var(--border); }
+.dashboard-parent-page .parent-payment-history [data-slot="card-header"] { padding: 22px 24px; border-bottom: 1px solid var(--border); }
 .dashboard-parent-page .parent-payment-checkout [data-slot="card-content"],
-.dashboard-parent-page .parent-payment-history [data-slot="card-content"] { padding: 22px 24px; }
+.dashboard-parent-page .parent-payment-history [data-slot="card-content"] { padding: 24px; }
+.dashboard-parent-page .parent-payment-checkout [data-slot="card-title"],
+.dashboard-parent-page .parent-payment-history [data-slot="card-title"] { font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif; font-size: 22px; }
+.dashboard-parent-page .parent-payment-checkout [data-slot="card-description"] { color: var(--muted-copy); font-size: 14px; }
+.dashboard-parent-page .payment-child-picker { max-width: 640px; }
+.dashboard-parent-page .payment-child-picker > label { color: var(--muted-copy); font-size: 14px; font-weight: 400; }
+.dashboard-parent-page .payment-child-picker [data-slot="select-trigger"] { width: 100%; min-height: 42px; }
+.dashboard-parent-page .payment-consents { padding: 0; border: 0; }
+.dashboard-parent-page .payment-consents label { padding: 0; color: var(--muted-copy); border: 0; border-radius: 0; font-size: 14px; line-height: 1.6; }
+.dashboard-parent-page .payment-checkout-action { align-items: flex-end; }
+.dashboard-parent-page .payment-checkout-action > div { max-width: 690px; gap: 5px; }
+.dashboard-parent-page .payment-checkout-action b { font-size: 17px; }
+.dashboard-parent-page .payment-checkout-action span,
+.dashboard-parent-page .payment-provider-note { color: var(--muted-copy); font-size: 13px; line-height: 1.5; }
+.dashboard-parent-page .payment-provider-note { margin: 0; }
+.dashboard-parent-page .payment-checkout-action [data-slot="button"] { min-height: 48px; padding-inline: 24px; font-size: 15px; }
+.dashboard-parent-page .payment-history-empty { min-height: 100px; margin: 0; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; color: var(--foreground); text-align: center; }
+.dashboard-parent-page .payment-history-empty b { font-size: 15px; font-weight: 500; }
+.dashboard-parent-page .payment-history-empty span { max-width: 460px; color: var(--muted-copy); font-size: 14px; line-height: 1.5; }
 .dashboard-parent-page .payment-history-list > article { border-color: var(--subtle-line); border-radius: 9px; }
 
-.parent-settings-view { max-width: 900px; }
-.parent-settings-card { overflow: hidden; border-radius: 11px; }
-.parent-settings-card [data-slot="card-header"] { padding: 18px 24px; border-bottom: 1px solid var(--border); }
+.parent-settings-card { margin: 0; overflow: hidden; border-radius: 11px; }
+.parent-settings-card [data-slot="card-header"] { padding: 22px 24px; border-bottom: 1px solid var(--border); }
 .parent-settings-card [data-slot="card-content"] { padding: 22px 24px; }
-.parent-settings-card [data-slot="card-title"] { font-size: 16px; }
-.parent-settings-card [data-slot="card-description"] { color: var(--muted-copy); font-size: 13px; }
+.parent-settings-card [data-slot="card-title"] { font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif; font-size: 21px; }
+.parent-settings-card [data-slot="card-description"] { color: var(--muted-copy); font-size: 14px; }
+.parent-settings-card .account-settings-actions [data-slot="button"] { min-height: 42px; padding-inline: 18px; font-size: 14px; }
 .parent-account-data-card .account-settings-actions [data-slot="button"] { color: var(--destructive); }
 
 .dark .dashboard-parent-page .dashboard-sidebar nav button.active { color: var(--foreground); background: var(--secondary); border-color: var(--border); }
@@ -131,6 +213,10 @@
   .dashboard-parent-page .dashboard-sidebar { width: 220px; }
   .dashboard-parent-page .parent-progress-metrics { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .parent-payment-summary { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 1180px) {
+  .dashboard-parent-page .parent-progress-metrics { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 680px) {
@@ -152,6 +238,7 @@
   .parent-help-link { width: 38px; padding: 0; font-size: 0; }
   .parent-help-link svg { width: 17px; height: 17px; }
   .dashboard-parent-page .dashboard-content { padding: 24px 15px 34px; }
+  .dashboard-parent-page .parent-content-view { max-width: none; gap: 16px; }
   .dashboard-parent-page .dashboard-view-heading { align-items: flex-start; flex-direction: column; }
   .dashboard-parent-page .dashboard-view-heading h2 { font-size: 26px; }
   .dashboard-parent-page .dashboard-view-heading small { font-size: 13px; }
@@ -161,4 +248,10 @@
   .dashboard-parent-page .parent-topic-grid { grid-template-columns: 1fr; }
   .dashboard-parent-page .parent-overview-child-list > button { grid-template-columns: auto 1fr; }
   .dashboard-parent-page .parent-overview-child-list > button > :is([data-slot="badge"], em) { grid-column: 2; width: fit-content; }
+  .dashboard-parent-page .parent-weekly-setting { grid-template-columns: 1fr; gap: 8px; }
+  .dashboard-parent-page .parent-connect-steps { grid-template-columns: 1fr; }
+  .dashboard-parent-page .parent-connect-steps span { min-height: 52px; border-right: 0; border-bottom: 1px solid var(--subtle-line); }
+  .dashboard-parent-page .parent-connect-steps span:last-child { border-bottom: 0; }
+  .dashboard-parent-page .payment-checkout-action { align-items: stretch; flex-direction: column; }
+  .dashboard-parent-page .payment-checkout-action [data-slot="button"] { width: 100%; }
 }

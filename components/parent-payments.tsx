@@ -154,7 +154,7 @@ export function ParentPayments({ linkedChildren, onConnect }: { linkedChildren: 
     }
   }
 
-  return <section className="parent-payments" aria-labelledby="parent-payments-title">
+  return <section className="parent-content-view parent-payments parent-payments-view" aria-labelledby="parent-payments-title">
     <div className="dashboard-view-heading"><div><h2 id="parent-payments-title">Płatności</h2><small>Pakiet Plus, historia zakupów i dokumenty Stripe</small></div><Button variant="outline" type="button" onClick={() => void refresh()} disabled={loading}>Odśwież historię</Button></div>
 
     <div className="parent-payment-summary" aria-label="Podsumowanie płatności">
@@ -184,14 +184,13 @@ export function ParentPayments({ linkedChildren, onConnect }: { linkedChildren: 
         </div>
 
         {!config?.enabled && !loading ? <Alert variant="warning"><AlertTitle>Sprzedaż nie jest jeszcze aktywna</AlertTitle><AlertDescription>Historia pozostaje dostępna. Administrator musi ukończyć konfigurację Stripe przed przyjmowaniem płatności.</AlertDescription></Alert> : null}
-        <div className="payment-checkout-action"><div><b>Do zapłaty: {config ? formatPaymentAmount(config.amountMinor, config.currency) : "149,00 zł"}</b><span>Jednorazowo. Brak automatycznego odnowienia.</span></div><Button type="button" size="lg" disabled={!canPurchase} onClick={() => void startCheckout()}>{submitting ? "Przekierowujemy do Stripe…" : "Zamawiam pakiet Plus — płacę 149 zł"}</Button></div>
-        <p className="payment-provider-note">Bezpieczna płatność odbywa się na stronie Stripe. egzaminio nie otrzymuje pełnego numeru karty.</p>
+        <div className="payment-checkout-action"><div><b>Do zapłaty: {config ? formatPaymentAmount(config.amountMinor, config.currency) : "149,00 zł"}</b><span>Jednorazowo. Brak automatycznego odnowienia.</span><p className="payment-provider-note">Bezpieczna płatność odbywa się na stronie Stripe. egzaminio nie otrzymuje pełnego numeru karty.</p></div><Button type="button" size="lg" disabled={!canPurchase} onClick={() => void startCheckout()}>{submitting ? "Przekierowujemy do Stripe…" : "Zamawiam pakiet Plus — płacę 149 zł"}</Button></div>
       </CardContent>
     </Card>}
 
     <Card className="parent-payment-history">
-      <CardHeader><CardTitle>Historia płatności</CardTitle><CardDescription>Zamówienia, zwroty i dokumenty dotyczące zakupów z tego konta rodzica.</CardDescription></CardHeader>
-      <CardContent>{loading ? <p className="payment-history-empty">Pobieramy historię…</p> : !history.length ? <p className="payment-history-empty">Nie masz jeszcze żadnych płatności.</p> : <div className="payment-history-list">{history.map((item) => <article key={item.payment_order_id}>
+      <CardHeader><CardTitle>Historia płatności</CardTitle></CardHeader>
+      <CardContent>{loading ? <div className="payment-history-empty"><b>Pobieramy historię…</b></div> : !history.length ? <div className="payment-history-empty"><b>Brak rozliczonych płatności</b><span>Po pierwszym zakupie znajdziesz tutaj potwierdzenia i dokumenty Stripe.</span></div> : <div className="payment-history-list">{history.map((item) => <article key={item.payment_order_id}>
         <div className="payment-history-main"><div><b>Pakiet Plus · {item.student_display_name}</b><span>Zamówienie {item.payment_order_id.slice(0, 8).toUpperCase()} · {formatDate(item.created_at)} · dostęp do {formatDate(item.access_valid_until)}</span></div><div><strong>{formatPaymentAmount(item.amount_total, item.currency)}</strong><Badge variant={statusVariant(item.payment_status)}>{paymentStatusLabels[item.payment_status]}</Badge></div></div>
         {item.amount_refunded > 0 && <p className="payment-refund">Zwrócono: {formatPaymentAmount(item.amount_refunded, item.currency)}{item.refunded_at ? ` · ${formatDate(item.refunded_at)}` : ""}</p>}
         <PaymentDocuments item={item} />

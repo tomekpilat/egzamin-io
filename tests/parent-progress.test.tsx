@@ -64,6 +64,8 @@ describe("ParentProgress", () => {
       target_student_id: "student-a",
       requested_range_days: 7,
     }));
+    expect(await screen.findByText("Wyniki według przedmiotu")).toBeInTheDocument();
+    expect(screen.queryByText("Mocne tematy")).not.toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Bartek" }));
     await waitFor(() => expect(rpc).toHaveBeenCalledWith("get_parent_child_progress", {
       target_student_id: "student-b",

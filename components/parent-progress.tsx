@@ -97,17 +97,6 @@ export function normalizeParentProgress(value: Record<string, unknown>): ParentP
   };
 }
 
-function TopicList({ title, empty, topics, variant }: { title: string; empty: string; topics: TopicStat[]; variant: "strong" | "focus" }) {
-  return (
-    <Card className={`parent-topic-card ${variant}`}>
-      <CardHeader><CardTitle>{title}</CardTitle><CardDescription>{topics.length ? "Na podstawie ostatnich odpowiedzi w wybranym okresie." : empty}</CardDescription></CardHeader>
-      <CardContent>
-        {topics.length > 0 && <ul>{topics.map((topic) => <li key={`${topic.subject}-${topic.topic}`}><div><b>{topic.topic}</b><span>{subjectLabels[topic.subject]} · {topic.solved} {topic.solved === 1 ? "zadanie" : "zadania"}</span></div><Badge variant={variant === "strong" ? "secondary" : "outline"}>{topic.accuracy}%</Badge></li>)}</ul>}
-      </CardContent>
-    </Card>
-  );
-}
-
 export function ParentProgress({ linkedChildren, pendingRequests, onConnect }: { linkedChildren: ParentProgressChild[]; pendingRequests: number; onConnect: () => void }) {
   const [selectedStudentId, setSelectedStudentId] = useState(linkedChildren[0]?.student_id ?? "");
   const [range, setRange] = useState<ProgressRange>(7);
@@ -159,10 +148,10 @@ export function ParentProgress({ linkedChildren, pendingRequests, onConnect }: {
 
   if (!linkedChildren.length) {
     return (
-      <>
+      <section className="parent-content-view parent-progress-view" aria-labelledby="parent-progress-empty-title">
         <div className="dashboard-view-heading"><div><h2>Postęp dziecka</h2><small>Wyniki, regularność i wykorzystanie pomocy AI</small></div></div>
-        <Card className="parent-empty-view"><CardHeader><CardTitle>{pendingRequests ? "Połączenie czeka na zatwierdzenie" : "Najpierw połącz konto dziecka"}</CardTitle><CardDescription>{pendingRequests ? "Po zatwierdzeniu prośby pierwsze wyniki pojawią się tutaj automatycznie." : "Wyślij dziecku link rejestracyjny i zatwierdź relację, aby zobaczyć postęp."}</CardDescription></CardHeader><CardContent><Button type="button" onClick={onConnect}>{pendingRequests ? "Przejdź do próśb" : "Połącz konto dziecka"}</Button></CardContent></Card>
-      </>
+        <Card className="parent-empty-view"><CardHeader><CardTitle id="parent-progress-empty-title">{pendingRequests ? "Połączenie czeka na zatwierdzenie" : "Najpierw połącz konto dziecka"}</CardTitle><CardDescription>{pendingRequests ? "Po zatwierdzeniu prośby pierwsze wyniki pojawią się tutaj automatycznie." : "Wyślij dziecku link rejestracyjny i zatwierdź relację, aby zobaczyć postęp."}</CardDescription></CardHeader><CardContent><Button type="button" onClick={onConnect}>{pendingRequests ? "Przejdź do próśb" : "Połącz konto dziecka"}</Button></CardContent></Card>
+      </section>
     );
   }
 
@@ -171,8 +160,8 @@ export function ParentProgress({ linkedChildren, pendingRequests, onConnect }: {
   const trend = summary?.trend_percentage_points ?? 0;
 
   return (
-    <>
-      <div className="dashboard-view-heading parent-progress-heading"><div><h2>{childName}</h2><small>Postęp dziecka i najważniejsze obszary nauki</small></div>{summary?.latest_activity_at && <small>Ostatnia aktywność: {new Date(summary.latest_activity_at).toLocaleDateString("pl-PL")}</small>}</div>
+    <section className="parent-content-view parent-progress-view" aria-labelledby="parent-progress-title">
+      <div className="dashboard-view-heading parent-progress-heading"><div><h2 id="parent-progress-title">{childName}</h2><small>Postęp dziecka i najważniejsze obszary nauki</small></div>{summary?.latest_activity_at && <small>Ostatnia aktywność: {new Date(summary.latest_activity_at).toLocaleDateString("pl-PL")}</small>}</div>
 
       <section className="parent-progress-toolbar" aria-label="Wybierz dziecko i okres">
         <div className="parent-child-selector"><span>Dziecko</span><div>{linkedChildren.map((child) => <Button key={child.student_id} type="button" size="sm" variant={effectiveStudentId === child.student_id ? "default" : "outline"} aria-pressed={effectiveStudentId === child.student_id} onClick={() => setSelectedStudentId(child.student_id)}>{child.student_display_name || child.student_email}</Button>)}</div></div>
@@ -207,13 +196,7 @@ export function ParentProgress({ linkedChildren, pendingRequests, onConnect }: {
           })}</div>
         </section>
 
-        <section className="parent-topic-grid">
-          <TopicList title="Mocne tematy" empty="Potrzeba kilku odpowiedzi, aby wskazać mocne strony." topics={summary.strong_topics} variant="strong" />
-          <TopicList title="Do krótkiej powtórki" empty="W tym okresie nie ma tematów wymagających pilnej powtórki." topics={summary.focus_topics} variant="focus" />
-        </section>
-
-        <Alert variant="success" className="parent-recommendation"><AlertTitle>Jedna rzecz na kolejny tydzień</AlertTitle><AlertDescription>{summary.recommendation}</AlertDescription></Alert>
       </>}
-    </>
+    </section>
   );
 }

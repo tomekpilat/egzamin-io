@@ -44,8 +44,18 @@ describe("parent panel actions", () => {
     expect(panel).not.toContain('className="dashboard-sidebar-account"');
     expect(parentStyles).toContain("grid-template-columns: 250px minmax(0, 1fr)");
     expect(parentStyles).toContain("min-height: 63px");
-    expect(parentStyles).toContain("padding: 32px 36px 48px");
+    expect(parentStyles).toContain("padding: 34px 34px 56px");
     expect(parentStyles).not.toContain("box-shadow");
+  });
+
+  it("uses the v2 content composition for every parent view", () => {
+    expect(panel).toContain('className="parent-content-view parent-overview-view"');
+    expect(panel).toContain('className="parent-content-view parent-children-view"');
+    expect(panel).toContain('className="parent-content-view parent-connect-view"');
+    expect(panel).toContain("parent-weekly-setting");
+    expect(parentStyles).toContain("font-size: 34px");
+    expect(parentStyles).toContain("max-width: 1172px");
+    expect(parentStyles).toContain("max-width: 992px");
   });
 
   it("keeps plan, privacy and theme controls in their intended places", () => {

@@ -69,7 +69,13 @@ describe("redesigned parent panel", () => {
     await user.click(screen.getByRole("button", { name: "Dzieci" }));
     expect(screen.getByRole("heading", { name: "Dzieci" })).toBeInTheDocument();
     expect(screen.getByText("Kasia Nowak")).toBeInTheDocument();
+    expect(screen.getByRole("combobox", { name: "Liczba sesji w tygodniu" })).toBeInTheDocument();
     expect(screen.getByRole("banner")).toHaveTextContent("Dzieci");
+
+    await user.click(screen.getByRole("button", { name: "Podłącz dziecko" }));
+    expect(screen.getByRole("heading", { name: "Podłącz dziecko" })).toBeInTheDocument();
+    expect(screen.getByText("Dziecko wpisuje Twój e-mail")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Kopiuj link dla dziecka" })).toBeInTheDocument();
 
     await user.click(screen.getByRole("button", { name: "Ustawienia" }));
     expect(screen.getByRole("heading", { name: "Ustawienia" })).toBeInTheDocument();
