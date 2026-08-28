@@ -7,7 +7,7 @@ import { pathToFileURL } from "node:url";
 const SUBJECTS = new Set(["mathematics", "polish", "english"]);
 const SESSIONS = new Set(["main", "additional"]);
 const QUESTION_TYPES = new Set(["single_choice", "multiple_choice", "numeric", "short_text", "long_text"]);
-const BLOCK_TYPES = new Set(["markdown", "math", "image", "table", "passage"]);
+const BLOCK_TYPES = new Set(["markdown", "math", "image", "audio", "table", "passage"]);
 const SHA256 = /^[a-f0-9]{64}$/;
 const SLUG = /^[a-z0-9][a-z0-9-]{2,119}$/;
 
@@ -161,6 +161,7 @@ export function validateManifest(input) {
     else blocks.forEach((block, blockIndex) => {
       if (!BLOCK_TYPES.has(block?.type)) add(`${path}.content_blocks[${blockIndex}].type`, "nieobsługiwany typ bloku");
       if (block?.type === "image" && !assetIds.has(block.asset_id)) add(`${path}.content_blocks[${blockIndex}].asset_id`, "brak odpowiadającego zasobu");
+      if (block?.type === "audio" && !assetIds.has(block.asset_id)) add(`${path}.content_blocks[${blockIndex}].asset_id`, "brak odpowiadającego nagrania");
       if (block?.type === "math" && !nonEmpty(block.latex)) add(`${path}.content_blocks[${blockIndex}].latex`, "wymagany zapis LaTeX");
       if (block?.type === "table" && !Array.isArray(block.rows)) add(`${path}.content_blocks[${blockIndex}].rows`, "wymagana tablica wierszy");
       if (block?.type === "passage" && !passageIds.has(block.passage_id)) add(`${path}.content_blocks[${blockIndex}].passage_id`, "brak odpowiadającego tekstu źródłowego");

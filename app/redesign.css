@@ -1012,7 +1012,11 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
 .cke-passage-block article small { display: block; color: var(--quiet-copy); font-size: 12px; }
 .cke-passage-block article cite { color: var(--quiet-copy); font-size: 12px; font-style: normal; text-align: right; }
 .cke-image-block { margin: 0; display: grid; gap: 8px; }
+.cke-audio-block { margin: 0; padding: 14px; display: grid; gap: 9px; border: 1px solid var(--border); border-radius: 8px; background: var(--card); }
+.cke-audio-block audio { width: 100%; min-height: 42px; }
+.cke-audio-block small { color: var(--quiet-copy); font-size: 12px; line-height: 1.45; }
 .cke-image-block img { width: auto; max-width: 100%; max-height: 360px; object-fit: contain; object-position: left center; background: #fff; border: 1px solid var(--border); border-radius: 8px; }
+.cke-audio-block figcaption,
 .cke-image-block figcaption,
 .cke-table-block figcaption { color: var(--quiet-copy); font-size: 12px; }
 .cke-table-block { margin: 0; overflow-x: auto; }

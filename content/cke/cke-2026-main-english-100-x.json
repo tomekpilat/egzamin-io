@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2026-main-english-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2026-main-english-100-x",
+    "source_document_id": "OJAP-100-X-2605",
+    "source_pdf_sha256": "ef25cb0794a49951101ad71851d2c6de8a244d7610d0b60d965c84e7e8ddf54d",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2026-2/",
+    "source_label": "CKE 2026 · język angielski · termin główny · wariant 100-X",
+    "exam_year": 2026,
+    "exam_session": "main",
+    "subject": "english",
+    "variant_code": "100-X",
+    "question_count": 14,
+    "supplementary_sources": [
+      { "id": "cke-2026-english-recording", "path": "content/cke/sources/2026/jezyk_angielski/OJAP-100-2605.mp3", "sha256": "36bf2429a47a89e2573fc22c1c4327e67144df18231d3fd5247e9f317b2f697c", "label": "Oficjalne nagranie do zadań 1–4" },
+      { "id": "cke-2026-english-transcript", "path": "content/cke/sources/2026/jezyk_angielski/OJAP-100-200-400-500-660-K00-2605-transkrypcja.pdf", "sha256": "8bfa6611b2f44b80b77b4ce37c6aed75ec46a89fa1962494b58b2e81139e7460", "label": "Transkrypcja nagrań" },
+      { "id": "cke-2026-english-answer-card", "path": "content/cke/sources/2026/jezyk_angielski/OJAP-100-X-2605-karta-odpowiedzi.pdf", "sha256": "7386a788aef4bf4491b50292468e02d46e89e8744f20f1ac5ee49fed79e565af", "label": "Karta odpowiedzi, wersja X" },
+      { "id": "cke-2026-english-scoring-rules", "path": "content/cke/sources/2026/jezyk_angielski/OJAP-100-200-400-500-K00-2605-zasady.pdf", "sha256": "8375a5bcd7f971071a4258f9da60ea161bf6d344859b5e0b28ac62f23c197be5", "label": "Zasady oceniania rozwiązań" }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [
+    {
+      "id": "task-7-reading",
+      "title": "Texts for task 7",
+      "paragraphs": [
+        "7.1 THE CORPUS MUSEUM — The Corpus Museum is a red-brown giant near the city of Leiden in the Netherlands. It is an educational attraction. You enter the body of the museum through one of the giant’s feet, where you buy a ticket for a guided tour. The lift will take you to the knee, where your guide will greet you and begin the tour. You will go through the heart, tongue and one of the ears, and finish in the brain. After the 55-minute tour you can stay in the brain, where there are lots of interactive tasks, for as long as you want. Visitors usually spend about two hours there. You can enjoy your visit even if you do not speak Dutch or English. Our guided tours are available in most European languages.",
+        "7.2 A FUTURE CHAMPION? — Are you hard-working, talented and passionate about sports? Do you dream of being a champion? Do you need money for new sports equipment, training sessions or sports camps? We may be able to help you achieve your sporting dreams. Visit our website and fill in the application form. We will contact you and give you more details of our support programme.",
+        "7.3 Message from Jack to Mia — Thanks for taking the time to find an online shop with second-hand bikes for sale. I’ve looked at their website. I can see a few people have recommended the shop, but there’s no information about what happens if you buy one of their bikes and there’s a problem with it. Do they give you your money back or fix it for you? I guess they probably don’t. So I’m not going to buy anything from them. I think I need to visit a bike shop in town where I can talk face to face with an expert.",
+        "7.4 Wednesday, 14th July — This is my third day in the city but so far I’ve only climbed the Eiffel Tower… The weather is awful and I can’t visit all the places I planned to see. All I can do is visit museums and sit in cafés. I was going to do more walks in the city and I’m slowly getting bored. Now I feel sorry I didn’t choose sunny Spain for my holiday. I have enough rain in my hometown in England all year round! I planned to spend the whole week here in Paris, but I guess I’ll go back earlier…"
+      ],
+      "source": "Na podstawie materiałów wskazanych w arkuszu OJAP-100-X-2605."
+    },
+    {
+      "id": "task-8-artwork",
+      "title": "Unusual artwork",
+      "paragraphs": [
+        "Thomas McKean from New York is famous for creating art from everyday objects, such as used plastic travel cards. He came up with the idea 20 years ago. [8.1] Suddenly, he knew what he had to do. He hurried home, took his scissors and cut some of his old travel cards into pieces. [8.2] This was his first work of art made from plastic cards. Since then, he has made more than a thousand of them. The most popular ones are portraits, city views and 3D scenes.",
+        "His pictures were shown in an art gallery in 2022 and many people came to see them. [8.3] Although they weren’t cheap, they sold out quickly.",
+        "But Mr McKean may soon run out of plastic travel cards because they have been replaced by a new electronic system. Is Mr McKean worried? Not at all. “It’s just time to move on,” he says.",
+        "A. He glued them together to create a single large picture. B. It was also possible to buy some of his works there. C. He asked his friends for their used travel cards. D. One day, when sitting on the subway, he started looking at his travel card."
+      ],
+      "source": "Na podstawie: nytimes.com; źródło ilustracji: inhabitat.com."
+    },
+    {
+      "id": "task-9-events",
+      "title": "Events A–C",
+      "paragraphs": [
+        "A. It’s that time of the year already. No, not the spring holidays, but something nearly as good: the 10th edition of our week-long school camp! Students of all grades can take part. The school provides transportation and meals. We also offer tents for hire (£10 per person) if you don’t have your own. For more information, please contact your teachers.",
+        "B. Do you love making films? If the answer is yes, come and join us on 5th June at the outdoor cinema in Victoria Park for our first ever local community film competition. To take part, you have to prepare a film about your favourite part of town. It cannot be longer than 20 minutes and it should include at least 5 minutes of an interview with a local person. The directors of the best two films will receive £500 each. Sign up now at locals.xyz.com!",
+        "C. Our traditional board games tournament is nearly here again! As usual, you will compete against your schoolmates in games such as Monopoly, Rummikub and Scrabble. The event is in the school hall on Thursday, 7th May, from 1 p.m. to 5 p.m. This year all the winners will get an amazing pack of board games from our sponsor!"
+      ]
+    },
+    {
+      "id": "task-10-surprise",
+      "title": "Surprise for Adam and Fiona’s blog",
+      "paragraphs": [
+        "TEXT 1 — Surprise for Adam! Saturday, 13th June, at the city aeroclub at the local airport. Take the 81 bus, get off next to the castle — it’s a 5-minute walk from there to the airport. We’ve told Adam to be there at 6:15 a.m. We need to arrive at 5:45 a.m. to practise singing the song we’ve written for him. Adam’s helicopter flight is booked for 7 a.m.",
+        "TEXT 2 — Fiona’s blog: I really believe that collecting experiences is much better than collecting things. Last year my parents gave me one of the best presents ever — a balloon flight. It was the most exciting experience in my life. The flight was very early, at 7 a.m., because that’s when it’s best to go balloon flying."
+      ]
+    },
+    {
+      "id": "task-11-train",
+      "title": "The Strawberry Train",
+      "paragraphs": [
+        "Hi everyone! This blog post is about my fun trip on the Strawberry Train in Spain. It is named after the delicious strawberries grown in the area it travels through. You [11.1] _____ on the train at the Madrid Railway Museum, not at a regular station! After a short journey you arrive in Aranjuez, a beautiful city with a royal palace. The train runs only in spring and autumn, [11.2] _____ are the best seasons for tasting fresh strawberries. They are served on board by local people [11.3] _____ traditional costumes. The whole trip is just great!",
+        "A. get   B. playing   C. take   D. wearing   E. where   F. which"
+      ],
+      "source": "Na podstawie: esmadrid.com."
+    },
+    {
+      "id": "task-12-earth-day",
+      "title": "Earth Day project",
+      "paragraphs": [
+        "There are many ways to celebrate Earth Day, but if you are looking for the perfect spring project, check out our idea for a beautiful bird feeder to make the birds in your garden happy! You won’t need to buy anything [12.1] _____ this bird feeder is made with materials you can find around the house! Start by [12.2] _____ everything you need: an empty milk carton, scissors and paint. First, clean the carton and cut out windows in the sides. Then, decorate your bird feeder with paint, hang it outside and [12.3] _____ some food into it. You will soon see lots of birds eating from your bird feeder."
+      ],
+      "source": "Na podstawie: macaronikid.com."
+    }
+  ],
+  "questions": [
+    {
+      "id": "cke-2026-main-english-100-x-q01", "number": "1", "sort_order": 1, "source_pages": [3, 4], "type": "long_text", "topic": "Rozumienie ze słuchu — wybór wielokrotny", "difficulty": 2,
+      "prompt": "Listen to five recordings and write one answer (A, B or C) for each item. 1.1 Which homework are they going to do first? 1.2 How did the woman book her trip? 1.3 Where are the boy and his mother talking? 1.4 In the conversation, Dad: A asks Julie to lend him something; B suggests a solution to Julie’s problem; C gives an opinion about Julie’s friend. 1.5 The teacher is talking about: A a classroom task; B a school trip; C a historical event.",
+      "answer_key": { "accepted_results": ["1.1 A, 1.2 C, 1.3 C, 1.4 B, 1.5 A"], "assessment": "rubric" },
+      "scoring": { "max_points": 5, "rules": ["Po 1 pkt za każdą poprawną odpowiedź: 1.1 A, 1.2 C, 1.3 C, 1.4 B, 1.5 A", "0 pkt za daną odpowiedź niepoprawną albo brak odpowiedzi"] },
+      "explanation": "1.1 They choose the Geography quiz first. 1.2 The woman went to the travel agency office. 1.3 They have arrived and are unpacking in a hotel room. 1.4 Dad suggests using Mum’s scarf. 1.5 The teacher gives students a classroom task about the Colosseum.",
+      "solution_steps": ["Before listening, read all questions and picture options.", "During the first listening, note the main idea and context.", "During the second listening, confirm the detail that distinguishes A, B and C.", "Compare your five answers with A, C, C, B, A."],
+      "hints": ["In 1.1 listen for what they decide to do now, not what is hardest.", "In 1.3 the reception desk and unpacking a suitcase reveal the place."],
+      "content_blocks": [{ "type": "audio", "asset_id": "official-recording" }, { "type": "image", "asset_id": "q01-picture-options" }],
+      "assets": [
+        { "id": "official-recording", "path": "public/cke/2026/english/ojap-100-x-2605/ojap-100-2605.mp3", "sha256": "36bf2429a47a89e2573fc22c1c4327e67144df18231d3fd5247e9f317b2f697c", "alt": "Pełne oficjalne nagranie CKE do zadań 1–4; odpowiednie zadanie jest zapowiadane w nagraniu.", "caption": "Oficjalne nagranie CKE 2026 — zadania 1–4", "mime_type": "audio/mpeg" },
+        { "id": "q01-picture-options", "path": "public/cke/2026/english/ojap-100-x-2605/q01-picture-options.png", "sha256": "e55220835fbdf8f4304ff3f8eb22d4f738874c68754fec0107283129ac73abb6", "alt": "Opcje obrazkowe do zadań 1.1–1.3: zeszyty z geografii, matematyki i angielskiego; rezerwacja przez telefon, internet lub biuro; lotnisko, restauracja lub pokój hotelowy.", "caption": "Opcje obrazkowe do zadań 1.1–1.3." }
+      ]
+    },
+    {
+      "id": "cke-2026-main-english-100-x-q02", "number": "2", "sort_order": 2, "source_pages": [4], "type": "long_text", "topic": "Rozumienie ze słuchu — dopasowywanie", "difficulty": 2,
+      "prompt": "Listen to four speakers talking about their best friends. Match 2.1–2.4 with A–E. A My best friend changed his plans to help me. B I went to my best friend’s concert. C I’m planning to go on holiday with my best friend. D A mistake I made started our friendship. E My best friend and I look very similar. One sentence does not match.",
+      "answer_key": { "accepted_results": ["2.1 C, 2.2 D, 2.3 A, 2.4 E"], "assessment": "rubric" },
+      "scoring": { "max_points": 4, "rules": ["Po 1 pkt za każdą poprawną odpowiedź: 2.1 C, 2.2 D, 2.3 A, 2.4 E"] },
+      "explanation": "Speaker 1 plans a mountain-biking holiday with Mike. Speaker 2 met Sally after taking the wrong bag. Speaker 3 says Jack turned around on his way to a concert to fix the bike. Speaker 4 and Jane look alike.",
+      "solution_steps": ["Underline the unique event in each option.", "Listen for plans, the first meeting, changed plans and appearance.", "Match the speakers in order: C, D, A, E."],
+      "hints": ["Speaker 2 mentions an identical bag and a mistake.", "Speaker 3’s friend gives up his concert plan to help."],
+      "content_blocks": [{ "type": "audio", "asset_id": "official-recording" }],
+      "assets": [{ "id": "official-recording", "path": "public/cke/2026/english/ojap-100-x-2605/ojap-100-2605.mp3", "sha256": "36bf2429a47a89e2573fc22c1c4327e67144df18231d3fd5247e9f317b2f697c", "alt": "Pełne oficjalne nagranie CKE do zadań 1–4; zadanie 2 jest zapowiadane w nagraniu.", "caption": "Oficjalne nagranie CKE 2026 — zadania 1–4", "mime_type": "audio/mpeg" }]
+    },
+    {
+      "id": "cke-2026-main-english-100-x-q03", "number": "3", "sort_order": 3, "source_pages": [5], "type": "long_text", "topic": "Funkcje językowe — rozumienie ze słuchu", "difficulty": 2,
+      "prompt": "Listen to four statements and match each one with a reaction A–E. A In two hours. B Not yet. How about you? C Great idea! Who’s playing? D I have listened to her twice. E I’ll turn it down, then. One reaction does not match.",
+      "answer_key": { "accepted_results": ["3.1 B, 3.2 A, 3.3 E, 3.4 C"], "assessment": "rubric" },
+      "scoring": { "max_points": 4, "rules": ["Po 1 pkt za każdą poprawną odpowiedź: 3.1 B, 3.2 A, 3.3 E, 3.4 C"] },
+      "explanation": "A question about seeing a film takes ‘Not yet’. A question beginning ‘When’ needs a time. A complaint that music is too loud leads to turning it down. A festival suggestion takes an accepting reaction and a follow-up question.",
+      "solution_steps": ["Identify the function of each statement.", "Match question words and conversational intent.", "Write B, A, E, C."],
+      "hints": ["‘When’ must be answered with a time.", "‘How about…?’ is a suggestion."],
+      "content_blocks": [{ "type": "audio", "asset_id": "official-recording" }],
+      "assets": [{ "id": "official-recording", "path": "public/cke/2026/english/ojap-100-x-2605/ojap-100-2605.mp3", "sha256": "36bf2429a47a89e2573fc22c1c4327e67144df18231d3fd5247e9f317b2f697c", "alt": "Pełne oficjalne nagranie CKE do zadań 1–4; zadanie 3 jest zapowiadane w nagraniu.", "caption": "Oficjalne nagranie CKE 2026 — zadania 1–4", "mime_type": "audio/mpeg" }]
+    },
+    {
+      "id": "cke-2026-main-english-100-x-q04", "number": "4", "sort_order": 4, "source_pages": [5], "type": "long_text", "topic": "Rozumienie ze słuchu — uzupełnianie luk", "difficulty": 3,
+      "prompt": "Listen to the phone conversation and complete the Eastwood Rollerblading School note in English. 4.1 There is a special offer: five lessons for _____ pounds. 4.2 It’s not possible to have lessons on _____ and _____. 4.3 The school offers _____ for birthday parties in the skate park.",
+      "answer_key": { "accepted_results": ["4.1 twenty / 20", "4.2 Sundays and Mondays / Sunday and Monday", "4.3 snacks"], "assessment": "rubric" },
+      "scoring": { "max_points": 3, "rules": ["Po 1 pkt: 4.1 twenty/20; 4.2 Sundays and Mondays; 4.3 snacks", "Odpowiedź musi być komunikatywna, zgodna z nagraniem i pasować do otoczenia luki"] },
+      "explanation": "The five-lesson offer costs £20. The school is closed on Mondays and has no lessons on Sundays. For Sunday birthday parties, the school provides snacks, while guests bring drinks or cake.",
+      "solution_steps": ["Listen specifically for the special-offer price.", "Separate opening days from lesson days.", "Note what the school provides and what guests must bring."],
+      "hints": ["The regular total would be £25, but the special offer is lower.", "Do not answer ‘drinks’ or ‘birthday cake’ in 4.3."],
+      "content_blocks": [{ "type": "audio", "asset_id": "official-recording" }],
+      "assets": [{ "id": "official-recording", "path": "public/cke/2026/english/ojap-100-x-2605/ojap-100-2605.mp3", "sha256": "36bf2429a47a89e2573fc22c1c4327e67144df18231d3fd5247e9f317b2f697c", "alt": "Pełne oficjalne nagranie CKE do zadań 1–4; zadanie 4 jest zapowiadane w nagraniu.", "caption": "Oficjalne nagranie CKE 2026 — zadania 1–4", "mime_type": "audio/mpeg" }]
+    },
+    {
+      "id": "cke-2026-main-english-100-x-q05", "number": "5", "sort_order": 5, "source_pages": [6], "type": "long_text", "topic": "Funkcje językowe", "difficulty": 1,
+      "prompt": "Choose A, B or C in each situation. 5.1 Ask for help preparing a tomato salad: A Do you need any help with the tomatoes? B Shall we have a tomato salad for lunch? C Could you cut up the tomatoes? 5.2 Say how you liked the school trip: A It was better than I expected. B Let’s have some fun. C I’ll be fine, thanks. 5.3 Ask whether a bus seat is free: A Should I keep this seat for you? B Can you look for a free seat? C Is this seat taken? 5.4 Refuse to lend a textbook you need: A I’ll borrow it from you tomorrow. B I’m afraid I’m using it right now. C I don’t mind giving it to you.",
+      "answer_key": { "accepted_results": ["5.1 C, 5.2 A, 5.3 C, 5.4 B"], "assessment": "rubric" },
+      "scoring": { "max_points": 4, "rules": ["Po 1 pkt za każdą poprawną odpowiedź: 5.1 C, 5.2 A, 5.3 C, 5.4 B"] },
+      "explanation": "C is a request for help, A expresses an opinion about the trip, C asks if the seat is occupied, and B politely refuses because the speaker is using the book.",
+      "solution_steps": ["Name the communicative function in each Polish situation.", "Reject answers with a different speaker intention.", "Write C, A, C, B."],
+      "hints": ["Is this seat taken? means: Czy to miejsce jest zajęte?", "I’m afraid… is a polite way to refuse."],
+      "content_blocks": [], "assets": []
+    },
+    {
+      "id": "cke-2026-main-english-100-x-q06", "number": "6", "sort_order": 6, "source_pages": [7], "type": "long_text", "topic": "Funkcje językowe — transformacje", "difficulty": 2,
+      "prompt": "Complete each dialogue in English using the word in brackets without changing its form. Use no more than three words in each gap, including the given word. 6.1 Excuse me, (how) _____ is it to the National Museum? — It’s about half a kilometre. 6.2 What (think) _____ about your new room? — It’s much bigger and nicer than the one I had before.",
+      "answer_key": { "accepted_results": ["6.1 how far", "6.2 do you think"], "assessment": "rubric" },
+      "scoring": { "max_points": 2, "rules": ["1 pkt – 6.1 how far", "1 pkt – 6.2 do you think", "Odpowiedź musi być komunikatywna i poprawnie pasować do dialogu"] },
+      "explanation": "Distance is asked with ‘how far’. Asking somebody’s opinion uses ‘What do you think about…?’. Both answers stay within the three-word limit.",
+      "solution_steps": ["Use the reply ‘half a kilometre’ to identify a distance question.", "Build the Present Simple question with auxiliary ‘do’.", "Check the three-word limit."],
+      "hints": ["Do not use ‘how long’ for distance here.", "The second gap needs a complete question structure, not only ‘you think’."],
+      "content_blocks": [], "assets": []
+    },
+    {
+      "id": "cke-2026-main-english-100-x-q07", "number": "7", "sort_order": 7, "source_pages": [8, 9], "type": "long_text", "topic": "Rozumienie tekstów pisanych", "difficulty": 2,
+      "prompt": "Read texts 7.1–7.4 and choose A, B or C. 7.1 The guided tour around the Corpus Museum: A is paid for in the giant’s knee; B is available only in two languages; C lasts less than an hour. 7.2 The notice is for: A charity workers; B trainers looking for athletes; C athletes who need financial help. 7.3 Jack writes to Mia: A to explain his decision; B to complain about his bike; C to recommend a website. 7.4 The note is about: A a journey around Europe; B a holiday trip abroad; C a tourist attraction in Spain.",
+      "answer_key": { "accepted_results": ["7.1 C, 7.2 C, 7.3 A, 7.4 B"], "assessment": "rubric" },
+      "scoring": { "max_points": 4, "rules": ["Po 1 pkt za każdą poprawną odpowiedź: 7.1 C, 7.2 C, 7.3 A, 7.4 B"] },
+      "explanation": "The tour lasts 55 minutes. The sports notice offers financial support to athletes. Jack explains why he will not buy from the online shop. The diary note describes a disappointing holiday in Paris.",
+      "solution_steps": ["Read the question before each short text.", "Find the exact detail or communicative purpose.", "Write C, C, A, B."],
+      "hints": ["55 minutes is less than one hour.", "Jack’s key phrase is ‘So I’m not going to buy anything from them’."],
+      "content_blocks": [{ "type": "passage", "passage_id": "task-7-reading", "default_open": true }], "assets": []
+    },
+    {
+      "id": "cke-2026-main-english-100-x-q08", "number": "8", "sort_order": 8, "source_pages": [10], "type": "long_text", "topic": "Spójność tekstu", "difficulty": 2,
+      "prompt": "Read ‘Unusual artwork’ and match sentences A–D to gaps 8.1–8.3. One sentence does not fit.",
+      "answer_key": { "accepted_results": ["8.1 D, 8.2 A, 8.3 B"], "assessment": "rubric" },
+      "scoring": { "max_points": 3, "rules": ["Po 1 pkt za każdą poprawną odpowiedź: 8.1 D, 8.2 A, 8.3 B"] },
+      "explanation": "D introduces the moment when he looked at the travel card. A explains what he did with the cut pieces. B links the gallery show with the following statement that the works sold out.",
+      "solution_steps": ["Check pronouns and references around each gap.", "Follow the chronology from idea to first artwork and gallery sale.", "Write D, A, B."],
+      "hints": ["After 8.2, ‘This’ refers to the picture created by gluing pieces together.", "‘They sold out’ requires a previous sentence about buying the works."],
+      "content_blocks": [{ "type": "passage", "passage_id": "task-8-artwork", "default_open": true }], "assets": []
+    },
+    {
+      "id": "cke-2026-main-english-100-x-q09", "number": "9", "sort_order": 9, "source_pages": [11], "type": "long_text", "topic": "Wyszukiwanie informacji", "difficulty": 2,
+      "prompt": "Match events A–C to questions 9.1–9.4. One text matches two questions. Which event: 9.1 offers money prizes? 9.2 will take place indoors? 9.3 will last longer than a day? 9.4 has never taken place before?",
+      "answer_key": { "accepted_results": ["9.1 B, 9.2 C, 9.3 A, 9.4 B"], "assessment": "rubric" },
+      "scoring": { "max_points": 4, "rules": ["Po 1 pkt za każdą poprawną odpowiedź: 9.1 B, 9.2 C, 9.3 A, 9.4 B"] },
+      "explanation": "Event B awards £500 and is described as the first ever competition. Event C is in the school hall. Event A is a week-long camp.",
+      "solution_steps": ["Underline the key phrase in each question.", "Scan the texts for money, indoor location, duration and first edition.", "Write B, C, A, B."],
+      "hints": ["‘Week-long’ answers 9.3.", "‘First ever’ answers 9.4."],
+      "content_blocks": [{ "type": "passage", "passage_id": "task-9-events", "default_open": true }], "assets": []
+    },
+    {
+      "id": "cke-2026-main-english-100-x-q10", "number": "10", "sort_order": 10, "source_pages": [12, 13], "type": "long_text", "topic": "Przetwarzanie wypowiedzi", "difficulty": 2,
+      "prompt": "Complete Basia’s Polish e-mail from the two English texts. 10.1 Z autobusu 81 trzeba wysiąść obok _____. 10.2 Spotykamy się o _____. 10.3 Rodzice podarowali Fionie _____. Answers must be in Polish.",
+      "answer_key": { "accepted_results": ["10.1 zamku", "10.2 5:45 / piątej czterdzieści pięć", "10.3 lot balonem"], "assessment": "rubric" },
+      "scoring": { "max_points": 3, "rules": ["1 pkt – 10.1 zamku", "1 pkt – 10.2 5:45 / piątej czterdzieści pięć", "1 pkt – 10.3 lot balonem", "Odpowiedzi muszą być w języku polskim i precyzyjnie oddawać sens tekstów"] },
+      "explanation": "The bus stop is next to the castle. Everyone must arrive at 5:45 a.m. to practise the song. Fiona’s parents gave her a balloon flight.",
+      "solution_steps": ["Find the transport instruction in text 1.", "Distinguish the group’s arrival time from Adam’s arrival and flight times.", "Translate ‘a balloon flight’ precisely into Polish."],
+      "hints": ["Do not write 6:15 or 7:00 for 10.2.", "‘Lot’ alone is too imprecise for 10.3."],
+      "content_blocks": [{ "type": "passage", "passage_id": "task-10-surprise", "default_open": true }], "assets": []
+    },
+    {
+      "id": "cke-2026-main-english-100-x-q11", "number": "11", "sort_order": 11, "source_pages": [14], "type": "long_text", "topic": "Środki językowe — wybór wyrazów", "difficulty": 2,
+      "prompt": "Read ‘The Strawberry Train’ and choose words A–F for gaps 11.1–11.3. Three words do not fit.",
+      "answer_key": { "accepted_results": ["11.1 A (get), 11.2 F (which), 11.3 D (wearing)"], "assessment": "rubric" },
+      "scoring": { "max_points": 3, "rules": ["Po 1 pkt: 11.1 A, 11.2 F, 11.3 D"] },
+      "explanation": "‘Get on the train’ is the correct phrasal verb. ‘Which’ introduces a non-defining relative clause about seasons. ‘Wearing’ describes people dressed in traditional costumes.",
+      "solution_steps": ["Check the fixed phrase before ‘on the train’.", "Choose a relative pronoun after the comma.", "Choose the -ing form that describes the people."],
+      "hints": ["The first answer forms a phrasal verb with ‘on’.", "The final gap needs a participle, not a place word."],
+      "content_blocks": [{ "type": "passage", "passage_id": "task-11-train", "default_open": true }], "assets": []
+    },
+    {
+      "id": "cke-2026-main-english-100-x-q12", "number": "12", "sort_order": 12, "source_pages": [15], "type": "long_text", "topic": "Środki językowe — gramatyka i leksyka", "difficulty": 2,
+      "prompt": "Read ‘Earth Day project’ and choose A, B or C. 12.1 A but, B so, C because. 12.2 A collecting, B to collect, C collect. 12.3 A take, B put, C give.",
+      "answer_key": { "accepted_results": ["12.1 C, 12.2 A, 12.3 B"], "assessment": "rubric" },
+      "scoring": { "max_points": 3, "rules": ["Po 1 pkt: 12.1 C, 12.2 A, 12.3 B"] },
+      "explanation": "‘Because’ gives the reason why no purchase is needed. ‘Start by’ takes a gerund. The natural collocation is ‘put some food into it’.",
+      "solution_steps": ["Identify the cause-and-effect relation in 12.1.", "Recall that ‘by’ is followed by an -ing form.", "Choose the verb that collocates with ‘food into it’."],
+      "hints": ["The material-at-home clause explains the previous statement.", "After a preposition, use the gerund form."],
+      "content_blocks": [{ "type": "passage", "passage_id": "task-12-earth-day", "default_open": true }], "assets": []
+    },
+    {
+      "id": "cke-2026-main-english-100-x-q13", "number": "13", "sort_order": 13, "source_pages": [16], "type": "long_text", "topic": "Transformacje leksykalno-gramatyczne", "difficulty": 3,
+      "prompt": "Complete 13.1–13.3 using the bracketed words in the correct form. Do not change their order; add words if necessary. Use no more than three words in each gap and spell every fragment correctly. 13.1 When Tom was younger, he dreamt of a career in sport, but now he (want / be) _____ a scientist. 13.2 Amanda is really (good / make) _____ cakes. 13.3 I first (meet / he) _____ when I was on holiday in Italy.",
+      "answer_key": { "accepted_results": ["13.1 wants to be", "13.2 good at making", "13.3 met him"], "assessment": "rubric" },
+      "scoring": { "max_points": 3, "rules": ["1 pkt – 13.1 wants to be", "1 pkt – 13.2 good at making", "1 pkt – 13.3 met him", "Wymagana pełna poprawność gramatyczna i ortograficzna oraz limit trzech wyrazów"] },
+      "explanation": "Third-person singular requires ‘wants’, followed by the infinitive ‘to be’. The fixed phrase is ‘good at’ plus gerund. A finished past meeting takes Past Simple ‘met’ and object pronoun ‘him’.",
+      "solution_steps": ["Match the verb form to ‘Tom … now’.", "Use the pattern ‘be good at doing something’.", "Choose Past Simple and the object form of ‘he’."],
+      "hints": ["Count the words in every answer.", "‘He’ must change to an object pronoun in 13.3."],
+      "content_blocks": [], "assets": []
+    },
+    {
+      "id": "cke-2026-main-english-100-x-q14", "number": "14", "sort_order": 14, "source_pages": [16, 17], "type": "long_text", "topic": "Wypowiedź pisemna — e-mail", "difficulty": 3,
+      "prompt": "You have prepared a photo album as a present for your aunt. Write an e-mail to your English friend: explain why the album is a good present for your aunt; explain who helped you and how; describe one photo from the album. Write in English, sign as XYZ and develop all three points. Continue after: ‘Hi Oliver, Guess what! I’ve made a photo album for my aunt.’ Write 50–120 words, excluding the provided opening.",
+      "answer_key": { "assessment": "rubric", "minimum_words": 50, "maximum_words": 120 },
+      "scoring": { "max_points": 10, "rules": ["0–4 pkt – treść: odniesienie się do trzech podpunktów i ich rozwinięcie", "0–2 pkt – spójność i logika wypowiedzi", "0–2 pkt – zakres środków językowych", "0–2 pkt – poprawność środków językowych", "Wypowiedź z mniej niż 40 słowami jest oceniana wyłącznie za treść", "0 pkt we wszystkich kryteriach za pracę nieczytelną, całkowicie niezgodną z poleceniem, niekomunikatywną lub odtworzoną z innego źródła"] },
+      "explanation": "A strong answer develops all three content points, reads as one coherent e-mail, uses some precise vocabulary and remains grammatically and orthographically accurate. Aim for 50–120 words and verify that the helper is identified together with the way they helped.",
+      "solution_steps": ["Plan one or two sentences for each of the three bullet points.", "Explain the reason for choosing the album, not only that it is good.", "Name the helper and describe their action.", "Describe a specific photo with people, place or action.", "Check coherence, language and the 50–120 word range."],
+      "hints": ["For the first point, connect the gift to your aunt’s interests, memories or the occasion.", "The second point has two required parts: who helped and how."],
+      "content_blocks": [], "assets": []
+    }
+  ]
+}

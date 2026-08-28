@@ -20,8 +20,8 @@ To jest kontrola operacyjna, nie opinia prawna. Zakres zgody powinien obejmować
 - formularz do skopiowania: `content/cke/manual-import.template.json`,
 - narzędzie: `scripts/cke-import.mjs`,
 - staging i workflow: migracje `20260825213000_cke_import_pipeline.sql` i `20260828120000_full_cke_question_types.sql`,
-- kompletne arkusze 2026: `content/cke/cke-2026-main-mathematics-100-x.json` i `content/cke/cke-2026-main-polish-100-x.json`,
-- powtarzalne wycinanie ilustracji: `scripts/extract-cke-2026-mathematics-assets.py` i `scripts/extract-cke-2026-polish-assets.py`.
+- kompletne arkusze 2026: `content/cke/cke-2026-main-mathematics-100-x.json`, `content/cke/cke-2026-main-polish-100-x.json` i `content/cke/cke-2026-main-english-100-x.json`,
+- powtarzalne przygotowanie mediów: `scripts/extract-cke-2026-mathematics-assets.py`, `scripts/extract-cke-2026-polish-assets.py` i `scripts/extract-cke-2026-english-assets.py`.
 
 Manifest jest źródłem prawdy. Nie edytuj zadań bezpośrednio w tabeli `practice_questions`.
 
@@ -80,6 +80,7 @@ Checksum każdego zadania i całego manifestu generuje narzędzie. Nie wpisuje s
 - `markdown` — akapit lub lista,
 - `math` — LaTeX renderowany przez MathJax,
 - `image` — odwołanie do wpisu z `assets`,
+- `audio` — odwołanie do lokalnego nagrania z `assets`; odtwarzacz nie pobiera całego pliku przed użyciem,
 - `table` — tablica wierszy i opcjonalna liczba wierszy nagłówka,
 - `passage` — odwołanie przez `passage_id` do współdzielonego tekstu źródłowego z `passages`; przed stagingiem jest rozwijane do kompletnego, zwijanego bloku tekstu.
 
@@ -101,11 +102,12 @@ Ekran ucznia obsługuje wszystkie wymienione typy. `single_choice` i `multiple_c
 npm run cke:validate -- content/cke/cke-2025-main-mathematics-standard.json
 ```
 
-Gotowe arkusze OMAP-100-X-2605 i OPOP-100-X-2605 sprawdzisz poleceniami:
+Gotowe arkusze OMAP-100-X-2605, OPOP-100-X-2605 i OJAP-100-X-2605 sprawdzisz poleceniami:
 
 ```bash
 npm run cke:validate -- content/cke/cke-2026-main-mathematics-100-x.json
 npm run cke:validate -- content/cke/cke-2026-main-polish-100-x.json
+npm run cke:validate -- content/cke/cke-2026-main-english-100-x.json
 ```
 
 Walidator sprawdza m.in.:
@@ -135,6 +137,7 @@ Dla przygotowanych arkuszy 2026 użyj:
 ```bash
 npm run cke:stage -- content/cke/cke-2026-main-mathematics-100-x.json
 npm run cke:stage -- content/cke/cke-2026-main-polish-100-x.json
+npm run cke:stage -- content/cke/cke-2026-main-english-100-x.json
 ```
 
 Polecenie zwraca `import_batch_id`. Ten sam manifest i wersja mają ten sam efekt (`unchanged`). Zmiana zawartości bez podniesienia `manifest_version` jest odrzucana. Ten sam PDF przypisany do innego manifestu również jest odrzucany.

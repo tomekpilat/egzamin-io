@@ -366,6 +366,8 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
       ? currentQuestion.selected_response.text
       : "";
   const isPolishEssay = currentQuestion?.subject === "polish" && currentQuestion.paper_question_number === 18;
+  const isEnglishEmail = currentQuestion?.subject === "english" && currentQuestion.paper_question_number === 14;
+  const isExtendedWriting = isPolishEssay || isEnglishEmail;
   const answerResult = currentQuestion && submittedAnswer?.questionId === currentQuestion.question_id
     ? submittedAnswer
     : currentQuestion?.grading_status && currentQuestion.explanation
@@ -676,8 +678,8 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
 
             {["numeric", "short_text", "long_text"].includes(currentQuestion.question_type) && <section className="task-written-response" aria-labelledby="written-answer-label">
               <label id="written-answer-label" htmlFor="written-answer">Twoje rozwiązanie</label>
-              <Textarea id="written-answer" value={writtenAnswer} onChange={(event) => setWrittenAnswer(event.target.value)} rows={isPolishEssay ? 20 : currentQuestion.question_type === "long_text" ? 8 : 3} placeholder={currentQuestion.subject === "mathematics" ? "Zapisz obliczenia, uzasadnienie i odpowiedź. Możesz używać zapisu matematycznego." : isPolishEssay ? "Napisz wypracowanie. Podziel tekst na akapity i pamiętaj o wszystkich warunkach wybranego tematu." : "Zapisz pełną odpowiedź i uzasadnienie, jeśli wymaga go polecenie."} disabled={submitting || Boolean(answerResult)} />
-              {!answerResult && <small>{isPolishEssay ? `Liczba słów: ${countResponseWords(writtenAnswer)} · wymagane co najmniej 200.` : "Po zapisaniu porównasz rozwiązanie z kryteriami CKE i samodzielnie przyznasz punkty."}</small>}
+              <Textarea id="written-answer" value={writtenAnswer} onChange={(event) => setWrittenAnswer(event.target.value)} rows={isPolishEssay ? 20 : isEnglishEmail ? 14 : currentQuestion.question_type === "long_text" ? 8 : 3} placeholder={currentQuestion.subject === "mathematics" ? "Zapisz obliczenia, uzasadnienie i odpowiedź. Możesz używać zapisu matematycznego." : isPolishEssay ? "Napisz wypracowanie. Podziel tekst na akapity i pamiętaj o wszystkich warunkach wybranego tematu." : isEnglishEmail ? "Continue the e-mail in English and develop all three points." : "Zapisz pełną odpowiedź i uzasadnienie, jeśli wymaga go polecenie."} disabled={submitting || Boolean(answerResult)} />
+              {!answerResult && <small>{isExtendedWriting ? `Liczba słów: ${countResponseWords(writtenAnswer)} · ${isPolishEssay ? "wymagane co najmniej 200" : "wymagane 50–120"}.` : "Po zapisaniu porównasz rozwiązanie z kryteriami CKE i samodzielnie przyznasz punkty."}</small>}
             </section>}
 
             {answerResult && <div className={`task-verdict ${answerResult.answer_is_correct === null ? "is-review" : answerResult.answer_is_correct ? "is-correct" : "is-incorrect"}`} data-comment-anchor="verdict">
