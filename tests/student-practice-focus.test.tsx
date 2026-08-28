@@ -64,7 +64,10 @@ const questions = [
 ];
 
 function prepareRpc(questionRows = questions, progressRows: Record<string, unknown>[] = []) {
-  vi.stubGlobal("fetch", vi.fn().mockResolvedValue(new Response(JSON.stringify({
+  vi.stubGlobal("fetch", vi.fn().mockImplementation(async (_input: RequestInfo | URL, init?: RequestInit) => new Response(JSON.stringify(init?.method === "POST" ? {
+    message: { id: "ai-response-1", role: "assistant", content: "Wyjaśnienie AI do aktualnego zadania.", created_at: "2026-08-28T10:00:00.000Z" },
+    usage: { used: 1, limit: 3, remaining: 2, plan: "free" },
+  } : {
     messages: [],
     usage: { used: 0, limit: 3, remaining: 3, plan: "free" },
     available: true,
@@ -154,6 +157,20 @@ describe("StudentPractice focus mode", () => {
     confirm.mockReturnValue(true);
     await user.click(screen.getByRole("button", { name: "Następne pytanie" }));
     expect(screen.getByRole("heading", { name: "Które słowo jest rzeczownikiem?" })).toBeInTheDocument();
+  });
+
+  it("keeps the Tutor composer usable and sends a question about the current task", async () => {
+    prepareRpc();
+    const user = userEvent.setup();
+    render(<StudentPractice activeView="exercises" onNavigate={() => undefined} />);
+
+    await user.click(await screen.findByRole("tab", { name: "Tutor AI" }));
+    const composer = screen.getByRole("textbox", { name: "Pytanie do nauczyciela AI" });
+    await user.type(composer, "Dlaczego?");
+    await user.click(screen.getByRole("button", { name: "Wyślij pytanie" }));
+
+    expect(await screen.findByText("Wyjaśnienie AI do aktualnego zadania.")).toBeInTheDocument();
+    expect(composer).toHaveValue("");
   });
 
   it("saves the answer before navigation and exits without a discard warning", async () => {

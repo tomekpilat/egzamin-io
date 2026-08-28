@@ -55,6 +55,13 @@ describe("AI tutor validation and prompt", () => {
     expect(validateTutorScope("Dlaczego w tym zadaniu odpowiedź B jest poprawna?", context)).toEqual({ ok: true });
     expect(validateTutorScope("Jak obliczyć procent z tej liczby?", context)).toEqual({ ok: true });
     expect(validateTutorScope("Czy 20 procent z 50 to 10?", context)).toEqual({ ok: true });
+    expect(validateTutorScope("Dlaczego?", context)).toEqual({ ok: true });
+    expect(validateTutorScope("Czemu tak?", context)).toEqual({ ok: true });
+    expect(validateTutorScope("Nie rozumiem tego", context)).toEqual({ ok: true });
+    expect(validateTutorScope("O co tu chodzi?", context)).toEqual({ ok: true });
+    expect(validateTutorScope("Czy możesz mi to wyjaśnić?", context)).toEqual({ ok: true });
+    expect(validateTutorScope("Why?", context)).toEqual({ ok: true });
+    expect(validateTutorScope("I don't understand this", context)).toEqual({ ok: true });
   });
 
   it("blocks unrelated requests and prompt injection before model use", () => {

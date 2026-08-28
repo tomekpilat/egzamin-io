@@ -70,7 +70,11 @@ const unrelatedRequestPatterns = [
 ];
 
 const genericTaskQuestions = [
-  /^(?:nie rozumiem|pom[oó][żz] mi|(?:wyja[śs]nij|wyt[łl]umacz)(?: mi)?(?: to)?(?: pro[śs]ciej| jeszcze raz)?|daj (?:mi )?(?:ma[łl][aą] )?podpowied[źz])[,!.? ]*$/i,
+  /^(?:nie rozumiem(?: tego| tego kroku| tej odpowiedzi)?|pom[oó][żz] mi|(?:wyja[śs]nij|wyt[łl]umacz)(?: mi)?(?: to)?(?: pro[śs]ciej| jeszcze raz)?|daj (?:mi )?(?:ma[łl][aą] )?podpowied[źz])[,!.? ]*$/i,
+  /^(?:dlaczego|czemu)(?: (?:tak|to|tu|tutaj|ten krok|ta odpowied[źz]|odpowied[źz] [a-d]))?[?!. ]*$/i,
+  /^(?:o co (?:tu|tutaj) chodzi|co (?:tu|tutaj) mam zrobi[ćc]|jak to (?:dzia[łl]a|zrobi[ćc]|policzy[ćc]|rozumie[ćc]))[?!. ]*$/i,
+  /^(?:czy )?mo[żz]esz (?:mi )?(?:pom[oó]c|to (?:wyja[śs]ni[ćc]|wyt[łl]umaczy[ćc]))[?!. ]*$/i,
+  /^(?:why(?: is (?:that|this))?|i (?:do not|don't) understand(?: this)?|can you (?:help me|explain this)|what do i do next)[?!. ]*$/i,
   /^(?:sk[aą]d (?:si[eę] )?(?:to|ten krok|ta liczba|ten wynik)|dlaczego (?:tak|to|ta odpowied[źz]|ten wynik)|co mam zrobi[ćc] dalej|jaki jest nast[eę]pny krok)[?!. ]*$/i,
   /^(?:poka[żz] (?:mi )?)?(?:rozwi[aą]zanie )?krok po kroku[?!. ]*$/i,
   /^(?:dlaczego )?(?:w tym zadaniu )?(?:odpowied[źz] [a-d]|ta odpowied[źz]|ten wynik|ten krok)(?: jest)? (?:poprawn[ay]|b[łl][eę]dn[ay]|taki)[?!. ]*$/i,

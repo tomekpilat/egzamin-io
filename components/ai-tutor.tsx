@@ -73,14 +73,15 @@ function AiTutorConversation({
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(true);
   const [sending, setSending] = useState(false);
-  const [error, setError] = useState("");
+  const [loadError, setLoadError] = useState("");
+  const [sendError, setSendError] = useState("");
   const [activeTab, setActiveTab] = useState<TutorTab>(feedback ? "solution" : "hints");
   const conversationRef = useRef<HTMLDivElement>(null);
   const hasFeedback = Boolean(feedback);
 
   const loadTutor = useCallback(async () => {
     setLoading(true);
-    setError("");
+    setLoadError("");
     try {
       const token = await accessToken();
       if (!token) throw new Error("Sesja wygasła. Zaloguj się ponownie.");
@@ -97,7 +98,7 @@ function AiTutorConversation({
       setVisibleHintCount(nextHints.length ? 1 : 0);
       setAvailable(data.available === true);
     } catch (loadError) {
-      setError(loadError instanceof Error ? loadError.message : "Nie udało się uruchomić pomocy AI.");
+      setLoadError(loadError instanceof Error ? loadError.message : "Nie udało się uruchomić pomocy AI.");
     } finally {
       setLoading(false);
     }
@@ -120,11 +121,11 @@ function AiTutorConversation({
     if (sending || usage.remaining <= 0 || !available) return;
     const validation = validateTutorMessage(value);
     if (!validation.ok) {
-      setError(validation.message);
+      setSendError(validation.message);
       return;
     }
     setSending(true);
-    setError("");
+    setSendError("");
     try {
       const token = await accessToken();
       if (!token) throw new Error("Sesja wygasła. Zaloguj się ponownie.");
@@ -140,7 +141,7 @@ function AiTutorConversation({
       setMessages((current) => [...current, userMessage, data.message!]);
       setInput("");
     } catch (sendError) {
-      setError(sendError instanceof Error ? sendError.message : "AI nie odpowiedziało. Spróbuj ponownie.");
+      setSendError(sendError instanceof Error ? sendError.message : "AI nie odpowiedziało. Spróbuj ponownie.");
     } finally {
       setSending(false);
     }
@@ -164,7 +165,7 @@ function AiTutorConversation({
       {displayedTab === "hints" && !feedback && <section className="task-help-view task-hints" aria-labelledby="hints-title">
         <p className="task-help-intro">Pomoc otwiera się po kolei. Rozwiązanie zobaczysz po sprawdzeniu odpowiedzi.</p>
         <b id="hints-title" className="sr-only">Podpowiedzi</b>
-        {loading ? <div className="task-help-loading" aria-label="Wczytujemy podpowiedzi"><span /><span /><span /></div> : error ? <Alert variant="destructive"><AlertDescription><span>{error}</span><Button type="button" size="sm" variant="outline" onClick={() => void loadTutor()}><RotateCcw aria-hidden="true" /> Spróbuj ponownie</Button></AlertDescription></Alert> : available ? <>
+        {loading ? <div className="task-help-loading" aria-label="Wczytujemy podpowiedzi"><span /><span /><span /></div> : loadError ? <Alert variant="destructive"><AlertDescription><span>{loadError}</span><Button type="button" size="sm" variant="outline" onClick={() => void loadTutor()}><RotateCcw aria-hidden="true" /> Spróbuj ponownie</Button></AlertDescription></Alert> : available ? <>
           {visibleHintCount > 0 ? <ol className="task-hint-list">{hints.slice(0, visibleHintCount).map((hint, index) => <li key={`${index}-${hint}`}><div><span>{index + 1}</span><b>{index === 0 ? "Mała wskazówka" : index === 1 ? "Kolejny krok" : "Prostszy przykład"}</b></div><p>{hint}</p></li>)}</ol> : <p className="task-help-placeholder">Odkrywaj wskazówki pojedynczo — bez zdradzania całego rozwiązania.</p>}
           {visibleHintCount < hints.length ? <div className="task-hint-buttons" aria-label="Pokaż podpowiedź">{hints.slice(visibleHintCount).map((_hint, offset) => {
             const index = visibleHintCount + offset;
@@ -184,7 +185,8 @@ function AiTutorConversation({
 
       {displayedTab === "ai" && <section className="task-help-view task-conversation" aria-labelledby="conversation-title">
         <div className="task-conversation-heading"><b id="conversation-title">Tutor AI</b><small>Zostały {usage.remaining} z {usage.limit} pytań dziś</small></div>
-        {loading ? <p className="task-help-loading">Uruchamiamy nauczyciela AI…</p> : error ? <Alert variant="destructive"><AlertDescription><span>{error}</span><Button type="button" size="sm" variant="outline" onClick={() => void loadTutor()}><RotateCcw aria-hidden="true" /> Spróbuj ponownie</Button></AlertDescription></Alert> : !available ? <p className="task-help-placeholder">Rozmowa będzie dostępna po zatwierdzeniu opracowania zadania.</p> : <>
+        {loading ? <p className="task-help-loading">Uruchamiamy nauczyciela AI…</p> : loadError ? <Alert variant="destructive"><AlertDescription><span>{loadError}</span><Button type="button" size="sm" variant="outline" onClick={() => void loadTutor()}><RotateCcw aria-hidden="true" /> Spróbuj ponownie</Button></AlertDescription></Alert> : !available ? <p className="task-help-placeholder">Rozmowa będzie dostępna po zatwierdzeniu opracowania zadania.</p> : <>
+          {sendError && <Alert variant="destructive" className="task-chat-error"><AlertDescription>{sendError}</AlertDescription></Alert>}
           {messages.length > 0 && <div ref={conversationRef} className="task-chat" role="log" aria-label="Rozmowa z nauczycielem AI" aria-live="polite">{messages.map((message) => <TutorMessage key={message.id} message={message} />)}</div>}
           {usage.remaining > 0 ? <div className="task-chat-entry"><div className="task-chat-composer">
             <Textarea value={input} onChange={(event) => setInput(event.target.value)} onKeyDown={(event) => { if (event.key === "Enter" && !event.shiftKey) { event.preventDefault(); void sendMessage(); } }} maxLength={AI_MESSAGE_MAX_LENGTH} rows={1} placeholder="Napisz, czego nie rozumiesz w tym zadaniu…" aria-label="Pytanie do nauczyciela AI" disabled={sending} />
