@@ -24,10 +24,12 @@ describe("flat interface and persistent account session", () => {
 
   it("keeps account actions in a dropdown and removes it from exercise focus mode", () => {
     const panel = readFileSync(join(root, "app/panel/page.tsx"), "utf8");
+    const accountTrigger = readFileSync(join(root, "components/account-menu-trigger.tsx"), "utf8");
     const styles = readFileSync(join(root, "app/redesign.css"), "utf8");
 
     expect(panel).toContain("function AccountMenu(");
-    expect(panel).toContain('className={`dashboard-session ${className}`.trim()}');
+    expect(panel).toContain('<AccountMenuTrigger displayName={displayName} email={email} className={`${triggerClassName} ${className}`.trim()} />');
+    expect(accountTrigger).toContain('aria-label={`Menu konta: ${displayName}`}');
     expect(panel).toContain("<DropdownMenuItem onSelect={onSettings}");
     expect(panel).toContain('className="dashboard-signout-item"');
     expect(panel).toContain('!focusMode && profile.role !== "parent" && profile.role !== "student"');

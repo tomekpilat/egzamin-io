@@ -3,7 +3,8 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { User } from "@supabase/supabase-js";
-import { ChartNoAxesColumnIncreasing, ChevronDown, CircleHelp, CreditCard, LayoutDashboard, LogOut, Settings as SettingsIcon, UserPlus, Users } from "lucide-react";
+import { ChartNoAxesColumnIncreasing, CircleHelp, CreditCard, LayoutDashboard, LogOut, Settings as SettingsIcon, UserPlus, Users } from "lucide-react";
+import { AccountMenuTrigger } from "@/components/account-menu-trigger";
 import { BrandLogo } from "@/components/brand-logo";
 import { FeedbackDialog } from "@/components/feedback-dialog";
 import { ParentPayments } from "@/components/parent-payments";
@@ -60,17 +61,11 @@ type AdminFeedback = {
   feedback_created_at: string;
 };
 
-function AccountMenu({ displayName, email, className = "", onSettings, onSignOut }: { displayName: string; email: string; className?: string; onSettings: () => void; onSignOut: () => void }) {
+function AccountMenu({ displayName, email, className = "", triggerClassName = "dashboard-session", onSettings, onSignOut }: { displayName: string; email: string; className?: string; triggerClassName?: string; onSettings: () => void; onSignOut: () => void }) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button type="button" className={`dashboard-session ${className}`.trim()} aria-label={`Menu konta: ${displayName}`}>
-          <span className="dashboard-account">
-            <span className="dashboard-account-avatar">{displayName.slice(0, 2).toUpperCase()}</span>
-            <span className="dashboard-account-copy"><b>{displayName}</b><small>{email}</small></span>
-          </span>
-          <ChevronDown className="dashboard-session-chevron" aria-hidden="true" />
-        </button>
+        <AccountMenuTrigger displayName={displayName} email={email} className={`${triggerClassName} ${className}`.trim()} />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" sideOffset={8} className="dashboard-account-menu">
         <DropdownMenuLabel>{email}</DropdownMenuLabel>
@@ -572,7 +567,7 @@ export default function DashboardPage() {
           <div className="parent-topbar-actions">
             <button type="button" className="parent-plan-pill" onClick={() => setParentView("payments")}>{parentPlusChildren ? `Pakiet Plus · ${parentPlusChildren} ${parentPlusChildren === 1 ? "dziecko" : "dzieci"}` : `Plan Free · ${linkedChildren.length} ${linkedChildren.length === 1 ? "dziecko" : "dzieci"}`}</button>
             <a className="parent-help-link" href="mailto:kontakt@egzamin.io"><CircleHelp aria-hidden="true" />Pomoc</a>
-            <AccountMenu displayName={displayName} email={profile.email} className="parent-topbar-account" onSettings={openAccountSettings} onSignOut={() => void signOut()} />
+            <AccountMenu displayName={displayName} email={profile.email} triggerClassName="header-account-session" onSettings={openAccountSettings} onSignOut={() => void signOut()} />
           </div>
         </header>}
         {!focusMode && profile.role !== "student" && profile.role !== "parent" && <header className="dashboard-topbar">

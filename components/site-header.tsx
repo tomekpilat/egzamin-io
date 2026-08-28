@@ -3,7 +3,8 @@
 
 import { useEffect, useState } from "react";
 import type { User } from "@supabase/supabase-js";
-import { ChevronDown, LayoutDashboard, LogOut, Menu } from "lucide-react";
+import { LayoutDashboard, LogOut, Menu } from "lucide-react";
+import { AccountMenuTrigger } from "@/components/account-menu-trigger";
 import { BrandLogo } from "@/components/brand-logo";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
@@ -94,7 +95,7 @@ export function SiteHeader({ currentPath }: { currentPath?: string }) {
       </DropdownMenu>
       <div className="header-actions">
         {!sessionReady ? <div className="header-session-placeholder" aria-hidden="true" /> : account ? <DropdownMenu>
-          <DropdownMenuTrigger asChild><button type="button" className="header-account-session" aria-label={`Menu konta: ${account.displayName}`}><span className="dashboard-account"><span className="dashboard-account-avatar">{account.displayName.slice(0, 2).toUpperCase()}</span><span className="dashboard-account-copy"><b>{account.displayName}</b><small>{account.email}</small></span></span><ChevronDown className="dashboard-session-chevron" aria-hidden="true" /></button></DropdownMenuTrigger>
+          <DropdownMenuTrigger asChild><AccountMenuTrigger displayName={account.displayName} email={account.email} className="header-account-session" /></DropdownMenuTrigger>
           <DropdownMenuContent align="end" sideOffset={8} className="dashboard-account-menu">
             <DropdownMenuLabel>{account.email}</DropdownMenuLabel>
             <DropdownMenuItem asChild><a href="/panel"><LayoutDashboard aria-hidden="true" /> Przejdź do panelu</a></DropdownMenuItem>
