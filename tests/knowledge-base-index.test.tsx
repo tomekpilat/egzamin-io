@@ -13,8 +13,8 @@ describe("redesigned knowledge base index", () => {
     expect(screen.getByRole("heading", { name: "Konkretna odpowiedź. Potem ćwiczenie." })).toBeInTheDocument();
     expect(screen.getByText("17 poradników")).toBeInTheDocument();
     expect(screen.getByText("6 kategorii")).toBeInTheDocument();
-    expect(container.querySelectorAll(".knowledge-list-card")).toHaveLength(2);
-    expect(screen.getByRole("button", { name: /Punkty, progi i wybór szkoły/ })).toHaveAttribute("aria-expanded", "true");
+    expect(container.querySelectorAll(".knowledge-list-card")).toHaveLength(0);
+    expect(screen.getByRole("button", { name: /Punkty, progi i wybór szkoły/ })).toHaveAttribute("aria-expanded", "false");
 
     await user.click(screen.getByRole("button", { name: /Matematyka krok po kroku/ }));
     expect(container.querySelectorAll(".knowledge-list-card")).toHaveLength(3);
@@ -33,8 +33,10 @@ describe("redesigned knowledge base index", () => {
     expect(screen.getAllByRole("heading", { level: 2 })).toHaveLength(7);
   });
 
-  it("keeps category, article and learning destinations as real links", () => {
+  it("keeps category, article and learning destinations as real links", async () => {
+    const user = userEvent.setup();
     render(<KnowledgeBaseIndex />);
+    await user.click(screen.getByRole("button", { name: /Punkty, progi i wybór szkoły/ }));
     expect(screen.getAllByRole("link", { name: /Zobacz kategorię/ })[0]).toHaveAttribute("href", "/rekrutacja");
     expect(screen.getByRole("link", { name: /Ile punktów można zdobyć do liceum/ })).toHaveAttribute("href", "/rekrutacja/ile-punktow-do-liceum");
     expect(screen.getByRole("link", { name: "Rozwiąż zadania" })).toHaveAttribute("href", "/logowanie?tryb=rejestracja&rola=uczen");

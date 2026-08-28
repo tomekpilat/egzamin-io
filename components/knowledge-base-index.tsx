@@ -24,7 +24,7 @@ function articleLabel(count: number) {
 
 export function KnowledgeBaseIndex() {
   const [filter, setFilter] = useState<KnowledgeFilter>("all");
-  const [expandedCategory, setExpandedCategory] = useState<KnowledgeCategory | "">(categoryEntries[0]?.slug ?? "");
+  const [expandedCategory, setExpandedCategory] = useState<KnowledgeCategory | "">("");
   const visibleCategories = filter === "all" ? categoryEntries : categoryEntries.filter((category) => category.slug === filter);
 
   function selectFilter(nextFilter: KnowledgeFilter) {
