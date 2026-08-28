@@ -548,7 +548,12 @@ export default function DashboardPage() {
           </>}
         </nav>
         <div className="sidebar-plan"><b>{parentPlusChildren ? `Pakiet Plus · ${parentPlusChildren}` : "Wersja bezpłatna"}</b><span>{parentPlusChildren ? "Aktywny dla połączonych dzieci" : "3 pytania AI dziennie"}</span><i><em /></i>{profile.role === "parent" ? <button type="button" onClick={() => setParentView("payments")}>{parentPlusChildren ? "Płatności i dokumenty →" : "Poznaj pakiet Plus →"}</button> : <a href="/plan-plus">Poznaj pakiet Plus →</a>}</div>
-        {profile.role === "parent" ? <AccountMenu displayName={displayName} email={profile.email} className="dashboard-sidebar-account" onSettings={openAccountSettings} onSignOut={() => void signOut()} /> : null}
+        {profile.role === "parent" ? <nav className="dashboard-sidebar-legal" aria-label="Dokumenty i prywatność">
+          <a href="/regulamin">Regulamin</a>
+          <a href="/polityka-prywatnosci">Polityka prywatności</a>
+          <a href="/polityka-cookies">Pliki cookie</a>
+          <a href="/bezpieczenstwo-dzieci-ai">Dzieci i AI</a>
+        </nav> : null}
       </aside>}
 
       {!focusMode && profile.role === "student" && <header className="student-app-header">
@@ -564,9 +569,10 @@ export default function DashboardPage() {
       <div className="dashboard-main">
         {!focusMode && profile.role === "parent" && <header className="parent-dashboard-topbar">
           <span>Konto rodzica <i aria-hidden="true">/</i> <b>{parentViewLabels[parentView]}</b></span>
-          <div>
+          <div className="parent-topbar-actions">
             <button type="button" className="parent-plan-pill" onClick={() => setParentView("payments")}>{parentPlusChildren ? `Pakiet Plus · ${parentPlusChildren} ${parentPlusChildren === 1 ? "dziecko" : "dzieci"}` : `Plan Free · ${linkedChildren.length} ${linkedChildren.length === 1 ? "dziecko" : "dzieci"}`}</button>
             <a className="parent-help-link" href="mailto:kontakt@egzamin.io"><CircleHelp aria-hidden="true" />Pomoc</a>
+            <AccountMenu displayName={displayName} email={profile.email} className="parent-topbar-account" onSettings={openAccountSettings} onSignOut={() => void signOut()} />
           </div>
         </header>}
         {!focusMode && profile.role !== "student" && profile.role !== "parent" && <header className="dashboard-topbar">

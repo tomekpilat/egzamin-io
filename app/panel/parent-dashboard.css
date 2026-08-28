@@ -30,10 +30,16 @@
 .dashboard-parent-page .parent-nav-icon { width: 16px; height: 16px; flex: none; stroke-width: 1.6; }
 .dashboard-parent-page .dashboard-sidebar nav button > span { min-width: 0; flex: 1; color: inherit; font-size: inherit; text-align: left; }
 .dashboard-parent-page .dashboard-nav-with-count b { min-width: 20px; height: 20px; padding-inline: 6px; color: var(--primary-foreground); background: var(--brand); }
-.dashboard-parent-page .dashboard-sidebar-account { margin-top: auto; padding: 16px 8px 0; background: transparent; border-top: 1px solid var(--subtle-line); }
-.dashboard-parent-page .dashboard-sidebar-account .dashboard-account-avatar { width: 32px; height: 32px; color: var(--brand); background: var(--brand-soft); border-color: color-mix(in srgb, var(--brand) 25%, var(--border)); font-size: 12px; }
-.dashboard-parent-page .dashboard-sidebar-account .dashboard-account-copy b { font-size: 13px; font-weight: 500; }
-.dashboard-parent-page .dashboard-sidebar-account .dashboard-account-copy small { max-width: 145px; color: var(--quiet-copy); font-size: 12px; }
+.dashboard-parent-page .dashboard-sidebar .dashboard-sidebar-legal {
+  margin-top: auto;
+  padding: 16px 8px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  border-top: 1px solid var(--subtle-line);
+}
+.dashboard-parent-page .dashboard-sidebar .dashboard-sidebar-legal a { width: auto; padding: 0; color: var(--quiet-copy); border: 0; border-radius: 0; font-size: 11px; font-weight: 400; line-height: 1.4; }
+.dashboard-parent-page .dashboard-sidebar .dashboard-sidebar-legal a:hover { color: var(--foreground); background: transparent; text-decoration: underline; text-underline-offset: 3px; }
 
 .parent-dashboard-topbar {
   min-height: 63px;
@@ -48,13 +54,17 @@
 .parent-dashboard-topbar > span { min-width: 0; overflow: hidden; color: var(--quiet-copy); font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
 .parent-dashboard-topbar > span i { padding-inline: 4px; color: var(--border); font-style: normal; }
 .parent-dashboard-topbar > span b { color: var(--muted-copy); font-weight: 500; }
-.parent-dashboard-topbar > div { display: flex; align-items: center; gap: 10px; }
+.parent-dashboard-topbar .parent-topbar-actions { display: flex; align-items: center; gap: 10px; }
 .parent-plan-pill,
 .parent-help-link { min-height: 34px; padding: 7px 13px; display: inline-flex; align-items: center; justify-content: center; gap: 7px; color: var(--muted-copy); background: var(--card); border: 1px solid var(--border); border-radius: 999px; font: inherit; font-size: 13px; cursor: pointer; }
 .parent-help-link { border-radius: 8px; }
 .parent-help-link svg { width: 15px; height: 15px; }
 .parent-plan-pill:hover,
 .parent-help-link:hover { color: var(--foreground); background: var(--surface-soft); text-decoration: none; }
+.parent-topbar-account { min-height: 38px; padding: 3px 7px; }
+.parent-topbar-account .dashboard-account-avatar { width: 30px; height: 30px; color: var(--brand); background: var(--brand-soft); border-color: color-mix(in srgb, var(--brand) 25%, var(--border)); font-size: 11px; }
+.parent-topbar-account .dashboard-account-copy b { font-size: 12px; font-weight: 500; }
+.parent-topbar-account .dashboard-account-copy small { max-width: 155px; color: var(--quiet-copy); font-size: 10px; }
 
 .dashboard-parent-page .dashboard-content { max-width: 1190px; padding: 32px 36px 48px; }
 .dashboard-parent-page .dashboard-view-heading { min-height: 0; margin: 0 0 24px; padding: 0; align-items: flex-end; border: 0; }
@@ -140,12 +150,14 @@
   .dashboard-parent-page .dashboard-nav-with-count b { position: absolute; top: 2px; right: 10px; }
   .dashboard-parent-page .dashboard-sidebar > a,
   .dashboard-parent-page .dashboard-nav-label,
-  .dashboard-parent-page .dashboard-sidebar-account { display: none; }
+  .dashboard-parent-page .dashboard-sidebar .dashboard-sidebar-legal { display: none; }
   .parent-dashboard-topbar { min-height: 58px; padding: 10px 15px; }
   .parent-dashboard-topbar > span { font-size: 12px; }
   .parent-plan-pill { display: none; }
   .parent-help-link { width: 38px; padding: 0; font-size: 0; }
   .parent-help-link svg { width: 17px; height: 17px; }
+  .parent-topbar-account { min-width: 38px; padding: 3px; }
+  .parent-topbar-account .dashboard-account-copy { display: none; }
   .dashboard-parent-page .dashboard-content { padding: 24px 15px 34px; }
   .dashboard-parent-page .dashboard-view-heading { align-items: flex-start; flex-direction: column; }
   .dashboard-parent-page .dashboard-view-heading h2 { font-size: 26px; }

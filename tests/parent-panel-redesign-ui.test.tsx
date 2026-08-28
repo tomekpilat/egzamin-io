@@ -60,6 +60,11 @@ describe("redesigned parent panel", () => {
     await waitFor(() => expect(screen.getByRole("heading", { name: "Przegląd" })).toBeInTheDocument());
     expect(screen.getAllByText(/Konto rodzica/)).toHaveLength(2);
     expect(screen.getByRole("button", { name: "Plan Free · 1 dziecko" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Menu konta: Anna Nowak" })).toBeInTheDocument();
+    expect(screen.getByRole("navigation", { name: "Dokumenty i prywatność" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Regulamin" })).toHaveAttribute("href", "/regulamin");
+    expect(screen.getByRole("link", { name: "Pliki cookie" })).toHaveAttribute("href", "/polityka-cookies");
+    expect(screen.getByRole("link", { name: "Dzieci i AI" })).toHaveAttribute("href", "/bezpieczenstwo-dzieci-ai");
 
     await user.click(screen.getByRole("button", { name: "Dzieci" }));
     expect(screen.getByRole("heading", { name: "Dzieci" })).toBeInTheDocument();
@@ -69,6 +74,6 @@ describe("redesigned parent panel", () => {
     await user.click(screen.getByRole("button", { name: "Ustawienia" }));
     expect(screen.getByRole("heading", { name: "Ustawienia" })).toBeInTheDocument();
     expect(screen.getByText("Motyw systemowy")).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "Polityka prywatności" })).toHaveAttribute("href", "/polityka-prywatnosci");
+    expect(screen.getAllByRole("link", { name: "Polityka prywatności" })).toSatisfy((links: HTMLElement[]) => links.every((link) => link.getAttribute("href") === "/polityka-prywatnosci"));
   });
 });

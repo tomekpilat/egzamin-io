@@ -39,6 +39,9 @@ describe("parent panel actions", () => {
     expect(panel).toContain("LayoutDashboard");
     expect(panel).toContain("ChartNoAxesColumnIncreasing");
     expect(panel).toContain("parent-plan-pill");
+    expect(panel).toContain('className="parent-topbar-account"');
+    expect(panel).toContain('className="dashboard-sidebar-legal"');
+    expect(panel).not.toContain('className="dashboard-sidebar-account"');
     expect(parentStyles).toContain("grid-template-columns: 250px minmax(0, 1fr)");
     expect(parentStyles).toContain("min-height: 63px");
     expect(parentStyles).toContain("padding: 32px 36px 48px");
