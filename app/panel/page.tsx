@@ -507,6 +507,11 @@ export default function DashboardPage() {
     profile.email;
   const parentPlusChildren = profile.role === "parent" ? linkedChildren.filter((child) => child.plan_tier === "plus" && (!child.plan_valid_until || new Date(child.plan_valid_until).getTime() > renderedAt)).length : 0;
   const focusMode = profile.role === "student" && studentView === "exercises";
+  const feedbackContext = profile.role === "parent"
+    ? `parent:${parentView}`
+    : profile.role === "student"
+      ? `student:${studentView}`
+      : `${profile.role}:start`;
 
   if (focusMode) {
     return <main className="task-route-shell"><StudentPractice activeView="exercises" onNavigate={setStudentView} /></main>;
@@ -514,8 +519,8 @@ export default function DashboardPage() {
 
   return (
     <main className={`dashboard-page dashboard-${profile.role}-page`}>
+      <FeedbackDialog userEmail={profile.email} screenContext={feedbackContext} />
       {!focusMode && profile.role !== "parent" && profile.role !== "student" ? <AccountMenu displayName={displayName} email={profile.email} className="dashboard-session-floating" onSettings={openAccountSettings} onSignOut={() => void signOut()} /> : null}
-      {!focusMode && profile.role === "parent" ? <FeedbackDialog userEmail={profile.email} screenContext={`parent:${parentView}`} /> : null}
       {!focusMode && profile.role !== "student" && <aside className="dashboard-sidebar">
         <a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a>
         <span className="dashboard-nav-label">{profile.role === "parent" ? "Panel rodzica" : profile.role === "teacher" ? "Panel nauczyciela" : "Administracja"}</span>
@@ -552,7 +557,6 @@ export default function DashboardPage() {
       <div className="dashboard-main">
         {!focusMode && profile.role !== "student" && profile.role !== "parent" && <header className="dashboard-topbar">
           <div><span>{roleLabels[profile.role]}</span><h1>Cześć, {firstName}!</h1></div>
-          <div className="dashboard-topbar-actions"><FeedbackDialog userEmail={profile.email} screenContext={`${profile.role}:start`} /></div>
         </header>}
         <div className={focusMode ? "dashboard-content dashboard-focus-content" : "dashboard-content"}>
           {profile.role === "student" && <StudentPractice activeView={studentView} onNavigate={setStudentView} />}

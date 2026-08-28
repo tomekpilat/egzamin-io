@@ -4,19 +4,21 @@ import { describe, expect, it } from "vitest";
 
 const panel = readFileSync(join(process.cwd(), "app/panel/page.tsx"), "utf8");
 const form = readFileSync(join(process.cwd(), "components/feedback-dialog.tsx"), "utf8");
-const styles = readFileSync(join(process.cwd(), "app/account.css"), "utf8");
+const styles = readFileSync(join(process.cwd(), "app/redesign.css"), "utf8");
 const privacy = readFileSync(join(process.cwd(), "app/polityka-prywatnosci/page.tsx"), "utf8");
 
 describe("feedback product flow", () => {
-  it("shows one unobtrusive entry point outside student focus mode", () => {
-    expect(panel).toContain("<FeedbackDialog userEmail={profile.email}");
-    expect(panel.indexOf("<FeedbackDialog")).toBeGreaterThan(panel.indexOf("{!focusMode && <header"));
+  it("shows one unobtrusive entry point for every dashboard role outside student focus mode", () => {
+    expect(panel.match(/<FeedbackDialog userEmail=\{profile\.email\}/g)).toHaveLength(1);
+    expect(panel).toContain("screenContext={feedbackContext}");
+    expect(panel).toContain("`student:${studentView}`");
+    expect(panel).toContain("`parent:${parentView}`");
     expect(panel).toContain('const focusMode = profile.role === "student" && studentView === "exercises"');
   });
 
   it("keeps the feedback entry point fixed in the bottom-right corner", () => {
     expect(styles).toMatch(/\.dashboard-feedback-trigger\s*\{[^}]*position:\s*fixed;[^}]*right:[^;}]+;[^}]*bottom:[^;}]+;[^}]*z-index:\s*40;/s);
-    expect(styles).toContain("bottom: calc(81px + env(safe-area-inset-bottom))");
+    expect(styles).toContain("bottom: max(14px, env(safe-area-inset-bottom))");
   });
 
   it("submits the required context without learning answers or chat content", () => {
