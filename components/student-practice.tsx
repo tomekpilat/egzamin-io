@@ -760,10 +760,10 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
 
       {activeView === "settings" && <section className="student-content-view student-settings-view" id="ustawienia" aria-labelledby="student-settings-title">
         <Card className="account-settings-card student-account-settings-card">
-          <CardHeader><CardTitle id="student-settings-title">Ustawienia konta</CardTitle><CardDescription>Motyw, prywatność i zarządzanie danymi w jednym miejscu.</CardDescription></CardHeader>
+          <CardHeader><CardTitle id="student-settings-title">Ustawienia konta</CardTitle><CardDescription>Motyw i zarządzanie kontem w jednym miejscu.</CardDescription></CardHeader>
           <CardContent className="student-account-settings-content">
             <div className="account-theme-setting"><span>Wygląd aplikacji</span><ThemeSettings /></div>
-            <div className="student-account-links"><Button variant="outline" asChild><a href="/plan-plus#dla-ucznia">Poznaj pakiet Plus</a></Button><Button variant="outline" asChild><a href="/polityka-prywatnosci">Polityka prywatności</a></Button><Button variant="outline" className="student-delete-account" asChild><a href="/usun-konto">Usuń konto i dane</a></Button></div>
+            <div className="student-account-links"><Button variant="outline" asChild><a href="/plan-plus#dla-ucznia">Poznaj pakiet Plus</a></Button><Button variant="outline" className="student-delete-account" asChild><a href="/usun-konto">Usuń konto i dane</a></Button></div>
           </CardContent>
         </Card>
       </section>}

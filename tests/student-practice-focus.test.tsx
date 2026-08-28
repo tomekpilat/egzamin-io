@@ -127,7 +127,7 @@ describe("StudentPractice focus mode", () => {
 
     rerender(<StudentPractice activeView="settings" onNavigate={onNavigate} />);
     expect(screen.getByText("Ustawienia konta", { selector: '[data-slot="card-title"]' })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "Polityka prywatności" })).toHaveAttribute("href", "/polityka-prywatnosci");
+    expect(screen.queryByRole("link", { name: "Polityka prywatności" })).not.toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Usuń konto i dane" })).toHaveAttribute("href", "/usun-konto");
   });
 

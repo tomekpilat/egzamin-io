@@ -61,7 +61,9 @@ describe("parent panel actions", () => {
   it("keeps plan, privacy and theme controls in their intended places", () => {
     expect(panel).toContain('"/plan-plus#dla-rodzica"');
     expect(panel).toContain('"/plan-plus#dla-ucznia"');
-    expect(panel).toContain('<a href="/polityka-prywatnosci">Polityka prywatności</a>');
+    // One shared sidebar component plus the non-student account settings.
+    expect(panel.match(/<a href="\/polityka-prywatnosci">Polityka prywatności<\/a>/g)).toHaveLength(2);
+    expect(panel).toContain('function DashboardLegalNav()');
     expect(panel).not.toContain("ThemeToggle");
     expect(panel).toContain('<span>Wygląd aplikacji</span><ThemeSettings />');
   });

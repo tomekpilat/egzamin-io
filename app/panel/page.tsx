@@ -77,6 +77,15 @@ function AccountMenu({ displayName, email, className = "", triggerClassName = "d
   );
 }
 
+function DashboardLegalNav() {
+  return <nav className="dashboard-sidebar-legal" aria-label="Dokumenty i prywatność">
+    <a href="/regulamin">Regulamin</a>
+    <a href="/polityka-prywatnosci">Polityka prywatności</a>
+    <a href="/polityka-cookies">Pliki cookie</a>
+    <a href="/bezpieczenstwo-dzieci-ai">Dzieci i AI</a>
+  </nav>;
+}
+
 const emptyCounts: RoleCounts = {
   student: 0,
   parent: 0,
@@ -541,12 +550,7 @@ export default function DashboardPage() {
           </>}
         </nav>
         <div className="sidebar-plan"><b>{parentPlusChildren ? `Pakiet Plus · ${parentPlusChildren}` : "Wersja bezpłatna"}</b><span>{parentPlusChildren ? "Aktywny dla połączonych dzieci" : "15 interaktywnych pytań dziennie"}</span><i><em /></i>{profile.role === "parent" ? <button type="button" onClick={() => setParentView("payments")}>{parentPlusChildren ? "Płatności i dokumenty →" : "Poznaj pakiet Plus →"}</button> : <a href="/plan-plus">Poznaj pakiet Plus →</a>}</div>
-        {profile.role === "parent" ? <nav className="dashboard-sidebar-legal" aria-label="Dokumenty i prywatność">
-          <a href="/regulamin">Regulamin</a>
-          <a href="/polityka-prywatnosci">Polityka prywatności</a>
-          <a href="/polityka-cookies">Pliki cookie</a>
-          <a href="/bezpieczenstwo-dzieci-ai">Dzieci i AI</a>
-        </nav> : null}
+        {profile.role === "parent" ? <DashboardLegalNav /> : null}
       </aside>}
 
       {!focusMode && profile.role === "student" && <aside className="dashboard-sidebar student-dashboard-sidebar">
@@ -563,12 +567,7 @@ export default function DashboardPage() {
           <i aria-hidden="true"><em /></i>
           <small>Cel tygodniowy ustawia rodzic.</small>
         </button>
-        <nav className="dashboard-sidebar-legal" aria-label="Dokumenty i prywatność">
-          <a href="/regulamin">Regulamin</a>
-          <a href="/polityka-prywatnosci">Polityka prywatności</a>
-          <a href="/polityka-cookies">Pliki cookie</a>
-          <a href="/bezpieczenstwo-dzieci-ai">Dzieci i AI</a>
-        </nav>
+        <DashboardLegalNav />
       </aside>}
 
       <div className="dashboard-main">
@@ -599,14 +598,13 @@ export default function DashboardPage() {
           {profile.role === "admin" && <AdminPanel counts={counts} feedback={adminFeedback} busy={adminActionBusy} feedbackBusyId={feedbackBusyId} error={adminActionError} onGrantTeacher={grantTeacherRole} onUpdateFeedback={(id, status) => void updateFeedbackStatus(id, status)} />}
           {profile.role === "parent" && parentView === "settings" && <section className="parent-content-view parent-settings-view" id="ustawienia" aria-labelledby="parent-settings-title">
             <Card className="account-settings-card parent-account-settings-card">
-              <CardHeader><CardTitle id="parent-settings-title">Ustawienia konta</CardTitle><CardDescription>Motyw, prywatność i zarządzanie danymi w jednym miejscu.</CardDescription></CardHeader>
+              <CardHeader><CardTitle id="parent-settings-title">Ustawienia konta</CardTitle><CardDescription>Motyw i zarządzanie kontem w jednym miejscu.</CardDescription></CardHeader>
               <CardContent className="parent-account-settings-content">
                 <div className="account-theme-setting"><span>Wygląd aplikacji</span><ThemeSettings /></div>
                 <div className="parent-account-links">
                   {parentPlusChildren
                     ? <Button variant="outline" type="button" onClick={() => setParentView("payments")}>Płatności i dokumenty</Button>
                     : <Button variant="outline" asChild><a href="/plan-plus#dla-rodzica">Poznaj pakiet Plus</a></Button>}
-                  <Button variant="outline" asChild><a href="/polityka-prywatnosci">Polityka prywatności</a></Button>
                   <Button variant="outline" className="parent-delete-account" asChild><a href="/usun-konto">Usuń konto i dane</a></Button>
                 </div>
               </CardContent>

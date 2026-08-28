@@ -80,8 +80,7 @@ describe("redesigned parent panel", () => {
     expect(screen.getByText("Ustawienia konta", { selector: '[data-slot="card-title"]' })).toBeInTheDocument();
     expect(screen.getByText("Motyw systemowy")).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Poznaj pakiet Plus" })).toHaveAttribute("href", "/plan-plus#dla-rodzica");
-    expect(screen.getAllByRole("link", { name: "Polityka prywatności" })).toHaveLength(2);
-    expect(screen.getAllByRole("link", { name: "Polityka prywatności" })[1]).toHaveAttribute("href", "/polityka-prywatnosci");
+    expect(screen.getByRole("link", { name: "Polityka prywatności" })).toHaveAttribute("href", "/polityka-prywatnosci");
     expect(screen.getByRole("link", { name: "Usuń konto i dane" })).toHaveAttribute("href", "/usun-konto");
   });
 });
