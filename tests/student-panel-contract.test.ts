@@ -5,6 +5,7 @@ import { describe, expect, it } from "vitest";
 const panel = readFileSync(join(process.cwd(), "app/panel/page.tsx"), "utf8");
 const practice = readFileSync(join(process.cwd(), "components/student-practice.tsx"), "utf8");
 const styles = readFileSync(join(process.cwd(), "app/redesign.css"), "utf8");
+const select = readFileSync(join(process.cwd(), "components/ui/select.tsx"), "utf8");
 
 describe("student panel navigation", () => {
   it("defines a separate view for every student menu item", () => {
@@ -35,6 +36,7 @@ describe("student panel navigation", () => {
     expect(practice).toContain('aria-label="Wybierz rocznik"');
     expect(practice).toContain('id="paper-progress-title"');
     expect(practice).toContain("formatQuestionSource(currentQuestion)");
+    expect(select).toContain('className={cn("z-[100]');
   });
 
   it("removes dashboard chrome while the student is solving a question", () => {
