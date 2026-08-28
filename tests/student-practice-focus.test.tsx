@@ -64,7 +64,7 @@ const questions = [
   },
 ];
 
-function prepareRpc(questionRows = questions, progressRows: Record<string, unknown>[] = [], submitResult?: (params: Record<string, unknown>) => Record<string, unknown>, access = { active_plan: "plus", practice_used_today: 0, practice_daily_limit: null, progress_enabled: true, ai_enabled: true }) {
+function prepareRpc(questionRows: Record<string, unknown>[] = questions, progressRows: Record<string, unknown>[] = [], submitResult?: (params: Record<string, unknown>) => Record<string, unknown>, access = { active_plan: "plus", practice_used_today: 0, practice_daily_limit: null, progress_enabled: true, ai_enabled: true }) {
   vi.stubGlobal("fetch", vi.fn().mockImplementation(async (_input: RequestInfo | URL, init?: RequestInit) => new Response(JSON.stringify(init?.method === "POST" ? {
     message: { id: "ai-response-1", role: "assistant", content: "Wyjaśnienie AI do aktualnego zadania.", created_at: "2026-08-28T10:00:00.000Z" },
     usage: { used: 1, limit: 3, remaining: 2, plan: "free" },
@@ -129,6 +129,61 @@ describe("StudentPractice focus mode", () => {
     expect(screen.getByText("Ustawienia konta", { selector: '[data-slot="card-title"]' })).toBeInTheDocument();
     expect(screen.queryByRole("link", { name: "Polityka prywatności" })).not.toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Usuń konto i dane" })).toHaveAttribute("href", "/usun-konto");
+  });
+
+  it("groups paper results by year and opens the selected paper from the redesigned cards", async () => {
+    const cke2026 = {
+      ...questions[0],
+      question_id: "cke-2026-mat-01",
+      source_type: "cke",
+      source_label: "Wariant standardowy",
+      exam_paper_id: "cke-2026-main-mathematics-100-x",
+      exam_year: 2026,
+      exam_session: "main",
+      exam_variant: "100-X",
+      source_document_id: "OMAP-100-X-2605",
+      paper_question_number: 1,
+      selected_answer: 1,
+      selected_response: { index: 1 },
+      is_correct: true,
+      points_awarded: 1,
+      max_points: 1,
+      grading_status: "auto",
+      correct_answer: 1,
+      revealed_answer_key: { correct_index: 1 },
+      explanation: "20% z 50 to 10.",
+    };
+    const cke2025 = {
+      ...cke2026,
+      question_id: "cke-2025-pol-01",
+      source_label: "Wariant standardowy",
+      exam_paper_id: "cke-2025-main-polish-100-x",
+      exam_year: 2025,
+      subject: "polish",
+      source_document_id: "OPOP-100-X-2505",
+    };
+    prepareRpc([cke2026, cke2025], [
+      { progress_paper_id: cke2026.exam_paper_id, exam_year: 2026, exam_session: "main", subject: "mathematics", variant_code: "100-X", source_label: "Wariant standardowy", total_questions: 20, answered_questions: 1, correct_questions: 1, accuracy_percent: 100, earned_points: 1, available_points: 1, score_percent: 100, completion_status: "in_progress" },
+      { progress_paper_id: cke2025.exam_paper_id, exam_year: 2025, exam_session: "main", subject: "polish", variant_code: "100-X", source_label: "Wariant standardowy", total_questions: 20, answered_questions: 20, correct_questions: 17, accuracy_percent: 85, earned_points: 22, available_points: 26, score_percent: 85, completion_status: "completed" },
+    ]);
+    const user = userEvent.setup();
+    const onNavigate = vi.fn();
+    render(<StudentPractice activeView="progress" onNavigate={onNavigate} />);
+
+    expect(await screen.findByRole("heading", { name: "Wyniki według rocznika i arkusza" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Wszystkie roczniki" })).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByRole("heading", { name: "CKE 2026" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "CKE 2025" })).toBeInTheDocument();
+    expect(screen.getByText("W toku")).toBeInTheDocument();
+    expect(screen.getByText("Ukończony")).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "CKE 2025" }));
+    expect(screen.queryByRole("heading", { name: "CKE 2026" })).not.toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "CKE 2025" })).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Wszystkie roczniki" }));
+    await user.click(screen.getByRole("button", { name: "Wróć do zadania 2 →" }));
+    expect(onNavigate).toHaveBeenCalledWith("exercises");
   });
 
   it("detects only a changed, unsubmitted draft", () => {

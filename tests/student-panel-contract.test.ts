@@ -36,6 +36,10 @@ describe("student panel navigation", () => {
     expect(practice).toContain("filterPracticeQuestions");
     expect(practice).toContain('aria-label="Wybierz rocznik"');
     expect(practice).toContain('id="paper-progress-title"');
+    expect(practice).toContain('className="paper-year-filters"');
+    expect(practice).toContain('className="paper-result-card"');
+    expect(practice).toContain('openPaperFromProgress');
+    expect(studentStyles).toContain(".dashboard-student-page .paper-result-summary");
     expect(practice).toContain("formatQuestionSource(currentQuestion)");
     expect(select).toContain('className={cn("z-[120]');
   });

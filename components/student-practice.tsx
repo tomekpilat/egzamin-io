@@ -123,6 +123,12 @@ const sessionLabels: Record<ExamSession, string> = {
   additional: "termin dodatkowy",
 };
 
+function paperCountLabel(count: number) {
+  if (count === 1) return "1 arkusz";
+  if (count >= 2 && count <= 4) return `${count} arkusze`;
+  return `${count} arkuszy`;
+}
+
 export const UNSAVED_ANSWER_MESSAGE = "Masz wybraną odpowiedź, której jeszcze nie sprawdzono. Opuścić ją bez zapisywania?";
 
 export function hasUnsavedPracticeAnswer(
@@ -265,6 +271,7 @@ function useQuestionTimer(questionId: string | null, running: boolean) {
 export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }: { activeView: StudentView; onNavigate: (view: StudentView) => void; hasPlusAccess?: boolean }) {
   const [questions, setQuestions] = useState<PracticeQuestion[]>([]);
   const [paperProgress, setPaperProgress] = useState<PaperProgress[]>([]);
+  const [paperYearFilter, setPaperYearFilter] = useState<number | null>(null);
   const [subject, setSubject] = useState<SubjectFilter>("all");
   const [material, setMaterial] = useState<MaterialFilter>("demo");
   const [paperId, setPaperId] = useState("all");
@@ -314,6 +321,17 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
     () => Array.from(new Set(questions.flatMap((question) => question.source_type === "cke" && question.exam_year ? [question.exam_year] : []))).sort((a, b) => b - a),
     [questions],
   );
+  const paperProgressYears = useMemo(
+    () => Array.from(new Set(paperProgress.map((paper) => paper.exam_year))).sort((a, b) => b - a),
+    [paperProgress],
+  );
+  const groupedPaperProgress = useMemo(() => {
+    const groups = new Map<number, PaperProgress[]>();
+    paperProgress
+      .filter((paper) => paperYearFilter === null || paper.exam_year === paperYearFilter)
+      .forEach((paper) => groups.set(paper.exam_year, [...(groups.get(paper.exam_year) ?? []), paper]));
+    return Array.from(groups.entries()).sort(([left], [right]) => right - left);
+  }, [paperProgress, paperYearFilter]);
   const materialOptions = useMemo(() => {
     const options: { value: MaterialFilter; label: string; count: number }[] = [];
     if (examYears.length) options.push({ value: "all-cke", label: "Wszystkie lata CKE", count: questions.filter((question) => question.source_type === "cke").length });
@@ -479,6 +497,25 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
     setQuestionIndex(0);
     setError("");
     trackAnalyticsEvent("practice_started");
+    onNavigate("exercises");
+  }
+
+  function openPaperFromProgress(paper: PaperProgress, mode: "resume" | "preview" | "partial" | "review") {
+    const paperQuestions = questions.filter((question) => question.exam_paper_id === paper.progress_paper_id);
+    const isAnswered = (question: PracticeQuestion) => question.selected_response !== null || question.selected_answer !== null;
+    const preferredIndex = mode === "review"
+      ? paperQuestions.findIndex((question) => isAnswered(question) && question.is_correct === false)
+      : mode === "partial"
+        ? paperQuestions.findIndex(isAnswered)
+        : paperQuestions.findIndex((question) => !isAnswered(question));
+
+    setMaterial(`year:${paper.exam_year}`);
+    setSubject(paper.subject);
+    setPaperId(paper.progress_paper_id);
+    setQuestionIndex(preferredIndex >= 0 ? preferredIndex : 0);
+    clearDrafts();
+    setSubmittedAnswer(null);
+    setError("");
     onNavigate("exercises");
   }
 
@@ -750,11 +787,43 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
           </Card>
         </section>
         <section className="practice-paper-progress" aria-labelledby="paper-progress-title">
-          <div className="guardian-section-heading"><div><Badge variant="secondary">Arkusze CKE</Badge><h3 id="paper-progress-title">Wyniki według rocznika i arkusza</h3></div><small>Pełny arkusz liczymy osobno od sesji mieszających zadania.</small></div>
-          {paperProgress.length ? <div className="practice-paper-grid">{paperProgress.map((paper) => {
-            const statusLabel = paper.completion_status === "completed" ? "Ukończony" : paper.completion_status === "in_progress" ? "Rozpoczęty" : "Nierozpoczęty";
-            return <Card key={paper.progress_paper_id} className="practice-paper-card"><CardHeader><div className="practice-paper-title"><Badge variant={paper.completion_status === "completed" ? "default" : "outline"}>{statusLabel}</Badge><span>CKE {paper.exam_year} · {sessionLabels[paper.exam_session]}</span></div><div className="subject-card-heading compact"><SubjectIcon subject={paper.subject} /><div><CardTitle>{subjectLabels[paper.subject]}</CardTitle><CardDescription>{paper.source_label}</CardDescription></div></div></CardHeader><CardContent><div className="subject-progress-value"><b>{paper.score_percent}%</b><span>{paper.earned_points} z {paper.available_points} pkt · {paper.answered_questions} z {paper.total_questions} zadań</span></div><Progress value={(paper.answered_questions / Math.max(paper.total_questions, 1)) * 100} aria-label={`Ukończenie arkusza ${paper.exam_year}: ${paper.answered_questions} z ${paper.total_questions}`} /></CardContent></Card>;
-          })}</div> : <Card className="practice-paper-empty"><CardContent><b>Brak opublikowanych arkuszy CKE</b><p>Gdy pierwszy zweryfikowany arkusz zostanie zaimportowany, pojawi się tutaj jako osobny rocznik — bez mieszania z zestawem demo.</p></CardContent></Card>}
+          <header className="paper-progress-intro">
+            <Badge variant="secondary" className="paper-progress-kicker">Arkusze CKE</Badge>
+            <h3 id="paper-progress-title">Wyniki według rocznika i arkusza</h3>
+            <p>Każdy arkusz liczony osobno. Wynik procentowy pokazuje punkty zdobyte względem maksymalnej liczby punktów w arkuszu.</p>
+          </header>
+          {paperProgress.length ? <>
+            <div className="paper-year-filters" role="group" aria-label="Filtruj wyniki według rocznika">
+              <button type="button" className={paperYearFilter === null ? "active" : ""} aria-pressed={paperYearFilter === null} onClick={() => setPaperYearFilter(null)}>Wszystkie roczniki</button>
+              {paperProgressYears.map((year) => <button key={year} type="button" className={paperYearFilter === year ? "active" : ""} aria-pressed={paperYearFilter === year} onClick={() => setPaperYearFilter(year)}>CKE {year}</button>)}
+            </div>
+            <div className="paper-year-groups">{groupedPaperProgress.map(([year, papers]) => {
+              const sessions = Array.from(new Set(papers.map((paper) => sessionLabels[paper.exam_session])));
+              return <section className="paper-year-group" key={year} aria-labelledby={`paper-year-${year}`}>
+                <header className="paper-year-heading"><h4 id={`paper-year-${year}`}>CKE {year}</h4><span>{sessions.join(" i ")} · {paperCountLabel(papers.length)}</span></header>
+                <div className="paper-year-list">{papers.map((paper) => {
+                  const statusLabel = paper.completion_status === "completed" ? "Ukończony" : paper.completion_status === "in_progress" ? "W toku" : "Nierozpoczęty";
+                  const incorrectQuestions = Math.max(0, paper.answered_questions - paper.correct_questions);
+                  const primaryLabel = paper.completion_status === "completed" ? "Zobacz omówienie →" : paper.completion_status === "in_progress" ? `Wróć do zadania ${Math.min(paper.answered_questions + 1, paper.total_questions)} →` : "Rozpocznij arkusz →";
+                  const secondaryLabel = paper.completion_status === "completed" ? `Powtórz błędne zadania (${incorrectQuestions})` : paper.completion_status === "in_progress" ? "Wyniki cząstkowe" : "Podejrzyj zadania";
+                  const primaryMode = paper.completion_status === "in_progress" ? "resume" : paper.completion_status === "completed" ? "partial" : "resume";
+                  const secondaryMode = paper.completion_status === "completed" ? "review" : paper.completion_status === "in_progress" ? "partial" : "preview";
+                  return <article className="paper-result-card" key={paper.progress_paper_id}>
+                    <div className="paper-result-summary">
+                      <SubjectIcon subject={paper.subject} className="paper-result-icon" />
+                      <div className="paper-result-copy">
+                        <div><h5>{subjectLabels[paper.subject]}</h5><span className={`paper-status paper-status-${paper.completion_status}`}>{statusLabel}</span></div>
+                        <p>{paper.source_label} · {sessionLabels[paper.exam_session]}{paper.variant_code ? ` · wariant ${paper.variant_code}` : ""}</p>
+                      </div>
+                      <div className={`paper-result-score${paper.completion_status === "not_started" ? " is-empty" : ""}`}><b>{paper.score_percent}%</b><span>{paper.earned_points} z {paper.available_points} pkt · {paper.answered_questions} z {paper.total_questions} zadań</span></div>
+                    </div>
+                    <Progress className="paper-result-progress" value={paper.score_percent} aria-label={`Wynik arkusza ${subjectLabels[paper.subject]} CKE ${year}: ${paper.score_percent}%`} />
+                    <div className="paper-result-actions"><button type="button" onClick={() => openPaperFromProgress(paper, primaryMode)}>{primaryLabel}</button><button type="button" onClick={() => openPaperFromProgress(paper, secondaryMode)}>{secondaryLabel}</button></div>
+                  </article>;
+                })}</div>
+              </section>;
+            })}</div>
+          </> : <Card className="practice-paper-empty"><CardContent><b>Brak opublikowanych arkuszy CKE</b><p>Gdy pierwszy zweryfikowany arkusz zostanie zaimportowany, pojawi się tutaj jako osobny rocznik — bez mieszania z zestawem demo.</p></CardContent></Card>}
         </section>
       </section>}
 
