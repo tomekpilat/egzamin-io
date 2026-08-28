@@ -115,6 +115,8 @@ describe("StudentPractice focus mode", () => {
     expect(screen.getByRole("progressbar", { name: "Postęp w bieżącym zestawie" })).toHaveAttribute("aria-valuenow", "50");
     expect(screen.getByRole("button", { name: "Poprzednie pytanie" })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Następne pytanie" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Poprzednie pytanie" })).toHaveTextContent("← Poprzednie");
+    expect(screen.getByRole("button", { name: "Następne pytanie" })).toHaveTextContent("Następne →");
     expect(screen.getByRole("button", { name: "Zakończ" })).toBeInTheDocument();
     expect(screen.getByRole("complementary", { name: "Odpowiedź, podpowiedzi i rozmowa z AI" })).toBeInTheDocument();
     expect(screen.getByText("Podpowiedzi")).toBeInTheDocument();

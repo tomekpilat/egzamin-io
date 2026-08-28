@@ -992,7 +992,9 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
 .task-actions > [data-slot="button"] { padding-inline: 22px; font-size: 15px; }
 .task-actions > span { color: var(--muted-foreground); font-size: 13px; }
 .task-actions nav { margin-left: auto; display: flex; gap: 8px; }
-.task-actions nav [data-slot="button"] { color: var(--muted-copy); background: var(--card); }
+.task-actions nav button { padding: 11px 16px; color: var(--muted-copy); background: var(--card); border: 1px solid var(--border); border-radius: 8px; font-size: 14px; cursor: pointer; }
+.task-actions nav button:hover:not(:disabled) { color: var(--foreground); background: var(--secondary); }
+.task-actions nav button:disabled { opacity: .5; cursor: not-allowed; }
 
 .task-support { min-width: 0; overflow: hidden; background: var(--card); border-left: 1px solid var(--subtle-line); }
 .task-help-panel { width: 100%; height: 100%; min-height: 0; display: flex; flex-direction: column; }
@@ -1049,9 +1051,12 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
 .task-chat-message > span { color: var(--brand); font-size: 12px; font-weight: 600; }
 .task-chat-message.user > span { color: var(--muted-foreground); font-weight: 400; }
 .task-chat-message p { margin: 0; color: color-mix(in srgb, var(--foreground) 85%, var(--background)); font-size: 14px; line-height: 1.6; white-space: pre-wrap; }
-.task-quick-questions { display: flex; flex-wrap: wrap; gap: 8px; }
-.task-chat-composer { margin-top: auto; display: grid; grid-template-columns: minmax(0, 1fr) 40px; align-items: end; gap: 8px; }
-.task-chat-composer textarea { min-height: 82px; max-height: 180px; resize: vertical; }
+.task-chat-entry { margin-top: auto; display: flex; flex-direction: column; gap: 12px; }
+.task-chat-composer { min-height: 56px; padding: 6px 6px 6px 14px; display: flex; align-items: center; gap: 12px; background: var(--surface-soft); border: 1px solid var(--border); border-radius: 9px; }
+.task-chat-composer textarea { min-height: 42px; height: 42px; max-height: 96px; padding: 10px 0; resize: none; color: var(--foreground); background: transparent; border: 0; border-radius: 0; font-size: 14px; line-height: 1.5; }
+.task-chat-composer textarea:focus-visible { border: 0; outline: 0; }
+.task-chat-composer > button { width: 30px; height: 30px; padding: 0; display: grid; place-items: center; flex: none; color: var(--background); background: var(--foreground); border: 0; border-radius: 7px; font-size: 14px; cursor: pointer; }
+.task-chat-composer > button:disabled { opacity: .38; cursor: not-allowed; }
 .task-tutor-privacy { margin: 0; color: var(--quiet-copy); font-size: 12px; line-height: 1.5; }
 .task-tutor-limit { padding: 14px; display: flex; align-items: center; justify-content: space-between; gap: 14px; background: var(--surface-soft); border: 1px solid var(--border); border-radius: 9px; color: var(--quiet-copy); font-size: 12px; }
 .task-tutor-limit > div { display: flex; flex-direction: column; gap: 2px; }
@@ -1284,7 +1289,7 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
   .task-actions { margin-top: 12px; }
   .task-actions > span { order: 3; width: 100%; }
   .task-actions nav { margin-left: auto; }
-  .task-actions nav [data-slot="button"] { padding-inline: 10px; }
+  .task-actions nav button { padding-inline: 10px; }
   .task-support { min-height: 560px; overflow: visible; border-top: 1px solid var(--subtle-line); border-left: 0; }
   .task-help-panel { min-height: 560px; }
   .task-help-content { overflow: visible; }

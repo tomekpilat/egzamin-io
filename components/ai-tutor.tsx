@@ -3,7 +3,7 @@
 /* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { RotateCcw, Send } from "lucide-react";
+import { RotateCcw } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -146,9 +146,6 @@ function AiTutorConversation({
     }
   }
 
-  const quickQuestions = feedback
-    ? ["Wytłumacz mi to prościej", "Daj mi tylko podpowiedź", "Dlaczego ta odpowiedź jest poprawna?"]
-    : ["Daj mi tylko podpowiedź", "Co mam zrobić dalej?", "Wytłumacz mi to prościej"];
   const displayedTab: TutorTab = !feedback && activeTab === "solution"
       ? "hints"
       : activeTab;
@@ -189,13 +186,11 @@ function AiTutorConversation({
         <div className="task-conversation-heading"><b id="conversation-title">Tutor AI</b><small>Zostały {usage.remaining} z {usage.limit} pytań dziś</small></div>
         {loading ? <p className="task-help-loading">Uruchamiamy nauczyciela AI…</p> : error ? <Alert variant="destructive"><AlertDescription><span>{error}</span><Button type="button" size="sm" variant="outline" onClick={() => void loadTutor()}><RotateCcw aria-hidden="true" /> Spróbuj ponownie</Button></AlertDescription></Alert> : !available ? <p className="task-help-placeholder">Rozmowa będzie dostępna po zatwierdzeniu opracowania zadania.</p> : <>
           {messages.length > 0 && <div ref={conversationRef} className="task-chat" role="log" aria-label="Rozmowa z nauczycielem AI" aria-live="polite">{messages.map((message) => <TutorMessage key={message.id} message={message} />)}</div>}
-          {!messages.length && usage.remaining > 0 && <div className="task-quick-questions">{quickQuestions.map((question) => <Button key={question} type="button" variant="outline" size="sm" onClick={() => void sendMessage(question)} disabled={sending}>{question}</Button>)}</div>}
-          {usage.remaining > 0 ? <div className="task-chat-composer">
-            <Textarea value={input} onChange={(event) => setInput(event.target.value)} onKeyDown={(event) => { if (event.key === "Enter" && !event.shiftKey) { event.preventDefault(); void sendMessage(); } }} maxLength={AI_MESSAGE_MAX_LENGTH} rows={3} placeholder="Napisz, czego nie rozumiesz w tym zadaniu…" aria-label="Pytanie do nauczyciela AI" disabled={sending} />
-            <Button type="button" size="icon" aria-label="Wyślij pytanie" onClick={() => void sendMessage()} disabled={sending || input.trim().length < 2}><Send aria-hidden="true" /></Button>
-          </div> : <div className="task-tutor-limit"><div><b>Dzisiejszy limit został wykorzystany</b><span>Nowe pytania będą dostępne jutro.</span></div>{usage.plan === "free" && <Button variant="outline" asChild><a href="/plan-plus#porownanie">Poznaj pakiet Plus</a></Button>}</div>}
+          {usage.remaining > 0 ? <div className="task-chat-entry"><div className="task-chat-composer">
+            <Textarea value={input} onChange={(event) => setInput(event.target.value)} onKeyDown={(event) => { if (event.key === "Enter" && !event.shiftKey) { event.preventDefault(); void sendMessage(); } }} maxLength={AI_MESSAGE_MAX_LENGTH} rows={1} placeholder="Napisz, czego nie rozumiesz w tym zadaniu…" aria-label="Pytanie do nauczyciela AI" disabled={sending} />
+            <button type="button" aria-label="Wyślij pytanie" onClick={() => void sendMessage()} disabled={sending || input.trim().length < 2}>↑</button>
+          </div><p className="task-tutor-privacy">Tutor odpowiada tylko na pytania o to zadanie. Rodzic nie widzi treści rozmowy.<span className="sr-only"> Nie wpisuj danych osobowych.</span></p></div> : <div className="task-tutor-limit"><div><b>Dzisiejszy limit został wykorzystany</b><span>Nowe pytania będą dostępne jutro.</span></div>{usage.plan === "free" && <Button variant="outline" asChild><a href="/plan-plus#porownanie">Poznaj pakiet Plus</a></Button>}</div>}
         </>}
-        <p className="task-tutor-privacy">Tutor odpowiada tylko na pytania o to zadanie. Rodzic nie widzi treści rozmowy. Nie wpisuj danych osobowych.</p>
       </section>}
     </div>
   </section>;

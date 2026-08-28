@@ -54,7 +54,9 @@ describe("AI tutor end-to-end contract", () => {
   it("expands an active conversation and keeps a usable chat viewport", () => {
     expect(component).toContain('data-conversation-active={messages.length > 0 ? "true" : "false"}');
     expect(component).toContain('role="log"');
-    expect(component).toContain('rows={3}');
+    expect(component).toContain('rows={1}');
+    expect(component).toContain('className="task-chat-entry"');
+    expect(component).not.toContain("task-quick-questions");
     expect(styles).toContain(".task-workspace { min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 452px;");
     expect(styles).toContain(".task-chat { min-height: 180px;");
     expect(component).toContain("conversationRef.current.scrollTop = conversationRef.current.scrollHeight");

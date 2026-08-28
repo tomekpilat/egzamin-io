@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -519,7 +518,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
       {activeView === "exercises" && <section className="task-screen" aria-label="Tryb skupienia">
         <header className="task-topbar">
           <div className="task-topbar-context">
-            <button type="button" className="task-exit" aria-label="Zakończ" onClick={exitPractice} disabled={submitting}><ChevronLeft aria-hidden="true" /> Wyjdź</button>
+            <button type="button" className="task-exit" aria-label="Zakończ" onClick={exitPractice} disabled={submitting}>← Wyjdź</button>
             <div className="task-filters">
               <Select value={material} onValueChange={(value) => selectMaterial(value as MaterialFilter)} disabled={submitting}>
                 <SelectTrigger aria-label="Wybierz rocznik"><SelectValue /></SelectTrigger>
@@ -572,7 +571,7 @@ export function StudentPractice({ activeView, onNavigate }: { activeView: Studen
             <footer className="task-actions">
               <Button type="button" size="lg" onClick={answerResult ? () => moveQuestion(1) : () => void submitAnswer()} disabled={!answerResult && (selectedAnswer === null || submitting)}>{submitting ? "Sprawdzam…" : answerResult ? "Następne zadanie" : "Sprawdź odpowiedź"}</Button>
               <span>{answerResult ? `Wynik zapisany w postępie. Następne: zadanie ${(questionIndex + 1) % filteredQuestions.length + 1} z ${filteredQuestions.length}.` : selectedAnswer === null ? "Wybierz jedną z odpowiedzi, żeby sprawdzić." : "Odpowiedź zapisujemy dopiero po sprawdzeniu."}</span>
-              <nav aria-label="Nawigacja między zadaniami"><Button type="button" variant="outline" aria-label="Poprzednie pytanie" onClick={() => moveQuestion(-1)} disabled={submitting || filteredQuestions.length < 2}><ChevronLeft aria-hidden="true" /> Poprzednie</Button><Button type="button" variant="outline" aria-label="Następne pytanie" onClick={() => moveQuestion(1)} disabled={submitting || filteredQuestions.length < 2}>Następne <ChevronRight aria-hidden="true" /></Button></nav>
+              <nav aria-label="Nawigacja między zadaniami"><button type="button" aria-label="Poprzednie pytanie" onClick={() => moveQuestion(-1)} disabled={submitting || filteredQuestions.length < 2}>← Poprzednie</button><button type="button" aria-label="Następne pytanie" onClick={() => moveQuestion(1)} disabled={submitting || filteredQuestions.length < 2}>Następne →</button></nav>
             </footer>
           </main>
 
