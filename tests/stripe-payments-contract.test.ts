@@ -54,6 +54,15 @@ describe("Stripe payment flow contract", () => {
     expect(panel).toContain("bez automatycznego odnowienia");
   });
 
+  it("separates checkout fields from a readable order summary", () => {
+    expect(panel).toContain('className="payment-checkout-layout"');
+    expect(panel).toContain('className="payment-checkout-form"');
+    expect(panel).toContain('className="payment-order-summary"');
+    expect(panel).toContain("Wybierz ucznia");
+    expect(panel).toContain("Potwierdź warunki zakupu");
+    expect(panel).toContain("Pełny numer karty nie trafia do egzaminio");
+  });
+
   it("discloses Stripe, withdrawals, no renewal and card-data minimization", () => {
     expect(legal).toContain("Stripe");
     expect(legal).toContain("automatycznego odnowienia");

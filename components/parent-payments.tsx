@@ -170,22 +170,36 @@ export function ParentPayments({ linkedChildren, onConnect }: { linkedChildren: 
     {!linkedChildren.length ? <Card className="parent-payment-empty"><CardHeader><CardTitle>Najpierw połącz konto dziecka</CardTitle><CardDescription>Pakiet Plus jest przypisywany do konkretnego ucznia. Połącz konto, aby kupić dostęp i zobaczyć dokumenty płatności.</CardDescription></CardHeader><CardContent><Button type="button" onClick={onConnect}>Połącz konto dziecka</Button></CardContent></Card> : <Card className="parent-payment-checkout">
       <CardHeader><div><Badge variant="secondary">Jednorazowo · bez abonamentu</Badge><CardTitle>Pakiet Plus — 149 zł</CardTitle><CardDescription>Interaktywne ćwiczenia bez limitu, do 50 pytań do AI dziennie, śledzenie postępów i powtórki.</CardDescription></div>{config?.accessUntil && <div className="payment-access-date"><span>Dostęp do</span><b>{formatDate(config.accessUntil)}</b></div>}</CardHeader>
       <CardContent>
-        <div className="payment-child-picker">
-          <Label htmlFor="payment-student">Pakiet dla ucznia</Label>
-          <Select value={effectiveStudentId} onValueChange={(value) => { setSelectedStudentId(value); setAcceptedTerms(false); setImmediateAccess(false); }}>
-            <SelectTrigger id="payment-student"><SelectValue /></SelectTrigger>
-            <SelectContent>{linkedChildren.map((child) => <SelectItem key={child.student_id} value={child.student_id}>{child.student_display_name || child.student_email}{isActivePlus(child, renderedAt) ? " · Plus aktywny" : ""}</SelectItem>)}</SelectContent>
-          </Select>
-          {selectedChild && isActivePlus(selectedChild, renderedAt) && <p className="payment-active-plan">Pakiet Plus jest już aktywny{selectedChild.plan_valid_until ? ` do ${formatDate(selectedChild.plan_valid_until)}` : ""}. Nie pobierzemy kolejnej płatności.</p>}
-        </div>
+        <div className="payment-checkout-layout">
+          <div className="payment-checkout-form">
+            <section className="payment-checkout-section" aria-labelledby="payment-student-title">
+              <div className="payment-section-heading"><span>1</span><div><h3 id="payment-student-title">Wybierz ucznia</h3><p>Pakiet Plus przypiszemy do wskazanego konta.</p></div></div>
+              <div className="payment-child-picker">
+                <Label htmlFor="payment-student">Pakiet dla ucznia</Label>
+                <Select value={effectiveStudentId} onValueChange={(value) => { setSelectedStudentId(value); setAcceptedTerms(false); setImmediateAccess(false); }}>
+                  <SelectTrigger id="payment-student"><SelectValue /></SelectTrigger>
+                  <SelectContent>{linkedChildren.map((child) => <SelectItem key={child.student_id} value={child.student_id}>{child.student_display_name || child.student_email}{isActivePlus(child, renderedAt) ? " · Plus aktywny" : ""}</SelectItem>)}</SelectContent>
+                </Select>
+                {selectedChild && isActivePlus(selectedChild, renderedAt) && <p className="payment-active-plan">Pakiet Plus jest już aktywny{selectedChild.plan_valid_until ? ` do ${formatDate(selectedChild.plan_valid_until)}` : ""}. Nie pobierzemy kolejnej płatności.</p>}
+              </div>
+            </section>
 
-        <div className="payment-consents">
-          <label htmlFor="payment-terms"><Checkbox id="payment-terms" checked={acceptedTerms} onCheckedChange={(checked) => setAcceptedTerms(checked === true)} /><span>Akceptuję <a href="/regulamin" target="_blank">Regulamin</a> i potwierdzam zapoznanie się z <a href="/polityka-prywatnosci" target="_blank">Polityką prywatności</a>. Mam ukończone 18 lat albo jestem uprawnionym opiekunem.</span></label>
-          <label htmlFor="payment-immediate"><Checkbox id="payment-immediate" checked={immediateAccess} onCheckedChange={(checked) => setImmediateAccess(checked === true)} /><span>Wyraźnie żądam rozpoczęcia świadczenia od razu, przed upływem 14 dni. Przyjmuję do wiadomości zasady odstąpienia i rozliczenia świadczenia rozpoczętego na moje żądanie opisane <a href="/odstapienie-od-umowy" target="_blank">tutaj</a>.</span></label>
-        </div>
+            <section className="payment-checkout-section" aria-labelledby="payment-consents-title">
+              <div className="payment-section-heading"><span>2</span><div><h3 id="payment-consents-title">Potwierdź warunki zakupu</h3><p>Obie zgody są wymagane, aby uruchomić dostęp od razu.</p></div></div>
+              <div className="payment-consents">
+                <label htmlFor="payment-terms"><Checkbox id="payment-terms" checked={acceptedTerms} onCheckedChange={(checked) => setAcceptedTerms(checked === true)} /><span>Akceptuję <a href="/regulamin" target="_blank">Regulamin</a> i potwierdzam zapoznanie się z <a href="/polityka-prywatnosci" target="_blank">Polityką prywatności</a>. Mam ukończone 18 lat albo jestem uprawnionym opiekunem.</span></label>
+                <label htmlFor="payment-immediate"><Checkbox id="payment-immediate" checked={immediateAccess} onCheckedChange={(checked) => setImmediateAccess(checked === true)} /><span>Wyraźnie żądam rozpoczęcia świadczenia od razu, przed upływem 14 dni. Przyjmuję do wiadomości zasady odstąpienia i rozliczenia świadczenia rozpoczętego na moje żądanie opisane <a href="/odstapienie-od-umowy" target="_blank">tutaj</a>.</span></label>
+              </div>
+            </section>
+          </div>
 
-        {!config?.enabled && !loading ? <Alert variant="warning"><AlertTitle>Sprzedaż nie jest jeszcze aktywna</AlertTitle><AlertDescription>Historia pozostaje dostępna. Administrator musi ukończyć konfigurację Stripe przed przyjmowaniem płatności.</AlertDescription></Alert> : null}
-        <div className="payment-checkout-action"><div><b>Do zapłaty: {config ? formatPaymentAmount(config.amountMinor, config.currency) : "149,00 zł"}</b><span>Jednorazowo. Brak automatycznego odnowienia.</span><p className="payment-provider-note">Bezpieczna płatność odbywa się na stronie Stripe. egzaminio nie otrzymuje pełnego numeru karty.</p></div><Button type="button" size="lg" disabled={!canPurchase} onClick={() => void startCheckout()}>{submitting ? "Przekierowujemy do Stripe…" : "Zamawiam pakiet Plus — płacę 149 zł"}</Button></div>
+          <aside className="payment-order-summary" aria-labelledby="payment-summary-title">
+            <div className="payment-order-heading"><span id="payment-summary-title">Podsumowanie</span><b>{config ? formatPaymentAmount(config.amountMinor, config.currency) : "149,00 zł"}</b><small>Pakiet Plus · płatność jednorazowa</small></div>
+            <ul><li>Bez automatycznego odnowienia</li><li>Płatność na bezpiecznej stronie Stripe</li><li>Pełny numer karty nie trafia do egzaminio</li></ul>
+            {!config?.enabled && !loading ? <Alert variant="warning"><AlertTitle>Sprzedaż nie jest jeszcze aktywna</AlertTitle><AlertDescription>Administrator musi ukończyć konfigurację Stripe.</AlertDescription></Alert> : null}
+            <div className="payment-checkout-action"><Button type="button" size="lg" disabled={!canPurchase} onClick={() => void startCheckout()}>{submitting ? "Przekierowujemy do Stripe…" : "Zamawiam pakiet Plus — płacę 149 zł"}</Button><p className="payment-provider-note">Kliknięcie przeniesie Cię do Stripe. Po płatności wrócisz automatycznie do panelu.</p></div>
+          </aside>
+        </div>
         <div className="payment-or-promo"><span>lub</span></div>
         <PromoCodeRedemption studentId={effectiveStudentId} disabled={!selectedChild || isActivePlus(selectedChild, renderedAt)} onRedeemed={() => window.location.reload()} />
       </CardContent>
