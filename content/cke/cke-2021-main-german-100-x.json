@@ -1,0 +1,818 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2021-main-german-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2021-main-german-100-x",
+    "source_document_id": "OJNP-100-2105",
+    "source_pdf_sha256": "9b2dd1c11bed662903deead8a652d044b14ef2c95b200cd8ec828ea34c07de4f",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2021-2/",
+    "source_label": "CKE 2021 · język niemiecki · termin główny · wariant 100-X",
+    "exam_year": 2021,
+    "exam_session": "main",
+    "subject": "german",
+    "variant_code": "100-X",
+    "question_count": 14,
+    "supplementary_sources": [
+      {
+        "id": "cke-2021-main-german-100-x-recording",
+        "path": "content/cke/sources/2021/german/OJNP-100-2105.mp3",
+        "sha256": "2c9b60370bd817f893d0241de987eabbf481ab56c1e07fc6141fee0d45023e19",
+        "label": "Oficjalne nagranie do zadań 1–4"
+      },
+      {
+        "id": "cke-2021-main-german-100-x-transcript",
+        "path": "content/cke/sources/2021/german/OJNP-100-200-400-500-2105-transkrypcja.pdf",
+        "sha256": "1e5c9bc904f82b1b207b3f412de17fc4084cfcc991d16a8dbc6dde78384ebaca",
+        "label": "Oficjalna transkrypcja nagrań"
+      },
+      {
+        "id": "cke-2021-main-german-100-x-rules",
+        "path": "content/cke/sources/2021/german/OJNP-100-200-400-500-2105-zasady.pdf",
+        "sha256": "4e09c1b73502dd8cb995accd76b8de902e6d02b61c89a5eb957aed64c53e7702",
+        "label": "Oficjalne zasady oceniania rozwiązań zadań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [],
+  "questions": [
+    {
+      "id": "cke-2021-main-german-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        3
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — wybór wielokrotny",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie pięć tekstów. W zadaniach 1.1.–1.5., na podstawie informacji\nzawartych w nagraniu, z podanych odpowiedzi wybierz właściwą. Zakreśl jedną z liter:\nA, B albo C.\n1.1. Wo feiert Marika dieses Jahr ihren Geburtstag?\nA. B. C.\n1.2. Wie hat Martin das Heft verloren?\nA. B. C.\n1.3. Zu welchem Bild passt dieses Gespräch?\nA. B. C.\n1.4. Der Direktor spricht über\nA. Sportturniere.\nB. die Mode.\nC. ein Geschenk.\n1.5. Adam möchte\nA. sich bei Sonja entschuldigen.\nB. Sonja zu etwas einladen.\nC. Sonja gratulieren.\nOJNP-100-2105 Strona 3 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "1.1: B; 1.2: C; 1.3: A; 1.4: C; 1.5: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 5,
+        "rules": [
+          "Maksymalnie 5 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 1.1: B; 1.2: C; 1.3: A; 1.4: C; 1.5: A.",
+      "solution_steps": [
+        "Klucz CKE: 1.1: B; 1.2: C; 1.3: A; 1.4: C; 1.5: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-page-3"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2021/jezyk_niemiecki/OJNP-100-2105.mp3",
+          "sha256": "2c9b60370bd817f893d0241de987eabbf481ab56c1e07fc6141fee0d45023e19",
+          "alt": "Oficjalne nagranie CKE 2021 do zadań 1–4 z przedmiotu język niemiecki.",
+          "caption": "Oficjalne nagranie CKE 2021 — język niemiecki, zadania 1–4.",
+          "mime_type": "audio/mpeg"
+        },
+        {
+          "id": "q01-page-3",
+          "path": "public/cke/2021/german/ojnp-100-x-2105/q01-page-3.webp",
+          "sha256": "f0e33158fe874e53a516e9432b4fc49096a52ebfb3ab623232473a69cd6c61a9",
+          "alt": "Oryginalny układ zadania 1 z arkusza OJNP-100-2105, strona 3.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 3.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-german-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — dopasowywanie",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi na temat dni sportu. Na podstawie informacji\nzawartych w nagraniu dopasuj do każdej wypowiedzi (2.1.–2.4.) odpowiadające jej\nzdanie (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. Ich habe Proben meiner Schulfreundinnen gesehen.\nB. Ich habe mit meinem Team Preise gewonnen.\nC. Ich lade zur Teilnahme an Sportaktionen ein.\nD. Ich habe ein untypisches Spiel gesehen.\nE. Ich spiele am liebsten Eishockey.\n2.1. 2.2. 2.3. 2.4.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "2.1: C; 2.2: A; 2.3: D; 2.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 2.1: C; 2.2: A; 2.3: D; 2.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 2.1: C; 2.2: A; 2.3: D; 2.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        },
+        {
+          "type": "image",
+          "asset_id": "q02-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2021/jezyk_niemiecki/OJNP-100-2105.mp3",
+          "sha256": "2c9b60370bd817f893d0241de987eabbf481ab56c1e07fc6141fee0d45023e19",
+          "alt": "Oficjalne nagranie CKE 2021 do zadań 1–4 z przedmiotu język niemiecki.",
+          "caption": "Oficjalne nagranie CKE 2021 — język niemiecki, zadania 1–4.",
+          "mime_type": "audio/mpeg"
+        },
+        {
+          "id": "q02-page-4",
+          "path": "public/cke/2021/german/ojnp-100-x-2105/q02-page-4.webp",
+          "sha256": "70bface4989b37cf27d8e558ee1566889342201d29157bd7408a99c2b9c94cb4",
+          "alt": "Oryginalny układ zadania 2 z arkusza OJNP-100-2105, strona 4.",
+          "caption": "Zadanie 2 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-german-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — uzupełnianie luk",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie informacje dotyczące Oleny i jej życia zawodowego. Na\npodstawie informacji zawartych w nagraniu uzupełnij luki 3.1.–3.3. w poniższych\nzdaniach, tak aby jak najbardziej precyzyjnie oddać sens wysłuchanego tekstu. Luki\nnależy uzupełnić w języku niemieckim.\nOlena ist klein, schlank und 3.1. ________________________________________________.\nIn Olenas Zirkus trainiert man 3.2. __________________________________________ Tiere.\nOlena ist 3.3. _______________________________________________________ Jahre alt.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "3.1: blond; 3.2: keine; 3.3: 20 / zwanzig"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 3.1: blond; 3.2: keine; 3.3: 20 / zwanzig.",
+      "solution_steps": [
+        "Klucz CKE: 3.1: blond; 3.2: keine; 3.3: 20 / zwanzig.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        },
+        {
+          "type": "image",
+          "asset_id": "q03-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2021/jezyk_niemiecki/OJNP-100-2105.mp3",
+          "sha256": "2c9b60370bd817f893d0241de987eabbf481ab56c1e07fc6141fee0d45023e19",
+          "alt": "Oficjalne nagranie CKE 2021 do zadań 1–4 z przedmiotu język niemiecki.",
+          "caption": "Oficjalne nagranie CKE 2021 — język niemiecki, zadania 1–4.",
+          "mime_type": "audio/mpeg"
+        },
+        {
+          "id": "q03-page-4",
+          "path": "public/cke/2021/german/ojnp-100-x-2105/q03-page-4.webp",
+          "sha256": "fd8d8c6ca452bd3fc8f1e717226d197088a83c38f95cadff46cc3599fa3b089f",
+          "alt": "Oryginalny układ zadania 3 z arkusza OJNP-100-2105, strona 4.",
+          "caption": "Zadanie 3 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-german-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — zadanie otwarte",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi dotyczące spędzania czasu wolnego nad\nwodą (4.1.–4.4.). Do każdej z nich dobierz właściwą reakcję (A–E). Wpisz rozwiązania do\ntabeli.\nUwaga! Jedna reakcja została podana dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. Nein, ich will nicht mehr in der Sonne liegen!\nB. Danke für das Kompliment.\nC. Mit dem Segelboot.\nD. Stimmt, es ist verboten!\nE. Am Strand.\n4.1. 4.2. 4.3. 4.4.\nOJNP-100-2105 Strona 5 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "4.1: D; 4.2: A; 4.3: B; 4.4: E"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 4.1: D; 4.2: A; 4.3: B; 4.4: E.",
+      "solution_steps": [
+        "Klucz CKE: 4.1: D; 4.2: A; 4.3: B; 4.4: E.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        },
+        {
+          "type": "image",
+          "asset_id": "q04-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2021/jezyk_niemiecki/OJNP-100-2105.mp3",
+          "sha256": "2c9b60370bd817f893d0241de987eabbf481ab56c1e07fc6141fee0d45023e19",
+          "alt": "Oficjalne nagranie CKE 2021 do zadań 1–4 z przedmiotu język niemiecki.",
+          "caption": "Oficjalne nagranie CKE 2021 — język niemiecki, zadania 1–4.",
+          "mime_type": "audio/mpeg"
+        },
+        {
+          "id": "q04-page-5",
+          "path": "public/cke/2021/german/ojnp-100-x-2105/q04-page-5.webp",
+          "sha256": "b7d369edc94f064596af5dc12ed3df57d904b84334c0af37a3a2d2c1eea219a7",
+          "alt": "Oryginalny układ zadania 4 z arkusza OJNP-100-2105, strona 5.",
+          "caption": "Zadanie 4 — oryginalny układ CKE, strona 5.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-german-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe",
+      "difficulty": 3,
+      "prompt": "Dla każdej z opisanych sytuacji (5.1.–5.4.) wybierz właściwą reakcję. Zakreśl jedną\nz liter: A, B albo C.\n5.1. Kolega pyta Cię o wrażenia po zwiedzaniu muzeum. Co mu odpowiesz?\nA. Ich war im Museum.\nB. Das war langweilig.\nC. Es war zehn.\n5.2. Kolega poprosił Cię o pomoc przy wykonaniu pracy domowej. Zgadzasz się. Co mu\npowiesz?\nA. Warum hast du wieder keine Hausaufgabe?\nB. Kannst du mir jetzt, bitte, helfen?\nC. Gerne, was verstehst du nicht?\n5.3. Zapomniałeś(-aś) oddać koleżance książkę. Co jej powiesz?\nA. Macht nichts!\nB. Hilf mir, bitte!\nC. Tut mir leid!\n5.4. Koleżanka chce wiedzieć, z którego środka lokomocji zazwyczaj korzystasz. Co jej\npowiesz?\nA. Meistens nehme ich das Fahrrad.\nB. Autos stehen oft im Stau.\nC. Auf den Bus wartet man lange.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "5.1: B; 5.2: C; 5.3: C; 5.4: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 5.1: B; 5.2: C; 5.3: C; 5.4: A.",
+      "solution_steps": [
+        "Klucz CKE: 5.1: B; 5.2: C; 5.3: C; 5.4: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q05-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q05-page-6",
+          "path": "public/cke/2021/german/ojnp-100-x-2105/q05-page-6.webp",
+          "sha256": "868682dbee1f2ac3dacf709943fb158ddb3762293d5e8dda66e34193f478d2a7",
+          "alt": "Oryginalny układ zadania 5 z arkusza OJNP-100-2105, strona 6.",
+          "caption": "Zadanie 5 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-german-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe — uzupełnianie dialogów",
+      "difficulty": 3,
+      "prompt": "Uzupełnij dialogi 6.1.–6.2. Wpisz w każdą lukę brakujący fragment wypowiedzi, tak aby\notrzymać spójne i logiczne teksty. Luki należy uzupełnić w języku niemieckim.\n6.1. X: Wie ________________________________________________________, Monika?\nY: Fünfzehn. Ich bin im Februar 2006 geboren.\n6.2. X: Oh, nein! Die Torte ist kaputt! Was ________________________________ wir jetzt?\nY: Keine Panik! Ich rufe meine Oma an! Sie hilft uns.\nOJNP-100-2105 Strona 7 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "6.1: alt bist du; 6.2: machen / tun"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 6.1: alt bist du; 6.2: machen / tun.",
+      "solution_steps": [
+        "Klucz CKE: 6.1: alt bist du; 6.2: machen / tun.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q06-page-7"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q06-page-7",
+          "path": "public/cke/2021/german/ojnp-100-x-2105/q06-page-7.webp",
+          "sha256": "92b0c5057d56a82f087d84580547a537e0c0e8c045c62e1d30be3491a29b49b9",
+          "alt": "Oryginalny układ zadania 6 z arkusza OJNP-100-2105, strona 7.",
+          "caption": "Zadanie 6 — oryginalny układ CKE, strona 7.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-german-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        8,
+        9
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie tekstów pisanych",
+      "difficulty": 3,
+      "prompt": "Przeczytaj teksty. W zadaniach 7.1.–7.4. z podanych odpowiedzi wybierz właściwą,\nzgodną z treścią tekstu. Zakreśl jedną z liter: A, B albo C.\nAchtung!\nNotiere dir in deinem Kalender:\nNur bis zum 12. Mai sammeln wir alte\nBücher und Lehrbücher!\nBring sie, bitte, zu unserer Schulbibliothek.\nWenn du uns 2 Kilo Bücher schenkst,\nschenken wir dir einen kleinen Kaktus.\n7.1. Was können die Schüler bekommen?\nA. Eine Pflanze.\nB. Einen Roman.\nC. Ein Notizbuch.\nGuten Tag!, also Dzień dobry!\nViele Grüße aus der Tatra in Polen! Ich wandere\nhier viel. Ich habe schon die Mineralien gesehen,\ndie Sie uns im Unterricht gezeigt haben.\nIch bin hier mit Anna aus der Klasse 8A. Wir waren\nauf dem Rysy, auf dem höchsten Berg in Polen.\nDas Panorama ist genauso wie auf dem Plakat in\nunserem Klassenzimmer.\nWenn ich nach Hause zurückkomme, mache ich\neine Präsentation über die Tatra und erzähle mehr\ndarüber in Ihrer Geostunde.\nJulia\n7.2. Julia schreibt die Postkarte an\nA. ihre Eltern.\nB. ihre Freundin.\nC. ihre Lehrerin.\nTina\n7.3. Warum hat Tina an Sandra geschrieben?\nA. Tina kritisiert etwas.\nB. Tina schickt eine Einladung.\nSandra! Warum hast du\nC. Tina bittet um Rat.\ndie Fotos von unserem\nTreffen am Sonntag auf\nFacebook gepostet?\nDas ist nicht fair! Warum\nhast du mich nicht\ngefragt? Ich bin echt\nböse auf dich!\nTina\nNachricht \nVon: Lisa\nAn: Katrin\nKatrin,\ngestern war ich zum ersten Mal vor der Klassenarbeit in Mathe nicht gestresst. Weißt\ndu warum? Ich habe mich an den Schultisch gesetzt und … da stand geschrieben:\n„Lisa, hab keine Angst! Du bekommst sicher eine gute Note!“ Das hat mich wirklich\nmotiviert. Solche Sätze waren auf allen Schultischen. Rate mal, wer das geschrieben\nhat. Das war Frau Meyer! Ihr Unterricht ist wunderbar!\nLis@\n7.4. Lisa schreibt über\nA. eine neue Person in ihrer Klasse.\nB. eine Idee ihrer Lehrerin.\nC. die Aufgaben im Test.\nOJNP-100-2105 Strona 9 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "7.1: A; 7.2: C; 7.3: A; 7.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 7.1: A; 7.2: C; 7.3: A; 7.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 7.1: A; 7.2: C; 7.3: A; 7.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q07-page-8"
+        },
+        {
+          "type": "image",
+          "asset_id": "q07-page-9"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q07-page-8",
+          "path": "public/cke/2021/german/ojnp-100-x-2105/q07-page-8.webp",
+          "sha256": "acfa355852d6c1643f0b79e275ca7175ad40c7429c3729104edd18cc5030e176",
+          "alt": "Oryginalny układ zadania 7 z arkusza OJNP-100-2105, strona 8.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q07-page-9",
+          "path": "public/cke/2021/german/ojnp-100-x-2105/q07-page-9.webp",
+          "sha256": "d8cc544c32be8918ac29390bdfd5754127e7e1536eae20b051f4729a1da04df5",
+          "alt": "Oryginalny układ zadania 7 z arkusza OJNP-100-2105, strona 9.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 9.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-german-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Spójność tekstu",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst, z którego usunięto trzy zdania. Wpisz w każdą lukę (8.1.–8.3.) literę,\nktórą oznaczono brakujące zdanie (A–D), tak aby otrzymać spójny i logiczny tekst.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej luki.\nEIN KOSTENLOSES TAXI?\nDu möchtest mit deinen Eltern zum Theater fahren, aber leider habt ihr den Bus verpasst.\n8.1. _____ Ihr wollt nicht so lange warten? Dann nehmt ein Taxi! Na ja, aber eine Taxifahrt\nkostet mehr als die Busfahrt.\nNicht immer! In Finnland kann man jetzt mit dem Taxi fahren und man zahlt kein Geld dafür.\nEin kostenloses Taxi? Nicht ganz. 8.2. _____ Ja! Sie singen während der Taxifahrt. Es klingt\nkomisch, ist aber wahr. Das kann ganz lustig sein.\nDas finnische Taxi ist auch umweltfreundlich. 8.3. _____ Es braucht also kein Benzin, keinen\nDiesel, nur Strom. Und es produziert keine Abgase!\nWer hatte die Idee? Die Aktion kommt von einem Autoproduzenten. Er will dadurch seine\nmodernen Wagen bekannt machen.\nNa podstawie: www.ams-kongress.de\nA. Weil der Parkplatz voll ist.\nB. Denn es ist ein Elektroauto.\nC. Der nächste kommt erst in einer Stunde.\nD. Für die Fahrt zahlen die Passagiere mit einem Song.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "8.1: C; 8.2: D; 8.3: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 8.1: C; 8.2: D; 8.3: B.",
+      "solution_steps": [
+        "Klucz CKE: 8.1: C; 8.2: D; 8.3: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q08-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q08-page-10",
+          "path": "public/cke/2021/german/ojnp-100-x-2105/q08-page-10.webp",
+          "sha256": "7417eca95facf91953017ca6fdfcddacc6af32e85422ac5a2ce2870f44be6f69",
+          "alt": "Oryginalny układ zadania 8 z arkusza OJNP-100-2105, strona 10.",
+          "caption": "Zadanie 8 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-german-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        11
+      ],
+      "type": "long_text",
+      "topic": "Wyszukiwanie informacji",
+      "difficulty": 3,
+      "prompt": "Przeczytaj wpisy na forum trzech uczennic na temat jednego dnia wymiany szkolnej\n(A–C) oraz pytania 9.1.–9.4. Do każdego pytania dopasuj właściwy wpis. Wpisz\nrozwiązania do tabeli.\nUwaga! Jeden z wpisów pasuje do dwóch pytań.\nFranziska\nAm Dienstag wollten wir mit den Austauschschülern ins Kino gehen. An diesem Tag\nsollte die neue Komödie „Hilfe! Papa kocht zu Mittag!“ in die Kinos kommen. Und\nsolche Filme mag ich. Leider waren alle Tickets schon ausverkauft. Unsere\nA.\nKlassenlehrerin hat dann einen Besuch im Technischen Museum vorgeschlagen.\nSylvia\nAm Dienstag waren wir im Museum. Dort gab es viele spannende Räume. Im Raum\nfür optische Experimente haben wir mit unseren Austauschschülern tolle Illusionen\ngesehen. Aber am interessantesten war es für uns alle im Hexen-Haus. Das war mega\nB. toll! Wir haben geglaubt, dass wir mit dem Haus fliegen: Die Wände und Möbel dort\nhaben sich gedreht.\nSusanne\nBarbara und ich arbeiten gerade am Computer und machen einen Film von unserem\nSchüleraustausch. Ich hoffe, er gefällt euch. Ich will euch noch die Fotos vom Dienstag\nzeigen. Einige habe ich schon. Schickt mir, bitte, noch die Fotos aus der Pizzeria. Ich\nC.\nmöchte diese leckere, gigantische Pizza zeigen, die wir bestellt haben.\nIn welchem Text findest du Antworten auf die Fragen?\n9.1. Wer macht eine Präsentation von dem Schüleraustausch?\n9.2. Was haben die Schüler am Dienstag gegessen?\n9.3. Was hat den Schülern am Dienstag am besten gefallen?\n9.4. Warum sind die Schüler nicht zur Filmpremiere gegangen?\nOJNP-100-2105 Strona 11 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "9.1: C; 9.2: C; 9.3: B; 9.4: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 9.1: C; 9.2: C; 9.3: B; 9.4: A.",
+      "solution_steps": [
+        "Klucz CKE: 9.1: C; 9.2: C; 9.3: B; 9.4: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q09-page-11"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q09-page-11",
+          "path": "public/cke/2021/german/ojnp-100-x-2105/q09-page-11.webp",
+          "sha256": "6cf91f1cc8cfc56c1021e06c77fc4ace7d9a36e7145e5d66fbad5ca9a57441c7",
+          "alt": "Oryginalny układ zadania 9 z arkusza OJNP-100-2105, strona 11.",
+          "caption": "Zadanie 9 — oryginalny układ CKE, strona 11.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-german-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        12,
+        13
+      ],
+      "type": "long_text",
+      "topic": "Przetwarzanie wypowiedzi",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Uzupełnij w e-mailu luki 10.1.–10.3., zgodnie z treścią tekstu, tak aby\njak najbardziej precyzyjnie oddać jego sens. Luki należy uzupełnić w języku polskim.\nhttps:// www.duda.news/apnoe-tauchen\n„APNOE“ – WAS IST DAS?\nWie lange kannst du ohne Luft unter Wasser bleiben? Etwa in der Badewanne oder im\nSchwimmbad. Eine Minute, zwei Minuten?\nJennifer Schmidt aus München kann unter Wasser fast sechs Minuten lang die Luft anhalten!\nAußerdem hat sie gerade einen Rekord im Tieftauchen gemacht. Die 31-Jährige ist eine der\nbesten Apnoe-Taucherinnen Deutschlands.\n„Apnoe“ ist ein griechisches Wort und bedeutet etwa „nicht atmen“. Es ist die älteste Form\ndes Tauchens. Man atmet tief ein und taucht in die Tiefe. Schon vor Jahrhunderten konnten\nTaucher so Muscheln sammeln. Heute ist es eine Sportart. Aber immer noch gefährlich,\ndenn Apnoe-Taucher benutzen keine Tauchflaschen, sondern nur Tauchmaske und\nFlossen*.\nJennifer Schmidt hat am Anfang mit einem Trainer in einem See in Südeuropa viel geübt\nund jetzt trainiert sie in der Nähe der japanischen Inseln. Sie arbeitet täglich an ihrer\nSchwimmtechnik und macht Yoga. Willst du ein Interview mit Jennifer Schmidt lesen? Klick\nhier.\nNa podstawie: www.duda.news\n* Flossen – płetwy do nurkowania.\nmarysiabc@xyz\napnoe\nCześć Marysiu!\nCzy masz już pomysł na naszą prezentację o sportach wodnych?\nZnalazłam ciekawy artykuł o nurkowaniu na wstrzymanym oddechu. W ten sposób nurkuje\nJennifer Schmidt. Wyobraź sobie: ona potrafi wstrzymywać oddech przez około\n10.1. ___________________________________ minut!\nJennifer nurkuje tylko z maską i płetwami. Niesamowite, prawda? „Apnoe” – tak nazywa\nsię ten sport. Jego nazwa pochodzi z języka greckiego i oznacza mniej więcej\n„nie oddychać”. W dawnych czasach ludzie nurkowali w ten sposób, żeby zdobyć\n10.2. ___________________________________.\nTo jest bardzo niebezpieczny sport, wymagający długoletniego treningu. Jennifer zaczynała\nod treningu w jeziorze w 10.3. ___________________________________.\nPrzesyłam Ci ten artykuł. Możesz też przeczytać wywiad z Jennifer. Napisz mi, czy\nwykorzystamy ten materiał do naszej prezentacji.\nPozdrawiam!\nKasia\nOJNP-100-2105 Strona 13 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "10.1: 6 / sześć; 10.2: muszle; 10.3: Europie Południowej"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 10.1: 6 / sześć; 10.2: muszle; 10.3: Europie Południowej.",
+      "solution_steps": [
+        "Klucz CKE: 10.1: 6 / sześć; 10.2: muszle; 10.3: Europie Południowej.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q10-page-12"
+        },
+        {
+          "type": "image",
+          "asset_id": "q10-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q10-page-12",
+          "path": "public/cke/2021/german/ojnp-100-x-2105/q10-page-12.webp",
+          "sha256": "dea549ae89b1101576b060673d6370531db37d7b33ae85fe122baff5df613897",
+          "alt": "Oryginalny układ zadania 10 z arkusza OJNP-100-2105, strona 12.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q10-page-13",
+          "path": "public/cke/2021/german/ojnp-100-x-2105/q10-page-13.webp",
+          "sha256": "5aa9dc344481e562e66f73a2c23135501b6227e62d7cfbe2dcb001aca854dd75",
+          "alt": "Oryginalny układ zadania 10 z arkusza OJNP-100-2105, strona 13.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-german-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — wybór wyrazów",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Spośród wyrazów podanych w ramce wybierz te, które są poprawnym\nuzupełnieniem luk 11.1.–11.3. Wpisz odpowiednią literę (A–F) obok numeru każdej luki.\nUwaga! Trzy wyrazy zostały podane dodatkowo i nie pasują do żadnej luki.\nA. billigen B. Bücher C. Kinder D. machen E. problematischen F. schwimmen\nDROHNEN FÜR DAS GUTE\nDrohnen werden immer beliebter. Auch Großeltern geben sie ihren Enkeln\noft als Geschenk. Dann sehen sie gern zusammen, wie ihre Drohnen durch\ndie Luft fliegen. Sie haben viel Spaß dabei.\nAber Drohnen sind nicht nur Spielzeuge für 11.1. _____. Sie sind\nFlugobjekte, die professionelle Luftbilder und Filme von oben machen. Sie\nkönnen auch dem Menschen in 11.2. _____ Situationen helfen: Sie bringen\nz. B. medizinische Hilfe, dokumentieren Naturkatastrophen oder zählen\nTiere im Wald. Drohnen können nicht nur fliegen, sondern auch im Wasser\n11.3. _____. Sie sind in Häfen aktiv und sammeln Müll in Meeren.\nNa podstawie: trendradar.org/de",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "11.1: C; 11.2: E; 11.3: F"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 11.1: C; 11.2: E; 11.3: F.",
+      "solution_steps": [
+        "Klucz CKE: 11.1: C; 11.2: E; 11.3: F.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q11-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q11-page-14",
+          "path": "public/cke/2021/german/ojnp-100-x-2105/q11-page-14.webp",
+          "sha256": "38b6dee74cc4b4021527858deebfb86417e56b0839c68304fe6d98e815885ab6",
+          "alt": "Oryginalny układ zadania 11 z arkusza OJNP-100-2105, strona 14.",
+          "caption": "Zadanie 11 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-german-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        15
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — gramatyka i leksyka",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Wybierz poprawne uzupełnienie luk 12.1.–12.3. Zakreśl jedną z liter:\nA, B albo C.\nSCHULUNIFORM\nJulius: Schuluniform? Ich bin dafür. In unserer Stadt tragen alle Schüler\nSchuluniformen. Das ist super: Man 12.1. _____ morgens nicht nachdenken,\nwas man anzieht. Es gibt keine Diskussion 12.2. _____ Mama und Papa. Wir\nmüssen auch nicht so oft shoppen gehen.\nLuise: Ich bin dagegen. Ich denke, 12.3. _____ wir keine Schuluniformen\nbrauchen. Jeder soll das tragen, was er mag. Man kann seinen Stil zeigen, wenn man seine\n„privaten“ Kleider trägt.\nNa podstawie: Dein Spiegel 11/2017\n12.1. A. muss B. musste C. müsst\n12.2. A. mit B. zu C. von\n12.3. A. deshalb B. dass C. denn\nOJNP-100-2105 Strona 15 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "12.1: A; 12.2: A; 12.3: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 12.1: A; 12.2: A; 12.3: B.",
+      "solution_steps": [
+        "Klucz CKE: 12.1: A; 12.2: A; 12.3: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q12-page-15"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q12-page-15",
+          "path": "public/cke/2021/german/ojnp-100-x-2105/q12-page-15.webp",
+          "sha256": "1b41614043826a709c0ed5af8f3418f8157b7e83ac81253da6195726e62d528c",
+          "alt": "Oryginalny układ zadania 12 z arkusza OJNP-100-2105, strona 15.",
+          "caption": "Zadanie 12 — oryginalny układ CKE, strona 15.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-german-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Transformacje leksykalno-gramatyczne",
+      "difficulty": 3,
+      "prompt": "Przetłumacz na język niemiecki fragmenty podane w nawiasach, tak aby otrzymać\nzdania logiczne i gramatycznie poprawne. Wymagana jest pełna poprawność\nortograficzna wpisywanych fragmentów zdań.\n13.1. Sven, (czy masz) _________________________________________________ meine\nTelefonnummer?\n13.2. Ich (chcę) ________________________________________ heute länger schwimmen.\n13.3. Es (jest zimno) __________________________________, bleiben wir lieber zu Hause!",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "13.1: hast du; 13.2: will / möchte; 13.3: ist kalt / ist kühl"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 13.1: hast du; 13.2: will / möchte; 13.3: ist kalt / ist kühl.",
+      "solution_steps": [
+        "Klucz CKE: 13.1: hast du; 13.2: will / möchte; 13.3: ist kalt / ist kühl.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q13-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q13-page-16",
+          "path": "public/cke/2021/german/ojnp-100-x-2105/q13-page-16.webp",
+          "sha256": "d4c76689fd26ca9ae0aca57a7edef8feb8f4f132f2d69e2eefa48cd980e4b8cd",
+          "alt": "Oryginalny układ zadania 13 z arkusza OJNP-100-2105, strona 16.",
+          "caption": "Zadanie 13 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-german-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna — e-mail",
+      "difficulty": 3,
+      "prompt": "Podczas nieobecności sąsiadów Ty i Twoja rodzina opiekujecie się ich psem. W e-mailu\ndo koleżanki z Niemiec:\n• wyjaśnij, dlaczego opiekujecie się psem sąsiadów\n• napisz, na czym polegają Twoje obowiązki związane z opieką nad psem\n• opisz, jak zachowuje się pies podczas pobytu w Waszym domu.\nNapisz swoją wypowiedź w języku niemieckim. Podpisz się jako XYZ.\nRozwiń swoją wypowiedź w każdym z trzech podpunktów, tak aby osoba nieznająca\npolecenia w języku polskim uzyskała wszystkie wskazane w nim informacje. Pamiętaj, że\ndługość wypowiedzi powinna wynosić od 50 do 120 słów (nie licząc wyrazów podanych na\npoczątku wypowiedzi). Oceniane są: umiejętność pełnego przekazania informacji, spójność,\nbogactwo językowe oraz poprawność językowa.",
+      "answer_key": {
+        "assessment": "rubric",
+        "minimum_words": 50,
+        "maximum_words": 120
+      },
+      "scoring": {
+        "max_points": 10,
+        "rules": [
+          "Maksymalnie 10 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Porównaj rozwiązanie z oficjalnymi zasadami oceniania CKE dołączonymi do arkusza.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q14-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q14-page-16",
+          "path": "public/cke/2021/german/ojnp-100-x-2105/q14-page-16.webp",
+          "sha256": "7df1cccea2815eda77c7a62e3e1debfe3dbd359d40ba271ace71209a1f88df33",
+          "alt": "Oryginalny układ zadania 14 z arkusza OJNP-100-2105, strona 16.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    }
+  ]
+}

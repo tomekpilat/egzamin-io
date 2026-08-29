@@ -1,0 +1,984 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2022-main-mathematics-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2022-main-mathematics-100-x",
+    "source_document_id": "OMAP-100-2205",
+    "source_pdf_sha256": "b285e991fb8dc1c9e8c521b8467df99252f6da7dbedd71e2fbbaf7007a213e5d",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2022-2/",
+    "source_label": "CKE 2022 · matematyka · termin główny · wariant 100-X",
+    "exam_year": 2022,
+    "exam_session": "main",
+    "subject": "mathematics",
+    "variant_code": "100-X",
+    "question_count": 19,
+    "supplementary_sources": [
+      {
+        "id": "cke-2022-main-mathematics-100-x-rules",
+        "path": "content/cke/sources/2022/mathematics/OMAP-100-2205-zasady.pdf",
+        "sha256": "f3ccb3cd70625782d60a3042114783afa2920ba91b0f8f44f837be85f0788da1",
+        "label": "Oficjalne zasady oceniania rozwiązań zadań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [],
+  "questions": [
+    {
+      "id": "cke-2022-main-mathematics-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Procenty",
+      "difficulty": 2,
+      "prompt": "Wśród uczniów klas ósmych przeprowadzono ankietę. Jedno z pytań tej ankiety\nzamieszczono poniżej.\nJakie filmy oglądasz najchętniej?\nZaznacz tylko jedną odpowiedź.\nbiograficzne\nfantasy\nkomediowe\nprzyrodnicze\nżadne z wymienionych\nKażdy z uczniów wypełniających ankietę zaznaczył tylko jedną odpowiedź. Czworo spośród\nankietowanych zaznaczyło odpowiedź żadne z wymienionych. Procentowy rozkład\nudzielonych odpowiedzi uczniów przedstawiono na poniższym diagramie.\n5%\nżadne z wymienionych\n10%\nfilmy biograficzne\n40%\nfilmy fantasy\n15%\nfilmy przyrodnicze\n30%\nfilmy komediowe\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F –\njeśli jest fałszywe.\nW ankiecie wzięło udział 80 uczniów. P F\nFilmy fantasy wybrało o 20 uczniów więcej niż uczniów, którzy wybrali filmy\nP F\nprzyrodnicze.\nPRZENIEŚ ROZWIĄZANIE ZADANIA NA KARTĘ ODPOWIEDZI!",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "PP"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nPP PP",
+      "solution_steps": [
+        "Klucz CKE: PP.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q01-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q01-page-4",
+          "path": "public/cke/2022/mathematics/omap-100-x-2205/q01-page-4.webp",
+          "sha256": "1798bc84b667f1b758a3c939c34b168249135663230d1a30e4152e47568890ac",
+          "alt": "Oryginalny układ zadania 1 z arkusza OMAP-100-2205, strona 4.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-mathematics-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n42\nWartość wyrażenia − 32 jest równa\n5\n29 22 7 61\nA. − B. − C. D.\n5 5 5 5",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "A"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nA D\n1 Załącznik nr 1 do rozporządzenia Ministra Edukacji Narodowej z dnia 20 marca 2020 r. w sprawie\nszczegółowych rozwiązań w okresie czasowego ograniczenia funkcjonowania jednostek systemu oświaty\nw związku z zapobieganiem, przeciwdziałaniem i zwalczaniem COVID-19 (Dz.U. poz. 493, z późn. zm.).\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q02-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q02-page-6",
+          "path": "public/cke/2022/mathematics/omap-100-x-2205/q02-page-6.webp",
+          "sha256": "c009a5f16e13b423622c83f84a38904f6e37eca498ac375c74a493ab6756e3c8",
+          "alt": "Oryginalny układ zadania 2 z arkusza OMAP-100-2205, strona 6.",
+          "caption": "Zadanie 2 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-mathematics-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Spośród wszystkich liczb trzycyfrowych o sumie cyfr równej 6 wybrano liczbę największą\ni liczbę najmniejszą.\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nSuma wybranych liczb jest równa\nA. 714 B. 705 C. 606 D. 327",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nB C",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q03-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q03-page-6",
+          "path": "public/cke/2022/mathematics/omap-100-x-2205/q03-page-6.webp",
+          "sha256": "b0e8b8709a6286fa4a5b27a224c1646206cc2a9b55bdf485c516331460c233cd",
+          "alt": "Oryginalny układ zadania 3 z arkusza OMAP-100-2205, strona 6.",
+          "caption": "Zadanie 3 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-mathematics-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Liczba 𝑘 jest sumą liczb 323 i 160.\nCzy liczba 𝒌 jest podzielna przez 𝟑? Wybierz odpowiedź A albo B i jej uzasadnienie\nspośród 1., 2. albo 3.\n1. cyfrą jedności liczby 𝑘 jest 3.\nA. Tak,\nponieważ 2. żadna z liczb 323 i 160 nie dzieli się przez 3.\nB. Nie,\n3. suma cyfr 3, 4 i 8 jest liczbą podzielną przez 3.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "A3"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nA3 A3\nEgzamin ósmoklasisty z matematyki – termin główny 2022 r.",
+      "solution_steps": [
+        "Klucz CKE: A3.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q04-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q04-page-6",
+          "path": "public/cke/2022/mathematics/omap-100-x-2205/q04-page-6.webp",
+          "sha256": "9a3b2c167301fb22aa10e524a97ed9f97ec9208a1215b6f08201de33c42f8fa2",
+          "alt": "Oryginalny układ zadania 4 z arkusza OMAP-100-2205, strona 6.",
+          "caption": "Zadanie 4 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-mathematics-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Dane są trzy liczby:\n1030 ∙ 1070 1080\n𝑥 = 𝑦 = (103)15 ∙ 1060 𝑧 = 1050 ∙\n10 1020\nKtóra z tych liczb jest mniejsza od liczby 𝟏𝟎𝟏𝟎𝟎? Wybierz właściwą odpowiedź spośród\npodanych.\nA. Tylko 𝑥. B. Tylko 𝑦. C. Tylko 𝑧. D. Każda z liczb 𝑥, 𝑦, 𝑧.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "A"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nA B",
+      "solution_steps": [
+        "Klucz CKE: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q05-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q05-page-6",
+          "path": "public/cke/2022/mathematics/omap-100-x-2205/q05-page-6.webp",
+          "sha256": "dfd7af00e2a5db73f284b90e853090007f4cb77868ee915dac395182594e31fb",
+          "alt": "Oryginalny układ zadania 5 z arkusza OMAP-100-2205, strona 6.",
+          "caption": "Zadanie 5 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-mathematics-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Na uszycie 90 jednakowych bluzek w rozmiarze 𝑆 potrzeba tyle samo materiału, ile na\nuszycie 60 jednakowych bluzek w rozmiarze 𝐿.\nPrzyjmij, że na uszycie większej lub mniejszej liczby bluzek potrzeba proporcjonalnie więcej\nlub mniej materiału.\nUzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz\nodpowiedź spośród oznaczonych literami C i D.\nNa uszycie 240 bluzek w rozmiarze 𝑆 potrzeba tyle samo materiału, ile potrzeba na uszycie\nA B bluzek w rozmiarze 𝐿.\nA. 160 B. 150\nNa uszycie dwóch bluzek w rozmiarze 𝐿 potrzeba tyle samo materiału, ile potrzeba na uszycie\nC D bluzek w rozmiarze 𝑆.\nC. trzech D. pięciu",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "AC"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nAC BD",
+      "solution_steps": [
+        "Klucz CKE: AC.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q06-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q06-page-8",
+          "path": "public/cke/2022/mathematics/omap-100-x-2205/q06-page-8.webp",
+          "sha256": "3d7907021638c38b45ae9478597f73df81b1b137035007070de85fff63fa5b40",
+          "alt": "Oryginalny układ zadania 6 z arkusza OMAP-100-2205, strona 8.",
+          "caption": "Zadanie 6 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-mathematics-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "𝑛4 − 3\nDane jest wyrażenie oraz liczby: − 3, − 1, 0, 1, 3.\n6\nDla której z danych liczb wartość podanego wyrażenia jest najmniejsza? Wybierz\nwłaściwą odpowiedź spośród podanych.\nA. −3 B. −1 C. 0 D. 1 E. 3",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "C"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania rozwiązań zadań\nZasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nC C",
+      "solution_steps": [
+        "Klucz CKE: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q07-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q07-page-8",
+          "path": "public/cke/2022/mathematics/omap-100-x-2205/q07-page-8.webp",
+          "sha256": "0501ddec7d510ce342bdeb5c6b740cabd86875c93a3546e5e2e0140722d6d3b3",
+          "alt": "Oryginalny układ zadania 7 z arkusza OMAP-100-2205, strona 8.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-mathematics-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nLiczba √60 jest\nA. większa od 3 i mniejsza od 4.\nB. większa od 4 i mniejsza od 5.\nC. większa od 7 i mniejsza od 8.\nD. większa od 8 i mniejsza od 9.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "C"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nC B",
+      "solution_steps": [
+        "Klucz CKE: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q08-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q08-page-8",
+          "path": "public/cke/2022/mathematics/omap-100-x-2205/q08-page-8.webp",
+          "sha256": "e78055b926b4a0dd8669436c7c16dda3eda1994c6f3f2dcdacb9202194c40698",
+          "alt": "Oryginalny układ zadania 8 z arkusza OMAP-100-2205, strona 8.",
+          "caption": "Zadanie 8 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-mathematics-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Na osi liczbowej zaznaczono punkty 𝑃, 𝑅 i 𝑆 oraz podano współrzędne punktów 𝑃 i 𝑅.\nOdcinek 𝑃𝑆 jest podzielony na 8 równych części (zobacz rysunek poniżej).\n𝑃 𝑅 𝑆\n−3 7 ?\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nWspółrzędna punktu 𝑆 jest równa\nA. 10 B. 11 C. 13 D. 15",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "C"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nC C\nEgzamin ósmoklasisty z matematyki – termin główny 2022 r.",
+      "solution_steps": [
+        "Klucz CKE: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q09-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q09-page-10",
+          "path": "public/cke/2022/mathematics/omap-100-x-2205/q09-page-10.webp",
+          "sha256": "b16e33dbc8ab3fb4fff5a228a91ac85ae50b6f5bc63cc585fd5dab9e70b682e6",
+          "alt": "Oryginalny układ zadania 9 z arkusza OMAP-100-2205, strona 10.",
+          "caption": "Zadanie 9 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-mathematics-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Plik z prezentacją multimedialną Igora ma rozmiar 13 MB (megabajtów). Plik z prezentacją\nmultimedialną Lidki ma 2,5 razy większy rozmiar (wyrażony w MB) niż plik z prezentacją\nIgora.\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nPlik z prezentacją Lidki ma większy rozmiar niż plik z prezentacją Igora o\nA. 12 MB B. 19,5 MB C. 25 MB D. 32,5 MB",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nB B",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q10-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q10-page-10",
+          "path": "public/cke/2022/mathematics/omap-100-x-2205/q10-page-10.webp",
+          "sha256": "370f1c8a596d055b4a6bf077be445e551cc143303a637e54bad6573ffa02ebfd",
+          "alt": "Oryginalny układ zadania 10 z arkusza OMAP-100-2205, strona 10.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-mathematics-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Równania",
+      "difficulty": 2,
+      "prompt": "Ogrodnik kupił ziemię ogrodową, którą zaplanował zużyć w maju, czerwcu i lipcu. W maju\n1\nzużył masy kupionej ziemi. W czerwcu zużył połowę masy ziemi, która została. Na lipiec\n3\npozostało mu jeszcze 60 kg ziemi.\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nJeżeli przez 𝑥 oznaczymy masę zakupionej ziemi, to sytuację przedstawioną w zadaniu\nopisuje równanie\n1 1 1 1 1\nA. (𝑥 − 𝑥) + 𝑥 = 60 B. (𝑥 − 𝑥) + (𝑥 − 𝑥) = 60\n3 2 3 2 3\n1 1 1 1 1\nC. (𝑥 − 𝑥) − 𝑥 = 60 D. (𝑥 − 𝑥) − (𝑥 − 𝑥) = 60\n3 2 3 2 3",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "D"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nD A\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q11-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q11-page-10",
+          "path": "public/cke/2022/mathematics/omap-100-x-2205/q11-page-10.webp",
+          "sha256": "8412c4916a01bc800568a438e78bcb6218dc32dfc29e7ee9136d28a9c5a9bac7",
+          "alt": "Oryginalny układ zadania 11 z arkusza OMAP-100-2205, strona 10.",
+          "caption": "Zadanie 11 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-mathematics-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        12
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Trzy koleżanki kupiły bilety autobusowe w tym samym automacie. Martyna kupiła 6 biletów\n75-minutowych i zapłaciła za te bilety 24 zł. Weronika kupiła 4 bilety 20-minutowe\ni zapłaciła za nie 12 zł. Ania kupiła 2 bilety 75-minutowe i 2 bilety 20-minutowe.\nIle Ania zapłaciła za bilety? Wybierz właściwą odpowiedź spośród podanych.\nA. 7 zł B. 14 zł C. 19 zł D. 20 zł",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nB C",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q12-page-12"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q12-page-12",
+          "path": "public/cke/2022/mathematics/omap-100-x-2205/q12-page-12.webp",
+          "sha256": "501e0a67efb717f09f761d3f3c35d41ae7275bf9cc05c5989906dc0571e0870e",
+          "alt": "Oryginalny układ zadania 12 z arkusza OMAP-100-2205, strona 12.",
+          "caption": "Zadanie 12 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-mathematics-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        12
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Dany jest trójkąt 𝐴𝐵𝐶, w którym kąt 𝐵𝐶𝐴 ma miarę 35°. Punkt 𝐷 leży na boku 𝐵𝐶 tego\ntrójkąta. Odcinek 𝐴𝐷 ma taką samą długość jak odcinek 𝐵𝐷. Kąt 𝐴𝐷𝐶 ma miarę 130°\n(zobacz rysunek poniżej).\n𝐶\n35°\n𝐷\n130°\n𝐴 𝐵\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nKąt 𝐶𝐴𝐵 ma miarę\nA. 95° B. 75° C. 90° D. 80°",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "D"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nD A\nEgzamin ósmoklasisty z matematyki – termin główny 2022 r.",
+      "solution_steps": [
+        "Klucz CKE: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q13-page-12"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q13-page-12",
+          "path": "public/cke/2022/mathematics/omap-100-x-2205/q13-page-12.webp",
+          "sha256": "96cdac6143c0a101aea431806dec2f30cac797ef79c6b33482d418bd533d3f9a",
+          "alt": "Oryginalny układ zadania 13 z arkusza OMAP-100-2205, strona 12.",
+          "caption": "Zadanie 13 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-mathematics-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Prawdopodobieństwo",
+      "difficulty": 2,
+      "prompt": "W pudełku było wyłącznie 6 kulek zielonych i 8 kulek niebieskich. Po dołożeniu do tego\npudełka pewnej liczby kulek zielonych prawdopodobieństwo wylosowania kulki niebieskiej\n1\njest równe .\n4\nIle kulek zielonych dołożono do pudełka? Wybierz właściwą odpowiedź spośród\npodanych.\nA. 10 B. 16 C. 18 D. 24",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "C"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nC B",
+      "solution_steps": [
+        "Klucz CKE: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q14-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q14-page-14",
+          "path": "public/cke/2022/mathematics/omap-100-x-2205/q14-page-14.webp",
+          "sha256": "47087ab7c712753d46f7976920c522f7987e4b25ecee578798f0870b5f64e2cd",
+          "alt": "Oryginalny układ zadania 14 z arkusza OMAP-100-2205, strona 14.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-mathematics-100-x-q15",
+      "number": "15",
+      "sort_order": 15,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Geometria płaska",
+      "difficulty": 2,
+      "prompt": "Na rysunku przedstawiono trapez 𝐾𝐿𝑀𝑁 zbudowany z trzech jednakowych trójkątów\nprostokątnych o przyprostokątnych długości 3 cm i 4 cm.\n𝑁 3 cm 𝑀\n4 cm\n𝐾 𝐿\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F –\njeśli jest fałszywe.\nPole trapezu 𝐾𝐿𝑀𝑁 jest równe 18 cm2. P F\nObwód trapezu 𝐾𝐿𝑀𝑁 jest równy 18 cm. P F",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "PP"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nPP PP\nZasady oceniania rozwiązań zadań\nZADANIA OTWARTE\nUwagi ogólne\n• Akceptowane są wszystkie odpowiedzi merytorycznie poprawne, spełniające warunki\nzadania.\n• Za rozwiązanie zadania na danym etapie uczeń może otrzymać punkty tylko wtedy, gdy\nprzedstawia poprawne sposoby rozwiązania na wszystkich wcześniejszych etapach.\n• Jeżeli na dowolnym etapie rozwiązania zadania uczeń popełnia jeden lub więcej błędów\nrachunkowych (albo błąd przepisania wartości poprawnie zidentyfikowanej danej albo\nwartości z wcześniejszych etapów rozwiązania), ale stosuje poprawne sposoby\nrozwiązania i konsekwentnie doprowadza rozwiązanie zadania do końca, to ocenę\nrozwiązania obniża się o 1 punkt.\n• Jeżeli na pewnym etapie rozwiązania zadania uczeń podaje kilka sprzecznych ze sobą\nrozwiązań i nie wskazuje, które z nich należy uznać za poprawne, to może uzyskać\npunkty tylko za wcześniejsze poprawne etapy rozwiązania.\n• Jeżeli na pewnym etapie rozwiązania zadania uczeń podaje kilka sprzecznych ze sobą\nrozwiązań i wskazuje, które z nich należy uznać za poprawne, to zapisów w innych\nrozwiązaniach nie bierze się pod uwagę w ocenianiu.\n• Jeżeli w zadaniach 16., 17., 18. i 19. uczeń podaje tylko poprawny końcowy wynik, to\notrzymuje 0 punktów.\n• W pracy ucznia uprawnionego do dostosowanych kryteriów oceniania dopuszcza się:\n1. lustrzane zapisywanie cyfr i liter (np. 6–9)\n2. gubienie liter, cyfr, nawiasów\n3. problemy z zapisywaniem przecinków w liczbach dziesiętnych\n4. błędy w zapisie działań pisemnych (dopuszczalne drobne błędy rachunkowe)\n5. luki w zapisie obliczeń – obliczenia pamięciowe\n6. uproszczony zapis równania i przekształcenie go w pamięci; brak opisu\nniewiadomych\n7. niekończenie wyrazów\n8. problemy z zapisywaniem jednostek (np.°C – OC)\n9. błędy w przepisywaniu\n10. chaotyczny zapis operacji matematycznych\n11. mylenie indeksów górnych i dolnych (np. 𝑥2 – 𝑥 ,𝑚 – 𝑚2).\n2 2\nEgzamin ósmoklasisty z matematyki – termin główny 2022 r.",
+      "solution_steps": [
+        "Klucz CKE: PP.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q15-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q15-page-14",
+          "path": "public/cke/2022/mathematics/omap-100-x-2205/q15-page-14.webp",
+          "sha256": "6d3457c5626cc1baa8d2a83a7b6e665f9402a131e2e333355d8a3e5caafcb5d6",
+          "alt": "Oryginalny układ zadania 15 z arkusza OMAP-100-2205, strona 14.",
+          "caption": "Zadanie 15 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-mathematics-100-x-q16",
+      "number": "16",
+      "sort_order": 16,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 3,
+      "prompt": "Do wykonania naszyjnika Hania przygotowała 4 korale srebrne, 8 korali czerwonych i kilka\nkorali zielonych. Następnie ze wszystkich przygotowanych korali zrobiła naszyjnik. Zielone\nkorale stanowią 20% wszystkich korali w zrobionym naszyjniku.\nOblicz, ile zielonych korali jest w naszyjniku. Zapisz obliczenia.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "Uwaga"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 punkty – pełne rozwiązanie\n• zapisanie poprawnego równania z jedną niewiadomą prowadzącego do obliczenia liczby\nkorali zielonych w naszyjniku, prawidłowe obliczenia oraz podanie liczby korali zielonych\nw naszyjniku (3),\nLUB\n• zapisanie poprawnego równania z jedną niewiadomą prowadzącego do obliczenia liczby\nwszystkich korali w naszyjniku, prawidłowe obliczenia oraz podanie liczby korali\nzielonych w naszyjniku (3),\nLUB\n• zapisanie poprawnych wyrażeń arytmetycznych prowadzących do obliczenia liczby korali\nzielonych w naszyjniku, prawidłowe obliczenia oraz podanie liczby korali zielonych\nw naszyjniku (3),\nLUB\n• sprawdzenie, czy 3 zielone korale stanowią 20% wszystkich korali w naszyjniku,\nprawidłowe obliczenia oraz podanie liczby zielonych korali w naszyjniku (3).\n1 punkt\n• zapisanie poprawnego równania z jedną niewiadomą prowadzącego do obliczenia liczby\nzielonych korali w naszyjniku, np. zapisanie 𝑥 = 0,2 ⋅ (12 + 𝑥) (lub zapisy\nrównoważne),\nLUB\n• zapisanie poprawnego równania z jedną niewiadomą prowadzącego do obliczenia liczby\n1\nwszystkich korali w naszyjniku, np. zapisanie 4 + 8 + 𝑦 = 𝑦 (lub zapisy równoważne),\n5\nLUB\n4\n• ustalenie, że łączna liczba korali srebrnych i czerwonych (12) stanowi 80% (czyli ) liczby\n5\nwszystkich korali i zapisanie poprawnych wyrażeń arytmetycznych prowadzących do\nobliczenia liczby zielonych korali albo liczby wszystkich korali,\nLUB\n• sprawdzenie warunków zadania dla co najmniej dwóch różnych liczb zielonych korali\ninnych niż 3.\nZasady oceniania rozwiązań zadań\n0 punktów\nrozwiązanie błędne albo brak rozwiązania.\nUwaga\nJeżeli uczeń na rysunku przedstawia liczbę wszystkich korali w naszyjniku (15) oraz\nzapisuje, że 3 korale stanowią 20% liczby wszystkich korali i nie popełnia błędów\nrachunkowych, to otrzymuje 2 punkty.\nPrzykładowe rozwiązania ocenione na 2 punkty\nI sposób\nOznaczymy liczbę zielonych korali przez 𝑥.\nŁączna liczba korali srebrnych i czerwonych jest równa 4 + 8 = 12.\nWszystkich korali jest 12 + 𝑥.\nPonieważ zielone korale stanowią 20% wszystkich, to\n𝑥 = 0,2 ⋅ (12 + 𝑥)\n𝑥 = 2,4 + 0,2𝑥\n0,8𝑥 = 2,4\n𝑥 = 3\nOdpowiedź: W naszyjniku są 3 korale zielone.\nII sposób\n𝑥 – liczba zielonych korali\n4 + 8 + 𝑥 – liczba wszystkich korali\n1\nZielone korale stanowią 20%, czyli wszystkich korali w naszyjniku, więc\n5\n1\n𝑥 = (4 + 8 + 𝑥) /∙ 5\n5\n5𝑥 = 12 + 𝑥\n4𝑥 = 12\n𝑥 = 3\nOdpowiedź: W naszyjniku są 3 korale zielone.\nEgzamin ósmoklasisty z matematyki – termin główny 2022 r.\nIII sposób\n𝑥 – liczba wszystkich korali\n1\n4 + 8 + 𝑥 = 𝑥\n5\n4\n𝑥 = 12\n5\n𝑥 = 15\n15 ∶ 5 = 3\nOdpowiedź: W naszyjniku są 3 korale zielone.\nIV sposób\n4 + 8 = 12 – liczba korali srebrnych i czerwonych\n4 1\nwszystkich korali to 12, zatem wszystkich korali to 12 ∶ 4.\n5 5\n12 ∶ 4 = 3\n1\nStąd wynika, że wszystkich korali to 3.\n5\nOdpowiedź: W naszyjniku są 3 korale zielone.\nV sposób\n12 − korale srebrne i czerwone\n𝑥 − korale zielone\n4\n12 korali stanowi wszystkich korali.\n5\n1\nKorale zielone stanowią wszystkich korali.\n5\n4 1\n𝑥 = (12 ∶ ) ⋅ = 3\n5 5\nOdpowiedź: W naszyjniku są 3 korale zielone.\nVI sposób\nZielone korale to 20% liczby wszystkich korali w naszyjniku.\n4 korale srebrne i 8 korali czerwonych stanowią 80% liczby wszystkich korali w naszyjniku.\n𝑥 – liczba wszystkich korali\n80% to 12 korali\n100% to 𝑥 korali\n0,8 ⋅ 𝑥 = 12 ⋅ 1\nZasady oceniania rozwiązań zadań\n12 ⋅ 1\n𝑥 =\n0,8\n𝑥 = 15\n15 − 12 = 3\nOdpowiedź: W naszyjniku są 3 korale zielone.\nVII sposób\nKorale zielone stanowią 20% liczby wszystkich korali, zatem 12 korali (srebrnych\ni czerwonych) stanowi 80% liczby wszystkich korali.\n12 stanowi 80% liczby wszystkich korali\nZatem:\n12 ∶ 4 stanowi 80% ∶ 4 liczby wszystkich korali\n3 stanowi 20% liczby wszystkich korali\nOdpowiedź: W naszyjniku są 3 korale zielone.\nVIII sposób\n4 1 1\nGdyby były 4 zielone korale, to stanowiłyby = wszystkich korali – więcej niż .\n16 4 5\n2 1 1\nGdyby były 2 zielone korale, to stanowiłyby = wszystkich korali – mniej niż .\n14 7 5\n3 1\nGdyby były 3 zielone korale, to stanowiłyby = wszystkich korali.\n15 5\nOdpowiedź: W naszyjniku są 3 korale zielone.",
+      "solution_steps": [
+        "Klucz CKE: Uwaga.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q16-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q16-page-16",
+          "path": "public/cke/2022/mathematics/omap-100-x-2205/q16-page-16.webp",
+          "sha256": "13dd01e44543171a4bb6964971426ff3630b353e4ab18365a0f6e90704f5ada8",
+          "alt": "Oryginalny układ zadania 16 z arkusza OMAP-100-2205, strona 16.",
+          "caption": "Zadanie 16 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-mathematics-100-x-q17",
+      "number": "17",
+      "sort_order": 17,
+      "source_pages": [
+        17
+      ],
+      "type": "long_text",
+      "topic": "Prędkość, droga i czas",
+      "difficulty": 3,
+      "prompt": "Kierowca przejechał ze stałą prędkością trasę o długości 22,5 km od godziny 7:50\ndo godziny 8:05.\nkm\nOblicz prędkość, z jaką kierowca przejechał tę trasę. Wynik wyraź w .\nh\nZapisz obliczenia.\nOMAP-100-2205 Strona 17 z 20",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "Uwagi"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 punkty – pełne rozwiązanie\npoprawny sposób obliczenia prędkości z jaką kierowca przejechał trasę w ciągu 15 minut,\nkm km\nprawidłowe obliczenia oraz prawidłowy wynik liczbowy wyrażony w (90 ).\nh h\nEgzamin ósmoklasisty z matematyki – termin główny 2022 r.\n1 punkt\n• poprawne obliczenie czasu (15 min) przejazdu trasy i wyrażenie go jako część godziny, np.\nzapisanie\n1\n15 minut = h,\n4\nLUB\n• poprawny sposób obliczenia prędkości, czyli zastosowanie poprawnego związku między\nprędkością a drogą całkowitą i czasem, np. zapisanie\n22,5 km\nv = (lub zapisy równoważne),\n15 min\nLUB\n• poprawny sposób obliczenia drogi przebytej w ciągu 1 godziny, gdyby kierowca jechał\nze stałą prędkością, czyli zastosowanie poprawnego związku między drogami przebytymi\nw ciągu 15 min oraz 60 min i tymi czasami, z zastosowaniem własności wielkości\nproporcjonalnych, np. zapisanie\n𝑠 60 min 𝑠 22,5 km\n= LUB = (lub zapisy równoważne).\n22,5 km 15 min 60 min 15 min\n0 punktów\nrozwiązanie błędne albo brak rozwiązania.\nUwagi\n• Błąd przy zamianie jednostek traktuje się jako błąd rachunkowy.\n• Błędne ustalenie czasu przejazdu drogi traktuje się jako błąd rachunkowy.\nPrzykładowe rozwiązania ocenione na 2 punkty\nI sposób\nCzas przejazdu od godziny 7:50 do godziny 8:05 jest równy 15 minut.\nSkorzystamy ze wzoru na prędkość\n𝑠\nv = , gdzie:\n𝑡\nv − prędkość\n𝑠 = 22,5 km − droga\n1 1\n𝑡 = 15 minut = 15 ∙ h = h − czas\n60 4\n22,5 km km km\nv = = 22,5 ⋅ 4 = 90\n1 h h\nh\n4\nkm\nOdpowiedź: Kierowca jechał z prędkością 90 .\nh\nZasady oceniania rozwiązań zadań\nII sposób\nOd godziny 7:50 do godziny 8:05 minęło 15 minut.\n15 min = 0,25 h\n22,5 km km\nv = = 90\n0,25 h h\nkm\nOdpowiedź: Kierowca jechał z prędkością 90 .\nh\nIII sposób\nCzas przejazdu od godziny 7:50 do godziny 8:05 jest równy 15 minut.\nObliczymy, ile kilometrów kierowca przejechałby w ciągu 1 h (60 min), gdyby jechał z tą\nsamą prędkością.\n22,5 km w 15 minut\n𝑥 km w 60 minut\n60 min ∙ 22,5 km\n𝑥 =\n15 min\n𝑥 = 90 km\nkm\nOdpowiedź: Kierowca jechał z prędkością 90 .\nh\nIV sposób\nOd godziny 7:50 do godziny 8:05 minęło 15 minut.\n60 min ∶ 15 min = 4\n22,5 km ∙ 4 = 90 km\nkm\nOdpowiedź: Kierowca jechał z prędkością 90 .\nh",
+      "solution_steps": [
+        "Klucz CKE: Uwagi.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q17-page-17"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q17-page-17",
+          "path": "public/cke/2022/mathematics/omap-100-x-2205/q17-page-17.webp",
+          "sha256": "881cc83d078e296c142492a35299b2d1088e281f47a1d9b0e7138b3d7cf17f2d",
+          "alt": "Oryginalny układ zadania 17 z arkusza OMAP-100-2205, strona 17.",
+          "caption": "Zadanie 17 — oryginalny układ CKE, strona 17.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-mathematics-100-x-q18",
+      "number": "18",
+      "sort_order": 18,
+      "source_pages": [
+        18
+      ],
+      "type": "long_text",
+      "topic": "Geometria płaska",
+      "difficulty": 3,
+      "prompt": "Dany jest romb 𝐴𝐵𝐶𝐷. Obwód tego rombu jest równy 52 cm, a przekątna 𝐴𝐶 ma długość\n24 cm (zobacz rysunek poniżej).\n𝐷 𝐶\n𝐴 𝐵\nOblicz długość przekątnej 𝑩𝑫 rombu 𝑨𝑩𝑪𝑫. Zapisz obliczenia.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "Uwagi"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n3 punkty – pełne rozwiązanie\npoprawny sposób obliczenia długości przekątnej 𝐵𝐷, prawidłowe obliczenia oraz\nprawidłowy wynik liczbowy (10 cm).\n2 punkty\n• poprawny sposób obliczenia połowy długości przekątnej 𝐵𝐷 (zastosowanie twierdzenia\nPitagorasa i podstawienie do wzoru długości boku rombu i połowy długości przekątnej 𝐴𝐶,\nnp. zapisanie |𝐸𝐵|2 + 122 = 132),\nLUB\n• obliczenie lub ustalenie (np. zapisanie na rysunku) połowy długości przekątnej 𝐴𝐶 rombu\n(12 cm) oraz obliczenie lub ustalenie (np. zapisanie na rysunku) długości boku rombu\n(13 cm) oraz ustalenie (np. zapisanie na rysunku) połowy długości przekątnej 𝐵𝐷 rombu\n(5 cm).\n1 punkt\n• poprawny sposób obliczenia lub ustalenie (np. zapisanie na rysunku) długości boku\nrombu (13 cm) oraz zastosowanie twierdzenia Pitagorasa do obliczenia połowy długości\nprzekątnej 𝐵𝐷 (zgodnie z przyjętymi oznaczeniami), np. zapisanie\ndo trójkąta 𝐵𝐶𝐸\n|𝐵𝐶| = 13, |𝐸𝐵|2 + |𝐶𝐸|2 = |𝐵𝐶|2,\nLUB\ndo trójkąta 𝐴𝐵𝐸\n|𝐵𝐸|2 + |𝐸𝐴|2 = 132,\n• poprawny sposób obliczenia lub ustalenie (np. zapisanie na rysunku) połowy długości\nprzekątnej 𝐴𝐶 rombu (12 cm) oraz zastosowanie twierdzenia Pitagorasa do obliczenia\npołowy długości przekątnej 𝐵𝐷 (zgodnie z przyjętymi oznaczeniami), np. zapisanie\ndo trójkąta 𝐶𝐷𝐸\n|𝐷𝐸|2 + 122 = |𝐶𝐷|2,\nLUB\ndo trójkąta 𝐷𝐴𝐸\n|𝐴𝐸| = 12, |𝐴𝐸|2 + |𝐸𝐷|2 = |𝐷𝐴|2,\n• poprawny sposób obliczenia lub ustalenie (np. zapisanie na rysunku) połowy długości\nprzekątnej 𝐴𝐶 rombu (12 cm) oraz poprawny sposób obliczenia lub ustalenie (np.\nzapisanie na rysunku) długości boku rombu (13 cm).\n0 punktów\nrozwiązanie błędne albo brak rozwiązania.\nZasady oceniania rozwiązań zadań\nUwagi\n• Jeżeli uczeń wykona na rysunku pomiary linijką długości boku rombu lub przekątnej 𝐴𝐶\ni długości przekątnej 𝐵𝐷 oraz zapisze poprawne proporcje, np.\n|𝐴𝐵| |𝐵𝐷| |𝐴𝐶| |𝐵𝐷|\n𝑐𝑑𝑠 𝑑𝑑𝑎 𝑐𝑑𝑠 𝑑𝑑𝑎\n= 𝐿𝑈𝐵 = (lub zapisy równoważne)\n|𝐴𝐵| |𝐵𝐷| |𝐴𝐶| |𝐵𝐷|\n𝑟𝑦𝑠. 𝑟𝑦𝑠. 𝑟𝑦𝑠. 𝑟𝑦𝑠.\n(gdzie indeks oznacza zmierzoną na rysunku, a nie rzeczywistą długość odcinka)\n𝑟𝑦𝑠.\ni uzyska przybliżony wynik |𝐵𝐷| ≈ 10 cm, to za takie rozwiązanie otrzymuje 2 punkty.\n• Jeżeli uczeń obliczy długość boku rombu (13 cm), poprawnie odwzoruje przy pomocy\nlinijki rysunek (cały romb lub np. trójkąt 𝐴𝐵𝐷) w skali 1 ∶ 1 zgodnie z danymi w treści\nzadania, zachowując odpowiednie miary kątów, zmierzy długość przekątnej 𝐵𝐷 (lub bok\n𝐵𝐷 rozpatrywanego trójkąta 𝐴𝐵𝐷) i otrzyma przybliżony wynik |𝐵𝐷| ≈ 10 cm lub ustali\noraz zapisze długość przekątnej |𝐵𝐷| = 10 cm to otrzymuje 2 punkty.\n• Nie ocenia się stosowania jednostek.\nPrzykładowe rozwiązanie ocenione na 3 punkty\nObliczymy długość boku rombu.\nObwód rombu jest równy 52 cm, czyli jeden bok rombu ma długość: 52 cm ∶ 4 = 13 cm.\nPrzekątne rombu dzielą się na połowy i przecinają się pod kątem prostym. Punkt przecięcia\nprzekątnych oznaczymy jako 𝐸, tak jak na rysunku.\nPrzekątna 𝐴𝐶 ma długość 24 cm, a jej połowa to 12 cm.\n𝐷 𝐶\nTrójkąt 𝐵𝐶𝐸 jest prostokątny.\n𝐸\n13 cm\n𝑥\n𝐴 𝐵\nOznaczymy połowę długości przekątnej 𝐵𝐷 jako 𝑥 i obliczymy tę długość, korzystając\nz twierdzenia Pitagorasa:\n𝑥2 + 122 = 132\n𝑥2 = 132 − 122\n𝑥2 = 169 − 144\n𝑥 = √25 = 5 (cm)\nPonieważ 𝑥 stanowi połowę długości przekątnej 𝐵𝐷, stąd\n|𝐵𝐷| = 2𝑥\n|𝐵𝐷| = 2 ∙ 5 = 10 (cm)\nOdpowiedź: Przekątna 𝐵𝐷 ma długość 10 cm.\nEgzamin ósmoklasisty z matematyki – termin główny 2022 r.",
+      "solution_steps": [
+        "Klucz CKE: Uwagi.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q18-page-18"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q18-page-18",
+          "path": "public/cke/2022/mathematics/omap-100-x-2205/q18-page-18.webp",
+          "sha256": "6ed21eba07d4fcc6f54c5205c6aa3dc713f819c9ccff635a086359c00f948b65",
+          "alt": "Oryginalny układ zadania 18 z arkusza OMAP-100-2205, strona 18.",
+          "caption": "Zadanie 18 — oryginalny układ CKE, strona 18.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-mathematics-100-x-q19",
+      "number": "19",
+      "sort_order": 19,
+      "source_pages": [
+        19
+      ],
+      "type": "long_text",
+      "topic": "Geometria przestrzenna",
+      "difficulty": 3,
+      "prompt": "Na rysunku przedstawiono siatkę graniastosłupa prawidłowego czworokątnego oraz\nzapisano niektóre wymiary tej siatki.\n41 cm\n48 cm\nOblicz objętość tego graniastosłupa. Zapisz obliczenia.\nOMAP-100-2205 Strona 19 z 20",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "Uwaga"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n3 punkty – pełne rozwiązanie\npoprawny sposób obliczenia objętości graniastosłupa, prawidłowe obliczenia oraz\nprawidłowy wynik liczbowy z jednostką (6 400 cm3).\n2 punkty\n• poprawny sposób obliczenia długości krawędzi podstawy, np. zapisanie 𝑎 = 48 cm ∶ 3\noraz poprawny sposób obliczenia wysokości graniastosłupa, np. zapisanie\n𝐻 = 41 cm − 𝑎\noraz zapisanie lub zastosowanie (zgodnie z oznaczeniami krawędzi przyjętymi na\nrysunku) wzoru na objętość, np. zapisanie 𝑉 = 𝑎2 ⋅ 𝐻 (lub zapisy równoważne na\nsymbolach albo liczbach jednoznacznie identyfikujące krawędzie graniastosłupa),\nLUB\n• zapisanie 𝑎 = 16 (cm) oraz 𝐻 = 25 (cm) lub oznaczenie na odpowiednich odcinkach\nsiatki 16 i 25 oraz poprawny sposób obliczenia objętości graniastosłupa, tzn.\nzastosowanie wzoru na objętość i podstawienie wartości liczbowych do wzoru, np.\nzapisanie 𝑉 = 162 · 25.\n1 punkt\n• poprawny sposób obliczenia długości krawędzi podstawy graniastosłupa, np. zapisanie\n𝑎 = 48 cm ∶ 3,\nLUB\n• ustalenie (np. zapisanie na rysunku) długości krawędzi podstawy graniastosłupa\n𝑎 = 16 cm,\nLUB\n• poprawny sposób obliczenia wysokości graniastosłupa, np. zapisanie 𝐻 = 41 cm − 𝑎\n(uczeń za 𝑎 może podstawić wartość liczbową, którą identyfikuje jako długość krawędzi\npodstawy),\nLUB\n• ustalenie (np. zapisanie na rysunku) wysokości graniastosłupa 𝐻 = 25 cm.\n0 punktów\nrozwiązanie błędne albo brak rozwiązania.\nZasady oceniania rozwiązań zadań\nUwaga\nPoprawność stosowania jednostek ocenia się tylko w wyniku końcowym.\nZapisanie niewłaściwej jednostki objętości lub brak jednostki objętości w wyniku końcowym\ntraktuje się jako błąd rachunkowy.\nPrzykładowe rozwiązania ocenione na 3 punkty\nI sposób\nPodstawą graniastosłupa prawidłowego czworokątnego jest kwadrat.\nOznaczymy długość krawędzi podstawy graniastosłupa jako 𝑎.\nWysokość graniastosłupa oznaczymy jako 𝐻.\n𝑎\n𝑎\n𝐻\n41 cm\n48 cm\n𝑎\n𝑎\nObliczymy długość krawędzi podstawy:\n3𝑎 = 48 (cm)\n𝑎 = 16 (cm)\nObliczymy wysokość tego graniastosłupa:\n𝐻– wysokość graniastosłupa\n𝑎 + 𝐻 = 41\n𝐻 = 41 − 16\n𝐻 = 25 (cm)\nObliczymy objętość graniastosłupa:\n𝑉 = 𝑎2 · 𝐻\n𝑉 = 162 · 25 = 6 400 (cm3)\nOdpowiedź: Objętość graniastosłupa jest równa 6 400 cm3.\nEgzamin ósmoklasisty z matematyki – termin główny 2022 r.\nII sposób\n25 cm\n16 cm 41 cm\n48 cm\n16 cm\n𝑉 = 162cm2 · 25 cm = 6 400 cm3\nOdpowiedź: Objętość graniastosłupa jest równa 6 400 cm3.",
+      "solution_steps": [
+        "Klucz CKE: Uwaga.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q19-page-19"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q19-page-19",
+          "path": "public/cke/2022/mathematics/omap-100-x-2205/q19-page-19.webp",
+          "sha256": "8618c21693b149bc4079dd5522ad55b40f944cdf6ca1966bf15b92ed1633fc7c",
+          "alt": "Oryginalny układ zadania 19 z arkusza OMAP-100-2205, strona 19.",
+          "caption": "Zadanie 19 — oryginalny układ CKE, strona 19.",
+          "mime_type": "image/webp"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1110 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2019-main-mathematics-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2019-main-mathematics-100-x",
+    "source_document_id": "OMAP-100-1904",
+    "source_pdf_sha256": "3c9b97ed6cc3ae2cc33b37ebbe664dfdbb4b931d709fc1be8c30df6c97cd57af",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2019-2/",
+    "source_label": "CKE 2019 · matematyka · termin główny · wariant 100-X",
+    "exam_year": 2019,
+    "exam_session": "main",
+    "subject": "mathematics",
+    "variant_code": "100-X",
+    "question_count": 21,
+    "supplementary_sources": [
+      {
+        "id": "cke-2019-main-mathematics-100-x-rules",
+        "path": "content/cke/sources/2019/mathematics/Zasady_oceniania_OMAP-100-1904.pdf",
+        "sha256": "85d7d1eaa471de6a7d53445099e446bb9993b263f75e0b85b925ee548e00e72e",
+        "label": "Oficjalne zasady oceniania rozwiązań zadań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [],
+  "questions": [
+    {
+      "id": "cke-2019-main-mathematics-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Na rysunku przedstawiono kartkę z kalendarza na rok 2017.\nSIERPIEŃ\n2017\n31\nCzwartek\nImieniny:\nBogusławy, Augusta\nNatalia obchodzi urodziny 31 sierpnia, jej siostra Ewa – 18 sierpnia, a brat Karol –\n2 października.\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli\njest fałszywe.\nW 2017 r. urodziny Ewy wypadły w piątek. P F\nW 2017 r. dniem urodzin Karola był poniedziałek. P F",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "PP"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Rozwiązanie\nPP",
+      "solution_steps": [
+        "Klucz CKE: PP.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q01-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q01-page-4",
+          "path": "public/cke/2019/mathematics/omap-100-x-1904/q01-page-4.webp",
+          "sha256": "225f5ba1beded0b19e80292cf7b91c062024c46999c176c21350e6f38caf71eb",
+          "alt": "Oryginalny układ zadania 1 z arkusza OMAP-100-1904, strona 4.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-mathematics-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Liczba 1450 jest zaokrągleniem do rzędu dziesiątek kilku liczb naturalnych.\nIle jest wszystkich liczb naturalnych różnych od 1450, które mają takie zaokrąglenie?\nWybierz właściwą odpowiedź spośród podanych.\nA. 4 B. 5 C. 9 D. 10",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "C"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Rozwiązanie\nC\n1 Rozporządzenie Ministra Edukacji Narodowej z dnia 27 sierpnia 2012 r. w sprawie podstawy programowej\nwychowania przedszkolnego oraz kształcenia ogólnego w poszczególnych typach szkół (Dz.U. z 30 sierpnia\n2012 r. poz. 977); II etap edukacyjny: klasy IV–VI.\n2 Rozporządzenie Ministra Edukacji Narodowej z dnia 14 lutego 2017 r. w sprawie podstawy programowej\nwychowania przedszkolnego oraz podstawy programowej kształcenia ogólnego dla szkoły podstawowej, w tym\ndla uczniów z niepełnosprawnością intelektualną w stopniu umiarkowanym lub znacznym, kształcenia ogólnego\ndla branżowej szkoły I stopnia, kształcenia ogólnego dla szkoły specjalnej przysposabiającej do pracy oraz\nkształcenia ogólnego dla szkoły policealnej (Dz.U. z 2017 r. poz. 356); II etap edukacyjny: klasy VII i VIII.",
+      "solution_steps": [
+        "Klucz CKE: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q02-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q02-page-4",
+          "path": "public/cke/2019/mathematics/omap-100-x-1904/q02-page-4.webp",
+          "sha256": "6ce6b664ea04d46d983a07b24d51c61c1ad16857ff42ac4d21d14ed0468de766",
+          "alt": "Oryginalny układ zadania 2 z arkusza OMAP-100-1904, strona 4.",
+          "caption": "Zadanie 2 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-mathematics-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Dane i statystyka",
+      "difficulty": 2,
+      "prompt": "W tabeli zapisano trzy wyrażenia.\nI 52 ∙ 108 ∙ 54\nII (510 : 52) ∙ 108\nIII 28 ∙ 58 ∙ 58\nKtóre z tych wyrażeń są równe 508? Wybierz właściwą odpowiedź spośród podanych.\nA. Tylko I i II. B. Tylko II i III. C. Tylko II. D. Tylko III.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Rozwiązanie\nB",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q03-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q03-page-4",
+          "path": "public/cke/2019/mathematics/omap-100-x-1904/q03-page-4.webp",
+          "sha256": "230ef668d5fb7d047a6469614d2942319005353d56ccae4d69f636ee137be6a5",
+          "alt": "Oryginalny układ zadania 3 z arkusza OMAP-100-1904, strona 4.",
+          "caption": "Zadanie 3 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-mathematics-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Dane są cztery wyrażenia:\nI. 4 + 35 II. 6 + 17 III. 17 − 48 IV. 15− 26\nWartości których wyrażeń są mniejsze od 10? Wybierz właściwą odpowiedź spośród\npodanych.\nA. I i II B. II i III C. III i IV D. I i IV",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "D"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Rozwiązanie\nD",
+      "solution_steps": [
+        "Klucz CKE: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q04-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q04-page-6",
+          "path": "public/cke/2019/mathematics/omap-100-x-1904/q04-page-6.webp",
+          "sha256": "e97d353fb36439c6a714ff27ecb9fe2f673885cd347332a581008da791187cd6",
+          "alt": "Oryginalny układ zadania 4 z arkusza OMAP-100-1904, strona 6.",
+          "caption": "Zadanie 4 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-mathematics-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Adam przygotował karty do gry z czterech arkuszy kartonu. Najpierw podzielił każdy arkusz\nkartonu na cztery części, a następnie każdą z nich ponownie podzielił na cztery części.\nTak powstał komplet kart. W grze bierze udział 5 graczy, z których każdy otrzymuje jednakową\nliczbę kart.\nUzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz\nodpowiedź spośród oznaczonych literami C i D.\nAdam przygotował A B karty do gry.\nA. 32 B. 64\nKażdy gracz może otrzymać maksymalnie C D kart.\nC. 12 D. 13",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "BC"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Rozwiązanie\nBC",
+      "solution_steps": [
+        "Klucz CKE: BC.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q05-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q05-page-6",
+          "path": "public/cke/2019/mathematics/omap-100-x-1904/q05-page-6.webp",
+          "sha256": "b8a9341c8cbff08122ddfbdd00bd4b32d4f3804ed1c3116d5a5b4769cb8293cd",
+          "alt": "Oryginalny układ zadania 5 z arkusza OMAP-100-1904, strona 6.",
+          "caption": "Zadanie 5 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-mathematics-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Procenty",
+      "difficulty": 2,
+      "prompt": "Dorota sporządziła z cukru i wody syrop do deseru. Stosunek masy cukru do masy wody\nw tym syropie jest równy 5 : 3.\nIle procent masy tego syropu stanowi masa cukru? Wybierz właściwą odpowiedź spośród\npodanych.\nA. 25% B. 37,5% C. 40% D. 60% E. 62,5%",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "E"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Rozwiązanie\nE",
+      "solution_steps": [
+        "Klucz CKE: E.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q06-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q06-page-6",
+          "path": "public/cke/2019/mathematics/omap-100-x-1904/q06-page-6.webp",
+          "sha256": "805d29d6343ecee91e7bba026b350f7357336de62d37e8cba2fa2daf71a78080",
+          "alt": "Oryginalny układ zadania 6 z arkusza OMAP-100-1904, strona 6.",
+          "caption": "Zadanie 6 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-mathematics-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Dane i statystyka",
+      "difficulty": 2,
+      "prompt": "W pewnej firmie zatrudnionych jest więcej niż 10 pracowników. Połowa z nich zarabia po\n3000 zł, a druga połowa – po 4000 zł.\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli\njest fałszywe.\nŚrednia arytmetyczna zarobków w tej firmie jest równa 3500 zł. P F\nGdy z pracy w tej firmie zrezygnują dwie osoby, z których jedna zarabia\nP F\n3000 zł, a druga 4000 zł, to średnia arytmetyczna zarobków się nie zmieni.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "PP"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Rozwiązanie\nPP",
+      "solution_steps": [
+        "Klucz CKE: PP.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q07-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q07-page-6",
+          "path": "public/cke/2019/mathematics/omap-100-x-1904/q07-page-6.webp",
+          "sha256": "e072cb188fd35bbeefdbb07e897ad9af87b8fef15ee503ad4c9cc5930605638c",
+          "alt": "Oryginalny układ zadania 7 z arkusza OMAP-100-1904, strona 6.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-mathematics-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nWyrażenie: ( 2a +3b )( 3b − 2a ) jest równe\nA. 4a2 −12ab +9b2\nB. 9b2 +12ab + 4a2\nC. 9b2 − 4a2\nD. 4a2 − 9b2",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "C"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Rozwiązanie\nC",
+      "solution_steps": [
+        "Klucz CKE: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q08-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q08-page-8",
+          "path": "public/cke/2019/mathematics/omap-100-x-1904/q08-page-8.webp",
+          "sha256": "af6fef471c5df140ff2514cd6f81c05058b583302258eec3b2b04afd90eb2942",
+          "alt": "Oryginalny układ zadania 8 z arkusza OMAP-100-1904, strona 8.",
+          "caption": "Zadanie 8 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-mathematics-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "W układzie współrzędnych wyznaczono odcinek o końcach w punktach K i L. Punkty te mają\nwspółrzędne K = (–17, 6) oraz L = (15, –4).\nNa którym rysunku zakropkowana część płaszczyzny zawiera środek odcinka KL?\nWybierz właściwą odpowiedź spośród podanych.\nA. B. C. D.\ny y y y\n1 1 1 1\n0 1 x 0 1 x 0 1 x 0 1 x",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Rozwiązanie\nB",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q09-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q09-page-8",
+          "path": "public/cke/2019/mathematics/omap-100-x-1904/q09-page-8.webp",
+          "sha256": "f1810779f8c0ea4d75803e0abd8007f811ca76d2ea52a2ae7d9f249898bfd318",
+          "alt": "Oryginalny układ zadania 9 z arkusza OMAP-100-1904, strona 8.",
+          "caption": "Zadanie 9 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-mathematics-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Geometria płaska",
+      "difficulty": 2,
+      "prompt": "Kwadrat o boku a przedstawiony na rysunku I rozcięto na dwa przystające prostokąty, z których\nułożono figurę, jak na rysunku II. Pole ułożonej figury jest równe polu kwadratu.\nRysunek I Rysunek II\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli\njest fałszywe.\nObwód ułożonej figury jest większy o 1,5a od obwodu kwadratu. P F\nObwód ułożonej figury jest równy 5a. P F",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "FP"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Rozwiązanie\nFP",
+      "solution_steps": [
+        "Klucz CKE: FP.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q10-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q10-page-8",
+          "path": "public/cke/2019/mathematics/omap-100-x-1904/q10-page-8.webp",
+          "sha256": "d5922f1ae1d9af94cf39dd13e0798cad84b8d22376b28f9c04e7518ad3ad7041",
+          "alt": "Oryginalny układ zadania 10 z arkusza OMAP-100-1904, strona 8.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-mathematics-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Na rysunku przedstawiono trzy trójkąty.\nM\nR\nC 49°\n76°\n7\n45° 55°\nA B K 7 L P Q\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nNa podstawie informacji przedstawionych na rysunku można stwierdzić, że\nA. trójkąt ABC jest przystający do trójkąta KLM.\nB. trójkąt KLM jest przystający do trójkąta PQR.\nC. trójkąt PQR jest przystający do trójkąta ABC.\nD. wszystkie trójkąty są do siebie przystające.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Rozwiązanie\nB",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q11-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q11-page-10",
+          "path": "public/cke/2019/mathematics/omap-100-x-1904/q11-page-10.webp",
+          "sha256": "f19a26e890199b0edfed578e368ebd8531b39f632c4e0d60cae2bf72201e36ff",
+          "alt": "Oryginalny układ zadania 11 z arkusza OMAP-100-1904, strona 10.",
+          "caption": "Zadanie 11 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-mathematics-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Na rysunku przedstawiono równoległobok ABCD i trójkąt równoramienny AED, w którym\nDE = AE . Miara kąta BCE jest równa 106°.\nD E C\n106°\nA B\nJaką miarę ma kąt AEC? Wybierz właściwą odpowiedź spośród podanych.\nA. 148° B. 122° C. 74° D. 58°",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "A"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Rozwiązanie\nA",
+      "solution_steps": [
+        "Klucz CKE: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q12-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q12-page-10",
+          "path": "public/cke/2019/mathematics/omap-100-x-1904/q12-page-10.webp",
+          "sha256": "76f80381c2c591f1b0a881768ad54d96903bbec926d4e67f364a8305c1792833",
+          "alt": "Oryginalny układ zadania 12 z arkusza OMAP-100-1904, strona 10.",
+          "caption": "Zadanie 12 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-mathematics-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        12
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Na rysunku przedstawiono czworokąt zbudowany z dwóch\nD\ntrójkątów prostokątnych. Dane są długości boków\n|AB| = |BC| = 1 oraz |AD| = 2.\nC\nA B\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nDługość boku CD jest równa\nA. 3 B. 2 C. 3 D. 2 2",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Rozwiązanie\nB",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q13-page-12"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q13-page-12",
+          "path": "public/cke/2019/mathematics/omap-100-x-1904/q13-page-12.webp",
+          "sha256": "06b55f7258928aa3a4618eb6657f8d94d2d06cc4e71f673941058bc10d15815d",
+          "alt": "Oryginalny układ zadania 13 z arkusza OMAP-100-1904, strona 12.",
+          "caption": "Zadanie 13 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-mathematics-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        12
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "W koszu były 203 jednakowe sześcienne klocki. Zbudowano z nich możliwie największy\nsześcian, a pozostałe odłożono.\nIle klocków odłożono? Wybierz właściwą odpowiedź spośród podanych.\nA. 150 B. 125 C. 78 D. 53",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "C"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Rozwiązanie\nC",
+      "solution_steps": [
+        "Klucz CKE: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q14-page-12"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q14-page-12",
+          "path": "public/cke/2019/mathematics/omap-100-x-1904/q14-page-12.webp",
+          "sha256": "eca947b4cd5c117014eec0d7923e4be2c0380b6961546d0007a9f52293176662",
+          "alt": "Oryginalny układ zadania 14 z arkusza OMAP-100-1904, strona 12.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-mathematics-100-x-q15",
+      "number": "15",
+      "sort_order": 15,
+      "source_pages": [
+        12
+      ],
+      "type": "long_text",
+      "topic": "Geometria przestrzenna",
+      "difficulty": 2,
+      "prompt": "Na rysunku przedstawiono fragment siatki ostrosłupa prawidłowego czworokątnego.\n50 cm\n40 cm\n50 cm\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nSuma długości wszystkich krawędzi tego ostrosłupa jest równa\nA. 560 cm B. 360 cm C. 260 cm D. 220 cm",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Rozwiązanie\nB",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q15-page-12"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q15-page-12",
+          "path": "public/cke/2019/mathematics/omap-100-x-1904/q15-page-12.webp",
+          "sha256": "af66488e25a57c451dfe627a67c5b5c6ac64f01a84d4f7d56a9e9559e9481ef4",
+          "alt": "Oryginalny układ zadania 15 z arkusza OMAP-100-1904, strona 12.",
+          "caption": "Zadanie 15 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-mathematics-100-x-q16",
+      "number": "16",
+      "sort_order": 16,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Procenty",
+      "difficulty": 3,
+      "prompt": "Na diagramie przedstawiono informacje, jaki procent meczów w ciągu całego sezonu drużyna\npiłkarska zakończyła wygraną, jaki – przegraną, a jaki – remisem.\nmecze\nwygrane\n25%\nmecze\nzremisowane\n45%\nmecze\nprzegrane\nW ciągu całego sezonu drużyna wygrała 10 meczów. Ile meczów w sezonie ta drużyna\nprzegrała? Zapisz obliczenia.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "II sposób"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 punkty – pełne rozwiązanie\nobliczenie liczby przegranych meczów (12)\n1 punkt\npoprawny sposób obliczenia liczby przegranych meczów\nlub\nobliczenie liczby wszystkich rozegranych meczów (40)\n0 punktów\nrozwiązanie, w którym nie dokonano istotnego postępu",
+      "solution_steps": [
+        "Klucz CKE: II sposób.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q16-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q16-page-14",
+          "path": "public/cke/2019/mathematics/omap-100-x-1904/q16-page-14.webp",
+          "sha256": "4354c96438d9c004e69b551c88ef6020dbee42f1c0bbe0117381eca15d3b93cc",
+          "alt": "Oryginalny układ zadania 16 z arkusza OMAP-100-1904, strona 14.",
+          "caption": "Zadanie 16 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-mathematics-100-x-q17",
+      "number": "17",
+      "sort_order": 17,
+      "source_pages": [
+        15
+      ],
+      "type": "long_text",
+      "topic": "Prędkość, droga i czas",
+      "difficulty": 3,
+      "prompt": "Samochód osobowy przebył drogę 120 km w czasie 75 minut. Prędkość średnia busa na tej\nkm\nsamej trasie wyniosła 80 . O ile krótszy był czas przejazdu tej drogi samochodem\nh\nosobowym od czasu przejazdu busem? Zapisz obliczenia.\nOMAP-100-1904 Strona 15 z 20",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "II sposób"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 punkty – pełne rozwiązanie\n1\nwyznaczenie różnicy czasu (15 minut lub godziny)\n4\n1 punkt\npoprawny sposób obliczenia czasu jazdy busa\nlub\npoprawny sposób obliczenia, o ile kilometrów mniej przejechał bus od samochodu osobowego w ciągu\n75 minut\nlub\npoprawny sposób obliczenia różnicy czasu potrzebnego na pokonanie drogi o takiej samej długości\nprzez oba pojazdy\n0 punktów\nrozwiązanie, w którym nie dokonano istotnego postępu",
+      "solution_steps": [
+        "Klucz CKE: II sposób.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q17-page-15"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q17-page-15",
+          "path": "public/cke/2019/mathematics/omap-100-x-1904/q17-page-15.webp",
+          "sha256": "14e30084bfa9d68796780adc751768f795821f6819bb02a9a85fb49c81fc7984",
+          "alt": "Oryginalny układ zadania 17 z arkusza OMAP-100-1904, strona 15.",
+          "caption": "Zadanie 17 — oryginalny układ CKE, strona 15.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-mathematics-100-x-q18",
+      "number": "18",
+      "sort_order": 18,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 3,
+      "prompt": "Adam zamówił bukiet złożony tylko z goździków i róż, w którym goździków było 2 razy\nwięcej niż róż. Jedna róża kosztowała 4 zł, a cena jednego goździka wynosiła 3 zł. Czy\nwszystkie kwiaty w tym bukiecie mogły kosztować 35 zł? Uzasadnij odpowiedź.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "2 punkty – pełne rozwiązanie"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 punkty – pełne rozwiązanie\npoprawne uzasadnienie, że bukiet nie może kosztować 35 zł\n1 punkt\nzapisanie poprawnego równania z jedną niewiadomą\nlub\nzapisanie wyrażenia algebraicznego z jedną zmienną opisującego koszt zakupu bukietu\nlub\npoprawny sposób obliczenia kosztów zakupu co najmniej dwóch różnych bukietów spełniających\nwarunki zadania\n0 punktów\nrozwiązanie błędne lub brak rozwiązania",
+      "solution_steps": [
+        "Klucz CKE: 2 punkty – pełne rozwiązanie.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q18-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q18-page-16",
+          "path": "public/cke/2019/mathematics/omap-100-x-1904/q18-page-16.webp",
+          "sha256": "6c942f71d02af72d18bc31baa7a257f37b82c1d5d153b8ff32a348c27083b880",
+          "alt": "Oryginalny układ zadania 18 z arkusza OMAP-100-1904, strona 16.",
+          "caption": "Zadanie 18 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-mathematics-100-x-q19",
+      "number": "19",
+      "sort_order": 19,
+      "source_pages": [
+        17
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 3,
+      "prompt": "Z okazji dnia sportu w godzinach od 9:00 do 12:00 przeprowadzono połowę z wszystkich\nkonkurencji zaplanowanych na cały dzień, a między 12:00 a 14:00 – jeszcze\n1\nz pozostałych. O godzinie 14:00 z powodu deszczu zakończono zawody. W tym dniu\n3\nnie przeprowadzono 12 zaplanowanych konkurencji. Ile konkurencji planowano\nprzeprowadzić podczas całego dnia sportu? Zapisz obliczenia.\nOMAP-100-1904 Strona 17 z 20",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "II sposób"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n3 punkty – pełne rozwiązanie\nobliczenie liczby zaplanowanych konkurencji (36)\n2 punkty\n1\nustalenie, że 12 konkurencji stanowi wszystkich zaplanowanych konkurencji\n3\nlub\nzapisanie równania pozwalającego wyznaczyć liczbę zaplanowanych konkurencji\nlub\nobliczenie połowy z zaplanowanych konkurencji (18)\n1 punkt\nopisanie za pomocą wyrażenia arytmetycznego lub ułamka, jaką częścią wszystkich konkurencji są\n1 1 1\nkonkurencje przeprowadzone w godzinach od 12.00 do 14.00 ( ⋅ , )\n2 3 6\nlub\nopisanie za pomocą wyrażenia algebraicznego liczby konkurencji przeprowadzonych w godzinach od\n12.00 do 14.00\nlub\nsposób obliczenia połowy z zaplanowanych konkurencji\nlub\n1\nustalenie że 6 konkurencji stanowi z połowy zaplanowanych konkurencji (ale z komentarzem)\n3\nlub\n2\nustalenie że 12 konkurencji stanowi z połowy zaplanowanych konkurencji (ale z komentarzem)\n3\n0 punktów\nrozwiązanie błędne lub brak rozwiązania\nUwaga\nJeżeli zadanie zostało rozwiązane metodą „prób i błędów” stosuje się poniższe zasady oceniania.\n3 punkty – pełne rozwiązanie\nsprawdzenie co najmniej dwóch przypadków, wśród których jest poprawna odpowiedź i udzielenie\nodpowiedzi\n2 punkty\nsprawdzenie co najmniej dwóch przypadków, wśród których jest poprawna odpowiedź i brak\nodpowiedzi\n1 punkt\nsprawdzenie z warunkami zadania tylko jednego przypadku – poprawnej odpowiedzi\n0 punktów\nrozwiązanie błędne lub brak rozwiązania",
+      "solution_steps": [
+        "Klucz CKE: II sposób.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q19-page-17"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q19-page-17",
+          "path": "public/cke/2019/mathematics/omap-100-x-1904/q19-page-17.webp",
+          "sha256": "51915034ea84b51903a0c0863da5b5b431af768d7aff6c33cef512c9a40564a3",
+          "alt": "Oryginalny układ zadania 19 z arkusza OMAP-100-1904, strona 17.",
+          "caption": "Zadanie 19 — oryginalny układ CKE, strona 17.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-mathematics-100-x-q20",
+      "number": "20",
+      "sort_order": 20,
+      "source_pages": [
+        18
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 3,
+      "prompt": "Prostokątną działkę o powierzchni 3750 m2 podzielono na trzy prostokątne działki\no jednakowych wymiarach, w sposób przedstawiony na rysunku.\nJakie wymiary miała działka przed podziałem? Zapisz obliczenia.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "II sposób"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n3 punkty – pełne rozwiązanie\nobliczenie wymiarów działki przed podziałem (50 m, 75 m)\n2 punkty\npoprawny sposób obliczenia jednego wymiaru prostokąta\n1 punkt\nustalenie, że długości wymiarów małej działki pozostają w stosunku 2:1\nlub\nustalenie, że długości wymiarów dużej działki pozostają w stosunku 3:2\n0 punktów\nrozwiązanie błędne lub brak rozwiązania\nUwagi:\n• Jeżeli uczeń podaje wymiary działki przed podziałem bez przedstawienia sposobu ich\nobliczenia, to otrzymuje 1 punkt.\n• Nie oceniamy stosowania jednostek.",
+      "solution_steps": [
+        "Klucz CKE: II sposób.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q20-page-18"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q20-page-18",
+          "path": "public/cke/2019/mathematics/omap-100-x-1904/q20-page-18.webp",
+          "sha256": "a3dafbd95aaf37c3f5d9afb7f4d9fe3f2935390105fb8ab988e4a77faabf7859",
+          "alt": "Oryginalny układ zadania 20 z arkusza OMAP-100-1904, strona 18.",
+          "caption": "Zadanie 20 — oryginalny układ CKE, strona 18.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-mathematics-100-x-q21",
+      "number": "21",
+      "sort_order": 21,
+      "source_pages": [
+        19,
+        21,
+        22
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 3,
+      "prompt": "Paweł wyciął z kartonu trójkąt prostokątny ABC o przyprostokątnych 12 cm i 16 cm\n(rysunek I). Następnie połączył środki dłuższej przyprostokątnej i przeciwprostokątnej\nlinią przerywaną równoległą do krótszej przyprostokątnej, a potem rozciął trójkąt ABC\nwzdłuż tej linii na dwie figury. Z tych figur złożył trapez PRST (rysunek II).\nC\nT S\nP R\nRysunek I Rysunek II\nOblicz różnicę obwodów trójkąta ABC i trapezu PRST. Zapisz obliczenia.\nmc\n61\nA 12 cm B\nOMAP-100-1904 Strona 19 z 20",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "II sposób"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n3 punkty – pełne rozwiązanie\nobliczenie różnicy obwodów trójkąta ABC i trapezu PRST (4 cm)\n2 punkty\nprzedstawienie poprawnego sposobu obliczenia obwodu trójkąta ABC i obwodu trapezu PRST\nlub\nprzedstawienie poprawnego sposobu obliczenia różnicy między obwodami trójkąta ABC i trapezu\nPRST\nlub\nobliczenie obwodu trapezu (44)\n1 punkt\nprzedstawienie poprawnego sposobu obliczenia długości przeciwprostokątnej trójkąta ABC\n0 punktów\nrozwiązanie błędne lub brak rozwiązania\nUwaga:\nNie oceniamy jednostek.",
+      "solution_steps": [
+        "Klucz CKE: II sposób.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q21-page-19"
+        },
+        {
+          "type": "image",
+          "asset_id": "q21-page-21"
+        },
+        {
+          "type": "image",
+          "asset_id": "q21-page-22"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q21-page-19",
+          "path": "public/cke/2019/mathematics/omap-100-x-1904/q21-page-19.webp",
+          "sha256": "21aff8dce2dab550f4b64e4ac9bf9484f90965e03201e9f002360a4143228aa2",
+          "alt": "Oryginalny układ zadania 21 z arkusza OMAP-100-1904, strona 19.",
+          "caption": "Zadanie 21 — oryginalny układ CKE, strona 19.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q21-page-21",
+          "path": "public/cke/2019/mathematics/omap-100-x-1904/q21-page-21.webp",
+          "sha256": "624986e7816760f24b21bd7fda35efe09895793214a36e9e3fdd050cf97109f8",
+          "alt": "Oryginalny układ zadania 21 z arkusza OMAP-100-1904, strona 21.",
+          "caption": "Zadanie 21 — oryginalny układ CKE, strona 21.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q21-page-22",
+          "path": "public/cke/2019/mathematics/omap-100-x-1904/q21-page-22.webp",
+          "sha256": "2e14fd9b7e2595d49117e11f6eb88af40e24cdde58e308a816d8563c7450dc8d",
+          "alt": "Oryginalny układ zadania 21 z arkusza OMAP-100-1904, strona 22.",
+          "caption": "Zadanie 21 — oryginalny układ CKE, strona 22.",
+          "mime_type": "image/webp"
+        }
+      ]
+    }
+  ]
+}

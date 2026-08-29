@@ -1,0 +1,885 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2020-main-spanish-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2020-main-spanish-100-x",
+    "source_document_id": "OJHP-100-2004",
+    "source_pdf_sha256": "66788bb23378b3be7baa8115e173d07c8584a62f298f9ed80ee5582cd655688a",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2020-2/",
+    "source_label": "CKE 2020 · język hiszpański · termin główny · wariant 100-X",
+    "exam_year": 2020,
+    "exam_session": "main",
+    "subject": "spanish",
+    "variant_code": "100-X",
+    "question_count": 14,
+    "supplementary_sources": [
+      {
+        "id": "cke-2020-main-spanish-100-x-rules",
+        "path": "content/cke/sources/2020/spanish/OJHP-100-2004-zasady.pdf",
+        "sha256": "c74e3e03199198b0bdcdcbe67ff5226364c6fae62730883ffe1c8cb55b58562c",
+        "label": "Oficjalne zasady oceniania rozwiązań zadań"
+      },
+      {
+        "id": "cke-2020-main-spanish-100-x-transcript",
+        "path": "content/cke/sources/2020/spanish/OJHP-100-2004-transkrypcja.pdf",
+        "sha256": "ead5ebadc9f084dd12a2b8b719531cd41610d97aa39d759f15674a7512c15e35",
+        "label": "Oficjalna transkrypcja nagrań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [
+    {
+      "id": "cke-2020-main-spanish-100-x-transcript-q01",
+      "title": "Transkrypcja nagrania do zadania 1",
+      "paragraphs": [
+        "Tekst 1.",
+        "Este es mi gato Leo. Cuando era pequeño, jugaba todo el tiempo. Ahora es perezoso",
+        "y no tiene ganas de correr detrás de la pelota. A Leo le encanta estar a mi lado, sobre todo",
+        "cuando estudio. Se sienta en mi escritorio y mira lo que hago. Entonces parece muy feliz.",
+        "Pero cuando quiero cogerlo en brazos, se irrita y se va enfadado. Como todos los gatos, Leo",
+        "es un gran individualista.",
+        "Tekst 2.",
+        "Mujer: ¿Estás buscando algo?",
+        "Chico: Sí, mi billete de autobús.",
+        "Mujer: ¿Has mirado en los bolsillos de los pantalones?",
+        "Chico: Sí, pero solo he encontrado mi carné de estudiante.",
+        "Mujer: ¿Y entre las páginas de tu cuaderno?",
+        "Chico: Todavía no. A ver... Sí, aquí está.",
+        "Mujer: Menos mal… Ahora, por favor, no te olvides de meter el billete en la cartera.",
+        "Tekst 3.",
+        "Chicos, ya sé que estáis cansados y tenéis hambre, pero tened paciencia, dentro de media hora",
+        "vamos a comer pizza. Esta sección ya es la última. Está dedicada a las plantas exóticas. Como",
+        "veis, aquí hay muchísimas palmeras y cactus. ¡Cuidado!, no los toquéis. Caminad despacio,",
+        "leed la información que está al lado de las plantas y tomad notas. Mañana vamos a comentarlo",
+        "en clase.",
+        "Tekst 4.",
+        "Mira esta foto. Este soy yo, y este es mi mejor amigo, Alberto. En aquella época teníamos",
+        "ocho años. Después de las clases bajábamos al río para pescar y nadar. Cuando volvíamos",
+        "a casa, pasábamos por la pastelería donde trabajaba el abuelo de Alberto. Siempre nos",
+        "regalaba caramelos o galletas. Era un pueblo pequeño y todos nos conocíamos. Vivíamos muy",
+        "felices.",
+        "Tekst 5.",
+        "¡Silencio, por favor! Lo que voy a decir es importante. Como en esta región en verano hay",
+        "muchas tormentas, debéis saber cómo comportaros. Si estáis jugando fuera y veis que",
+        "se acerca una tormenta, tenéis que entrar inmediatamente en un edificio. Si estáis en el agua,",
+        "debéis salir enseguida. Y recordad que esconderse debajo de los árboles es muy peligroso.",
+        "¡No lo hagáis nunca!"
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    },
+    {
+      "id": "cke-2020-main-spanish-100-x-transcript-q02",
+      "title": "Transkrypcja nagrania do zadania 2",
+      "paragraphs": [
+        "Wypowiedź 1.",
+        "Algunos dicen que el Día Sin Coche es una mala idea, pero a mí me parece fantástica. Ese día,",
+        "por fin puedo ir libremente en bicicleta o andando. En una ciudad como Madrid, donde",
+        "a todas horas hay tanto tráfico, un día sin coche al año es poco. Hay que celebrarlo cada mes.",
+        "¡Por lo menos!",
+        "Egzamin ósmoklasisty z języka hiszpańskiego (OJHP-100, OJHP-200)",
+        "kwiecień 2020",
+        "Wypowiedź 2.",
+        "Yo estoy en contra. Mi colegio está a diez kilómetros de mi casa y si tengo que ir allí",
+        "en autobús, necesito por lo menos media hora para llegar. Además, los autobuses no son",
+        "puntuales y a veces hay que esperar hasta veinte minutos en la parada. En total, casi una hora",
+        "sin hacer nada útil. Cuando mi padre me lleva en coche, llegamos en quince minutos.",
+        "Wypowiedź 3.",
+        "En mi opinión, el Día Sin Coche es una buena oportunidad para pensar en la salud. La gente",
+        "puede ir al trabajo a pie o en bici respirando aire puro. Otra ventaja es que ese día nadie paga",
+        "por los billetes de autobús, metro o tranvía. ¡Qué sorprendente es ver la ciudad sin tantos",
+        "coches, una ciudad más tranquila y menos peligrosa!",
+        "Wypowiedź 4.",
+        "Mi familia y yo usamos el transporte público todos los días. Es más rápido que ir en coche.",
+        "Además, si la gente deja el coche en casa, se produce menos contaminación y hay menos",
+        "accidentes. Por eso, creo que el Día Sin Coche es una buena idea. Pero es necesario",
+        "promocionarlo en la tele, en la prensa y en internet. Si no, no cambiará nada en nuestras",
+        "ciudades."
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    },
+    {
+      "id": "cke-2020-main-spanish-100-x-transcript-q03",
+      "title": "Transkrypcja nagrania do zadania 3",
+      "paragraphs": [
+        "Buenas tardes a todos. Durante las últimas clases he hablado mucho con mis alumnos sobre",
+        "las granjas ecológicas y juntos hemos decidido visitar una de ellas. Vamos a salir el lunes",
+        "por la mañana. Nos encontraremos a las ocho y media delante del colegio y saldremos",
+        "puntualmente a las nueve menos cuarto. Primero, sus hijos verán las instalaciones de",
+        "la granja. Luego, observarán cómo se fabrican quesos ecológicos y podrán probarlos. Al final,",
+        "participarán en un taller en el que intentarán hacer mantequilla de manera tradicional. Como",
+        "vamos a volver a la hora de comer, no es necesario prepararles bocadillos. Una cosa más.",
+        "Últimamente está lloviendo mucho, por eso recomiendo que los chicos lleven botas de agua.",
+        "Estoy seguro de que se lo pasarán bien."
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    },
+    {
+      "id": "cke-2020-main-spanish-100-x-transcript-q04",
+      "title": "Transkrypcja nagrania do zadania 4",
+      "paragraphs": [
+        "Wypowiedź 1.",
+        "¿Eres el nuevo amigo de Carolina?",
+        "Wypowiedź 2.",
+        "Esta noche voy a cantar en público.",
+        "Wypowiedź 3.",
+        "¿Qué te vas a poner para la fiesta?",
+        "Wypowiedź 4.",
+        "Gracias por la invitación. Vamos a ser puntuales."
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    }
+  ],
+  "questions": [
+    {
+      "id": "cke-2020-main-spanish-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        3
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — wybór wielokrotny",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie pięć tekstów. W zadaniach 1.1.–1.5., na podstawie informacji\nzawartych w nagraniu, z podanych odpowiedzi wybierz właściwą. Zakreśl jedną z liter:\nA, B albo C.\n1.1. ¿Qué le gusta más al gato?\nA. B. C.\n1.2. ¿Dónde ha encontrado el chico su billete?\nA. B. C.\n1.3. ¿Dónde está la persona que habla?\nA. B. C.\n1.4. El hombre habla de\nA. su trabajo.\nB. su familia.\nC. su infancia.\n1.5. La mujer\nA. da consejos.\nB. ofrece ayuda.\nC. pide explicaciones.\nOJHP-100-2004 Strona 3 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "1.1: C; 1.2: A; 1.3: B; 1.4: C; 1.5: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 5,
+        "rules": [
+          "Maksymalnie 5 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 1.1: C; 1.2: A; 1.3: B; 1.4: C; 1.5: A.",
+      "solution_steps": [
+        "Klucz CKE: 1.1: C; 1.2: A; 1.3: B; 1.4: C; 1.5: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2020-main-spanish-100-x-transcript-q01",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-page-3"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q01-page-3",
+          "path": "public/cke/2020/spanish/ojhp-100-x-2004/q01-page-3.webp",
+          "sha256": "862439703b1b37082788745c7e9988e4ef0a6d740fa91bea6ce036b83cec6dd6",
+          "alt": "Oryginalny układ zadania 1 z arkusza OJHP-100-2004, strona 3.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 3.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-spanish-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — dopasowywanie",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi na temat dnia bez samochodu. Na podstawie\ninformacji zawartych w nagraniu dopasuj do każdej wypowiedzi (2.1.–2.4.)\nodpowiadające jej zdanie (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej wypowiedzi.\nEsta persona dice que\nA. durante el Día Sin Coche es peligroso ir en bici.\nB. ese día todos pueden usar el transporte público gratis.\nC. el Día Sin Coche debe organizarse con más frecuencia.\nD. se pierde mucho tiempo viajando en transporte público.\nE. hay que popularizar esa iniciativa en los medios de comunicación.\n2.1. 2.2. 2.3. 2.4.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "2.1: C; 2.2: D; 2.3: B; 2.4: E"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 2.1: C; 2.2: D; 2.3: B; 2.4: E.",
+      "solution_steps": [
+        "Klucz CKE: 2.1: C; 2.2: D; 2.3: B; 2.4: E.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2020-main-spanish-100-x-transcript-q02",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q02-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q02-page-4",
+          "path": "public/cke/2020/spanish/ojhp-100-x-2004/q02-page-4.webp",
+          "sha256": "ebd1e5d9fd645d727f1e61aff261904dd4b8c7f547ba64ba7b78c3c79201c9f4",
+          "alt": "Oryginalny układ zadania 2 z arkusza OJHP-100-2004, strona 4.",
+          "caption": "Zadanie 2 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-spanish-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — uzupełnianie luk",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie wypowiedź na temat wycieczki na farmę. Na podstawie informacji\nzawartych w nagraniu uzupełnij luki w zdaniach 3.1.–3.4., tak aby jak najbardziej\nprecyzyjnie oddać sens wysłuchanego tekstu. Luki należy uzupełnić w języku\nhiszpańskim.\n3.1. Los chicos tienen que llegar al colegio a ___________________________ de la mañana.\n3.2. En la granja los chicos degustarán ________________________________ producidos allí.\n3.3. Como hace mal tiempo, los alumnos deben llevar ________________________________.\n3.4. La persona que habla se dirige a _____________________________________________.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "3.1: las ocho y media; 3.2: (los) quesos ecológicos; 3.3: botas de agua; 3.4: los padres de los alumnos (estudiantes)"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 3.1: las ocho y media; 3.2: (los) quesos ecológicos; 3.3: botas de agua; 3.4: los padres de los alumnos (estudiantes).",
+      "solution_steps": [
+        "Klucz CKE: 3.1: las ocho y media; 3.2: (los) quesos ecológicos; 3.3: botas de agua; 3.4: los padres de los alumnos (estudiantes).",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2020-main-spanish-100-x-transcript-q03",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q03-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q03-page-4",
+          "path": "public/cke/2020/spanish/ojhp-100-x-2004/q03-page-4.webp",
+          "sha256": "5f61b2a9f1123bba2e07dcd82c09b2cc0bfc5ef1806b73387fe85dbd34812bf7",
+          "alt": "Oryginalny układ zadania 3 z arkusza OJHP-100-2004, strona 4.",
+          "caption": "Zadanie 3 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-spanish-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — zadanie otwarte",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi związane z sytuacjami życia codziennego\n(4.1.–4.4.). Do każdej z nich dobierz właściwą reakcję (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedna reakcja została podana dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. Entonces, ¡mucha suerte!\nB. No sé, ¿qué me aconsejas?\nC. Sí, tú también estás invitado.\nD. Vale, os esperamos a las dos.\nE. Sí, nos hemos conocido este verano.\n4.1. 4.2. 4.3. 4.4.\nOJHP-100-2004 Strona 5 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "4.1: E; 4.2: A; 4.3: B; 4.4: D"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 4.1: E; 4.2: A; 4.3: B; 4.4: D.",
+      "solution_steps": [
+        "Klucz CKE: 4.1: E; 4.2: A; 4.3: B; 4.4: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2020-main-spanish-100-x-transcript-q04",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q04-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q04-page-5",
+          "path": "public/cke/2020/spanish/ojhp-100-x-2004/q04-page-5.webp",
+          "sha256": "a14e7d7bfd5deb17952b3cf93124e7cc14ec5190c7ceeda5011fe215d9c767c3",
+          "alt": "Oryginalny układ zadania 4 z arkusza OJHP-100-2004, strona 5.",
+          "caption": "Zadanie 4 — oryginalny układ CKE, strona 5.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-spanish-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe",
+      "difficulty": 3,
+      "prompt": "Dla każdej z opisanych sytuacji (5.1.–5.4.) wybierz właściwą reakcję. Zakreśl jedną\nz liter: A, B albo C.\n5.1. Chcesz pożyczyć od koleżanki kask rowerowy. Co powiesz?\nA. ¿Me dejas el casco?\nB. ¿Me pasas el casco?\nC. ¿Necesitas el casco?\n5.2. Twój kolega chce przejść przez ulicę. Nie zauważył, że jest czerwone światło.\nCo powiesz, żeby go powstrzymać?\nA. Márcalo en color rojo.\nB. Espera, todavía está en rojo.\nC. No, el rojo no te queda bien.\n5.3. Spóźniasz się na lekcję hiszpańskiego. Co powiesz, wchodząc do klasy?\nA. Perdone, ya es hora de salir.\nB. Lo siento, esta tarde voy a salir.\nC. Disculpe, es que he salido tarde de casa.\n5.4. Babcia Twojego hiszpańskiego kolegi dokłada Ci kolejną porcję krewetek. Jak jej\nodmówisz?\nA. Gracias, están muy ricas.\nB. ¡No, qué va! Están riquísimas.\nC. Están muy ricas, pero ya no puedo más.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "5.1: A; 5.2: B; 5.3: C; 5.4: C"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 5.1: A; 5.2: B; 5.3: C; 5.4: C.",
+      "solution_steps": [
+        "Klucz CKE: 5.1: A; 5.2: B; 5.3: C; 5.4: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q05-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q05-page-6",
+          "path": "public/cke/2020/spanish/ojhp-100-x-2004/q05-page-6.webp",
+          "sha256": "f81f72adbad1df22e94182f06f125e389b28dfb131b23d9dc183eaa4dc576930",
+          "alt": "Oryginalny układ zadania 5 z arkusza OJHP-100-2004, strona 6.",
+          "caption": "Zadanie 5 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-spanish-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe — uzupełnianie dialogów",
+      "difficulty": 3,
+      "prompt": "Uzupełnij dialogi 6.1.–6.3. Wpisz w każdą lukę brakujący fragment wypowiedzi, tak aby\notrzymać spójne i logiczne teksty. Luki należy uzupełnić w języku hiszpańskim.\n6.1. X: ¿______________________________ la catedral?\nY: No, hoy no. Es que estoy cansada y la catedral está muy lejos.\n6.2. X: ¿______________________________ los colores de este cuadro?\nY: No mucho, son muy oscuros.\n6.3. X: ¿______________________________ hoy?\nY: Lunes, 26 de agosto.\nOJHP-100-2004 Strona 7 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "6.1: Te gustaría visitar Por qué no vamos a Vamos a; 6.2: Te gustan; 6.3: Qué día es"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 6.1: Te gustaría visitar Por qué no vamos a Vamos a; 6.2: Te gustan; 6.3: Qué día es.",
+      "solution_steps": [
+        "Klucz CKE: 6.1: Te gustaría visitar Por qué no vamos a Vamos a; 6.2: Te gustan; 6.3: Qué día es.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q06-page-7"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q06-page-7",
+          "path": "public/cke/2020/spanish/ojhp-100-x-2004/q06-page-7.webp",
+          "sha256": "d283a5af4fdd950bf0d88a976b5afc7866d812bbb0ea7f5f9c1967d1a3ad21dd",
+          "alt": "Oryginalny układ zadania 6 z arkusza OJHP-100-2004, strona 7.",
+          "caption": "Zadanie 6 — oryginalny układ CKE, strona 7.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-spanish-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        8,
+        9
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie tekstów pisanych",
+      "difficulty": 3,
+      "prompt": "Przeczytaj teksty. W zadaniach 7.1.–7.4. z podanych odpowiedzi wybierz właściwą,\nzgodną z treścią tekstu. Zakreśl jedną z liter: A, B albo C.\nEL TAILANDIA:\nEL ENCUENTRO DE UNA TURISTA\nTROTAMUNDOS CON UN COCODRILO\nEn un parque nacional de Tailandia una turista decidió hacerse una selfi con un cocodrilo\nque descansaba a orillas de un río. Creía que el animal estaba dormido porque tenía los ojos\ncerrados y no se movía. Había un cartel que prohibía la entrada, pero la mujer se acercó\nal animal. En aquel momento el cocodrilo la atacó. Asustada, la mujer empezó a correr\ny el móvil se le cayó al suelo. Por suerte, a la turista no le pasó nada. La única víctima\ndel accidente fue el smartphone, que desapareció en el estómago del animal.\n7.1. ¿Qué hizo el cocodrilo?\nA. Se asustó.\nB. Se comió el teléfono.\nC. Desapareció en el agua.\nLunes, 14:00\n¡Hola a todo el mundo!\nGracias por vuestros comentarios entusiastas. ¿Me preguntáis por qué elegí esta profesión?\nFue mi profesor de Geografía quien me dio la idea. Y se lo agradezco. Me gusta mi trabajo\nporque no es nada rutinario y me permite viajar. Cada grupo es diferente. Por ejemplo,\nlos arquitectos me hacen muchas preguntas técnicas. Para poder contestarlas, tengo que\nprepararme bien antes de cada visita. Claro, a menudo estoy bastante cansada, pero no me\naburro nunca.\n7.2. La mujer que ha escrito este texto es\nA. arquitecta.\nB. profesora.\nC. guía.\nMensaje \nDe: manolo@xyz.com\nPara: sergio@xyz.com\nTema: Harry Potter\nHola, Sergio:\nYa estoy en Londres y, como me recomendaste visitar los lugares relacionados con\nlas películas de Harry Potter, ayer fui a la estación de King’s Cross. No entiendo tu\nentusiasmo. Para mí, no hay nada interesante allí, solo un montón de turistas sacando\nfotos. Un horror. Pero como eres un gran fan de Harry Potter, te he comprado un regalo\nen la tienda de allí.\nUn abrazo,\nManolo\n7.3. Manolo escribe a Sergio para\nA. pedirle su opinión.\nB. expresar su disgusto.\nC. recomendarle una visita.\nNUEVA IMAGEN\n¡Otra vez hemos ganado el título de MEJOR SALÓN DE PELUQUERÍA!\n¿Por qué?\nPorque...\n tenemos cientos de clientes satisfechos\n estamos abiertos a las nuevas tendencias\n ofrecemos la mejor calidad al mejor precio\n nuestros estilistas ganan concursos internacionales\n peinamos a estrellas de cine y del deporte\nGracias por vuestros votos.\n7.4. Este texto informa sobre\nA. el éxito de una peluquería.\nB. los cambios en la oferta de una peluquería.\nC. el programa de la inauguración de una peluquería.\nOJHP-100-2004 Strona 9 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "7.1: B; 7.2: C; 7.3: B; 7.4: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 7.1: B; 7.2: C; 7.3: B; 7.4: A.",
+      "solution_steps": [
+        "Klucz CKE: 7.1: B; 7.2: C; 7.3: B; 7.4: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q07-page-8"
+        },
+        {
+          "type": "image",
+          "asset_id": "q07-page-9"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q07-page-8",
+          "path": "public/cke/2020/spanish/ojhp-100-x-2004/q07-page-8.webp",
+          "sha256": "bb7c212e1ccabecbb4a73c7ea662d99bac9455bc63f808f258375cf35706c298",
+          "alt": "Oryginalny układ zadania 7 z arkusza OJHP-100-2004, strona 8.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q07-page-9",
+          "path": "public/cke/2020/spanish/ojhp-100-x-2004/q07-page-9.webp",
+          "sha256": "9c0ab6bbe61b2d7e0ac58d92fe2ea4e19cdd678c4775dd1644b65e4a1f5aa88c",
+          "alt": "Oryginalny układ zadania 7 z arkusza OJHP-100-2004, strona 9.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 9.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-spanish-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Spójność tekstu",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst, z którego usunięto cztery zdania. Wpisz w każdą lukę (8.1.–8.4.) literę,\nktórą oznaczono brakujące zdanie (A–E), tak aby otrzymać spójny i logiczny tekst.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej luki.\n¿CÓMO CONOCÍ A TERE?\nHace años fui a Polonia para visitar a mis abuelos paternos, que vivían en un pueblo pequeño.\nRecuerdo que los primeros días me aburría mucho. 8.1. _____ Pero en el pueblo no había ni\ncafetería ni cine ni polideportivo. Lo único que podía hacer era pasear o hacer escapadas en\nbici. Estaba desesperado. Un día, en el escaparate de la tienda del pueblo vi un gran póster.\n8.2. _____ “¡¿Quién organiza fiestas en un sitio así?!” No podía creerlo. Intrigado, el sábado\npor la noche fui a ese lugar. 8.3. _____ Eran cinco. Vestían ropa de los sesenta y tocaban música\nde aquella época, ¡y tocaban bien! Me impresionaron. 8.4. _____ Me gustó desde el momento\nen que la vi. Y cuando empezó a cantar, me quedé con la boca abierta. Así conocí al amor\nde mi vida.\nA. Pero tenía la voz de un ángel.\nB. Entre ellos había una chica guapísima.\nC. El cartel invitaba a un baile en el parque de bomberos.\nD. Yo estaba acostumbrado a salir con amigos, ir de fiesta o hacer deporte.\nE. Cuando entré en la enorme sala, casi un almacén, vi un grupo de músicos.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "8.1: D; 8.2: C; 8.3: E; 8.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 8.1: D; 8.2: C; 8.3: E; 8.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 8.1: D; 8.2: C; 8.3: E; 8.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q08-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q08-page-10",
+          "path": "public/cke/2020/spanish/ojhp-100-x-2004/q08-page-10.webp",
+          "sha256": "50223328c3dc3fdca23979c9edc34929f6a39c7b3a505c74f67c43a8e47b31b4",
+          "alt": "Oryginalny układ zadania 8 z arkusza OJHP-100-2004, strona 10.",
+          "caption": "Zadanie 8 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-spanish-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        11
+      ],
+      "type": "long_text",
+      "topic": "Wyszukiwanie informacji",
+      "difficulty": 3,
+      "prompt": "Przeczytaj wpisy na trzech blogach poświęconych kuchni (A–C) oraz pytania 9.1.–9.4.\nDo każdego pytania dopasuj właściwy wpis. Wpisz rozwiązania do tabeli.\nUwaga! Jeden z wpisów pasuje do dwóch pytań.\nBLOGS DE COCINA\nMe llamo Tatiana y llevo muchos años en España. Me fascinan las cocinas regionales\nde este país y ya soy una experta en ellas. Quiero abrir un restaurante en Madrid, pero\nA. de momento es solo un sueño. Sin embargo, si os gusta invitar a gente a comer, pero\nno tenéis tiempo para cocinar, contactad conmigo. Yo iré a vuestra casa y en dos o tres\nhoras os prepararé una cena estupenda. Es una opción muy cómoda y barata.\n¡Hoy mi blog de cocina cumple cinco años! Veo en los comentarios que mis recetas\nhan tenido mucho éxito. Decís que son fáciles y muy variadas. ¡Me alegro mucho!\nB. Pero, como sabéis, hay que dedicar mucho tiempo y esfuerzo a administrar un blog.\nPor eso necesito vuestra ayuda. Si tenéis ideas nuevas y ganas de llevar el blog\nconmigo, os espero.\nSi ya estás aburrido de los platos españoles, prueba la cocina china. Es muy rica, pero\nno te aconsejo hacer platos chinos en casa porque son complicados y es difícil\nC. conseguir productos adecuados para prepararlos. Sin embargo, conozco un lugar donde\nse come bien sin tener que gastar mucho. Se llama Yuan Yuan. Sirven platos de calidad\ny las raciones son grandes. Tenéis que ir allí. Seguro que saldréis contentos.\n¿Cuál de los autores\n9.1. busca colaboradores?\n9.2. ofrece sus servicios?\n9.3. recomienda un local gastronómico?\n9.4. sabe preparar platos típicos españoles?\nOJHP-100-2004 Strona 11 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "9.1: B; 9.2: A; 9.3: C; 9.4: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 9.1: B; 9.2: A; 9.3: C; 9.4: A.",
+      "solution_steps": [
+        "Klucz CKE: 9.1: B; 9.2: A; 9.3: C; 9.4: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q09-page-11"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q09-page-11",
+          "path": "public/cke/2020/spanish/ojhp-100-x-2004/q09-page-11.webp",
+          "sha256": "ce74a8632b874d7e3e1a243f4c1ea5117618052feee96281a0cdc29c6eeb1315",
+          "alt": "Oryginalny układ zadania 9 z arkusza OJHP-100-2004, strona 11.",
+          "caption": "Zadanie 9 — oryginalny układ CKE, strona 11.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-spanish-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        12,
+        13
+      ],
+      "type": "long_text",
+      "topic": "Przetwarzanie wypowiedzi",
+      "difficulty": 3,
+      "prompt": "Przeczytaj teksty 1. i 2. Uzupełnij w e-mailu luki 10.1.–10.3. zgodnie z treścią tekstów, tak\naby jak najbardziej precyzyjnie oddać ich sens. Luki należy uzupełnić w języku polskim.\nTekst 1.\n¿Dónde dormir? ¿Qué ver y visitar? ¿Dónde comer? Comentarios\nPensión El Principito\nEl piso se encuentra en el ático de un bonito edificio antiguo, recién renovado. Tiene un gran\nsalón, cocina separada, dos dormitorios dobles y un cuarto de baño con ducha. Las ventanas\ndel salón dan a la Plaza Mayor. Allí en verano los viernes y los sábados se organizan eventos\nculturales. Además, todos los miércoles por la mañana viene gente de toda la provincia para\nvender sus productos: comida local y artículos artesanales (ropa, cerámica, bisutería\nartística, etc.).\nTekst 2.\n¿Dónde dormir? ¿Qué ver y visitar? ¿Dónde comer? Comentarios\nPensión El Principito\nMi marido y yo alquilamos el piso el mes pasado y pasamos allí dos semanas de vacaciones.\nEl piso es de verdad muy atractivo y bonito. La cocina está bien equipada, con una gran\nnevera y lavaplatos. Desgraciadamente, no hay microondas. El piso está en el centro\ny todo está muy cerca. Sin embargo, si os molesta el ruido o tenéis la costumbre de acostaros\ntemprano, el sitio no es para vosotros porque abajo, en la plaza, hay muchos cafés\ny restaurantes abiertos hasta medianoche.\nLos propietarios son supersimpáticos y nos dieron mucha información útil. Fueron unas\nvacaciones geniales.\nabc@xyz.pl\nWakacje w Hiszpanii\nDroga Ciociu!\nTak jak prosiłaś, razem z mamą znalazłyśmy dla Ciebie atrakcyjne mieszkanie na wakacje.\nZnajduje się ono w miejscowości Arcoíris na poddaszu starej kamienicy. Przeczytałyśmy,\nże składa się z salonu, dwóch sypialni, łazienki i dobrze wyposażonej kuchni, w której jest\n10.1. ____________________. Dzięki niej zaoszczędzisz sporo czasu. No i oczywiście jest\nlodówka. Okna mieszkania wychodzą na plac, na którym jest dużo kawiarni i restauracji,\na raz w tygodniu odbywa się tam 10.2. ____________________. Goście, którzy\nwynajmowali to mieszkanie w zeszłym miesiącu, byli bardzo zadowoleni. Uprzedzają\njednak, że ze względu na usytuowanie dla niektórych wadą tego mieszkania może być\n10.3. ____________________, ale wiem, że dla Ciebie to nie problem. Właściciele są bardzo\npomocni. Załączam link z ofertą.\nPozdrawiam\nKarolina\nOJHP-100-2004 Strona 13 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "10.1: zmywarka; 10.2: targ; 10.3: hałas"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 10.1: zmywarka; 10.2: targ; 10.3: hałas.",
+      "solution_steps": [
+        "Klucz CKE: 10.1: zmywarka; 10.2: targ; 10.3: hałas.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q10-page-12"
+        },
+        {
+          "type": "image",
+          "asset_id": "q10-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q10-page-12",
+          "path": "public/cke/2020/spanish/ojhp-100-x-2004/q10-page-12.webp",
+          "sha256": "a6fe3e9702c1a916040cecd5246136f283cea04c56a874d0246ea3c1382b9a08",
+          "alt": "Oryginalny układ zadania 10 z arkusza OJHP-100-2004, strona 12.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q10-page-13",
+          "path": "public/cke/2020/spanish/ojhp-100-x-2004/q10-page-13.webp",
+          "sha256": "af25b0cb9c5f7c4f116dd22b3af69ce50dca6c7309a824b78d4666e6e6dfc456",
+          "alt": "Oryginalny układ zadania 10 z arkusza OJHP-100-2004, strona 13.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-spanish-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — wybór wyrazów",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Spośród wyrazów podanych w ramce wybierz te, które są poprawnym\nuzupełnieniem luk 11.1.–11.3. Wpisz odpowiednią literę (A–F) obok numeru każdej luki.\nUwaga! Trzy wyrazy zostały podane dodatkowo i nie pasują do żadnej luki.\nA. aprender B. precio C. dicen D. conocer E. hablan F. premio\nFIESTA LATINA\nEste fin de semana, en mi colegio vamos a organizar una fiesta latina. Por la mañana\nvamos a 11.1. _____ a bailar salsa. ¡A que no sabéis quién va a ser el instructor! Paco,\nnuestro profesor de Ciencias. Las chicas de 6oA 11.2. _____ que baila fenomenal.\nPor la tarde, vamos a hacer un bufé libre con platos preparados por todos los grupos,\npero antes, un jurado de alumnos y profesores va a elegir el mejor plato. El 11.3. _____\nes una salida al cine en horas de clase. Fantástico, ¿no?",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "11.1: A; 11.2: C; 11.3: F"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 11.1: A; 11.2: C; 11.3: F.",
+      "solution_steps": [
+        "Klucz CKE: 11.1: A; 11.2: C; 11.3: F.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q11-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q11-page-14",
+          "path": "public/cke/2020/spanish/ojhp-100-x-2004/q11-page-14.webp",
+          "sha256": "f312f61c9c8dd709b9c9ac8cdbf0d95120918f9cd33de7bf3052f71821d0addb",
+          "alt": "Oryginalny układ zadania 11 z arkusza OJHP-100-2004, strona 14.",
+          "caption": "Zadanie 11 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-spanish-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        15
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — gramatyka i leksyka",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Wybierz poprawne uzupełnienie luk 12.1.–12.4. Zakreśl jedną z liter:\nA, B albo C.\nMensaje \nDe: Amanda\nPara: Inés\nAsunto: ¡Saludos desde Tokio!\nHola, Inés:\nDesde que estoy en Japón, cada día descubro algo nuevo. De verdad, tienen unas\ncostumbres muy raras. Por ejemplo, en el metro está prohibido hablar por teléfono.\nEn las comidas, hacer ruido es de 12.1. _____ educación y significa que el plato te gusta.\nTampoco sabía que 12.2. _____ los hombres pueden preparar sushi. Dicen que\nla temperatura de las manos de las mujeres es 12.3. _____ alta que la de los hombres\ny el calor puede modificar el sabor del pescado. Y para poder comprar un coche\nen Tokio hay que tener una plaza para 12.4. _____. ¡Un país sorprendente!\nSaludos desde Tokio,\nAmanda\n12.1. A. buen B. bueno C. buena\n12.2. A. solo B. solos C. sola\n12.3. A. tan B. más C. muy\n12.4. A. aparcarlo B. aparcarle C. aparcarla\nOJHP-100-2004 Strona 15 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "12.1: C; 12.2: A; 12.3: B; 12.4: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 12.1: C; 12.2: A; 12.3: B; 12.4: A.",
+      "solution_steps": [
+        "Klucz CKE: 12.1: C; 12.2: A; 12.3: B; 12.4: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q12-page-15"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q12-page-15",
+          "path": "public/cke/2020/spanish/ojhp-100-x-2004/q12-page-15.webp",
+          "sha256": "67037cff3ce88d1e5345dd7755fbaf21156510b169fb2d5211d88c416a28a0e7",
+          "alt": "Oryginalny układ zadania 12 z arkusza OJHP-100-2004, strona 15.",
+          "caption": "Zadanie 12 — oryginalny układ CKE, strona 15.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-spanish-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Transformacje leksykalno-gramatyczne",
+      "difficulty": 3,
+      "prompt": "Uzupełnij zdania 13.1.–13.4. Wykorzystaj w odpowiedniej formie wyrazy podane\nw nawiasach. Nie należy zmieniać kolejności podanych wyrazów, trzeba natomiast – jeśli\njest to konieczne – dodać inne wyrazy, tak aby otrzymać zdania logiczne i gramatycznie\npoprawne. Wymagana jest pełna poprawność ortograficzna wpisywanych fragmentów.\nUwaga! W każdą lukę możesz wpisać maksymalnie cztery wyrazy, wliczając w to wyrazy\njuż podane.\n13.1. Veo que en el aula (haber / poco) ____________________________________________\nestudiantes.\n13.2. El estadio de fútbol está (lado / parque) _______________________________________\nde Los Álamos.\n13.3. Antonio, ¡(salir / baño) ___________________________________________, por favor!\nNecesito tomar una ducha.\n13.4. A mí no me (interesar / deporte) ____________________________________________,\npero, si quieres, vamos a ver el partido.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "13.1: hay hay había había (muy) (muy) (muy) (muy) pocas pocos pocas pocos; 13.2: al lado del parque; 13.3: sal del baño; 13.4: interesa interesa el interesa interesan deporte deporte deportes / / los ver (hacer/practicar) ningún deporte"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 13.1: hay hay había había (muy) (muy) (muy) (muy) pocas pocos pocas pocos; 13.2: al lado del parque; 13.3: sal del baño; 13.4: interesa interesa el interesa interesan deporte deporte deportes / / los ver (hacer/practicar) ningún deporte.",
+      "solution_steps": [
+        "Klucz CKE: 13.1: hay hay había había (muy) (muy) (muy) (muy) pocas pocos pocas pocos; 13.2: al lado del parque; 13.3: sal del baño; 13.4: interesa interesa el interesa interesan deporte deporte deportes / / los ver (hacer/practicar) ningún deporte.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q13-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q13-page-16",
+          "path": "public/cke/2020/spanish/ojhp-100-x-2004/q13-page-16.webp",
+          "sha256": "9c5ad42f2e9b934fea85bd7f05d21d199d1e2f2f2beeb389d8975436061bcab9",
+          "alt": "Oryginalny układ zadania 13 z arkusza OJHP-100-2004, strona 16.",
+          "caption": "Zadanie 13 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-spanish-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna — e-mail",
+      "difficulty": 3,
+      "prompt": "Twoja koleżanka z klasy przeprowadza się wkrótce za granicę. W e-mailu do kolegi\nz Hiszpanii:\n• napisz, co Twoja klasa dała tej koleżance w prezencie, i opisz ten przedmiot\n• poinformuj, jak koleżanka zareagowała na Wasz prezent\n• wyjaśnij, jak zamierzasz utrzymywać kontakt z tą koleżanką.\nNapisz swoją wypowiedź w języku hiszpańskim. Podpisz się jako XYZ.\nRozwiń swoją wypowiedź w każdym z trzech podpunktów, tak aby osoba nieznająca polecenia\nw języku polskim uzyskała wszystkie wskazane w nim informacje. Pamiętaj, że długość\nwypowiedzi powinna wynosić od 50 do 120 słów (nie licząc wyrazów podanych na początku\nwypowiedzi). Oceniane są: umiejętność pełnego przekazania informacji, spójność, bogactwo\njęzykowe oraz poprawność językowa.",
+      "answer_key": {
+        "assessment": "rubric",
+        "minimum_words": 50,
+        "maximum_words": 120
+      },
+      "scoring": {
+        "max_points": 10,
+        "rules": [
+          "Maksymalnie 10 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Porównaj rozwiązanie z oficjalnymi zasadami oceniania CKE dołączonymi do arkusza.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q14-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q14-page-16",
+          "path": "public/cke/2020/spanish/ojhp-100-x-2004/q14-page-16.webp",
+          "sha256": "60e24b9c343e2dac63ba9e414114d1f8c3e63d7f3dfe8f5a9a456e6f180788c5",
+          "alt": "Oryginalny układ zadania 14 z arkusza OJHP-100-2004, strona 16.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    }
+  ]
+}

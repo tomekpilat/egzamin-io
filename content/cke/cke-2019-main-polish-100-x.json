@@ -1,0 +1,1227 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2019-main-polish-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2019-main-polish-100-x",
+    "source_document_id": "OPOP-100-1904",
+    "source_pdf_sha256": "50d7e34defdee5e35945e9366c411464ebe2181faeb3a6004e731d3562a8500a",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2019-2/",
+    "source_label": "CKE 2019 · język polski · termin główny · wariant 100-X",
+    "exam_year": 2019,
+    "exam_session": "main",
+    "subject": "polish",
+    "variant_code": "100-X",
+    "question_count": 22,
+    "supplementary_sources": [
+      {
+        "id": "cke-2019-main-polish-100-x-rules",
+        "path": "content/cke/sources/2019/polish/Zasady_oceniania_OPOP-100-1904.pdf",
+        "sha256": "42a1f584ea5e2b4cd9c2225d6f8b9e41637c7a375d0c9c2f0cfe07190ff476d3",
+        "label": "Oficjalne zasady oceniania rozwiązań zadań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [],
+  "questions": [
+    {
+      "id": "cke-2019-main-polish-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Spośród podanych pytań wskaż to, na które nie można znaleźć odpowiedzi\nw przytoczonym fragmencie utworu Antoine’a de Saint-Exupéry’ego. Wybierz właściwą\nodpowiedź spośród podanych.\nA. Kiedy przyjaźń się kończy?\nB. Kogo można uznać za przyjaciela?\nC. Jak podtrzymać więź z przyjacielem?\nD. Jakie są niezbędne warunki przyjaźni?",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "A"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nA\n1 Rozporządzenie Ministra Edukacji Narodowej z dnia 27 sierpnia 2012 r. w sprawie podstawy programowej wychowania przedszkolnego oraz kształcenia ogólnego\nw poszczególnych typach szkół (Dz.U. z 30 sierpnia 2012 r. poz. 977); II etap edukacyjny: klasy IV–VI.\n2 Rozporządzenie Ministra Edukacji Narodowej z dnia 14 lutego 2017 r. w sprawie podstawy programowej wychowania przedszkolnego oraz podstawy programowej kształcenia\nogólnego dla szkoły podstawowej, w tym dla uczniów z niepełnosprawnością intelektualną w stopniu umiarkowanym lub znacznym, kształcenia ogólnego dla branżowej\nszkoły I stopnia, kształcenia ogólnego dla szkoły specjalnej przysposabiającej do pracy oraz kształcenia ogólnego dla szkoły policealnej (Dz.U. z 2017 r. poz. 356); II etap\nedukacyjny: klasy VII i VIII.",
+      "solution_steps": [
+        "Klucz CKE: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q01-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q01-page-5",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q01-page-5.webp",
+          "sha256": "c75ebb01e09c7c76f324fde1996af603e50489b1d51b63ca43718b5a0274c920",
+          "alt": "Oryginalny układ zadania 1 z arkusza OPOP-100-1904, strona 5.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 5.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-polish-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nW przytoczonym fragmencie Małego Księcia wyraz oswojenie oznacza\nA. upodobnienie się do kogoś lub czegoś.\nB. podporządkowanie sobie kogoś lub czegoś.\nC. przyuczenie do służenia komuś lub czemuś.\nD. stworzenie emocjonalnych więzi z kimś lub czymś.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "D"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nD",
+      "solution_steps": [
+        "Klucz CKE: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q02-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q02-page-5",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q02-page-5.webp",
+          "sha256": "f617a79be29a8350a674281448f690e8ab76ddf9ac58e630a8911d343afaba20",
+          "alt": "Oryginalny układ zadania 2 z arkusza OPOP-100-1904, strona 5.",
+          "caption": "Zadanie 2 — oryginalny układ CKE, strona 5.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-polish-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Oceń prawdziwość podanych stwierdzeń w odniesieniu do przytoczonego fragmentu oraz\ncałego utworu Mały Książę. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli\njest fałszywe.\nWszystkie róże przedstawione w utworze Mały Książę są symbolem\nP F\nskromności.\nW utworze Mały Książę lis jest uosobieniem przebiegłości i chytrości. P F",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "FF"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie\nFF",
+      "solution_steps": [
+        "Klucz CKE: FF.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q03-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q03-page-5",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q03-page-5.webp",
+          "sha256": "b95d71a1c4641b6c729b2ccc18b51b3c48a8f4763bfae5cc9a85b4f5936094fb",
+          "alt": "Oryginalny układ zadania 3 z arkusza OPOP-100-1904, strona 5.",
+          "caption": "Zadanie 3 — oryginalny układ CKE, strona 5.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-polish-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Oceń prawdziwość podanych stwierdzeń w odniesieniu do całego utworu Mały Książę.\nWybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\nW Małym Księciu zestawiono na zasadzie przeciwieństwa świat dziecka\nP F\ni świat dorosłych.\nMały Książę przedstawia historię o dojrzewaniu tytułowego bohatera do\nP F\nprzyjaźni i miłości.\nOPOP-100-1904 Strona 5 z 21",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "PP"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie\nPP",
+      "solution_steps": [
+        "Klucz CKE: PP.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q04-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q04-page-5",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q04-page-5.webp",
+          "sha256": "b6db0e46e71cef1ec54cc8c0f7f2b8eaeafd46c3da692d7a54ab734f22001687",
+          "alt": "Oryginalny układ zadania 4 z arkusza OPOP-100-1904, strona 5.",
+          "caption": "Zadanie 4 — oryginalny układ CKE, strona 5.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-polish-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "5.1. Wyjaśnij sens wypowiedzi lisa: Dobrze widzi się tylko sercem. Najważniejsze jest\nniewidoczne dla oczu.\n…………………………………………………………………………………...………………\n…………………………………………………………………………………...………………\n………………………………………………………………………………………...…………\n…………………………………………………………………………………...………………\n………………………………………………………………………………………...…………\n…………………………………………………………………………………...………………\n5.2. Spośród lektur obowiązkowych (wymienionych na stronie 3 tego arkusza\negzaminacyjnego), innych niż Mały Książę, wybierz tę, której bohater postąpił zgodnie\nze słowami lisa: Dobrze widzi się tylko sercem. Najważniejsze jest niewidoczne dla oczu.\nPodaj tytuł tej lektury oraz jej bohatera.\nUzasadnij swój wybór. W uzasadnieniu przywołaj sytuację z tej lektury, ilustrującą\ntwoją argumentację.\nTytuł lektury: ……………………………………………………………………………………\nBohater lektury: ………………………………………………………………………...….……\nUzasadnienie wyboru: …………………………………………………………………...……...\n………………………………………………………………………………………...…………\n………………………………………………………………………………………...…………\n………………………………………………………………………………………...…………\n………………………………………………………………………………………...…………\n………………………………………………………………………………………...…………\n………………………………………………………………………………………...…………\n………………………………………………………………………………………...…………\n………………………………………………………………………………………...…………",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – poprawne wyjaśnienie cytatu.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nUwaga. Za odpowiedź przyznajemy 1 punkt, jeśli wyjaśnia ona przenośny sens cytatu.\nPrzykładowe rozwiązania ocenione na 1 punkt\n• Cytat ten oznacza, że w życiu należy kierować się sercem. Nie powinno się zwracać uwagi na wygląd.\n• Słowa te mówią o tym, że w życiu najważniejsze są uczucia.\n• Człowieka nie poznamy nigdy dobrze, jeśli będziemy kierować się tylko wyglądem zewnętrznym.\n• Cytat ten mówi, że nie należy zwracać uwagi na wygląd. Liczy się wnętrze człowieka.\n• Najważniejszy jest charakter człowieka, a nie to, jak wygląda.\n5.2. (0–2)\nZasady oceniania\n2 pkt – podanie tytułu i bohatera lektury obowiązkowej, poprawne uzasadnienie zilustrowane sytuacją z lektury.\n1 pkt – podanie tytułu i bohatera lektury obowiązkowej oraz poprawne uzasadnienie bez przywołania sytuacji z lektury ALBO podanie bohatera lektury\nobowiązkowej oraz poprawne uzasadnienie zilustrowane sytuacją z lektury.\n0 pkt – odpowiedź nie spełnia kryteriów na 1 punkt ALBO brak odpowiedzi.\nUwaga. W przypadku, gdy zdający wskaże poprawnie tytuł lektury, nie wskaże bohatera, ale uzasadnienie pozwala zidentyfikować bohatera, zdający\notrzymuje maksymalnie 1 punkt.\nW przypadku, gdy zdający wskaże poprawnie tytuł lektury i bohatera, ale błędnie uzasadni swój wybór, otrzymuje 0 punktów.\nW przypadku, gdy zdający wskaże poprawnie bohatera i tytuł lektury, ale nie uzasadni wyboru, otrzymuje 0 punktów.\nPrzykładowe rozwiązania ocenione na 2 punkty\n• Tytuł lektury: Quo vadis\nBohater: Marek Winicjusz\nUzasadnienie: Początkowo zauroczył się Ligią, ale dopiero później, gdy ją poznał, zrozumiał, że jest ona dobrym człowiekiem i dzięki niej się nawrócił.\n• Tytuł lektury: Opowieść wigilijna\nBohater: Ebenezer Scrooge\nUzasadnienie: Scrooge początkowo był samolubny, ale spotkanie z duchami i przeszłością sprawiło, że postąpił zgodnie ze słowami lisa. Zaczął kierować\nsię sercem i pomógł rodzinie oraz pracownikowi.\nPrzykładowe rozwiązania ocenione na 1 punkt\n• Tytuł lektury: Quo vadis\nBohater: Marek Winicjusz\nUzasadnienie: Marek pokochał Ligię dopiero wtedy, gdy ją naprawdę poznał.\n• Tytuł lektury: Pan Tadeusz\nBohater: Tadeusz Soplica\nUzasadnienie: Tadeuszowi na początku podobała się Telimena, a potem zrozumiał, że kocha Zosię.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q05-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q05-page-6",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q05-page-6.webp",
+          "sha256": "a35d9c6410e2f06cfe55f145620a7325795a09c8d3bd4f26f2fc37995642d732",
+          "alt": "Oryginalny układ zadania 5 z arkusza OPOP-100-1904, strona 6.",
+          "caption": "Zadanie 5 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-polish-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "Mały Książę w czasie swoich podróży spotkał różnych ludzi. Dwóch z nich przedstawiono na\nponiższych rysunkach.\nKról Bankier\nAntoine de Saint-Exupéry, Mały Książę, tłum. Jan Szwykowski, Warszawa 2011.\nWyjaśnij, co sprawiło, że ani Król, ani Bankier nie zostali przyjaciółmi Małego Księcia.\nKról: .…………………………………..……………………….………………...……..………\n…………………………………………………………………………………...………………\n…………………………………………………………………………………...………………\nBankier: .…………..………………..………………………….………………...…………...…\n…………………………………………………………………………………...………………\n…………………………………………………………………………………...………………",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 pkt – poprawne wyjaśnienie dotyczące Króla ORAZ Bankiera.\n1 pkt – poprawne wyjaśnienie dotyczące Króla ALBO Bankiera.\n0 pkt – odpowiedź niepoprawna ALBO brak odpowiedzi.\nUwaga. Jeśli zdający popełni błąd rzeczowy przy wyjaśnianiu dotyczącym Króla albo Bankiera, wówczas za tę część odpowiedzi otrzymuje 0 punktów.\nPrzykładowe rozwiązania ocenione na 2 punkty\n• Król – ma silne poczucie władzy i lubi rządzić, a to wyklucza opierającą się na szacunku przyjaźń, która była ważna dla Małego Księcia.\nBankier – posiadanie dla niego jest tak ważne, że nie dostrzega świata zewnętrznego, a dla Małego Księcia istotne były inne wartości niż dobra\nmaterialne.\n• Król – za bardzo chciał rządzić, a w przyjaźni ważne jest, by szukać porozumienia, a nie narzucać komuś swoje zdanie, co dobrze rozumiał Mały Książę.\nBankier – dla niego ważne były tylko liczby, nie liczył się drugi człowiek, inaczej niż dla Małego Księcia.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q06-page-7"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q06-page-7",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q06-page-7.webp",
+          "sha256": "8e2e56526a5f8a8b82754a80d12523b0f6d28ab87c52d6621e22984259bc9b93",
+          "alt": "Oryginalny układ zadania 6 z arkusza OPOP-100-1904, strona 7.",
+          "caption": "Zadanie 6 — oryginalny układ CKE, strona 7.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-polish-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Uzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz\nodpowiedź spośród oznaczonych literami C i D.\nW zdaniu Twoja róża jest jedyna na świecie podkreślony wyraz służy uwydatnieniu A B\nróży. Ten wyraz jest C D .\nA. wyobcowania C. rzeczownikiem\nB. wyjątkowości D. przymiotnikiem\nPRZENIEŚ ROZWIĄZANIE ZADANIA 7. NA KARTĘ ODPOWIEDZI!\nOPOP-100-1904 Strona 7 z 21",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "BD"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie\nBD",
+      "solution_steps": [
+        "Klucz CKE: BD.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q07-page-7"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q07-page-7",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q07-page-7.webp",
+          "sha256": "f6ea46460b00beb9c44385c0b4b6b1f8e023a5613f0c1ce75491030627308388",
+          "alt": "Oryginalny układ zadania 7 z arkusza OPOP-100-1904, strona 7.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 7.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-polish-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "8.1. Którym spójnikiem można zastąpić podkreślony wyraz w zdaniu Jesteście piękne, lecz\npróżne, zachowując sens wypowiedzi? Wybierz właściwą odpowiedź spośród\npodanych.\nA. i\nB. ale\nC. albo\nD. więc\n8.2. Czy wypowiedź Jesteście piękne, lecz próżne pozwala wnioskować o tym, co jest ważne\ndla Małego Księcia? Uzasadnij swoje stanowisko.\n………………………………………………………………………………….………………\n……………………….…………………………………………………………………………\n…………………….…………………………………………………………………………….",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nB\n8.2. (0–1)\nZasady oceniania\n1 pkt – poprawna odpowiedź zawierająca stanowisko i uzasadnienie.\n0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.\nPrzykładowe odpowiedzi ocenione na 1 punkt\n• Uważam, że tak. Mały Książę doceniał piękno zewnętrzne, ale ważniejsze dla bohatera były zalety charakteru i usposobienia. Spójnik „lecz” tę\nhierarchię wartości podkreśla.\n• Uważam, że można na podstawie tej wypowiedzi stwierdzić, co jest ważne dla Małego Księcia. Liczy się dla niego piękno, a nie pochwala próżności.\n• Wypowiedź ta pozwala wnioskować, co jest ważne dla Małego Księcia. Dla niego ważne jest wnętrze drugiej osoby, a nie wygląd.\n• Uważam, że trudno jednoznacznie powiedzieć na podstawie tej wypowiedzi, co jest ważne dla Małego Księcia. Z jednej strony ważne są dla niego cechy\ncharakteru, a z drugiej strony zwraca też uwagę na wygląd.",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q08-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q08-page-8",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q08-page-8.webp",
+          "sha256": "c61adaa8c78cc9013bd67d8a70b8cd1f0a32dcff5ee97bcc0aa7edbb3ed79c91",
+          "alt": "Oryginalny układ zadania 8 z arkusza OPOP-100-1904, strona 8.",
+          "caption": "Zadanie 8 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-polish-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Na podstawie lektury Mały Książę powstały Wskazówki dla podróżników. Wybierz zdanie,\nw którym interpunkcja jest niepoprawna.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "A"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nA",
+      "solution_steps": [
+        "Klucz CKE: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q09-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q09-page-8",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q09-page-8.webp",
+          "sha256": "39c37668d5255b65cd57fa5948df8b3117de3d67f2ea163549b61f2448d868d6",
+          "alt": "Oryginalny układ zadania 9 z arkusza OPOP-100-1904, strona 8.",
+          "caption": "Zadanie 9 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-polish-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "W którym z wyrazów pisownia „ó” jest zgodna z tą samą szczegółową zasadą\nortograficzną, co zastosowana w wyrazie sposób? Wybierz właściwą odpowiedź spośród\npodanych.\nA. róża\nB. dwóch\nC. próżne\nD. później",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nB",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q10-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q10-page-8",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q10-page-8.webp",
+          "sha256": "83ab7a28569d6cdf38f799d9e8f43dbeb7ae62b9ae0fcaa34dbffe27210028f6",
+          "alt": "Oryginalny układ zadania 10 z arkusza OPOP-100-1904, strona 8.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-polish-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        9,
+        10
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "Zredaguj zaproszenie na premierę spektaklu Tajemnice oswajania opartego na motywach\nutworu Antoine’a de Saint-Exupéry’ego Mały Książę. Zachęć do obejrzenia spektaklu,\nużywając dwóch argumentów.\nUwaga: w ocenie wypowiedzi będzie brana pod uwagę poprawność językowa,\nortograficzna i interpunkcyjna.\nZaproszenie\n..……………………………………………...…….…………\n..……………………………………………...…….…………\n..……………………………………………...…….…………\n..……………………………………………...…….…………\n..……………………………………………...…….…………\n..……………………………………………...…….…………\n..……………………………………………...…….…………\n..……………………………………………...…….…………\n..……………………………………………...…….…………\n..……………………………………………...…….…………\n..……………………………………………...…….…………\nOPOP-100-1904 Strona 9 z 21\nPrzeczytaj tekst i wykonaj zadania.\nKrzysztof Teodor Toeplitz\nPOCZĄTKI KINA\nBracia Lumière1, którzy przeszli do historii uważani za ojców dzisiejszej sztuki filmowej,\nnie traktowali swego wynalazku zbyt poważnie. Sposób, w jaki się do niego odnosili, niewiele\nmiał wspólnego z poglądami późniejszych pionierów filmu i stawiał ich raczej w rzędzie tych\nwszystkich eksperymentatorów i wynalazców, którzy w kinematografie2 widzieli bardziej\nzabawkę niż zadatek na nową sztukę.\nO tym, że z kinematografu powstać może sztuka, bracia Lumière nie chcieli nawet\npomyśleć. Co więcej, skłonni byli uważać każdego, komu myśl taka mogła powstać w głowie,\nza niepoprawnego marzyciela lub szaleńca. Tak przynajmniej wynika ze wspomnień takiego\nwłaśnie „szaleńca”, który zachwycony wynalazkiem Lumière’ów, udał się do nich, aby odkupić\nich patent.\nPoszedłem do Augusta Lumière’a – wspominał później Georges Méliès3 –\ni zaproponowałem mu kupno jego wynalazku. Dawałem mu dziesięć, dwadzieścia, pięćdziesiąt\ntysięcy franków. Ale Lumière nie chciał mnie nawet słuchać. Młody człowieku – powiedział –\nma pan szczęście, że mój wynalazek nie jest na sprzedaż, ponieważ doprowadziłby on pana do\nruiny. Być może uda się wykorzystać go jeszcze przez jakiś czas jako ciekawostkę naukową, ale\nnie ma on żadnej wartości handlowej.\nNa szczęście Georges Méliès nie dał się wówczas przekonać ojcu kinematografii. Historia\nfilmu zyskała w osobie Mélièsa człowieka, który tchnął nowe życie, nadał nowy sens\ni znaczenie nieszkodliwej „ciekawostce naukowej”.\nW krajach takich jak Francja, Anglia i Ameryka istniały w XIX wieku dziesiątki zespołów\nteatralnych, które rzadko kiedy mogły poszczycić się własną salą do przedstawień. Zespoły te\npragnęły dostarczyć prostemu widzowi sensacji, łez i rozrywki. Ich widzowie domagali się\nprzede wszystkim akcji, zdarzeń mrożących krew w żyłach, nie gardzili również fantazją,\nsztuczkami magicznymi lub niewymyślnymi a wzruszającymi historyjkami o niewinnych\nsierotach.\nWymaganie, aby wszystko na scenie było „jak żywe”, przy którym nieugięcie obstawała\npubliczność ludowych teatrów, zmuszało reżyserów do poszukiwania wciąż nowych sztuczek,\nchwytów, zdolnych zaspokoić to żądanie. A więc nie wystarczała jedynie dekoracja, zresztą\nzazwyczaj skromna, ze względu na trudności transportu. Trzeba było dodatkowo posługiwać\nsię tłami malowanymi na płótnie. Ale i to nie zaspokajało głodu widowni. Z czasem na scenie\npojawiać się zaczęły „prawdziwe” pociągi i żywe zwierzęta, choćby tak dzikie jak lwy,\nodgrywające szczególnie wielką rolę w sztukach, których akcja toczyła się w starożytnym\nRzymie. Jeden z reżyserów pokazał nawet eksplozję i pożar na statku płynącym po Tamizie.\nJest więcej niż pewne, że gdyby Méliès nie spędził pierwszych lat swojej kariery właśnie\nw takim teatrze, nigdy nie zachwyciłby się filmem i nie dostrzegłby w nim cudownego\ninstrumentu, za pomocą którego znacznie szybciej, łatwiej i lepiej rozwiązać można te\nwszystkie problemy, nad jakimi się głowił, gdy pracował w teatrze.\nNa podstawie: Krzysztof Teodor Toeplitz, Kino dla wszystkich, Warszawa 1964.\n1 Bracia Lumière (wym. lumjer) – August i Louis, wynalazcy kinematografu.\n2 Kinematograf – aparat filmowy umożliwiający rejestrację i projekcję na ekranie ruchomych obrazów.\n3 Georges Méliès (wym. żorż meljes) – reżyser teatralny, aktor, magik-iluzjonista.\n[447 wyrazów]",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\nTreść i forma:\n2 pkt treść zgodna z poleceniem, uwzględnione 2 argumenty; uwzględnionych 5 elementów dotyczących formy: kto zaprasza? kogo zaprasza? na co\nzaprasza? kiedy się odbywa? gdzie się odbywa?\n1 pkt treść zgodna z poleceniem, uwzględnione 2 argumenty; uwzględnione 4 elementy dotyczące formy: kto zaprasza? ORAZ/ALBO kogo\nzaprasza? ORAZ/ALBO na co zaprasza? ORAZ/ALBO kiedy się odbywa? ORAZ/ALBO gdzie się odbywa?\n0 pkt treść niezgodna z poleceniem ALBO treść zgodna z poleceniem, ale uwzględnione tylko 3 elementy dotyczące formy: kto zaprasza?\nORAZ/ALBO kogo zaprasza? ORAZ/ALBO na co zaprasza? ORAZ/ALBO kiedy się odbywa? ORAZ/ALBO gdzie się odbywa?\nPoprawność językowa, ortograficzna i interpunkcyjna:\n1 punkt – łącznie nie więcej niż dwa błędy (językowe, ortograficzne, interpunkcyjne).\n0 punktów – łącznie trzy lub więcej błędów (językowych, ortograficznych, interpunkcyjnych).\nUCZNIOWIE ZE SPECYFICZNYMI TRUDNOŚCIAMI W UCZENIU SIĘ\nPoprawność językowa, ortograficzna i interpunkcyjna:\n1 punkt – łącznie nie więcej niż trzy błędy (językowe, ortograficzne, interpunkcyjne).\n0 punktów – łącznie cztery lub więcej błędów (językowych, ortograficznych, interpunkcyjnych).\nPrzykładowe rozwiązania ocenione na 3 punkty\nW imieniu Szkolnego Koła Teatralnego serdecznie zapraszam wszystkich uczniów naszej szkoły na premierę spektaklu pt. „Tajemnice oswajania” opartego na\nmotywach utworu Antoine’a de Saint-Exupéry’ego „Mały Książę”. Premiera spektaklu odbędzie się 25 kwietnia 2019 r. o godzinie 17.00 w bibliotece szkolnej.\nZachęcam wszystkich do udziału w tym wydarzeniu. Po spektaklu będzie można porozmawiać z aktorami oraz wziąć udział w warsztatach teatralnych.\nSerdecznie zapraszam\nJan Kowalski\nSzkolne Koło Teatralne\nSerdecznie zapraszamy koleżanki i kolegów z klas VII i VIII na premierę spektaklu pt. „Tajemnice oswajania” opartego na motywach utworu „Mały Książę”.\nPremierowe przedstawienie odbędzie się 15 kwietnia 2019 r. o godzinie 18.00 w Domu Kultury przy ul. Kwiatowej 6. Po spektaklu zapraszamy na poczęstunek\nprzygotowany przez aktorów. Będzie można też dokładnie obejrzeć kostiumy, które na przedstawienie uszyli rodzice występujących w nim uczniów. Zachęcamy\nwszystkich do udziału w tym wydarzeniu.\nSzkolne Koło Teatralne",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q11-page-9"
+        },
+        {
+          "type": "image",
+          "asset_id": "q11-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q11-page-9",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q11-page-9.webp",
+          "sha256": "4c48f5e76b35be697d1280b1bca549aef2a6a6bfc31e9b34d4e506d736448363",
+          "alt": "Oryginalny układ zadania 11 z arkusza OPOP-100-1904, strona 9.",
+          "caption": "Zadanie 11 — oryginalny układ CKE, strona 9.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q11-page-10",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q11-page-10.webp",
+          "sha256": "b939fb15d51a9674303713651044981e0975a0bb23d3658c4ef5b589b286f5ca",
+          "alt": "Oryginalny układ zadania 11 z arkusza OPOP-100-1904, strona 10.",
+          "caption": "Zadanie 11 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-polish-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        11
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "Z podanych pytań wybierz te, na które odpowiedzi zawarto we wskazanych akapitach\ntekstu, i wpisz do tabeli oznaczenia literowe tych pytań. Każdemu akapitowi\nprzyporządkuj jedno pytanie.\nA. Jak Méliès zareagował na odmowę Augusta Lumière’a?\nB. Jaką kwotę Méliès zaproponował wynalazcom kinematografu?\nC. Jak bracia Lumière traktowali osoby zainteresowane ich wynalazkiem?\nD. Za pomocą jakich środków reżyserzy teatralni starali się uatrakcyjnić swoje spektakle?\nE. Jakie doświadczenia ułatwiły Mélièsowi realizację planów związanych z rozwojem filmu?\nAkapit Pytanie\n2.\n4.\n6.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "2–C; 4–A; 6–D"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 pkt – poprawne przyporządkowanie pytań do trzech akapitów.\n1 pkt – poprawne przyporządkowanie pytań do dwóch akapitów.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie\n2–C; 4–A; 6–D",
+      "solution_steps": [
+        "Klucz CKE: 2–C; 4–A; 6–D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q12-page-11"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q12-page-11",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q12-page-11.webp",
+          "sha256": "83c8e43b48ca700d78db1acd201dbe03f87c76008fcf5a33becc5c52bc56f554",
+          "alt": "Oryginalny układ zadania 12 z arkusza OPOP-100-1904, strona 11.",
+          "caption": "Zadanie 12 — oryginalny układ CKE, strona 11.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-polish-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        11
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Uzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz\nodpowiedź spośród oznaczonych literami C i D.\nKarierę A B można opisać wyrażeniem z teatru do filmu. Potwierdzają to informacje\npodane w C D akapicie.\nA. braci Lumière C. pierwszym\nB. Georges’a Mélièsa D. ostatnim",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "BD"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie\nBD",
+      "solution_steps": [
+        "Klucz CKE: BD.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q13-page-11"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q13-page-11",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q13-page-11.webp",
+          "sha256": "1bec40cdd93ef99b20402d4d4b252a15e948d69f3e067db3ff7f618ab7454c64",
+          "alt": "Oryginalny układ zadania 13 z arkusza OPOP-100-1904, strona 11.",
+          "caption": "Zadanie 13 — oryginalny układ CKE, strona 11.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-polish-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        11
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe,\nalbo F – jeśli jest fałszywe.\nAugust Lumière spodziewał się zdobyć dzięki kinematografowi duży\nP F\nmajątek.\nGeorges Méliès nie podzielał poglądów Augusta Lumière’a na temat\nP F\nmożliwości zastosowania kinematografu.\nOPOP-100-1904 Strona 11 z 21",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "FP"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie\nFP",
+      "solution_steps": [
+        "Klucz CKE: FP.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q14-page-11"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q14-page-11",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q14-page-11.webp",
+          "sha256": "00ac9de3f2cc71897f17e2f49326178c5501561d247a3a273e352d76790bf644",
+          "alt": "Oryginalny układ zadania 14 z arkusza OPOP-100-1904, strona 11.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 11.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-polish-100-x-q15",
+      "number": "15",
+      "sort_order": 15,
+      "source_pages": [
+        12
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Mirosław Przylipiak tak napisał o początkach kinematografii:\nKinematografia powstała dopiero w wyniku zetknięcia się nowego urządzenia ze światem\nludzkich potrzeb.\nCzy zacytowana wyżej opinia może stanowić komentarz do tekstu Początki kina?\nUzasadnij odpowiedź, odwołując się do treści tekstu Krzysztofa Teodora Toeplitza.\n…………………………………………………………………………………………...………\n……………………………………………………………………………………………...……\n………………………………………………………………………………………………...…\n…………………………………………………………………………………………...………\n……………………………………………………………………………………………...……",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – poprawna odpowiedź zawierająca stanowisko oraz uzasadnienie odwołujące się do tekstu Krzysztofa Teodora Toeplitza.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nUwaga. Jeśli zdający zajmie tylko stanowisko, ale go nie uzasadni, otrzymuje 0 punktów.\nPrzykładowe odpowiedzi ocenione na 1 punkt\n• Uważam, że opinia Mirosława Przylipiaka może być komentarzem do tekstu „Początki kina”. Widzowie teatrów w XIX wieku zaczęli się domagać coraz\nbardziej atrakcyjnych przedstawień, w których wszystko miało być „jak żywe”. Tę potrzebę udało się zaspokoić właśnie dzięki urządzeniu, jakim był\nkinematograf.\n• Opinia ta może stanowić komentarz do tekstu „Początki kina”. Kinematograf powstał dlatego, że ludzie chcieli oglądać coraz więcej nowych sztuczek, nie\nwszystko udawało się pokazać na żywo. Miał on utrwalać między innymi efekty specjalne.\n• Według mnie wyżej zacytowana opinia może stanowić komentarz do tekstu. Potwierdzeniem może być fragment tekstu „Początki kina”: „Ale i to nie\nzaspokajało głodu widowni. Z czasem na scenie pojawiać się zaczęły „prawdziwe” pociągi i żywe zwierzęta”. Ten „głód widowni” spowodował, że trzeba\nbyło wynaleźć coś, co pozwoliłoby na pokazywanie prawdziwych pociągów i żywych zwierząt.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q15-page-12"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q15-page-12",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q15-page-12.webp",
+          "sha256": "f162344c862d2e499bd83fd65ff43a3d9cc28a21089146ef48d00b78fb81593e",
+          "alt": "Oryginalny układ zadania 15 z arkusza OPOP-100-1904, strona 12.",
+          "caption": "Zadanie 15 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-polish-100-x-q16",
+      "number": "16",
+      "sort_order": 16,
+      "source_pages": [
+        12
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "Przeczytaj poniższy fragment.\nAkcja miała przerwać chodzenie polskiej publiczności do kin, gdyż w kinach wyświetlano stale\npropagandowe dodatki niemieckie i czysty ich dochód szedł do kas propagandy niemieckiej.\nJak w represjach fotograficznych wybił się Alek, tak w początkach „pracy kinowej” głośny stał\nsię Rudy.\n16.1. Podaj tytuł lektury obowiązkowej, z której pochodzi powyższy fragment.\nTytuł lektury: ……………………………………………………………………………………\n16.2. Podaj przykład działania, które podjęli bohaterowie tej lektury, by przerwać\nchodzenie polskiej publiczności do kin. Odwołaj się do całego utworu.\n………………………………………………………………………………………………...…\n…………………………………………………………………………………………...………\n……………………………………………………………………………………………...……",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "Kamienie na szaniec"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nKamienie na szaniec\n16.2. (0–1)\nZasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nUwaga. Uczeń otrzymuje 1 punkt, jeśli wymieni jedno z podanych poniżej działań.\nRozwiązanie\npisanie na murach hasła „Tylko świnie siedzą w kinie”\nwpuszczanie gazu do kin\nwydanie specjalnej ulotki do młodzieży\nwywoływanie wybuchów i pożarów w kinach\nrozlepianie „obwieszczenia” szefa niemieckiej propagandy wzywającego Polaków do uczęszczania do kin",
+      "solution_steps": [
+        "Klucz CKE: Kamienie na szaniec.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q16-page-12"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q16-page-12",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q16-page-12.webp",
+          "sha256": "23ff0ae0dc3e9d736819f8055a31c249fa275f7b11fb02cd293ccad494154149",
+          "alt": "Oryginalny układ zadania 16 z arkusza OPOP-100-1904, strona 12.",
+          "caption": "Zadanie 16 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-polish-100-x-q17",
+      "number": "17",
+      "sort_order": 17,
+      "source_pages": [
+        13
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Przeczytaj definicję wyrazu kino ze słownika języka polskiego.\n1. «obiekt widowiskowy przeznaczony do publicznej projekcji filmów, znajdujący się\nw budynku lub na wolnej przestrzeni»\n2. «sztuka filmowa, kinematografia»\n3. «seans filmowy»\nSłownik języka polskiego, pod red. Mieczysława Szymczaka, Warszawa 1999.\nW którym z podanych zdań użyto wyrazu kino w znaczeniu 1.? Wybierz właściwą\nodpowiedź spośród podanych.\nA. Dostałem na urodziny 20 złotych na kino.\nB. W kinie zawsze można obejrzeć najnowsze filmy.\nC. Początki kina dźwiękowego sięgają lat 30. XX wieku.\nD. Gwiazda kina chce przekazać swój majątek na cele charytatywne.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nB",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q17-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q17-page-13",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q17-page-13.webp",
+          "sha256": "100c389264b975d6f03e7ad529cdf2bd2dc91840d2bf3650c5b9063b5d678696",
+          "alt": "Oryginalny układ zadania 17 z arkusza OPOP-100-1904, strona 13.",
+          "caption": "Zadanie 17 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-polish-100-x-q18",
+      "number": "18",
+      "sort_order": 18,
+      "source_pages": [
+        13
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna",
+      "difficulty": 2,
+      "prompt": "Oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe,\nalbo F – jeśli jest fałszywe.\nSformułowania: na szczęście, cudownego instrumentu, wzruszającymi\nP F\nhistoryjkami, uwydatniają subiektywny charakter tekstu Początki kina.\nAby nawiązać kontakt z czytelnikiem, Krzysztof Teodor Toeplitz używa\nP F\nw tekście czasowników w pierwszej osobie liczby mnogiej.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "PF"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie\nPF",
+      "solution_steps": [
+        "Klucz CKE: PF.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q18-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q18-page-13",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q18-page-13.webp",
+          "sha256": "602582ec07897713acae9db8565ddd385e30a9fc8940d72b33b0a865c38fb7bf",
+          "alt": "Oryginalny układ zadania 18 z arkusza OPOP-100-1904, strona 13.",
+          "caption": "Zadanie 18 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-polish-100-x-q19",
+      "number": "19",
+      "sort_order": 19,
+      "source_pages": [
+        13
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna",
+      "difficulty": 2,
+      "prompt": "Przekształć podane zdania tak, aby zachować ich sens. W każdą lukę wpisz imiesłów\nutworzony od podkreślonego czasownika.\n1. Bracia Lumière należeli do wynalazców, którzy w kinematografie widzieli bardziej zabawkę\nniż sztukę.\nBracia Lumière należeli do wynalazców …………………….…… w kinematografie bardziej\nzabawkę niż sztukę.\n2. Dzięki kinematografowi Georges Méliès rozwiązał wszystkie problemy, nad jakimi się\ngłowił, gdy pracował w teatrze.\nDzięki kinematografowi Georges Méliès rozwiązał wszystkie problemy, nad jakimi się\ngłowił, …………………….…… w teatrze.\nOPOP-100-1904 Strona 13 z 21",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "widzących, pracując"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – poprawne wpisanie dwóch imiesłowów.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie\nwidzących, pracując",
+      "solution_steps": [
+        "Klucz CKE: widzących, pracując.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q19-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q19-page-13",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q19-page-13.webp",
+          "sha256": "8796ad18967774912dbc8000a86a45179a0297cb5764c64ca62084ef92f6f09e",
+          "alt": "Oryginalny układ zadania 19 z arkusza OPOP-100-1904, strona 13.",
+          "caption": "Zadanie 19 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-polish-100-x-q20",
+      "number": "20",
+      "sort_order": 20,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna",
+      "difficulty": 2,
+      "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nFormant w wyrazie wynalazca wskazuje na nazwę\nA. cechy.\nB. narzędzia.\nC. czynności.\nD. wykonawcy czynności.\nPRZENIEŚ ROZWIĄZANIE ZADANIA 20. NA KARTĘ ODPOWIEDZI!",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "D"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nD",
+      "solution_steps": [
+        "Klucz CKE: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q20-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q20-page-14",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q20-page-14.webp",
+          "sha256": "fa37d65ea5689b63966f3ba9866545f95b037112d0591199a2ce6003c7061aba",
+          "alt": "Oryginalny układ zadania 20 z arkusza OPOP-100-1904, strona 14.",
+          "caption": "Zadanie 20 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-polish-100-x-q21",
+      "number": "21",
+      "sort_order": 21,
+      "source_pages": [
+        14,
+        15
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna",
+      "difficulty": 3,
+      "prompt": "Obejrzyj zamieszczony poniżej plakat do filmu Syzyfowe prace w reżyserii Pawła\nKomorowskiego. Napis w języku rosyjskim СИЗИФОВ ТРУД (wym. sizifow trud), widoczny\nna plakacie, oznacza syzyfową pracę.\nR. Szaybo, K. Michałowska, M. Filipowicz\nwww.gapla.fn.org.pl\nAutorzy plakatu za pomocą różnych elementów graficznych przedstawili swoją\ninterpretację Syzyfowych prac. Wybierz dwa elementy graficzne i wyjaśnij ich sens\nw kontekście całej powieści Stefana Żeromskiego.\n......................................................................................................................................................\n......................................................................................................................................................\n......................................................................................................................................................\n......................................................................................................................................................\n......................................................................................................................................................\n......................................................................................................................................................",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 pkt – wskazanie dwóch elementów graficznych i wyjaśnienie sensu każdego z nich w kontekście całego utworu.\n1 pkt – wskazanie jednego elementu graficznego i wyjaśnienie jego sensu w kontekście całego utworu.\n0 pkt – wskazanie jednego elementu graficznego bez wyjaśnienia LUB odpowiedź niepoprawna albo brak odpowiedzi.\nPrzykładowe rozwiązania ocenione na 2 punkty\nBiało-czerwone skrzydła – odniesienie do flagi biało-czerwonej; książka opowiada o Polakach w zaborze rosyjskim, wśród których byli tacy, którzy nie\nzapomnieli o swojej polskości.\nTabliczka z napisem w języku rosyjskim – odwołanie do rusyfikacji, której byli poddawani polscy uczniowie.\nUczeń w szkolnym mundurku – główny bohater uczęszczał do szkoły w Klerykowie.\nChłopak i dziewczyna – to główni bohaterowie czyli Marcin i Biruta – obejmują się, bo łączyło ich uczucie.\nZniszczony mur – może symbolizować niszczenie polskości, której jednak udaje się przetrwać mimo działań rusyfikacyjnych.\nDziewczyna patrząca wprost – to Biruta, która podkreślała swoją polskość, nie dała się zrusyfikować i nie musi się niczego wstydzić.\nChłopak odwrócony tyłem – to Marcin, który dał się częściowo zrusyfikować i teraz wstydzi się spojrzeć w oczy innym ludziom.\nZASADY OCENIANIA WYPRACOWAŃ\n1. Jeżeli wypowiedź w całości jest nie na temat, egzaminator oceni ją na 0 pkt. Nie sprawdza i nie zaznacza żadnych błędów w pracy. Egzaminator\numieszcza dopisek – „Praca nie na temat”.\n2. Jeżeli w wypowiedzi uczeń w ogóle nie odwołał się do treści lektury obowiązkowej wskazanej w poleceniu, za całą wypowiedź egzaminator przyzna\n0 pkt. Nie sprawdza i nie zaznacza żadnych błędów w pracy. Egzaminator umieszcza dopisek – „Brak odwołania do lektury obowiązkowej”.\n3. Jeżeli wypowiedź jest nieczytelna, egzaminator oceni ją na 0 pkt.\n4. Jeżeli wypowiedź nie zawiera w ogóle rozwinięcia (np. uczeń napisał tylko wstęp), egzaminator przyzna 0 pkt w każdym kryterium.\n5. Jeżeli wypowiedź zawiera 180 słów lub mniej, jest oceniana wyłącznie w kryteriach: realizacji tematu wypowiedzi, elementów twórczych/elementów\nretorycznych oraz kompetencji literackich i kulturowych. W pozostałych kryteriach egzaminator przyzna 0 punktów.\n6. Jeżeli wypowiedź jest napisana niesamodzielnie, np. zawiera fragmenty odtworzone z podręcznika, zadania zawartego w arkuszu egzaminacyjnym\nlub innego źródła, w tym internetowego, lub jest przepisana od innego ucznia, wówczas egzamin z języka polskiego, w przypadku takiego ucznia,\nzostanie unieważniony.\n7. W ocenie poprawności językowej nie bierze się pod uwagę błędów ortograficznych w wypowiedziach uczniów, którym przyznano takie dostosowanie\nwarunków przeprowadzenia egzaminu, zgodnie z Komunikatem dyrektora Centralnej Komisji Egzaminacyjnej w sprawie szczegółowych sposobów\ndostosowania warunków i form przeprowadzania egzaminu ósmoklasisty w danym roku szkolnym.\n8. Zabronione jest pisanie wypowiedzi obraźliwych, wulgarnych lub propagujących postępowanie niezgodne z prawem. W przypadku takich wypowiedzi\nzostanie podjęta indywidualna decyzja dotycząca danej pracy, np. nie zostaną przyznane punkty za styl i język lub cała wypowiedź nie będzie podlegała\nocenie.\n9. Wprowadza się oznaczenie literowe błędów: błąd rzeczowy – rzecz.\nUwaga: Liczone są wszystkie wyrazy: samodzielne i niesamodzielne.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q21-page-14"
+        },
+        {
+          "type": "image",
+          "asset_id": "q21-page-15"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q21-page-14",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q21-page-14.webp",
+          "sha256": "7c187d9d3615cd4e1092f8fef7147c50ffb0c20a8ef7732329bd1988af9d0eca",
+          "alt": "Oryginalny układ zadania 21 z arkusza OPOP-100-1904, strona 14.",
+          "caption": "Zadanie 21 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q21-page-15",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q21-page-15.webp",
+          "sha256": "8d6b45572f98034abbdfda51a7208d0df783ac5cefb8b51d0e70e8dd260ff27e",
+          "alt": "Oryginalny układ zadania 21 z arkusza OPOP-100-1904, strona 15.",
+          "caption": "Zadanie 21 — oryginalny układ CKE, strona 15.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-polish-100-x-q22",
+      "number": "22",
+      "sort_order": 22,
+      "source_pages": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        21,
+        22,
+        23
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna",
+      "difficulty": 3,
+      "prompt": "Wybierz jeden z podanych tematów i napisz wypracowanie.\nTemat 1.\nNapisz rozprawkę, w której rozważysz, czy w relacjach międzyludzkich lepiej kierować\nsię sercem czy rozumem. W argumentacji odwołaj się do lektury obowiązkowej (wybranej\nspośród lektur wymienionych na stronie 3 tego arkusza egzaminacyjnego) oraz do innego\nutworu literackiego. Twoja praca powinna liczyć co najmniej 200 wyrazów.\nTemat 2.\nNapisz opowiadanie o odwiedzinach lisa na planecie Małego Księcia, podczas których lis\nprzekonuje się, czy chłopiec wykorzystał wiedzę zdobytą podczas podróży. Wypracowanie\npowinno dowodzić, że znasz lekturę Mały Książę. Twoja praca powinna liczyć co najmniej\n200 wyrazów.\nWypracowanie\nna temat nr …………\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\nOPOP-100-1904 Strona 15 z 21\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\nOPOP-100-1904 Strona 17 z 21\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\n................................................................................................................................\nOPOP-100-1904 Strona 19 z 21",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 20,
+        "rules": [
+          "Maksymalnie 20 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1. Realizacja tematu wypowiedzi\nOceniając wypowiedź ucznia w tym kryterium, należy rozważyć m.in., czy:\n• wypowiedź jest zgodna z formą wskazaną w poleceniu\n• w wypowiedzi ujęte zostały wszystkie kluczowe elementy tematu, np. czy uczeń w odpowiedni sposób odwołał się do lektury wskazanej w poleceniu\n• wypowiedź jest w całości na temat.\n2 pkt • Forma wypowiedzi zgodna z formą wskazaną w poleceniu.\n• Wszystkie pozostałe elementy polecenia uwzględnione.\n• Wypowiedź w całości dotyczy problemu wskazanego w poleceniu.\n1 pkt • Forma wypowiedzi zgodna z formą wskazaną w poleceniu.\n• Nieuwzględniony jeden element polecenia (inny niż forma). ORAZ/LUB\n• W pracy występują fragmenty niedotyczące problemu wskazanego w poleceniu.\n0 pkt • Forma wypowiedzi niezgodna z formą wskazaną w poleceniu. ALBO\n• Nieuwzględnione co najmniej dwa elementy polecenia (inne niż forma).\nUwaga: jeżeli za wypowiedź przyznano 0 pkt w kryterium Realizacja tematu wypowiedzi, we wszystkich pozostałych kryteriach przyznaje się 0 pkt.\n2. Elementy retoryczne\nOceniając wypowiedź ucznia w tym kryterium, należy rozważyć m.in., czy:\n• argumentacja w pracy jest wnikliwa\n• argumenty są poparte właściwymi przykładami\n• argumenty są przedstawione w sposób uporządkowany, np. są przedstawione od najbardziej do najmniej ważnego albo są zapisane w porządku argument –\nkontrargument.\n5 pkt • Pogłębiona argumentacja.\n• Argumenty odwołujące się np. do faktów, logiki, emocji, zilustrowane odpowiednimi przykładami ORAZ/LUB wykorzystanie przykładów\nw funkcji argumentacyjnej.\n• Argumenty/przykłady uporządkowane, np. zhierarchizowane.\n4 pkt Praca spełnia wszystkie wymagania na 3 pkt i niektóre na 5 pkt.\n3 pkt • Powierzchowna argumentacja; w wypowiedzi brak wnikliwości.\n• Niektóre argumenty zilustrowane odpowiednimi przykładami ORAZ/LUB wykorzystanie przykładów w funkcji argumentacyjnej.\n• Argumenty/przykłady częściowo uporządkowane.\n2 pkt Praca spełnia wszystkie wymagania na 1 pkt i niektóre na 3 pkt.\n1 pkt • Podjęta próba argumentowania.\n• Ograniczenie do wyliczenia powierzchownie omówionych przykładów, powiązanych z problemem określonym w temacie.\n0 pkt Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt.\n3. Kompetencje literackie i kulturowe\nOceniając wypowiedź ucznia w tym kryterium, należy rozważyć m.in., czy:\n• uczeń wykorzystał znajomość lektury obowiązkowej wskazanej w poleceniu (a także innych tekstów – jeżeli polecenie tego wymagało) w sposób\nfunkcjonalny, tzn. ",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q22-page-15"
+        },
+        {
+          "type": "image",
+          "asset_id": "q22-page-16"
+        },
+        {
+          "type": "image",
+          "asset_id": "q22-page-17"
+        },
+        {
+          "type": "image",
+          "asset_id": "q22-page-18"
+        },
+        {
+          "type": "image",
+          "asset_id": "q22-page-19"
+        },
+        {
+          "type": "image",
+          "asset_id": "q22-page-21"
+        },
+        {
+          "type": "image",
+          "asset_id": "q22-page-22"
+        },
+        {
+          "type": "image",
+          "asset_id": "q22-page-23"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q22-page-15",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q22-page-15.webp",
+          "sha256": "cfd873dafeb469f028ad21d94d9f6f4faa46272d76a5005be391b3fc115ed848",
+          "alt": "Oryginalny układ zadania 22 z arkusza OPOP-100-1904, strona 15.",
+          "caption": "Zadanie 22 — oryginalny układ CKE, strona 15.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q22-page-16",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q22-page-16.webp",
+          "sha256": "eb954f01c5cf764015dbf4a2ece27f37815b68122e7e90f251ae8ff1afedacc9",
+          "alt": "Oryginalny układ zadania 22 z arkusza OPOP-100-1904, strona 16.",
+          "caption": "Zadanie 22 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q22-page-17",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q22-page-17.webp",
+          "sha256": "360ed621d856fe1a871695609edd670248dea3b90f5e13cf87195bfacb932172",
+          "alt": "Oryginalny układ zadania 22 z arkusza OPOP-100-1904, strona 17.",
+          "caption": "Zadanie 22 — oryginalny układ CKE, strona 17.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q22-page-18",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q22-page-18.webp",
+          "sha256": "f497ee36da45376e0312da613d7fcf4f3f7c4343ce3d3403915f6b83ba1cd834",
+          "alt": "Oryginalny układ zadania 22 z arkusza OPOP-100-1904, strona 18.",
+          "caption": "Zadanie 22 — oryginalny układ CKE, strona 18.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q22-page-19",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q22-page-19.webp",
+          "sha256": "23a8aaca47391daac96c1ce256df2483e7fe13359f474cb01c7ff3e61c4e088b",
+          "alt": "Oryginalny układ zadania 22 z arkusza OPOP-100-1904, strona 19.",
+          "caption": "Zadanie 22 — oryginalny układ CKE, strona 19.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q22-page-21",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q22-page-21.webp",
+          "sha256": "b7a1227bfd4a76f195bca1cd96ef0c031ae58e6da9ca7fc46b2f6df85aa10dfc",
+          "alt": "Oryginalny układ zadania 22 z arkusza OPOP-100-1904, strona 21.",
+          "caption": "Zadanie 22 — oryginalny układ CKE, strona 21.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q22-page-22",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q22-page-22.webp",
+          "sha256": "68602c5e7ddb56085e326221bd0b5fcb46960c6057c8fbd13a54c8f9a6768117",
+          "alt": "Oryginalny układ zadania 22 z arkusza OPOP-100-1904, strona 22.",
+          "caption": "Zadanie 22 — oryginalny układ CKE, strona 22.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q22-page-23",
+          "path": "public/cke/2019/polish/opop-100-x-1904/q22-page-23.webp",
+          "sha256": "f87efef182d863a520b7498eebf118d7b071e280e38b78606768c5de0fa4d523",
+          "alt": "Oryginalny układ zadania 22 z arkusza OPOP-100-1904, strona 23.",
+          "caption": "Zadanie 22 — oryginalny układ CKE, strona 23.",
+          "mime_type": "image/webp"
+        }
+      ]
+    }
+  ]
+}

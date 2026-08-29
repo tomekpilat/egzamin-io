@@ -1,0 +1,850 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2024-main-english-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2024-main-english-100-x",
+    "source_document_id": "OJAP-100-X-2405",
+    "source_pdf_sha256": "775ce7a18eade3f32156a27ea0aba74ce791d8f244c2b7fa8022dd7ea4d8eab5",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2024-2/",
+    "source_label": "CKE 2024 · język angielski · termin główny · wariant 100-X",
+    "exam_year": 2024,
+    "exam_session": "main",
+    "subject": "english",
+    "variant_code": "100-X",
+    "question_count": 14,
+    "supplementary_sources": [
+      {
+        "id": "cke-2024-main-english-100-x-answer-card",
+        "path": "content/cke/sources/2024/english/OJAP-100-X-2405-karta-odpowiedzi.pdf",
+        "sha256": "d14f6ddd7f803542f66ad4982c773d1dd5bd595f511766e7b9f266c7afc1dc30",
+        "label": "Karta odpowiedzi"
+      },
+      {
+        "id": "cke-2024-main-english-100-x-transcript",
+        "path": "content/cke/sources/2024/english/OJAP-100-200-400-500-660-K00-2405-transkrypcja.pdf",
+        "sha256": "5a7d58877971d85c9ed05483d0eee30706d331a4686d1f80df5fe6958acd1223",
+        "label": "Oficjalna transkrypcja nagrań"
+      },
+      {
+        "id": "cke-2024-main-english-100-x-recording",
+        "path": "content/cke/sources/2024/english/OJAP-100-2405.mp3",
+        "sha256": "a29395abceab4a9826a7b28b47a821159d4ae5a58f34a0aea147be0c1dce9c61",
+        "label": "Oficjalne nagranie do zadań 1–4"
+      },
+      {
+        "id": "cke-2024-main-english-100-x-rules",
+        "path": "content/cke/sources/2024/english/OJAP-100-200-400-500-660-K00-2405-zasady.pdf",
+        "sha256": "c27acb52a0dc6807e5a9bf993369a8fccfaea46a4fd82d64cabeb5fd57ef324a",
+        "label": "Oficjalne zasady oceniania rozwiązań zadań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [],
+  "questions": [
+    {
+      "id": "cke-2024-main-english-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        3,
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — wybór wielokrotny",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie pięć tekstów. W zadaniach 1.1.–1.5., na podstawie informacji\nzawartych w nagraniu, z podanych odpowiedzi wybierz właściwą. Zakreśl jedną z liter:\nA, B albo C.\n1.1. Where are the boy and the girl going to meet?\nA. B. C.\n1.2. What does the girl still need to get for her aunt’s wedding?\nA. B. C.\n1.3. Where is the speaker?\nA. B. C.\nOJAP-100-2405 Strona 3 z 18\n1.4. The girl is calling her grandfather to\nA. tell him a secret.\nB. ask him to talk to her parents.\nC. get some advice about feeding a cat.\n1.5. The boy is talking about\nA. a popular actress.\nB. a character from his favourite book.\nC. one of his classmates.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "1.1: C; 1.2: B; 1.3: A; 1.4: A; 1.5: C"
+        ]
+      },
+      "scoring": {
+        "max_points": 5,
+        "rules": [
+          "Maksymalnie 5 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 1.1: C; 1.2: B; 1.3: A; 1.4: A; 1.5: C.",
+      "solution_steps": [
+        "Klucz CKE: 1.1: C; 1.2: B; 1.3: A; 1.4: A; 1.5: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-page-3"
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2024/jezyk_angielski/OJAP-100-2405.mp3",
+          "sha256": "a29395abceab4a9826a7b28b47a821159d4ae5a58f34a0aea147be0c1dce9c61",
+          "alt": "Oficjalne nagranie CKE 2024 do zadań 1–4 z przedmiotu język angielski.",
+          "caption": "Oficjalne nagranie CKE 2024 — język angielski, zadania 1–4.",
+          "mime_type": "audio/mpeg"
+        },
+        {
+          "id": "q01-page-3",
+          "path": "public/cke/2024/english/ojap-100-x-2405/q01-page-3.webp",
+          "sha256": "94a55ed6ec0b446cb6164a903e675da8663def9733a41a138ddeaadfedab0c8b",
+          "alt": "Oryginalny układ zadania 1 z arkusza OJAP-100-2405, strona 3.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 3.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q01-page-4",
+          "path": "public/cke/2024/english/ojap-100-x-2405/q01-page-4.webp",
+          "sha256": "367260fda801f879b5839427fbb71dbb0f261a3a8e68b9608a05915557889cf2",
+          "alt": "Oryginalny układ zadania 1 z arkusza OJAP-100-2405, strona 4.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-english-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — dopasowywanie",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi na temat szkolnych żartów z okazji Prima\nAprilis (ang. April Fool’s Day). Na podstawie informacji zawartych w nagraniu dopasuj\ndo każdej wypowiedzi (2.1.–2.4.) odpowiadające jej zdanie (A–E). Wpisz rozwiązania do\ntabeli.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. We put a funny photo on our teacher’s desk.\nB. The teacher wasn’t sure if she was in the right place.\nC. I didn’t follow the teacher’s instructions.\nD. We used our teacher’s picture as part of a joke.\nE. Our teacher didn’t believe the note which was on her desk.\n2.1. 2.2. 2.3. 2.4.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "2.1: C; 2.2: E; 2.3: D; 2.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 2.1: C; 2.2: E; 2.3: D; 2.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 2.1: C; 2.2: E; 2.3: D; 2.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        },
+        {
+          "type": "image",
+          "asset_id": "q02-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2024/jezyk_angielski/OJAP-100-2405.mp3",
+          "sha256": "a29395abceab4a9826a7b28b47a821159d4ae5a58f34a0aea147be0c1dce9c61",
+          "alt": "Oficjalne nagranie CKE 2024 do zadań 1–4 z przedmiotu język angielski.",
+          "caption": "Oficjalne nagranie CKE 2024 — język angielski, zadania 1–4.",
+          "mime_type": "audio/mpeg"
+        },
+        {
+          "id": "q02-page-4",
+          "path": "public/cke/2024/english/ojap-100-x-2405/q02-page-4.webp",
+          "sha256": "3f0a7a9d983b95742ddc58866f18489c57bc56cd03677741909ea0ba7a095a3d",
+          "alt": "Oryginalny układ zadania 2 z arkusza OJAP-100-2405, strona 4.",
+          "caption": "Zadanie 2 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-english-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — uzupełnianie luk",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie komunikat o konkursie organizowanym w szkole.\nNa podstawie informacji zawartych w nagraniu uzupełnij luki 3.1.–3.3.,\ntak aby jak najbardziej precyzyjnie oddać sens wysłuchanego tekstu. Luki należy\nuzupełnić w języku angielskim.\nPOETRY COMPETITION!\nALL STUDENTS WELCOME!\nThe subject for the poems this year is 3.1. _____________________________________.\nThe poems can’t be too long because each student only has 3.2. ___________________\n_____________________________ to perform his or her poem.\nREMEMBER!\nStudents are not allowed to 3.3. _________________________ their poems.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "3.1: wild animals / Wild Animals; 3.2: three/3 minutes; 3.3: read"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 3.1: wild animals / Wild Animals; 3.2: three/3 minutes; 3.3: read.",
+      "solution_steps": [
+        "Klucz CKE: 3.1: wild animals / Wild Animals; 3.2: three/3 minutes; 3.3: read.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        },
+        {
+          "type": "image",
+          "asset_id": "q03-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2024/jezyk_angielski/OJAP-100-2405.mp3",
+          "sha256": "a29395abceab4a9826a7b28b47a821159d4ae5a58f34a0aea147be0c1dce9c61",
+          "alt": "Oficjalne nagranie CKE 2024 do zadań 1–4 z przedmiotu język angielski.",
+          "caption": "Oficjalne nagranie CKE 2024 — język angielski, zadania 1–4.",
+          "mime_type": "audio/mpeg"
+        },
+        {
+          "id": "q03-page-5",
+          "path": "public/cke/2024/english/ojap-100-x-2405/q03-page-5.webp",
+          "sha256": "36b084729929e30b5c3deecd421d2a1ed9bf83792bd0f8200464622c2836e1e7",
+          "alt": "Oryginalny układ zadania 3 z arkusza OJAP-100-2405, strona 5.",
+          "caption": "Zadanie 3 — oryginalny układ CKE, strona 5.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-english-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — zadanie otwarte",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi związane z podróżowaniem samolotem\n(4.1.–4.4.). Do każdej z nich dobierz właściwą reakcję (A–E). Wpisz rozwiązania do\ntabeli.\nUwaga! Jedna reakcja została podana dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. Not really, but I prefer to travel by train.\nB. Thanks! I’ll call you when I land.\nC. Please have your passports ready.\nD. Try this website. It has some very good prices.\nE. Well, yes, but you can’t use it to make calls.\n4.1. 4.2. 4.3. 4.4.\nOJAP-100-2405 Strona 5 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "4.1: D; 4.2: E; 4.3: B; 4.4: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 4.1: D; 4.2: E; 4.3: B; 4.4: A.",
+      "solution_steps": [
+        "Klucz CKE: 4.1: D; 4.2: E; 4.3: B; 4.4: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        },
+        {
+          "type": "image",
+          "asset_id": "q04-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2024/jezyk_angielski/OJAP-100-2405.mp3",
+          "sha256": "a29395abceab4a9826a7b28b47a821159d4ae5a58f34a0aea147be0c1dce9c61",
+          "alt": "Oficjalne nagranie CKE 2024 do zadań 1–4 z przedmiotu język angielski.",
+          "caption": "Oficjalne nagranie CKE 2024 — język angielski, zadania 1–4.",
+          "mime_type": "audio/mpeg"
+        },
+        {
+          "id": "q04-page-5",
+          "path": "public/cke/2024/english/ojap-100-x-2405/q04-page-5.webp",
+          "sha256": "e8ef8cf924f6d30c83d2752d9d11097ad676be293628827b05b4137ff92d4391",
+          "alt": "Oryginalny układ zadania 4 z arkusza OJAP-100-2405, strona 5.",
+          "caption": "Zadanie 4 — oryginalny układ CKE, strona 5.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-english-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe",
+      "difficulty": 3,
+      "prompt": "Dla każdej z opisanych sytuacji (5.1.–5.4.) wybierz właściwą reakcję. Zakreśl jedną\nz liter: A, B albo C.\n5.1. Spotykasz dawno niewidzianą koleżankę. Co jej powiesz?\nA. It’s been a long time since I last saw you.\nB. I’m sure we haven’t met before.\nC. It was nice to see you last weekend.\n5.2. Chcesz obejrzeć torbę w sklepie. Co powiesz do sprzedawcy?\nA. Will you carry that bag for me?\nB. Would you like to have that bag?\nC. Could I have a look at that bag?\n5.3. Pytasz kolegę, o której godzinie macie się spotkać. Co powiesz?\nA. What time are we meeting?\nB. How much time do we have for our meeting?\nC. How many meetings were there?\n5.4. Kolega proponuje Ci wyjazd na narty. Jego pomysł Ci się podoba. Co mu\npowiesz?\nA. Do you like my idea?\nB. I’m feeling well, thanks.\nC. Sounds like fun!",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "5.1: A; 5.2: C; 5.3: A; 5.4: C"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 5.1: A; 5.2: C; 5.3: A; 5.4: C.",
+      "solution_steps": [
+        "Klucz CKE: 5.1: A; 5.2: C; 5.3: A; 5.4: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q05-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q05-page-6",
+          "path": "public/cke/2024/english/ojap-100-x-2405/q05-page-6.webp",
+          "sha256": "cf39ef1faf7e3d789d72c6d2b4f43278a523f495917509338eea21083e406dff",
+          "alt": "Oryginalny układ zadania 5 z arkusza OJAP-100-2405, strona 6.",
+          "caption": "Zadanie 5 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-english-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe — uzupełnianie dialogów",
+      "difficulty": 3,
+      "prompt": "Uzupełnij dialogi. Wpisz w każdą lukę (6.1.–6.2.) brakujący fragment wypowiedzi, tak\naby otrzymać spójne i logiczne teksty. Wykorzystaj wyrazy podane w nawiasie, ale nie\nzmieniaj ich formy. Luki należy uzupełnić w języku angielskim.\nUwaga! W każdą lukę możesz wpisać maksymalnie trzy wyrazy, wliczając w to wyraz\njuż podany.\nX: Mark, 6.1. (how) __________________________________ do you go to dance classes?\nY: Twice a week.\nX: Mum, I’ve finished tidying up my room. 6.2. (go) ________________________________\nout now?\nY: OK, but make sure you are back home by 7 p.m.\nOJAP-100-2405 Strona 7 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "6.1: how often; 6.2: Can I go / May I go"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 6.1: how often; 6.2: Can I go / May I go.",
+      "solution_steps": [
+        "Klucz CKE: 6.1: how often; 6.2: Can I go / May I go.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q06-page-7"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q06-page-7",
+          "path": "public/cke/2024/english/ojap-100-x-2405/q06-page-7.webp",
+          "sha256": "5735e0290ef754a30c32f3aa406c40af28cffdae6a50f5b123bd787dde331214",
+          "alt": "Oryginalny układ zadania 6 z arkusza OJAP-100-2405, strona 7.",
+          "caption": "Zadanie 6 — oryginalny układ CKE, strona 7.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-english-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        8,
+        9
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie tekstów pisanych",
+      "difficulty": 3,
+      "prompt": "Przeczytaj teksty. W zadaniach 7.1.–7.4. z podanych odpowiedzi wybierz właściwą,\nzgodną z treścią tekstu. Zakreśl jedną z liter: A, B albo C.\nHOW TO ORGANIZE YOUR FRIDGE\nWhich places are best for what foods?\nTOP SHELF This is a good place to keep foods that don’t need much cooling:\nready meals, fruit salads.\nBOTTOM SHELF This is the coldest part of the fridge, so put milk here. Also, orange\njuice, especially if it’s freshly squeezed, should be kept on this shelf.\nDRAWERS This part of the fridge is perfect for fruit and vegetables. They’ll keep\nlongest unwashed and in their original packaging. It’s good to keep\nfruit and vegetables in separate drawers.\nNa podstawie: www.dailymail.co.uk\n7.1. Which is the best place for keeping oranges in a fridge?\nA. the bottom shelf\nB. the top shelf\nC. a drawer\nAre you planning to get a new computer?\nMaybe you don’t need your old computer any longer?\nBring it to us!\nWe will check if it works and then tell you\nhow much we can pay for it.\nNo broken equipment accepted, sorry!\n7.2. This text was written by someone who\nA. buys used computers.\nB. repairs computers.\nC. wants to sell his/her computer.\nMessage \nFrom: Amy\nTo: Lilly\nSubject: Re: problem\nLilly,\nI know how you feel. I had a similar problem. My sister invites her friends to our house\na lot. I noticed that they often came into my room and used my things without asking.\nI asked my mum to talk to her, and she did. My sister said she was sorry and\npromised to keep her guests away from my room. Everything is fine now!\nWhy don’t you do the same?\nAmy\n7.3. Amy wrote this email to\nA. ask for help.\nB. give advice.\nC. say sorry.\nCalypsos on tour again!\nJim,\nWhen? 29th August\nNext week I’m taking part in a bike\nWhere? The sports hall in Park Street\nrace. The organizers are collecting\nmoney for children in the local\nThe concert is worth every single\nhospital. Would you like to join me?\npenny!\nSee you!\nHalf of the money you pay for your\nKelly\nticket will help build schools in Africa!\nBook now!\n7.4. Both texts are about\nA. saving money.\nB. helping others.\nC. sports events.\nOJAP-100-2405 Strona 9 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "7.1: C; 7.2: A; 7.3: B; 7.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 7.1: C; 7.2: A; 7.3: B; 7.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 7.1: C; 7.2: A; 7.3: B; 7.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q07-page-8"
+        },
+        {
+          "type": "image",
+          "asset_id": "q07-page-9"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q07-page-8",
+          "path": "public/cke/2024/english/ojap-100-x-2405/q07-page-8.webp",
+          "sha256": "d3b751c875860987b88734a64672fbdbbe885132e74785b32292774f4c7c7b04",
+          "alt": "Oryginalny układ zadania 7 z arkusza OJAP-100-2405, strona 8.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q07-page-9",
+          "path": "public/cke/2024/english/ojap-100-x-2405/q07-page-9.webp",
+          "sha256": "05a0199f15e46a86c9a2af0692a70b4ff876766b2af0fde375bb7603e65469d2",
+          "alt": "Oryginalny układ zadania 7 z arkusza OJAP-100-2405, strona 9.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 9.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-english-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Spójność tekstu",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst, z którego usunięto trzy zdania. Wpisz w każdą lukę (8.1.–8.3.) literę,\nktórą oznaczono brakujące zdanie (A–D), tak aby otrzymać spójny i logiczny tekst.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej luki.\nTHE PAINTER AND THE THIEF\nThomas Gainsborough, one of England’s most famous 18th-century painters, came from\nSuffolk. He was the youngest son of John and Mary Gainsborough. His father was\na salesman who travelled a lot on business. Tom’s mother was a housewife. In her free time\nshe loved painting pictures of plants. 8.1. _____ First he learnt to draw apples, pears and\nother fruits.\nWhen Tom was a bit older, he often walked around the neighbourhood with a sketchbook in\nhis bag. 8.2. _____ Tom hid behind a tree, took out a pencil and drew the man’s face. Then\nhe quickly ran home to tell his parents about what had happened. Tom’s father immediately\ntook Tom to the village watchman*. The boy’s picture was so good that it didn’t take much\ntime to catch the thief. 8.3. _____ But when he saw Tom’s picture he was so shocked that he\nsaid: “That’s me! I stole the fruit.” Tom’s father was very proud of his son.\nNa podstawie: www.wikitree.com\n* Watchman – 18th-century policeman in England.\nA. At first the man didn’t want to tell the truth.\nB. That was his mother’s favourite place for drawing.\nC. When she saw that her son had a talent for drawing, she decided to give him lessons.\nD. Once he saw a man climb over the fence into their neighbour’s garden to steal fruit.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "8.1: C; 8.2: D; 8.3: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 8.1: C; 8.2: D; 8.3: A.",
+      "solution_steps": [
+        "Klucz CKE: 8.1: C; 8.2: D; 8.3: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q08-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q08-page-10",
+          "path": "public/cke/2024/english/ojap-100-x-2405/q08-page-10.webp",
+          "sha256": "0c96d2d507542a54488b9e7c28f3a4a26870baa83969b6081082e8109d1efaf5",
+          "alt": "Oryginalny układ zadania 8 z arkusza OJAP-100-2405, strona 10.",
+          "caption": "Zadanie 8 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-english-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        11
+      ],
+      "type": "long_text",
+      "topic": "Wyszukiwanie informacji",
+      "difficulty": 3,
+      "prompt": "Przeczytaj trzy opisy podcastów (A–C) oraz zdania 9.1.–9.4. Do każdego zdania\ndopasuj właściwy opis. Wpisz rozwiązania do tabeli.\nUwaga! Jeden z opisów pasuje do dwóch zdań.\nHISTORY PODCASTS YOU’LL LOVE\nA. The Past and The Curious\nThis podcast is presented by a history teacher who tells amusing\nstories about the past. Even when he talks about dramatic battles,\nimportant coronations and dangerous journeys, he will always find\nsome little-known details which will bring a smile to your face.\nAlthough it’s not a music podcast, there’s a song in each episode so\nchildren will easily remember what the podcast was about. In the final\npart of the podcast there is a quiz which allows listeners to check what\nthey have learned.\nB. Forever Ago\nEvery episode explores the history of just one thing, for example\nthe sandwich, the video game or the clock. The podcast teaches\nlisteners to think critically about the past. You’ll discover that all\neveryday objects have stories to tell. In each episode, a child guest\ninvited to the studio asks questions and the podcast presenter\nanswers them.\nC. A History of the World in 100 Objects\nIn each episode, Neil MacGregor presents a different object from\nthe huge collection of the British Museum. He worked at the museum\nfor many years and is the best person for the job. He talks about\nthe people who made and used each object. Some objects that Neil\ntalks about are damaged or not complete. However, all of their stories\nare fascinating.\nNa podstawie: www.rd.com; www.brainson.org; www.bbc.co.uk\n9.1. In this podcast listeners have a chance to test their knowledge.\n9.2. Some items discussed in this podcast are not in perfect condition.\n9.3. Two people take part in each episode of this podcast.\n9.4. In this podcast listeners hear funny facts connected with historical events.\nOJAP-100-2405 Strona 11 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "9.1: A; 9.2: C; 9.3: B; 9.4: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 9.1: A; 9.2: C; 9.3: B; 9.4: A.",
+      "solution_steps": [
+        "Klucz CKE: 9.1: A; 9.2: C; 9.3: B; 9.4: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q09-page-11"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q09-page-11",
+          "path": "public/cke/2024/english/ojap-100-x-2405/q09-page-11.webp",
+          "sha256": "baf528905bc8f04989ccc88e19d0cc0ed0da51c01e50337382096ef146ace9a0",
+          "alt": "Oryginalny układ zadania 9 z arkusza OJAP-100-2405, strona 11.",
+          "caption": "Zadanie 9 — oryginalny układ CKE, strona 11.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-english-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        12,
+        13
+      ],
+      "type": "long_text",
+      "topic": "Przetwarzanie wypowiedzi",
+      "difficulty": 3,
+      "prompt": "Przeczytaj teksty 1. i 2. Uzupełnij w e-mailu Janka luki 10.1.–10.3. zgodnie z treścią\ntekstów, tak aby jak najbardziej precyzyjnie oddać sens podanych informacji. Luki\nnależy uzupełnić w języku polskim.\nTekst 1.\nI just love the mystery gift box idea. It’s such fun getting lots of surprising\nthings. Some time ago I bought a mystery gift box for my mum. She loved all\nthe little things in it, like lipsticks and earrings, but her favourite was a pair of\nsunglasses. All the items were good quality. I can’t wait to order a mystery gift\nbox for my sister next month!\nMARK\nŹródło: wattpad.com\nTekst 2.\nPainted garden stones – a beautiful and unusual gift for your mum!\nDo it yourself.\nInstructions\n1. Find some flat stones.\n2. Wash the stones and wait for an hour to let them dry.\n3. Paint the stones white, at least twice. Painting them only\nonce is not enough to give them a bright white colour.\n4. Leave the stones for at least 3 hours to let the paint dry.\n5. Take a black marker and write the names of different fruits and vegetables on\nthe stones.\n6. Decorate them with colourful stickers.\n7. Your gift is ready! Your mum can use the stones in her garden to mark where\nseeds* or plants are growing.\nNa podstawie: craftsbyamanda.com\n* Seeds – nasiona.\nWiadomość \nOd: Janek\nDo: Basia\nTemat: Prezent dla mamy\nBasiu,\njeżeli nadal nie wymyśliłaś prezentu dla mamy, myślę, że mam dla Ciebie ciekawe\npomysły. Czytałem ostatnio opinię chłopaka, który zamówił dla swojej mamy prezent\nniespodziankę: tajemnicze pudełko wypełnione różnymi drobiazgami. Jego mamie\nspodobały się zwłaszcza 10.1. ___________________________________________.\nA jeśli chcesz, możesz też sama zrobić prezent dla mamy. Co sądzisz o ręcznie\nzdobionych kamykach do oznaczenia roślin w ogrodzie?\nZ instrukcji, którą zobaczyłem w internecie, wynika, że to nic trudnego. Wystarczy, że\nznajdziesz płaskie kamienie. Potem musisz 10.2. ____________________________\ni odczekać godzinę. Następnie malujesz je na biało przynajmniej 10.3. ___________\n_________________________.\nA, i najważniejsze! Na tych kamieniach napisz koniecznie nazwy owoców i warzyw,\nktóre Twoja mama planuje posiać w ogrodzie. Kamienie możesz też udekorować\njakimiś fajnymi naklejkami.\nW razie czego chętnie Ci pomogę.\nTrzymaj się!\nJanek\nOJAP-100-2405 Strona 13 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "10.1: okulary przeciwsłoneczne; 10.2: je umyć / umyć (te) kamienie; 10.3: 2/dwa razy / dwukrotnie"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 10.1: okulary przeciwsłoneczne; 10.2: je umyć / umyć (te) kamienie; 10.3: 2/dwa razy / dwukrotnie.",
+      "solution_steps": [
+        "Klucz CKE: 10.1: okulary przeciwsłoneczne; 10.2: je umyć / umyć (te) kamienie; 10.3: 2/dwa razy / dwukrotnie.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q10-page-12"
+        },
+        {
+          "type": "image",
+          "asset_id": "q10-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q10-page-12",
+          "path": "public/cke/2024/english/ojap-100-x-2405/q10-page-12.webp",
+          "sha256": "2ba68dd00478bc1dce73a93ac3bab6bc90dcc7e68d77400cac17815c71c8eef9",
+          "alt": "Oryginalny układ zadania 10 z arkusza OJAP-100-2405, strona 12.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q10-page-13",
+          "path": "public/cke/2024/english/ojap-100-x-2405/q10-page-13.webp",
+          "sha256": "3dc054266ea7d1310b3dec238470012616773aaf2344c19f06574a92302174d1",
+          "alt": "Oryginalny układ zadania 10 z arkusza OJAP-100-2405, strona 13.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-english-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — wybór wyrazów",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Spośród wyrazów podanych w ramce wybierz te, które są\npoprawnym uzupełnieniem luk 11.1.–11.3. Wpisz odpowiednią literę (A–F) obok\nnumeru każdej luki.\nUwaga! Trzy wyrazy zostały podane dodatkowo i nie pasują do żadnej luki.\nA. bought B. comfortable C. made D. put E. ready F. stopped\nSUPERHERO WINDOW CLEANERS\nA team of window cleaners arrived at a Canadian hospital last week. They\n11.1. _____ on Spider-Man and Batman costumes and prepared their equipment.\nThe superheroes started cleaning windows at the top of the building, and slowly\nwent down the outside of the building on ropes. They 11.2. _____ when the children\non the sixth floor started clapping happily. Some of them took photos of the\nsuperheroes.\nChris Johns, who was dressed as Batman, says: “It was a very sunny and hot day\non Tuesday, so working in a black costume wasn’t 11.3. _____, but when I looked\nat the kids’ smiling faces, I knew it was a great idea!”\nNa podstawie: www.bbc.com",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "11.1: D; 11.2: F; 11.3: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 11.1: D; 11.2: F; 11.3: B.",
+      "solution_steps": [
+        "Klucz CKE: 11.1: D; 11.2: F; 11.3: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q11-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q11-page-14",
+          "path": "public/cke/2024/english/ojap-100-x-2405/q11-page-14.webp",
+          "sha256": "fd8f610cffeccffde109dd19e729dce8bbce05b46035ab639c944f4daa2b2dec",
+          "alt": "Oryginalny układ zadania 11 z arkusza OJAP-100-2405, strona 14.",
+          "caption": "Zadanie 11 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-english-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        15
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — gramatyka i leksyka",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Wybierz poprawne uzupełnienie luk 12.1.–12.3. Zakreśl jedną z liter:\nA, B albo C.\nMessage \nFrom: Jack\nTo: Paul, Mike, Scott\nSubject: Fun idea\nHi everybody,\nI think I have a great idea. Just yesterday I finished reading The Time Machine by\nHG Wells. It is about a machine which was designed to transport its passengers\nthrough time. Of course I’m not 12.1. _____ to build a similar one, but I found on the\ninternet that there is a Pretend To Be A Time Traveller Day. The day 12.2. _____ on\n8th December. So that means it will be next Sunday. My idea is that we dress up as\nteenagers 12.3. _____ the 1950s. Then we can go to the city centre and ask\nstrangers what year it is and pretend to be shocked by their mobile phones or other\ntechnology. It should be fun. Are you interested?\nWrite back,\nJack\n12.1.\nA. making\nB. doing\nC. going\n12.2.\nA. has celebrated\nB. is celebrating\nC. is celebrated\n12.3.\nA. from\nB. since\nC. on\nOJAP-100-2405 Strona 15 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "12.1: C; 12.2: C; 12.3: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 12.1: C; 12.2: C; 12.3: A.",
+      "solution_steps": [
+        "Klucz CKE: 12.1: C; 12.2: C; 12.3: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q12-page-15"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q12-page-15",
+          "path": "public/cke/2024/english/ojap-100-x-2405/q12-page-15.webp",
+          "sha256": "00fce9983a11ac4a2ece1acc71c11349e51dae2a1ec3882697216b45d13ad6f9",
+          "alt": "Oryginalny układ zadania 12 z arkusza OJAP-100-2405, strona 15.",
+          "caption": "Zadanie 12 — oryginalny układ CKE, strona 15.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-english-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Transformacje leksykalno-gramatyczne",
+      "difficulty": 3,
+      "prompt": "Wykorzystując wyrazy podane WIELKIMI literami, uzupełnij każde zdanie z luką, tak\naby zachować sens zdania wyjściowego (13.1.–13.3.). Wymagana jest pełna\npoprawność ortograficzna i gramatyczna wpisywanych fragmentów zdań.\nUwaga! Nie zmieniaj formy podanych wyrazów. W każdą lukę możesz wpisać\nmaksymalnie cztery wyrazy, wliczając w to wyraz już podany.\n13.1. Take an umbrella or you’ll get wet.\nIF\nYou’ll get wet ___________________________________________ take an umbrella.\n13.2. We must find a quiet place to talk because it is so noisy here.\nTOO\nWe must find a quiet place to talk because there ______________________________\n_____________________________ noise here.\n13.3. Let’s go to the theatre on Friday!\nABOUT\nHow ____________________________________________________ to the theatre\non Friday?",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "13.1: if you don’t / if you do not; 13.2: is too much; 13.3: about going"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 13.1: if you don’t / if you do not; 13.2: is too much; 13.3: about going.",
+      "solution_steps": [
+        "Klucz CKE: 13.1: if you don’t / if you do not; 13.2: is too much; 13.3: about going.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q13-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q13-page-16",
+          "path": "public/cke/2024/english/ojap-100-x-2405/q13-page-16.webp",
+          "sha256": "b72fe2afd0d8889ce321f107b806691fee5697d1ca4f39c399a2138d3142a51f",
+          "alt": "Oryginalny układ zadania 13 z arkusza OJAP-100-2405, strona 16.",
+          "caption": "Zadanie 13 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-english-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        16,
+        20
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna — e-mail",
+      "difficulty": 3,
+      "prompt": "Twoja klasa nakręciła film o Dniu Sportu, który odbył się w Waszej szkole. Przygotuj\nwpis na stronę internetową Twojej szkoły, w którym:\n• wyjaśnisz, dlaczego postanowiliście nakręcić ten film\n• przedstawisz problem, który pojawił się podczas filmowania\n• zachęcisz do obejrzenia filmu i do wyrażenia opinii o nim.\nNapisz swoją wypowiedź w języku angielskim. Podpisz się jako XYZ.\nRozwiń swoją wypowiedź w każdym z trzech podpunktów, tak aby osoba nieznająca\npolecenia w języku polskim uzyskała wszystkie wskazane w nim informacje. Pamiętaj, że\ndługość wypowiedzi powinna wynosić od 50 do 120 wyrazów (nie licząc wyrazów podanych\nna początku wypowiedzi). Oceniane są: umiejętność pełnego przekazania informacji,\nspójność, bogactwo językowe oraz poprawność językowa.",
+      "answer_key": {
+        "assessment": "rubric",
+        "minimum_words": 50,
+        "maximum_words": 120
+      },
+      "scoring": {
+        "max_points": 10,
+        "rules": [
+          "Maksymalnie 10 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Porównaj rozwiązanie z oficjalnymi zasadami oceniania CKE dołączonymi do arkusza.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q14-page-16"
+        },
+        {
+          "type": "image",
+          "asset_id": "q14-page-20"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q14-page-16",
+          "path": "public/cke/2024/english/ojap-100-x-2405/q14-page-16.webp",
+          "sha256": "cd51d355be15661dafce75f4fbfd19340fbf90a496072fce89feea2b4732b2c9",
+          "alt": "Oryginalny układ zadania 14 z arkusza OJAP-100-2405, strona 16.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q14-page-20",
+          "path": "public/cke/2024/english/ojap-100-x-2405/q14-page-20.webp",
+          "sha256": "d04814a7bf8b3262dbc6427e44fcbde13be68f7f7dc05e8252f7fd62ac36af5d",
+          "alt": "Oryginalny układ zadania 14 z arkusza OJAP-100-2405, strona 20.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 20.",
+          "mime_type": "image/webp"
+        }
+      ]
+    }
+  ]
+}

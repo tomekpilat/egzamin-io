@@ -45,6 +45,16 @@ describe("manual CKE import validator", () => {
     expect(result.errors).toContain("manifest.questions[0].prompt: znak NUL (\\u0000) nie może zostać zapisany w PostgreSQL");
   });
 
+  it("allows official CKE media URLs and rejects other remote assets", () => {
+    const official = structuredClone(template);
+    official.questions[0].assets[0].path = "https://cke.gov.pl/images/example.mp3";
+    expect(validateManifest(official).valid).toBe(true);
+
+    const external = structuredClone(template);
+    external.questions[0].assets[0].path = "https://example.com/tracker.mp3";
+    expect(validateManifest(external).errors.join(" ")).toContain("oficjalny adres HTTPS CKE");
+  });
+
   it("generates deterministic per-question and manifest checksums", () => {
     const first = prepareManifest(template);
     const second = prepareManifest(structuredClone(template));

@@ -1,0 +1,1056 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2023-main-polish-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2023-main-polish-100-x",
+    "source_document_id": "OPOP-100-2305",
+    "source_pdf_sha256": "84baf617a46f418c6f370407946058974d757baf746ac02ac5a164e46483501e",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2023-2/",
+    "source_label": "CKE 2023 · język polski · termin główny · wariant 100-X",
+    "exam_year": 2023,
+    "exam_session": "main",
+    "subject": "polish",
+    "variant_code": "100-X",
+    "question_count": 19,
+    "supplementary_sources": [
+      {
+        "id": "cke-2023-main-polish-100-x-rules",
+        "path": "content/cke/sources/2023/polish/OPOP-100-400-500-2305-zasady.pdf",
+        "sha256": "b9bf86507adcb452bd4efee814813d813c38ea3bb655a022f3d66e7a3ab072aa",
+        "label": "Oficjalne zasady oceniania rozwiązań zadań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [],
+  "questions": [
+    {
+      "id": "cke-2023-main-polish-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Na podstawie przytoczonego fragmentu Balladyny oceń prawdziwość podanych\nstwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\nInformacja o tym, że królem została kobieta, wzbudziła emocje wśród\nP F\nzebranych.\nWydarzeniu na zamku towarzyszą niepokojące zjawiska w przyrodzie. P F\nPRZENIEŚ ROZWIĄZANIE ZADANIA 1. NA KARTĘ ODPOWIEDZI!\nOPOP-100-2305 Strona 7 z 24",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "PP"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y2\nPP PP",
+      "solution_steps": [
+        "Klucz CKE: PP.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q01-page-7"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q01-page-7",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q01-page-7.webp",
+          "sha256": "cf9d23ed22520ae328fb3ea0ac58784fa6f6fe60ae042d560132abd1570d5db3",
+          "alt": "Oryginalny układ zadania 1 z arkusza OPOP-100-2305, strona 7.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 7.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-polish-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Na podstawie przytoczonego fragmentu Balladyny oceń prawdziwość podanych\nstwierdzeń dotyczących głównej bohaterki. Wybierz P, jeśli stwierdzenie jest\nprawdziwe, albo F – jeśli jest fałszywe.\nBalladyna ujawnia zgromadzonym fakty ze swojej przeszłości. P F\nBalladyna zamierza rządzić zgodnie z obowiązującym prawem. P F",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "FP"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nFP PF\n1 Rozporządzenie Ministra Edukacji i Nauki z dnia 15 lipca 2022 r. w sprawie wymagań egzaminacyjnych dla\negzaminu ósmoklasisty przeprowadzanego w roku szkolnym 2022/2023 i 2023/2024 (Dz.U. 2022 poz.1591).\n2 Odpowiedzi w wersji Y dotyczą tylko arkusza OPOP-100-2305.\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: FP.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q02-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q02-page-8",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q02-page-8.webp",
+          "sha256": "a92da0b8df02f5d215a4ee95bef2b43d354a63af7a885894c6f3fec34c50f560",
+          "alt": "Oryginalny układ zadania 2 z arkusza OPOP-100-2305, strona 8.",
+          "caption": "Zadanie 2 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-polish-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Dokończ zdanie tak, aby było zgodne z treścią przytoczonego fragmentu Balladyny.\nWybierz właściwą odpowiedź spośród podanych.\nW sali królewskiej w Gnieźnie\nA. kanclerz namawia królową do wydawania surowych wyroków.\nB. Balladyna zakazuje strażnikom rozdawania jedzenia ubogim.\nC. Kostryn przestrzega zebranych przed okrutnymi rządami Balladyny.\nD. zgromadzeni poddani proszą królową o stracenie jeńców wojennych.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "C"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nC B",
+      "solution_steps": [
+        "Klucz CKE: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q03-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q03-page-8",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q03-page-8.webp",
+          "sha256": "bb2f333187f6a8b9715eb4e553994dd3c82b98417d124769588db72ddedd75cc",
+          "alt": "Oryginalny układ zadania 3 z arkusza OPOP-100-2305, strona 8.",
+          "caption": "Zadanie 3 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-polish-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "Odwołując się do przytoczonego fragmentu i całego utworu Juliusza Słowackiego,\nułóż podane niżej wydarzenia związane z losami Balladyny zgodnie z porządkiem\nchronologicznym. Wpisz litery B, C, D, E w kratki we właściwej kolejności,\nrozpoczynając od wydarzenia najwcześniejszego.\nA. Otrucie wspólnika i objęcie tronu.\nB. Udział w konkursie i pozbycie się siostry.\nC. Ślub z Kirkorem i przeprowadzka do zamku.\nD. Zabicie Grabca i przywłaszczenie korony Lecha.\nE. Pożegnanie męża i rozpoczęcie znajomości z Kostrynem.\nA",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "BCEDA"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 pkt – poprawne uzupełnienie 4 liter.\n1 pkt – poprawne uzupełnienie 3 albo 2 liter.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie\nBCEDA",
+      "solution_steps": [
+        "Klucz CKE: BCEDA.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q04-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q04-page-8",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q04-page-8.webp",
+          "sha256": "12dd6a36fdbed1cd73072e4ab1836c89fa906d5ece2b0934f986b52767f496f3",
+          "alt": "Oryginalny układ zadania 4 z arkusza OPOP-100-2305, strona 8.",
+          "caption": "Zadanie 4 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-polish-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        9
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Wyjaśnij, do jakiej tajemnicy nawiązuje Balladyna w słowach: Już przeszłość\nzamknięta / W grobach… Ja sama panią tajemnicy. W odpowiedzi odwołaj się do\nznajomości całego utworu Juliusza Słowackiego.\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nPrzykładowe odpowiedzi ocenione na 1 punkt\n• Balladyna w tych słowach nawiązuje do popełnionych przez siebie zbrodni.\n• Balladyna nawiązuje do swojej przeszłości, do tego, że zabiła Alinę i Grabca oraz\nprzyczyniła się do śmierci Pustelnika, Wdowy i Kirkora.\nPrzykładowa odpowiedź oceniona na 0 punktów\nBalladyna w tych słowach nawiązuje do swojego dawnego życia.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q05-page-9"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q05-page-9",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q05-page-9.webp",
+          "sha256": "eb6327947363b1ad35e17d56e52197b976b2d536dc94dde4f618717cb57ed4e5",
+          "alt": "Oryginalny układ zadania 5 z arkusza OPOP-100-2305, strona 9.",
+          "caption": "Zadanie 5 — oryginalny układ CKE, strona 9.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-polish-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        9
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Odwołując się do znajomości całego utworu Balladyna, dokończ zdanie. Wybierz\nwłaściwą odpowiedź spośród podanych.\nCechą charakterystyczną świata przedstawionego w utworze Balladyna jest\nA. czas akcji nieprzekraczający jednej doby.\nB. łączenie elementów realistycznych i fantastycznych.\nC. brak związku przyczynowo-skutkowego między wydarzeniami.\nD. umiejscowienie rozgrywających się wydarzeń w jednym miejscu.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – poprawna odpowiedź.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nB C",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q06-page-9"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q06-page-9",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q06-page-9.webp",
+          "sha256": "ae3268df6227bafb91b4950b06b9b9e6752b881ab94260e2a7c9b0405cedef99",
+          "alt": "Oryginalny układ zadania 6 z arkusza OPOP-100-2305, strona 9.",
+          "caption": "Zadanie 6 — oryginalny układ CKE, strona 9.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-polish-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        9
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Który z podanych utworów Adama Mickiewicza należy do tego samego rodzaju\nliterackiego co Balladyna? Wybierz właściwą odpowiedź spośród podanych.\nOPOP-100-2305 Strona 9 z 24",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "A"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – poprawna odpowiedź.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nA D\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q07-page-9"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q07-page-9",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q07-page-9.webp",
+          "sha256": "c587033c006f82637470b7d7dc124ca3001a3293af32b42c037a33cd3813a082",
+          "alt": "Oryginalny układ zadania 7 z arkusza OPOP-100-2305, strona 9.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 9.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-polish-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Na lekcji języka polskiego uczniowie mieli za zadanie przygotować karty do gry\nz najważniejszymi informacjami dotyczącymi Balladyny. Autor jednej z kart nie zadbał\njednak o poprawność interpunkcyjną. Wybierz zdanie, w którym interpunkcja jest\nniepoprawna.\nwww.magiaimiecz.eu\nwww.encyklopediateatru.pl",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "D"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – poprawna odpowiedź.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nD B",
+      "solution_steps": [
+        "Klucz CKE: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q08-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q08-page-10",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q08-page-10.webp",
+          "sha256": "85d28fbb6bc84a6574f336e2011f8338479bfc9e72bcd65c05f92465a76a4e54",
+          "alt": "Oryginalny układ zadania 8 z arkusza OPOP-100-2305, strona 10.",
+          "caption": "Zadanie 8 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-polish-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Przeczytaj definicję wyrazu cel ze słownika języka polskiego.\n1. «to, do czego się dąży»\n2. «miejsce, do którego się zmierza»\n3. «przedmiot lub osoba, których dotyczą zamierzone działania»\nNa podstawie: www.sjp.pwn.pl.\nW którym z podanych zdań użyto wyrazu cel w znaczeniu 3.? Wybierz właściwą\nodpowiedź spośród podanych.\nA. Długo spierali się o to, jak szybko dotrzeć do celu.\nB. Artykuł we wczorajszej prasie stał się celem ich żartów.\nC. Naszym celem jest sukces, o którym długo będzie się mówiło.\nD. Celem ich podróży było zabytkowe miasteczko na południu kraju.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – poprawna odpowiedź.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nB D",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q09-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q09-page-10",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q09-page-10.webp",
+          "sha256": "c5f96182c33dc75584039ca8b3f713db15e49c387d197a921a47a50bcaf328f5",
+          "alt": "Oryginalny układ zadania 9 z arkusza OPOP-100-2305, strona 10.",
+          "caption": "Zadanie 9 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-polish-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        11,
+        12,
+        13
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "Obejrzyj zamieszczony poniżej plakat do spektaklu teatralnego Balladyna.\nwww.e-teatr.pl\nAutor plakatu za pomocą różnych elementów graficznych przedstawił swoją\ninterpretację utworu Juliusza Słowackiego. Wybierz dwa elementy graficzne i wyjaśnij\nich sens w kontekście Balladyny.\nElement graficzny 1.: ………………………………………………………………………………….\nWyjaśnienie: ……………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\nOPOP-100-2305 Strona 11 z 24\nElement graficzny 2.: ………………………………………………………………………………….\nWyjaśnienie: ……………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\nPrzeczytaj tekst i wykonaj zadania.\nJolanta Maria Berent\nODBLOKUJ SWÓJ TALENT\nUważasz, że masz jakiś talent? Wykorzystujesz go? Pozwalasz, żeby cię napędzał?\nTak naprawdę na jednym talencie się nie kończy. Zdaniem autorów testu Gallupa1 masz ich\nznacznie więcej! Może rzeczywiście nie potrafisz rysować, nie grasz na żadnym\ninstrumencie, śpiewając, nie zawsze trafiasz w nutę, a w kuchni sprawdzasz się najlepiej\nprzy robieniu herbaty, ale na pewno masz inne zalety, które za talent można uznać.\nPonieważ słowo „talent” łączone jest zwykle ze zdolnościami artystycznymi lub z jakąś\npraktyczną umiejętnością, często uznajemy, że jesteśmy raczej umiarkowanie utalentowani.\nOwszem, coś potrafimy, coś nam „wychodzi”, coś lubimy... Ale talent? To dar, który spływa\nna wybranych! A gdyby przyjąć, że każdy został nim obdarzony?\nTalentów jest sporo. Dokładnie 34. Przynajmniej tak twierdzą badacze Instytutu Gallupa,\nktórzy przez dziesięciolecia prześwietlali ludzkie cechy, by wyłowić te najcenniejsze. Czy\nwpadłbyś na to, że talentem jest bliskość? Albo rozwaga, odpowiedzialność? Dla badaczy\ntalent to „powtarzający się wzorzec zachowania, myślenia i odczuwania, który może znaleźć\npraktyczne zastosowanie”. Innymi słowy: sposób, w jaki stawiasz czoło określonym\nsytuacjom, prawdziwy motor twoich działań. Coś, co łatwo przychodzi, po co chętnie sięgasz\ni co przynosi ponadprzeciętne rezultaty. Może twój dar to „rywalizacja” (chętnie mierzysz się\nz innymi), „bezstronność” (z łatwością rozwiązujesz konflikty), a może „optymizm” (twoja\nszklanka jest zawsze w połowie pełna).\nJak przejawiają się Gallupowskie talenty na co dzień? Weźmy na przykład\n„elastyczność”. Człowiek z wysokim poziomem tej cechy postrzega przyszłość nieco inaczej\nniż pozostali. Ona jest po prostu bliżej. Kiedy słyszy: „chodź na zebranie, robimy plany na\ntrzy lata”, ma ochotę uciekać. On zajmuje się tym, co ma przed nosem. Nie znosi\nharmonogramów, uporządkowanych schematów działania, ścisłych procedur. Reaguje na to,\nco wydarza się teraz. Z kolei ktoś z talentem „uczenie się” czerpie wielką przyjemność ze\nzdobywania wiedzy. Dla niego proces nauki nie ma końca. Wciąż eksperymentuje,\nsprawdza, zgłębia.\nNie da się jednak ukryć, że każdy talent może też mieć ciemną stronę. Weźmy\n„naprawianie”. Jeśli masz ten talent, prawdopodobnie jesteś postrzegany jako osoba, która\npotrafi rozwiązać każdy problem. Tacy ludzie ulepszają, odnawiają, wskrzeszają. Mają\nrentgen w oczach – widzą, co nie działa, i wiedzą, jak to zmienić. Wszystko świetnie, póki nie\nzaczną naprawiać innych…\nOdkrycie własnych talentów bywa energetyzującym doświadczeniem. Ważne, by\nzrozumieć ich istotę. Odkryć, które są zaniedbane i niedocenione, i znaleźć sposób na ich\nodblokowanie. Badacze zauważają, że talenty nie są dane nam raz na całe życie. Można je\nrozwijać i świadomie kształtować. Ważne więc, by skupiać się na swoich mocnych stronach,\nale też – by włączać do codziennego życia nowe sposoby działania i reagowania. Stanie się\nono wtedy ciekawsze, bogatsze. Talent bez naszego wsparcia może przecież zmarnieć. Ale\nto już wiemy od dawna – z pewnej przypowieści2.\nNa podstawie: Jolanta Maria Berent, Odkorkuj swój talent. Według Instytutu Gallupa jest ich aż 34,\nwww.focus.pl.\n1 Test Gallupa – test, który umożliwia ocenę natężenia cech zwanych talentami.\n2 Z pewnej przypowieści – nawiązanie do biblijnej przypowieści o talentach; zgodnie z jej przesłaniem każdy\nczłowiek otrzymuje jakiś dar albo jakąś umiejętność, które powinien pomnożyć, czyli rozwinąć.\n[470 wyrazów]",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 pkt – wskazanie dwóch elementów graficznych i wyjaśnienie związku każdego z nich\nz treścią lektury.\n1 pkt – wskazanie jednego elementu graficznego i wyjaśnienie jego związku z treścią lektury.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nPrzykładowe odpowiedzi\n• Element graficzny: korona na oczach postaci.\nWyjaśnienie: Pragnienie zdobycia korony zawładnęło Balladyną, przesłoniło jej cały świat,\nzaślepiło ją.\n• Element graficzny: krople krwi na koronie.\nWyjaśnienie: Aby zdobyć koronę, Balladyna stała się zbrodniarką.\n• Element graficzny: jasna szata na głowie postaci.\nWyjaśnienie: Może wskazywać na to, że Balladyna była zimną i okrutną kobietą.\n• Element graficzny: ciemna przepaska na oczach.\nWyjaśnienie: Balladyna nie dostrzegała, że to, co robi, jest złe; chęć zdobycia korony\nsprawiła, że była ślepa na sugestie innych, dotyczące jej złego postępowania.\n• Element graficzny: ciemna przepaska na twarzy Balladyny.\nWyjaśnienie: Może to symbolizować czarną przepaskę, która zasłaniała krwawą plamę na\nczole Balladyny.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q10-page-11"
+        },
+        {
+          "type": "image",
+          "asset_id": "q10-page-12"
+        },
+        {
+          "type": "image",
+          "asset_id": "q10-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q10-page-11",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q10-page-11.webp",
+          "sha256": "7d63552ad163dd0142a4f86c59e831161b401e8e26a3a8e25b1ef338e31038cd",
+          "alt": "Oryginalny układ zadania 10 z arkusza OPOP-100-2305, strona 11.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 11.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q10-page-12",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q10-page-12.webp",
+          "sha256": "0e3545e2abf490dd36f88d492f273044e922881edda213c5b5f049e45de9c3bb",
+          "alt": "Oryginalny układ zadania 10 z arkusza OPOP-100-2305, strona 12.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q10-page-13",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q10-page-13.webp",
+          "sha256": "dd35e9432b5296b34271b746793eda81441098f2fd7e994c79c787453ff07239",
+          "alt": "Oryginalny układ zadania 10 z arkusza OPOP-100-2305, strona 13.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-polish-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        13
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "Uzupełnij poniższe zdania tak, aby powstało spójne streszczenie tekstu Odblokuj swój\ntalent.\nJolanta Maria Berent w przytoczonym tekście podejmuje temat ...............................................\n.................................................................................................................................................. .\nAutorka zwraca uwagę na .........................................................................................................\n.................................................................................................................................................. .\nZauważa ponadto ......................................................................................................................\n....................................................................................................................................................\ni przekonuje, że ..........................................................................................................................\n.................................................................................................................................................. .",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 pkt – poprawne określenie tematu i tego, co na ten temat powiedziano w tekście;\nzachowanie właściwego poziomu uogólnienia.\n1 pkt – poprawne określenie tematu i tego, co na ten temat powiedziano w tekście;\nzaburzony poziom uogólnienia.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nUwaga.\nUczeń otrzymuje 0 punktów, jeśli jego wypowiedź w całości składa się z fragmentów\nprzepisanych z tekstu „Odblokuj swój talent”.\nZasady oceniania rozwiązań zadań\nPrzykładowa odpowiedź oceniona na 2 punkty\nJolanta Maria Berent w przytoczonym tekście podejmuje temat różnych znaczeń słowa\n„talent”.\nAutorka zwraca uwagę na to, że talent to nie tylko uzdolnienia artystyczne, ale także cechy\ncharakteru.\nZauważa ponadto, że talenty mogą objawiać się na co dzień w bardzo różny sposób, także\nujawniać swoją negatywną stronę\ni przekonuje, że talent, którego nie rozwijamy, może się zmarnować.\nPrzykładowa odpowiedź oceniona na 1 punkt\nJolanta Maria Berent w przytoczonym tekście podejmuje temat talentów, jakie posiadamy.\nAutorka zwraca uwagę na ilość różnorodnych ludzkich talentów.\nZauważa ponadto dobre i złe strony talentów\ni przekonuje, że każdy ma jakiś talent i może mieć także jakieś nieodkryte.\nPrzykładowa odpowiedź oceniona na 0 punktów\nJolanta Maria Berent w przytoczonym fragmencie podejmuje temat ludzkiego talentu.\nAutorka zwraca uwagę na dawanie przykładów do każdego talentu.\nZauważa ponadto, że odkrycie własnych talentów bywa energetyzującym doświadczeniem\ni przekonuje, że talenty nie są nam dane raz na całe życie. Można je rozwijać i świadomie\nkształtować.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q11-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q11-page-13",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q11-page-13.webp",
+          "sha256": "baf344e5e6951fe8dd389f4444437b0dcf9b87314f66dd48346d757b97c01d3d",
+          "alt": "Oryginalny układ zadania 11 z arkusza OPOP-100-2305, strona 13.",
+          "caption": "Zadanie 11 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-polish-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        13
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Oceń prawdziwość podanych stwierdzeń, odwołując się do tekstu Jolanty Marii\nBerent. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\nZ tekstu wynika, że posiadane talenty inspirują ludzi do działania. P F\nZ tekstu wynika, że tylko nieliczne osoby są obdarzone talentami. P F\nPRZENIEŚ ROZWIĄZANIE ZADANIA 12. NA KARTĘ ODPOWIEDZI!\nOPOP-100-2305 Strona 13 z 24",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "PF"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nPF FP\nEgzamin ósmoklasisty z języka polskiego – termin główny 2023 r.",
+      "solution_steps": [
+        "Klucz CKE: PF.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q12-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q12-page-13",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q12-page-13.webp",
+          "sha256": "c8958d345272bedf0f6b161989d75f50f6f20d4ea6c9711a13d18dc18d20d816",
+          "alt": "Oryginalny układ zadania 12 z arkusza OPOP-100-2305, strona 13.",
+          "caption": "Zadanie 12 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-polish-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Spośród podanych pytań wskaż to, na które można znaleźć odpowiedź w 5. akapicie\ntekstu Jolanty Marii Berent. Wybierz właściwą odpowiedź spośród podanych.\nA. Jak badacze definiują talent?\nB. W jaki sposób można odkryć swoje talenty?\nC. Czy posiadane talenty mogą mieć jakieś minusy?\nD. Jak pielęgnowanie talentów wpływa na nasze życie?",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "C"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nC B",
+      "solution_steps": [
+        "Klucz CKE: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q13-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q13-page-14",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q13-page-14.webp",
+          "sha256": "c1fd63645a95874f6e9a899335e7c29d2b31435dc49c5469bc6932ef810b0c67",
+          "alt": "Oryginalny układ zadania 13 z arkusza OPOP-100-2305, strona 14.",
+          "caption": "Zadanie 13 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-polish-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "Czy treść poniższego rysunku jest zgodna z wymową tekstu Odblokuj swój talent?\nW uzasadnieniu sformułuj argument odnoszący się zarówno do tekstu Jolanty Marii\nBerent, jak i do rysunku.\nNa podstawie: www.demotywatory.pl\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\nPRZENIEŚ ROZWIĄZANIE ZADANIA 13. NA KARTĘ ODPOWIEDZI!",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 pkt – poprawne sformułowanie argumentu odwołującego się do rysunku i do tekstu.\n1 pkt – poprawne sformułowanie argumentu odwołującego się albo do rysunku, albo do\ntekstu.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nUwagi.\n• Jeżeli uczeń poprawnie zinterpretuje treść rysunku i poprawnie odwoła się do tekstu\nJolanty Marii Berent, ale nie powiąże ze sobą tekstu i rysunku, otrzymuje 1 punkt.\n• Jeżeli uczeń odwoła się do tekstu Jolanty Marii Berent i tylko do napisu umieszczonego\npod rysunkiem, otrzymuje 1 punkt.\nPrzykładowa odpowiedź oceniona na 2 punkty\nW artykule jest mowa o odkrywaniu swoich mocnych stron, czyli talentów, nawet jeśli\nsądzimy, że w ogóle ich nie mamy. Na rysunku widzimy ślimaka, który wzbija się w powietrze\nna deskorolce, choć nie przypuszczał, że potrafi to robić. W ten sposób odblokował swój\nukryty talent.\nZasady oceniania rozwiązań zadań\nPrzykładowa odpowiedź oceniona na 1 punkt\nUważam, że treść rysunku jest zgodna z wymową tekstu „Odblokuj swój talent”. Jolanta\nMaria Berent twierdzi, że kiedy rozwijamy i realizujemy nasze talenty, życie staje się\nciekawsze i lepsze. Na rysunku jest napisane, że używając swoich talentów, robimy to, co\nkochamy.\nPrzykładowa odpowiedź oceniona na 0 punktów\nUważam, że talent to np. jeżdżenie na deskorolce i jeśli lubisz jeździć na tej deskorolce, to\nrobisz to, co kochasz.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q14-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q14-page-14",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q14-page-14.webp",
+          "sha256": "92d6275ddb0a4534c3ddb83841701199adb133d098317e1c5d9d611d8d2d3150",
+          "alt": "Oryginalny układ zadania 14 z arkusza OPOP-100-2305, strona 14.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-polish-100-x-q15",
+      "number": "15",
+      "sort_order": 15,
+      "source_pages": [
+        15
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Adam Małysz – znany skoczek narciarski – powiedział:\nSam dar nie wystarczy. On może w tobie drzemać i nigdy się nie obudzić, jeśli sam nie\nzechcesz go obudzić.\nCzy wypowiedź Adama Małysza jest zgodna z treścią ostatniego akapitu tekstu\nOdblokuj swój talent? Uzasadnij odpowiedź. Nie cytuj sformułowań z tekstu Jolanty\nMarii Berent.\n…………………………………………………………………………………………………………..\n…………………………………………………………………………………………………………..\n…………………………………………………………………………………………………………..\n…………………………………………………………………………………………………………..\n…………………………………………………………………………………………………………..",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – sformułowanie stanowiska i jego uzasadnienie.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nPrzykładowa odpowiedź oceniona na 1 punkt\nTa wypowiedź jest zgodna z ostatnim akapitem. Adam Małysz mówi, że to od człowieka\nzależy, czy będzie rozwijał swoje talenty. Tak samo uważa autorka tekstu, pisząc, że to my\npowinniśmy odkrywać sami nasze talenty.\nPrzykładowa odpowiedź oceniona na 0 punktów\nTak. Pierwszy tekst jest zgodny z tekstem Jolanty Marii Berent, ponieważ Adam Małysz\nswoimi słowami wręcz parafrazuje tekst „Odblokuj swój talent”.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q15-page-15"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q15-page-15",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q15-page-15.webp",
+          "sha256": "2f5ed772da262d49c332a535fe31eb63050123ae58b507336a6a58f407e1fe36",
+          "alt": "Oryginalny układ zadania 15 z arkusza OPOP-100-2305, strona 15.",
+          "caption": "Zadanie 15 — oryginalny układ CKE, strona 15.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-polish-100-x-q16",
+      "number": "16",
+      "sort_order": 16,
+      "source_pages": [
+        15,
+        16
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "Jedno z wydawnictw, aby zachęcić czytelników do rozwijania swoich talentów, dołącza do\nswoich książek zakładki inspirowane listą talentów Instytutu Gallupa.\nPoniżej znajdują się projekty wybranych trzech zakładek.\nOPOP-100-2305 Strona 15 z 24\nWybierz jedną z tych trzech zakładek. Podaj bohatera lektury obowiązkowej, który\nwykazał się cechą wskazaną na wybranej przez Ciebie zakładce, oraz tytuł tej lektury.\nUzasadnij swój wybór. W uzasadnieniu przywołaj sytuację z tej lektury potwierdzającą\nTwoje stanowisko.\nUwaga! Lista lektur obowiązkowych znajduje się na stronie 3 tego arkusza egzaminacyjnego.\nNazwa cechy: ..............................................\nBohater: ......................................................................................................................................\nTytuł lektury obowiązkowej: ........................................................................................................\nUzasadnienie: ............................................................................................................................\n....................................................................................................................................................\n....................................................................................................................................................\n....................................................................................................................................................\n....................................................................................................................................................\n....................................................................................................................................................\n....................................................................................................................................................",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 pkt – podanie nazwy cechy, tytułu lektury obowiązkowej i bohatera, poprawne\nuzasadnienie zilustrowane sytuacją z lektury.\n1 pkt – podanie nazwy cechy, tytułu lektury obowiązkowej i bohatera, poprawne\nuzasadnienie bez zilustrowania sytuacją z lektury.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nUwagi.\n• W przypadku, gdy zdający nazwie cechę, wskaże poprawnie tytuł lektury, nie wskaże\nbohatera, ale uzasadnienie pozwala zidentyfikować bohatera, otrzymuje maksymalnie\n1 punkt.\n• W przypadku, gdy zdający nazwie cechę, nie wskaże tytułu lektury, wskaże poprawnie\nbohatera i poprawnie uzasadni swój wybór, otrzymuje maksymalnie 1 punkt.\n• W przypadku, gdy zdający nazwie cechę, wskaże poprawnie bohatera i tytuł lektury, ale\nbłędnie uzasadni swój wybór, otrzymuje 0 punktów.\n• W przypadku, gdy zdający nazwie cechę, wskaże poprawnie bohatera i tytuł lektury, ale\nnie uzasadni swojego wyboru, otrzymuje 0 punktów.\nPrzykładowe odpowiedzi ocenione na 2 punkty\n• Nazwa cechy: rozwaga\nBohater: Petroniusz\nTytuł lektury: „Quo vadis”\nUzasadnienie: Petroniusz, należąc do dworu cezara, musiał postępować rozważnie. Wykazał\nsię rozwagą, kiedy np. rozmawiał z Neronem, chwalił jego poezję i jednocześnie ją\nkrytykował, ale tak, by nie narazić się cezarowi.\n• Nazwa cechy: odpowiedzialność\nBohater: Zośka\nTytuł lektury: „Kamienie na szaniec”\nUzasadnienie: Zośka przed każdą akcją bardzo dokładnie się przygotowywał, ponieważ\nwiedział, że od tego zależy życie ludzi, którymi dowodził. Potwierdza to akcja pod\nSieczychami.\n• Nazwa cechy: optymizm\nBohater: Mały Książę\nTytuł lektury: „Mały Książę”\nZasady oceniania rozwiązań zadań\nUzasadnienie: Chłopcu zależało na tym, aby znaleźć przyjaciela. Wyruszył w nieznane,\nodwiedził wiele planet, licząc na to, że osiągnie cel. Nie od razu mu się to udało, ale nie tracił\nnadziei. W końcu spotkał Lisa, który stał się jego prawdziwym przyjacielem.\nPrzykładowa odpowiedź oceniona na 1 punkt\nNazwa cechy: rozwaga\nBohater: Pustelnik\nTytuł lektury obowiązkowej: „Balladyna”\nUzasadnienie: Pustelnik moim zdaniem jest rozważny, ponieważ zwykle dawał dobre rady\npotrzebującym. Nie chwalił się też swoim pochodzeniem.\nPrzykładowa odpowiedź oceniona na 0 punktów\nNazwa cechy: optymizm\nBohater: Balladyna\nTytuł lektury obowiązkowej: „Balladyna”\nUzasadnienie: Główna bohaterka danej lektury uważała, że za wszystkie zbrodnie, których\ndokonała, nie zostanie już ukarana po zajęciu tronu.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q16-page-15"
+        },
+        {
+          "type": "image",
+          "asset_id": "q16-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q16-page-15",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q16-page-15.webp",
+          "sha256": "770dd2a2d86e9c6af17eb1a2137093a04583ff8d4aa9854cae722e9661ab5853",
+          "alt": "Oryginalny układ zadania 16 z arkusza OPOP-100-2305, strona 15.",
+          "caption": "Zadanie 16 — oryginalny układ CKE, strona 15.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q16-page-16",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q16-page-16.webp",
+          "sha256": "ea43242043f38ccbd0c6d3c6bbde9a8e448d914ae8ebf2e722ac3caaf28944c3",
+          "alt": "Oryginalny układ zadania 16 z arkusza OPOP-100-2305, strona 16.",
+          "caption": "Zadanie 16 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-polish-100-x-q17",
+      "number": "17",
+      "sort_order": 17,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Dokończ poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B\noraz odpowiedź spośród oznaczonych literami C i D.\nW wypowiedzeniu W kuchni sprawdzasz się najlepiej przy robieniu herbaty podkreślony\nwyraz to przysłówek w stopniu A B . Zgodnie z zasadami poprawności ortograficznej\npartykułę nie z wyrazem najlepiej należy zapisać C D .\nA. wyższym C. łącznie\nB. najwyższym D. rozdzielnie\nPRZENIEŚ ROZWIĄZANIE ZADANIA 17. NA KARTĘ ODPOWIEDZI!",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "BD"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nBD AC",
+      "solution_steps": [
+        "Klucz CKE: BD.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q17-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q17-page-16",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q17-page-16.webp",
+          "sha256": "13dc1fa0d71f3c270ed6e1af9758438e5661441e45cddb242b75a07fefa9e29d",
+          "alt": "Oryginalny układ zadania 17 z arkusza OPOP-100-2305, strona 16.",
+          "caption": "Zadanie 17 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-polish-100-x-q18",
+      "number": "18",
+      "sort_order": 18,
+      "source_pages": [
+        17
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna",
+      "difficulty": 3,
+      "prompt": "Zredaguj zaproszenie na premierę filmu zatytułowanego Łowcy talentów. Zachęć\ndo udziału w tym wydarzeniu, używając dwóch argumentów.\nUwaga: w ocenie wypowiedzi będzie brana pod uwagę poprawność językowa,\nortograficzna i interpunkcyjna.\nZaproszenie\n………………………………………………………………………………..................\n………………………………………………………………………………..................\n………………………………………………………………………………..................\n………………………………………………………………………………..................\n………………………………………………………………………………..................\n………………………………………………………………………………..................\n………………………………………………………………………………..................\n………………………………………………………………………………..................\n………………………………………………………………………………..................\n………………………………………………………………………………..................\n………………………………………………………………………………..................\n………………………………………………………………………………..................\n………………………………………………………………………………..................\n………………………………………………………………………………..................\n………………………………………………………………………………..................\n………………………………………………………………………………..................\nOPOP-100-2305 Strona 17 z 24",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\nTreść i forma:\n2 pkt treść zgodna z poleceniem, uwzględnione 2 argumenty; uwzględnionych\n5 elementów dotyczących formy: kto zaprasza? kogo zaprasza? na co zaprasza?\nkiedy się odbywa? gdzie się odbywa?\n1 pkt treść zgodna z poleceniem, uwzględnione 2 argumenty; uwzględnione 4 elementy\ndotyczące formy: kto zaprasza? ORAZ/ALBO kogo zaprasza? ORAZ/ALBO na co\nzaprasza? ORAZ/ALBO kiedy się odbywa? ORAZ/ALBO gdzie się odbywa?\n0 pkt treść niezgodna z poleceniem ALBO treść zgodna z poleceniem, ale\nuwzględnione tylko 3 elementy dotyczące formy: kto zaprasza? ORAZ/ALBO kogo\nzaprasza? ORAZ/ALBO na co zaprasza? ORAZ/ALBO kiedy się odbywa?\nORAZ/ALBO gdzie się odbywa?\nPoprawność językowa, ortograficzna i interpunkcyjna:\n1 pkt – łącznie nie więcej niż dwa błędy (językowe, ortograficzne, interpunkcyjne).\n0 pkt – łącznie trzy lub więcej błędów (językowych, ortograficznych, interpunkcyjnych).\nUCZNIOWIE ZE SPECYFICZNYMI TRUDNOŚCIAMI W UCZENIU SIĘ\nPoprawność językowa, ortograficzna i interpunkcyjna:\n1 pkt – łącznie nie więcej niż trzy błędy (językowe, ortograficzne, interpunkcyjne).\n0 pkt – łącznie cztery lub więcej błędów (językowych, ortograficznych, interpunkcyjnych).\nUwagi.\n• Jeżeli uczeń uwzględnia 5 elementów zaproszenia, a podaje tylko jeden argument,\nw kryterium „Treść i forma” otrzymuje 1 punkt.\n• Kategorie „Treść i forma” oraz „Poprawność językowa, ortograficzna i interpunkcyjna”\noceniamy rozłącznie.\nPrzykładowa odpowiedź oceniona na 3 punkty\nW imieniu Samorządu Uczniowskiego serdecznie zapraszam wszystkich uczniów na\npremierę filmu zatytułowanego „Łowcy talentów”. Spotykamy się 16 czerwca 2023 r. w sali\ngłównej Domu Kultury w Strzelinie. Seans rozpocznie się o godzinie 17:30.\nPo filmie odbędzie się konkurs talentów. Będzie można również porozmawiać z twórcami\nfilmu.\nPrzewodniczący Samorządu Uczniowskiego\nZasady oceniania rozwiązań zadań\nZASADY OCENIANIA WYPRACOWANIA\n1. Jeżeli wypowiedź w całości jest nie na temat, egzaminator ocenia ją na 0 punktów. Nie\nsprawdza i nie zaznacza żadnych błędów w pracy. Egzaminator umieszcza dopisek –\n„Praca nie na temat”.\n2. Jeżeli w wypowiedzi uczeń w ogóle nie odwołał się do treści lektury obowiązkowej, za\ncałą wypowiedź egzaminator przyznaje 0 punktów. Nie sprawdza i nie zaznacza żadnych\nbłędów w pracy. Egzaminator umieszcza dopisek – „Brak odwołania do lektury\nobowiązkowej”.\n3. Jeżeli wypowiedź jest nieczytelna, egzaminator ocenia ją na 0 punktów.\n4. Jeżeli wypowiedź nie zawiera w ogóle rozwinięcia (np. uczeń napisał tylko wstęp),\negzaminator przyznaje 0 punktów w każdym kryterium.\n5. Jeżeli wypowiedź zawiera 180 wyrazów lub mniej, jest oceniana wyłącznie w kryteriach:\nrealizacji tematu wypowiedzi, elementów twórczych / elementów retorycznych oraz\nkompetencji literackich i kulturowych. W pozostałych kryteriach egzaminator przyznaje\n0 punktów.\n6. Jeżeli wypowiedź jest napisana niesamodzielnie, np. zawiera fragmenty odtworzone\nz podręcznika, zadania zawartego w arkuszu egzaminacyjnym lub innego źródła, w tym\ninternetowego, lub jest przepisana od innego ucznia, wówczas egzamin z języka\npolskiego, w przypadku takiego ucznia, jest unieważniany.\n7. Zabronione jest pisanie wypowiedzi obraźliwych, wulgarnych lub propagujących\npostępowanie niezgodne z prawem. W przypadku takich wypowiedzi zostanie podjęta\nindywidualna decyzja dotycząca danej pracy, np. nie zostaną przyznane punkty za styl\ni język lub cała wypowiedź nie będzie podlegała ocenie.\nUwaga. Liczone są wszystkie wyrazy: samodzielne i niesamodzielne.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q18-page-17"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q18-page-17",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q18-page-17.webp",
+          "sha256": "7ddf4aee056a215f75e459b87ef45b6af945af3613d57dfd885f23342f00289c",
+          "alt": "Oryginalny układ zadania 18 z arkusza OPOP-100-2305, strona 17.",
+          "caption": "Zadanie 18 — oryginalny układ CKE, strona 17.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-polish-100-x-q19",
+      "number": "19",
+      "sort_order": 19,
+      "source_pages": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        24
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna",
+      "difficulty": 3,
+      "prompt": "Wybierz jeden z podanych tematów i napisz wypracowanie.\n• Pamiętaj o zachowaniu formy wypowiedzi wskazanej w temacie: napisz rozprawkę albo\nopowiadanie.\n• W wypracowaniu odwołaj się do wybranej lektury obowiązkowej. Lista lektur\nobowiązkowych znajduje się na stronie 3 tego arkusza egzaminacyjnego.\n• Twoja praca powinna liczyć co najmniej 200 wyrazów.\n• Zapisz wypracowanie w wyznaczonym miejscu. Nie pisz na marginesie.\nTemat 1.\nCzy zgadzasz się ze stwierdzeniem, że to, jakimi jesteśmy ludźmi, zależy od nas\nsamych? Napisz rozprawkę, w której przedstawisz swoje stanowisko. W uzasadnieniu\nodwołaj się do lektury obowiązkowej oraz do innego utworu literackiego.\nTemat 2.\nNapisz opowiadanie o Twoim spotkaniu z bohaterem wybranej lektury obowiązkowej.\nWasza wspólna przygoda przekona Cię, że swój cel osiąga ten, kto wytrwale do niego\ndąży. Wypracowanie powinno dowodzić, że dobrze znasz wybraną lekturę\nobowiązkową.\nWYPRACOWANIE\nna temat nr …………\nMiejsce dla Miejsce dla\negzaminatora egzaminatora\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\nMiejsce dla Miejsce dla\negzaminatora egzaminatora\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ …………………………………………………………………………… _______\n_______ ………………………………………………………….………………… _______\nOPOP-100-2305 Strona 19 z 24\nMiejsce dla Miejsce dla\negzaminatora egzaminatora\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ …………………………………………………………………………… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\nMiejsce dla Miejsce dla\negzaminatora egzaminatora\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ …………………………………………………………………………… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\nOPOP-100-2305 Strona 21 z 24\nMiejsce dla Miejsce dla\negzaminatora egzaminatora\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\nTabela przeznaczona dla egzaminatora!\nZakres\nśrodków\nElementy\nRealizacja Kompetencje językowych\ntwórcze / Kompozycja\ntematu literackie Styl A B C Ortografia Interpunkcja\nelementy tekstu\nwypowiedzi i kulturowe (0–2) (0–2) (0–1)\nretoryczne (0–2)\n(0–2) (0–2) Język\n(0–5)\n(0–4)",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 20,
+        "rules": [
+          "Maksymalnie 20 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania rozwiązań zadań\n7) zgadza się z cudzymi poglądami lub\npolemizuje z nimi, rzeczowo uzasadniając\nwłasne zdanie.\n2. Mówienie i pisanie. Uczeń:\n1) tworzy spójne wypowiedzi\nw następujących formach gatunkowych: [...]\nrozprawka [...].\nZasady oceniania\n1. Realizacja tematu wypowiedzi\nOceniając wypowiedź ucznia w tym kryterium, należy rozważyć m.in., czy:\n• wypowiedź jest zgodna z formą wskazaną w poleceniu\n• w wypowiedzi ujęte zostały wszystkie kluczowe elementy tematu, np. czy uczeń\nw odpowiedni sposób odwołał się do lektury wskazanej w poleceniu\n• wypowiedź jest w całości na temat.\n2 pkt • Forma wypowiedzi zgodna z formą wskazaną w poleceniu.\n• Wszystkie pozostałe elementy polecenia uwzględnione.\n• Wypowiedź w całości dotyczy problemu wskazanego w poleceniu.\n1 pkt • Forma wypowiedzi zgodna z formą wskazaną w poleceniu.\n• Nieuwzględniony jeden element polecenia (inny niż forma). ORAZ/LUB\n• W pracy występują fragmenty niedotyczące problemu wskazanego\nw poleceniu.\n0 pkt • Forma wypowiedzi niezgodna z formą wskazaną w poleceniu. ALBO\n• Nieuwzględnione co najmniej dwa elementy polecenia (inne niż forma).\nUwaga: jeżeli za wypowiedź przyznano 0 pkt w kryterium Realizacja tematu wypowiedzi,\nwe wszystkich pozostałych kryteriach przyznaje się 0 pkt.\n2. Elementy retoryczne\nOceniając wypowiedź ucznia w tym kryterium, należy rozważyć m.in., czy:\n• argumentacja w pracy jest wnikliwa\n• argumenty są poparte właściwymi przykładami\n• argumenty są przedstawione w sposób uporządkowany, np. są przedstawione od\nnajbardziej do najmniej ważnego albo są zapisane w porządku argument –\nkontrargument.\n5 pkt • Pogłębiona argumentacja.\n• Argumenty odwołujące się np. do faktów, logiki, emocji, zilustrowane\nodpowiednimi przykładami ORAZ/LUB wykorzystanie przykładów w funkcji\nargumentacyjnej.\n• Argumenty/przykłady uporządkowane, np. zhierarchizowane.\n4 pkt Praca spełnia wszystkie wymagania na 3 pkt i niektóre na 5 pkt.\nEgzamin ósmoklasisty z języka polskiego – termin główny 2023 r.\n3 pkt • Powierzchowna argumentacja; w wypowiedzi brak wnikliwości.\n• Niektóre argumenty zilustrowane odpowiednimi przykładami ORAZ/LUB\nwykorzystanie przykładów w funkcji argumentacyjnej.\n• Argumenty/przykłady częściowo uporządkowane.\n2 pkt Praca spełnia wszystkie wymagania na 1 pkt i niektóre na 3 pkt.\n1 pkt • Podjęta próba argumentowania.\n• Ograniczenie do wyliczenia powierzchownie omówionych przykładów,\npowiązanych z problemem określonym w temacie.\n0 pkt Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt.\n3. Kompetencje literackie i kulturowe\nOceniając wypowiedź ucznia w tym kryterium, należy rozważyć m.in., czy:\n• uczeń wykorzystał znajomość lektury obowiązkowej wskazanej w poleceniu (a także\ninnych tekstów – jeżeli polecenie tego wymagało) w sposób funkcjonalny, tzn. np. czy\nprzywołał w pracy takie wydarzenia albo omówił takie wątki, które istotnie wspierają jego\ntok rozumowania albo dobrze ilustrują to, o czym pisze\n• uczeń, pisząc np. o wydarzeniach z danej lektury, nie popełnił błędów, np. nie pomylił\nimion postaci, nie przypisał postaciom cech, których nie posiadają, bądź nie wymyślił\nwydarzeń, których w lekturze nie ma.\n2 pkt • Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej\nw poleceniu (oraz innego tekstu li",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q19-page-18"
+        },
+        {
+          "type": "image",
+          "asset_id": "q19-page-19"
+        },
+        {
+          "type": "image",
+          "asset_id": "q19-page-20"
+        },
+        {
+          "type": "image",
+          "asset_id": "q19-page-21"
+        },
+        {
+          "type": "image",
+          "asset_id": "q19-page-22"
+        },
+        {
+          "type": "image",
+          "asset_id": "q19-page-24"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q19-page-18",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q19-page-18.webp",
+          "sha256": "c155c9136564f0d06ad53c8630663f8a5dbbbf6a633d987eb07de7c1aa8f0fef",
+          "alt": "Oryginalny układ zadania 19 z arkusza OPOP-100-2305, strona 18.",
+          "caption": "Zadanie 19 — oryginalny układ CKE, strona 18.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q19-page-19",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q19-page-19.webp",
+          "sha256": "585367227c727c37e4efbad52f441df88f72fb52497b83ed2c584212e5ceb2d7",
+          "alt": "Oryginalny układ zadania 19 z arkusza OPOP-100-2305, strona 19.",
+          "caption": "Zadanie 19 — oryginalny układ CKE, strona 19.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q19-page-20",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q19-page-20.webp",
+          "sha256": "5b49e042cf4ba9e0151bd3cb5b99277c655a72b9a6f65839f7fe1edfc4924b75",
+          "alt": "Oryginalny układ zadania 19 z arkusza OPOP-100-2305, strona 20.",
+          "caption": "Zadanie 19 — oryginalny układ CKE, strona 20.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q19-page-21",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q19-page-21.webp",
+          "sha256": "1dc01066b465cdcff6b45909ce745064e81149b2aa543814a105efe23ebd321d",
+          "alt": "Oryginalny układ zadania 19 z arkusza OPOP-100-2305, strona 21.",
+          "caption": "Zadanie 19 — oryginalny układ CKE, strona 21.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q19-page-22",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q19-page-22.webp",
+          "sha256": "4d9056150a24cead0e250dcaac3619ff693086f72d41ee17d27a84e0cce6f8b5",
+          "alt": "Oryginalny układ zadania 19 z arkusza OPOP-100-2305, strona 22.",
+          "caption": "Zadanie 19 — oryginalny układ CKE, strona 22.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q19-page-24",
+          "path": "public/cke/2023/polish/opop-100-x-2305/q19-page-24.webp",
+          "sha256": "d380554df7fa1922387e2d71f0970f565577c825d6974bdfe3559697d1ed2e53",
+          "alt": "Oryginalny układ zadania 19 z arkusza OPOP-100-2305, strona 24.",
+          "caption": "Zadanie 19 — oryginalny układ CKE, strona 24.",
+          "mime_type": "image/webp"
+        }
+      ]
+    }
+  ]
+}

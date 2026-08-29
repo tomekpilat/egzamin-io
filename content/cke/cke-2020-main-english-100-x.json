@@ -1,0 +1,894 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2020-main-english-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2020-main-english-100-x",
+    "source_document_id": "OJAP-100-2004",
+    "source_pdf_sha256": "8e5bca4da6b152c25ef2b732c31592745c9c6999712f4e5f269847cc069815a2",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2020-2/",
+    "source_label": "CKE 2020 · język angielski · termin główny · wariant 100-X",
+    "exam_year": 2020,
+    "exam_session": "main",
+    "subject": "english",
+    "variant_code": "100-X",
+    "question_count": 14,
+    "supplementary_sources": [
+      {
+        "id": "cke-2020-main-english-100-x-rules",
+        "path": "content/cke/sources/2020/english/OJAP-100-2004-zasady.pdf",
+        "sha256": "582b6d85fb1c19b44509bf0643e42667dfc9f2802af368f946ab8527b797cbc2",
+        "label": "Oficjalne zasady oceniania rozwiązań zadań"
+      },
+      {
+        "id": "cke-2020-main-english-100-x-transcript",
+        "path": "content/cke/sources/2020/english/OJAP-100-2004-transkrypcja.pdf",
+        "sha256": "f6f32f2b2c74deec7aab777b71f88c77d81941d47acf6ca245986d689e2204c0",
+        "label": "Oficjalna transkrypcja nagrań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [
+    {
+      "id": "cke-2020-main-english-100-x-transcript-q01",
+      "title": "Transkrypcja nagrania do zadania 1",
+      "paragraphs": [
+        "Tekst 1.",
+        "Man: Olivia, do you need anything from here?",
+        "Girl: Yes, Dad, a cake for Mother’s Day.",
+        "Man: OK. Which one do you like?",
+        "Girl: The one with “Happy Birthday” on top looks nice. What a pity we can’t change",
+        "the words.",
+        "Man: You’re right, but the cake with oranges and strawberries looks great, too!",
+        "Girl: Oranges aren’t Mum’s favourite fruit. Look at the cake in the shape of a heart.",
+        "Let’s get that one.",
+        "Man: Yes. I’m sure Mum will like it.",
+        "Girl: I think so too. Dad, can we also go to the shop next door and buy some fruit",
+        "to decorate the table?",
+        "Tekst 2.",
+        "Girl: Gosh, it’s so late. The castle closes in three hours. Why didn’t we go by bike?",
+        "Boy: Because the radio said it was going to rain, remember?",
+        "Girl: I know, but it isn’t raining after all. And now we are stuck in a traffic jam. All the seats",
+        "are taken and we have to stand in a crowd of people. Let’s get off and go the rest of",
+        "the way on foot.",
+        "Boy: Forget it, it’s too far to walk.",
+        "Tekst 3.",
+        "Girl: Nice hiking boots, Kevin.",
+        "Boy: Oh thanks Natalie, I bought them for the trip to the mountains. They’re super",
+        "comfortable.",
+        "Girl: Where did you buy them?",
+        "Boy: Not far from here. Why?",
+        "Girl: Maybe they’ve got some boots in my size, too.",
+        "Boy: I’m sure they will. Let’s leave now and we can stop there on our way.",
+        "Girl: Great idea! Hurry up, then.",
+        "Boy: Wait, I need to take my keys because Mum is at work today. Have you seen them?",
+        "Girl: They’re over there, on the shelf.",
+        "Tekst 4.",
+        "Boy: Yesterday I ate some crisps and got a stomach ache, so I had to go home before maths.",
+        "Girl: Oh! Great that you are better today. So, didn’t you do the test?",
+        "Boy: No. Actually, my class didn’t have a test at all because our teacher was also sick.",
+        "Girl: Is she better now?",
+        "Boy: I hope so. We’re having a food festival this afternoon and we need her help.",
+        "Tekst 5.",
+        "Woman: Where are you, James? Are you all right? You should be home already. I’ve just heard",
+        "on the news that there has been an accident nearby. A police car and an ambulance",
+        "went down our street. I’m really anxious. Please ring me back."
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    },
+    {
+      "id": "cke-2020-main-english-100-x-transcript-q02",
+      "title": "Transkrypcja nagrania do zadania 2",
+      "paragraphs": [
+        "Wypowiedź 1.",
+        "Boy: When I heard that my favourite band would be playing in Manchester, I immediately",
+        "decided to go and see them. The only way to get a ticket was to log on to the concert",
+        "website. But so many people were trying to visit the site, that it stopped working.",
+        "When I tried to log on the next day, I saw that all the tickets had already been sold out.",
+        "Wypowiedź 2.",
+        "Girl: Last month I found a beautiful sweatshirt on the Internet. I chose the size and colour.",
+        "Then I paid for it. When the package arrived, I realized that I had chosen the wrong",
+        "item! It was a sweatshirt from the men’s collection! Luckily, I was able to return it",
+        "and get my money back.",
+        "Wypowiedź 3.",
+        "Man: Last year I was looking at second-hand electric guitars on a website. To my surprise,",
+        "I found my first ever guitar there, which I had sold in 2005! I got so excited that",
+        "I bought it for my son! The price was definitely too high for an old used guitar,",
+        "and there are some technical problems with it but I’m happy that my son has it now.",
+        "Wypowiedź 4.",
+        "Woman: Once, I bought cosmetics on the Internet. After a week I called the online shop",
+        "and asked what had happened to my parcel, but they didn’t know. Two days later,",
+        "my son found a box in our garden, under a bush. It turned out that the courier had left",
+        "the parcel there without telling me."
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    },
+    {
+      "id": "cke-2020-main-english-100-x-transcript-q03",
+      "title": "Transkrypcja nagrania do zadania 3",
+      "paragraphs": [
+        "Woman: Jonathan, you have a pet skunk. That’s quite unusual. Wouldn’t you prefer a dog",
+        "or a cat?",
+        "Boy: Actually, I dreamed of getting a rabbit for my birthday but my dad said that rabbits are",
+        "boring and he bought me a skunk instead. Now I don’t want any other animal.",
+        "Woman: Is it easy to keep the skunk happy and active?",
+        "Boy: Well, he runs around the whole house, but he also likes spending time outside. I take",
+        "him for a long walk every morning and every afternoon.",
+        "Woman: Do pet skunks need special food?",
+        "Boy: Not really, wild skunks eat mice and insects. But I give eggs and fruit to my skunk.",
+        "Woman: Does your skunk know any tricks?",
+        "Boy: Sure, skunks are very intelligent. Mine is perfect at opening doors. He is also trying",
+        "to catch tennis balls but he’s not able to do that yet. Anyway, we both have a lot of",
+        "fun spending time together!"
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    },
+    {
+      "id": "cke-2020-main-english-100-x-transcript-q04",
+      "title": "Transkrypcja nagrania do zadania 4",
+      "paragraphs": [
+        "Wypowiedź 1.",
+        "Are you our new classmate?",
+        "Wypowiedź 2.",
+        "Do you know why Janet didn’t come to the school party?",
+        "Wypowiedź 3.",
+        "Your cousin is such a nice person.",
+        "Wypowiedź 4.",
+        "Mum, can I have a party this Saturday?"
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    }
+  ],
+  "questions": [
+    {
+      "id": "cke-2020-main-english-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        3
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — wybór wielokrotny",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie pięć tekstów. W zadaniach 1.1.–1.5., na podstawie informacji\nzawartych w nagraniu, z podanych odpowiedzi wybierz właściwą. Zakreśl jedną z liter:\nA, B albo C.\n1.1. Which cake are Olivia and her father going to buy today?\nA. B. C.\n1.2. How are the boy and the girl travelling to the castle?\nA. B. C.\n1.3. Where are Natalie and Kevin?\nA. B. C.\n1.4. The boy and the girl are talking about\nA. favourite foods.\nB. health problems.\nC. maths test results.\n1.5. The woman wants to\nA. give advice.\nB. express worry.\nC. report an accident to the police.\nOJAP-100-2004 Strona 3 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "1.1: C; 1.2: C; 1.3: A; 1.4: B; 1.5: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 5,
+        "rules": [
+          "Maksymalnie 5 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 1.1: C; 1.2: C; 1.3: A; 1.4: B; 1.5: B.",
+      "solution_steps": [
+        "Klucz CKE: 1.1: C; 1.2: C; 1.3: A; 1.4: B; 1.5: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2020-main-english-100-x-transcript-q01",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-page-3"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q01-page-3",
+          "path": "public/cke/2020/english/ojap-100-x-2004/q01-page-3.webp",
+          "sha256": "4f0bd4dfdc122281dbfa403bab9e9a90b2726d7773889491199a85f4bbeaeb8b",
+          "alt": "Oryginalny układ zadania 1 z arkusza OJAP-100-2004, strona 3.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 3.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-english-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — dopasowywanie",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi na temat zakupów przez internet. Na podstawie\ninformacji zawartych w nagraniu dopasuj do każdej wypowiedzi (2.1.–2.4.)\nodpowiadające jej zdanie (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. I made a mistake when selecting a product.\nB. I paid a lot for the product but it was worth it.\nC. Nobody told me when my package was delivered.\nD. My son didn’t get the product that I ordered for him.\nE. I couldn’t buy what I wanted because of a technical problem.\n2.1. 2.2. 2.3. 2.4.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "2.1: E; 2.2: A; 2.3: B; 2.4: C"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 2.1: E; 2.2: A; 2.3: B; 2.4: C.",
+      "solution_steps": [
+        "Klucz CKE: 2.1: E; 2.2: A; 2.3: B; 2.4: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2020-main-english-100-x-transcript-q02",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q02-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q02-page-4",
+          "path": "public/cke/2020/english/ojap-100-x-2004/q02-page-4.webp",
+          "sha256": "99f24dc5a26c34aff33544c52ebef7a23b1424357c94303c653b4035b0cc363d",
+          "alt": "Oryginalny układ zadania 2 z arkusza OJAP-100-2004, strona 4.",
+          "caption": "Zadanie 2 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-english-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — uzupełnianie luk",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie rozmowę na temat trzymania skunksa w domu. Na podstawie\ninformacji zawartych w nagraniu uzupełnij luki 3.1.–3.4. w notatce, tak aby jak\nnajbardziej precyzyjnie oddać sens wysłuchanego tekstu. Luki należy uzupełnić w języku\nangielskim.\nJONATHAN’S PET SKUNK\nJonathan wanted a 3.1. ________________________ for his birthday but he got a skunk.\nJonathan takes it for a walk 3.2. ________________________________________ a day.\nJonathan’s skunk eats 3.3. ______________________ and _______________________.\nJonathan’s skunk can 3.4. __________________________________________________.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "3.1: rabbit; 3.2: twice / two times; 3.3: eggs and fruit; 3.4: open doors / open a door"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 3.1: rabbit; 3.2: twice / two times; 3.3: eggs and fruit; 3.4: open doors / open a door.",
+      "solution_steps": [
+        "Klucz CKE: 3.1: rabbit; 3.2: twice / two times; 3.3: eggs and fruit; 3.4: open doors / open a door.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2020-main-english-100-x-transcript-q03",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q03-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q03-page-4",
+          "path": "public/cke/2020/english/ojap-100-x-2004/q03-page-4.webp",
+          "sha256": "0e836659daafb508ac04e82ab8a84921d61968326e67cf5b08d05427a5dd0703",
+          "alt": "Oryginalny układ zadania 3 z arkusza OJAP-100-2004, strona 4.",
+          "caption": "Zadanie 3 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-english-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — zadanie otwarte",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi dotyczące kontaktów towarzyskich (4.1.–4.4.).\nDo każdej z nich dobierz właściwą reakcję (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedna reakcja została podana dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. That’s true. I really like her.\nB. I think she had to babysit her little sister.\nC. I am. My name is Alice, nice to meet you.\nD. Yes, my brother is going to a party tonight.\nE. Sure, but don’t invite more than 10 people.\n4.1. 4.2. 4.3. 4.4.\nOJAP-100-2004 Strona 5 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "4.1: C; 4.2: B; 4.3: A; 4.4: E"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 4.1: C; 4.2: B; 4.3: A; 4.4: E.",
+      "solution_steps": [
+        "Klucz CKE: 4.1: C; 4.2: B; 4.3: A; 4.4: E.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2020-main-english-100-x-transcript-q04",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q04-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q04-page-5",
+          "path": "public/cke/2020/english/ojap-100-x-2004/q04-page-5.webp",
+          "sha256": "0eac727ed67449a7c6a1baa1600a24baf989cc458a4d83fb4755ebccb744bd3e",
+          "alt": "Oryginalny układ zadania 4 z arkusza OJAP-100-2004, strona 5.",
+          "caption": "Zadanie 4 — oryginalny układ CKE, strona 5.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-english-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe",
+      "difficulty": 3,
+      "prompt": "Dla każdej z opisanych sytuacji (5.1.–5.4.) wybierz właściwą reakcję. Zakreśl jedną z liter:\nA, B albo C.\n5.1. Koleżanka informuje Cię, że znany pisarz będzie podpisywał swoje książki w lokalnej\nbibliotece. Bardzo Cię to zaskoczyło. Co jej powiesz?\nA. Really? I can’t believe it!\nB. That doesn’t surprise me at all!\nC. You’ll never guess what happened!\n5.2. Chcesz utrzymywać kontakt z kolegą, który przeprowadza się do innego miasta.\nCo mu powiesz?\nA. I prefer to stay here.\nB. I forgot to phone you.\nC. I hope we’ll keep in touch.\n5.3. Pokłóciłeś/Pokłóciłaś się z koleżanką. Jak ją przeprosisz?\nA. Sorry, you must try again later.\nB. Sorry, I didn’t mean to upset you.\nC. There’s nothing to be sorry about.\n5.4. Kolega chce popływać w rzece. Uważasz, że nie powinien tego robić. Co mu powiesz?\nA. I can’t wait to swim with you.\nB. I wouldn’t swim there if I were you.\nC. We won’t go swimming if you don’t want to.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "5.1: A; 5.2: C; 5.3: B; 5.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 5.1: A; 5.2: C; 5.3: B; 5.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 5.1: A; 5.2: C; 5.3: B; 5.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q05-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q05-page-6",
+          "path": "public/cke/2020/english/ojap-100-x-2004/q05-page-6.webp",
+          "sha256": "7ab2168346f54ec4e0830983110731bbfef29ba65f0b676e32623ef817edd17c",
+          "alt": "Oryginalny układ zadania 5 z arkusza OJAP-100-2004, strona 6.",
+          "caption": "Zadanie 5 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-english-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe — uzupełnianie dialogów",
+      "difficulty": 3,
+      "prompt": "Uzupełnij rozmowę telefoniczną. Wpisz w każdą lukę (6.1.–6.3.) brakujący fragment\nwypowiedzi, tak aby otrzymać spójny i logiczny tekst. Wykorzystaj wyrazy podane\nw nawiasie, ale nie zmieniaj ich formy. Luki należy uzupełnić w języku angielskim.\nUwaga! W każdą lukę możesz wpisać maksymalnie cztery wyrazy, wliczając w to wyraz\njuż podany.\nGrandma: Hello Ben.\nBen: Good morning Grandma. 6.1. (ask) ____________________________________\nyou to do something for me?\nGrandma: Sure. What is it?\nBen: Well, we are organising a cake sale at our school.\nGrandma: Sounds great!\nBen: I want to make a chocolate cake but I 6.2. (no) ____________________________\n_____________________________________ how to do it.\nGrandma: No problem, I’ll make it for you.\nBen: Oh, I 6.3. (like) ____________________________________ it myself. I just need\nyou to show me how.\nGrandma: OK, come over at 5 o’clock, then.\nBen: Thank you so much! See you in the afternoon!\nOJAP-100-2004 Strona 7 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "6.1: Can/Could/May/Might I ask; 6.2: have no idea / have no clue; 6.3: would like to do/make/bake"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 6.1: Can/Could/May/Might I ask; 6.2: have no idea / have no clue; 6.3: would like to do/make/bake.",
+      "solution_steps": [
+        "Klucz CKE: 6.1: Can/Could/May/Might I ask; 6.2: have no idea / have no clue; 6.3: would like to do/make/bake.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q06-page-7"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q06-page-7",
+          "path": "public/cke/2020/english/ojap-100-x-2004/q06-page-7.webp",
+          "sha256": "df242dd3d808ca5ac4483e2d6e7818c6063096133e8163d70f3a549c290e0e77",
+          "alt": "Oryginalny układ zadania 6 z arkusza OJAP-100-2004, strona 7.",
+          "caption": "Zadanie 6 — oryginalny układ CKE, strona 7.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-english-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        8,
+        9
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie tekstów pisanych",
+      "difficulty": 3,
+      "prompt": "Przeczytaj teksty. W zadaniach 7.1.–7.4. z podanych odpowiedzi wybierz właściwą,\nzgodną z treścią tekstu. Zakreśl jedną z liter: A, B albo C.\nAmanda’s Diary\nMonday, 6th April\nFunny things happen to me sometimes. Two days ago, I found a rose on my\ndoorstep. I thought it was from a boy I’d met, so I put it in my room. But\nyesterday my sister came back home after a date and asked me if I had seen\nher rose. It turned out that her boyfriend had left the flower for her!\nWe both had a good laugh about it.\n7.1. Amanda took the rose because\nA. she believed it was for her.\nB. her sister asked her to do it.\nC. she wanted to give it to her sister.\nA NEWLY RENOVATED, VERY COMFORTABLE SOFA FOR SALE\nGREAT CONDITION, LOW PRICE\nIt needs to go quickly because we’re moving away.\n7.2. The text was written by a person who\nA. renovates furniture quickly.\nB. wants to sell a piece of furniture.\nC. offers to move furniture cheaply.\nYELLOWSTONE NATIONAL PARK\nREGULATIONS\nFeeding wild bears is not allowed!\nThey are likely to attack you if you get\ntoo close.\nDon’t invite them to your campsite\nby leaving garbage on the ground.\n7.3. The author of the text\nA. advises readers where to leave food for animals.\nB. warns readers of a possible danger.\nC. invites readers to a national park.\nSATURDAY EVENTS IN NOTTINGHAM\nHi Josh, yesterday I was at the new\n16:00 A guided walk around the historical\nstadium! It was the first game of the\nmarket square – be prepared for both\nseason. The stadium looks great and\nfunny and scary stories from the\nour team won the game. And you\npast.\nwon’t believe it, just as I was leaving\n18:00 Activities for children and a science\nI met our friend, Isabelle! Adam\nquiz.\n7.4. Both texts are about\nA. spending time somewhere.\nB. winning a prize.\nC. meeting a friend.\nOJAP-100-2004 Strona 9 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "7.1: A; 7.2: B; 7.3: B; 7.4: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 7.1: A; 7.2: B; 7.3: B; 7.4: A.",
+      "solution_steps": [
+        "Klucz CKE: 7.1: A; 7.2: B; 7.3: B; 7.4: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q07-page-8"
+        },
+        {
+          "type": "image",
+          "asset_id": "q07-page-9"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q07-page-8",
+          "path": "public/cke/2020/english/ojap-100-x-2004/q07-page-8.webp",
+          "sha256": "2059b947a6c28e7f8215f5a517c83a73808972224c3c1b6bcc313cb94e70c8c2",
+          "alt": "Oryginalny układ zadania 7 z arkusza OJAP-100-2004, strona 8.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q07-page-9",
+          "path": "public/cke/2020/english/ojap-100-x-2004/q07-page-9.webp",
+          "sha256": "b8508bb41f8883cba5ec6db4b09cad3e8e7397bb90aa0c8846d005164e9f85cf",
+          "alt": "Oryginalny układ zadania 7 z arkusza OJAP-100-2004, strona 9.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 9.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-english-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Spójność tekstu",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst, z którego usunięto cztery zdania. Wpisz w każdą lukę (8.1.–8.4.) literę,\nktórą oznaczono brakujące zdanie (A–E), tak aby otrzymać spójny i logiczny tekst.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej luki.\nRAINING POETRY\nIf you’re walking in Boston when it rains, make sure to look under your feet. 8.1. _____ It is\npart of an art project called Raining Poetry. A team of young artists installed the first poem for\nthis year’s National Poetry Month in Boston. 8.2. _____ All of them were painted using\na special spray, which cannot be seen on a dry, sunny day. But when raindrops start falling from\nthe sky, the poems appear on the ground.\nBy now you can find the poems in many parts of the city. They were all chosen by Danielle\nGeorges, a poet from Boston. 8.3. _____ The project’s organizers hope that these subjects\nwill inspire people to go for walks in wet weather. So far, all of the poems are in English.\n8.4. _____ They plan to start with Portuguese and Spanish, which are widely spoken in Boston.\nNa podstawie: www.tweentribune.com\nA. However, the project’s organizers are going to add new ones in other languages.\nB. Don’t be surprised if you see a poem on the wet pavement.\nC. That’s why this special paint only lasts about eight weeks.\nD. A few more were added a week after that event.\nE. She selected poems only about water and rain.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "8.1: B; 8.2: D; 8.3: E; 8.4: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 8.1: B; 8.2: D; 8.3: E; 8.4: A.",
+      "solution_steps": [
+        "Klucz CKE: 8.1: B; 8.2: D; 8.3: E; 8.4: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q08-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q08-page-10",
+          "path": "public/cke/2020/english/ojap-100-x-2004/q08-page-10.webp",
+          "sha256": "b19c36adb695e336387db6a0c1a19bd69e2bc1484490b4f7496d02732577f669",
+          "alt": "Oryginalny układ zadania 8 z arkusza OJAP-100-2004, strona 10.",
+          "caption": "Zadanie 8 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-english-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        11
+      ],
+      "type": "long_text",
+      "topic": "Wyszukiwanie informacji",
+      "difficulty": 3,
+      "prompt": "Przeczytaj trzy wpisy (A–C) zamieszczone na forum przez osoby, które będą gościć\nuczniów w ramach międzynarodowej wymiany, oraz zdania 9.1.–9.4. Do każdego zdania\ndopasuj właściwy wpis. Wpisz rozwiązania do tabeli.\nUwaga! Jeden z wpisów pasuje do dwóch zdań.\nSTUDENT EXCHANGE FORUM\nA.\nWe’re going to be a host family for Kostas, a student from Greece.\nI haven’t talked to him yet and I’m curious about what he’s like.\nIs he outgoing or shy? Tomorrow I should get his first email\nand I’m sure we’ll become friends. His room is quite small but\nSue\nI hope that won’t be a problem for him.\nB.\nLara, a student from Sweden, is coming to visit my family. I’ve\nalready had some video chats with her. I’ve even seen her brother!\nLara makes me laugh a lot and I like her. However, I’m a bit\nworried because it’ll be the first time someone else is going to\nMolly\nshare my room. Has anybody else been in a similar situation?\nC.\nInez, a student from Spain, is coming to stay with us for the whole\nschool year. I have two sisters and I’m afraid that Inez might have\nproblems getting on with Jane, the younger one. She’s at a difficult\nage. Anyway, I’m going to phone Inez for the first time next\nAmelia\nweekend. I’ll tell her about our house and her room, and ask what\nshe likes to eat. Is there anything else I should do?\nThe author of the post\nworries that the exchange student won’t have a good relationship with her family\n9.1.\nmember.\n9.2. thinks that living in one room with the exchange student may be a problem.\n9.3. is wondering about the exchange student’s personality.\n9.4. has talked to the exchange student a few times so far.\nOJAP-100-2004 Strona 11 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "9.1: C; 9.2: B; 9.3: A; 9.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 9.1: C; 9.2: B; 9.3: A; 9.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 9.1: C; 9.2: B; 9.3: A; 9.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q09-page-11"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q09-page-11",
+          "path": "public/cke/2020/english/ojap-100-x-2004/q09-page-11.webp",
+          "sha256": "265b463c4e33fc6c3075fd1597028bf1e925ce280a78f075734e85d41059c14e",
+          "alt": "Oryginalny układ zadania 9 z arkusza OJAP-100-2004, strona 11.",
+          "caption": "Zadanie 9 — oryginalny układ CKE, strona 11.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-english-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        12
+      ],
+      "type": "long_text",
+      "topic": "Przetwarzanie wypowiedzi",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Uzupełnij w e-mailu luki 10.1.–10.3. zgodnie z treścią tekstu, tak aby jak\nnajbardziej precyzyjnie oddać jego sens. Luki należy uzupełnić w języku polskim.\nPlan the perfect day with us!\nCheck the schedule for the different attractions at our Marine Park.\nPrice* Times\nOcean Walker\nTake a walk on the bottom of the ocean. You will feel Mon to Sun:\n$40\nlike a real diver. Watch fish and other sea life. It’s 100% 9:00 a.m. – 4:00 p.m.\nsafe.\nFish Feeding\nMon to Sun:\nWhy don’t you try feeding our fish while standing on\n$10 11:00 a.m. – 2:00 p.m.\na platform with a glass floor? It’s so exciting to see fish\nBooking required\nright under your feet!\nShark Dive\nAvailable only during\nHave you ever been eye to eye with a shark? A special $55\nthe summer holidays.\ncapsule will take you underwater to admire these animals!\nAmazing Dolphins\nMon to Sun:\nWould you like to watch our cheerful dolphins dance to\n$15 12:15 p.m. – 3:15 p.m.\nthe music? You can even suggest a song to be played.\nBooking required\nAn unforgettable experience is guaranteed.\n*Please note that all prices are per person.\nNa podstawie: www.ushakamarineworld.co.za\nWiadomość \nOd: Magda\nDo: Ola\nTemat: Oceanarium\nCześć Olu,\nbardzo się cieszę, że zobaczymy się jeszcze przed końcem roku szkolnego! Tak jak\nustaliłyśmy, podczas Twojej wizyty pójdziemy do oceanarium. Właśnie\nzarezerwowałam nam karmienie ryb na sobotę o 11:00. Myślę, że jest to ciekawe, bo\nkarmi się je z pomostu, który ma 10.1. ____________________________________.\nMogłabym jeszcze zarezerwować miejsca na inną atrakcję, np. pokaz delfinów. Daj mi,\nproszę, znać, czy ten pomysł Ci odpowiada. Podczas tego pokazu delfiny będą\n10.2. _____________________________. Niestety nie będziemy mogły zobaczyć\nrekinów, ponieważ ta atrakcja jest czynna tylko 10.3. __________________________.\nCzekam na Twoją odpowiedź,\nMagda",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "10.1: szklaną podłogę; 10.2: tańczyć do muzyki / tańczyć; 10.3: w czasie (letnich) wakacji / podczas wakacji"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 10.1: szklaną podłogę; 10.2: tańczyć do muzyki / tańczyć; 10.3: w czasie (letnich) wakacji / podczas wakacji.",
+      "solution_steps": [
+        "Klucz CKE: 10.1: szklaną podłogę; 10.2: tańczyć do muzyki / tańczyć; 10.3: w czasie (letnich) wakacji / podczas wakacji.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q10-page-12"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q10-page-12",
+          "path": "public/cke/2020/english/ojap-100-x-2004/q10-page-12.webp",
+          "sha256": "5ecb56124b8d31ac4d968ff657475d622c4e299492fae4ec99a5e0d0f07527c6",
+          "alt": "Oryginalny układ zadania 10 z arkusza OJAP-100-2004, strona 12.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-english-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        13
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — wybór wyrazów",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Spośród wyrazów podanych w ramce wybierz te, które są poprawnym\nuzupełnieniem luk 11.1.–11.3. Wpisz odpowiednią literę (A–F) obok numeru każdej luki.\nUwaga! Trzy wyrazy zostały podane dodatkowo i nie pasują do żadnej luki.\nA. ago B. hardly C. took D. later E. rode F. wrong\nTHE MYSTERY OF AMELIA EARHART\nAmelia Earhart wanted to become the first woman to fly around the world. On June 1, 1937,\nher plane 11.1. _____ off from Miami, Florida. Thirty-one days 11.2. _____, Amelia Earhart\nand her navigator had completed most of their journey. They reached a small island\nin the Pacific Ocean. Their next stop was planned on another island 2,500 miles away.\nBut something went 11.3. _____ during the flight and they didn’t reach the island. Nobody\never heard from them again. Today, after over 80 years, we are still not sure what happened\nto them.\nNa podstawie: www.scholastic.com\nOJAP-100-2004 Strona 13 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "11.1: C; 11.2: D; 11.3: F"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 11.1: C; 11.2: D; 11.3: F.",
+      "solution_steps": [
+        "Klucz CKE: 11.1: C; 11.2: D; 11.3: F.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q11-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q11-page-13",
+          "path": "public/cke/2020/english/ojap-100-x-2004/q11-page-13.webp",
+          "sha256": "ce29828ec1791a88b28726a7c570db83f9a332a1be196b929aa28dc7e9ae3f49",
+          "alt": "Oryginalny układ zadania 11 z arkusza OJAP-100-2004, strona 13.",
+          "caption": "Zadanie 11 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-english-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — gramatyka i leksyka",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Wybierz poprawne uzupełnienie luk 12.1.–12.4. Zakreśl jedną z liter:\nA, B albo C.\nWILLIAM SHAKESPEARE’S SCHOOL LIFE\nDo you want to know what William Shakespeare’s school life was like? He started school\nwhen he was 7 years old. In those days, children attended school 12.1. _____ Monday\nto Saturday. Lessons started at 6 in the morning and finished at 5 in the afternoon\nso Shakespeare had very 12.2. _____ free time. He learned Latin, astronomy and logic but\nhad no physical education. There were tests 12.3. _____ week and students were punished\nif they didn’t do well. At the age of fourteen, Shakespeare 12.4. _____ going to school\nbecause his father could not pay for it any more.\nNa podstawie: www.thoughtco.com\n12.1. A. on B. between C. from\n12.2. A. small B. little C. no\n12.3. A. every B. once C. this\n12.4. A. stopped B. has stopped C. was stopping",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "12.1: C; 12.2: B; 12.3: A; 12.4: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 12.1: C; 12.2: B; 12.3: A; 12.4: A.",
+      "solution_steps": [
+        "Klucz CKE: 12.1: C; 12.2: B; 12.3: A; 12.4: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q12-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q12-page-14",
+          "path": "public/cke/2020/english/ojap-100-x-2004/q12-page-14.webp",
+          "sha256": "cf9b9c37015578e9f9f1ba3f8da01f07b72aff8ef63354a715789d4f79e164f4",
+          "alt": "Oryginalny układ zadania 12 z arkusza OJAP-100-2004, strona 14.",
+          "caption": "Zadanie 12 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-english-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        15
+      ],
+      "type": "long_text",
+      "topic": "Transformacje leksykalno-gramatyczne",
+      "difficulty": 3,
+      "prompt": "Wykorzystując wyrazy podane WIELKIMI literami, uzupełnij każde zdanie z luką, tak\naby zachować sens zdania wyjściowego (13.1.–13.4.). Wymagana jest pełna poprawność\nortograficzna i gramatyczna wpisywanych fragmentów zdań.\nUwaga! Nie zmieniaj formy podanych wyrazów. W każdą lukę możesz wpisać\nmaksymalnie trzy wyrazy, wliczając w to wyraz już podany.\n13.1. How much is petrol in Poland?\nCOST\nHow much ____________________________________________________ in Poland?\n13.2. I’ve got a lot of T-shirts but the blue one is my favourite.\nTHAN\nI like my blue T-shirt _______________________________________ my other T-shirts.\n13.3. We will finish this project on Monday.\nBE\nThis project ___________________________________________________ on Monday.\n13.4. I have been a member of the Animal Club for three months.\nMONTHS\nI joined the Animal Club __________________________________________________.\nOJAP-100-2004 Strona 15 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "13.1: does cost petrol; 13.2: more than; 13.3: will be finished; 13.4: 3 months (three) ago"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 13.1: does cost petrol; 13.2: more than; 13.3: will be finished; 13.4: 3 months (three) ago.",
+      "solution_steps": [
+        "Klucz CKE: 13.1: does cost petrol; 13.2: more than; 13.3: will be finished; 13.4: 3 months (three) ago.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q13-page-15"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q13-page-15",
+          "path": "public/cke/2020/english/ojap-100-x-2004/q13-page-15.webp",
+          "sha256": "9e0220beba7023d35d43074351de09d6ff9659a892b3e2b1e9c77ba128797c71",
+          "alt": "Oryginalny układ zadania 13 z arkusza OJAP-100-2004, strona 15.",
+          "caption": "Zadanie 13 — oryginalny układ CKE, strona 15.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-english-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        16,
+        17
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna — e-mail",
+      "difficulty": 3,
+      "prompt": "Twoja koleżanka z klasy przeprowadza się wkrótce za granicę. W e-mailu do kolegi\nz Anglii:\n• napisz, co Twoja klasa dała tej koleżance w prezencie, i opisz ten przedmiot\n• poinformuj, jak koleżanka zareagowała na Wasz prezent\n• wyjaśnij, jak zamierzasz pomóc tej koleżance w przeprowadzce.\nNapisz swoją wypowiedź w języku angielskim. Podpisz się jako XYZ.\nRozwiń swoją wypowiedź w każdym z trzech podpunktów, tak aby osoba nieznająca polecenia\nw języku polskim uzyskała wszystkie wskazane w nim informacje. Pamiętaj, że długość\nwypowiedzi powinna wynosić od 50 do 120 słów (nie licząc wyrazów podanych na początku\nwypowiedzi). Oceniane są: umiejętność pełnego przekazania informacji, spójność, bogactwo\njęzykowe oraz poprawność językowa.",
+      "answer_key": {
+        "assessment": "rubric",
+        "minimum_words": 50,
+        "maximum_words": 120
+      },
+      "scoring": {
+        "max_points": 10,
+        "rules": [
+          "Maksymalnie 10 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Porównaj rozwiązanie z oficjalnymi zasadami oceniania CKE dołączonymi do arkusza.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q14-page-16"
+        },
+        {
+          "type": "image",
+          "asset_id": "q14-page-17"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q14-page-16",
+          "path": "public/cke/2020/english/ojap-100-x-2004/q14-page-16.webp",
+          "sha256": "556a2f140afee8a6cf8e5d8d79d54d875ca2e0d2fff6634bb016d60a9898d51c",
+          "alt": "Oryginalny układ zadania 14 z arkusza OJAP-100-2004, strona 16.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q14-page-17",
+          "path": "public/cke/2020/english/ojap-100-x-2004/q14-page-17.webp",
+          "sha256": "61c6107acde02b18257dbb29ba8226c6f1c6c4e815cdabcb49bad6485133de96",
+          "alt": "Oryginalny układ zadania 14 z arkusza OJAP-100-2004, strona 17.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 17.",
+          "mime_type": "image/webp"
+        }
+      ]
+    }
+  ]
+}

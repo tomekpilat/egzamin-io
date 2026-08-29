@@ -1,0 +1,856 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2024-main-russian-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2024-main-russian-100-x",
+    "source_document_id": "OJRP-100-X-2405",
+    "source_pdf_sha256": "3aaf96d957eb51ea83c735a349792d0698a082aee68f9671ab2a8201f0e73822",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2024-2/",
+    "source_label": "CKE 2024 · język rosyjski · termin główny · wariant 100-X",
+    "exam_year": 2024,
+    "exam_session": "main",
+    "subject": "russian",
+    "variant_code": "100-X",
+    "question_count": 14,
+    "supplementary_sources": [
+      {
+        "id": "cke-2024-main-russian-100-x-open-answer-card",
+        "path": "content/cke/sources/2024/russian/OJRP-100-X-2405-karta-rozwiazan.pdf",
+        "sha256": "2eff1d1fe0f94d21dbabae2910efae5bb5d22b2e46bb5be36bbfa9ae760035ec",
+        "label": "Karta rozwiązań zadań otwartych"
+      },
+      {
+        "id": "cke-2024-main-russian-100-x-answer-card",
+        "path": "content/cke/sources/2024/russian/OJRP-100-X-2405-karta-odpowiedzi.pdf",
+        "sha256": "21001a143b44177904a1c6a036c7ec7ebd7575c32f35820f1bbfa7ec2523d353",
+        "label": "Karta odpowiedzi"
+      },
+      {
+        "id": "cke-2024-main-russian-100-x-transcript",
+        "path": "content/cke/sources/2024/russian/OJRP-100-2405-transkrypcja.pdf",
+        "sha256": "2d6a298d8d0a65c8c10694c9a6a967495e360dbec8477e2f4f8c6c6c9b967fe8",
+        "label": "Oficjalna transkrypcja nagrań"
+      },
+      {
+        "id": "cke-2024-main-russian-100-x-recording",
+        "path": "content/cke/sources/2024/russian/OJRP-100-2405.mp3",
+        "sha256": "c66df580a84aa3dfaacb2077b53d191de012d8d3355bc0b7efa3469f0ad7e94d",
+        "label": "Oficjalne nagranie do zadań 1–4"
+      },
+      {
+        "id": "cke-2024-main-russian-100-x-rules",
+        "path": "content/cke/sources/2024/russian/OJRP-100-2405-zasady.pdf",
+        "sha256": "7342e4c107b598a93e0b33009e859b526394142fd8788407d572b74206331d43",
+        "label": "Oficjalne zasady oceniania rozwiązań zadań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [],
+  "questions": [
+    {
+      "id": "cke-2024-main-russian-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        4,
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — wybór wielokrotny",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie pięć tekstów. W zadaniach 1.1.–1.5., na podstawie informacji\nzawartych w nagraniu, z podanych odpowiedzi wybierz właściwą. Zakreśl jedną z liter:\nA, B albo C.\n1.1. С каким результатом закончился футбольный матч?\nA. B. C.\n1.2. Какая фотография выиграла в конкурсе селфи?\nA. B. C.\n1.3. Кто это говорит?\nA. B. C.\n1.4. Мужчина звонит в поликлинику, чтобы\nA. перенести дату визита.\nB. узнать время работы врача.\nC. попросить выписать лекарства.\n1.5. Этот текст о\nA. результатах экзаменов.\nB. работе для выпускников.\nC. плане ремонта школы.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "1.1: B; 1.2: A; 1.3: C; 1.4: A; 1.5: C"
+        ]
+      },
+      "scoring": {
+        "max_points": 5,
+        "rules": [
+          "Maksymalnie 5 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 1.1: B; 1.2: A; 1.3: C; 1.4: A; 1.5: C.",
+      "solution_steps": [
+        "Klucz CKE: 1.1: B; 1.2: A; 1.3: C; 1.4: A; 1.5: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-page-4"
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2024/jezyk_rosyjski/OJRP-100-2405.mp3",
+          "sha256": "c66df580a84aa3dfaacb2077b53d191de012d8d3355bc0b7efa3469f0ad7e94d",
+          "alt": "Oficjalne nagranie CKE 2024 do zadań 1–4 z przedmiotu język rosyjski.",
+          "caption": "Oficjalne nagranie CKE 2024 — język rosyjski, zadania 1–4.",
+          "mime_type": "audio/mpeg"
+        },
+        {
+          "id": "q01-page-4",
+          "path": "public/cke/2024/russian/ojrp-100-x-2405/q01-page-4.webp",
+          "sha256": "b9a2c490f16f0449f3231cbf4e9224f3ef4331ec20e89d77d2be944c33e84b06",
+          "alt": "Oryginalny układ zadania 1 z arkusza OJRP-100-2405, strona 4.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q01-page-5",
+          "path": "public/cke/2024/russian/ojrp-100-x-2405/q01-page-5.webp",
+          "sha256": "03a0ba108af5fc2c8affe74ef0959a483be16479c518597bf14c319ff32a50a7",
+          "alt": "Oryginalny układ zadania 1 z arkusza OJRP-100-2405, strona 5.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 5.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-russian-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — dopasowywanie",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi na temat rodzeństwa. Na podstawie\ninformacji zawartych w nagraniu dopasuj do każdej wypowiedzi (2.1.–2.4.)\nodpowiadające jej zdanie (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. Моему брату можно доверить любой секрет.\nB. Для моего брата трудно найти подарок.\nC. Мы понимаем друг друга без слов.\nD. Вещи старшего брата теперь мои.\nE. Брат помог мне победить страх.\n2.1. 2.2. 2.3. 2.4.\nOJRP-100-2405 Strona 5 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "2.1: D; 2.2: E; 2.3: C; 2.4: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 2.1: D; 2.2: E; 2.3: C; 2.4: A.",
+      "solution_steps": [
+        "Klucz CKE: 2.1: D; 2.2: E; 2.3: C; 2.4: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        },
+        {
+          "type": "image",
+          "asset_id": "q02-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2024/jezyk_rosyjski/OJRP-100-2405.mp3",
+          "sha256": "c66df580a84aa3dfaacb2077b53d191de012d8d3355bc0b7efa3469f0ad7e94d",
+          "alt": "Oficjalne nagranie CKE 2024 do zadań 1–4 z przedmiotu język rosyjski.",
+          "caption": "Oficjalne nagranie CKE 2024 — język rosyjski, zadania 1–4.",
+          "mime_type": "audio/mpeg"
+        },
+        {
+          "id": "q02-page-5",
+          "path": "public/cke/2024/russian/ojrp-100-x-2405/q02-page-5.webp",
+          "sha256": "d13f99052244d1b133b6cf6c3296ac02e21a3b575d572d0d91007cb728b42dbc",
+          "alt": "Oryginalny układ zadania 2 z arkusza OJRP-100-2405, strona 5.",
+          "caption": "Zadanie 2 — oryginalny układ CKE, strona 5.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-russian-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — uzupełnianie luk",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie wywiad z młodym aktorem. Na podstawie informacji zawartych\nw nagraniu odpowiedz krótko na pytania 3.1.–3.3., tak aby jak najbardziej precyzyjnie\noddać sens wysłuchanego tekstu. Na pytania należy odpowiedzieć w języku\nrosyjskim.\n3.1. Кто помог Андрею найти работу в рекламном агентстве?\n______________________________________________________________________\n3.2. В каком костюме работал Андрей?\n______________________________________________________________________\n3.3. Почему Андрей начал танцевать на улице?\n______________________________________________________________________",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "3.1: его друг Павел / друг Павел / друг Андрея / друг / один из его друзей; 3.2: (в костюме) пчелы; 3.3: (потому что) он замёрз / ему было холодно"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 3.1: его друг Павел / друг Павел / друг Андрея / друг / один из его друзей; 3.2: (в костюме) пчелы; 3.3: (потому что) он замёрз / ему было холодно.",
+      "solution_steps": [
+        "Klucz CKE: 3.1: его друг Павел / друг Павел / друг Андрея / друг / один из его друзей; 3.2: (в костюме) пчелы; 3.3: (потому что) он замёрз / ему было холодно.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        },
+        {
+          "type": "image",
+          "asset_id": "q03-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2024/jezyk_rosyjski/OJRP-100-2405.mp3",
+          "sha256": "c66df580a84aa3dfaacb2077b53d191de012d8d3355bc0b7efa3469f0ad7e94d",
+          "alt": "Oficjalne nagranie CKE 2024 do zadań 1–4 z przedmiotu język rosyjski.",
+          "caption": "Oficjalne nagranie CKE 2024 — język rosyjski, zadania 1–4.",
+          "mime_type": "audio/mpeg"
+        },
+        {
+          "id": "q03-page-6",
+          "path": "public/cke/2024/russian/ojrp-100-x-2405/q03-page-6.webp",
+          "sha256": "fc0203aee584a546a458a29b2a11bbec50afbd700e1a8dcf68f1786181f45f70",
+          "alt": "Oryginalny układ zadania 3 z arkusza OJRP-100-2405, strona 6.",
+          "caption": "Zadanie 3 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-russian-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — zadanie otwarte",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi dotyczące życia codziennego (4.1.–4.4.).\nDo każdej z nich dobierz właściwą reakcję (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedna reakcja została podana dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. Я думаю, на стол в гостиной.\nB. В нашем супермаркете.\nC. Их надо часто мыть.\nD. Конечно. А где она?\nE. Да, очень!\n4.1. 4.2. 4.3. 4.4.\nWPISZ TYLKO ODPOWIEDZI NA PYTANIA.\nOJRP-100-2405 Strona 7 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "4.1: E; 4.2: B; 4.3: A; 4.4: D"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 4.1: E; 4.2: B; 4.3: A; 4.4: D.",
+      "solution_steps": [
+        "Klucz CKE: 4.1: E; 4.2: B; 4.3: A; 4.4: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        },
+        {
+          "type": "image",
+          "asset_id": "q04-page-7"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2024/jezyk_rosyjski/OJRP-100-2405.mp3",
+          "sha256": "c66df580a84aa3dfaacb2077b53d191de012d8d3355bc0b7efa3469f0ad7e94d",
+          "alt": "Oficjalne nagranie CKE 2024 do zadań 1–4 z przedmiotu język rosyjski.",
+          "caption": "Oficjalne nagranie CKE 2024 — język rosyjski, zadania 1–4.",
+          "mime_type": "audio/mpeg"
+        },
+        {
+          "id": "q04-page-7",
+          "path": "public/cke/2024/russian/ojrp-100-x-2405/q04-page-7.webp",
+          "sha256": "8e6b43e66fabd0cd0a7ac650ee4e745ac2b5ca80e2b2138f844852a0d60ce30d",
+          "alt": "Oryginalny układ zadania 4 z arkusza OJRP-100-2405, strona 7.",
+          "caption": "Zadanie 4 — oryginalny układ CKE, strona 7.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-russian-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe",
+      "difficulty": 3,
+      "prompt": "Dla każdej z opisanych sytuacji (5.1.–5.4.) wybierz właściwą reakcję. Zakreśl jedną\nz liter: A, B albo C.\n5.1. Nie podobała Ci się wycieczka, na której byłeś(-aś) z koleżanką. Jak jej o tym\npowiesz?\nA. У меня нет времени поехать на экскурсию.\nB. Я не жалею, что мы были на экскурсии.\nC. Мне было неинтересно на экскурсии.\n5.2. Jesteś w kawiarni. Chcesz zamówić lody. Co powiesz kelnerowi?\nA. Принесите мне, пожалуйста, мороженое.\nB. Вот мороженое, которое вы заказывали.\nC. У нас есть шоколадное мороженое.\n5.3. W Moskwie starsza pani chce wejść na przejście dla pieszych na czerwonym\nświetle. Jak ją uprzedzisz o niebezpieczeństwie?\nA. Внимание! Мы уже можем идти!\nB. Подождите! Горит красный свет!\nC. Извините, помогите мне перейти дорогу!\n5.4. Spotykasz kolegę z Rosji, z którym dawno się nie widzieliście. Jak się z nim\nprzywitasz?\nA. Пока, до встречи!\nB. Привет, какая встреча!\nC. Конечно, я тебя встречу!",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "5.1: C; 5.2: A; 5.3: B; 5.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 5.1: C; 5.2: A; 5.3: B; 5.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 5.1: C; 5.2: A; 5.3: B; 5.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q05-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q05-page-8",
+          "path": "public/cke/2024/russian/ojrp-100-x-2405/q05-page-8.webp",
+          "sha256": "cfff741f6dae9fd369f06d10c17fc38e73c1a0db6bab0fd6525830bb23fc5f53",
+          "alt": "Oryginalny układ zadania 5 z arkusza OJRP-100-2405, strona 8.",
+          "caption": "Zadanie 5 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-russian-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        9
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe — uzupełnianie dialogów",
+      "difficulty": 3,
+      "prompt": "Uzupełnij dialogi 6.1.–6.2. Wpisz w każdą lukę brakujący fragment wypowiedzi, tak aby\notrzymać spójne i logiczne teksty. Luki należy uzupełnić w języku rosyjskim.\n6.1. X: Скажите, ___________________________________________________ пончики?\nY: Нет, уже закончились.\n6.2. X: Адам, __________________________________________________ твою сестру?\nY: У неё очень красивое имя – Каролина.\nWPISZ TYLKO TE WYRAZY, KTÓRYMI UZUPEŁNIŁEŚ(-AŚ) KAŻDĄ Z LUK.\nOJRP-100-2405 Strona 9 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "6.1: у вас есть / у вас можно купить / есть ещё / есть; 6.2: как зовут"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 6.1: у вас есть / у вас можно купить / есть ещё / есть; 6.2: как зовут.",
+      "solution_steps": [
+        "Klucz CKE: 6.1: у вас есть / у вас можно купить / есть ещё / есть; 6.2: как зовут.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q06-page-9"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q06-page-9",
+          "path": "public/cke/2024/russian/ojrp-100-x-2405/q06-page-9.webp",
+          "sha256": "317fb96e6ab70797b2be5e2db9871d8ccd03f1b66bc1a67f3b25a7f0fb5b0a9a",
+          "alt": "Oryginalny układ zadania 6 z arkusza OJRP-100-2405, strona 9.",
+          "caption": "Zadanie 6 — oryginalny układ CKE, strona 9.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-russian-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        10,
+        11
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie tekstów pisanych",
+      "difficulty": 3,
+      "prompt": "Przeczytaj teksty. W zadaniach 7.1.–7.4. z podanych odpowiedzi wybierz właściwą,\nzgodną z treścią tekstu. Zakreśl jedną z liter: A, B albo C.\nМама, я испекла печенье 7.1. Оля добавила в тесто мало\nпо твоему рецепту. A. орехов.\nB. муки.\nИ как? Вкусно?\nC. мёда.\nСама не знаю… Как-то не\nочень… Я взяла два банана,\nдобавила стакан муки,\nгорсть орехов и ложку мёда.\nОля, его надо было две\nложки положить!!! Тогда\nпеченье было бы слаще!\nДорогие друзья!\nМы работаем для вас и ваших питомцев!\nНаши приоритеты – это отличные условия для\nживотных и их эмоциональный комфорт. У нас\nзаботливый персонал. Так что, если вы\nотправляетесь в отпуск или делаете ремонт\nв квартире, не задумывайтесь, приводите к нам своего четвероногого друга\nи оставляйте на любое время. Во всех уютных номерах для животных –\nвидеокамеры. Мы гарантируем вашему любимцу правильный уход и здоровое\nпитание: сухой или влажный корм по выбору. Принимаем только здоровых животных\nсо справкой от ветеринара. Номера можете бронировать онлайн здесь .\nNa podstawie: bookingcat.ru; www.avito.ru\n7.2. Это объявление можно прочитать на сайте\nA. магазина зоотоваров.\nB. ветеринарной клиники.\nC. отеля для животных.\nNa podstawie: im0-tub-ru.yandex.net\n7.3. Автор плаката\nA. приглашает на работу продавцов.\nB. просит оценить работу магазина.\nC. рекламирует новую книгу.\nИван, к сожалению, подарить твоему брату собаку я не могу, но я знаю,\nчто ему может понравиться. Ты говорил, что он любит животных.\nПоэтому я хочу купить ему «Зоопарк». У вас же есть компьютер\nс хорошей графической картой и быстрым процессором. Правила\nв «Зоопарке» очень простые: надо ухаживать за виртуальными\nживотными. Твой брат наверняка справится, он же настоящий геймер!\nПришлю тебе адрес интернет-магазина, в котором можно заказать диск\nс «Зоопарком», посмотри и напиши, что ты об этом думаешь. Оля\n7.4. Оля пишет о/об\nA. уходе за собакой.\nB. компьютерной игре.\nC. экскурсии в зоопарк.\nOJRP-100-2405 Strona 11 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "7.1: C; 7.2: C; 7.3: B; 7.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 7.1: C; 7.2: C; 7.3: B; 7.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 7.1: C; 7.2: C; 7.3: B; 7.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q07-page-10"
+        },
+        {
+          "type": "image",
+          "asset_id": "q07-page-11"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q07-page-10",
+          "path": "public/cke/2024/russian/ojrp-100-x-2405/q07-page-10.webp",
+          "sha256": "6a11ad632004a01849081413b6e3712c6670df65bd225381d6bd61a5d4cae073",
+          "alt": "Oryginalny układ zadania 7 z arkusza OJRP-100-2405, strona 10.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q07-page-11",
+          "path": "public/cke/2024/russian/ojrp-100-x-2405/q07-page-11.webp",
+          "sha256": "5f491b9836c81dde861111a73e5c73a984780d5fe34e362dfc50ff86ea1bb765",
+          "alt": "Oryginalny układ zadania 7 z arkusza OJRP-100-2405, strona 11.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 11.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-russian-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        12
+      ],
+      "type": "long_text",
+      "topic": "Spójność tekstu",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst, z którego usunięto trzy zdania. Wpisz w każdą lukę (8.1.–8.3.) literę,\nktórą oznaczono brakujące zdanie (A–D), tak aby otrzymać spójny i logiczny tekst.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej luki.\nЮНЫЙ ТАЛАНТ\nВаня Костромин очень быстро считает в уме. В пять лет он стал участником\nмеждународного конкурса по арифметике в Москве. 8.1. _____ Их поделили\nна возрастные группы. Ваня оказался лучшим среди своих ровесников и прошёл\nв финал.\nУникальные способности проявились у Вани в раннем детстве. 8.2. _____\nА в трёхлетнем возрасте хорошо читал. И не только детские книги, но и газеты, научно-\nпопулярные журналы. Малыш также знал цифры и мог решать простые\nматематические примеры и задачи.\nЕщё Ваня интересуется астрономией. 8.3. _____ С его помощью мальчик изучает\nзвёздное небо. Ребёнок также занимается английским языком и рисует.\nNa podstawie: woman.rambler.ru\nA. У него в комнате стоит небольшой телескоп.\nB. Уже в полтора года он знал русский алфавит.\nC. В нём соревновались ребята из разных стран мира.\nD. Обычно мальчик делал это без помощи калькулятора.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "8.1: C; 8.2: B; 8.3: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 8.1: C; 8.2: B; 8.3: A.",
+      "solution_steps": [
+        "Klucz CKE: 8.1: C; 8.2: B; 8.3: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q08-page-12"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q08-page-12",
+          "path": "public/cke/2024/russian/ojrp-100-x-2405/q08-page-12.webp",
+          "sha256": "653c9ad28d687456fbadda8ab8bec83717d4d0b398392968cfc4f871a9da692e",
+          "alt": "Oryginalny układ zadania 8 z arkusza OJRP-100-2405, strona 12.",
+          "caption": "Zadanie 8 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-russian-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        13
+      ],
+      "type": "long_text",
+      "topic": "Wyszukiwanie informacji",
+      "difficulty": 3,
+      "prompt": "Przeczytaj trzy wpisy na forum internetowym na temat muzeów (A–C) oraz zdania\n9.1.–9.4. Do każdego zdania dopasuj właściwy wpis. Wpisz rozwiązania do tabeli.\nUwaga! Jeden z wpisów pasuje do dwóch zdań.\nА.\nВсе мы уверены, что селфи придумали в XXI веке. Однако создатели Музея селфи\nв Лос-Анджелесе с этим не согласны. Они утверждают, что люди всегда хотели\nиметь своё изображение – рисунок, картину или фотографию. В Музее селфи\nможно увидеть работы известных художников прошлого и настоящего, на которых\nпредставлены они сами. Здесь также есть и чёрно-белые фотографии наших\nпрабабушек. В музее вы узнаете всё о феномене селфи, которому почти 200 лет.\nИ, конечно же, там можно сделать себе снимок, например, на крыле самолёта.\nБудет чем похвалиться перед друзьями.\nДобавить отзыв\nB.\nКак-то я пошла в Музей истории музыки. Чтобы посмотреть экспозицию,\nя простояла в очереди два часа! После этого я решила: хватит! В наше время\nс экспонатами музеев можно знакомиться, сидя в своей комнате! И не тратить\nденьги на билет! С тех пор я бываю в музеях только на виртуальных экскурсиях,\nза которые не надо платить. Например, недавно я зашла на сайт Музея счастья.\nМне удалось посмотреть все экспонаты. Признаюсь, мне совсем не мешало то, что\nя вижу их на экране компьютера.\nДобавить отзыв\nC.\nВо время каникул мы с родителями были в Музее LEGO. Я с детства любил\nсобирать из этого конструктора разные модели. В музее я увидел столько\nинтересного: города, поезда и самолёты, героев мультфильмов… И всё из LEGO.\nНо самым замечательным было то, что каждый мог собрать из кубиков свой\nэкспонат для музея. Мы построили зоопарк с животными и сделали на его фоне\nсемейный портрет. Правда, билеты в музей стоили дорого, но мы остались очень\nдовольны отдыхом.\nДобавить отзыв\n9.1. В этом музее посетители могут сделать экспонаты своими руками.\n9.2. Этот музей знакомит с историей автопортрета.\n9.3. Я посещаю музеи, не выходя из дома.\n9.4. Я смотрю выставки бесплатно.\nOJRP-100-2405 Strona 13 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "9.1: C; 9.2: A; 9.3: B; 9.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 9.1: C; 9.2: A; 9.3: B; 9.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 9.1: C; 9.2: A; 9.3: B; 9.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q09-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q09-page-13",
+          "path": "public/cke/2024/russian/ojrp-100-x-2405/q09-page-13.webp",
+          "sha256": "7b6a9d6c2fc86a4acaf9beefabdccf5a692ac6635ce9f0ef731ce0ed46fe7d6a",
+          "alt": "Oryginalny układ zadania 9 z arkusza OJRP-100-2405, strona 13.",
+          "caption": "Zadanie 9 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-russian-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        14,
+        15
+      ],
+      "type": "long_text",
+      "topic": "Przetwarzanie wypowiedzi",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Uzupełnij w e-mailu luki 10.1.–10.3. zgodnie z treścią tekstu, tak aby\njak najbardziej precyzyjnie oddać sens podanych informacji. Luki należy uzupełnić\nw języku polskim.\nНазвание книги: СЫСКНОЕ1 БЮРО «КВАРТЕТ»\nАвтор: Екатерина Вильмонт\nСодержание книги\nКнига Екатерины Вильмонт рассказывает о жизни\nобычных ребят. Лучшие друзья Ася, Матильда,\nКостя и Митя – это и есть сыскное бюро «Квартет».\nОднажды девочки узнают, что в пустой квартире их\nсоседки появился дух. Увидеть его невозможно – дух\nникому не показывается. Отлично прячется. Просто\nигра в кошки-мышки! Но каждую ночь, когда на часах\nровно двенадцать, из старого пианино слышится\nмузыка. Это играет дух!\nПодруги, а вместе с ними, конечно же, пёс Лорд,\nтайком входят в квартиру соседки. Но встретиться\nс духом им не удаётся. Представляете, когда\nстрелки часов приближаются к двенадцати, девочки\nслышат, что кто-то открывает ключом дверь\nквартиры. Кто? Соседка? Её муж? Нет! В квартиру\nпробуют войти незнакомые мужчины!\nЖаль, что девчонки не взяли с собой Митю и Костю. Как же раскрыть тайну пустой\nквартиры?!\nNa podstawie: www.loveread.mi; kitbit.ru; cv2.litres.ru\n1 Сыскное – detektywistyczne.\nWiadomość \nOd: Kuba\nDo: Zosia\nTemat: prezent\nZosiu,\nmam pomysł na prezent dla Ani! Wiem, że uwielbia książki kryminalne, a na dodatek\npasjonuje się językiem rosyjskim. Proponuję kupić jej książkę Kateriny Wilmont „Biuro\ndetektywistyczne «Kwartet»”. Jej bohaterkami są między innymi dwie koleżanki Asia\ni Matylda. Wyobraź sobie, że w pustym mieszkaniu ich sąsiadki zamieszkał\ntajemniczy duch, który o północy 10.1. ____________________________________\n_____________________________. Pewnego wieczoru dziewczyny wchodzą wraz\nz 10.2. ___________________________________ do pustego mieszkania sąsiadki,\naby zobaczyć ducha. A tu nagle ktoś zaczyna przekręcać klucz w drzwiach. Okazuje\nsię, że to 10.3. _______________________________________________________!\nNiezła historia!\nJestem pewien, że Ani się spodoba. A co Ty myślisz? Daj znać.\nKuba\nWPISZ TYLKO TE WYRAZY, KTÓRYMI UZUPEŁNIŁEŚ(-AŚ) KAŻDĄ Z LUK.\nOJRP-100-2405 Strona 15 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "10.1: gra na (starym) pianinie; 10.2: psem (Lordem); 10.3: (nieznajomi / obcy / nieznani / jacyś) mężczyźni"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 10.1: gra na (starym) pianinie; 10.2: psem (Lordem); 10.3: (nieznajomi / obcy / nieznani / jacyś) mężczyźni.",
+      "solution_steps": [
+        "Klucz CKE: 10.1: gra na (starym) pianinie; 10.2: psem (Lordem); 10.3: (nieznajomi / obcy / nieznani / jacyś) mężczyźni.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q10-page-14"
+        },
+        {
+          "type": "image",
+          "asset_id": "q10-page-15"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q10-page-14",
+          "path": "public/cke/2024/russian/ojrp-100-x-2405/q10-page-14.webp",
+          "sha256": "65d6809fcfb43d5136df91f1bd0c9dfb17f8517551cd002efa987c6e2bb5ce90",
+          "alt": "Oryginalny układ zadania 10 z arkusza OJRP-100-2405, strona 14.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q10-page-15",
+          "path": "public/cke/2024/russian/ojrp-100-x-2405/q10-page-15.webp",
+          "sha256": "ccab6c1e85b9c322390f02746df2e6e2445c74a5e838cc4c39cc96db0d2746e5",
+          "alt": "Oryginalny układ zadania 10 z arkusza OJRP-100-2405, strona 15.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 15.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-russian-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — wybór wyrazów",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Spośród wyrazów podanych w ramce wybierz te, które są\npoprawnym uzupełnieniem luk 11.1.–11.3. Wpisz odpowiednią literę (A–F) obok\nnumeru każdej luki.\nUwaga! Trzy wyrazy zostały podane dodatkowo i nie pasują do żadnej luki.\nA. лучше B. делают C. меньше D. началом E. концом F. продают\nЕСТЬ МОЖНО!\nВ одном из кинотеатров Лондона зрителей пригласили на «фильм с угощением».\nУ входа в кинозал перед 11.1. _____ сеанса им раздали по несколько упаковок, на\nкоторых были написаны номера. В каждой из них находились разные продукты.\nПо ходу фильма зрителям показывали карточки с номером упаковки. Это значило,\nчто именно из этой упаковки надо съесть продукт, чтобы ещё 11.2. _____\nпочувствовать атмосферу фильма. Представляете, когда на экране главная героиня\nфильма ест виноград, зрители 11.3. _____ то же самое: пробуют сладкий виноград из\nупаковки. Неплохо придумано!\nNa podstawie: www.amplitude.ru",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "11.1: D; 11.2: A; 11.3: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 11.1: D; 11.2: A; 11.3: B.",
+      "solution_steps": [
+        "Klucz CKE: 11.1: D; 11.2: A; 11.3: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q11-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q11-page-16",
+          "path": "public/cke/2024/russian/ojrp-100-x-2405/q11-page-16.webp",
+          "sha256": "09fd8f09958540fc6e6fad0e327caa5a9d82ea17b9e946dfbb23deec9da58d92",
+          "alt": "Oryginalny układ zadania 11 z arkusza OJRP-100-2405, strona 16.",
+          "caption": "Zadanie 11 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-russian-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        17
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — gramatyka i leksyka",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Wybierz poprawne uzupełnienie luk 12.1.–12.3. Zakreśl jedną z liter:\nA, B albo C.\n«НЕТ» ТЕЛЕФОНУ НА ДОРОГАХ!\nАлександра Иванова – ученица гимназии № 2 из города\nКрасноярска – часто видела, как молодые люди переходят\n12.1. _____ в наушниках и в то же время смотрят в телефон.\nА ведь это очень опасно! И тогда Александра предложила\nввести новый дорожный знак. Она нарисовала смартфон\nи наушники, которые перечёркивает красная линия.\nИнспекторы полиции заинтересовались 12.2. _____ знаком и поддержали\nинициативу школьницы. Вместе с учениками Красноярска они провели акцию «НЕТ\nтелефону на дорогах!». Школьники напоминали прохожим в наушниках и с телефоном\nо правилах безопасности на дорогах. Работники полиции точно 12.3. _____, что такое\nмероприятие заставит пешеходов быть более внимательными.\nNa podstawie: krsk.sibnovosti.ru\n12.1.\nA. улицу\nB. улице\nC. улицей\n12.2.\nA. новым\nB. нового\nC. новому\n12.3.\nA. знает\nB. знаем\nC. знают\nOJRP-100-2405 Strona 17 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "12.1: A; 12.2: A; 12.3: C"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 12.1: A; 12.2: A; 12.3: C.",
+      "solution_steps": [
+        "Klucz CKE: 12.1: A; 12.2: A; 12.3: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q12-page-17"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q12-page-17",
+          "path": "public/cke/2024/russian/ojrp-100-x-2405/q12-page-17.webp",
+          "sha256": "da92f9cf6cbc5c4986dec32df064ec87990effe68456d9b0d89852bfcb7b27c6",
+          "alt": "Oryginalny układ zadania 12 z arkusza OJRP-100-2405, strona 17.",
+          "caption": "Zadanie 12 — oryginalny układ CKE, strona 17.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-russian-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        18
+      ],
+      "type": "long_text",
+      "topic": "Transformacje leksykalno-gramatyczne",
+      "difficulty": 3,
+      "prompt": "Uzupełnij zdania 13.1.–13.3. Wykorzystaj w odpowiedniej formie wyrazy podane\nw nawiasach. Nie należy zmieniać kolejności podanych wyrazów, trzeba natomiast –\njeśli jest to konieczne – dodać inne wyrazy, tak aby otrzymać zdania logiczne\ni gramatycznie poprawne. Wymagana jest pełna poprawność ortograficzna\nwpisywanych fragmentów.\nUwaga! W każdą lukę możesz wpisać maksymalnie trzy wyrazy, wliczając w to wyrazy\njuż podane.\n13.1. Аня делает покупки в (торговый / центр) __________________________________\n___________________________________.\n13.2. Вчера у нас в школе не (быть / уроки) ____________________________________\n_________________________________.\n13.3. Я уже два года (работать / информатик) _________________________________\n_________________________________.\nWPISZ TYLKO TE WYRAZY, KTÓRYMI UZUPEŁNIŁEŚ(-AŚ) KAŻDĄ Z LUK.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "13.1: торговом центре / огромном торговом центре; 13.2: было уроков / Было* уроков"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 13.1: торговом центре / огромном торговом центре; 13.2: было уроков / Было* уроков.",
+      "solution_steps": [
+        "Klucz CKE: 13.1: торговом центре / огромном торговом центре; 13.2: было уроков / Было* уроков.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q13-page-18"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q13-page-18",
+          "path": "public/cke/2024/russian/ojrp-100-x-2405/q13-page-18.webp",
+          "sha256": "aa42c73a4c91036063ed2578a9b0a09f6bae7a4bb2d5b9f5235cd8b257e58ad4",
+          "alt": "Oryginalny układ zadania 13 z arkusza OJRP-100-2405, strona 18.",
+          "caption": "Zadanie 13 — oryginalny układ CKE, strona 18.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-russian-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        18,
+        20
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna — e-mail",
+      "difficulty": 3,
+      "prompt": "POLECENIE DO ZADANIA 14. ZNAJDUJE SIĘ NA KARCIE ROZWIĄZAŃ ZADAŃ OTWARTYCH.\nWYKONAJ TO ZADANIE W WYZNACZONYM MIEJSCU NA KARCIE ROZWIĄZAŃ ZADAŃ OTWARTYCH.\nJĘZYK ROSYJSKI\nEgzamin ósmoklasisty\nJĘZYK ROSYJSKI\nEgzamin ósmoklasisty\nJĘZYK ROSYJSKI\nEgzamin ósmoklasisty",
+      "answer_key": {
+        "assessment": "rubric",
+        "minimum_words": 50,
+        "maximum_words": 120
+      },
+      "scoring": {
+        "max_points": 10,
+        "rules": [
+          "Maksymalnie 10 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Porównaj rozwiązanie z oficjalnymi zasadami oceniania CKE dołączonymi do arkusza.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q14-page-18"
+        },
+        {
+          "type": "image",
+          "asset_id": "q14-page-20"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q14-page-18",
+          "path": "public/cke/2024/russian/ojrp-100-x-2405/q14-page-18.webp",
+          "sha256": "f359e10fbb69dcb476f0e22fb4be3565f2005e0243249e57e4c1ca14a8826aed",
+          "alt": "Oryginalny układ zadania 14 z arkusza OJRP-100-2405, strona 18.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 18.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q14-page-20",
+          "path": "public/cke/2024/russian/ojrp-100-x-2405/q14-page-20.webp",
+          "sha256": "5651fe8d73248277637f67cff699cdf95a5a8c604af4e2f93533b25b76a5b62d",
+          "alt": "Oryginalny układ zadania 14 z arkusza OJRP-100-2405, strona 20.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 20.",
+          "mime_type": "image/webp"
+        }
+      ]
+    }
+  ]
+}

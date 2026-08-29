@@ -1,0 +1,891 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2020-main-french-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2020-main-french-100-x",
+    "source_document_id": "OJFP-100-2004",
+    "source_pdf_sha256": "8415c855848ea1ad330b4248e7f33e263b14b971e60afc3faf1ed6d94181c6d4",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2020-2/",
+    "source_label": "CKE 2020 · język francuski · termin główny · wariant 100-X",
+    "exam_year": 2020,
+    "exam_session": "main",
+    "subject": "french",
+    "variant_code": "100-X",
+    "question_count": 14,
+    "supplementary_sources": [
+      {
+        "id": "cke-2020-main-french-100-x-rules",
+        "path": "content/cke/sources/2020/french/OJFP-100-2004-zasady.pdf",
+        "sha256": "6f1cd947c061ae9b227066df03bff96556bec44e5139e85d0106ab46e6dc9bc4",
+        "label": "Oficjalne zasady oceniania rozwiązań zadań"
+      },
+      {
+        "id": "cke-2020-main-french-100-x-transcript",
+        "path": "content/cke/sources/2020/french/OJFP-100-2004-transkrypcja.pdf",
+        "sha256": "13a25185c4c51a19a428010584a5f427c1e234b8564c0c5458052f33b08f935e",
+        "label": "Oficjalna transkrypcja nagrań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [
+    {
+      "id": "cke-2020-main-french-100-x-transcript-q01",
+      "title": "Transkrypcja nagrania do zadania 1",
+      "paragraphs": [
+        "Tekst 1.",
+        "Quand mon chat Léo était petit, il jouait avec moi tout le temps. Maintenant, il aime toujours",
+        "passer du temps en ma compagnie mais il est devenu plus paresseux et il n’aime plus courir",
+        "après une balle. Il adore m’observer quand je travaille assise à mon bureau. Il est heureux !",
+        "Mais quand je veux le prendre dans mes bras, il s’énerve et il se cache. Léo est un grand",
+        "individualiste.",
+        "Tekst 2.",
+        "La mère : Matthieu, qu’est-ce que tu cherches ?",
+        "Le garçon : Mon ticket de bus. Je ne sais plus où je l’ai mis.",
+        "La mère : Il est peut-être dans ton pantalon ?",
+        "Le garçon : Attends, je vais voir dans les poches… Regarde, il y a seulement deux billets de",
+        "cinq euros.",
+        "La mère : Et sur le bureau ?",
+        "Le garçon : Tiens ! Le voilà ! Tu as raison. Il est entre les pages de mon cahier. Quelle chance !",
+        "La mère : Bon, maintenant, tu dois le mettre dans ton portefeuille.",
+        "Tekst 3.",
+        "Le garçon : Tu sais que Caroline a une nouvelle télé avec un écran hyper grand ? Maintenant,",
+        "elle sort moins souvent voir des films. Elle préfère les regarder chez elle.",
+        "La fille : Eh bien, faisons-lui une surprise ! Un bon film sera un cadeau idéal… et pas cher",
+        "en plus.",
+        "Le garçon : Bonne idée !",
+        "La fille : Écoute, j’ai vu une comédie géniale au festival du film français. Mais je ne sais",
+        "pas si elle est déjà sortie en DVD.",
+        "Le garçon : Viens, on va chercher au rayon comédie, là, derrière les films de science-fiction.",
+        "Tu te rappelles le titre ?",
+        "La fille : Bien sûr ! Allons-y !",
+        "Tekst 4.",
+        "Regarde cette photo. À l’époque, c’était un petit village. Tous les habitants se connaissaient",
+        "et ils se saluaient quand ils allaient au travail. Après l’école, j’allais jouer avec mon copain",
+        "Marc, le fils du médecin. On passait tous les après-midi à courir et à vivre des aventures.",
+        "On allait souvent au magasin où travaillait le grand-père de Marc. Il nous donnait toujours des",
+        "bonbons. J’avais huit ans à cette époque-là.",
+        "Tekst 5.",
+        "Les enfants ! En été, il y a souvent des orages dans cette région. Si vous êtes surpris par",
+        "un orage sur un terrain de jeu, entrez dans un bâtiment. Si vous nagez, sortez tout de suite",
+        "de l’eau. Si vous êtes en promenade dans la forêt, sortez-en le plus vite possible. Ne restez",
+        "jamais sous un arbre ! Faites attention !",
+        "Egzamin ósmoklasisty z języka francuskiego (OJFP-100, OJFP-200)",
+        "kwiecień 2020"
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    },
+    {
+      "id": "cke-2020-main-french-100-x-transcript-q02",
+      "title": "Transkrypcja nagrania do zadania 2",
+      "paragraphs": [
+        "Wypowiedź 1.",
+        "D’après moi, la Journée sans voiture est une bonne occasion pour changer ses habitudes.",
+        "On peut aller au travail à pied ou à vélo sans trop s’exposer au danger. J’ai vu sur Internet que",
+        "ce jour-là, les transports en commun sont gratuits pour les conducteurs qui laissent leur voiture",
+        "au garage. Et puis, c’est intéressant de voir une ville sans embouteillages.",
+        "Wypowiedź 2.",
+        "C’est une bonne idée de laisser sa voiture au garage. Ma famille et moi, nous prenons souvent",
+        "les transports en commun. Bien sûr, il faut payer les billets mais on gagne beaucoup de temps",
+        "et on pollue moins. À mon avis, il faut organiser plus de débats à la télé, écrire des articles sur",
+        "Internet ou encore faire des campagnes publicitaires sur cette journée. Autrement, cela ne",
+        "changera rien aux habitudes des gens.",
+        "Wypowiedź 3.",
+        "Moi, je suis contre cette Journée. Pour me rendre à l’école autrement qu’en voiture, j’ai besoin",
+        "d’au moins une demi-heure. Souvent, je dois attendre le bus pendant plusieurs minutes et ça",
+        "devient encore plus long. J’ai essayé le tram et c’est aussi une perte de temps. Avec mon papa,",
+        "en voiture, c’est plus rapide. Et puis, dans le bus, il y a toujours beaucoup de monde, alors",
+        "je suis obligé de rester debout. Je trouve ça dangereux.",
+        "Wypowiedź 4.",
+        "Beaucoup de chauffeurs pensent qu’une journée sans voiture est une véritable perte de temps.",
+        "Pour moi, c’est l’occasion de pouvoir circuler librement à vélo ou à pied. Malheureusement,",
+        "dans ma ville, il y a encore trop de voitures dans les rues ce jour-là. Bravo alors pour cette",
+        "Journée ! Il faut que cela se répète plus d’une fois par an."
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    },
+    {
+      "id": "cke-2020-main-french-100-x-transcript-q03",
+      "title": "Transkrypcja nagrania do zadania 3",
+      "paragraphs": [
+        "Bonjour ! Je voudrais vous rappeler que ce mercredi, vous terminez vos cours à 11h15 et que,",
+        "tout de suite après, vous descendez dans la cour de l’école. À 11h30, nous partons pour",
+        "la ferme bio Arcueil pour passer une superbe journée en pleine nature. Le retour est prévu",
+        "à 16h00. Au programme : découverte des produits régionaux et de la vie à la ferme, participation",
+        "à la production du fromage, dégustation du miel de la ferme, visite de la campagne. Mais",
+        "ce n’est pas la seule nouvelle aujourd’hui. La visite au Musée des Beaux-Arts est annulée.",
+        "Par contre, pour la semaine prochaine, vos professeurs préparent pour vous une visite au jardin",
+        "botanique. Un message officiel sera bientôt envoyé à vos parents par le secrétariat de l’école",
+        "pour les informer de la sortie. Merci de votre attention !"
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    },
+    {
+      "id": "cke-2020-main-french-100-x-transcript-q04",
+      "title": "Transkrypcja nagrania do zadania 4",
+      "paragraphs": [
+        "Wypowiedź 1.",
+        "Qu’est-ce que tu fais quand il pleut ?",
+        "Wypowiedź 2.",
+        "Il pleut très fort et moi, je dois sortir.",
+        "Wypowiedź 3.",
+        "Quel temps on annonce pour demain ?",
+        "Wypowiedź 4.",
+        "Tu as passé de bonnes vacances d’hiver à la montagne ?"
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    }
+  ],
+  "questions": [
+    {
+      "id": "cke-2020-main-french-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        3
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — wybór wielokrotny",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie pięć tekstów. W zadaniach 1.1.–1.5., na podstawie informacji\nzawartych w nagraniu, z podanych odpowiedzi wybierz właściwą. Zakreśl jedną z liter:\nA, B albo C.\n1.1. Qu’est-ce que le chat de la fille aime faire le plus ?\nA. B. C.\n1.2. Où est-ce que Matthieu a trouvé son ticket de bus ?\nA. B. C.\n1.3. Où sont les deux personnes qui parlent ?\nA. B. C.\n1.4. L’homme parle de\nA. sa famille.\nB. son travail.\nC. son enfance.\n1.5. La personne qui parle\nA. explique les règles d’un jeu.\nB. donne des conseils aux enfants.\nC. invite les enfants à une promenade.\nOJFP-100-2004 Strona 3 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "1.1: C; 1.2: A; 1.3: A; 1.4: C; 1.5: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 5,
+        "rules": [
+          "Maksymalnie 5 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 1.1: C; 1.2: A; 1.3: A; 1.4: C; 1.5: B.",
+      "solution_steps": [
+        "Klucz CKE: 1.1: C; 1.2: A; 1.3: A; 1.4: C; 1.5: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2020-main-french-100-x-transcript-q01",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-page-3"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q01-page-3",
+          "path": "public/cke/2020/french/ojfp-100-x-2004/q01-page-3.webp",
+          "sha256": "eb80fd64339789a2a27cca2f2a49931513eaf93e5cd9199e89a518921c62dabf",
+          "alt": "Oryginalny układ zadania 1 z arkusza OJFP-100-2004, strona 3.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 3.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-french-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — dopasowywanie",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi na temat dnia bez samochodu. Na podstawie\ninformacji zawartych w nagraniu dopasuj do każdej wypowiedzi (2.1.–2.4.)\nodpowiadające jej zdanie (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej wypowiedzi.\nCette personne\nA. trouve qu’il faut parler plus de la Journée sans voiture dans les médias.\nB. pense que ça prend trop de temps d’utiliser les transports en commun.\nC. voudrait qu’on organise une Journée sans voiture plus souvent.\nD. dit que les chauffeurs peuvent voyager en ville sans payer.\nE. présente les dangers de la circulation à vélo en ville.\n2.1. 2.2. 2.3. 2.4.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "2.1: D; 2.2: A; 2.3: B; 2.4: C"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 2.1: D; 2.2: A; 2.3: B; 2.4: C.",
+      "solution_steps": [
+        "Klucz CKE: 2.1: D; 2.2: A; 2.3: B; 2.4: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2020-main-french-100-x-transcript-q02",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q02-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q02-page-4",
+          "path": "public/cke/2020/french/ojfp-100-x-2004/q02-page-4.webp",
+          "sha256": "fa95a57ad1f9cc06388aabdf1d61f0ad3729566f9ce40deaae0122ae64ee277c",
+          "alt": "Oryginalny układ zadania 2 z arkusza OJFP-100-2004, strona 4.",
+          "caption": "Zadanie 2 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-french-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — uzupełnianie luk",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie wypowiedź na temat wycieczki na farmę. Na podstawie informacji\nzawartych w nagraniu uzupełnij luki 3.1.–3.4. w poniższych zdaniach, tak aby jak\nnajbardziej precyzyjnie oddać sens wysłuchanego tekstu. Luki należy uzupełnić w języku\nfrancuskim.\nLe départ à la ferme bio Arcueil aura lieu mercredi à 3.1. _____________________ du matin.\nÀ la ferme, les participants vont fabriquer 3.2. _____________________________________.\nLa semaine prochaine, les professeurs vont organiser une sortie au 3.3. __________________\n_________________________.\nLa personne s’adresse aux 3.4. __________________________________________________.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "3.1: 11h30 / onze heures trente / onze heures et demie; 3.2: du fromage / des fromages; 3.3: jardin botanique / jardin des plantes; 3.4: élèves/écoliers"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 3.1: 11h30 / onze heures trente / onze heures et demie; 3.2: du fromage / des fromages; 3.3: jardin botanique / jardin des plantes; 3.4: élèves/écoliers.",
+      "solution_steps": [
+        "Klucz CKE: 3.1: 11h30 / onze heures trente / onze heures et demie; 3.2: du fromage / des fromages; 3.3: jardin botanique / jardin des plantes; 3.4: élèves/écoliers.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2020-main-french-100-x-transcript-q03",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q03-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q03-page-4",
+          "path": "public/cke/2020/french/ojfp-100-x-2004/q03-page-4.webp",
+          "sha256": "71b5f680540b16115475d8d0e644e8d4816bd55fa520ca04dfe0c0520ab0c7ef",
+          "alt": "Oryginalny układ zadania 3 z arkusza OJFP-100-2004, strona 4.",
+          "caption": "Zadanie 3 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-french-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — zadanie otwarte",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi związane z sytuacjami życia codziennego\n(4.1.–4.4.). Do każdej z nich dobierz właściwą reakcję (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedna reakcja została podana dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. Il y aura de la pluie.\nB. Alors prends ton parapluie.\nC. Elles ont mal supporté le froid.\nD. En général, je regarde la pluie par la fenêtre.\nE. Pour moi, il y avait trop peu de neige sur la piste.\n4.1. 4.2. 4.3. 4.4.\nOJFP-100-2004 Strona 5 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "4.1: D; 4.2: B; 4.3: A; 4.4: E"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 4.1: D; 4.2: B; 4.3: A; 4.4: E.",
+      "solution_steps": [
+        "Klucz CKE: 4.1: D; 4.2: B; 4.3: A; 4.4: E.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2020-main-french-100-x-transcript-q04",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q04-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q04-page-5",
+          "path": "public/cke/2020/french/ojfp-100-x-2004/q04-page-5.webp",
+          "sha256": "72e6bbbf7f0b530c88b9deb3ef7b1bec4368e8abf1961a8535f85ddca0a91c96",
+          "alt": "Oryginalny układ zadania 4 z arkusza OJFP-100-2004, strona 5.",
+          "caption": "Zadanie 4 — oryginalny układ CKE, strona 5.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-french-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe",
+      "difficulty": 3,
+      "prompt": "Dla każdej z opisanych sytuacji (5.1.–5.4.) wybierz właściwą reakcję. Zakreśl jedną z liter:\nA, B albo C.\n5.1. Twoi koledzy wyjeżdżają na wymianę do Francji. Co im powiesz na pożegnanie?\nA. Amitiés !\nB. Bienvenue !\nC. Bon séjour !\n5.2. Nie pamiętasz imienia nowo poznanej koleżanki. Poproś ją, aby je powtórzyła.\nA. Tu peux me rappeler ton prénom ?\nB. Note mon prénom, s’il te plaît !\nC. Je te demande de m’appeler.\n5.3. Twój kolega źle się poczuł. Jak zapytasz go, co mu dolega?\nA. Ça ne fait rien ?\nB. Qu’est-ce que tu as ?\nC. Où est-ce qu’il a mal ?\n5.4. Wychodzisz z kolegą z kina. Jak zapytasz go o opinię na temat filmu, który razem\nobejrzeliście?\nA. Quel film voudrais-tu voir ?\nB. Comment tu trouves ce film ?\nC. Tu veux mon opinion sur ce film ?",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "5.1: C; 5.2: A; 5.3: B; 5.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 5.1: C; 5.2: A; 5.3: B; 5.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 5.1: C; 5.2: A; 5.3: B; 5.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q05-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q05-page-6",
+          "path": "public/cke/2020/french/ojfp-100-x-2004/q05-page-6.webp",
+          "sha256": "94ba485ec36c09babcac3da8c75bf8490f2d92a1be690fd77b7c7a28ea1e341d",
+          "alt": "Oryginalny układ zadania 5 z arkusza OJFP-100-2004, strona 6.",
+          "caption": "Zadanie 5 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-french-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe — uzupełnianie dialogów",
+      "difficulty": 3,
+      "prompt": "Uzupełnij dialogi 6.1.–6.3. Wpisz w każdą lukę brakujący fragment wypowiedzi, tak aby\notrzymać spójne i logiczne teksty. Luki należy uzupełnić w języku francuskim.\n6.1. X : Salut Anna ! Je vais à la piscine. Tu ______________________________________ ?\nY : Non, pas aujourd’hui. Je suis encore enrhumée !\n6.2. X : Est-ce qu’il y a quelqu’un chez le directeur ?\nY : Non, il _________________________________________. Le directeur vous attend.\n6.3. X : J’ai gagné le concours « Questions pour un champion » !\nY : C’est génial, je ___________________________________________ !\nOJFP-100-2004 Strona 7 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "6.2: n’y a personne; 6.3: te félicite / suis content(e) pour toi / suis heureux (heureuse) pour toi / suis fier (fière) de toi / vous félicite / suis content(e) pour vous / suis heureux (heureuse) pour vous / suis fier (fière) de vous / suis impressionné(e)"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 6.2: n’y a personne; 6.3: te félicite / suis content(e) pour toi / suis heureux (heureuse) pour toi / suis fier (fière) de toi / vous félicite / suis content(e) pour vous / suis heureux (heureuse) pour vous / suis fier (fière) de vous / suis impressionné(e).",
+      "solution_steps": [
+        "Klucz CKE: 6.2: n’y a personne; 6.3: te félicite / suis content(e) pour toi / suis heureux (heureuse) pour toi / suis fier (fière) de toi / vous félicite / suis content(e) pour vous / suis heureux (heureuse) pour vous / suis fier (fière) de vous / suis impressionné(e).",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q06-page-7"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q06-page-7",
+          "path": "public/cke/2020/french/ojfp-100-x-2004/q06-page-7.webp",
+          "sha256": "460dd3dcd6e1e7effefc0f770e169e1b58416b14977bb46f7aa41b7b8f6c3c5e",
+          "alt": "Oryginalny układ zadania 6 z arkusza OJFP-100-2004, strona 7.",
+          "caption": "Zadanie 6 — oryginalny układ CKE, strona 7.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-french-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        8,
+        9
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie tekstów pisanych",
+      "difficulty": 3,
+      "prompt": "Przeczytaj teksty. W zadaniach 7.1.–7.4. z podanych odpowiedzi wybierz właściwą,\nzgodną z treścią tekstu. Zakreśl jedną z liter: A, B albo C.\nTHAÏLANDE :\nUNE TOURISTE BLESSÉE PAR UN CROCODILE\nDans un parc national en Thaïlande, une touriste française s’est approchée trop près d’un\ncrocodile qui était en train de manger. Pourtant, il y avait un panneau « DÉFENSE\nD’ENTRER ». Elle voulait faire un selfie avec cet animal. Résultat : le crocodile a blessé\nla touriste à la jambe. Heureusement, l’accident n’était pas grave. La femme se sent déjà\nbeaucoup mieux.\n7.1. La touriste s’est approchée du crocodile pour\nA. se prendre en photo avec lui.\nB. lui donner à manger.\nC. mieux le voir.\nMON BLOG\nVos commentaires enthousiastes me donnent toujours envie d’écrire sur ce blog ! Merci !\nEst-ce que vous savez que c’est mon professeur d’histoire-géo au lycée qui m’a aidé\nà choisir mon métier ? J’aime bien mon travail parce qu’il me permet de voyager beaucoup\net de rencontrer des gens. Chaque groupe est différent. Les architectes, par exemple, me\nposent des questions techniques pendant chaque visite. Je ne m’ennuie jamais !\n7.2. L’auteur de ce blog est\nA. professeur.\nB. architecte.\nC. guide.\nSalut Théo,\nPlein de gens critiquent cette saga. Moi non plus,\nje n’étais pas fan de Harry Potter. Mais j’ai\nchangé d’avis quand j’ai revu le premier film.\nEt puis je suis allé à Londres pour voir les lieux\nde tournage. Je te recommande surtout la gare de\nSaint-Pancras. J’espère que tu auras l’occasion\nd’y aller.\nÀ plus,\nMarc\n7.3. Dans son message, Marc\nA. critique quelque chose.\nB. encourage Théo à faire quelque chose.\nC. demande l’opinion de Théo sur quelque chose.\nhttps://salonimage.fr\nSALON IMAGE\nOffre pour : Homme – Femme – Enfant\nDepuis dix ans :\n nous avons le titre de « Meilleur salon de France »\n les meilleurs stylistes veulent travailler dans notre salon\n nos coiffeurs reçoivent des prix dans des concours internationaux\n nous sommes ouverts aux nouvelles tendances\n parmi nos clients, il y a même des vedettes de cinéma.\nNotre adresse : 13 rue Pierre Fontaine, 75009 Paris\n7.4. Dans cette annonce, on présente\nA. les succès d’un salon de coiffure.\nB. les nouvelles promotions d’un salon de coiffure.\nC. le programme d’ouverture d’un salon de coiffure.\nOJFP-100-2004 Strona 9 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "7.1: A; 7.2: C; 7.3: B; 7.4: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 7.1: A; 7.2: C; 7.3: B; 7.4: A.",
+      "solution_steps": [
+        "Klucz CKE: 7.1: A; 7.2: C; 7.3: B; 7.4: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q07-page-8"
+        },
+        {
+          "type": "image",
+          "asset_id": "q07-page-9"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q07-page-8",
+          "path": "public/cke/2020/french/ojfp-100-x-2004/q07-page-8.webp",
+          "sha256": "30d6417edbf353d0e2bd88d5747a8277fa4c8080799412155e9031abbc8324b1",
+          "alt": "Oryginalny układ zadania 7 z arkusza OJFP-100-2004, strona 8.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q07-page-9",
+          "path": "public/cke/2020/french/ojfp-100-x-2004/q07-page-9.webp",
+          "sha256": "9abf79ec5b7266ed67d6028ad2260f518905f8cf576d0b1ed981594e3724429d",
+          "alt": "Oryginalny układ zadania 7 z arkusza OJFP-100-2004, strona 9.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 9.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-french-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Spójność tekstu",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst, z którego usunięto cztery zdania. Wpisz w każdą lukę (8.1.–8.4.) literę,\nktórą oznaczono brakujące zdanie (A–E), tak aby otrzymać spójny i logiczny tekst.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej luki.\nLE CHIEN MILORD\nPour un chien abandonné qui vit dans un refuge, il est souvent difficile\nde trouver un nouveau maître. Milord était un chien malheureux, personne\nne voulait l’adopter. La cause ? 8.1. _____ En plus, il avait l’air triste.\nUn jour, tout change. Un homme s’intéresse à Milord. 8.2. _____ Au bureau\nde la société, il remplit donc les papiers administratifs pour l’emmener chez\nlui. Pendant les formalités, le chien reste couché sous la table, visiblement terrifié. Soudain,\nil aperçoit une petite enfant, la fille de l’homme, près de lui. 8.3. _____ Encouragée par\nce comportement, l’enfant demande alors au chien de se lever. Et c’est un miracle. 8.4. _____\nEn réalité, ce chien n’avait pas peur de la laisse mais des adultes ! Par contre, il adorait\nles enfants. Milord a fait confiance à la petite fille et c’était un bon choix.\nNa podstawie: www.ouaf.fr\nA. Il décide de le prendre dans sa maison.\nB. Milord ne savait pas marcher en laisse.\nC. Mais, étrangement, Milord n’a pas peur d’elle.\nD. Pour Milord, les chances d’adoption ont diminué.\nE. Milord la regarde, se lève et se promène en laisse avec elle.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "8.1: B; 8.2: A; 8.3: C; 8.4: E"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 8.1: B; 8.2: A; 8.3: C; 8.4: E.",
+      "solution_steps": [
+        "Klucz CKE: 8.1: B; 8.2: A; 8.3: C; 8.4: E.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q08-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q08-page-10",
+          "path": "public/cke/2020/french/ojfp-100-x-2004/q08-page-10.webp",
+          "sha256": "c72d1f7e19ed4d290fa03b4db7fac1aff22b175aa57385b1430639e7ec911f4a",
+          "alt": "Oryginalny układ zadania 8 z arkusza OJFP-100-2004, strona 10.",
+          "caption": "Zadanie 8 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-french-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        11
+      ],
+      "type": "long_text",
+      "topic": "Wyszukiwanie informacji",
+      "difficulty": 3,
+      "prompt": "Przeczytaj wpisy na trzech blogach poświęconych kuchni (A–C) oraz zdania 9.1.–9.4.\nDo każdego zdania dopasuj właściwy wpis. Wpisz rozwiązania do tabeli.\nUwaga! Jeden z wpisów pasuje do dwóch zdań.\nVous n’aimez pas les restaurants et vous ne voulez pas cuisiner pour vos invités ? C’est\ndonc moi que vous cherchez pour bien manger. Je viens de commencer ce blog\nA. et j’espère qu’il vous donnera envie de goûter mes créations. Je connais toutes les\ncuisines régionales françaises. J’en suis devenue une spécialiste. On choisira le menu\net, quelques heures avant la fête, je réaliserai un délicieux repas chez vous.\nMon blog fête son anniversaire ! Merci à ceux qui étaient avec moi pendant toutes ces\nannées. Les débuts étaient difficiles mais aujourd’hui, j’ai la tête pleine de recettes.\nB. Malheureusement, ça me prend trop de temps de m’occuper du blog donc, si vous\npouvez le rédiger avec moi, pas seulement en français, n’hésitez pas à me contacter.\nJe suis impatiente de découvrir vos nouvelles idées.\nBienvenue sur mon nouveau blog ! Pour commencer, je voudrais vous parler de la\ncuisine chinoise. Elle est excellente ! Vous devez l’essayer si vous êtes fatigué des\nplats français. Mais cette cuisine n’est pas simple, alors si vous n’êtes pas un cuisinier\nC.\nexpérimenté, faites comme moi et passez une soirée agréable en ville. Je vous\nrecommande un restaurant qui sert d’incroyables plats chinois traditionnels. Il me vient\nen aide quand j’ai envie de changement. Maintenant, c’est à vous de voir !\nL’auteur du post\n9.1. propose un endroit pour sortir et bien manger.\n9.2. cherche des gens qui peuvent l’aider.\n9.3. prépare d’excellents plats français.\n9.4. écrit sur ce blog depuis longtemps.\nOJFP-100-2004 Strona 11 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "9.1: C; 9.2: B; 9.3: A; 9.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 9.1: C; 9.2: B; 9.3: A; 9.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 9.1: C; 9.2: B; 9.3: A; 9.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q09-page-11"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q09-page-11",
+          "path": "public/cke/2020/french/ojfp-100-x-2004/q09-page-11.webp",
+          "sha256": "6bcd3e9c11d43cd82a71292506fbe96794ca780386c89e70e022848c07a22fd8",
+          "alt": "Oryginalny układ zadania 9 z arkusza OJFP-100-2004, strona 11.",
+          "caption": "Zadanie 9 — oryginalny układ CKE, strona 11.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-french-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        12,
+        13
+      ],
+      "type": "long_text",
+      "topic": "Przetwarzanie wypowiedzi",
+      "difficulty": 3,
+      "prompt": "Przeczytaj teksty 1. i 2. Uzupełnij w e-mailu luki 10.1.–10.3. zgodnie z treścią tekstów, tak\naby jak najbardziej precyzyjnie oddać ich sens. Luki należy uzupełnić w języku polskim.\nTekst 1.\nAppartement à deux pas du canal de la Robine\n l’appartement se trouve dans un bel immeuble de\nsix étages qui date du XIXe siècle\n il est situé au quatrième étage (il y a un ascenseur)\n la partie jour se compose d’un grand salon et d’une\ncuisine séparée\n dans la partie nuit, il y a une chambre avec deux\nlits séparés, une chambre avec un lit double et une\nNARBONNE (11100)\nsalle de bains avec une douche\n un parking se trouve au sous-sol de l’immeuble\nTekst 2.\nCOMMENTAIRES\nLe mois dernier, mon mari et moi, nous avons passé deux semaines de vacances dans\ncet appartement. Il est rénové et très joli. La localisation est parfaite : on est en plein\ncentre-ville. Les fenêtres du salon donnent sur une place où, le vendredi matin, un grand\nmarché est organisé. On peut y acheter des produits régionaux. Mais attention ! Tout près\nde l’appartement, il y a plein de cafés et de magasins ouverts tard la nuit du lundi au samedi.\nDonc, si vous n’aimez pas le bruit, ce n’est pas un endroit pour vous. Par contre, pas de\nproblèmes avec le propriétaire, il est vraiment sympa et son accueil a été très chaleureux.\nBref, on a passé de très belles vacances à Narbonne.\nxyz@abc.pl\nWakacje we Francji\nDroga Ciociu!\nTak jak prosiłaś, razem z mamą znalazłyśmy dla Ciebie atrakcyjne mieszkanie na wakacje.\nZnajduje się ono w miejscowości Narbonne na 10.1. _________________________\npiętrze. Składa się z salonu, dwóch sypialni, kuchni i łazienki. Położone jest w centrum\nmiasta, blisko kanału de la Robine, tuż przy placu, na którym w 10.2. __________________\nrano odbywa się lokalny targ. Goście, którzy spędzali tam wakacje w zeszłym\nmiesiącu, byli zadowoleni. Z komentarza, który zamieścili na stronie internetowej,\nwynika, że mieszkanie jest ładne i odnowione. Według nich jedyną jego wadą jest\n10.3. _____________________. Załączam link z ofertą.\nCałuję\nKarolina\nOJFP-100-2004 Strona 13 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "10.1: czwartym/4.; 10.2: piątki / każdy piątek; 10.3: hałas"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 10.1: czwartym/4.; 10.2: piątki / każdy piątek; 10.3: hałas.",
+      "solution_steps": [
+        "Klucz CKE: 10.1: czwartym/4.; 10.2: piątki / każdy piątek; 10.3: hałas.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q10-page-12"
+        },
+        {
+          "type": "image",
+          "asset_id": "q10-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q10-page-12",
+          "path": "public/cke/2020/french/ojfp-100-x-2004/q10-page-12.webp",
+          "sha256": "fffda1978d2c3fe964bfc02f0c808ca592099d5ee72c83ee32a4e1580979490f",
+          "alt": "Oryginalny układ zadania 10 z arkusza OJFP-100-2004, strona 12.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q10-page-13",
+          "path": "public/cke/2020/french/ojfp-100-x-2004/q10-page-13.webp",
+          "sha256": "2a3937d8605f11fefdb6aabb7fa7b65e8af003f210ba83916772ac2aa58bb276",
+          "alt": "Oryginalny układ zadania 10 z arkusza OJFP-100-2004, strona 13.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-french-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — wybór wyrazów",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Spośród wyrazów podanych w ramce wybierz te, które są poprawnym\nuzupełnieniem luk 11.1.–11.3. Wpisz odpowiednią literę (A–F) obok numeru każdej luki.\nUwaga! Trzy wyrazy zostały podane dodatkowo i nie pasują do żadnej luki.\nA. boissons B. commencent C. dire D. invitent E. montrer F. robes\nLe Salon du Chocolat a lieu chaque année à Paris. Au début, il y a un grand défilé d’élégantes\n11.1. _____ en chocolat. Pour présenter ce beau spectacle, quatorze grands chocolatiers\ntravaillent ensemble avec des mannequins et des créateurs de mode. Ce Salon est aussi\nl’occasion de 11.2. _____ aux visiteurs d’autres œuvres spectaculaires, comme par exemple\nune copie de la tour Eiffel de trois mètres de hauteur. Les chocolatiers du monde entier vous\n11.3. _____ à assister à des démonstrations de fabrication et à participer à de nombreux\nconcours thématiques. Mais avant tout, c’est l’occasion de déguster du très bon chocolat. Alors,\nbon appétit !\nNa podstawie: www.evous.fr",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "11.1: F; 11.2: E; 11.3: D"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 11.1: F; 11.2: E; 11.3: D.",
+      "solution_steps": [
+        "Klucz CKE: 11.1: F; 11.2: E; 11.3: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q11-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q11-page-14",
+          "path": "public/cke/2020/french/ojfp-100-x-2004/q11-page-14.webp",
+          "sha256": "e51f9d7c0fcd154271e10ccbf3cd927d6267b50df3f0cfa9de396d8c51d137aa",
+          "alt": "Oryginalny układ zadania 11 z arkusza OJFP-100-2004, strona 14.",
+          "caption": "Zadanie 11 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-french-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        15
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — gramatyka i leksyka",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Wybierz poprawne uzupełnienie luk 12.1.–12.4. Zakreśl jedną z liter:\nA, B albo C.\nMessage \nDe : anna@xyz.fr\nÀ : pauline@xyz.com\n1\nObjet : Salut !\nChère Pauline,\nJe me suis enfin 12.1. _____ au magazine « GEO Ado ». Ce matin, j’ai déjà reçu\nle premier numéro. C’est super. Je suis très contente. Il y a beaucoup 12.2. _____\nreportages photo de grande qualité et les photos sont magnifiques. Dans ce numéro,\non parle du réchauffement climatique. C’est un sujet d’actualité. Je pourrai me servir\nde tous ces documents pour préparer mon exposé pour l’école. Est-ce que tu voudrais,\ntoi aussi, un abonnement pour le recevoir 12.3. _____ toi ? En tout cas, ce n’est pas\ntrop cher : 59 euros pour un an.\nQu’est-ce que tu en penses ? J’attends 12.4. _____ réponse.\nBises,\nAnna\n12.1. A. abonné B. abonnée C. abonner\n12.2. A. de B. des C. les\n12.3. A. à B. avec C. chez\n12.4. A. ma B. ta C. sa\nOJFP-100-2004 Strona 15 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "12.1: B; 12.2: A; 12.3: C; 12.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 12.1: B; 12.2: A; 12.3: C; 12.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 12.1: B; 12.2: A; 12.3: C; 12.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q12-page-15"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q12-page-15",
+          "path": "public/cke/2020/french/ojfp-100-x-2004/q12-page-15.webp",
+          "sha256": "401fbadcceba9e9613ab14d463074d8485714bec6a553a18ec2b5af108c41e72",
+          "alt": "Oryginalny układ zadania 12 z arkusza OJFP-100-2004, strona 15.",
+          "caption": "Zadanie 12 — oryginalny układ CKE, strona 15.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-french-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Transformacje leksykalno-gramatyczne",
+      "difficulty": 3,
+      "prompt": "Uzupełnij zdania 13.1.–13.4. Wykorzystaj w odpowiedniej formie wyrazy podane\nw nawiasach. Nie należy zmieniać kolejności podanych wyrazów, trzeba natomiast – jeśli\njest to konieczne – dodać inne wyrazy, tak aby otrzymać zdania logiczne i gramatycznie\npoprawne. Wymagana jest pełna poprawność ortograficzna wpisywanych fragmentów.\nUwaga! W każdą lukę możesz wpisać maksymalnie cztery wyrazy, wliczając w to wyrazy\njuż podane.\n13.1. La cuisine se trouve (gauche / salon) _________________________________________.\n13.2. Mon grand-père me racontait des (histoire / amusant) ____________________________.\n13.3. Ma sœur est musicienne, elle (jouer / piano) ___________________________________\ndepuis son enfance.\n13.4. Philippe, (regarder / ce / photo) _____________________________________________,\ns’il te plaît !",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "13.1: à gauche du salon; 13.2: histoires amusantes; 13.3: joue du piano; 13.4: regarde regarde ces cette photos photo /"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 13.1: à gauche du salon; 13.2: histoires amusantes; 13.3: joue du piano; 13.4: regarde regarde ces cette photos photo /.",
+      "solution_steps": [
+        "Klucz CKE: 13.1: à gauche du salon; 13.2: histoires amusantes; 13.3: joue du piano; 13.4: regarde regarde ces cette photos photo /.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q13-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q13-page-16",
+          "path": "public/cke/2020/french/ojfp-100-x-2004/q13-page-16.webp",
+          "sha256": "36060f0c61e5da1f257af1c545363585558fe6d5944d140be9959464f8bdfc18",
+          "alt": "Oryginalny układ zadania 13 z arkusza OJFP-100-2004, strona 16.",
+          "caption": "Zadanie 13 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-french-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna — e-mail",
+      "difficulty": 3,
+      "prompt": "Twoja koleżanka z klasy przeprowadza się wkrótce za granicę. W e-mailu do kolegi\nz Francji:\n• napisz, co Twoja klasa dała tej koleżance w prezencie, i opisz ten przedmiot\n• poinformuj, jak koleżanka zareagowała na Wasz prezent\n• wyjaśnij, jak zamierzasz utrzymywać kontakt z tą koleżanką.\nNapisz swoją wypowiedź w języku francuskim. Podpisz się jako XYZ.\nRozwiń swoją wypowiedź w każdym z trzech podpunktów, tak aby osoba nieznająca polecenia\nw języku polskim uzyskała wszystkie wskazane w nim informacje. Pamiętaj, że długość\nwypowiedzi powinna wynosić od 50 do 120 słów (nie licząc wyrazów podanych na początku\nwypowiedzi). Oceniane są: umiejętność pełnego przekazania informacji, spójność, bogactwo\njęzykowe oraz poprawność językowa.",
+      "answer_key": {
+        "assessment": "rubric",
+        "minimum_words": 50,
+        "maximum_words": 120
+      },
+      "scoring": {
+        "max_points": 10,
+        "rules": [
+          "Maksymalnie 10 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Porównaj rozwiązanie z oficjalnymi zasadami oceniania CKE dołączonymi do arkusza.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q14-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q14-page-16",
+          "path": "public/cke/2020/french/ojfp-100-x-2004/q14-page-16.webp",
+          "sha256": "1aa0c7c67af92bd7f4286f834f48d5fd4d410499e67f52b15e07c6b22595c1e4",
+          "alt": "Oryginalny układ zadania 14 z arkusza OJFP-100-2004, strona 16.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,915 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2019-main-german-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2019-main-german-100-x",
+    "source_document_id": "OJNP-100-1904",
+    "source_pdf_sha256": "b20eb08f9066515d605ebe8f0d53a6885b6e489ad3db7869146379096fa053ad",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2019-2/",
+    "source_label": "CKE 2019 · język niemiecki · termin główny · wariant 100-X",
+    "exam_year": 2019,
+    "exam_session": "main",
+    "subject": "german",
+    "variant_code": "100-X",
+    "question_count": 14,
+    "supplementary_sources": [
+      {
+        "id": "cke-2019-main-german-100-x-rules",
+        "path": "content/cke/sources/2019/german/OJNP-100-1904-zasady.pdf",
+        "sha256": "597ef987c48830c14d35ad5975696b95249e9cef74dc71dbce6b726afac1b2df",
+        "label": "Oficjalne zasady oceniania rozwiązań zadań"
+      },
+      {
+        "id": "cke-2019-main-german-100-x-transcript",
+        "path": "content/cke/sources/2019/german/OJNP-100-1904-transkrypcja.pdf",
+        "sha256": "f2373ea8ab099ba970e0e58cfa6f0b38dcd3a3a460de7cb1428e435d0a6ac61f",
+        "label": "Oficjalna transkrypcja nagrań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [
+    {
+      "id": "cke-2019-main-german-100-x-transcript-q01",
+      "title": "Transkrypcja nagrania do zadania 1",
+      "paragraphs": [
+        "Tekst 1.",
+        "Junge: Kennst du das Mädchen da drüben? Ich denke, ich habe es schon kennengelernt.",
+        "Mädchen: Da drüben stehen: Claudia, Marta und Angelika. Welches Mädchen meinst du?",
+        "Junge: Das mit den blonden Haaren.",
+        "Mädchen: Na ja, aber sie sind alle blond.",
+        "Junge: Das Mädchen da, mit den langen Haaren.",
+        "Mädchen: Meinst du das mit der Brille?",
+        "Junge: Nein, das ohne Brille.",
+        "Mädchen: Ich weiß schon. Du meinst Claudia. Sie war mit uns auf Klassenfahrt in Köln.",
+        "Tekst 2.",
+        "Frau: Martin, morgen hast du Examen in Mathe. Hast du einen Taschenrechner?",
+        "Junge: Den brauche ich nicht. Ich brauche nur ein Lineal und einen schwarzen Kuli.",
+        "Frau: Und hast du beides?",
+        "Junge: Ein Lineal habe ich, aber ich kann den schwarzen Kuli nicht finden.",
+        "Frau: Geh jetzt, bitte, zum Schreibwarengeschäft und kauf dir einen neuen.",
+        "Tekst 3.",
+        "Junge: Monika, ich muss etwas ausdrucken.",
+        "Mädchen: Warte mal! Du weißt doch, ich lerne für den Physiktest. Ich mache gerade Online-",
+        "Aufgaben. Du hast gesagt, dass du mir dabei hilfst.",
+        "Junge: In 10 Minuten machen wir deine Aufgaben zusammen. Ich drucke nur das",
+        "Kinoticket aus.",
+        "Mädchen: O. K., lieber Bruder. Du hast 10 Minuten, ich gehe in die Küche und mache uns",
+        "Tee.",
+        "Junge: Danke.",
+        "Tekst 4.",
+        "Letztens habe ich einen interessanten Film über exotische Länder gesehen. Ich will diese",
+        "Länder besuchen. Ich möchte mit meiner Freundin Klara reisen. Sie ist die beste Schülerin in",
+        "Erdkunde. Wir werden viele Fotos machen. Unsere Reise wird bestimmt faszinierend sein!",
+        "Tekst 5.",
+        "Olaf, ich habe endlich das Paket mit meinem neuen Smartphone bekommen. Es ist",
+        "phantastisch! Ich habe mit dem Smartphone schon ein Selfie gemacht! Aber meine Musik",
+        "kann ich nicht von dem alten Handy auf das neue schicken. Ich brauche, wie immer, deine",
+        "Hilfe. Ruf mich zurück!"
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    },
+    {
+      "id": "cke-2019-main-german-100-x-transcript-q02",
+      "title": "Transkrypcja nagrania do zadania 2",
+      "paragraphs": [
+        "Tekst 1.",
+        "Marken sind für mich nicht so wichtig. Ich kleide mich vor allem bequem. Also eng darf",
+        "meine Kleidung nie sein. Ich habe gern weite Hosen und weite, lange T-Shirts an. Auf keinen",
+        "Fall Pullover. Dazu passen natürlich Sportschuhe. Seit einigen Tagen trage ich auch eine",
+        "Mütze. Schick, nicht wahr? Ich habe sie von meinem älteren Bruder bekommen.",
+        "Egzamin ósmoklasisty z języka niemieckiego (OJNP-100, OJNP-200, OJNP-400, OJNP-500)",
+        "kwiecień 2019",
+        "Tekst 2.",
+        "Meine Lieblingsklamotten? Das sieht man doch: enge Jeans und bequeme Hemden. Ich mag",
+        "keine schicken Kleider und Schuhe. Aber ich trage immer Ringe, Ohrringe und Ketten. Diese",
+        "Ohrringe hier und die Kette habe ich selbst gemacht. Gefallen sie dir? Auf meiner",
+        "Internetseite findest du viel mehr.",
+        "Tekst 3.",
+        "Ich trage meistens billige Secondhandklamotten, vor allem enge Hosen. Teure",
+        "Markenkleidung interessiert mich nicht. Ich trage gern weite Pullover. Viele von ihnen hat",
+        "meine Oma selbst gemacht. Diese Pullover sind am bequemsten. Meine Oma und ich haben",
+        "auch Pullover in einen Online-Shop gestellt. Wir haben jetzt mehr Kunden als meine",
+        "Schwester in ihrem Schmuckgeschäft.",
+        "Tekst 4.",
+        "Ich fühle mich besser, wenn ich gut angezogen bin. Ich ziehe oft kurze Röcke, enge Pullover",
+        "und schicke Schuhe mit hohen Absätzen an. Ballerinas und flache Sandalen finde ich nicht",
+        "schön. Leichtes Make-up, eine gute Frisur und ein kleiner Ring sind auch mein Stil. Ich bin",
+        "kein sportlicher Typ."
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    },
+    {
+      "id": "cke-2019-main-german-100-x-transcript-q03",
+      "title": "Transkrypcja nagrania do zadania 3",
+      "paragraphs": [
+        "9.00 Uhr, Nachrichten:",
+        "Wie die Polizei informiert, sah man gestern in Wien zwei junge Männer im kalten Wasser der",
+        "Donau. Doch es war kein Unfall. Zwei Studenten haben im Flusswasser viele 100-Euro-",
+        "Scheine gesehen. Sie wollten diese Geldscheine aus dem Wasser holen.",
+        "Das alles passierte an einem frostigen Wintertag. Bei minus 5 Grad waren wenige Passanten",
+        "auf den Straßen. Sie alarmierten schnell die Polizei.",
+        "Nach wenigen Minuten kamen die Polizisten, sammelten die Geldscheine ein und brachten sie",
+        "zum Trocknen in ein warmes Zimmer in der Polizei-Zentrale. Insgesamt waren es 70.000",
+        "Euro! Es war kein Falschgeld. Aber wem gehört das Geld?",
+        "Die Polizei hat die Antwort auf die Frage schnell gefunden: Zwei Jogger haben eine etwa",
+        "80-jährige Frau gesehen, wie sie einen Sack ins Wasser geworfen hat. Einen Sack mit Geld.",
+        "Aber keiner weiß, warum die Frau das gemacht hat."
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    },
+    {
+      "id": "cke-2019-main-german-100-x-transcript-q04",
+      "title": "Transkrypcja nagrania do zadania 4",
+      "paragraphs": [
+        "Wypowiedź 1.",
+        "Warum bist du traurig?",
+        "Wypowiedź 2.",
+        "Was ist dein Lieblingsfach in der Schule?",
+        "Wypowiedź 3.",
+        "Wie findest du unsere neue Mathelehrerin?",
+        "Wypowiedź 4.",
+        "Wann hilfst du mir beim Projekt?"
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    }
+  ],
+  "questions": [
+    {
+      "id": "cke-2019-main-german-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        3
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — wybór wielokrotny",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie pięć tekstów. W zadaniach 1.1.–1.5., na podstawie informacji\nzawartych w nagraniu, z podanych odpowiedzi wybierz właściwą. Zakreśl jedną z liter:\nA, B albo C.\n1.1. Welches Mädchen hat Leo schon kennengelernt?\nA. B. C.\n1.2. Was muss Martin kaufen?\nA. B. C.\n1.3. Wo sind die Personen?\nA. B. C.\n1.4. Worüber erzählt das Mädchen?\nA. Über seine Zukunftspläne.\nB. Über seinen Kinobesuch.\nC. Über sein Erdkundeprojekt.\n1.5. Warum ruft der Vater seinen Sohn an?\nA. Er dankt ihm für etwas.\nB. Er protestiert gegen etwas.\nC. Er bittet ihn um etwas.\nOJNP-100-1904 Strona 3 z 16",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "1.1: B; 1.2: C; 1.3: C; 1.4: A; 1.5: C"
+        ]
+      },
+      "scoring": {
+        "max_points": 5,
+        "rules": [
+          "Maksymalnie 5 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 1.1: B; 1.2: C; 1.3: C; 1.4: A; 1.5: C.",
+      "solution_steps": [
+        "Klucz CKE: 1.1: B; 1.2: C; 1.3: C; 1.4: A; 1.5: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2019-main-german-100-x-transcript-q01",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-page-3"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q01-page-3",
+          "path": "public/cke/2019/german/ojnp-100-x-1904/q01-page-3.webp",
+          "sha256": "d62c0426f78823c0bbecdde17add8c52d6387a1263c39d215882273bb3c0a654",
+          "alt": "Oryginalny układ zadania 1 z arkusza OJNP-100-1904, strona 3.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 3.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-german-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — dopasowywanie",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi na temat stylu ubierania się. Na podstawie\ninformacji zawartych w nagraniu dopasuj do każdej wypowiedzi (2.1.–2.4.)\nodpowiadające jej zdanie (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej wypowiedzi.\nDiese Person\nA. hat gern sportliche Markenkleidung an.\nB. mag keine engen Klamotten.\nC. trägt immer viel Schmuck.\nD. liebt bequeme Pullover.\nE. mag elegante Schuhe.\n2.1. 2.2. 2.3. 2.4.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "2.1: B; 2.2: C; 2.3: D; 2.4: E"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 2.1: B; 2.2: C; 2.3: D; 2.4: E.",
+      "solution_steps": [
+        "Klucz CKE: 2.1: B; 2.2: C; 2.3: D; 2.4: E.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2019-main-german-100-x-transcript-q02",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q02-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q02-page-4",
+          "path": "public/cke/2019/german/ojnp-100-x-1904/q02-page-4.webp",
+          "sha256": "c099a0ee11f325d676cdc094c7cc53ba296b7b10c714ec1835e9da1ce2f7bf15",
+          "alt": "Oryginalny układ zadania 2 z arkusza OJNP-100-1904, strona 4.",
+          "caption": "Zadanie 2 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-german-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — uzupełnianie luk",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie wiadomość radiową o niecodziennym zdarzeniu w Wiedniu.\nNa podstawie informacji zawartych w nagraniu uzupełnij luki 3.1.–3.4. w zdaniach, tak\naby jak najbardziej precyzyjnie oddać sens wysłuchanego tekstu. Luki należy uzupełnić\nw języku niemieckim.\nZwei Studenten waren in Wien im 3.1. ___________________________________________.\nAn diesem Tag war es 3.2. _____________________________________________________.\nDie 3.3. _______________________________ haben das Geld zum Trocknen mitgenommen.\nDie Frau mit dem Geldsack war etwa 3.4. _________________________________ Jahre alt.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "3.1: Flusswasser / Wasser der Donau; 3.2: frostig; 3.3: Polizisten; 3.4: 80 / achtzig"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 3.1: Flusswasser / Wasser der Donau; 3.2: frostig; 3.3: Polizisten; 3.4: 80 / achtzig.",
+      "solution_steps": [
+        "Klucz CKE: 3.1: Flusswasser / Wasser der Donau; 3.2: frostig; 3.3: Polizisten; 3.4: 80 / achtzig.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2019-main-german-100-x-transcript-q03",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q03-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q03-page-4",
+          "path": "public/cke/2019/german/ojnp-100-x-1904/q03-page-4.webp",
+          "sha256": "fead997e4975402f99002a7824731f55d8f0cd1a088d6a0a5be7d4d2b5e65a91",
+          "alt": "Oryginalny układ zadania 3 z arkusza OJNP-100-1904, strona 4.",
+          "caption": "Zadanie 3 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-german-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — zadanie otwarte",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi w szkole (4.1.–4.4.). Do każdej z nich dobierz\nwłaściwą reakcję (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedna reakcja została podana dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. In deiner Schultasche.\nB. Heute, nach der Schule.\nC. Mathe, am liebsten mag ich Geometrie.\nD. Sie ist freundlich und erklärt alles genau.\nE. Ich habe eine schlechte Note in Mathe bekommen.\n4.1. 4.2. 4.3. 4.4.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "4.1: E; 4.2: C; 4.3: D; 4.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 4.1: E; 4.2: C; 4.3: D; 4.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 4.1: E; 4.2: C; 4.3: D; 4.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2019-main-german-100-x-transcript-q04",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q04-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q04-page-5",
+          "path": "public/cke/2019/german/ojnp-100-x-1904/q04-page-5.webp",
+          "sha256": "07750cc586304bf1bed0297d78c11d824b6f724dedb6203d26a0808fd8279b2a",
+          "alt": "Oryginalny układ zadania 4 z arkusza OJNP-100-1904, strona 5.",
+          "caption": "Zadanie 4 — oryginalny układ CKE, strona 5.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-german-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe",
+      "difficulty": 3,
+      "prompt": "Dla każdej z opisanych sytuacji (5.1.–5.4.) wybierz właściwą reakcję. Zakreśl jedną\nz liter: A, B albo C.\n5.1. Kolega pyta Cię o opinię na temat książki przeczytanej przez Ciebie. Co powiesz?\nA. Das Buch ist wirklich spannend.\nB. Das Buch findest du in der Schulbibliothek.\nC. Das Buch hat mein Vater gelesen.\n5.2. Koleżanka udziela Ci dobrej rady. Co powiesz?\nA. Danke! Mein Geschenk ist toll!\nB. Vielen Dank für die Einladung!\nC. Du hast recht. Danke!\n5.3. Kolega prosi Cię o pomoc w obsłudze nowego telefonu. Powiedz mu, co ma robić.\nA. Ja, dein Handy macht tolle Fotos.\nB. O. K., schalte zuerst dein Handy ein.\nC. Nein, es kostet mehr als mein neues Handy.\n5.4. Chcesz zaprosić koleżankę do kina. Co powiesz?\nA. Ich finde diesen Film fantastisch! Und du?\nB. Ich habe zwei Kinokarten. Gehst du mit?\nC. Ich war gestern im Kino. Du auch?\nOJNP-100-1904 Strona 5 z 16",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "5.1: A; 5.2: C; 5.3: B; 5.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 5.1: A; 5.2: C; 5.3: B; 5.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 5.1: A; 5.2: C; 5.3: B; 5.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q05-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q05-page-5",
+          "path": "public/cke/2019/german/ojnp-100-x-1904/q05-page-5.webp",
+          "sha256": "f700eb4578d1f08d4aae1125bda9d16efa0ad6f1d1195d681f3d0c223aed2403",
+          "alt": "Oryginalny układ zadania 5 z arkusza OJNP-100-1904, strona 5.",
+          "caption": "Zadanie 5 — oryginalny układ CKE, strona 5.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-german-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe — uzupełnianie dialogów",
+      "difficulty": 3,
+      "prompt": "Uzupełnij dialogi 6.1.–6.3. Wpisz w każdą lukę brakujący fragment wypowiedzi, tak aby\notrzymać spójne i logiczne teksty. Luki należy uzupełnić w języku niemieckim.\n6.1. X: Das Mittagessen ist gleich fertig. ___________________________________?\nY: Ja, sehr. Ich habe heute nichts gegessen.\nX: Dann setz dich, bitte, an den Tisch!\n6.2. X: _______________________________________________ eine Eintrittskarte?\nY: 10 Euro.\nX: Zwei, bitte.\n6.3. X: ______________________________________________________________?\nY: Ja, 38 Grad.\nX: Du musst eine Tablette nehmen.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "6.1: Bist du hungrig; 6.2: Wie viel kostet / Was kostet; 6.3: Hast du Fieber"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 6.1: Bist du hungrig; 6.2: Wie viel kostet / Was kostet; 6.3: Hast du Fieber.",
+      "solution_steps": [
+        "Klucz CKE: 6.1: Bist du hungrig; 6.2: Wie viel kostet / Was kostet; 6.3: Hast du Fieber.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q06-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q06-page-6",
+          "path": "public/cke/2019/german/ojnp-100-x-1904/q06-page-6.webp",
+          "sha256": "148aed2b4d2b8efb454af880904ec044c8c89d1b809bddd245acd7da4f6e1b65",
+          "alt": "Oryginalny układ zadania 6 z arkusza OJNP-100-1904, strona 6.",
+          "caption": "Zadanie 6 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-german-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        6,
+        7
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie tekstów pisanych",
+      "difficulty": 3,
+      "prompt": "Przeczytaj teksty. W zadaniach 7.1.–7.4. z podanych odpowiedzi wybierz właściwą,\nzgodną z treścią tekstu. Zakreśl jedną z liter: A, B albo C.\n7.1. Was sollen die Gäste mitbringen?\nDie Eduard-Mörike-Schule lädt herzlich alle\nA. Getränke.\nSchüler, Eltern und Schulfreunde zum Schulfest\nB. Teller.\nein.\nC. Essen.\nAm 4. Juli erwarten wir Sie ab 14.00 Uhr. Wir\nfreuen uns auf einen bunten Nachmittag mit\nkulturellen Veranstaltungen. Wir bieten Ihnen\nleckeres Essen zu niedrigen Preisen an.\nDenken Sie, bitte, daran, Ihre eigenen Teller und\nIhr eigenes Besteck zu haben. Getränke\nbekommen Sie gratis.\nMein Blog\n10.04, 17:23\nIch weiß, dass ich immer gut über Handball und meine Mannschaft schreibe.\nAber diesmal muss ich sagen, dass unser letztes Spiel eine totale Katastrophe\nwar. Man hat uns gesagt, dass unsere Spielgegner wirklich schnell sind. Aber ich\nhabe nicht gedacht, dass ich den Ball im Spiel so oft verliere. Ich habe kein\neinziges Tor geschossen. Unsere Sportfreunde haben jetzt einen Grund, mich und\nmeine Mannschaft zu kritisieren. Wir waren zu langsam.\n7.2. Wer schreibt das?\nA. Ein Spieler.\nB. Ein Trainer.\nC. Ein Fan.\nThea! Wo bist du? Der Bus 7.3. Warum schreibt Leonie an Thea?\nkommt gleich. Beeil dich, A. Sie entschuldigt sich bei Thea.\nsonst kommen wir wieder zu B. Sie gratuliert Thea.\nspät zu Bio. Frau L. wird böse!\nC. Sie motiviert Thea zu etwas.\nLeonie\nWas machen afrikanische Elefanten nachts? Schlafen Flamingos wirklich auf einem Bein?\nAntworten auf diese Fragen findest du bei uns! Besuch uns am 31. August am Abend und\nerlebe ein faszinierendes Abenteuer in unserem Tiergarten! Wir starten um 19.30 Uhr!\nIn dieser Nacht spielen unsere Tiere die Hauptrollen!\nDie letzte Führung beginnt um 22.00 Uhr.\nTicketverkauf nur bis 19.00 Uhr.\n7.4. Worüber informiert der Text?\nA. Über ein Angebot im Zoo.\nB. Über einen Film über Natur.\nC. Über eine Reise nach Afrika.\nOJNP-100-1904 Strona 7 z 16",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "7.1: B; 7.2: A; 7.3: C; 7.4: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 7.1: B; 7.2: A; 7.3: C; 7.4: A.",
+      "solution_steps": [
+        "Klucz CKE: 7.1: B; 7.2: A; 7.3: C; 7.4: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q07-page-6"
+        },
+        {
+          "type": "image",
+          "asset_id": "q07-page-7"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q07-page-6",
+          "path": "public/cke/2019/german/ojnp-100-x-1904/q07-page-6.webp",
+          "sha256": "64f12822498f1b92d9c573e1258438776f151fc49196d3101a894c8212dd7301",
+          "alt": "Oryginalny układ zadania 7 z arkusza OJNP-100-1904, strona 6.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q07-page-7",
+          "path": "public/cke/2019/german/ojnp-100-x-1904/q07-page-7.webp",
+          "sha256": "7b09a6c062cb3d9cc38e5c3c0a445577d7a8720f8911a1183c64196e103ac421",
+          "alt": "Oryginalny układ zadania 7 z arkusza OJNP-100-1904, strona 7.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 7.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-german-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Spójność tekstu",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst, z którego usunięto cztery zdania. Wpisz w każdą lukę (8.1.–8.4.) literę,\nktórą oznaczono brakujące zdanie (A–E), tak aby otrzymać spójny i logiczny tekst.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej luki.\nAN DIE MESSER, FERTIG, LOS!\nDer wohl coolste Vati der Welt hat zwei Töchter und heißt Beau Coffron. 8.1. _____ Sie sind\nso originell, dass jedes Mädchen in der Klasse seiner Töchter so ein Mittagessen haben möchte!\nDer Vater ist auf die Idee für den fantasievollen Lunch gekommen, als er gesehen hat, wie zwei\nMütter die langweiligen Lunchboxen ihrer Kinder fotografiert haben. „Das geht doch auch\nspannender“, hat er sich gedacht. 8.2. _____ Seit dieser Zeit zeigt er die Fotos von seinen\nKreationen im Internet und ist sehr bekannt. Die Zubereitung des Mittagessens macht ihm\nimmer viel Spaß. 8.3. _____ Und sie essen es immer gern in dieser lustigen Form.\nDer Vater weiß, was seine Töchter gerade mögen. 8.4. _____ Alle Motive aus der Kinderwelt\nsind für Beau Coffron eine Inspiration!\nNa podstawie: www.rp-online.de\nA. Er ist für seine Lunchboxen bekannt.\nB. Er isst Fleisch und Wurst nicht so gern.\nC. Beide erzählen ihm über ihre Interessen.\nD. Und dann hat er die ersten lustigen Lunchboxen gemacht.\nE. Seine Töchter freuen sich auch sehr über das Mittagessen.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "8.1: A; 8.2: D; 8.3: E; 8.4: C"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 8.1: A; 8.2: D; 8.3: E; 8.4: C.",
+      "solution_steps": [
+        "Klucz CKE: 8.1: A; 8.2: D; 8.3: E; 8.4: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q08-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q08-page-8",
+          "path": "public/cke/2019/german/ojnp-100-x-1904/q08-page-8.webp",
+          "sha256": "cd9af89934b5527c1c9d0fbabd34db2d8461989d4d8a457c2cf9cdd1e2191d28",
+          "alt": "Oryginalny układ zadania 8 z arkusza OJNP-100-1904, strona 8.",
+          "caption": "Zadanie 8 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-german-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        9
+      ],
+      "type": "long_text",
+      "topic": "Wyszukiwanie informacji",
+      "difficulty": 3,
+      "prompt": "Przeczytaj trzy wpisy na forum internetowym poświęconym korzystaniu z internetu\n(A–C) oraz zdania 9.1.–9.4. Do każdego zdania dopasuj właściwy wpis. Wpisz rozwiązania\ndo tabeli.\nUwaga! Jeden z wpisów pasuje do dwóch zdań.\nFRAGE: Bist du vom Internet abhängig?\n Antwort\nIch will die ganze Zeit wissen, was im Netz los ist. Ich muss also immer online sein.\nA. Ich lese oft viele negative Kommentare, die die Menschen schreiben. Die Kommentare\nsind oft aggressiv und vulgär. Ihre Autoren bleiben unbekannt, denn sie posten im Netz\nnur unter Nick und rechnen nicht mit negativen Konsequenzen. Ich finde das nicht gut.\n Antwort\nIch meine, es ist sehr gut, dass man schnell viele wichtige Informationen im Internet\nB. finden kann. Man spart viel Zeit und Stress. Ich surfe nur ab und zu im Netz. Aber ich\nbenutze keine sozialen Netzwerke, denn ich will nicht, dass alle Leute wissen, was ich\nmag und was ich jetzt mache. Privatsphäre ist für mich wichtig.\n Antwort\nDas Internet verbindet die Menschen aus aller Welt und ist für mich ein wichtiges\nC. Kommunikationsmittel. Aber soziale Netzwerke sammeln unsere Privatdaten und wir\nsind daran selbst schuld. Ich will nicht, dass alle alles über mich wissen, deshalb passe\nich auf, was ich poste.\nDie Person\n9.1. achtet darauf, was sie über sich selbst im Netz schreibt.\n9.2. kritisiert die Anonymität im Internet.\n9.3. hat kein Konto im sozialen Netzwerk.\n9.4. kann ohne Internet nicht leben.\nOJNP-100-1904 Strona 9 z 16",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "9.1: C; 9.2: A; 9.3: B; 9.4: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 9.1: C; 9.2: A; 9.3: B; 9.4: A.",
+      "solution_steps": [
+        "Klucz CKE: 9.1: C; 9.2: A; 9.3: B; 9.4: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q09-page-9"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q09-page-9",
+          "path": "public/cke/2019/german/ojnp-100-x-1904/q09-page-9.webp",
+          "sha256": "a4601b1699a9d3691040aa23c307cdc891a9cc14e07b74b5be5ae3f8b1cdccdb",
+          "alt": "Oryginalny układ zadania 9 z arkusza OJNP-100-1904, strona 9.",
+          "caption": "Zadanie 9 — oryginalny układ CKE, strona 9.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-german-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        10,
+        11
+      ],
+      "type": "long_text",
+      "topic": "Przetwarzanie wypowiedzi",
+      "difficulty": 3,
+      "prompt": "Przeczytaj teksty 1. i 2. Uzupełnij w SMS-ach luki 10.1.–10.3. zgodnie z treścią tekstów,\ntak aby jak najbardziej precyzyjnie oddać ich sens. Luki należy uzupełnić w języku\npolskim.\nTekst 1.\nHerzlich willkommen in unserer\nAusstellung!\nModewelt – von der Antike\nbis zum 21. Jahrhundert\n1. Etage\nZone A: Herrenmode\nZone B: Damenmode\nZone C: Kosmetika, Accessoires und Frisuren\n2. Etage\nDie größten Modedesigner\n3. Etage\nZone A: Mitmach-Stationen: Make-up, Frisuren,\nKrawattenknoten u. a.\nZone B: Restaurant und Souvenirladen\nEintritt frei!\nTekst 2.\nDas Städtische Museum in Leipzig lädt diesmal zu einer interessanten Ausstellung über\ndie Geschichte der Mode ein.\nBesonders interessant ist die Ausstellung Im Museum kann man nicht nur die\nfür Jugendliche, denn neben statischen schönsten Kleidungsstücke von den\nExponaten gibt es einen Raum für bekanntesten Modemachern bewundern,\nInteraktivität. Die jungen Besucher sondern auch Filme von Modenschauen\nkönnen dort lernen, wie man Krawatten sehen und Interviews mit Designern und\nbindet oder wie man sich zu wichtigen Models hören. Die Ausstellung dauert\nVeranstaltungen, wie z. B. Silvester noch 5 Tage.\nschminkt.\nJanku! Cieszę się, że przyjeżdżasz teraz do Lipska. Znalazłam coś fajnego!\nCo takiego?\nWłaśnie zobaczyłam plakat informujący o 10.1. ________________________\nna temat historii mody! To jest coś dla nas!\nNa pewno dla nas?\nOczywiście, że tak!\nJeśli jutro pójdziemy do miejskiego muzeum, to będę mogła dowiedzieć się\nczegoś więcej o 10.2. _________________, bo tam jest całe piętro tylko\no nich.  Nawet można posłuchać wywiadów z nimi.\nA co ja będę tam robić?\nNauczysz się, jak 10.3. ____________________________________, bo masz\nz tym problem, gdy chcesz się elegancko ubrać, a ja odwiedzę stanowisko\nz makijażem i fryzurami.\nTo jesteśmy umówieni.\nOJNP-100-1904 Strona 11 z 16",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "10.1: wystawie; 10.2: twórcach mody / kreatorach mody / projektantach mody; 10.3: wiązać krawat / zawiązać krawat"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 10.1: wystawie; 10.2: twórcach mody / kreatorach mody / projektantach mody; 10.3: wiązać krawat / zawiązać krawat.",
+      "solution_steps": [
+        "Klucz CKE: 10.1: wystawie; 10.2: twórcach mody / kreatorach mody / projektantach mody; 10.3: wiązać krawat / zawiązać krawat.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q10-page-10"
+        },
+        {
+          "type": "image",
+          "asset_id": "q10-page-11"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q10-page-10",
+          "path": "public/cke/2019/german/ojnp-100-x-1904/q10-page-10.webp",
+          "sha256": "700635e2f487925b143db37b3fd3fcd643252cab393762896334200969e0c4d0",
+          "alt": "Oryginalny układ zadania 10 z arkusza OJNP-100-1904, strona 10.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q10-page-11",
+          "path": "public/cke/2019/german/ojnp-100-x-1904/q10-page-11.webp",
+          "sha256": "e785fdf663ad3f5e4229079afcc441ec0a0c51ee075676507fefaf712b1df599",
+          "alt": "Oryginalny układ zadania 10 z arkusza OJNP-100-1904, strona 11.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 11.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-german-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        12
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — wybór wyrazów",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Spośród wyrazów podanych w ramce wybierz te, które są poprawnym\nuzupełnieniem luk 11.1.–11.3. Wpisz odpowiednią literę (A–F) obok numeru każdej luki.\nUwaga! Trzy wyrazy zostały podane dodatkowo i nie pasują do żadnej luki.\nA. Freund B. ihre C. Regisseur D. liebt E. seine F. spielt\nSTARS DER ZEICHENTRICKFILME\nViele Zeichentrickfilme waren von Anfang an durch ihre Hunde-Schauspieler bekannt.\nIn der ältesten Trickfilmserie mit Mickey Maus kann man zwei von ihnen sehen: Goofy und\nPluto. Goofy ist so intelligent wie ein Mensch, Pluto ist ein „normaler“ Hund. Er spricht nicht,\naber 11.1. _____ Mimik sagt alles. In einem anderen Disney-Trickfilm 11.2. _____\nein verliebtes Hundepaar: die Cocker-Spaniel-Dame Susi und Strolch, der Mischlingshund,\nder Susi liebt.\nEiner der intelligentesten Hunde ist Gromit. Er rettet sein Herrchen Wallace in vielen\ngefährlichen Situationen. Ein anderer kluger Hund heißt Idefix, der 11.3. _____ von Obelix.\nIdefix ist klein und bildet so einen komischen Kontrast zum riesengroßen Obelix.\nWelche Hundehelden aus Trickfilmen kennst du noch?\nNa podstawie: www.spiegel.de",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "11.1: E; 11.2: F; 11.3: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 11.1: E; 11.2: F; 11.3: A.",
+      "solution_steps": [
+        "Klucz CKE: 11.1: E; 11.2: F; 11.3: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q11-page-12"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q11-page-12",
+          "path": "public/cke/2019/german/ojnp-100-x-1904/q11-page-12.webp",
+          "sha256": "550a9d1a13976880903eddd465f37bd920f4d5fddad5ad513c5c8e550708ab55",
+          "alt": "Oryginalny układ zadania 11 z arkusza OJNP-100-1904, strona 12.",
+          "caption": "Zadanie 11 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-german-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        13
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — gramatyka i leksyka",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Wybierz poprawne uzupełnienie luk 12.1.–12.4. Zakreśl jedną z liter:\nA, B albo C.\nFrage: Deutschland ist anders als Spanien. Wo genau liegen die Unterschiede?\n Antwort\nDie Städte sind bei uns nicht so bunt wie in Spanien. Aber die Wohnhäuser gefallen mir gut,\n12.1. _____ sie sehr klare Formen haben. Sie sind modern und bieten viel Platz. In beiden\nLändern gibt es viele kleine Läden und Kaufhäuser. Viele Waren in den Geschäften bei uns\nsind 12.2. _____ als in Spanien. Der 12.3. _____ Verkehr ist perfekt organisiert: Alle Busse\nund Bahnen sind pünktlich, ganz anders als in Spanien. Und das Wetter in Deutschland ist\nverschieden – aber das 12.4. _____ ich. Ich finde es schön, wenn die Sonne nicht immer\nscheint und es auch mal regnet.\n12.1. A. deshalb B. oder C. weil\n12.2. A. teuerste B. teurer C. teuer\n12.3. A. öffentliche B. öffentlichen C. öffentlich\n12.4. A. mag B. kann C. soll\nOJNP-100-1904 Strona 13 z 16",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "12.1: C; 12.2: B; 12.3: A; 12.4: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 12.1: C; 12.2: B; 12.3: A; 12.4: A.",
+      "solution_steps": [
+        "Klucz CKE: 12.1: C; 12.2: B; 12.3: A; 12.4: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q12-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q12-page-13",
+          "path": "public/cke/2019/german/ojnp-100-x-1904/q12-page-13.webp",
+          "sha256": "03ba29b3ab6793e9f54d0f4367632827a736833408d2a014550a3cd72f66dbe8",
+          "alt": "Oryginalny układ zadania 12 z arkusza OJNP-100-1904, strona 13.",
+          "caption": "Zadanie 12 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-german-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Transformacje leksykalno-gramatyczne",
+      "difficulty": 3,
+      "prompt": "Przetłumacz na język niemiecki fragmenty podane w nawiasach, tak aby otrzymać zdania\nlogiczne i gramatycznie poprawne. Wymagana jest pełna poprawność ortograficzna\nwpisywanych fragmentów zdań.\nUwaga! W każdą lukę możesz wpisać maksymalnie trzy wyrazy.\n13.1. Ich fahre (rowerem) ____________________________________________ zur Schule.\n13.2. Monika, (gdzie leży) _____________________________________________ das Buch?\n13.3. Wie heißt (twój kot) _____________________________________________________?\n13.4. Ich (spotkam się) __________________________________________ morgen mit Jens.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "13.1: mit mit dem dem Rad Rad / Fahrrad /; 13.2: wo liegt; 13.3: deine Katze; 13.4: treffe mich"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 13.1: mit mit dem dem Rad Rad / Fahrrad /; 13.2: wo liegt; 13.3: deine Katze; 13.4: treffe mich.",
+      "solution_steps": [
+        "Klucz CKE: 13.1: mit mit dem dem Rad Rad / Fahrrad /; 13.2: wo liegt; 13.3: deine Katze; 13.4: treffe mich.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q13-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q13-page-14",
+          "path": "public/cke/2019/german/ojnp-100-x-1904/q13-page-14.webp",
+          "sha256": "f3a9cd1f34e0b97aa3e7d0b0b1ded513670a39db84ff6db4c7c2ae60083dc081",
+          "alt": "Oryginalny układ zadania 13 z arkusza OJNP-100-1904, strona 14.",
+          "caption": "Zadanie 13 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-german-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        14,
+        21,
+        22
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna — e-mail",
+      "difficulty": 3,
+      "prompt": "Twoja koleżanka z Niemiec poinformowała Cię, że chce spędzić wakacje w polskich\ngórach. W e-mailu do niej:\n• napisz, dlaczego warto pojechać w polskie góry\n• doradź, co powinna ze sobą zabrać i dlaczego\n• wyjaśnij, z jakiego powodu nie możesz pojechać razem z nią.\nNapisz swoją wypowiedź w języku niemieckim. Podpisz się jako XYZ.\nRozwiń swoją wypowiedź w każdym z trzech podpunktów, tak aby osoba nieznająca polecenia\nw języku polskim uzyskała wszystkie wskazane w nim informacje. Pamiętaj, że długość\nwypowiedzi powinna wynosić od 50 do 120 słów (nie licząc wyrazów podanych na początku\nwypowiedzi). Oceniane są: umiejętność pełnego przekazania informacji, spójność, bogactwo\njęzykowe oraz poprawność językowa.",
+      "answer_key": {
+        "assessment": "rubric",
+        "minimum_words": 50,
+        "maximum_words": 120
+      },
+      "scoring": {
+        "max_points": 10,
+        "rules": [
+          "Maksymalnie 10 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Porównaj rozwiązanie z oficjalnymi zasadami oceniania CKE dołączonymi do arkusza.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q14-page-14"
+        },
+        {
+          "type": "image",
+          "asset_id": "q14-page-21"
+        },
+        {
+          "type": "image",
+          "asset_id": "q14-page-22"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q14-page-14",
+          "path": "public/cke/2019/german/ojnp-100-x-1904/q14-page-14.webp",
+          "sha256": "4f653c500754a7032ef365d91c82808783111d42b0a663479ed0fb4105794f93",
+          "alt": "Oryginalny układ zadania 14 z arkusza OJNP-100-1904, strona 14.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q14-page-21",
+          "path": "public/cke/2019/german/ojnp-100-x-1904/q14-page-21.webp",
+          "sha256": "5de1254605e60e7bd9513c18ab2694bb84a3b30021e8e8a89b541c266bba6da6",
+          "alt": "Oryginalny układ zadania 14 z arkusza OJNP-100-1904, strona 21.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 21.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q14-page-22",
+          "path": "public/cke/2019/german/ojnp-100-x-1904/q14-page-22.webp",
+          "sha256": "5263962aec8589cd36cc84bd192eebff530c211396d11437412342a1e6ffc012",
+          "alt": "Oryginalny układ zadania 14 z arkusza OJNP-100-1904, strona 22.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 22.",
+          "mime_type": "image/webp"
+        }
+      ]
+    }
+  ]
+}

@@ -22,8 +22,10 @@ To jest kontrola operacyjna, nie opinia prawna. Zakres zgody powinien obejmować
 - staging i workflow: migracje `20260825213000_cke_import_pipeline.sql` i `20260828120000_full_cke_question_types.sql`,
 - kompletne arkusze 2026: matematyka, język polski oraz sześć języków obcych (`english`, `french`, `spanish`, `german`, `russian`, `italian`) w plikach `content/cke/cke-2026-main-*-100-x.json`,
 - kompletne arkusze 2025: matematyka, język polski (wersje X i Y) oraz sześć języków obcych (`english`, `french`, `spanish`, `german`, `russian`, `italian`) w plikach `content/cke/cke-2025-main-*.json`,
+- kompletne standardowe arkusze z lat 2019–2024: po 8 przedmiotów i łącznie 48 manifestów w plikach `content/cke/cke-<rok>-main-*-100-x.json`,
 - powtarzalne przygotowanie mediów: `scripts/extract-cke-2026-mathematics-assets.py`, `scripts/extract-cke-2026-polish-assets.py`, `scripts/extract-cke-2026-english-assets.py` oraz `scripts/build-cke-2026-remaining-language-manifests.py`.
 - przygotowanie mediów i manifestów 2025: `scripts/extract-cke-2025-*-assets.py`, `scripts/build-cke-2025-manifests.mjs` oraz `scripts/build-cke-2025-remaining-language-manifests.py`.
+- powtarzalne przygotowanie arkuszy 2019–2024: `scripts/build-cke-2019-2024-manifests.py`; oryginalne PDF-y i materiały pomocnicze pozostają w ignorowanym katalogu `content/cke/sources`, a wycinki zadań trafiają do `public/cke/<rok>/`.
 
 Manifest jest źródłem prawdy. Nie edytuj zadań bezpośrednio w tabeli `practice_questions`.
 
@@ -78,11 +80,11 @@ Checksum każdego zadania i całego manifestu generuje narzędzie. Nie wpisuje s
 - `markdown` — akapit lub lista,
 - `math` — LaTeX renderowany przez MathJax,
 - `image` — odwołanie do wpisu z `assets`,
-- `audio` — odwołanie do lokalnego nagrania z `assets`; odtwarzacz nie pobiera całego pliku przed użyciem,
+- `audio` — odwołanie do lokalnego nagrania albo oficjalnego adresu HTTPS w domenie `cke.gov.pl`; odtwarzacz nie pobiera całego pliku przed użyciem,
 - `table` — tablica wierszy i opcjonalna liczba wierszy nagłówka,
 - `passage` — odwołanie przez `passage_id` do współdzielonego tekstu źródłowego z `passages`; przed stagingiem jest rozwijane do kompletnego, zwijanego bloku tekstu.
 
-Każda ilustracja wymaga bezpiecznej ścieżki względnej, SHA-256 i tekstu alternatywnego. Nie osadzaj danych base64 ani zewnętrznych trackerów w manifeście.
+Każda ilustracja wymaga bezpiecznej ścieżki względnej, SHA-256 i tekstu alternatywnego. Zewnętrzny URL jest dopuszczalny wyłącznie dla oficjalnego medium CKE w domenie `cke.gov.pl`. Nie osadzaj danych base64 ani zewnętrznych trackerów w manifeście.
 
 Typy odpowiedzi:
 
@@ -125,6 +127,16 @@ npm run cke:validate -- content/cke/cke-2025-main-spanish-100-x.json
 npm run cke:validate -- content/cke/cke-2025-main-german-100-x.json
 npm run cke:validate -- content/cke/cke-2025-main-russian-100-x.json
 npm run cke:validate -- content/cke/cke-2025-main-italian-100-x.json
+```
+
+Wszystkie 48 arkuszy z lat 2019–2024 sprawdzisz jedną pętlą:
+
+```bash
+for year in 2019 2020 2021 2022 2023 2024; do
+  for subject in mathematics polish english french spanish german russian italian; do
+    npm run cke:validate -- "content/cke/cke-${year}-main-${subject}-100-x.json" || exit 1
+  done
+done
 ```
 
 Walidator sprawdza m.in.:
@@ -174,6 +186,16 @@ npm run cke:stage -- content/cke/cke-2025-main-spanish-100-x.json
 npm run cke:stage -- content/cke/cke-2025-main-german-100-x.json
 npm run cke:stage -- content/cke/cke-2025-main-russian-100-x.json
 npm run cke:stage -- content/cke/cke-2025-main-italian-100-x.json
+```
+
+Arkusze z lat 2019–2024 wyślesz do stagingu kolejno, bez pomijania błędów:
+
+```bash
+for year in 2019 2020 2021 2022 2023 2024; do
+  for subject in mathematics polish english french spanish german russian italian; do
+    npm run cke:stage -- "content/cke/cke-${year}-main-${subject}-100-x.json" || exit 1
+  done
+done
 ```
 
 Polecenie zwraca `import_batch_id`. Ten sam manifest i wersja mają ten sam efekt (`unchanged`). Zmiana zawartości bez podniesienia `manifest_version` jest odrzucana. Ten sam PDF przypisany do innego manifestu również jest odrzucany.

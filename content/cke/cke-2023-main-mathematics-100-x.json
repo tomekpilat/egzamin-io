@@ -1,0 +1,984 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2023-main-mathematics-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2023-main-mathematics-100-x",
+    "source_document_id": "OMAP-100-2305",
+    "source_pdf_sha256": "374e8e6457b06e9b70610ccb63b3ba82ecd276b3d7bf260557998cabec0138f9",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2023-2/",
+    "source_label": "CKE 2023 · matematyka · termin główny · wariant 100-X",
+    "exam_year": 2023,
+    "exam_session": "main",
+    "subject": "mathematics",
+    "variant_code": "100-X",
+    "question_count": 19,
+    "supplementary_sources": [
+      {
+        "id": "cke-2023-main-mathematics-100-x-rules",
+        "path": "content/cke/sources/2023/mathematics/OMAP-100-2305-zasady.pdf",
+        "sha256": "fbe1bde3e462d18778c69f7d6348d42625568e7ceca5d7ae765988b4fec3753c",
+        "label": "Oficjalne zasady oceniania rozwiązań zadań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [],
+  "questions": [
+    {
+      "id": "cke-2023-main-mathematics-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Poniżej przedstawiono składniki potrzebne do przygotowania ciasta na 8 gofrów.\nGofry\nSkładniki na 8 gofrów:\n1\n✓ 1 szklanki mąki\n2\n1\n✓ 1 szklanki mleka\n3\n✓ 2 jajka\n1\n✓ 1 łyżeczki proszku do pieczenia\n2\n✓ 2 łyżeczki cukru pudru\n1\n✓ szklanki oleju\n2\n✓ szczypta soli\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F –\njeśli jest fałszywe.\nDo przygotowania ciasta na 40 gofrów, przy zachowaniu właściwych\nP F\nproporcji odpowiednich składników, potrzeba 10 jajek.\nDo przygotowania ciasta na 72 gofry, przy zachowaniu właściwych\nP F\nproporcji odpowiednich składników, potrzeba 12 szklanek mleka.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "PP"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nPP PP",
+      "solution_steps": [
+        "Klucz CKE: PP.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q01-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q01-page-4",
+          "path": "public/cke/2023/mathematics/omap-100-x-2305/q01-page-4.webp",
+          "sha256": "e7a4a608935f4c95dc7444d93cf49ab246915f8371d5ffcc54dc28dde378b48f",
+          "alt": "Oryginalny układ zadania 1 z arkusza OMAP-100-2305, strona 4.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-mathematics-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Dostęp do pliku jest chroniony hasłem ∗∗ T ∗∗ złożonym z dwóch liczb dwucyfrowych\noddzielonych literą T. Pierwsza liczba hasła to sześcian liczby 4, a druga to najmniejszy\n1 1\nwspólny mianownik ułamków i .\n15 25\nJakie jest hasło do pliku? Wybierz właściwą odpowiedź spośród podanych.\nA. 24T45 B. 24T75 C. 64T45 D. 64T75",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "D"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nD B\n1 Rozporządzenie Ministra Edukacji i Nauki z dnia 15 lipca 2022 r. w sprawie wymagań egzaminacyjnych dla\negzaminu ósmoklasisty przeprowadzanego w roku szkolnym 2022/2023 i 2023/2024 (Dz.U. 2022 poz. 1591).\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q02-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q02-page-4",
+          "path": "public/cke/2023/mathematics/omap-100-x-2305/q02-page-4.webp",
+          "sha256": "6e82555b88bc0ea74c8c0610409b17c8a2b05a17a15d9a47336013bd8b2e8c20",
+          "alt": "Oryginalny układ zadania 2 z arkusza OMAP-100-2305, strona 4.",
+          "caption": "Zadanie 2 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-mathematics-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Dane są cztery wyrażenia:\n𝐺 = 2𝑥2 + 2 𝐻 = 2𝑥2 + 2𝑥 𝐽 = 2𝑥2 − 2 𝐾 = 2𝑥2 − 2𝑥\nJedno z tych wyrażeń przyjmuje wartość 0 dla 𝑥 = 1 oraz dla 𝑥 = −1.\nKtóre to wyrażenie? Wybierz właściwą odpowiedź spośród podanych.\nA. 𝐺 B. 𝐻 C. 𝐽 D. 𝐾",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "C"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nC B",
+      "solution_steps": [
+        "Klucz CKE: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q03-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q03-page-6",
+          "path": "public/cke/2023/mathematics/omap-100-x-2305/q03-page-6.webp",
+          "sha256": "f192ba8a1f0a284269a62d34e624d89877b7df00a8f7af258563379f62c850c8",
+          "alt": "Oryginalny układ zadania 3 z arkusza OMAP-100-2305, strona 6.",
+          "caption": "Zadanie 3 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-mathematics-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Marta układała książki na dwóch półkach o tych samych wymiarach wewnętrznych.\nWszystkie książki były jednakowych rozmiarów.\nPierwszą półkę (I) całkowicie wypełniła 12 książkami.\nNa drugiej półce (II) postanowiła ustawić książki jedna przy drugiej na całej szerokości półki\ntak, aby zostało nad nimi wolne miejsce, w sposób pokazany na rysunku.\nUwaga: na rysunku przedstawiono całkowite wypełnienie książkami pierwszej półki (I) oraz\nczęściowe wypełnienie książkami drugiej półki (II).\nI II\n21 cm\n28 cm\nIle najwięcej książek Marta mogła zmieścić na drugiej półce (II) przy wskazanym\nsposobie ustawienia? Wybierz właściwą odpowiedź spośród podanych.\nA. 7 B. 8 C. 10 D. 11",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nB C\nEgzamin ósmoklasisty z matematyki – termin główny 2023 r.",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q04-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q04-page-6",
+          "path": "public/cke/2023/mathematics/omap-100-x-2305/q04-page-6.webp",
+          "sha256": "6dee08dfa1c04fa25b43f7927606fb8999e7909ad1aa7770d712eafa67a0f129",
+          "alt": "Oryginalny układ zadania 4 z arkusza OMAP-100-2305, strona 6.",
+          "caption": "Zadanie 4 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-mathematics-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Uzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B\noraz odpowiedź spośród oznaczonych literami C i D.\nWyrażenie √81 − √49 jest równe A B .\nA. 2 B. √32\nWyrażenie √144 + √25 jest równe C D .\nC. 13 D. 17",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "AD"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nAD BC",
+      "solution_steps": [
+        "Klucz CKE: AD.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q05-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q05-page-6",
+          "path": "public/cke/2023/mathematics/omap-100-x-2305/q05-page-6.webp",
+          "sha256": "f31c5f99547479b1ead4facfa9fcbfeca6e4cf6f023cdf36d2ba43852a789375",
+          "alt": "Oryginalny układ zadania 5 z arkusza OMAP-100-2305, strona 6.",
+          "caption": "Zadanie 5 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-mathematics-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "W sadzie rosną drzewa owocowe: grusze i jabłonie. Liczba grusz jest o 40% większa od\nliczby jabłoni. Jabłoni jest o 50 mniej niż grusz.\nIle jabłoni rośnie w tym sadzie? Wybierz właściwą odpowiedź spośród podanych.\nA. 20 B. 30 C. 70 D. 125",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "D"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nD A",
+      "solution_steps": [
+        "Klucz CKE: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q06-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q06-page-8",
+          "path": "public/cke/2023/mathematics/omap-100-x-2305/q06-page-8.webp",
+          "sha256": "44f01a5954b542d19f7167fca3822aca3df4dee18c8ddf124ec4f413201d7c2b",
+          "alt": "Oryginalny układ zadania 6 z arkusza OMAP-100-2305, strona 8.",
+          "caption": "Zadanie 6 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-mathematics-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Uzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B\noraz odpowiedź spośród oznaczonych literami C i D.\n8\n10\nIloraz jest równy A B .\n8\n5\nA. 58 B. 28\nIloczyn 26 ∙ 253 jest równy C D .\nC. 509 D. 106",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "BD"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania rozwiązań zadań\nZasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nBD AD",
+      "solution_steps": [
+        "Klucz CKE: BD.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q07-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q07-page-8",
+          "path": "public/cke/2023/mathematics/omap-100-x-2305/q07-page-8.webp",
+          "sha256": "fdf43031ac9945b45e49f75a9b33eefdccc6b87c0c13e597e41057a31f397562",
+          "alt": "Oryginalny układ zadania 7 z arkusza OMAP-100-2305, strona 8.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-mathematics-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Liczbę 𝑥 powiększono o 7, a następnie otrzymany wynik zwiększono 4-krotnie.\nLiczbę 𝑦 zwiększono 5-krotnie, a otrzymany wynik powiększono o 3.\nKtóra para wyrażeń algebraicznych poprawnie opisuje wykonane działania?\nWybierz właściwą odpowiedź spośród podanych.\nA. 4(𝑥 + 7) oraz 5𝑦 + 3 B. 4𝑥 + 7 oraz 5𝑦 + 3\nC. 4(𝑥 + 7) oraz 5(𝑦 + 3) D. 4𝑥 + 7 oraz 5(𝑦 + 3)",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "A"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nA D",
+      "solution_steps": [
+        "Klucz CKE: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q08-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q08-page-8",
+          "path": "public/cke/2023/mathematics/omap-100-x-2305/q08-page-8.webp",
+          "sha256": "11bb6c194571003588574759b1a79882f5ed0ef567ea5da03e2038082898728c",
+          "alt": "Oryginalny układ zadania 8 z arkusza OMAP-100-2305, strona 8.",
+          "caption": "Zadanie 8 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-mathematics-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Geometria przestrzenna",
+      "difficulty": 2,
+      "prompt": "Pewien ostrosłup ma 16 wierzchołków.\nIle wierzchołków ma graniastosłup o takiej samej podstawie, jaką ma ten ostrosłup?\nWybierz właściwą odpowiedź spośród podanych.\nA. 17 B. 30 C. 32 D. 45\nPPRRZZEENNIIEEŚŚ RROOZZWWIIĄĄZZAANNIIAA ZZAADDAAŃŃ NNAA KKAARRTTĘĘ OODDPPOOWWIIEEDDZZII!!",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nB C\nEgzamin ósmoklasisty z matematyki – termin główny 2023 r.",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q09-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q09-page-8",
+          "path": "public/cke/2023/mathematics/omap-100-x-2305/q09-page-8.webp",
+          "sha256": "21f82934c6c84f4384f7d7ddc2b4b7ea47959f1047ea97e6ea1fbc906a03cc62",
+          "alt": "Oryginalny układ zadania 9 z arkusza OMAP-100-2305, strona 8.",
+          "caption": "Zadanie 9 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-mathematics-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Na planie miasta odległość w linii prostej od punktu oznaczającego przystanek autobusowy\nDworzec do punktu oznaczającego przystanek autobusowy Galeria jest równa 8 cm.\nPlan miasta został wykonany w skali 1 ∶ 4 000.\nPrzystanek\nautobusowy\nDworzec\nPrzystanek\nautobusowy\nGaleria\n8 cm\nNa podstawie: Malachi Ray Rempen, vividmaps.com (oryg. itchyfeetcomic.com)\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nOdległość w linii prostej w terenie między tymi przystankami jest równa\nA. 320 m B. 500 m C. 3 200 m D. 5 000 m",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "A"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nA D",
+      "solution_steps": [
+        "Klucz CKE: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q10-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q10-page-10",
+          "path": "public/cke/2023/mathematics/omap-100-x-2305/q10-page-10.webp",
+          "sha256": "c23f5ca42796e72fffe7b141439d2b0bf886ab7f88c0e9ec131863a9ead181df",
+          "alt": "Oryginalny układ zadania 10 z arkusza OMAP-100-2305, strona 10.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-mathematics-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Prawdopodobieństwo",
+      "difficulty": 2,
+      "prompt": "Z urny, w której jest wyłącznie 18 kul białych i 12 kul czarnych, losujemy 1 kulę.\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F –\njeśli jest fałszywe.\n3\nPrawdopodobieństwo wylosowania kuli białej jest równe . P F\n5\n1\nPrawdopodobieństwo wylosowania kuli czarnej jest mniejsze od . P F\n3",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "PF"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nPF FP\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: PF.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q11-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q11-page-10",
+          "path": "public/cke/2023/mathematics/omap-100-x-2305/q11-page-10.webp",
+          "sha256": "0ca7ed03a2f7d42d7fb43a98980c66503e6ef906ae4a55a7ad7ef78fd93a9ded",
+          "alt": "Oryginalny układ zadania 11 z arkusza OMAP-100-2305, strona 10.",
+          "caption": "Zadanie 11 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-mathematics-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        12
+      ],
+      "type": "long_text",
+      "topic": "Geometria płaska",
+      "difficulty": 2,
+      "prompt": "W prostokącie 𝐴𝐵𝐶𝐷 punkty 𝐸 i 𝐹 są środkami boków 𝐵𝐶 i 𝐶𝐷 (zobacz rysunek).\nDługość odcinka 𝐸𝐶 jest równa 6 cm, a długość odcinka 𝐸𝐹 jest równa 10 cm.\n𝐹\n𝐷 𝐶\n𝐸\n𝐴 𝐵\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nObwód prostokąta 𝐴𝐵𝐶𝐷 jest równy\nA. 64 cm B. 56 cm C. 40 cm D. 28 cm",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nB C",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q12-page-12"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q12-page-12",
+          "path": "public/cke/2023/mathematics/omap-100-x-2305/q12-page-12.webp",
+          "sha256": "89d4c297c56008bea5e9d6b57a76618aa26af459a62994547b2c09ce56c19dec",
+          "alt": "Oryginalny układ zadania 12 z arkusza OMAP-100-2305, strona 12.",
+          "caption": "Zadanie 12 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-mathematics-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        12
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Agata na dużej kartce w kratkę narysowała figurę złożoną z 40 połączonych odcinków,\nktóre kolejno ponumerowała liczbami naturalnymi od 1 do 40.\nNa rysunku przedstawiono fragment tej figury, złożony z ośmiu początkowych odcinków.\nKolejne odcinki tej figury Agata narysowała według tej samej reguły, którą zastosowała do\nnarysowania odcinków 1–8.\nUwaga: wszystkie komórki kratki są takimi samymi kwadratami.\n2 6\n1 3 5 7\n4 8\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F –\njeśli jest fałszywe.\nProste zawierające odcinki o numerach 1 oraz 7 są wzajemnie\nP F\nprostopadłe.\nProste zawierające odcinki o numerach 5 oraz 33 są wzajemnie\nP F\nrównoległe.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "PP"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nPP PP\nEgzamin ósmoklasisty z matematyki – termin główny 2023 r.",
+      "solution_steps": [
+        "Klucz CKE: PP.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q13-page-12"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q13-page-12",
+          "path": "public/cke/2023/mathematics/omap-100-x-2305/q13-page-12.webp",
+          "sha256": "b8eab782c342e7df3e86f95b972dcbb85afd8a87abfc496bc8375ef45e144111",
+          "alt": "Oryginalny układ zadania 13 z arkusza OMAP-100-2305, strona 12.",
+          "caption": "Zadanie 13 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-mathematics-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Na rysunku przedstawiono trzy figury: kwadrat 𝐹 , kwadrat 𝐹 i prostokąt 𝐹 , oraz podano\n1 2 3\nich wymiary.\n𝐹\n1 5 cm 𝐹\n2\n3 cm 𝐹\n3\n3 cm\n3 cm 5 cm\n5 cm\nCzy z figur 𝑭 , 𝑭 , 𝑭 można ułożyć, bez rozcinania tych figur, kwadrat 𝑲 o polu 𝟒𝟗 𝐜𝐦𝟐?\n𝟏 𝟐 𝟑\nWybierz odpowiedź A albo B i jej uzasadnienie spośród 1., 2. albo 3.\nsuma obwodów figur 𝐹 i 𝐹 jest równa obwodowi\n2 3\n1.\nA. Tak, kwadratu 𝐾.\nponieważ 2. suma pól figur 𝐹 , 𝐹 i 𝐹 jest równa 49 cm2.\n1 2 3\nB. Nie, suma długości dowolnych boków figur 𝐹 , 𝐹 i 𝐹\n1 2 3\n3.\nnie jest równa 7 cm.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B3"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nB3 B2",
+      "solution_steps": [
+        "Klucz CKE: B3.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q14-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q14-page-14",
+          "path": "public/cke/2023/mathematics/omap-100-x-2305/q14-page-14.webp",
+          "sha256": "6dc089e46f6c75cfb9a15535f7180da4d3437e9477dd5adcd22f5f3e56de0305",
+          "alt": "Oryginalny układ zadania 14 z arkusza OMAP-100-2305, strona 14.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-mathematics-100-x-q15",
+      "number": "15",
+      "sort_order": 15,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "W czworokącie 𝐴𝐵𝐶𝐷 boki 𝐴𝐵, 𝐶𝐷 i 𝐷𝐴 mają równe długości, a kąt 𝐵𝐶𝐷 ma miarę 131.\nPrzekątna 𝐴𝐶 dzieli ten czworokąt na trójkąt równoboczny i na trójkąt równoramienny\n(zobacz rysunek).\n𝐶\n𝐷\n131\n𝐵\n𝐴\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F –\njeśli jest fałszywe.\nKąt 𝐴𝐵𝐶 ma miarę 60. P F\nKąt 𝐷𝐴𝐵 ma miarę 98. P F",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "FP"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nFP FP\nZasady oceniania rozwiązań zadań\nZADANIA OTWARTE\nUwagi ogólne\n• Akceptowane są wszystkie odpowiedzi merytorycznie poprawne, spełniające warunki\nzadania.\n• Za rozwiązanie zadania na danym etapie uczeń może otrzymać punkty tylko wtedy, gdy\nprzedstawia poprawne sposoby rozwiązania na wszystkich wcześniejszych etapach.\n• Jeżeli na dowolnym etapie rozwiązania zadania uczeń popełnia jeden lub więcej błędów\nrachunkowych (albo błąd przepisania wartości poprawnie zidentyfikowanej danej albo\nwartości z wcześniejszych etapów rozwiązania), ale stosuje poprawne sposoby\nrozwiązania i konsekwentnie doprowadza rozwiązanie zadania do końca, to ocenę\nrozwiązania obniża się o 1 punkt.\n• Jeżeli na pewnym etapie rozwiązania zadania uczeń podaje kilka sprzecznych ze sobą\nrozwiązań i nie wskazuje, które z nich należy uznać za poprawne, to może uzyskać\npunkty tylko za wcześniejsze poprawne etapy rozwiązania.\n• Jeżeli na pewnym etapie rozwiązania zadania uczeń podaje kilka sprzecznych ze sobą\nrozwiązań i wskazuje, które z nich należy uznać za poprawne, to zapisów w innych\nrozwiązaniach nie bierze się pod uwagę w ocenianiu.\n• Jeżeli w zadaniach 16., 17., 18. i 19. uczeń podaje tylko poprawny końcowy wynik, to\notrzymuje 0 punktów.\n• W pracy ucznia uprawnionego do dostosowanych zasad oceniania dopuszcza się:\n1. lustrzane zapisywanie cyfr i liter (np. 6–9)\n2. gubienie liter, cyfr, nawiasów\n3. problemy z zapisywaniem przecinków w liczbach dziesiętnych\n4. błędy w zapisie działań pisemnych (dopuszczalne drobne błędy rachunkowe)\n5. luki w zapisie obliczeń – obliczenia pamięciowe\n6. uproszczony zapis równania i przekształcenie go w pamięci; brak opisu\nniewiadomych\n7. niekończenie wyrazów\n8. problemy z zapisywaniem jednostek (np.℃ – OC)\n9. błędy w przepisywaniu\n10. chaotyczny zapis operacji matematycznych\n11. mylenie indeksów górnych i dolnych (np. 𝑥2 – 𝑥 ,𝑚 – 𝑚2).\n2 2\nEgzamin ósmoklasisty z matematyki – termin główny 2023 r.",
+      "solution_steps": [
+        "Klucz CKE: FP.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q15-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q15-page-14",
+          "path": "public/cke/2023/mathematics/omap-100-x-2305/q15-page-14.webp",
+          "sha256": "eff886158830d660fc35ea724c51c351a01301fda94ebd2e277432bcfdf280d2",
+          "alt": "Oryginalny układ zadania 15 z arkusza OMAP-100-2305, strona 14.",
+          "caption": "Zadanie 15 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-mathematics-100-x-q16",
+      "number": "16",
+      "sort_order": 16,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 3,
+      "prompt": "Cena biletu do teatru jest o 64 zł większa od ceny biletu do kina. Za 4 bilety do teatru\ni 5 biletów do kina zapłacono łącznie 400 zł.\nOblicz cenę jednego biletu do teatru. Zapisz obliczenia.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "Przykładowe rozwiązania ocenione na 2 punkty"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 punkty – pełne rozwiązanie\n• poprawny sposób obliczenia ceny jednego biletu do teatru (tzn. zapisanie odpowiednich\nrównań lub wyrażeń arytmetycznych), prawidłowe obliczenia oraz prawidłowy wynik\nliczbowy (80 zł)\nLUB\n• zastosowanie metody prób i błędów – sprawdzenie wszystkich warunków zadania dla co\nnajmniej jednej ceny biletu do teatru z uwzględnieniem kwoty 80 zł, prawidłowe\nobliczenia oraz podanie prawidłowej ceny jednego biletu do teatru (80 zł).\n1 punkt\n• zapisanie poprawnego równania z jedną niewiadomą prowadzącego do obliczenia ceny\njednego biletu do teatru, np. 4𝑥 + 5(𝑥 − 64) = 400\nLUB\n• zapisanie poprawnego równania z jedną niewiadomą prowadzącego do obliczenia ceny\njednego biletu do kina, np. 4(𝑥 + 64) + 5𝑥 = 400,\nLUB\n• zapisanie poprawnych równań prowadzących do obliczenia ceny jednego biletu do\nteatru i ceny jednego biletu do kina, np. 4𝑡 + 5𝑘 = 400 oraz 𝑡 = 𝑘 + 64,\nLUB\n• zapisanie poprawnego wyrażenia lub wyrażeń arytmetycznych prowadzących do\nobliczenia ceny jednego biletu do teatru, np. (400 + 5 ∙ 64) ∶ 9,\nLUB\n• zapisanie poprawnego wyrażenia lub wyrażeń arytmetycznych prowadzących do\nobliczenia ceny jednego biletu do kina, np. (400 − 4 ∙ 64) ∶ 9,\nLUB\n• zastosowanie niepełnej metody prób i błędów – sprawdzenie wszystkich warunków\nzadania dla co najmniej dwóch różnych cen biletu do teatru bez uwzględnienia kwoty\n80 zł oraz prawidłowe obliczenia,\nZasady oceniania rozwiązań zadań\nLUB\n• zastosowanie niepełnej metody prób i błędów – zapisanie kosztu zakupu biletów do kina\n(80 zł) oraz kosztu zakupu biletów do teatru (320 zł) przy ustalonej cenie jednego biletu\ndo kina (16 zł) i ustalonej cenie jednego biletu do teatru (80 zł).\n0 punktów\nrozwiązanie błędne lub brak rozwiązania.\nPrzykładowe rozwiązania ocenione na 2 punkty\nI sposób\nOznaczymy cenę jednego biletu do teatru jako 𝑥.\nCena jednego biletu do kina jest o 64 zł mniejsza od ceny jednego biletu do teatru, zatem\noznaczymy ją jako 𝑥 − 64.\nZa 4 bilety do teatru i 5 biletów do kina zapłacono 400 zł.\nZapiszemy i rozwiążemy równanie uwzględniające powyższe warunki:\n4𝑥 + 5(𝑥 − 64) = 400\n4𝑥 + 5𝑥 − 320 = 400\n4𝑥 + 5𝑥 = 400 + 320\n9𝑥 = 720\n𝑥 = 80\nOdpowiedź: Cena jednego biletu do teatru jest równa 80 zł.\nII sposób\nOznaczymy cenę jednego biletu do kina jako 𝑥.\nCena jednego biletu do teatru jest o 64 zł większa od ceny jednego biletu do kina, zatem\noznaczymy ją jako 𝑥 + 64.\nZapiszemy i rozwiążemy równanie uwzględniające warunki zadania:\n4(𝑥 + 64) + 5𝑥 = 400\n4𝑥 + 5𝑥 = 400 − 256\n9𝑥 = 144\n𝑥 = 16\n16 zł + 64 zł = 80 zł\nOdpowiedź: Cena jednego biletu do teatru jest równa 80 zł.\nIII sposób\nObliczymy, ile kosztowałoby 9 biletów do teatru.\nZamiast 5 biletów do kina, kupujemy 5 biletów do teatru. Za każdy z tych biletów do teatru\npłacimy o 64 zł więcej niż za każdy z biletów do kina, zatem łącznie płacimy o 320 zł więcej\nniż za 4 bilety do teatru i 5 biletów do kina:\n5 ∙ 64 = 320\nZatem łączny koszt zakupu 9 biletów do teatru byłby równy:\n400 + 320 = 720\nEgzamin ósmoklasisty z matematyki – termin główny 2023 r.\nObliczymy cenę jednego biletu do teatru:\n720 ∶ 9 = 80\nOdpowiedź: Cena jednego biletu do teatru jest równa 80 zł.\nIV sposób\nObliczymy, ile kosztowałoby 9 biletów do kina.\nZamiast 4 biletów do teatru, kupujemy 4 bilety do kina. Za każdy z tych biletów do kina\npłacimy o 64 zł mniej niż za każdy z biletów do teatru, zatem łącznie płacimy o 256 zł mniej\nniż za 4 bilety do teatru i 5 biletów do kina:\n4 ∙ 64 = 256\nZatem łączny koszt zakupu 9 biletów do kina byłby równy:\n400 − 256 = 144\nObliczymy cenę jednego biletu do kina:\n144 ∶ 9 = 16\nObliczymy cenę jednego biletu do teatru:\n16 + 64 = 80\nOdpowiedź: Cena jednego biletu do teatru jest równa 80 zł.\nV sposób\nMetoda prób i błędów:\nŁączny koszt zakupu biletów, gdy cena biletu do teatru jest o 64 zł\nwiększa od ceny biletu do kina\n1 bilet do teatru 100 90 80 70\n1 bilet do kina 36 26 16 6\n4 bilety do teatru 400 360 320 280\n5 biletów do kina 180 130 80 30\nRazem 580 490 400 310\n580 > 400 490 > 400 400 = 400 310 < 400\nWniosek\n(za dużo) (za dużo) (dobrze) (za mało)\nOdpowiedź: Cena jednego biletu do teatru jest równa 80 zł.\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: Przykładowe rozwiązania ocenione na 2 punkty.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q16-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q16-page-16",
+          "path": "public/cke/2023/mathematics/omap-100-x-2305/q16-page-16.webp",
+          "sha256": "9d5ba9f6a511b042de16ec43d480a26242ed16ab5e0a573e780da46357030b56",
+          "alt": "Oryginalny układ zadania 16 z arkusza OMAP-100-2305, strona 16.",
+          "caption": "Zadanie 16 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-mathematics-100-x-q17",
+      "number": "17",
+      "sort_order": 17,
+      "source_pages": [
+        17
+      ],
+      "type": "long_text",
+      "topic": "Prędkość, droga i czas",
+      "difficulty": 3,
+      "prompt": "Pociąg przebył ze stałą prędkością drogę 700 metrów w czasie 50 sekund.\nPrzy zachowaniu tej samej, stałej prędkości ten sam pociąg drogę równą jego długości przebył\nw czasie 15 sekund.\nOblicz długość tego pociągu. Zapisz obliczenia.\nOMAP-100-2305 Strona 17 z 20",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "Uwaga"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 punkty – pełne rozwiązanie\npoprawny sposób obliczenia długości pociągu, prawidłowe obliczenia oraz prawidłowy wynik\nliczbowy zgodny z zastosowaną jednostką długości (np. 210 m).\n1 punkt\n• poprawny sposób obliczenia prędkości z jaką jechał pociąg, czyli zastosowanie\npoprawnego związku między prędkością a drogą całkowitą i czasem, np. zapisanie\n700 m\nv = (lub zapisy równoważne)\n50 s\noraz poprawny sposób obliczenia drogi przebytej przez ten pociąg w czasie 15 s, np.\nzapisanie\n700 m\n𝑠 = ∙ 15 s\n50 s\nLUB\n• poprawny sposób obliczenia długości pociągu, czyli zastosowanie poprawnego związku\nmiędzy drogami przebytymi w czasie 15 s oraz w czasie 50 s, z zastosowaniem własności\nwielkości wprost proporcjonalnych, np. zapisanie\n𝑥 700\n= (lub zapisy równoważne).\n15 50\n0 punktów\nrozwiązanie błędne lub brak rozwiązania.\nUwaga\nBłąd w zamianie jednostek lub zapisanie niewłaściwej jednostki w wyniku końcowym traktuje\nsię jako błąd rachunkowy.\nEgzamin ósmoklasisty z matematyki – termin główny 2023 r.\nPrzykładowe rozwiązania ocenione na 2 punkty\nI sposób\nObliczymy prędkość z jaką pociąg przejeżdża 700 m w czasie 50 s.\nSkorzystamy ze wzoru na prędkość, gdy jest ona stała:\n𝑠\nv = , gdzie:\n𝑡\nv − prędkość\n𝑠 = 700 m − droga\n𝑡 = 50 s − czas\n700 m m\nv = = 14\n50 s s\nObliczymy drogę, którą pociąg przejedzie z tą prędkością w czasie 15 s:\nm\n𝑠 = 14 ∙ 15 s = 210 m\ns\nOdpowiedź: Pociąg ma długość 210 m.\nII sposób\nPociąg przejeżdża drogę o długości 700 m w czasie 50 s.\nW czasie 15 sekund pociąg przejeżdża drogę, która jest równa jego długości.\nGdy prędkość w ruchu jest stała, to droga jest wprost proporcjonalna do czasu.\nSkorzystamy z zależności wielkości wprost proporcjonalnych:\n50 s − 700 m\n15 s − 𝑥 m\n15 ∙ 700\n𝑥 = = 210\n50\nOdpowiedź: Pociąg ma długość 210 m.\nIII sposób\nGdy prędkość w ruchu jest stała, to droga jest wprost proporcjonalna do czasu.\nSkorzystamy z zależności wielkości wprost proporcjonalnych:\n700 m − 50 s /:10\n70 m − 5 s /∙ 3\n210 m − 15 s\nOdpowiedź: Pociąg ma długość 210 m.\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: Uwaga.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q17-page-17"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q17-page-17",
+          "path": "public/cke/2023/mathematics/omap-100-x-2305/q17-page-17.webp",
+          "sha256": "69582c272272144016b2157e50cd24b6986cf16c51301427dba5106da1e51522",
+          "alt": "Oryginalny układ zadania 17 z arkusza OMAP-100-2305, strona 17.",
+          "caption": "Zadanie 17 — oryginalny układ CKE, strona 17.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-mathematics-100-x-q18",
+      "number": "18",
+      "sort_order": 18,
+      "source_pages": [
+        18
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 3,
+      "prompt": "W czworokącie 𝐴𝐵𝐶𝐷 o polu 48 cm2 przekątna 𝐴𝐶 ma długość 8 cm i dzieli ten\nczworokąt na dwa trójkąty: 𝐴𝐵𝐶 i 𝐴𝐶𝐷 (zobacz rysunek). Wysokość trójkąta 𝐴𝐶𝐷\npoprowadzona z wierzchołka 𝐷 do prostej 𝐴𝐶 jest równa 2 cm.\n𝐶\n𝐷\n𝐴\n𝐵\nOblicz wysokość trójkąta 𝑨𝑩𝑪 poprowadzoną z wierzchołka 𝑩 do prostej 𝑨𝑪.\nZapisz obliczenia.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "Uwagi"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n3 punkty – pełne rozwiązanie\npoprawny sposób obliczenia wysokości trójkąta 𝐴𝐵𝐶, prawidłowe obliczenia oraz\nprawidłowy wynik liczbowy (10 cm).\n2 punkty\n• zapisanie, że pole czworokąta 𝐴𝐵𝐶𝐷 jest równe sumie pól trójkątów 𝐴𝐶𝐷 i 𝐴𝐵𝐶\noraz zastosowanie wzoru na pole trójkąta 𝐴𝐶𝐷, oraz zastosowanie wzoru na pole\ntrójkąta 𝐴𝐵𝐶 (zgodnie z oznaczeniami i danymi), np. zapisanie:\n1 1\n48 = ∙ 8 ∙ 2 + ∙ 8 ∙ ℎ lub 48 = 8 + 4ℎ (lub zapisy równoważne)\n2 2 𝐵 𝐵\nalbo\n1 1\n48 = 𝑃 + 𝑃 oraz 𝑃 = ∙ 2 ⋅ 8 oraz 𝑃 = ∙ 8 ∙ ℎ\n𝐴𝐶𝐷 𝐴𝐵𝐶 𝐴𝐶𝐷 2 𝐴𝐵𝐶 2 𝐵\nLUB\n• zapisanie, że pole trójkąta 𝐴𝐵𝐶 jest równe różnicy pól czworokąta 𝐴𝐵𝐶𝐷 i trójkąta\n𝐴𝐶𝐷 oraz zastosowanie wzoru na pole trójkąta 𝐴𝐶𝐷, oraz zastosowanie wzoru na\npole trójkąta 𝐴𝐵𝐶 (zgodnie z oznaczeniami i danymi), np. zapisanie:\n1 1\n𝑃 = 48 − ∙ 8 ∙ 2 oraz 𝑃 = ⋅ 8 ⋅ ℎ (lub zapisy równoważne)\n𝐴𝐵𝐶 2 𝐴𝐵𝐶 2 𝐵\nalbo\n1 1\n⋅ 8 ⋅ ℎ = 48 − ∙ 8 ∙ 2 (lub zapisy równoważne),\n2 𝐵 2\nLUB\n• zastosowanie wzoru na pole czworokąta jako połowy iloczynu długości wspólnej\npodstawy 𝐴𝐶 trójkątów 𝐴𝐵𝐶 i 𝐴𝐶𝐷 i sumy wysokości ℎ , ℎ poprowadzonych\n𝐵 𝐷\nz wierzchołków 𝐵 i 𝐷 tych trójkątów oraz zastosowanie poprawnego sposobu\nobliczenia wysokości trójkąta 𝐴𝐵𝐶, np. zapisanie\n1\n48 = |𝐴𝐶| ⋅ 𝑥 oraz ℎ = 𝑥 − 2 ,\n2 𝐵\ngdzie 𝑥 jest sumą wysokości ℎ , ℎ (𝑥 nie jest równe długości przekątnej 𝐵𝐷).\n𝐵 𝐷\nEgzamin ósmoklasisty z matematyki – termin główny 2023 r.\n1 punkt\n• poprawny sposób obliczenia pola trójkąta 𝐴𝐶𝐷, np. zapisanie\n1\n𝑃 = ⋅ 2 ⋅ 8\n𝐴𝐶𝐷 2\nLUB\n• zastosowanie wzoru na pole trójkąta 𝐴𝐵𝐶 z poprawnie podstawioną daną, np.\nzapisanie\n1\n𝑃 = ∙ 8 ∙ ℎ (lub zapisy równoważne),\n𝐴𝐵𝐶 2 𝐵\nLUB\n• zastosowanie wzoru na pole czworokąta jako połowy iloczynu długości wspólnej\npodstawy 𝐴𝐶 trójkątów 𝐴𝐵𝐶 i 𝐴𝐶𝐷 i sumy wysokości ℎ , ℎ poprowadzonych\n𝐵 𝐷\nz wierzchołków 𝐵 i 𝐷 tych trójkątów, np. zapisanie\n1\n𝑃 = |𝐴𝐶| ⋅ 𝑥 ,\n𝐴𝐵𝐶𝐷 2\ngdzie 𝑥 jest sumą wysokości ℎ , ℎ (𝑥 nie jest równe długości przekątnej 𝐵𝐷).\n𝐵 𝐷\n0 punktów\nrozwiązanie błędne lub brak rozwiązania.\nUwagi\n1. Jeżeli uczeń rozważa szczególny czworokąt, w którym przekątne przecinają się pod\nkątem prostym (tzn. długość przekątnej 𝐵𝐷 jest równa sumie długości wysokości ℎ , ℎ\n𝐵 𝐷\npoprowadzonych z wierzchołków 𝐵 i 𝐷 trójkątów 𝐴𝐵𝐶 oraz 𝐴𝐶𝐷) i konsekwentnie do\ntego założenia doprowadza rozwiązanie do końca bez błędów rachunkowych, to\notrzymuje 2 punkty.\n2. Nie akceptuje się rozwiązań zadania opartych na pomiarze np. linijką.\n3. Nie ocenia się stosowania jednostki.\nPrzykładowe rozwiązania ocenione na 3 punkty\nI sposób\nPole czworokąta 𝐴𝐵𝐶𝐷 jest równe sumie pól dwóch trójkątów: 𝐴𝐵𝐶 oraz 𝐴𝐶𝐷.\n𝑃 = 𝑃 + 𝑃\n𝐴𝐵𝐶𝐷 𝐴𝐵𝐶 𝐴𝐶𝐷\nZatem korzystając ze wzoru na pole trójkąta (dla trójkąta 𝐴𝐵𝐶 oraz trójkąta 𝐴𝐶𝐷), możemy\nobliczyć wysokość ℎ trójkąta 𝐴𝐵𝐶 poprowadzoną z wierzchołka 𝐵:\n𝐵\n1 1\n48 = ∙ 8 ∙ 2 + ∙ 8 ∙ ℎ\n2 2 𝐵\n48 = 8 + 4ℎ\n𝐵\n40\nℎ = = 10\n𝐵 4\nOdpowiedź: Wysokość trójkąta 𝐴𝐵𝐶 poprowadzona z wierzchołka 𝐵 jest równa 10 cm.\nZasady oceniania rozwiązań zadań\nII sposób\nPole trójkąta 𝐴𝐵𝐶 jest różnicą pól czworokąta 𝐴𝐵𝐶𝐷 i trójkąta 𝐴𝐶𝐷.\n𝑃 = 𝑃 − 𝑃\n𝐴𝐵𝐶 𝐴𝐵𝐶𝐷 𝐴𝐶𝐷\nObliczymy pole trójkąta 𝐴𝐶𝐷, korzystając ze wzoru na jego pole:\n1\n𝑃 = ∙ |𝐴𝐶| ∙ ℎ , gdzie:\n𝐴𝐶𝐷 2 𝐷\n𝑃 − pole trójkąta ACD\n𝐴𝐶𝐷\n|𝐴𝐶| = 8 cm − długość boku trójkąta ACD\nℎ = 2 cm − wysokość trójkąta 𝐴𝐶𝐷 poprowadzona z wierzchołka 𝐷 do boku 𝐴𝐶\n𝐷\n1\n𝑃 = ∙ 8 cm ∙ 2 cm = 8 cm2\n𝐴𝐶𝐷 2\nObliczymy pole trójkąta 𝐴𝐵𝐶:\n𝑃 = 48 cm2 − 8 cm2 = 40 cm2\n𝐴𝐵𝐶\nObliczymy wysokość trójkąta 𝐴𝐵𝐶, korzystając ze wzoru na jego pole:\n1\n𝑃 = ∙ 8 ∙ ℎ\n𝐴𝐵𝐶 2 𝐵\ngdzie ℎ jest wysokością trójkąta 𝐴𝐵𝐶 poprowadzoną z wierzchołka 𝐵, zatem:\n𝐵\n40 cm2 40 cm\nℎ = = = 10 cm\n𝐵 8 4\ncm\n2\nOdpowiedź: Wysokość trójkąta 𝐴𝐵𝐶 poprowadzona z wierzchołka 𝐵 jest równa 10 cm.\nIII sposób\nPole czworokąta 𝐴𝐵𝐶𝐷 jest równe sumie pól dwóch trójkątów: 𝐴𝐶𝐷 oraz 𝐴𝐵𝐶.\nZapiszemy wzór na pole czworokąta 𝐴𝐵𝐶𝐷:\n1 1 1\n𝑃 = |𝐴𝐶| ⋅ ℎ + |𝐴𝐶| ⋅ ℎ = |𝐴𝐶|(ℎ + ℎ )\n𝐴𝐵𝐶𝐷 2 𝐷 2 𝐵 2 𝐷 𝐵\ngdzie ℎ i ℎ są odpowiednio wysokościami trójkątów 𝐴𝐶𝐷 oraz 𝐴𝐵𝐶 poprowadzonymi\n𝐷 𝐵\nodpowiednio z wierzchołków 𝐷 i 𝐵. Do powyższego wzoru podstawimy dane liczbowe oraz\nzastosujemy oznaczenie 𝑥 na sumę tych wysokości:\n1\n48 = ⋅ 8 ⋅ 𝑥 , gdzie 𝑥 = ℎ + ℎ\n2 𝐷 𝐵\nObliczymy wysokość trójkąta 𝐴𝐵𝐶:\n𝑥 = 12\nℎ = 𝑥 − ℎ\n𝐵 𝐷\nℎ = 12 − 2 = 10\n𝐵\nOdpowiedź: Wysokość trójkąta 𝐴𝐵𝐶 poprowadzona z wierzchołka 𝐵 jest równa 10 cm.\nEgzamin ósmoklasisty z matematyki – termin główny 2023 r.",
+      "solution_steps": [
+        "Klucz CKE: Uwagi.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q18-page-18"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q18-page-18",
+          "path": "public/cke/2023/mathematics/omap-100-x-2305/q18-page-18.webp",
+          "sha256": "fa065462271a3c69177de79475398e38b17179fbd3494dbc95e54082545056f0",
+          "alt": "Oryginalny układ zadania 18 z arkusza OMAP-100-2305, strona 18.",
+          "caption": "Zadanie 18 — oryginalny układ CKE, strona 18.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-mathematics-100-x-q19",
+      "number": "19",
+      "sort_order": 19,
+      "source_pages": [
+        19
+      ],
+      "type": "long_text",
+      "topic": "Geometria przestrzenna",
+      "difficulty": 3,
+      "prompt": "Z pięciu prostopadłościennych klocków o jednakowych wymiarach ułożono figurę. Kształt\ni wybrane wymiary tej figury przedstawiono na rysunku.\n23 cm\n20,5 cm\n5 cm\nOblicz objętość jednego klocka. Zapisz obliczenia.\nOMAP-100-2305 Strona 19 z 20",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "Uwagi"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n3 punkty – pełne rozwiązanie\npoprawny sposób obliczenia objętości prostopadłościennego klocka, prawidłowe obliczenia\noraz prawidłowy wynik liczbowy zgodny z zastosowaną jednostką objętości (225 cm3).\n2 punkty\n• poprawny sposób obliczenia długości dwóch krawędzi prostopadłościennego klocka\noraz poprawny sposób obliczenia objętości prostopadłościennego klocka (zgodnie\nz przyjętymi oznaczeniami lub otrzymanymi wartościami liczbowymi), np. zapisanie:\n𝑥 + 20,5 = 23 oraz 𝑦 = 20,5 – 𝑥 oraz 𝑉 = 5 ∙ 𝑥 ∙ 𝑦 (lub zapisy równoważne)\nalbo\n𝑥 = 23 −20,5 oraz 𝑦 = 23 – 2𝑥 oraz 𝑉 = 5 ∙ 𝑃 oraz 𝑃 = 𝑥 ⋅ 𝑦\n𝑃 𝑃\n(lub zapisy równoważne)\nLUB\n• ustalenie (np. zapisanie na rysunku) prawidłowych długości dwóch krawędzi\nprostopadłościennego klocka (2,5 cm i 18 cm) bez zapisania poprawnego sposobu ich\nobliczenia oraz poprawny sposób obliczenia objętości prostopadłościennego klocka\n(zgodnie z ustalonymi wartościami liczbowymi lub przyjętymi oznaczeniami), np.\nzapisanie:\n𝑉 = 5 ∙ 2,5 ∙ 18\nalbo\n𝑉 = 5 ∙ 𝑥 ∙ 𝑦 , gdzie 𝑥 = 2,5 oraz 𝑦 = 18\n1 punkt\n• poprawny sposób obliczenia długości najkrótszej krawędzi prostopadłościennego klocka,\nnp. zapisanie\n23 cm – 20,5 cm\nLUB\n• zapisanie dwóch zależności między długościami dwóch krawędzi prostopadłościennego\nklocka wynikających z warunków zadania, np.:\n𝑥 + 𝑦 = 20,5 oraz 𝑥 + 𝑥 + 𝑦 = 23 (lub zapisy równoważne),\nLUB\nZasady oceniania rozwiązań zadań\n• ustalenie (np. zapisanie na rysunku) poprawnych długości krawędzi\nprostopadłościennego klocka (2,5 cm i 18 cm) bez zapisania sposobu ich obliczenia,\nLUB\n• zapisanie równania z jedną niewiadomą prowadzącego do obliczenia długości jednej\nkrawędzi prostopadłościennego klocka, np.\n20,5 + 𝑥 = 23 (lub zapisy równoważne),\nLUB\n• zapisanie poprawnego wzoru na objętość prostopadłościennego klocka oraz uwzględnienie\nzwiązku między długościami krawędzi, np.:\n𝑉 = 5 ∙ 𝑥 ∙ (20,5 − 𝑥) (lub zapisy równoważne)\nalbo\n𝑉 = 5 ∙ 𝑥 ∙ 𝑦 oraz 𝑦 = 20,5 − 𝑥\nalbo\n𝑉 = 5 ∙ 𝑥 ∙ 𝑦 oraz 𝑦 + 2𝑥 = 23\n0 punktów\nrozwiązanie błędne lub brak rozwiązania.\nUwagi\n1. a) Jeżeli uczeń ustali nieprawidłowe długości dwóch krawędzi (np. zapisze na rysunku)\nbez zapisania sposobu obliczenia każdej z nich, to za całe rozwiązanie otrzymuje\n0 punktów;\nb) Jeżeli uczeń ustali nieprawidłową długość jednej krawędzi bez zapisania sposobu jej\nobliczenia, a długość drugiej krawędzi konsekwentnie obliczy korzystając z jednej\nz zależności wynikającej z warunków zadania, to może otrzymać 1 punkt (na mocy\nostatniego warunku za 1 punkt: zapisanie poprawnego wzoru na objętość\nprostopadłościennego klocka oraz uwzględnienie związku między długościami krawędzi).\n2. Nie akceptuje się rozwiązań zadania opartych na pomiarze np. linijką.\n3. Poprawność stosowania jednostek ocenia się tylko w wyniku końcowym.\n4. Zapisanie niewłaściwej jednostki objętości lub brak jednostki objętości w wyniku\nkońcowym traktuje się jako błąd rachunkowy.\nPrzykładowe rozwiązania ocenione na 3 punkty\nI sposób\nObliczymy długość najkrótszej krawędzi prostopadłościennego klocka:\n23 cm − 20,5 cm = 2,5 cm\nObliczymy długość najdłuższej krawędzi klocka:\n20,5 cm − 2,5 cm = 18 cm\nObliczymy objętość klocka:\n𝑉 = 5 cm ∙ 2,5 cm ∙ 18 cm = 225 cm3\nOdpowiedź: Objętość prostopadłościennego klocka jest równa 225 cm3.\nEgzamin ósmoklasisty z matematyki – termin główny 2023 r.\nII sposób\n𝑥\n20,5 cm 23 cm\n20,5 cm 𝑦\n5 cm\nOznaczymy długość jednej (najkrótszej) krawędzi prostopadłościennego klocka jako 𝑥,\na drugiej (najdłuższej) jako 𝑦.\nZapiszemy zależności pomiędzy długościami tych krawędzi:\n𝑥 + 𝑦 = 20,5\n𝑥 + 𝑥 + 𝑦 = 23\nW miejsce 𝑥 + 𝑦 w drugim równaniu podstawimy 20,5. Następnie obliczymy 𝑥:\n𝑥 + 20,5 = 23\n𝑥 = 2,5\nObliczymy długość 𝑦 drugiej krawędzi prostopadłościennego klocka:\n𝑦 = 20,5 − 𝑥 = 20,5 − 2,5 = 18\nObliczymy objętość klocka:\n𝑉 = 5 cm ∙ 2,5 cm ∙ 18 cm = 225 cm3\nOdpowiedź: Objętość prostopadłościennego klocka jest równa 225 cm3.\nIII sposób\n23 cm\n20,5 cm\n5 cm\n20,5 − 𝑥\n𝑥\nOznaczymy długość jednej z krawędzi prostopadłościennego klocka jako 𝑥.\nDługość drugiej krawędzi prostopadłościennego klocka oznaczymy jako 20,5 − 𝑥.\nZasady oceniania rozwiązań zadań\nZapiszemy równanie:\n2𝑥 + 20,5 – 𝑥 = 23\n𝑥 = 2,5\n20,5 – 2,5 = 18\nObliczymy objętość klocka:\n𝑉 = 5 cm ∙ 2,5 cm ∙ 18 cm = 225 cm3\nOdpowiedź: Objętość prostopadłościennego klocka jest równa 225 cm3.",
+      "solution_steps": [
+        "Klucz CKE: Uwagi.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q19-page-19"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q19-page-19",
+          "path": "public/cke/2023/mathematics/omap-100-x-2305/q19-page-19.webp",
+          "sha256": "d59db45b71b4064ffecbe2863022ebaf1cbfbfbaf88d0a3f0147152886b64a3a",
+          "alt": "Oryginalny układ zadania 19 z arkusza OMAP-100-2305, strona 19.",
+          "caption": "Zadanie 19 — oryginalny układ CKE, strona 19.",
+          "mime_type": "image/webp"
+        }
+      ]
+    }
+  ]
+}

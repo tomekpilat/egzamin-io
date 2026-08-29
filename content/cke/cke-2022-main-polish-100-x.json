@@ -1,0 +1,1056 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2022-main-polish-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2022-main-polish-100-x",
+    "source_document_id": "OPOP-100-2205",
+    "source_pdf_sha256": "813524602f28b3bbe36a1ace2cf76790f1b5e7da4f27ff447e0212af21eb8ab5",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2022-2/",
+    "source_label": "CKE 2022 · język polski · termin główny · wariant 100-X",
+    "exam_year": 2022,
+    "exam_session": "main",
+    "subject": "polish",
+    "variant_code": "100-X",
+    "question_count": 19,
+    "supplementary_sources": [
+      {
+        "id": "cke-2022-main-polish-100-x-rules",
+        "path": "content/cke/sources/2022/polish/OPOP-100-400-500-2205-zasady.pdf",
+        "sha256": "4415e0815f398aa54e899857cbeb028da1b196d734ad00af655b58f4d1b94c82",
+        "label": "Oficjalne zasady oceniania rozwiązań zadań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [],
+  "questions": [
+    {
+      "id": "cke-2022-main-polish-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Na podstawie przytoczonego fragmentu oceń prawdziwość podanych stwierdzeń.\nWybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\nW przytoczonym fragmencie utworu zawarto informację o tym, co jest\nP F\nprzedmiotem sporu między Cześnikiem a Rejentem.\nZ przytoczonego fragmentu utworu wynika, że Papkin stara się\nP F\npogodzić Cześnika i Rejenta.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "PF"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y2\nPF FP",
+      "solution_steps": [
+        "Klucz CKE: PF.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q01-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q01-page-6",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q01-page-6.webp",
+          "sha256": "d83c145c4bd75a542f4a075117305edb4d78ed198330fac9144d389e6f8aaa39",
+          "alt": "Oryginalny układ zadania 1 z arkusza OPOP-100-2205, strona 6.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-polish-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Dokończ zdanie tak, aby było zgodne z treścią przytoczonego fragmentu. Wybierz\nwłaściwą odpowiedź spośród podanych.\nPapkin i kilku służących Cześnika przychodzą do mularzy, aby\nA. pomóc im w pracy zleconej przez Rejenta.\nB. wynagrodzić im straty przez nich poniesione.\nC. zmusić ich do przerwania wykonywanej pracy.\nD. zaproponować im schronienie w domu Cześnika.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "C"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nC B\n1 Załącznik nr 1 do Rozporządzenia Ministra Edukacji Narodowej z dnia 20 marca 2020 r. w sprawie\nszczególnych rozwiązań w okresie czasowego ograniczenia funkcjonowania jednostek systemu oświaty\nw związku z zapobieganiem, przeciwdziałaniem i zwalczaniem COVID-19 (Dz.U. poz.493, z późn. zm.).\n2 Odpowiedzi w wersji Y dotyczą tylko arkusza OPOP-100-2205.\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q02-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q02-page-6",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q02-page-6.webp",
+          "sha256": "a7f638f32cd3724a66ca5ffb1d66f8bc170d2f643c94050a439fb358defc329e",
+          "alt": "Oryginalny układ zadania 2 z arkusza OPOP-100-2205, strona 6.",
+          "caption": "Zadanie 2 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-polish-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Czy sformułowanie żyją jak pies z kotem trafnie określa relację między Cześnikiem\na Rejentem? Uzasadnij swoją odpowiedź, odwołując się do przytoczonego fragmentu\nZemsty.\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – poprawna odpowiedź wraz z uzasadnieniem i odwołaniem się do przytoczonego\nfragmentu utworu.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nPrzykładowa odpowiedź oceniona na 1 punkt\nUważam, że sformułowanie „żyją jak pies z kotem” trafnie określa ich relacje. Zawsze robili\nsobie na złość i denerwowali się nawzajem. Tak jak w przytoczonym fragmencie, gdy jeden\nchciał naprawić mur, to drugi robił wszystko, by do tego nie doszło.\nPrzykładowa odpowiedź oceniona na 0 punktów\nSformułowanie „żyją jak pies z kotem” trafnie określa relacje Cześnika i Rejenta. Nawiązuje\ndo nienawiści między kotami a psami, to samo się dzieje między bohaterami „Zemsty”.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q03-page-7"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q03-page-7",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q03-page-7.webp",
+          "sha256": "54479e1543b2b5a085f76179f98db86916396498a8ca6d9188a14dc3515f22b3",
+          "alt": "Oryginalny układ zadania 3 z arkusza OPOP-100-2205, strona 7.",
+          "caption": "Zadanie 3 — oryginalny układ CKE, strona 7.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-polish-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Na podstawie przytoczonego fragmentu oceń prawdziwość podanych stwierdzeń.\nWybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\nW didaskaliach podane są informacje o tym, skąd Cześnik i Rejent\nP F\nobserwują wydarzenia rozgrywające się przy murze.\nW didaskaliach podane są informacje o wyglądzie bohaterów\nP F\nuczestniczących w wydarzeniach rozgrywających się przy murze.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "PF"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nPF FP\nEgzamin ósmoklasisty z języka polskiego – termin główny 2022 r.",
+      "solution_steps": [
+        "Klucz CKE: PF.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q04-page-7"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q04-page-7",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q04-page-7.webp",
+          "sha256": "b9c74b2e2b9cc7a34c363c6486f3e95f269b3210a573a9f94b0a7fc3658cf33a",
+          "alt": "Oryginalny układ zadania 4 z arkusza OPOP-100-2205, strona 7.",
+          "caption": "Zadanie 4 — oryginalny układ CKE, strona 7.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-polish-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "Na podstawie całego utworu Zemsta ułóż poniższe treści zgodnie z porządkiem\nchronologicznym. Wpisz litery A, B, D, E w kratki we właściwej kolejności.\nA. Przybycie Papkina do domu Cześnika.\nB. Decyzja Cześnika o ślubie Wacława i Klary.\nC. Przyjęcie przez Podstolinę oświadczyn Cześnika.\nD. Zakończenie konfliktu między Cześnikiem a Rejentem.\nE. Plany Rejenta dotyczące małżeństwa Wacława z Podstoliną.\nC\nPRZENIEŚ ROZWIĄZANIE ZADANIA 4. NA KARTĘ ODPOWIEDZI!\nOPOP-100-2205 Strona 7 z 24",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "ACEBD"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 pkt – poprawne uzupełnienie czterech liter.\n1 pkt – poprawne uzupełnienie trzech lub dwóch liter.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nACEBD ACEDB",
+      "solution_steps": [
+        "Klucz CKE: ACEBD.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q05-page-7"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q05-page-7",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q05-page-7.webp",
+          "sha256": "d2d216376eb24272f090e58cb59b7187be0eec6d79b3c7f313bfe43fa1be83aa",
+          "alt": "Oryginalny układ zadania 5 z arkusza OPOP-100-2205, strona 7.",
+          "caption": "Zadanie 5 — oryginalny układ CKE, strona 7.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-polish-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nWypowiedź Wacława: Tak jest – zgoda, / A Bóg wtedy rękę poda, jest puentą Zemsty\ni stanowi nawiązanie do\nA. pogodzenia się Cześnika z Rejentem.\nB. wyznania Klarze miłości przez Papkina.\nC. spotkania Wacława i Podstoliny po latach.\nD. rozmowy Rejenta z Wacławem o ślubie z Podstoliną.\nPRZENIEŚ ROZWIĄZANIE ZADANIA 6. NA KARTĘ ODPOWIEDZI!",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "A"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nA B\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q06-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q06-page-8",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q06-page-8.webp",
+          "sha256": "b558e4f81df63ecc4632b741812191b23f63f01f1ee85bb3fe0d150810345920",
+          "alt": "Oryginalny układ zadania 6 z arkusza OPOP-100-2205, strona 8.",
+          "caption": "Zadanie 6 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-polish-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        8,
+        9
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "Obejrzyj poniższe kadry filmowe z ekranizacji Zemsty w reżyserii Andrzeja Wajdy i przeczytaj\nzamieszczone pod nimi fragmenty utworu Aleksandra Fredry.\nKadr filmowy nr 1\nPapkin pisze\ntestament, ponieważ\npodejrzewa, że został\notruty przez Rejenta.\nPAPKIN\nUmrzeć, umrzeć, wielkie Nieba!\npo krótkim milczeniu\nLecz gdzież była moja głowa!\nJam go beształ, mieszał z błotem.\nOn traktament miał dać potem;\nI ten pośpiech jego wielki,\nZ jakim wziął się do butelki,\nZ jakim nalał lampkę całą,\nJeszczeże mi było mało!...\nTak połknąłem, mam truciznę.\nJuż się z tego nie wyśliznę,\nWięc testament mój ułożę…\nKadr filmowy nr 2\nCześnik dyktuje\nDyndalskiemu list, który\nzamierza wysłać\ndo Wacława w imieniu\nKlary.\nCZEŚNIK\n[…]\nNo, no – pisz waść, a dokładnie.\ndyktuje\n„Bardzo proszę”… mocium panie…\nMocium panie… „me wezwanie”…\nMocium panie… „wziąć w sposobie,\nJako ufność ku osobie”…\nMocium panie… „waszmość pana.\nKtóra lubo mało znana…\nKtóra lubo mało znana”…\nKtóra z sytuacji, zaprezentowanych na powyższych kadrach filmowych, jest – Twoim\nzdaniem – bardziej komiczna?\nWybierz jedną sytuację i uzasadnij swoją odpowiedź. W uzasadnieniu uwzględnij dwa\nz trzech rodzajów komizmu (sytuacyjny, słowny, postaci) obecnych w wybranej przez\nCiebie sytuacji.\nSytuacja przedstawiona na kadrze filmowym nr: ………\nUzasadnienie: ….………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\nOPOP-100-2205 Strona 9 z 24",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 pkt – podanie numeru kadru i uzasadnienie wyboru z uwzględnieniem dwóch rodzajów\nkomizmu.\n1 pkt – podanie numeru kadru i uzasadnienie wyboru z uwzględnieniem jednego rodzaju\nkomizmu.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nPrzykładowa odpowiedź oceniona na 2 punkty\nSytuacja przedstawiona na kadrze filmowym nr: 2\nUzasadnienie: Moim zdaniem kadr nr 2 jest bardziej komiczny, ponieważ Cześnik lubi często\npowtarzać słowa „mocium panie”, które używane w rozmowie z innymi stają się zabawnym\nprzerywnikiem (komizm słowny), a Dyndalski piszący list myśli, że to ma być treść listu Klary\ndo Wacława i zapisuje te słowa. Po przeczytaniu listu przez Cześnika okazuje się, że\nwypowiedź pozbawiona jest sensu (komizm sytuacyjny).\nPrzykładowa odpowiedź oceniona na 1 punkt\nDyktując list, Cześnik kilka razy powtarza słowa: „mocium panie”. Dyndalski bez\nzastanowienia zapisuje każde słowo Raptusiewicza. Kiedy Cześnik to zauważa, wpada\nw złość i niszczy list. Występuje tu komizm sytuacyjny.\nPrzykładowa odpowiedź oceniona na 0 punktów\nSytuacja przedstawiona na kadrze filmowym nr: 1\nUzasadnienie: Na kadrze filmowym nr 1 jest pokazane, jak Papkin pisze testament,\nponieważ podejrzewa, że Rejent go otruł.\nEgzamin ósmoklasisty z języka polskiego – termin główny 2022 r.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q07-page-8"
+        },
+        {
+          "type": "image",
+          "asset_id": "q07-page-9"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q07-page-8",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q07-page-8.webp",
+          "sha256": "2c4ab759e5fa5b3a9a947597bbb037b47bbd935ff1e0dfb5c0f7f38bb9eb2e19",
+          "alt": "Oryginalny układ zadania 7 z arkusza OPOP-100-2205, strona 8.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q07-page-9",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q07-page-9.webp",
+          "sha256": "61ea2f0f5528cc305401050f56b18367bbbad527e4d8bcf565e7d27eaf77cc97",
+          "alt": "Oryginalny układ zadania 7 z arkusza OPOP-100-2205, strona 9.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 9.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-polish-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "Spośród lektur obowiązkowych – innych niż Zemsta – wybierz tę, która potwierdza\ntrafność stwierdzenia Zgoda buduje, niezgoda rujnuje. Podaj tytuł tej lektury oraz jej\nbohaterów, których zachowanie jest potwierdzeniem trafności tego stwierdzenia.\nUzasadnij swój wybór. W uzasadnieniu przywołaj sytuację z tej lektury, ilustrującą\nTwoją argumentację.\nUwaga! Lista lektur obowiązkowych znajduje się na stronie 3 tego arkusza egzaminacyjnego.\nTytuł lektury: …………………………………………………………………………………………….\nBohaterowie lektury: …………………………………………………………………………………...\nUzasadnienie wyboru: …………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 pkt – podanie tytułu i bohaterów lektury oraz poprawne uzasadnienie wyboru zilustrowane\nsytuacją z lektury.\n1 pkt – podanie tytułu i bohaterów lektury oraz poprawne uzasadnienie wyboru bez\nprzywołania sytuacji z lektury.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nUwagi.\n• W przypadku, gdy uczeń wskaże poprawnie tytuł lektury, nie wskaże bohaterów, ale\nuzasadnienie pozwala zidentyfikować bohaterów, uczeń otrzymuje maksymalnie 1 punkt.\n• W przypadku, gdy uczeń wskaże poprawnie tytuł lektury i bohaterów, ale uzasadnienie\ndotyczyć będzie tylko jednej części stwierdzenia, np. zgoda buduje ALBO niezgoda\nrujnuje, otrzymuje maksymalnie 1 punkt.\n• W przypadku, gdy uczeń wskaże poprawnie tytuł lektury i bohaterów, ale błędnie\nuzasadni swój wybór, otrzymuje 0 punktów.\n• W przypadku, gdy uczeń wskaże tylko bohaterów i tytuł lektury, ale nie uzasadni wyboru,\notrzymuje 0 punktów.\nPrzykładowa odpowiedź oceniona na 2 punkty\nTytuł lektury: Pan Tadeusz\nBohaterowie lektury: Sędzia i Hrabia\nUzasadnienie wyboru: Sędzia i Hrabia toczyli spór o zamek, dawną siedzibę Horeszków.\nW swój konflikt zaangażowali innych, co skończyło się najazdem szlachty na Soplicowo.\nW konsekwencji szlachta dostała się do niewoli, ponieważ do Soplicowa przybyli też\nMoskale. Konflikt udało się zażegnać, a rody Horeszków i Sopliców zjednoczyły się dzięki\nzaręczynom Zosi i Tadeusza.\nPrzykładowa odpowiedź oceniona na 1 punkt\nTytuł lektury: „Balladyna”\nBohaterowie lektury: Balladyna i Alina\nZasady oceniania rozwiązań zadań\nUzasadnienie wyboru: Uważam, że stwierdzenie: „zgoda buduje, niezgoda rujnuje” pasuje do\nżycia dwóch sióstr – Aliny i Balladyny. Dopóki każda z nich nie chciała zostać żoną Kirkora,\npanowała między nimi zgoda.\nPrzykładowa odpowiedź oceniona na 0 punktów\nTytuł lektury: Opowieść wigilijna\nBohaterowie lektury: Ebenezer Scrooge\nUzasadnienie wyboru: Ebenezer Scrooge prawie przez całe swoje życie żył w niezgodzie\nz otaczającymi go ludźmi.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q08-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q08-page-10",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q08-page-10.webp",
+          "sha256": "b3f5fdcdd69d7e334a2238255c2095004ff96b41a43eb240849acd49ccf85e1f",
+          "alt": "Oryginalny układ zadania 8 z arkusza OPOP-100-2205, strona 10.",
+          "caption": "Zadanie 8 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-polish-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Dokończ poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz\nodpowiedź spośród oznaczonych literami C i D.\nW wypowiedzeniu Jutro cały zamek zburzę podkreślony wyraz pełni funkcję A B .\ndramatu\nTaką samą funkcję wyraz zamek pełni w wypowiedzeniu C D .\nA. podmiotu C. Widzieliśmy w oddali pięknie odrestaurowany zamek.\nB. dopełnienia D. Zamek został zbudowany na niewielkim wzniesieniu.\nPRZENIEŚ ROZWIĄZANIE ZADANIA 9. NA KARTĘ ODPOWIEDZI!",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "BC"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nBC AD",
+      "solution_steps": [
+        "Klucz CKE: BC.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q09-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q09-page-10",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q09-page-10.webp",
+          "sha256": "10be62ec81ecb6d9de60a24e0f239e9efce4120a9d60cf4a7793cdbad875595f",
+          "alt": "Oryginalny układ zadania 9 z arkusza OPOP-100-2205, strona 10.",
+          "caption": "Zadanie 9 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-polish-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        11,
+        12,
+        13
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "W jednej ze szkół uczniowie w ramach projektu przygotowali fiszki edukacyjne\ndotyczące lektur szkolnych. W tekście umieszczonym na jednej z fiszek zabrakło\ntrzech przecinków. Uzupełnij poniższy zapis tak, aby był zgodny z zasadami\ninterpunkcyjnymi.\nTreść utworu ma swe źródło w autentycznym konflikcie. Aleksander\nFredro znalazł akta procesowe z XVII wieku, które dotyczyły\nkonfliktu dawnych właścicieli zamku. Piotr Firlej, jako wojewoda\nuważał Jana Skotnickiego za niegodnego siebie sąsiada i dokuczał\nmu gdy tylko nadarzała się do tego sposobność. Skotnicki nie\nustępował mu więc sprawa znalazła się w trybunale. Kres zatargowi\npołożył dopiero ślub córki Jana Skotnickiego z synem Piotra Firleja.\nOPOP-100-2205 Strona 11 z 24\nPrzeczytaj tekst i wykonaj zadania.\nAndrzej Kojder\nPOCHWAŁA PRZYJAŹNI\nŚwiat współczesny nie przypomina ateńskiej agory1. Ludziom w XXI wieku jest bliżej do\nsiebie, ale rzadziej i krócej są ze sobą. Będąc w ciągłym ruchu, nawiązują za pośrednictwem\nnowych mediów kontakty powierzchowne i krótkotrwałe. Nie mają czasu na przyjaźń, co\nnajwyżej zawierają znajomości. Monitor komputera i klawiatura oraz wyświetlacz telefonu\nkomórkowego zastępują im kontakty face-to-face2 lub też są nowym, uproszczonym\nrodzajem tych kontaktów.\nW szybko zmieniającym się świecie coraz częściej słyszy się pytanie: Co w życiu jest\nważne? Zapytano o to filozofa Leszka Kołakowskiego, który odpowiedział: „[…] wśród dóbr\nważnych w życiu na pierwszym miejscu jest przyjaźń. Potrzebujemy osób, którym możemy\nufać, o których wiemy, że nas nie oszukają, nie zdradzą, pomogą w potrzebie i że my\npowinniśmy im służyć w biedach, które przecież każdego spotykają i które bez przyjaciół\nbardzo trudno jest przetrwać. Co więcej – przyjaźń to jest dobro, które w bardzo dużym\nstopniu zależy od nas. Możemy je sami własnym wysiłkiem utkać. Bo przyjaźń to więź\nzaufania, którą każdy z nas może wokół siebie budować”.\nW myśli europejskiej prekursorem3 rozważań o przyjaźni jest Arystoteles4. Wszelka\nprzyjaźń, zauważa Arystoteles, polega na podobieństwie i zaufaniu. Jej rola jest wieloraka.\nLudziom młodym pomaga uniknąć błędów, ludzi dojrzałych pobudza do większych czynów,\na starszych otacza opieką i wzmacnia ich nadwątlone siły. Podstawą przyjaźni jest wzajemna\nżyczliwość, zgodność upodobań, gotowość do poświęceń. Przyjaciele świadczą sobie\nprzysługi, odnoszą się do siebie z uznaniem, rozłąka nie podkopuje ich związku. Czy należy\nposzukiwać wielu przyjaciół? Arystoteles twierdzi, że wystarczy mieć niewielu, „tak jak\nniewielka ilość przyprawy wystarcza w potrawach”.\nZnaczenie uczucia przyjaźni w harmonijnym układaniu stosunków między ludźmi\ndostrzegano już bardzo dawno i we wszystkich zakątkach świata. Jak mówi znane\nporzekadło: „przysłowia są mądrością narodów”. Cóż byłaby to za mądrość, gdyby pomijano\nw niej kwestię przyjaźni? I rzeczywiście, w obiegowej mądrości różnych ludów i narodów nie\njest ona pomijana. Rosyjskie przysłowie „Powiedz, kim są twoi przyjaciele, a powiem ci, kim\njesteś” stało się również polskim powiedzeniem. W Mongolii usłyszymy, że „wprawdzie\nzwycięzca ma wielu przyjaciół, ale zwyciężony ma dobrych przyjaciół”.\nWszystkie przytoczone tutaj argumenty skłaniają do wygłoszenia krótkiej apologii5\nprzyjaźni. Przyjaźń uczy nas powściągliwości: traktowania potrzeb przyjaciół na równi\nz naszymi własnymi. Uczy nas wyrozumiałości dla naszej i cudzej słabości, przywar6\ni różnych niedostatków. Mieć przyjaciela to mieć powiernika7. Przyjaciel, jak nikt inny, potrafi\nszczerze ukazać nam nasze możliwości i zarazem wskazać na nasze braki i ograniczenia.\nIm więcej tworzy się kręgów przyjacielskich, tym większy jest poziom uspołecznienia.\nPrzyjaźń bowiem, wraz z zaufaniem i życzliwością, zachęca do uczestnictwa w życiu\nzbiorowym, rodzi potrzebę serdecznego kontaktu, wymiany myśli.\nNa podstawie: Andrzej Kojder, Pochwała przyjaźni, [w:] Kultury religijne. Perspektywy socjologiczne,\nred. Andrzej Wójtowicz, Warszawa – Tyczyn 2005.\n1 Agora – rynek w miastach greckich, będący ośrodkiem życia politycznego, religijnego, czasem handlowego.\n2 Face-to-face (ang.) – twarzą w twarz.\n3 Prekursor – człowiek, który coś zapoczątkował, np. jakąś ideę.\n4 Arystoteles – filozof starożytnej Grecji.\n5 Apologia – tu: pochwała.\n6 Przywara – ujemna cecha charakteru.\n7 Powiernik – osoba zaufana, której ktoś się zwierza ze swoich spraw osobistych i tajemnic.\n[475 wyrazów]",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "Treść utworu ma swe źródło w autentycznym konflikcie. Aleksander Fredro znalazł akta"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie\nTreść utworu ma swe źródło w autentycznym konflikcie. Aleksander Fredro znalazł akta\nprocesowe z XVII wieku, które dotyczyły konfliktu dawnych właścicieli. Piotr Firlej, jako\nwojewoda, uważał Skotnickiego za niegodnego siebie sąsiada i dokuczał mu, gdy tylko\nnadarzała się do tego sposobność. Skotnicki nie ustępował mu, więc sprawa znalazła się\nw trybunale. Kres zatargowi położył dopiero ślub córki Jana Skotnickiego z synem Piotra\nFirleja.\nEgzamin ósmoklasisty z języka polskiego – termin główny 2022 r.",
+      "solution_steps": [
+        "Klucz CKE: Treść utworu ma swe źródło w autentycznym konflikcie. Aleksander Fredro znalazł akta.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q10-page-11"
+        },
+        {
+          "type": "image",
+          "asset_id": "q10-page-12"
+        },
+        {
+          "type": "image",
+          "asset_id": "q10-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q10-page-11",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q10-page-11.webp",
+          "sha256": "102274336e44621ede819821a224e638ee4584b190ba5ac5edb13c9eca7524af",
+          "alt": "Oryginalny układ zadania 10 z arkusza OPOP-100-2205, strona 11.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 11.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q10-page-12",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q10-page-12.webp",
+          "sha256": "2379c3fd6a6ded23854ad873fbae6760fdd62d461d86e115cab84c896a1de927",
+          "alt": "Oryginalny układ zadania 10 z arkusza OPOP-100-2205, strona 12.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q10-page-13",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q10-page-13.webp",
+          "sha256": "51c0ac50a26597ba9c6bc412690fc57c94c85df1fbd97ce1174e67f4fee7e589",
+          "alt": "Oryginalny układ zadania 10 z arkusza OPOP-100-2205, strona 13.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-polish-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        13
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "Uzupełnij poniższe zdania tak, aby powstało streszczenie tekstu Pochwała przyjaźni.\nAndrzej Kojder rozpoczyna swoje rozważania od ….………………………………………………\n……………………………………………………………………………..…………………………… .\nW kolejnych akapitach odwołuje się do ……………………..………………………………………\n……………………………………………………………………………..…………………………… .\nPrzywołuje również przysłowia dotyczące przyjaźni, aby …………………………………………\n……………………………………………………………………………..…………………………… .\nPodsumowując rozważania, stwierdza, że ………………………………………………………….\n……………………………………………………………………………..…………………………… .",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 pkt – poprawne określenie tematu i tego, co na ten temat powiedziano w tekście;\nzachowanie właściwego poziomu uogólnienia.\n1 pkt – poprawne określenie tematu i tego, co na ten temat powiedziano w tekście;\nzaburzony poziom uogólnienia.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nUwaga. Uczeń otrzymuje 0 punktów, jeśli jego wypowiedź w całości składa się z fragmentów\nprzepisanych z tekstu „Pochwała przyjaźni”.\nPrzykładowa odpowiedź oceniona na 2 punkty\nAndrzej Kojder rozpoczyna swoje rozważania od refleksji na temat przyjaźni w XXI wieku.\nW kolejnych akapitach odwołuje się do poglądów filozofów na temat roli przyjaźni w życiu\nczłowieka.\nPrzywołuje również przysłowia dotyczące przyjaźni, aby pokazać, że jest ona istotna dla\nludzi różnych kultur.\nPodsumowując rozważania, stwierdza, że przyjaźń jest jedną z najważniejszych wartości\ni każdy człowiek jej potrzebuje.\nPrzykładowa odpowiedź oceniona na 1 punkt\nAndrzej Kojder rozpoczyna swoje rozważania od ludzi w współczesnym świecie, którzy już\nnawet nie umieją zawrzeć nowych przyjaźni bez użycia internetu.\nW kolejnych akapitach odwołuje się do pytania „Co w życiu jest najważniejsze?”. Autor\ntłumaczy na czym polega przyjaźń i jak powinna wyglądać.\nPrzywołuje również przysłowia dotyczące przyjaźni, aby podkreślić i uświadomić, że przyjaźń\njest naprawdę ważna.\nPodsumowując rozważania, stwierdza, że przyjaźń jest bardzo ważna w życiu człowieka.\nKażdemu jest potrzebny chociaż jeden przyjaciel, któremu można się zwierzyć i wiesz, że\nzawsze możesz liczyć na jego pomoc.\nPrzykładowa odpowiedź oceniona na 0 punktów\nAndrzej Kojder rozpoczyna swoje rozważania od Świat współczesny nie przypomina\nateńskiej agory.\nW kolejnych akapitach odwołuje się do przyjaźń jaka powinna być, co może się stać gdy\nzdradzi się przyjaciela, jakie jest znaczenie uczucia.\nPrzywołuje również przysłowia dotyczące przyjaźni, aby pokazać, ze nie jest ona pomijana.\nPodsumowując rozważania, stwierdza, że przyjaźń jest z zaufaniem i życzliwością i zachęca\nnas do uczestnictwa w życiu zbiorowym.\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q11-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q11-page-13",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q11-page-13.webp",
+          "sha256": "4baf8f36f3adc9299c23b5fdd494dfd9773e350c75a716520f9d10d6b1969535",
+          "alt": "Oryginalny układ zadania 11 z arkusza OPOP-100-2205, strona 13.",
+          "caption": "Zadanie 11 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-polish-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        13
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Z podanych pytań wskaż to, na które nie można znaleźć odpowiedzi w tekście\nPochwała przyjaźni. Wybierz właściwą odpowiedź spośród podanych.\nA. Jaką cenę płaci się za zdradę przyjaciół?\nB. Czego możemy się nauczyć dzięki przyjaźni?\nC. Dlaczego ludziom dzisiaj trudno jest zawierać przyjaźnie?\nD. Co na temat przyjaźni mówią przysłowia różnych narodów?\nPRZENIEŚ ROZWIĄZANIE ZADANIA 12. NA KARTĘ ODPOWIEDZI!\nOPOP-100-2205 Strona 13 z 24",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "A"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nA B",
+      "solution_steps": [
+        "Klucz CKE: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q12-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q12-page-13",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q12-page-13.webp",
+          "sha256": "763ec30e5c27dfdc055a5fe4751c5dd5444b0f8871fedefbbb0e9ad2a377faa4",
+          "alt": "Oryginalny układ zadania 12 z arkusza OPOP-100-2205, strona 13.",
+          "caption": "Zadanie 12 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-polish-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Oceń prawdziwość podanych stwierdzeń w odniesieniu do 2. i 3. akapitu tekstu\nPochwała przyjaźni. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest\nfałszywe.\nZdaniem Leszka Kołakowskiego przyjaźń jest dobrem mniej ważnym\nP F\nniż inne dobra w naszym życiu.\nZdaniem Arystotelesa człowiek powinien mieć w życiu wielu przyjaciół. P F",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "FF"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nFF FF",
+      "solution_steps": [
+        "Klucz CKE: FF.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q13-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q13-page-14",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q13-page-14.webp",
+          "sha256": "84ca43a61bde1032719f1c23d2a2461e33520221e9470fd3b2e0d2f07011277f",
+          "alt": "Oryginalny układ zadania 13 z arkusza OPOP-100-2205, strona 14.",
+          "caption": "Zadanie 13 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-polish-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Wyjaśnij sens sformułowania przywołanego w 4. akapicie tekstu Pochwała przyjaźni:\nwprawdzie zwycięzca ma wielu przyjaciół, ale zwyciężony ma dobrych przyjaciół.\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\nPRZENIEŚ ROZWIĄZANIE ZADANIA 13. NA KARTĘ ODPOWIEDZI!",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – poprawne wyjaśnienie sensu sformułowania.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nEgzamin ósmoklasisty z języka polskiego – termin główny 2022 r.\nPrzykładowa odpowiedź oceniona na 1 punkt\nSłowa te oznaczają, że ktoś, kto zawsze odnosi sukcesy, ma wokół siebie dużo ludzi, ale nie\nzawsze są oni jego prawdziwymi przyjaciółmi. Natomiast ktoś, kto ma trudności w życiu,\nmoże liczyć na wiernych przyjaciół, którzy mu pomogą w trudnych momentach.\nPrzykładowa odpowiedź oceniona na 0 punktów\nWedług mnie to sformułowanie ma nas uświadomić, że żeby być szczęśliwymi nie trzeba\nmieć wielu przyjaciół, lecz trzeba mieć dobrych przyjaciół, którzy będą nam pomagać i będą\nnas wspierać, a także będą mieć świadomość naszej ważności.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q14-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q14-page-14",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q14-page-14.webp",
+          "sha256": "f4fbc239bd63ea40b003e04729e41e91e893004c0290e1e2945502f1dbefbb78",
+          "alt": "Oryginalny układ zadania 14 z arkusza OPOP-100-2205, strona 14.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-polish-100-x-q15",
+      "number": "15",
+      "sort_order": 15,
+      "source_pages": [
+        15
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Obejrzyj poniższą grafikę.\nPaweł Kuczyński, Wyspy, www.digitalyouth.pl\nCzy grafika Pawła Kuczyńskiego mogłaby być ilustracją do tekstu Pochwała\nprzyjaźni? Uzasadnij swoją odpowiedź.\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\nOPOP-100-2205 Strona 15 z 24",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź zawierająca uzasadnienie wraz z odwołaniem się do tekstu.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nPrzykładowa odpowiedź oceniona na 1 punkt\nPowyższa grafika mogłaby być ilustracją do tekstu „Pochwała przyjaźni”, ponieważ\nprzedstawia samotnych ludzi, którzy skupieni są na sobie i swoich telefonach. Takich ludzi\nopisuje Andrzej Kojder w swoim tekście. Zamiast spotkać się twarzą w twarz, porozumiewają\nsię poprzez media.\nPrzykładowa odpowiedź oceniona na 0 punktów\nMoim zdaniem ta ilustracja pasuje do tekstu „Pochwała przyjaźni”, a zwłaszcza do\npierwszego akapitu. Autor mówi w nim o tym, że ludzie w XXI w. żyją wyłącznie internetem\ni nie widzą świata poza nim.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q15-page-15"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q15-page-15",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q15-page-15.webp",
+          "sha256": "f519210c7a287674d008ba03d2e5543c51a0db050878045cc71f027e04e37a87",
+          "alt": "Oryginalny układ zadania 15 z arkusza OPOP-100-2205, strona 15.",
+          "caption": "Zadanie 15 — oryginalny układ CKE, strona 15.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-polish-100-x-q16",
+      "number": "16",
+      "sort_order": 16,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Przeczytaj definicję wyrazu związek.\n1. «stosunek między rzeczami, zjawiskami itp. połączonymi ze sobą w jakiś sposób»\n2. «stosunki łączące ludzi, oparte na uczuciu, pokrewieństwie»\n3. «kontakt z kimś lub czymś»\n4. «organizacja skupiająca ludzi mających wspólne cele»\nwww.sjp.pwn.pl\nDokończ poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz\nodpowiedź spośród oznaczonych literami C i D.\nW wypowiedzeniu Nie ma żadnego związku teorii z praktyką wyraz związek został użyty\nw znaczeniu A B . W takim samym znaczeniu tego wyrazu użyto\nw wypowiedzeniu C D .\nA. pierwszym C. Związek tych dwojga nie ma żadnej przyszłości.\nB. drugim D. Długo szukał związku między poszczególnymi faktami.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "AD"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania rozwiązań zadań\nZasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nAD BC",
+      "solution_steps": [
+        "Klucz CKE: AD.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q16-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q16-page-16",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q16-page-16.webp",
+          "sha256": "9b5dc4cc18da0c6acbee42a5872c9bd3ce45a624f6c28713768c5650ea64b4f4",
+          "alt": "Oryginalny układ zadania 16 z arkusza OPOP-100-2205, strona 16.",
+          "caption": "Zadanie 16 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-polish-100-x-q17",
+      "number": "17",
+      "sort_order": 17,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "17.1. Spośród podanych niżej wyrazów wybierz te, które należą do tej samej rodziny\nwyrazów. Wypisz oznaczenia literowe tych wyrazów.\nA. lubiany\nB. przyjaźń\nC. przyjaciel\nD. koleżanka\nE. zaprzyjaźniony\nWyrazy należące do tej samej rodziny wyrazów oznaczono literami: ……………………………\n17.2. Dopisz przymiotnik należący do tej samej rodziny wyrazów, do której należą\nwyrazy wróg i wrogość.\nPrzymiotnik należący do tej samej rodziny wyrazów: ……………………………………………...\nPRZENIEŚ ROZWIĄZANIE ZADANIA 16. NA KARTĘ ODPOWIEDZI!",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "Wyrazy należące do tej samej rodziny wyrazów oznaczono literami: B, C, E."
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie\nWyrazy należące do tej samej rodziny wyrazów oznaczono literami: B, C, E.\n17.2. (0–1)\nZasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nPrzymiotnik należący do tej samej rodziny wyrazów: wrogi / złowrogi.",
+      "solution_steps": [
+        "Klucz CKE: Wyrazy należące do tej samej rodziny wyrazów oznaczono literami: B, C, E..",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q17-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q17-page-16",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q17-page-16.webp",
+          "sha256": "c984ced764011c168647941d074b225f9cbe6ad1c032dcc1c2cec4ee77aed71d",
+          "alt": "Oryginalny układ zadania 17 z arkusza OPOP-100-2205, strona 16.",
+          "caption": "Zadanie 17 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-polish-100-x-q18",
+      "number": "18",
+      "sort_order": 18,
+      "source_pages": [
+        17
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna",
+      "difficulty": 3,
+      "prompt": "Napisz zaproszenie na piknik szkolny zorganizowany z okazji Światowego Dnia\nŻyczliwości i Przyjaźni. Zachęć do uczestnictwa w tym wydarzeniu, używając dwóch\nargumentów.\nUwaga: w ocenie wypowiedzi będzie brana pod uwagę poprawność językowa,\nortograficzna i interpunkcyjna.\nZAPROSZENIE\n…………………………………………………………………………………………………………………………\n…………………………………………………………………………………………………………………………\n…………………………………………………………………………………………………………………………\n…………………………………………………………………………………………………………………………\n…………………………………………………………………………………………………………………………\n…………………………………………………………………………………………………………………………\n…………………………………………………………………………………………………………………………\n…………………………………………………………………………………………………………………………\n…………………………………………………………………………………………………………………………\n…………………………………………………………………………………………………………………………\n…………………………………………………………………………………………………………………………\n…………………………………………………………………………………………………………………………\n…………………………………………………………………………………………………………………………\nOPOP-100-2205 Strona 17 z 24",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\nTreść i forma:\n2 pkt treść zgodna z poleceniem, uwzględnione 2 argumenty; uwzględnionych\n5 elementów dotyczących formy: kto zaprasza? kogo zaprasza? na co zaprasza?\nkiedy się odbywa? gdzie się odbywa?\n1 pkt treść zgodna z poleceniem, uwzględnione 2 argumenty; uwzględnione 4 elementy\ndotyczące formy: kto zaprasza? ORAZ/ALBO kogo zaprasza? ORAZ/ALBO na co\nzaprasza? ORAZ/ALBO kiedy się odbywa? ORAZ/ALBO gdzie się odbywa?\n0 pkt treść niezgodna z poleceniem ALBO treść zgodna z poleceniem, ale\nuwzględnione tylko 3 elementy dotyczące formy: kto zaprasza? ORAZ/ALBO kogo\nzaprasza? ORAZ/ALBO na co zaprasza? ORAZ/ALBO kiedy się odbywa?\nORAZ/ALBO gdzie się odbywa?\nPoprawność językowa, ortograficzna i interpunkcyjna:\n1 pkt – łącznie nie więcej niż dwa błędy (językowe, ortograficzne, interpunkcyjne).\n0 pkt – łącznie trzy lub więcej błędów (językowych, ortograficznych, interpunkcyjnych).\nUCZNIOWIE ZE SPECYFICZNYMI TRUDNOŚCIAMI W UCZENIU SIĘ\nPoprawność językowa, ortograficzna i interpunkcyjna:\n1 pkt – łącznie nie więcej niż trzy błędy (językowe, ortograficzne, interpunkcyjne).\n0 pkt – łącznie cztery lub więcej błędów (językowych, ortograficznych, interpunkcyjnych).\nUwagi.\n• Jeżeli uczeń uwzględnia 5 elementów zaproszenia, a podaje tylko jeden argument,\nw kryterium „Treść i forma” otrzymuje 1 punkt.\n• Kategorie „Treść i forma” oraz „Poprawność językowa” oceniamy rozłącznie.\nPrzykładowa odpowiedź oceniona na 3 punkty\nZapraszamy wszystkich uczniów naszej szkoły na piknik szkolny zorganizowany z okazji\nŚwiatowego Dnia Życzliwości i Przyjaźni. Piknik odbędzie się 17 czerwca 2022 r.\nw godzinach 14.00–18.00. Zapraszamy na nasze boisko szkolne. Podczas pikniku\nzorganizowana zostanie loteria fantowa, w której każdy będzie mógł wziąć udział.\nZaplanowano również liczne atrakcje dla najmłodszych uczestników.\nCzekamy na Was!\nSamorząd Uczniowski\nZasady oceniania rozwiązań zadań\nZASADY OCENIANIA WYPRACOWANIA\n1. Jeżeli wypowiedź w całości jest nie na temat, uczeń otrzymuje 0 punktów.\n2. Jeżeli w wypowiedzi uczeń w ogóle nie odwołał się do treści lektury obowiązkowej\nwskazanej w poleceniu, za całą wypowiedź otrzymuje 0 punktów.\n3. Jeżeli wypowiedź jest nieczytelna, uczeń otrzymuje 0 punktów.\n4. Jeżeli wypowiedź nie zawiera w ogóle rozwinięcia (np. uczeń napisał tylko wstęp), uczeń\notrzymuje 0 punktów w każdym kryterium.\n5. Jeżeli wypowiedź zawiera 180 wyrazów lub mniej, jest oceniana wyłącznie w kryteriach:\nrealizacja tematu wypowiedzi, elementy twórcze / elementy retoryczne oraz kompetencje\nliterackie i kulturowe.\n6. Jeżeli wypowiedź jest napisana niesamodzielnie, np. zawiera fragmenty odtworzone\nz podręcznika, zadania zawartego w arkuszu egzaminacyjnym lub innego źródła, w tym\ninternetowego, lub jest przepisana od innego ucznia, wówczas egzamin z języka\npolskiego, w przypadku takiego ucznia, jest unieważniany.\n7. Zabronione jest pisanie wypowiedzi obraźliwych, wulgarnych lub propagujących\npostępowanie niezgodne z prawem. W przypadku takich wypowiedzi zostanie podjęta\nindywidualna decyzja dotycząca danej pracy, np. nie zostaną przyznane punkty za styl\ni język lub cała wypowiedź nie będzie podlegała ocenie.\nUwaga. Liczone są wszystkie wyrazy: samodzielne i niesamodzielne.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q18-page-17"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q18-page-17",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q18-page-17.webp",
+          "sha256": "ac28cd24592de5a1e667a188090d04fd85dbeb23dda165a14c3312a8c7c188d8",
+          "alt": "Oryginalny układ zadania 18 z arkusza OPOP-100-2205, strona 17.",
+          "caption": "Zadanie 18 — oryginalny układ CKE, strona 17.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2022-main-polish-100-x-q19",
+      "number": "19",
+      "sort_order": 19,
+      "source_pages": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        24
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna",
+      "difficulty": 3,
+      "prompt": "Wybierz jeden z podanych tematów i napisz wypracowanie.\n• Pamiętaj o zachowaniu formy wypowiedzi wskazanej w temacie: napisz rozprawkę albo\nopowiadanie.\n• W wypracowaniu odwołaj się do wybranej lektury obowiązkowej. Lista lektur\nobowiązkowych znajduje się na stronie 3 tego arkusza egzaminacyjnego.\n• Twoja praca powinna liczyć co najmniej 200 wyrazów.\n• Zapisz wypracowanie w wyznaczonym miejscu. Nie pisz na marginesie.\nTemat 1.\nZ przyjacielem łatwiej pokonywać trudności. Napisz rozprawkę, w której rozważysz\ntrafność tego stwierdzenia. W wypracowaniu odwołaj się do wybranej lektury\nobowiązkowej oraz innego utworu literackiego.\nTemat 2.\nNapisz opowiadanie o spotkaniu z jednym z bohaterów wybranej lektury\nobowiązkowej. Wspólna przygoda skłoniła Cię do refleksji, że warto było przenieść się\ndo świata przedstawionego tej lektury. Wypracowanie powinno dowodzić, że dobrze\nznasz wybraną lekturę obowiązkową.\nWypracowanie\nMiejsce dla\nna temat nr ………… egzaminatora\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\nOPOP-100-2205 Strona 19 z 24\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n............................................................................................................................... ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\nOPOP-100-2205 Strona 21 z 24\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\nElementy\nRealizacja Kompetencje\ntwórcze / Kompozycja\ntematu literackie Styl Język Ortografia Interpunkcja\nelementy tekstu\nwypowiedzi i kulturowe (0–2) (0–4) (0–2) (0–1)\nretoryczne (0–2)\n(0–2) (0–2)\n(0–5)",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 20,
+        "rules": [
+          "Maksymalnie 20 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania rozwiązań zadań\n7) zgadza się z cudzymi poglądami lub\npolemizuje z nimi, rzeczowo uzasadniając\nwłasne zdanie.\n2. Mówienie i pisanie. Uczeń:\n2) tworzy spójne wypowiedzi\nw następujących formach gatunkowych: [...]\nrozprawka [...].\nZasady oceniania\n1. Realizacja tematu wypowiedzi\nOceniając wypowiedź ucznia w tym kryterium, należy rozważyć m.in., czy:\n• wypowiedź jest zgodna z formą wskazaną w poleceniu\n• w wypowiedzi ujęte zostały wszystkie kluczowe elementy tematu, np. czy uczeń\nw odpowiedni sposób odwołał się do lektury wskazanej w poleceniu\n• wypowiedź jest w całości na temat.\n2 pkt • Forma wypowiedzi zgodna z formą wskazaną w poleceniu.\n• Wszystkie pozostałe elementy polecenia uwzględnione.\n• Wypowiedź w całości dotyczy problemu wskazanego w poleceniu.\n1 pkt • Forma wypowiedzi zgodna z formą wskazaną w poleceniu.\n• Nieuwzględniony jeden element polecenia (inny niż forma). ORAZ/LUB\n• W pracy występują fragmenty niedotyczące problemu wskazanego\nw poleceniu.\n0 pkt • Forma wypowiedzi niezgodna z formą wskazaną w poleceniu. ALBO\n• Nieuwzględnione co najmniej dwa elementy polecenia (inne niż forma).\nUwaga: jeżeli za wypowiedź przyznano 0 pkt w kryterium Realizacja tematu wypowiedzi,\nwe wszystkich pozostałych kryteriach przyznaje się 0 pkt.\n2. Elementy retoryczne\nOceniając wypowiedź ucznia w tym kryterium, należy rozważyć m.in., czy:\n• argumentacja w pracy jest wnikliwa\n• argumenty są poparte właściwymi przykładami\n• argumenty są przedstawione w sposób uporządkowany, np. są przedstawione od\nnajbardziej do najmniej ważnego albo są zapisane w porządku argument –\nkontrargument.\n5 pkt • Pogłębiona argumentacja.\n• Argumenty odwołujące się np. do faktów, logiki, emocji, zilustrowane\nodpowiednimi przykładami ORAZ/LUB wykorzystanie przykładów w funkcji\nargumentacyjnej.\n• Argumenty/przykłady uporządkowane, np. zhierarchizowane.\n4 pkt Praca spełnia wszystkie wymagania na 3 pkt i niektóre na 5 pkt.\nEgzamin ósmoklasisty z języka polskiego – termin główny 2022 r.\n3 pkt • Powierzchowna argumentacja; w wypowiedzi brak wnikliwości.\n• Niektóre argumenty zilustrowane odpowiednimi przykładami ORAZ/LUB\nwykorzystanie przykładów w funkcji argumentacyjnej.\n• Argumenty/przykłady częściowo uporządkowane.\n2 pkt Praca spełnia wszystkie wymagania na 1 pkt i niektóre na 3 pkt.\n1 pkt • Podjęta próba argumentowania.\n• Ograniczenie do wyliczenia powierzchownie omówionych przykładów,\npowiązanych z problemem określonym w temacie.\n0 pkt Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt.\n3. Kompetencje literackie i kulturowe\nOceniając wypowiedź ucznia w tym kryterium, należy rozważyć m.in., czy:\n• uczeń wykorzystał znajomość lektury obowiązkowej wskazanej w poleceniu (a także\ninnych tekstów – jeżeli polecenie tego wymagało) w sposób funkcjonalny, tzn. np. czy\nprzywołał w pracy takie wydarzenia albo omówił takie wątki, które istotnie wspierają jego\ntok rozumowania albo dobrze ilustrują to, o czym pisze\n• uczeń, pisząc np. o wydarzeniach z danej lektury, nie popełnił błędów, np. nie pomylił\nimion postaci, nie przypisał postaciom cech, których nie posiadają, bądź nie wymyślił\nwydarzeń, których w lekturze nie ma.\n2 pkt • Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej\nw poleceniu (oraz innego tekstu literackiego lub tekstu kultury, jeżeli ",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q19-page-18"
+        },
+        {
+          "type": "image",
+          "asset_id": "q19-page-19"
+        },
+        {
+          "type": "image",
+          "asset_id": "q19-page-20"
+        },
+        {
+          "type": "image",
+          "asset_id": "q19-page-21"
+        },
+        {
+          "type": "image",
+          "asset_id": "q19-page-22"
+        },
+        {
+          "type": "image",
+          "asset_id": "q19-page-24"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q19-page-18",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q19-page-18.webp",
+          "sha256": "770f3e35b9bb725535a8f740ef3a4db333b40ec5aca3f364424ad29507ba3a9c",
+          "alt": "Oryginalny układ zadania 19 z arkusza OPOP-100-2205, strona 18.",
+          "caption": "Zadanie 19 — oryginalny układ CKE, strona 18.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q19-page-19",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q19-page-19.webp",
+          "sha256": "8856cfdedf2a75e76e4a4f13ef759b8c4d294f1637d36fc5162e390ec8d043ab",
+          "alt": "Oryginalny układ zadania 19 z arkusza OPOP-100-2205, strona 19.",
+          "caption": "Zadanie 19 — oryginalny układ CKE, strona 19.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q19-page-20",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q19-page-20.webp",
+          "sha256": "522f06439fec272dae9be0445dfc63df4f2899898ca6062087c5d49efe237251",
+          "alt": "Oryginalny układ zadania 19 z arkusza OPOP-100-2205, strona 20.",
+          "caption": "Zadanie 19 — oryginalny układ CKE, strona 20.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q19-page-21",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q19-page-21.webp",
+          "sha256": "268ae3aa66d541b6b8d3b1a3557674917250448f8f0a4ad74f5de40f47351b7c",
+          "alt": "Oryginalny układ zadania 19 z arkusza OPOP-100-2205, strona 21.",
+          "caption": "Zadanie 19 — oryginalny układ CKE, strona 21.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q19-page-22",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q19-page-22.webp",
+          "sha256": "0813494ce22025a4c6989631f71f5b56fc2d1b90fefaf930b8e098f0c6d220da",
+          "alt": "Oryginalny układ zadania 19 z arkusza OPOP-100-2205, strona 22.",
+          "caption": "Zadanie 19 — oryginalny układ CKE, strona 22.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q19-page-24",
+          "path": "public/cke/2022/polish/opop-100-x-2205/q19-page-24.webp",
+          "sha256": "39e64daa3cad7415662c8a3c3495b56ae9af494b15a5c213dc35d52e7f9745f0",
+          "alt": "Oryginalny układ zadania 19 z arkusza OPOP-100-2205, strona 24.",
+          "caption": "Zadanie 19 — oryginalny układ CKE, strona 24.",
+          "mime_type": "image/webp"
+        }
+      ]
+    }
+  ]
+}

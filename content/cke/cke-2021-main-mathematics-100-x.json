@@ -1,0 +1,984 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2021-main-mathematics-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2021-main-mathematics-100-x",
+    "source_document_id": "OMAP-100-X-2105",
+    "source_pdf_sha256": "2c6596499a5d4cf2af70c8a8a520ba4343ce3b038405e20b435e25fd201dd074",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2021-2/",
+    "source_label": "CKE 2021 · matematyka · termin główny · wariant 100-X",
+    "exam_year": 2021,
+    "exam_session": "main",
+    "subject": "mathematics",
+    "variant_code": "100-X",
+    "question_count": 19,
+    "supplementary_sources": [
+      {
+        "id": "cke-2021-main-mathematics-100-x-rules",
+        "path": "content/cke/sources/2021/mathematics/OMAP-100-2105-zasady.pdf",
+        "sha256": "bb7fcabef76e95e922e11e8979bbf702b3262ccbd827f10ccbfc66c7023e347c",
+        "label": "Oficjalne zasady oceniania rozwiązań zadań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [],
+  "questions": [
+    {
+      "id": "cke-2021-main-mathematics-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Dane i statystyka",
+      "difficulty": 2,
+      "prompt": "Na diagramie słupkowym przedstawiono liczby medali zdobytych na czterech letnich\nigrzyskach olimpijskich przez reprezentację Polski.\n8\n7\n6\nila\n5\nd\ne złote\nm\n4\na srebrne\nb\nz\nc 3 brązowe\niL\n2\n1\n0\n2004 2008 2012 2016\nOceń prawdziwość podanych zdań, dotyczących medali zdobytych przez reprezentację\nPolski podczas letnich igrzysk olimpijskich w latach 2004–2016. Wybierz P, jeśli zdanie\njest prawdziwe, albo F – jeśli jest fałszywe.\nLiczba zdobytych złotych medali stanowi więcej niż jedną trzecią liczby\nP F\nwszystkich zdobytych medali.\nPodczas letnich igrzysk olimpijskich średnio zdobywano 3 złote medale. P F",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "FP"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nFP FP",
+      "solution_steps": [
+        "Klucz CKE: FP.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q01-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q01-page-4",
+          "path": "public/cke/2021/mathematics/omap-100-x-2105/q01-page-4.webp",
+          "sha256": "f22bc8fa12d96d3fa5d9e8a73a6fae72880a2495f598b8431241f8817fd6d4c6",
+          "alt": "Oryginalny układ zadania 1 z arkusza OMAP-100-2105, strona 4.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-mathematics-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Dane są cztery liczby 𝑥, 𝑦, 𝑡, 𝑢 zapisane za pomocą wyrażeń arytmetycznych:\n𝑥 = –62,5 + 30 𝑦 = –14,4 – 12,6 𝑡 = –12 ∶ 0,3 𝑢 = –8,02 ∙ 6\nKtóra z tych liczb jest największa? Wybierz właściwą odpowiedź spośród podanych.\nA. 𝑥 B. 𝑦 C. 𝑡 D. 𝑢",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nB D\n1 Załącznik nr 1 do rozporządzenia Ministra Edukacji Narodowej z dnia 20 marca 2020 r. w sprawie szczegółowych\nrozwiązań w okresie czasowego ograniczenia funkcjonowania jednostek systemu oświaty w związku\nz zapobieganiem, przeciwdziałaniem i zwalczaniem COVID-19 (Dz.U. poz. 493, z późn. zm.).\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q02-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q02-page-4",
+          "path": "public/cke/2021/mathematics/omap-100-x-2105/q02-page-4.webp",
+          "sha256": "2e936526cff32ad192f8a9fa88fb742b7125f65e6d7cd68074b2a61b90dae3d0",
+          "alt": "Oryginalny układ zadania 2 z arkusza OMAP-100-2105, strona 4.",
+          "caption": "Zadanie 2 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-mathematics-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Uzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz\nodpowiedź spośród oznaczonych literami C i D.\n3 3\nWartość wyrażenia + jest liczbą A B . A. mniejszą od 1 B. większą od 1\n7 5\n3 3\nWartość wyrażenia − jest liczbą C D . C. ujemną D. dodatnią\n7 5",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "BC"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nBC AD",
+      "solution_steps": [
+        "Klucz CKE: BC.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q03-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q03-page-4",
+          "path": "public/cke/2021/mathematics/omap-100-x-2105/q03-page-4.webp",
+          "sha256": "41179a9684aaeb82ab5d9a09bf4b6e2d15c9b1e5f198e8346fba08264095c711",
+          "alt": "Oryginalny układ zadania 3 z arkusza OMAP-100-2105, strona 4.",
+          "caption": "Zadanie 3 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-mathematics-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Potęgi",
+      "difficulty": 2,
+      "prompt": "Z reguł działań na potęgach wynika, że:\n(200 000)3 = (2 ∙ 100 000)3 = (2 ∙ 105)3 = 23 ∙ 1015\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nZ tych samych reguł wynika, że liczba (60 000 000)3 jest równa\nA. 63 · 1021 B. 6 · 1021 C. 63 · 1010 D. 6 · 1010",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "A"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nA D",
+      "solution_steps": [
+        "Klucz CKE: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q04-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q04-page-6",
+          "path": "public/cke/2021/mathematics/omap-100-x-2105/q04-page-6.webp",
+          "sha256": "7c885c65890099e0eec306c36d830edb26dde3f229122840152e5d5ed9a0ff98",
+          "alt": "Oryginalny układ zadania 4 z arkusza OMAP-100-2105, strona 6.",
+          "caption": "Zadanie 4 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-mathematics-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Czy iloczyn dowolnych pięciu kolejnych liczb całkowitych jest podzielny przez 10?\nWybierz odpowiedź A albo B i jej uzasadnienie spośród 1., 2. albo 3.\n1. nie musi znajdować się liczba podzielna przez 10.\nA. Tak,\nponieważ\nwśród dowolnych jest co najmniej jedna liczba nieparzysta i co\n2.\npięciu kolejnych najmniej jedna liczba parzysta.\nliczb całkowitych\nB. Nie, jest co najmniej jedna liczba podzielna przez 5\n3.\ni co najmniej jedna liczba parzysta.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "A3"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nA3 A2",
+      "solution_steps": [
+        "Klucz CKE: A3.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q05-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q05-page-6",
+          "path": "public/cke/2021/mathematics/omap-100-x-2105/q05-page-6.webp",
+          "sha256": "6902795ffeccab1b83e6f6d5fd6ad76295205c895a3fc00d5bf35d8e67793aa8",
+          "alt": "Oryginalny układ zadania 5 z arkusza OMAP-100-2105, strona 6.",
+          "caption": "Zadanie 5 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-mathematics-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Dane i statystyka",
+      "difficulty": 2,
+      "prompt": "Podatek od dochodów za rok 2016 w Polsce był obliczany według sposobów przedstawionych\nw poniższej tabeli.\nPodstawa obliczenia\nSposób obliczenia podatku\npodatku\nkwota mniejsza lub równa\n18% podstawy obliczenia podatku pomniejszone o 556,02 zł\n85 528 zł\nkwota większa niż\n14 839,02 zł plus 32% nadwyżki ponad 85 528 zł\n85 528 zł\nUzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz\nodpowiedź spośród oznaczonych literami C i D.\nW 2016 roku podstawa obliczenia podatku dla pana Jana wyniosła 84 500 zł. Wysokość\npodatku (w zł) od dochodu pana Jana opisuje wyrażenie A B .\nA. 0,18 ∙ 84 500 – 556,02 B. 0,18 ∙ (84 500 – 556,02)\nW 2016 roku podstawa obliczenia podatku dla pani Zofii wyniosła 97 300 zł. Wysokość podatku\n(w zł) od dochodu pani Zofii opisuje wyrażenie C D .\nC. 14 839,02 + 0,32 ּ 85 528 D. 14 839,02 + 0,32 ∙ (97 300 – 85 528)",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "AD"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nAD BD",
+      "solution_steps": [
+        "Klucz CKE: AD.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q06-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q06-page-6",
+          "path": "public/cke/2021/mathematics/omap-100-x-2105/q06-page-6.webp",
+          "sha256": "250a9da6b04f1dbdb6b617c24a0dd5cf9239a2fbab8c522c54e3ce68d15d3b85",
+          "alt": "Oryginalny układ zadania 6 z arkusza OMAP-100-2105, strona 6.",
+          "caption": "Zadanie 6 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-mathematics-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Do liczby (− √10) dodajemy 5.\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nOtrzymany wynik jest liczbą\nA. większą od 1.\nB. dodatnią mniejszą od 1.\nC. mniejszą od (–8).\nD. ujemną większą od (–8).\nInformacje do zadań 8. i 9.\nTrójki liczb naturalnych 𝑎, 𝑏 i 𝑐, które spełniają warunek 𝑎2 + 𝑏2 = 𝑐2, nazywamy trójkami\npitagorejskimi. Niektóre z nich znajdujemy z wykorzystaniem wzorów:\n𝑎 = 2𝑛 + 1 𝑏 = 2𝑛(𝑛 + 1) 𝑐 = 2𝑛2 + 2𝑛 + 1,\ngdzie 𝑛 oznacza dowolną liczbę naturalną (𝑛 ≥ 1). W zadaniach 8. i 9. liczby 𝑎, 𝑏 i 𝑐 są\nwyznaczone za pomocą tych wzorów.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "A"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nA D\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q07-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q07-page-8",
+          "path": "public/cke/2021/mathematics/omap-100-x-2105/q07-page-8.webp",
+          "sha256": "7756b6a7997d52303a0db043d5e70c447e0b21522370306564b024e04790bd35",
+          "alt": "Oryginalny układ zadania 7 z arkusza OMAP-100-2105, strona 8.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-mathematics-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Uzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz\nodpowiedź spośród oznaczonych literami C i D.\nLiczba 𝑎 zawsze będzie A B . A. parzysta B. nieparzysta\nLiczby 𝑏 i 𝑐 różnią się o C D . C. 1 D. 𝑛",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "BC"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nBC AD",
+      "solution_steps": [
+        "Klucz CKE: BC.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q08-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q08-page-8",
+          "path": "public/cke/2021/mathematics/omap-100-x-2105/q08-page-8.webp",
+          "sha256": "bfdf61741a0e59f43fe5de1a1b839a4440df0c439c7b28f53b7e2c76fc3f09f9",
+          "alt": "Oryginalny układ zadania 8 z arkusza OMAP-100-2105, strona 8.",
+          "caption": "Zadanie 8 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-mathematics-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nJeżeli najmniejsza z liczb 𝑎, 𝑏 i 𝑐 jest równa 9, to największa z tych liczb jest równa\nA. 41 B. 73 C. 145 D. 181",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "A"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nA D\nEgzamin ósmoklasisty z matematyki – termin główny 2021 r.",
+      "solution_steps": [
+        "Klucz CKE: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q09-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q09-page-8",
+          "path": "public/cke/2021/mathematics/omap-100-x-2105/q09-page-8.webp",
+          "sha256": "6e8578b8dab6ec1914ffa6d1ff181fdf530303ae673db9829972cf47fb101f82",
+          "alt": "Oryginalny układ zadania 9 z arkusza OMAP-100-2105, strona 8.",
+          "caption": "Zadanie 9 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-mathematics-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Dane i statystyka",
+      "difficulty": 2,
+      "prompt": "Ala kupiła trzy zeszyty i blok rysunkowy. Średnia arytmetyczna cen tych czterech artykułów\nbyła równa 6 zł. Zeszyty kosztowały łącznie 15 zł.\nIle kosztował blok rysunkowy? Wybierz właściwą odpowiedź spośród podanych.\nA. 4 zł B. 5 zł C. 8 zł D. 9 zł",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "D"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nD D",
+      "solution_steps": [
+        "Klucz CKE: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q10-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q10-page-10",
+          "path": "public/cke/2021/mathematics/omap-100-x-2105/q10-page-10.webp",
+          "sha256": "64b0421e22cd06b859a75316816147cef61315797152973e61f39afa0ec7d570",
+          "alt": "Oryginalny układ zadania 10 z arkusza OMAP-100-2105, strona 10.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-mathematics-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Prawdopodobieństwo",
+      "difficulty": 2,
+      "prompt": "W pewnej loterii wśród 150 losów co szósty był wygrywający, a pozostałe losy były puste.\nWyciągnięto 30 losów i żaden z nich nie był wygrywający.\nUzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz\nodpowiedź spośród oznaczonych literami C i D.\nNa loterię przygotowano A B losów wygrywających.\nA. 120 B. 25\nWyciągnięto jeszcze jeden los. Prawdopodobieństwo tego, że będzie to los wygrywający,\nwynosi C D .\n25 25\nC. D.\n120 125",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "BC"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nBC BD\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: BC.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q11-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q11-page-10",
+          "path": "public/cke/2021/mathematics/omap-100-x-2105/q11-page-10.webp",
+          "sha256": "d995322a8e9e7f4a9738782ae407f036b9befc5050b8f8eaa025321ca0dcb36c",
+          "alt": "Oryginalny układ zadania 11 z arkusza OMAP-100-2105, strona 10.",
+          "caption": "Zadanie 11 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-mathematics-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "W trójkącie ABC narysowano dwie wysokości: CD i AE, jak na rysunku. Kąt rozwarty pomiędzy\ntymi wysokościami jest równy 138°.\nC\nE\n.\n138°\nα .\nA D B\nJaką miarę ma kąt α zaznaczony na rysunku? Wybierz właściwą odpowiedź spośród\npodanych.\nA. 38° B. 42° C. 45° D. 48°",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "D"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nD A",
+      "solution_steps": [
+        "Klucz CKE: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q12-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q12-page-10",
+          "path": "public/cke/2021/mathematics/omap-100-x-2105/q12-page-10.webp",
+          "sha256": "a35b269ca8543ce8e14f82763a40ed63216a3c560ceeffc26e592bc521fc0dbf",
+          "alt": "Oryginalny układ zadania 12 z arkusza OMAP-100-2105, strona 10.",
+          "caption": "Zadanie 12 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-mathematics-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        12
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Listewkę o długości 50 cm planowano pociąć na równe części. Iwona zaproponowała podział\nna kawałki po 5 cm i zaznaczyła na listewce czerwonym kolorem linie cięcia. Agata chciała\npodzielić tę samą listewkę na części po 2 cm i linie cięcia zaznaczyła na zielono.\nIle razy linia czerwona pokrywała się z linią zieloną? Wybierz właściwą odpowiedź\nspośród podanych.\nA. 5 B. 4 C. 3 D. 2",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nB C",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q13-page-12"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q13-page-12",
+          "path": "public/cke/2021/mathematics/omap-100-x-2105/q13-page-12.webp",
+          "sha256": "c26c5bfa55798ea6cf0c1399803c93184a04195b5f999ce919d490f910f7635a",
+          "alt": "Oryginalny układ zadania 13 z arkusza OMAP-100-2105, strona 12.",
+          "caption": "Zadanie 13 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-mathematics-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        12
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Skrzynia ma kształt prostopadłościanu. Podłoga skrzyni ma wymiary 1,5 m i 1,2 m,\n3\na wysokość skrzyni jest równa 1 m. Piasek wsypany do skrzyni zajmuje jej pojemności.\n4\nIle metrów sześciennych piasku wsypano do skrzyni? Wybierz właściwą odpowiedź\nspośród podanych.\nA. 1,8 m3 B. 0,45 m3 C. 1,35 m3 D. 2,4 m3",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "C"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nC B",
+      "solution_steps": [
+        "Klucz CKE: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q14-page-12"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q14-page-12",
+          "path": "public/cke/2021/mathematics/omap-100-x-2105/q14-page-12.webp",
+          "sha256": "fbd51fa3ef4cd66d66eea06464ec6adf582bc18c6b0d73b09e56a2a83a0ac5d2",
+          "alt": "Oryginalny układ zadania 14 z arkusza OMAP-100-2105, strona 12.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-mathematics-100-x-q15",
+      "number": "15",
+      "sort_order": 15,
+      "source_pages": [
+        12
+      ],
+      "type": "long_text",
+      "topic": "Geometria płaska",
+      "difficulty": 2,
+      "prompt": "Staś ma dwa jednakowe klocki w kształcie ostrosłupa prawidłowego czworokątnego, każdy\no polu powierzchni całkowitej 80 cm2. Podstawa i ściana boczna klocka mają równe pola. Staś\nskleił oba klocki podstawami tak, jak na rysunku.\nJakie pole powierzchni ma bryła otrzymana przez Stasia? Wybierz właściwą odpowiedź\nspośród podanych.\nA. 112 cm2 B. 128 cm2 C. 144 cm2 D. 160 cm2",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nB C\nEgzamin ósmoklasisty z matematyki – termin główny 2021 r.\nZADANIA OTWARTE\nUwagi\n• Akceptowane są wszystkie odpowiedzi merytorycznie poprawne, spełniające warunki\nzadania.\n• Za rozwiązanie zadania na danym etapie uczeń może otrzymać punkty tylko wtedy, gdy\nprzedstawia poprawne sposoby rozwiązania na wszystkich wcześniejszych etapach.\n• Jeżeli na dowolnym etapie rozwiązania zadania uczeń popełnia jeden lub więcej błędów\nrachunkowych, ale stosuje poprawne sposoby obliczania, to ocenę rozwiązania obniża się\no 1 punkt.\n• Jeżeli w zadaniach 17. 18. i 19. uczeń podaje tylko poprawny końcowy wynik, to otrzymuje\n0 punktów.\n• W pracy ucznia uprawnionego do dostosowanych kryteriów oceniania dopuszcza się:\n1. lustrzane zapisywanie cyfr i liter (np. 6 – 9, ...)\n2. gubienie liter, cyfr, nawiasów\n3. problemy z zapisywaniem przecinków w liczbach dziesiętnych\n4. błędy w zapisie działań pisemnych (dopuszczalne drobne błędy rachunkowe)\n5. luki w zapisie obliczeń – obliczenia pamięciowe\n6. uproszczony zapis równania i przekształcenie go w pamięci; brak opisu\nniewiadomych\n7. niekończenie wyrazów\n8. problemy z zapisywaniem jednostek (np.○C – OC, ...)\n9. błędy w przepisywaniu\n10. chaotyczny zapis operacji matematycznych\n11. mylenie indeksów górnych i dolnych (np. x2 – x2, m2 – m2, ...).\nEgzamin ósmoklasisty z matematyki – termin główny 2021 r.",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q15-page-12"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q15-page-12",
+          "path": "public/cke/2021/mathematics/omap-100-x-2105/q15-page-12.webp",
+          "sha256": "0cbf85e4801029218fd68c116e451bc861ffc967c777f5ede086821676857d72",
+          "alt": "Oryginalny układ zadania 15 z arkusza OMAP-100-2105, strona 12.",
+          "caption": "Zadanie 15 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-mathematics-100-x-q16",
+      "number": "16",
+      "sort_order": 16,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 3,
+      "prompt": "Paweł powiedział, że podzieli tabliczkę czekolady w taki sposób, że bratu przypadnie\n𝟏 𝟓 𝟏\ncałej tabliczki, siostrze całej tabliczki, a jemu całej tabliczki. Czy taki podział\n𝟐 𝟏𝟐 𝟔\ntabliczki czekolady jest możliwy? Uzasadnij swoją odpowiedź.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "Uwagi"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 punkty – pełne rozwiązanie\nprzedstawienie poprawnego uzasadnienia, że taki podział tabliczki czekolady jest niemożliwy,\nczyli:\n• zapisanie łącznej wartości części potrzebnej tabliczki czekolady w postaci ułamka\n13\nlub albo sumy ułamków z treści zadania poprawnie sprowadzonych do wspólnego\n12\n1\nmianownika\n112\nLUB\n• poprawne wyznaczenie łącznej wartości części tabliczki czekolady, którą otrzyma\ndwoje z trojga rodzeństwa i poprawne wyznaczenie pozostałej części tabliczki\nczekolady\nLUB\n• przedstawienie na rysunku części tabliczki czekolady zaplanowanej dla dwojga\nrodzeństwa i poprawne ustalenie pozostałej części tabliczki czekolady ( albo\n1 1\nalbo )\n12 3\n5\ni sformułowanie poprawnego wniosku.\n12\n1 punkt\nprzedstawienie poprawnego sposobu obliczenia łącznej wartości wszystkich części tabliczki\nczekolady, które wskazał Paweł\nLUB\nprzedstawienie poprawnego sposobu obliczenia łącznej wartości części tabliczki czekolady,\nktórą otrzyma dwoje z trojga rodzeństwa i poprawny sposób obliczenia pozostałej części\ntabliczki czekolady\nLUB\nprzedstawienie na rysunku części tabliczki czekolady zaplanowanych dla dwojga rodzeństwa\ni ustalenie pozostałej części tabliczki czekolady ( albo albo ).\n1 1 5\n0 punktów 12 3 12\nrozwiązanie błędne albo brak rozwiązania.\nZasady oceniania rozwiązań zadań\nUwagi\n• Jeżeli uczeń przyjmuje, że czekolada składa się z określonej liczby kostek (kawałków),\nsprawdza dla tej liczby wszystkie warunki zadania, nie popełnia błędów rachunkowych\ni formułuje poprawny wniosek, to za takie rozwiązanie przyznaje się 2 punkty.\n• Jeżeli uczeń przyjmuje, że czekolada składa się z określonej liczby kostek (kawałków),\nsprawdza dla tej liczby wszystkie warunki zadania, popełnia błędy rachunkowe i formułuje\nwniosek z konsekwencją popełnionych błędów, to za takie rozwiązanie przyznaje się\n1 punkt.\n• Jeżeli uczeń poprawnie zaokrągla wszystkie wielkości podane w zadaniu, oblicza sumę\ndla tych zaokrągleń, a następnie doprowadza rozwiązanie zadania do końca, to za takie\nrozwiązanie (niezależnie od poprawności rachunkowej) przyznaje się 1 punkt.\n• Jeżeli uczeń przedstawia na rysunku części tabliczki czekolady zaplanowane dla dwojga\nrodzeństwa i błędnie ustala pozostałą część tabliczki czekolady, to za takie rozwiązanie\nprzyznaje się 0 punktów.\n• Jeżeli uczeń udziela poprawnej odpowiedzi bez uzasadnienia jej, czyli odniesienia się do\npoprawnej zależności między odpowiednimi ułamkami, to otrzymuje 0 punktów.\nPrzykładowe rozwiązania ocenione na 2 punkty\nI sposób\n1 5 1 13\n2O+dp1o2w+ied6ź=: T1a2k>i p1odział tabliczki czekolady nie jest możliwy.\nII sposób\n– część tabliczki czekolady pozostała dla Pawła i jego siostry\n1 1\n1 − 2 = 2\n– część tabliczki czekolady pozostała dla Pawła\n1 5 1\n2 − 12 = 12\n1 1\n1O2d<po6wiedź: Taki podział tabliczki czekolady nie jest możliwy.\nIII sposób\n– cała tabliczka czekolady\n– część tabliczki czekolady pozostała dla Pawła i jego siostry\n𝑥𝑥\n1 1\n𝑥𝑥 − 2 𝑥𝑥 = 2𝑥𝑥\n– część tabliczki czekolady zaplanowana dla Pawła i jego siostry\n5 1 7\n12 𝑥𝑥 + 6 𝑥𝑥 = 12 𝑥𝑥\n7 1\n1O2d𝑥𝑥po>w2ie𝑥𝑥dź: Taki podział tabliczki czekolady nie jest możliwy.\nEgzamin ósmoklasisty z matematyki – termin główny 2021 r.\nIV sposób\n5 1 1\n1\n<\nOdpowiedź: Taki podział tabliczki czekolady nie jest mo1ż2liwy. 12 6\n2\nV sposób\n1 6 5 1 1\n=\n<\n2 12 12 12 6\nOdpowiedź: Taki podział tabliczki czekolady nie jest możliwy.",
+      "solution_steps": [
+        "Klucz CKE: Uwagi.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q16-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q16-page-14",
+          "path": "public/cke/2021/mathematics/omap-100-x-2105/q16-page-14.webp",
+          "sha256": "43ac4b4667dfd00ee48d5da81f983476800b0357f9ec157369230a305e9693f7",
+          "alt": "Oryginalny układ zadania 16 z arkusza OMAP-100-2105, strona 14.",
+          "caption": "Zadanie 16 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-mathematics-100-x-q17",
+      "number": "17",
+      "sort_order": 17,
+      "source_pages": [
+        15
+      ],
+      "type": "long_text",
+      "topic": "Prędkość, droga i czas",
+      "difficulty": 3,
+      "prompt": "Adam mieszka w miejscowości Bocianowo,\nŻabno\na jego kolega Bartek – w miejscowości\n•\nŻabno. Adam umówił się z Bartkiem w Żabnie\nna godzinę 18:00. Wyjechał z Bocianowa 1 km\nna skuterze o godzinie 17:20. Średnia\nkm\nprędkość jazdy Adama była równa 25 .\nh\nNa kwadratowej siatce Adam przedstawił\nschemat trasy, którą jechał.\nO której godzinie Adam dotarł na spotkanie •\nBajorko\nz Bartkiem? Zapisz obliczenia.\n• •\nBocianowo Stawisko\nOMAP-100-2105 Strona 15 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "Uwagi"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n3 punkty – pełne rozwiązanie\npoprawny sposób wyznaczenia godziny przybycia Adama na spotkanie, prawidłowe obliczenia\noraz prawidłowy wynik (17:56).\n2 punkty\npoprawny sposób wyznaczenia czasu przejazdu z Bocianowa do Żabna, czyli\n(1) zastosowanie poprawnego związku między prędkością a drogą całkowitą i czasem\n(z zastosowaniem wzoru lub własności wielkości proporcjonalnych), i (2) poprawny sposób\nobliczenia drogi (uwzględnienie długości trzech odcinków drogi, w tym prawidłowe\nzastosowanie twierdzenia Pitagorasa do obliczenia długości odcinka drogi od Stawiska do\nBajorka albo ustalenie bez obliczeń długości tego odcinka jako 5 km).\nZasady oceniania rozwiązań zadań\n1 punkt\npoprawny sposób wyznaczenia długości odcinka drogi od Stawiska do Bajorka (prawidłowe\nzastosowanie twierdzenia Pitagorasa albo ustalenie bez obliczeń długości tego odcinka drogi\njako 5 km)\nLUB\npoprawny sposób obliczenia czasu przejazdu co najmniej jednego poprawnie wyznaczonego\nodcinka drogi\nLUB\npoprawny sposób obliczenia drogi przebytej w ciągu godziny.\n2\n3\n0 punktów\nrozwiązanie błędne albo brak rozwiązania.\nUwagi\n• Jeżeli uczeń ustala długość drogi ze Stawiska do Bajorka na podstawie stosowania\nskali lub szacowania długości odcinka łączącego te miejscowości, poprawnie ustala\ndługości pozostałych odcinków drogi i stosuje poprawny sposób obliczenia czasu\nprzejazdu z Bocianowa do Żabna i doprowadza rozwiązanie zadania do końca bez\nbłędów rachunkowych, to za takie rozwiązanie przyznaje się 2 punkty.\n• Jeżeli uczeń ustala długość drogi ze Stawiska do Bajorka na podstawie stosowania\nskali lub szacowania długości odcinka łączącego te miejscowości, poprawnie ustala\ndługości pozostałych odcinków drogi i stosuje poprawny sposób obliczenia czasu\nprzejazdu z Bocianowa do Żabna, i doprowadza rozwiązanie zadania do końca, ale\npopełnia błędy rachunkowe, to za takie rozwiązanie przyznaje się 1 punkt.\n• Jeżeli uczeń stosuje poprawny sposób obliczenia czasu przejazdu błędnie ustalonej\ndrogi z Bocianowa do Żabna i doprowadza rozwiązanie zadania do końca, to za takie\nrozwiązanie (niezależnie od poprawności rachunkowej) przyznaje się 1 punkt.\n• Jeżeli uczeń stosuje błędną metodę wyznaczania drogi z Bocianowa do Żabna albo\nbłędnie ustala długość tej drogi bez obliczeń, a na dalszym etapie rozwiązania zadania\nwyznacza czas dla innej drogi, to otrzymuje 0 punktów.\n• Błąd przy zamianie jednostek traktuje się jako błąd rachunkowy.\nPrzykładowe rozwiązania ocenione na 3 punkty\nŻabno\nI sposób •\nZ twierdzenia Pitagorasa\n1 km\n2 (2km) 2\n𝑥𝑥 = 4 + 3\n𝑥𝑥 = 5 – długość drogi z Bocianowa\ndo Żabna (km)\n3t –+ c5z +a s7 j=a z1d5y z Bocianowa do Żabna (h)\n• Bajorko\nx\n15 km 3\n𝑡𝑡 = = h = 36 min\nkm 5\n25 • •\nh\n17:20 17:56 Bocianowo Stawisko\n+ 36 min\nOdpowie�d⎯⎯ź⎯: ⎯A⎯d�am dotarł na spotkanie z Bartkiem o godzinie 17:56.\nEgzamin ósmoklasisty z matematyki – termin główny 2021 r.\nII sposób\nZ twierdzenia Pitagorasa\n2 (2km) 2\n𝑥𝑥 = 4 + 3\n𝑥𝑥 = 5 – długość drogi z Bocianowa do Żabna (km)\n3 + k5m + 7– –=– 1–5–\nkm –––––\n25 km ––––– 1 h = 60 min\n5 12 min\n15 36 min\n17:20 17:56\n+ 36 min\nOdpowiedź: Adam dotarł na spotkanie z Bartkiem o godzinie 17:56.\n�⎯⎯⎯⎯⎯�\nIII sposób\nZ twierdzenia Pitagorasa\n2 (2km) 2\n𝑥𝑥 = 4 + 3\n𝑥𝑥 = 5 – długość drogi z Bocianowa do Żabna (km)\n3 + k5m + 7– –=– 1–5–\n(min) – czas potrzebny na pokonanie 1 km\n25 (m1in h) =– c6z0a sm piontrzebny na pokonanie 15 km\n6 0 : 25 = 2,4\n15 · 2,4 = 36\n17:20 17:56\n+ 36 min\nOdpowiedź: Adam dotarł na spotkanie z Bartkiem o godzinie 17:56.\n�⎯⎯⎯⎯⎯�\nIV sposób\nZ twierdzenia Pitagorasa\n2 (2km) 2\n𝑥𝑥 = 4 + 3\n𝑥𝑥 = 5 – długość drogi z Bocianowa do Żabna (km)\n3N a+ 5d o+t a7r c=i e1 5n a spotkanie Adam ma 40 minut, czyli godziny.\n2\n3\n– droga pokonana w czasie 40 minut\nkm 2 50 2\n𝑠𝑠 = 25 h ∙ 3 h = 3 km = 163 km\nW ciągu 40 minut Adam może przejechać o km więcej niż potrzebuje.\n2\n13\n5\nkm 5 1 1\n3\n𝑡𝑡 = = ∙ h = h = 4 min\nkm 3 25 15\n25\nOdpowiedhź: Adam dotarł na spotkanie z Bartkiem o godzinie 17:56.\nEgzamin ósmoklasisty z matematyki – termin główny 2021 r.",
+      "solution_steps": [
+        "Klucz CKE: Uwagi.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q17-page-15"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q17-page-15",
+          "path": "public/cke/2021/mathematics/omap-100-x-2105/q17-page-15.webp",
+          "sha256": "600c25248e55df646995fe16404a2f480363f3f4fc412f5797e58faf823bd53b",
+          "alt": "Oryginalny układ zadania 17 z arkusza OMAP-100-2105, strona 15.",
+          "caption": "Zadanie 17 — oryginalny układ CKE, strona 15.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-mathematics-100-x-q18",
+      "number": "18",
+      "sort_order": 18,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 3,
+      "prompt": "Ania chciała kupić 10 jednakowych puszek karmy dla psa, ale zabrakło jej 11 złotych.\nKupiła 6 takich puszek karmy i zostało jej 3,40 złotych. Ile kosztuje jedna puszka karmy?\nZapisz obliczenia.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "Uwaga"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 punkty – pełne rozwiązanie\nzapisanie poprawnego równania z jedną niewiadomą prowadzącego do obliczenia ceny jednej\npuszki karmy, prawidłowe obliczenia oraz prawidłowy wynik (3,60 zł)\nLUB\nzapisanie poprawnych wyrażeń arytmetycznych prowadzących do obliczenia ceny jednej\npuszki karmy, prawidłowe obliczenia oraz prawidłowy wynik (3,60 zł)\nLUB\nsprawdzenie wszystkich warunków zadania dla co najmniej jednej kwoty posiadanej przez\nAnię z uwzględnieniem kwoty 25 zł, prawidłowe obliczenia i podanie prawidłowej ceny jednej\npuszki karmy (3,60 zł)\nLUB\nsprawdzenie wszystkich warunków zadania dla co najmniej jednej ceny puszki karmy\nz uwzględnieniem kwoty 3,60 zł, prawidłowe obliczenia i podanie prawidłowej ceny jednej\npuszki karmy (3,60 zł).\n1 punkt\nzapisanie poprawnego równania z jedną niewiadomą prowadzącego do obliczenia ceny jednej\npuszki karmy\nLUB\nzapisanie poprawnych wyrażeń arytmetycznych prowadzących do obliczenia ceny jednej\npuszki karmy\nLUB\nzapisanie poprawnego równania z jedną niewiadomą prowadzącego do obliczenia kwoty\nposiadanej przez Anię\nLUB\nsprawdzenie wszystkich warunków zadania dla co najmniej dwóch różnych kwot posiadanych\nprzez Anię bez uwzględnienia kwoty 25 zł i prawidłowe obliczenia\nLUB\nsprawdzenie wszystkich warunków zadania dla co najmniej dwóch różnych cen puszek karmy\nbez uwzględnienia kwoty 3,60 zł i prawidłowe obliczenia.\n0 punktów\nrozwiązanie błędne albo brak rozwiązania.\nUwaga\nNie ocenia się stosowania jednostki.\nEgzamin ósmoklasisty z matematyki – termin główny 2021 r.\nPrzykładowe rozwiązania ocenione na 2 punkty\nI sposób\nx – cena (w zł) jednej puszki karmy dla psa\n10x – 11 = 6x + 3,40\n4x = 14,40\nx = 3,60\nOdpowiedź: Jedna puszka karmy dla psa kosztuje 3,60 zł.\nII sposób\nNa zakup 10 puszek karmy dla psa zabrakło 11 zł, a po zakupie 6 takich puszek karmy zostało\nAni 3,40 zł, czyli jedna puszka karmy dla psa kosztuje: (11 + 3,40) : 4 = 3,60 (zł).\nOdpowiedź: Jedna puszka karmy dla psa kosztuje 3,60 zł.\nIII sposób\nx – kwota (w zł), którą ma Ania\nx + 11 –––– koszt zakupu 10 puszek karmy\nx – 3,40 –––– koszt zakupu 6 puszek karmy\n6x + 66 = 10x – 34\nx = 25\n25 + 11 = 36\n36 zł –––– koszt zakupu 10 puszek karmy\n3,60 zł –––– koszt zakupu 1 puszki karmy\nOdpowiedź: Jedna puszka karmy dla psa kosztuje 3,60 zł.\nIV sposób\nx – cena 1 puszki karmy\nx (zł) 3,00 3,50 3,60 3,70 4,00\n10x (zł) 30,00 35,00 36,00 37,00 40,00\nkwota Ani (zł) 19,00 24,00 25,00 26,00 29,00\n6x (zł) 18,00 21,00 21,60 22,20 24,00\nreszta po zakupie\n1,00 3,00 3,40 3,80 5,00\n6 puszek (zł)\nwniosek NIE NIE TAK NIE NIE\nOdpowiedź: Jedna puszka karmy dla psa kosztuje 3,60 zł.\nV sposób\ny – kwota, którą ma Ania\ny (zł) 20,00 25,00 26,00\n10x (zł) 31,00 36,00 37,00\ncena 1 puszki (zł) 3,10 3,60 3,70\n6x (zł) 18,60 21,60 22,20\nreszta po zakupie\n1,40 3,40 3,80\n6 puszek (zł)\nwniosek NIE TAK NIE\nOdpowiedź: Jedna puszka karmy dla psa kosztuje 3,60 zł.\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: Uwaga.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q18-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q18-page-16",
+          "path": "public/cke/2021/mathematics/omap-100-x-2105/q18-page-16.webp",
+          "sha256": "f39599fb245f3e0cc30ea920adbe0aaf834b50be2fd94e8a9da99094165ae446",
+          "alt": "Oryginalny układ zadania 18 z arkusza OMAP-100-2105, strona 16.",
+          "caption": "Zadanie 18 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2021-main-mathematics-100-x-q19",
+      "number": "19",
+      "sort_order": 19,
+      "source_pages": [
+        17
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 3,
+      "prompt": "Dany jest prostokąt ABCD o wymiarach 12 cm i 16 cm. Odcinek AC jest przekątną tego\nprostokąta. Odcinek DS jest wysokością trójkąta ACD (patrz rysunek).\nD C\nS\nA B\nOblicz długość odcinka DS. Zapisz obliczenia.\nOMAP-100-2105 Strona 17 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "Egzamin ósmoklasisty z matematyki – termin główny 2021 r."
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n3 punkty – pełne rozwiązanie\npoprawny sposób wyznaczenia długości odcinka DS, prawidłowe obliczenia oraz prawidłowy\nwynik (9,6 cm).\n2 punkty\npoprawny sposób wyznaczenia długości odcinka DS, czyli:\n• porównanie wyrażenia opisującego pole trójkąta ACD przy użyciu długości\nprzyprostokątnych z wyrażeniem opisującym pole trójkąta ACD przy użyciu długości\nodcinka DS i długości przeciwprostokątnej AC wyznaczonej poprawnym sposobem\nALBO\n• porównanie wyrażenia opisującego pole trójkąta CDE przy użyciu długości boku DC\ni wysokości opuszczonej na ten bok z wyrażeniem opisującym pole trójkąta CDE przy\nużyciu długości odcinka DS i długości połowy przeciwprostokątnej AC wyznaczonej\npoprawnym sposobem.\n1 punkt\npoprawny sposób obliczenia długości przekątnej AC, czyli poprawne zastosowanie\ntwierdzenia Pitagorasa albo ustalenie bez obliczeń długości tego odcinka jako 20 cm\nLUB\npoprawny sposób wyznaczenia pola trójkąta ACD, czyli zapisanie poprawnego wyrażenia\narytmetycznego albo ustalenie bez obliczeń pola trójkąta ACD jako 96 cm2\nLUB\npoprawny sposób wyznaczenia pola trójkąta CDE, czyli zapisanie poprawnego wyrażenia\narytmetycznego albo ustalenie bez obliczeń pola trójkąta jako 48 cm2.\n0 punktów\nrozwiązanie błędne albo brak rozwiązania.\nEgzamin ósmoklasisty z matematyki – termin główny 2021 r.\nUwagi\n• Jeżeli uczeń na podstawie dokonanych pomiarów (bez rachunków) odczytuje\nz rysunku prawidłową długość odcinka DS, to nie uznaje się sposobu wyznaczenia\ndługości tego odcinka za poprawny.\n• Jeżeli uczeń stosuje jednostki, to ich poprawność ocenia się tylko w wyniku końcowym.\nJeżeli uczeń zapisuje niewłaściwą jednostkę w wyniku końcowym, to traktuje się to jako\nbłąd rachunkowy.\nPrzykładowe rozwiązania ocenione na 3 punkty\nI sposób\nKorzystając z twierdzenia Pitagorasa, mamy:\n122 + 162 = |AC|2\n|AC| = 20 cm\n1\n𝑃𝑃𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴 = 𝑃𝑃𝐴𝐴𝐴𝐴𝐴𝐴\n2\n1 1\n∙ 12 ∙ 16 = cm ∙ 20 ∙ |𝐷𝐷𝐷𝐷|\n2 2\n|O𝐷𝐷d𝐷𝐷p|o=wie9d,6ź: Długość odcinka DS jest równa 9,6 cm.\nII sposób\nKorzystając z twierdzenia Pitagorasa, mamy:\nD 12 cm C\n122 + 162 = |AC|2\n|AC| = 20 cm\n|EC| = 10 cm\nS\nE\n16 cm\n1\n𝑃𝑃𝐴𝐴𝐷𝐷𝐴𝐴 = ∙ 12 ∙ 8 = 48 8 cm\n2\n10 ∙ |𝐷𝐷𝐷𝐷| A B\n48 = (cm)\n2\n|O𝐷𝐷d𝐷𝐷p|o=wi9e,d6ź: Długość odcinka DS jest równa 9,6 cm.",
+      "solution_steps": [
+        "Klucz CKE: Egzamin ósmoklasisty z matematyki – termin główny 2021 r..",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q19-page-17"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q19-page-17",
+          "path": "public/cke/2021/mathematics/omap-100-x-2105/q19-page-17.webp",
+          "sha256": "4b385b5839df9fa0ea6cb9bc10ca65257c3310807f251d38e5ff4a6ecc78e3f9",
+          "alt": "Oryginalny układ zadania 19 z arkusza OMAP-100-2105, strona 17.",
+          "caption": "Zadanie 19 — oryginalny układ CKE, strona 17.",
+          "mime_type": "image/webp"
+        }
+      ]
+    }
+  ]
+}

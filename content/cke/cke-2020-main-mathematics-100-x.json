@@ -1,0 +1,1117 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2020-main-mathematics-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2020-main-mathematics-100-x",
+    "source_document_id": "OMAP-100-2004",
+    "source_pdf_sha256": "9944983e5756a058dca0b9e4bf7c33a582ca214f40a6fa8508e5c2d0d997a5d8",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2020-2/",
+    "source_label": "CKE 2020 · matematyka · termin główny · wariant 100-X",
+    "exam_year": 2020,
+    "exam_session": "main",
+    "subject": "mathematics",
+    "variant_code": "100-X",
+    "question_count": 21,
+    "supplementary_sources": [
+      {
+        "id": "cke-2020-main-mathematics-100-x-answer-card",
+        "path": "content/cke/sources/2020/mathematics/karta_rozwiazan_OMAP-100-2004.pdf",
+        "sha256": "cc12b9d0f9610271035202bf27f32054723f05d30a5d5bae8e7f0f53a4071f4a",
+        "label": "Karta odpowiedzi"
+      },
+      {
+        "id": "cke-2020-main-mathematics-100-x-rules",
+        "path": "content/cke/sources/2020/mathematics/OMAP-100-2004-zasady.pdf",
+        "sha256": "a6aa098e06b2e02f43be9b8d0fb3b3bca2292ab58d3a1ddd449a740366070f54",
+        "label": "Oficjalne zasady oceniania rozwiązań zadań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [],
+  "questions": [
+    {
+      "id": "cke-2020-main-mathematics-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Dane i statystyka",
+      "difficulty": 2,
+      "prompt": "Rowerzysta uczestniczył w rajdzie rowerowym. Całą trasę rajdu pokonał w ciągu czterech dni.\nW tabeli poniżej przedstawiono długości kolejnych etapów trasy, które przebył każdego dnia.\nDługość kolejnych\nDzień etapów trasy\n(w km)\nponiedziałek 26\nwtorek 27\nśroda 21\nczwartek 31\nUzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz\nodpowiedź spośród oznaczonych literami C i D.\nW poniedziałek i wtorek rowerzysta przejechał łącznie A B długości całej trasy rajdu.\nA. więcej niż 50% B. mniej niż 50%\nW środę rowerzysta przejechał C D długości całej trasy rajdu.\n1 1\nC. D.\n4 5",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "AD"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nAD BD\n1 Rozporządzenie Ministra Edukacji Narodowej z dnia 27 sierpnia 2012 r. w sprawie podstawy\nprogramowej wychowania przedszkolnego oraz kształcenia ogólnego w poszczególnych typach szkół\n(Dz.U. z 2012 r. poz. 977, ze zm.); II etap edukacyjny: klasy IV–VI.\n2 Rozporządzenie Ministra Edukacji Narodowej z dnia 14 lutego 2017 r. w sprawie podstawy\nprogramowej wychowania przedszkolnego oraz podstawy programowej kształcenia ogólnego dla\nszkoły podstawowej, w tym dla uczniów z niepełnosprawnością intelektualną w stopniu umiarkowanym\nlub znacznym, kształcenia ogólnego dla branżowej szkoły I stopnia, kształcenia ogólnego dla szkoły\nspecjalnej przysposabiającej do pracy oraz kształcenia ogólnego dla szkoły policealnej (Dz.U.\nz 2017 r. poz. 356, ze zm.); II etap edukacyjny: klasy VII i VIII.\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: AD.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q01-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q01-page-4",
+          "path": "public/cke/2020/mathematics/omap-100-x-2004/q01-page-4.webp",
+          "sha256": "df8b6a87db5b77c5cc35c1be978abf0fa477ef302a74ab98f68e394eb1612d95",
+          "alt": "Oryginalny układ zadania 1 z arkusza OMAP-100-2004, strona 4.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-mathematics-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n( )\n5 2 3\nWartość wyrażenia − ⋅ − jest równa\n7 7 2\n15 9 2 8\nA. − B. − C. D.\n14 14 7 7",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "D"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nD A",
+      "solution_steps": [
+        "Klucz CKE: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q02-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q02-page-4",
+          "path": "public/cke/2020/mathematics/omap-100-x-2004/q02-page-4.webp",
+          "sha256": "02b3bbc00c843a6f778ecacbfffb8943421e7499986736cd55adfd1ae90f4bcb",
+          "alt": "Oryginalny układ zadania 2 z arkusza OMAP-100-2004, strona 4.",
+          "caption": "Zadanie 2 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-mathematics-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Trzej właściciele firmy – Adam, Janusz i Oskar – kupili samochód dostawczy za kwotę\n154 000 zł. Kwoty wpłacone przez Adama, Janusza i Oskara są – odpowiednio – w stosunku\n2 : 3 : 6.\nJaką kwotę wpłacił Janusz? Wybierz właściwą odpowiedź spośród podanych.\nA. 14 000 zł B. 28 000 zł C. 42 000 zł D. 84 000 zł",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "C"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nC B\nEgzamin ósmoklasisty z matematyki – termin główny 2020 r.",
+      "solution_steps": [
+        "Klucz CKE: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q03-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q03-page-4",
+          "path": "public/cke/2020/mathematics/omap-100-x-2004/q03-page-4.webp",
+          "sha256": "7745dbf5d25f3f3270cdd461cea24a3d6c2b1f546f5c9eb49aeb0d4e054ece3e",
+          "alt": "Oryginalny układ zadania 3 z arkusza OMAP-100-2004, strona 4.",
+          "caption": "Zadanie 3 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-mathematics-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Na przedstawionym poniżej fragmencie osi liczbowej oznaczono cztery punkty: R, S, T, W.\nWspółrzędne punktów S i W są równe 287 i 311. Odcinek RW jest podzielony na pięć równych\nczęści.\nR S T W\n287 311\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli\njest fałszywe.\nWspółrzędne punktów R i T różnią się o 24. P F\nWspółrzędna punktu R jest równa 271. P F",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "PP"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nPP PP",
+      "solution_steps": [
+        "Klucz CKE: PP.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q04-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q04-page-6",
+          "path": "public/cke/2020/mathematics/omap-100-x-2004/q04-page-6.webp",
+          "sha256": "4cc0d20a40f994b5656939aceb9211773d592da9afaa28bd01bb2bd43068a5e3",
+          "alt": "Oryginalny układ zadania 4 z arkusza OMAP-100-2004, strona 6.",
+          "caption": "Zadanie 4 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-mathematics-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        6,
+        8
+      ],
+      "type": "long_text",
+      "topic": "Prędkość, droga i czas",
+      "difficulty": 2,
+      "prompt": "Pociąg o długości l = 150 m przejechał przez tunel o długości d = 350 m ze stałą prędkością\nm\nv = 20 .\ns\nl\nRysunek 1.\nRysunek 2.\nIle czasu upłynęło od momentu wjazdu czoła pociągu do tunelu (rysunek 1.) do momentu\nwyjazdu z tunelu końca ostatniego wagonu (rysunek 2.)? Wybierz właściwą odpowiedź\nspośród podanych.\nA. 7,5 s B. 17,5 s C. 25 s D. 36 s",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "C"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nZasady oceniania rozwiązań zadań\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nC B",
+      "solution_steps": [
+        "Klucz CKE: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q05-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q05-page-6",
+          "path": "public/cke/2020/mathematics/omap-100-x-2004/q05-page-6.webp",
+          "sha256": "1e232ad0bed9088a6431067a74b5bede2c92de00f8c07c7e6d871137dee94488",
+          "alt": "Oryginalny układ zadania 5 z arkusza OMAP-100-2004, strona 6.",
+          "caption": "Zadanie 5 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-mathematics-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n( )\nWartość wyrażenia 3 27 − 12 jest równa\nA. 3 B. 3 C. 45 D. 69",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nB C",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q06-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q06-page-8",
+          "path": "public/cke/2020/mathematics/omap-100-x-2004/q06-page-8.webp",
+          "sha256": "f4fc87973debb49a8de7c06cb9c4d536d02392995042d33518e26dc7c21c31d5",
+          "alt": "Oryginalny układ zadania 6 z arkusza OMAP-100-2004, strona 8.",
+          "caption": "Zadanie 6 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-mathematics-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Która z podanych niżej liczb nie jest równa 315? Wybierz właściwą odpowiedź spośród\npodanych.\nA. 3 ∙ 314 B. 39 ∙ 36 C. 317 : 9 D. (35)3 E. 915 : 3",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "E"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nE D",
+      "solution_steps": [
+        "Klucz CKE: E.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q07-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q07-page-8",
+          "path": "public/cke/2020/mathematics/omap-100-x-2004/q07-page-8.webp",
+          "sha256": "ea54a652043c0ec957629b3b31923a5bc834bf3602938a0df3d823058aa67a5a",
+          "alt": "Oryginalny układ zadania 7 z arkusza OMAP-100-2004, strona 8.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-mathematics-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Dane i statystyka",
+      "difficulty": 2,
+      "prompt": "Na diagramie przedstawiono wyniki (w centymetrach) uzyskane przez zawodników\nuczestniczących w finale konkursu skoku wzwyż.\nIlu zawodników uzyskało wynik wyższy od średniej arytmetycznej wyników wszystkich\nuczestników finału tego konkursu? Wybierz właściwą odpowiedź spośród podanych.\nA. 2 B. 3 C. 4 D. 5",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nB C\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q08-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q08-page-8",
+          "path": "public/cke/2020/mathematics/omap-100-x-2004/q08-page-8.webp",
+          "sha256": "f1e7843f233f931ada590a2f52139a4c2a7a5f646de8e1c8d24a8170a82265d0",
+          "alt": "Oryginalny układ zadania 8 z arkusza OMAP-100-2004, strona 8.",
+          "caption": "Zadanie 8 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-mathematics-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "Na kartonowej siatce sześcianu Mariusz nakleił 6 figur tak, jak pokazano na rysunku. Następnie\nz tej siatki skleił kostkę.\nKtóry rysunek przedstawia kostkę sklejoną przez Mariusza? Wybierz właściwą\nodpowiedź spośród podanych.\nA. B. C. D.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "C"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nC D",
+      "solution_steps": [
+        "Klucz CKE: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q09-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q09-page-10",
+          "path": "public/cke/2020/mathematics/omap-100-x-2004/q09-page-10.webp",
+          "sha256": "6eb538265aa0ecc0db897cd33925516a83cf747c3f318b39696d554df2d394af",
+          "alt": "Oryginalny układ zadania 9 z arkusza OMAP-100-2004, strona 10.",
+          "caption": "Zadanie 9 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-mathematics-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Równania",
+      "difficulty": 2,
+      "prompt": "(x + y)⋅h\nDany jest wzór opisujący pole trapezu: P = , gdzie x i y oznaczają długości podstaw\n2\ntrapezu, a h oznacza wysokość trapezu.\nKtórym równaniem opisano x wyznaczone poprawnie z tego wzoru? Wybierz właściwą\nodpowiedź spośród podanych.\nP P 2P\nA. x = − hy B. x = − y C. x = 2P − hy D. x = − y\n2 2h h",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "D"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nD A\nEgzamin ósmoklasisty z matematyki – termin główny 2020 r.",
+      "solution_steps": [
+        "Klucz CKE: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q10-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q10-page-10",
+          "path": "public/cke/2020/mathematics/omap-100-x-2004/q10-page-10.webp",
+          "sha256": "8129f8ef84b3e2f02469c4700010903ab4dedde6987193bfbf2aabf7bda079ce",
+          "alt": "Oryginalny układ zadania 10 z arkusza OMAP-100-2004, strona 10.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-mathematics-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Geometria płaska",
+      "difficulty": 2,
+      "prompt": "Kąt ostry rombu ma miarę 60°, a bok tego rombu ma długość równą 4 cm.\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli\njest fałszywe.\nKrótsza przekątna dzieli ten romb na dwa trójkąty równoboczne. P F\nPole tego rombu jest równe 8 3 cm2. P F",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "PP"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nPP PP",
+      "solution_steps": [
+        "Klucz CKE: PP.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q11-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q11-page-10",
+          "path": "public/cke/2020/mathematics/omap-100-x-2004/q11-page-10.webp",
+          "sha256": "1f6f9a21281aaa4b4dc4a15736a6206dd507317a77b1c326df48606f68077de8",
+          "alt": "Oryginalny układ zadania 11 z arkusza OMAP-100-2004, strona 10.",
+          "caption": "Zadanie 11 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-mathematics-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        12
+      ],
+      "type": "long_text",
+      "topic": "Dane i statystyka",
+      "difficulty": 2,
+      "prompt": "Na kartce w kratkę Tomek narysował według pewnej reguły cztery łamane (patrz rysunek).\n1\nI II III IV\nDługości tych łamanych zapisał w tabeli.\nNumer łamanej I II III IV\nDługość łamanej 3 8 15 24\nKolejne łamane – od numeru V – Tomek rysował zgodnie z tą samą regułą.\nUzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz\nodpowiedź spośród oznaczonych literami C i D.\nŁamana o długości 48 ma numer A B . A. VI B. VII\nŁamana o numerze VIII ma długość C D . C. 63 D. 80",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "AD"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nAD AD\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: AD.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q12-page-12"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q12-page-12",
+          "path": "public/cke/2020/mathematics/omap-100-x-2004/q12-page-12.webp",
+          "sha256": "d91a2d8edcb047d74cd8aeb82f80c3ca3e7eec9fce80ffb17247cfe7d1f54180",
+          "alt": "Oryginalny układ zadania 12 z arkusza OMAP-100-2004, strona 12.",
+          "caption": "Zadanie 12 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-mathematics-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        12
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 2,
+      "prompt": "W grudniu, w trzech sklepach sportowych: Alfa, Beta i Gamma, sprzedawano łyżwy figurowe\nw tej samej cenie. Na wiosnę w każdym sklepie ogłoszono obniżkę cen tych łyżew. Poniżej\nprzedstawiono oferty tych sklepów.\nSklep Alfa Sklep Beta Sklep Gamma\n2 Obniżka o 30%. Ścinamy ćwierć ceny.\nPłacisz tylko ceny.\n3\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nPo obniżce cena łyżew figurowych była\nA. najniższa w sklepie Alfa.\nB. najniższa w sklepie Beta.\nC. najniższa w sklepie Gamma.\nD. taka sama w trzech sklepach.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "A"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nA B",
+      "solution_steps": [
+        "Klucz CKE: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q13-page-12"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q13-page-12",
+          "path": "public/cke/2020/mathematics/omap-100-x-2004/q13-page-12.webp",
+          "sha256": "522a945ffc90652d9f41fbd89463e55ed8b65c82d697aa5306427b39c85ed234",
+          "alt": "Oryginalny układ zadania 13 z arkusza OMAP-100-2004, strona 12.",
+          "caption": "Zadanie 13 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-mathematics-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Geometria płaska",
+      "difficulty": 2,
+      "prompt": "Dany jest trójkąt równoboczny ABC o boku długości 10 cm. W tym trójkącie poprowadzono\nwysokość CD.\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nObwód trójkąta ADC jest równy\nA. 10 3 cm B. 20 3 cm C. (5 + 5 3 ) cm D. (15 + 5 3 ) cm",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "D"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nD C",
+      "solution_steps": [
+        "Klucz CKE: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q14-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q14-page-14",
+          "path": "public/cke/2020/mathematics/omap-100-x-2004/q14-page-14.webp",
+          "sha256": "440c6c2a27105d732fcb9b8ec30687527859614e5d3dcffa5e672f3bd942f70a",
+          "alt": "Oryginalny układ zadania 14 z arkusza OMAP-100-2004, strona 14.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-mathematics-100-x-q15",
+      "number": "15",
+      "sort_order": 15,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Geometria płaska",
+      "difficulty": 2,
+      "prompt": "W trójkącie KLM poprowadzono wysokość KN. Długości niektórych odcinków opisano za\npomocą wyrażeń algebraicznych: ǀKLǀ = 2y, ǀLMǀ = 2x, ǀKNǀ = k + 1.\nM\n.\nN\nK L\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nPole trójkąta KLM opisano wyrażeniem\nA. x(k + 1) B. 2x(k + 1) C. y(k +1) D. 2y(k +1)",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "A"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nA D\nZasady oceniania rozwiązań zadań\nZADANIA OTWARTE\nUwagi\n• Akceptowane są wszystkie odpowiedzi merytorycznie poprawne i spełniające warunki\nzadania.\n• Za rozwiązanie zadania na danym etapie uczeń może otrzymać punkty tylko wtedy, gdy\nprzedstawia poprawne sposoby rozwiązania na wszystkich wcześniejszych etapach.\n• Jeżeli na dowolnym etapie rozwiązania zadania uczeń popełnia jeden lub więcej błędów\nrachunkowych, ale stosuje poprawne sposoby obliczania, to ocenę rozwiązania obniża się\no 1 punkt.\n• Jeżeli w zadaniach 18., 19., 20. i 21. uczeń podaje tylko poprawny końcowy wynik, to\notrzymuje 0 punktów.\n• W pracy ucznia uprawnionego do dostosowanych kryteriów oceniania dopuszcza się:\n1. lustrzane zapisywanie cyfr i liter (np. 6 – 9, ...)\n2. gubienie liter, cyfr, nawiasów\n3. problemy z zapisywaniem przecinków w liczbach dziesiętnych\n4. błędy w zapisie działań pisemnych (dopuszczalne drobne błędy rachunkowe)\n5. luki w zapisie obliczeń – obliczenia pamięciowe\n6. uproszczony zapis równania i przekształcenie go w pamięci; brak opisu\nniewiadomych\n7. niekończenie wyrazów\n8. problemy z zapisywaniem jednostek (np. °C – OC, ...)\n9. błędy w przepisywaniu\n10. chaotyczny zapis operacji matematycznych\n11. mylenie indeksów górnych i dolnych (np. x2 – x2, m2 – m2, ...).\nEgzamin ósmoklasisty z matematyki – termin główny 2020 r.",
+      "solution_steps": [
+        "Klucz CKE: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q15-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q15-page-14",
+          "path": "public/cke/2020/mathematics/omap-100-x-2004/q15-page-14.webp",
+          "sha256": "426dcb79060667ef36711302d51c951ca171a772d29d039dc385a5f3de375fca",
+          "alt": "Oryginalny układ zadania 15 z arkusza OMAP-100-2004, strona 14.",
+          "caption": "Zadanie 15 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-mathematics-100-x-q16",
+      "number": "16",
+      "sort_order": 16,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 3,
+      "prompt": "W trójkącie o kątach wewnętrznych α, β, γ miara kąta α jest równa różnicy miar dwóch\npozostałych kątów. Uzasadnij, że ten trójkąt jest prostokątny.\nRozwiązanie zadania 16. zapisz w wyznaczonym miejscu\n!\nna karcie rozwiązań zadań.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "Uwaga"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 punkty – pełne rozwiązanie\nwykazanie, że jeden z kątów trójkąta (β lub γ) ma miarę 90°\n1 punkt\nzapisanie przy użyciu dwóch niewiadomych poprawnego równania, w którym uwzględniono\nzależność między miarami kątów tego trójkąta oraz własność dotyczącą sumy miar kątów\nw trójkącie\nLUB\nzapisanie, że α + β + γ = 180° i β = α + γ\nLUB\nzapisanie, że α + β + γ = 180° i γ = α + β\n0 punktów\nrozwiązanie, w którym nie dokonano istotnego postępu\nUwaga\nJeżeli w uzasadnieniu uczeń posługuje się wyłącznie konkretnymi wartościami miar kątów, to\notrzymuje 0 punktów.\nZasady oceniania rozwiązań zadań\nPrzykładowe rozwiązania ocenione na 2 punkty\nI sposób\nα = β − γ\nα + β + γ = 180°\nβ − γ + β + γ = 180°\n2β = 180°\nβ = 90°\nTen trójkąt jest prostokątny.\nII sposób\nα = γ − β\nα + β + γ = 180°\nγ − β + β + γ = 180°\n2γ = 180°\nγ = 90°\nTen trójkąt jest prostokątny.",
+      "solution_steps": [
+        "Klucz CKE: Uwaga.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q16-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q16-page-16",
+          "path": "public/cke/2020/mathematics/omap-100-x-2004/q16-page-16.webp",
+          "sha256": "b4289d7cb3dded8d6ac6980db7d27996e7a645c3d9a6d6543510d40429259362",
+          "alt": "Oryginalny układ zadania 16 z arkusza OMAP-100-2004, strona 16.",
+          "caption": "Zadanie 16 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-mathematics-100-x-q17",
+      "number": "17",
+      "sort_order": 17,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 3,
+      "prompt": "Na rysunku przedstawiono układ miejsc w przedziale ośmioosobowym wagonu\nkolejowego i zaznaczono kierunek jazdy pociągu.\n41 43 47 45\ndrzwi okno\n42 48 44 46\nkierunek jazdy pociągu\nEdyta z Agnieszką planują zakup biletów na wspólną podróż. Wszystkie miejsca\nw przedziale są wolne. Edyta chce siedzieć przy oknie, natomiast Agnieszka chce siedzieć\nprzodem do kierunku jazdy. Podaj wszystkie możliwości wyboru miejsc spełniające\njednocześnie powyższe warunki. Zapisz rozwiązanie.\nRozwiązanie zadania 17. zapisz w wyznaczonym miejscu\n!\nna karcie rozwiązań zadań.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "Uwagi"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 punkty – pełne rozwiązanie\npodanie wszystkich możliwości wyboru miejsc w przedziale przez Edytę i Agnieszkę\n(45 i 42, 45 i 48, 45 i 44, 45 i 46, 46 i 42, 46 i 48, 46 i 44)\nEgzamin ósmoklasisty z matematyki – termin główny 2020 r.\n1 punkt\npodanie wszystkich możliwości wyboru miejsc przez Edytę i Agnieszkę, jeśli Edyta wybierze\nmiejsce nr 45 (45 i 42, 45 i 48, 45 i 44, 45 i 46)\nLUB\npodanie wszystkich możliwości wyboru miejsc przez Edytę i Agnieszkę, jeśli Edyta wybierze\nmiejsce nr 46 (46 i 42, 46 i 48, 46 i 44)\nLUB\npodanie wszystkich możliwości wyboru miejsc przez Edytę (45, 46) i wszystkich możliwości\nwyboru miejsc przez Agnieszkę (42, 48, 44, 46)\n0 punktów\nrozwiązanie, w którym nie dokonano istotnego postępu\nUwagi\n• Jeżeli uczeń przyjmuje, że wszystkie fotele są zwrócone przodem do kierunku jazdy\npociągu, to stosuje się poniższe zasady oceniania.\n2 punkty – pełne rozwiązanie\npodanie wszystkich możliwości wyboru miejsc w przedziale przez Edytę i Agnieszkę\n(45 i 41, 45 i 42, 45 i 43, 45 i 44, 45 i 46, 45 i 47, 45 i 48, 46 i 41, 46 i 42, 46 i 43,\n46 i 44, 46 i 45, 46 i 47, 46 i 48)\n1 punkt\npodanie wszystkich możliwości wyboru miejsc przez Edytę i Agnieszkę, jeśli Edyta\nwybierze miejsce nr 45 (45 i 41, 45 i 42, 45 i 43, 45 i 44, 45 i 46, 45 i 47, 45 i 48)\nLUB\npodanie wszystkich możliwości wyboru miejsc przez Edytę i Agnieszkę, jeśli Edyta\nwybierze miejsce nr 46 (46 i 41, 46 i 42, 46 i 43, 46 i 44, 46 i 45, 46 i 47, 46 i 48)\nLUB\npodanie wszystkich możliwości wyboru miejsc przez Edytę (45, 46) i wszystkich\nmożliwości wyboru miejsc przez Agnieszkę (41, 43, 47, 45, 42, 48, 44, 46)\n0 punktów\nrozwiązanie, w którym nie dokonano istotnego postępu\n• Jeżeli uczeń przyjmuje, że fotele o numerach nieparzystych są zwrócone przodem do\nkierunku jazdy pociągu, a fotele o numerach parzystych są zwrócone tyłem do kierunku\njazdy pociągu, to stosuje się poniższe zasady oceniania.\n2 punkty – pełne rozwiązanie\npodanie wszystkich możliwości wyboru miejsc w przedziale przez Edytę i Agnieszkę\n(45 i 41, 45 i 43, 45 i 47, 46 i 45, 46 i 41, 46 i 43, 46 i 47)\n1 punkt\npodanie wszystkich możliwości wyboru miejsc przez Edytę i Agnieszkę, jeśli Edyta\nwybierze miejsce nr 45 (45 i 41, 45 i 43, 45 i 47)\nLUB\nZasady oceniania rozwiązań zadań\npodanie wszystkich możliwości wyboru miejsc przez Edytę i Agnieszkę, jeśli Edyta\nwybierze miejsce nr 46 (46 i 45, 46 i 41, 46 i 43, 46 i 47)\nLUB\npodanie wszystkich możliwości wyboru miejsc przez Edytę (45, 46) i wszystkich\nmożliwości wyboru miejsc przez Agnieszkę (41, 43, 47, 45)\n0 punktów\nrozwiązanie, w którym nie dokonano istotnego postępu\nUwagi dotyczące wszystkich sposobów rozwiązania zadania\n• Jeżeli uczeń oprócz wszystkich poprawnych możliwości wyboru miejsc spełniających\njednocześnie obydwa warunki zadania podaje również jedną możliwość niespełniającą\ntych warunków, to otrzymuje 1 punkt.\n• Jeżeli uczeń oprócz wszystkich poprawnych możliwości wyboru miejsc spełniających\njednocześnie obydwa warunki zadania podaje również więcej niż jedną możliwość\nniespełniającą tych warunków, to otrzymuje 0 punktów.\n• Jeżeli uczeń podaje liczbę możliwości wyboru miejsc bez wskazania numerów tych miejsc,\nto otrzymuje 0 punktów.\nPrzykładowe rozwiązania ocenione na 2 punkty\nI sposób\nWybór miejsc przez dziewczęta w układzie (Edyta, Agnieszka)\n(45, 42), (45, 48), (45, 44), (45, 46)\n(46, 42), (46, 48), (46, 44)\nII sposób\nWybór miejsc przez dziewczęta w układzie (Agnieszka, Edyta)\n(42, 45), (42, 46)\n(48, 45), (48, 46)\n(44, 45), (44, 46)\n(46, 45)\nIII sposób\nRozważamy wybór miejsc przez dziewczęta.\nJeśli Edyta wybierze miejsce nr 45, to Agnieszka może zająć jedno z czterech miejsc\no numerze 42, 48, 44 lub 46.\nJeśli Edyta wybierze miejsce nr 46, to Agnieszka może zająć jedno z trzech miejsc o numerze\n42, 48 lub 44.\nEgzamin ósmoklasisty z matematyki – termin główny 2020 r.\nIV sposób\nJeśli Agnieszka wybierze miejsce nr 42, to Edyta może zająć jedno z dwóch miejsc o numerze\n45 lub 46.\nJeśli Agnieszka wybierze miejsce nr 48, to Edyta może zająć jedno z dwóch miejsc o numerze\n45 lub 46.\nJeśli Agnieszka wybierze miejsce nr 44, to Edyta może zająć jedno z dwóch miejsc o numerze\n45 lub 46.\nJeśli Agnieszka wybierze miejsce nr 46, to Edyta może zająć tylko miejsce o numerze 45.\nV sposób\nEdyta Agnieszka\n42\n48\n45\n44\n46\n42\n46 48\n44\nVI sposób\nAgnieszka Edyta\n45\n42\n46\n45\n48\n46\n45\n44\n46\n45\n46\n―\nVII sposób\nEdyta ma dwie możliwości wyboru miejsc: 45 lub 46. Agnieszka ma cztery możliwości wyboru\nmiejsc: 42, 48, 44 lub 46. Ponieważ dziewczęta nie mogą obie siedzieć na tym samym miejscu\n(nr 46), to wszystkich możliwości wyboru miejsc jest 7.\nZasady oceniania rozwiązań zadań\nVIII sposób (graficzny)\n41 43 47 45 E\ndrzwi okno\n42 A 48 A 44 A 46 A\n41 43 47 45\ndrzwi okno\n42 A 48 A 44 A 46 E",
+      "solution_steps": [
+        "Klucz CKE: Uwagi.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q17-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q17-page-16",
+          "path": "public/cke/2020/mathematics/omap-100-x-2004/q17-page-16.webp",
+          "sha256": "5493cf162c5e5d0d6e600ee666ad40f6a427adf98601d243f32d61a2589f6ff8",
+          "alt": "Oryginalny układ zadania 17 z arkusza OMAP-100-2004, strona 16.",
+          "caption": "Zadanie 17 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-mathematics-100-x-q18",
+      "number": "18",
+      "sort_order": 18,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 3,
+      "prompt": "W domu kultury zorganizowano konkurs recytatorski. Dla uczestników kupiono\n2\nnagrody: książki i e-booki. Książki stanowiły liczby kupionych nagród. E-booków było\n3\no 8 mniej niż książek. Ile kupiono książek? Zapisz obliczenia.\nRozwiązanie zadania 18. zapisz w wyznaczonym miejscu\n!\nna karcie rozwiązań zadań.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "Egzamin ósmoklasisty z matematyki – termin główny 2020 r."
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 punkty – pełne rozwiązanie\nobliczenie liczby kupionych książek (16)\n1 punkt\npoprawny sposób obliczenia liczby kupionych nagród\nLUB\npoprawny sposób obliczenia liczby kupionych książek\nLUB\npoprawny sposób obliczenia liczby kupionych e-booków\n0 punktów\nrozwiązanie, w którym nie dokonano istotnego postępu\nEgzamin ósmoklasisty z matematyki – termin główny 2020 r.\nZasady oceniania rozwiązań zadania metodą prób i błędów\n2 punkty – pełne rozwiązanie\nsprawdzenie wszystkich warunków zadania dla co najmniej dwóch par liczb, których różnica\njest równa 8, z uwzględnieniem pary 8 i 16 oraz podanie liczby kupionych książek (16)\nLUB\nsprawdzenie wszystkich warunków zadania dla co najmniej dwóch par liczb, z których jedna\njest 2 razy większa od drugiej, z uwzględnieniem pary 8 i 16 oraz podanie liczby kupionych\nksiążek (16)\nLUB\nsprawdzenie wszystkich warunków zadania dla co najmniej dwóch liczb podzielnych przez 3,\nz uwzględnieniem liczby 24 oraz podanie liczby kupionych książek (16)\n1 punkt\nsprawdzenie wszystkich warunków zadania dla co najmniej dwóch par liczb, których różnica\njest równa 8, bez uwzględnienia pary 8 i 16\nLUB\nsprawdzenie wszystkich warunków zadania dla co najmniej dwóch par liczb, z których jedna\njest 2 razy większa od drugiej, bez uwzględnienia pary 8 i 16\nLUB\nsprawdzenie wszystkich warunków zadania dla co najmniej dwóch liczb podzielnych przez 3,\nbez uwzględnienia liczby 24\n0 punktów\nrozwiązanie, w którym nie dokonano istotnego postępu\nUwagi\n• Jeżeli uczeń sprawdza wszystkie warunki zadania tylko dla liczby książek 16, to\notrzymuje 1 punkt.\n• Jeżeli uczeń sprawdza wszystkie warunki zadania tylko dla liczby nagród 24 i podaje\npoprawną odpowiedź (16), to otrzymuje 1 punkt.\nPrzykładowe rozwiązania ocenione na 2 punkty\nI sposób\nx – liczba kupionych nagród\n2\nx – liczba kupionych książek\n3\n2\nx – 8 – liczba kupionych e-booków\n3\n2 2\nx + x – 8 = x\n3 3\n4\nx – 8 = x\n3\n1\nx = 8\n3\nx = 24\nZasady oceniania rozwiązań zadań\n2\n· 24 = 16\n3\nOdpowiedź: Kupiono 16 książek.\nII sposób\nx – liczba kupionych nagród\n1\nx – liczba kupionych e-boków\n3\n2\nx – liczba kupionych książek\n3\n1 2\nx = x – 8\n3 3\n1\n8 = x\n3\nx = 24\n1\n· 24 + 8 = 8 + 8 = 16\n3\nOdpowiedź: Kupiono 16 książek.\nIII sposób\nx – liczba kupionych książek\n(x – 8) – liczba kupionych e-booków\n2\nx = (x + x – 8)\n3\n3x = 4x – 16\nx = 16\nOdpowiedź: Kupiono 16 książek.\nIV sposób\nx – liczba kupionych e-booków\nx + 8 – liczba kupionych książek\n2\nx + 8 = (x + x + 8)\n3\n2\nx + 8 = (2x + 8)\n3\n3x + 24 = 4x + 16\n24 – 16 = 4x – 3x\nx = 8\n8 + 8 = 16\nOdpowiedź: Kupiono 16 książek.\nEgzamin ósmoklasisty z matematyki – termin główny 2020 r.\nV sposób\nx – liczba kupionych książek\n(x – 8) – liczba kupionych e-booków\n1\nx = x – 8\n2\nx = 2x – 16\nx = 16\nOdpowiedź: Kupiono 16 książek.\nVI sposób\n1 1 1\n3 3 3\n2 1\nksiążki e-booki\n3 3\n1\n3\nliczba książek – liczba e-booków = 8\n1\nto 8\n3\n2\nto 16\n3\nOdpowiedź: Kupiono 16 książek.\nZasady oceniania rozwiązań zadań\nVII sposób\nLiczba Liczba Liczba\nSprawdzenie\ne-booków książek nagród\n2\n6 14 20 · 20 ≠ 14 ― nie spełnia\n3\n7 15 22 2\n· 22 ≠ 15 ― nie spełnia\n3\n2\n8 16 24\n· 24 = 16 ― spełnia\n3\n9 17 26 2\n· 26 ≠ 17 ― nie spełnia\n3\nOdpowiedź: Kupiono 16 książek.\nVIII sposób\nLiczba Liczba\nSprawdzenie\ne-booków książek\n6 12 12 – 6 = 6 ≠ 8 ― nie spełnia\n7 14 14 – 7 = 7 ≠ 8 ― nie spełnia\n8 16 16 – 8 = 8 ― spełnia\n9 18 18 – 9 = 9 ≠ 8 ― nie spełnia\nOdpowiedź: Kupiono 16 książek.\nIX sposób\nLiczba nagród jest większa od 8 i podzielna przez 3.\nLiczby spełniające te warunki: 9, 12, 15, 18, 21, 24, …\n2 1\n· 9 – · 9 = 3 ≠ 8\n3 3\n2 1\n· 18 – · 18 = 6 ≠ 8\n3 3\n2 1\n· 24 – · 24 = 8\n3 3\n2\n· 24 = 16 ― liczba książek\n3\nOdpowiedź: Kupiono 16 książek.\nEgzamin ósmoklasisty z matematyki – termin główny 2020 r.",
+      "solution_steps": [
+        "Klucz CKE: Egzamin ósmoklasisty z matematyki – termin główny 2020 r..",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q18-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q18-page-16",
+          "path": "public/cke/2020/mathematics/omap-100-x-2004/q18-page-16.webp",
+          "sha256": "acfef6c5b70bb4109d00bace38567302aac1b3c270fccd0293be8964754212cd",
+          "alt": "Oryginalny układ zadania 18 z arkusza OMAP-100-2004, strona 16.",
+          "caption": "Zadanie 18 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-mathematics-100-x-q19",
+      "number": "19",
+      "sort_order": 19,
+      "source_pages": [
+        17
+      ],
+      "type": "long_text",
+      "topic": "Dane i statystyka",
+      "difficulty": 3,
+      "prompt": "W zakładzie krawieckim są szyte poduszki dla zwierząt domowych. Praca w tym\nzakładzie trwa pięć dni w tygodniu – od poniedziałku do piątku – po 7 godzin dziennie.\nW 2020 roku 1 marca wypadł w niedzielę i w tym miesiącu nie było żadnych dni wolnych\noprócz sobót i niedziel. W ciągu każdej godziny pracy szyto średnio 3 poduszki.\nIle poduszek uszyto w tym zakładzie w marcu 2020 roku? Zapisz obliczenia.\nRozwiązanie zadania 19. zapisz w wyznaczonym miejscu\n!\nna karcie rozwiązań zadań.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "Uwagi"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n3 punkty – pełne rozwiązanie\nobliczenie liczby poduszek uszytych w marcu (462) z zastosowaniem poprawnego sposobu\nich wyznaczenia\n2 punkty\npoprawny sposób obliczenia liczby godzin przepracowanych w marcu\nLUB\npoprawny sposób obliczenia liczby dni roboczych w marcu i poprawny sposób obliczenia liczby\npoduszek uszytych w ciągu jednego dnia pracy\nLUB\npoprawny sposób obliczenia liczby poduszek uszytych w ciągu tygodnia\nLUB\npoprawny sposób obliczenia łącznej liczby poduszek uszytych w marcu, gdyby pracowano\ntylko jedną godzinę każdego dnia roboczego\n1 punkt\npoprawny sposób obliczenia liczby dni roboczych w marcu\nLUB\npoprawny sposób obliczenia liczby poduszek uszytych w ciągu jednego dnia pracy\nZasady oceniania rozwiązań zadań\nLUB\npoprawny sposób obliczenia liczby godzin pracy w ciągu jednego tygodnia\nLUB\npoprawny sposób obliczenia czasu potrzebnego na uszycie jednej poduszki\n0 punktów\nrozwiązanie, w którym nie dokonano istotnego postępu\nUwagi\n• Jeżeli uczeń przyjmuje, że marzec ma 30 dni i rozwiązuje zadanie do końca, stosując\npoprawne pozostałe sposoby oraz nie popełnia błędów rachunkowych, to otrzymuje\n2 punkty.\n• Jeżeli uczeń podaje, że marzec ma 31 dni, ale błędnie ustala liczbę dni wolnych od pracy\nna 8 lub 10 i rozwiązuje zadanie do końca, stosując poprawne pozostałe sposoby oraz nie\npopełnia błędów rachunkowych, to otrzymuje 2 punkty.\n• Błędy w zliczaniu liczby dni roboczych traktuje się jako błędy rachunkowe.\nPrzykładowe rozwiązania ocenione na 3 punkty\nI sposób\nmarzec 2020 r. – 31 dni, w tym 4 soboty i 5 niedziel\n31 – 9 = 22 – liczba dni roboczych\n22 · 7 = 154 – liczba godzin pracy w marcu\n154 · 3 = 462 – liczba poduszek uszytych w marcu\nOdpowiedź: W marcu 2020 roku w zakładzie uszyto 462 poduszki.\nII sposób\nmarzec 2020 r. – 31 dni, w tym 4 soboty i 5 niedziel\n31 – 9 = 22 – liczba dni roboczych\n3 · 7 = 21 – liczba poduszek uszytych w ciągu jednego dnia pracy\n22 · 21 = 462 – liczba poduszek uszytych w marcu\nOdpowiedź: W marcu 2020 roku w zakładzie uszyto 462 poduszki.\nIII sposób\nmarzec 2020 r. – 31 dni, w tym 4 soboty i 5 niedziel\n31 – 9 = 22 – liczba dni roboczych\n22 · 7 = 154 – liczba godzin pracy w marcu\n1\n60 min : 3 = 20 min = h – czas potrzebny na uszycie 1 poduszki\n3\n1\n154 : = 154 · 3 = 462\n3\nOdpowiedź: W marcu 2020 roku w zakładzie uszyto 462 poduszki.\nEgzamin ósmoklasisty z matematyki – termin główny 2020 r.\nIV sposób\nmarzec 2020 r. – 31 dni, w tym 4 soboty i 5 niedziel\n31 – 9 = 22 – liczba dni roboczych\n22 · 3 = 66 – liczba poduszek uszytych w marcu, gdyby pracowano tylko jedną godzinę\nkażdego dnia roboczego\n66 · 7 = 462\nOdpowiedź: W marcu 2020 roku w zakładzie uszyto 462 poduszki.\nV sposób\n3\n31 : 7 = 4 – liczba tygodni w tym miesiącu\n7\nPonieważ, miesiąc rozpoczął się w niedzielę, to liczbę dni wolnych można obliczyć\nw następujący sposób:\n3 6\n4 · 2 = 8 ≈ 9 – liczba dni wolnych od pracy\n7 7\n31 – 9 = 22 – liczba dni roboczych w marcu\n22 · 7 = 154 – liczba godzin pracy w marcu\n154 · 3 = 462\nOdpowiedź: W marcu 2020 roku w zakładzie uszyto 462 poduszki.\nVI sposób\nmarzec 2020 r. – 31 dni, w tym 4 tygodnie i 2 dni robocze\n3 · 7 = 21 – liczba poduszek uszytych w ciągu jednego dnia pracy\n21 · 5 = 105 – liczba poduszek uszytych w ciągu jednego tygodnia pracy\n4 · 105 + 2 · 21 = 420 + 42 = 462\nOdpowiedź: W marcu 2020 roku w zakładzie uszyto 462 poduszki.\nVII sposób\nmarzec 2020 r. – 31 dni, w tym 4 tygodnie i 2 dni robocze\n7 · 5 = 35 – liczba godzin przepracowanych w ciągu jednego tygodnia pracy\n35 · 3 = 105 – liczba poduszek uszytych w ciągu jednego tygodnia pracy\n3 · 7 = 21 – liczba poduszek uszytych w ciągu jednego dnia pracy\n4 · 105 + 2 · 21 = 420 + 42 = 462\nOdpowiedź: W marcu 2020 roku w zakładzie uszyto 462 poduszki.\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: Uwagi.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q19-page-17"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q19-page-17",
+          "path": "public/cke/2020/mathematics/omap-100-x-2004/q19-page-17.webp",
+          "sha256": "2cb053e7acee6bff7069210acd4d812f26742cf94fdba1eb9da9568ba186e724",
+          "alt": "Oryginalny układ zadania 19 z arkusza OMAP-100-2004, strona 17.",
+          "caption": "Zadanie 19 — oryginalny układ CKE, strona 17.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-mathematics-100-x-q20",
+      "number": "20",
+      "sort_order": 20,
+      "source_pages": [
+        17
+      ],
+      "type": "long_text",
+      "topic": "Rozumowanie matematyczne",
+      "difficulty": 3,
+      "prompt": "Boisko szkolne ma kształt prostokąta o wymiarach 46 m i 30 m. Postanowiono posiać na\nnim trawę. Do obsiania 40 m2 powierzchni jest potrzebny jeden kilogram nasion trawy.\nNasiona trawy są sprzedawane tylko w 10-kilogramowych workach, po 163 zł za jeden\nworek. Oblicz koszt zakupu nasion trawy potrzebnych do obsiania tego boiska. Zapisz\nobliczenia.\nRozwiązanie zadania 20. zapisz w wyznaczonym miejscu\n!\nna karcie rozwiązań zadań.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "Egzamin ósmoklasisty z matematyki – termin główny 2020 r."
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n3 punkty – pełne rozwiązanie\nobliczenie kosztu zakupu nasion trawy (652 zł) z zastosowaniem poprawnego sposobu jego\nwyznaczenia\n2 punkty\npoprawny sposób obliczenia liczby potrzebnych opakowań nasion trawy (przybliżenie\nz nadmiarem otrzymanej liczby)\nLUB\npoprawny sposób oszacowania liczby potrzebnych opakowań nasion trawy\n1 punkt\npoprawny sposób obliczenia liczby kilogramów nasion trawy potrzebnych do obsiania\npowierzchni boiska\nLUB\npoprawny sposób oszacowania powierzchni, która może zostać obsiana nasionami z 3 lub 4\nopakowań nasion trawy\n0 punktów\nrozwiązanie, w którym nie dokonano istotnego postępu\nEgzamin ósmoklasisty z matematyki – termin główny 2020 r.\nUwagi\n• Jeżeli uczeń podaje bez uzasadnienia poprawną liczbę opakowań nasion trawy (4)\ni oblicza koszt zakupu tych nasion, to otrzymuje 0 punktów.\n• Jeżeli uczeń poprawnie oblicza pole boiska, następnie podaje poprawną liczbę\nopakowań nasion trawy (4) i poprawnie oblicza koszt zakupu tych nasion, to za takie\nrozwiązanie otrzymuje 1 punkt.\n• Nie ocenia się stosowania jednostek miary.\nPrzykładowe rozwiązania ocenione na 3 punkty\nI sposób\nP = 46 · 30 = 1380 (m2) – powierzchnia boiska\n1380 : 40 = 34,5 (kg) – liczba kilogramów nasion trawy potrzebnych do obsiania powierzchni\nboiska\n34,5 : 10 = 3,45 – trzeba kupić 4 opakowania nasion trawy\n4 · 163 zł = 652 zł\nOdpowiedź: Koszt zakupu nasion trawy był równy 652 zł.\nII sposób\nP = 30 · 46 = 1380 (m2) – powierzchnia boiska\n1380 : 40 : 10 = 3,45 – trzeba kupić 4 opakowania nasion trawy\n4 · 163 zł = 652 zł\nOdpowiedź: Koszt zakupu nasion trawy był równy 652 zł.\nIII sposób\nP = 46 · 30 = 1380 (m2) – powierzchnia boiska\n1 kg nasion na 40 m2\nx kg nasion na 1380 m2\nx = 1380 : 40\nx = 34,5 (kg)\n34,5 : 10 = 3,45 (opakowania) – zatem trzeba kupić 4 opakowania nasion trawy\n4 · 163 zł = 652 zł\nOdpowiedź: Koszt zakupu nasion trawy był równy 652 zł.\nIV sposób\nP = 46 · 30 = 1380 (m2) – powierzchnia boiska\n1 kg nasion na 40 m2\n10 kg nasion na 400 m2\n20 kg nasion na 800 m2\n30 kg nasion na 1200 m2\n40 kg nasion na 1600 m2 – zatem trzeba kupić 4 opakowania nasion trawy\n4 · 163 zł = 652 zł\nOdpowiedź: Koszt zakupu nasion trawy był równy 652 zł.\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: Egzamin ósmoklasisty z matematyki – termin główny 2020 r..",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q20-page-17"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q20-page-17",
+          "path": "public/cke/2020/mathematics/omap-100-x-2004/q20-page-17.webp",
+          "sha256": "25046bb7780f8c6aea23af904306390b51c9fa7513ba1119a1681954daa732c6",
+          "alt": "Oryginalny układ zadania 20 z arkusza OMAP-100-2004, strona 17.",
+          "caption": "Zadanie 20 — oryginalny układ CKE, strona 17.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-mathematics-100-x-q21",
+      "number": "21",
+      "sort_order": 21,
+      "source_pages": [
+        17,
+        18,
+        19
+      ],
+      "type": "long_text",
+      "topic": "Geometria przestrzenna",
+      "difficulty": 3,
+      "prompt": "Podstawą ostrosłupa o wysokości H jest kwadrat. Na rysunku przedstawiono siatkę\ni podano długości niektórych krawędzi tego ostrosłupa.\nH\n13 cm\n5 cm\nOblicz objętość tego ostrosłupa. Zapisz obliczenia.\nRozwiązanie zadania 21. zapisz w wyznaczonym miejscu\n!\nna karcie rozwiązań zadań.\nOMAP-100-2004 Strona 17 z 17\nWYPEŁNIA ZESPÓŁ NADZORUJĄCY\nUprawnienia ucznia do:\nnieprzenoszenia odpowiedzi na kartę odpowiedzi\ndostosowania zasad oceniania.\nWYPEŁNIA UCZEŃ\nKOD UCZNIA\nmiejsce\nna naklejkę\nPESEL\nNr Odpowiedzi WYPEŁNIA EGZAMINATOR\nzad.\n1 AC AD BC BD\n2 A B C D\nNr\n3 A B C D Punkty\nzad.\n4 PP PF FP FF 16 0 1 2\n5 A B C D 17 0 1 2\n6 A B C D 18 0 1 2\n7 A B C D E 19 0 1 2 33\n8 A B C D 20 0 1 2 3\n9 A B C D 21 0 1 2 3\n10 A B C D\n11 PP PF FP FF\n12 AC AD BC BD\n13 A B C D\n14 A B C D\n15 A B C D\nKOD EGZAMINATORA\nCzytelny podpis egzaminatora",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "Uwagi"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n3 punkty – pełne rozwiązanie\nobliczenie objętości ostrosłupa (100 cm3)\n2 punkty\npoprawny sposób obliczenia objętości ostrosłupa\n1 punkt\npoprawny sposób obliczenia wysokości ostrosłupa\n0 punktów\nrozwiązanie, w którym nie dokonano istotnego postępu\nUwagi\n• Jeżeli uczeń bez obliczeń ustala, że H = 12 cm, to za wyznaczenie wysokości ostrosłupa\notrzymuje 1 punkt.\n• Jeżeli uczeń stosuje błędny sposób wyznaczenia wysokości ostrosłupa i rozwiązuje\nzadanie do końca, stosując poprawne pozostałe sposoby, to otrzymuje 1 punkt – nie\nwymaga się poprawności rachunkowej.\n• Jeżeli uczeń stosuje jednostki, to ich poprawność ocenia się tylko w wyniku końcowym.\nZastosowanie niewłaściwej jednostki traktuje się jako błąd rachunkowy.\nEgzamin ósmoklasisty z matematyki – termin główny 2020 r.\nPrzykładowe rozwiązania ocenione na 3 punkty\nI sposób\nPole podstawy ostrosłupa P = a2\nP = 52 = 25 (cm2)\nWysokość H ostrosłupa wyznaczamy z twierdzenia Pitagorasa\nH 2 + 52 = 132\nH 2 = 169 − 25\nH 2 = 144\nH = 12 (cm)\n1\nObjętość ostrosłupa obliczamy ze wzoru V = · P · H\n3\n1\nV = · 25 · 12 = 100 (cm3)\n3\nOdpowiedź: Objętość ostrosłupa jest równa 100 cm3.\nII sposób\nWysokość H ostrosłupa wyznaczamy z twierdzenia Pitagorasa\nH 2 + 52 = 132\nH 2 = 169 − 25\nH 2 = 144\nH = 144\n1\nObjętość ostrosłupa obliczamy ze wzoru V = · P · H\n3\n1 1\nV = · 52 · 144 = · 25 · 12 = 100 (cm3)\n3 3\nOdpowiedź: Objętość ostrosłupa jest równa 100 cm3.",
+      "solution_steps": [
+        "Klucz CKE: Uwagi.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q21-page-17"
+        },
+        {
+          "type": "image",
+          "asset_id": "q21-page-18"
+        },
+        {
+          "type": "image",
+          "asset_id": "q21-page-19"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q21-page-17",
+          "path": "public/cke/2020/mathematics/omap-100-x-2004/q21-page-17.webp",
+          "sha256": "ef5b42cff66d0e0994f2ffe65d686d6db9369ca09ec09c2ea93c3f291fe066cc",
+          "alt": "Oryginalny układ zadania 21 z arkusza OMAP-100-2004, strona 17.",
+          "caption": "Zadanie 21 — oryginalny układ CKE, strona 17.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q21-page-18",
+          "path": "public/cke/2020/mathematics/omap-100-x-2004/q21-page-18.webp",
+          "sha256": "1067ac0b6f8dc437f1fc4671d161c59625f383470b7ea2701fe731b79ce5550c",
+          "alt": "Oryginalny układ zadania 21 z arkusza OMAP-100-2004, strona 18.",
+          "caption": "Zadanie 21 — oryginalny układ CKE, strona 18.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q21-page-19",
+          "path": "public/cke/2020/mathematics/omap-100-x-2004/q21-page-19.webp",
+          "sha256": "15c1f7dc9aa6c26e99b4d05db71baee5883dffe4b4348bf8a49434c4fbe74d29",
+          "alt": "Oryginalny układ zadania 21 z arkusza OMAP-100-2004, strona 19.",
+          "caption": "Zadanie 21 — oryginalny układ CKE, strona 19.",
+          "mime_type": "image/webp"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,918 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2019-main-french-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2019-main-french-100-x",
+    "source_document_id": "OJFP-100-1904",
+    "source_pdf_sha256": "63a754274e6c8d4222250e25f87d789a1abe8fd898177e23104f8308230f0b32",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2019-2/",
+    "source_label": "CKE 2019 · język francuski · termin główny · wariant 100-X",
+    "exam_year": 2019,
+    "exam_session": "main",
+    "subject": "french",
+    "variant_code": "100-X",
+    "question_count": 14,
+    "supplementary_sources": [
+      {
+        "id": "cke-2019-main-french-100-x-rules",
+        "path": "content/cke/sources/2019/french/OJFP-100-1904-zasady.pdf",
+        "sha256": "eca4554b28307ec9a18fa749e1bffb16db23543bdd2b4da4adf75acc2826702a",
+        "label": "Oficjalne zasady oceniania rozwiązań zadań"
+      },
+      {
+        "id": "cke-2019-main-french-100-x-transcript",
+        "path": "content/cke/sources/2019/french/OJFP-100-1904-transkrypcja.pdf",
+        "sha256": "5434b6fa976e2d434bd60a53e1ab556a7e146954fe58c54fd6c99a4a7013ad1d",
+        "label": "Oficjalna transkrypcja nagrań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [
+    {
+      "id": "cke-2019-main-french-100-x-transcript-q01",
+      "title": "Transkrypcja nagrania do zadania 1",
+      "paragraphs": [
+        "Tekst 1.",
+        "Le garçon : Écoute ! Charlotte m’a invité dans sa maison de campagne dimanche.",
+        "La fille : Super ! C’est loin d’ici ?",
+        "Le garçon : À une heure de voiture. Elle a une grande piscine, alors on va beaucoup nager.",
+        "La fille : Toi qui détestais la natation ? Bravo !",
+        "Le garçon : Malheureusement, Charlotte n’a pas de télé et dimanche, c’est le premier match",
+        "de Ligue 1 de la saison.",
+        "La fille : Les courses automobiles ne t’intéressent plus ? C’est le foot maintenant ? En",
+        "juin dernier, tu es resté toute la journée devant la télé à regarder la Formule 1.",
+        "Qu’est-ce que tu vas faire pour voir l’émission en direct dimanche ?",
+        "Le garçon : Je dois rentrer chez moi avant 18 heures. C’est à ce moment-là que les joueurs",
+        "sortent sur le terrain.",
+        "Tekst 2.",
+        "Jean, écoute ! On fait des travaux à la maison et je dois aider mes parents à tout ranger.",
+        "Il y a de la poussière partout ! Nous avons fini de rénover la salle de bains mais il nous reste",
+        "encore la cuisine. La semaine prochaine, on voudrait tout refaire. Il y aura de nouveaux",
+        "placards. Même le frigo sera neuf. Heureusement, ma chambre est déjà prête. Viens voir",
+        "demain !",
+        "Tekst 3.",
+        "La femme : Je peux vous aider ?",
+        "L’homme : Oui, je voudrais acheter un sandwich au poulet et une bouteille d’eau.",
+        "La femme : Désolée, on ne sert rien pour l’instant. Vous voyez le signal « attachez vos",
+        "ceintures » ?",
+        "L’homme : Bon, alors je vais attendre et lire un journal. Combien de temps va durer notre",
+        "vol ?",
+        "La femme : Nous allons arriver à l’aéroport de Lyon dans deux heures.",
+        "Tekst 4.",
+        "Tous les chats qui habitent ici ont été adoptés. Ils trouvent chez nous une nouvelle maison.",
+        "Dans la salle au fond, il y a même des fauteuils réservés uniquement à nos animaux.",
+        "D’habitude, au restaurant, on n’a pas l’occasion de prendre un déjeuner ou un dîner en",
+        "compagnie de chats. Dans notre café, c’est possible. Venez tous les jours, de midi à 22h30,",
+        "vivre une expérience extraordinaire.",
+        "Tekst 5.",
+        "Le journaliste : Vous écoutez « NRJ », votre radio préférée. Nathalie Lemaire, auteur de",
+        "l’émission gagnante du concours pour les jeunes « Parlez-moi de vous », est",
+        "avec nous.",
+        "Nathalie : Bonjour ! Chaque samedi, je voudrais vous présenter mes chansons préférées",
+        "et un peu d’histoire de la musique. Je compte sur vous !",
+        "Le journaliste : Si vous voulez suivre le programme, je vous propose d’être avec nous ce soir.",
+        "Une rencontre fascinante et pleine d’humour proposée par une passionnée de",
+        "musique ! À ne pas manquer ! Merci et bon courage, Nathalie !",
+        "Egzamin ósmoklasisty z języka francuskiego (OJFP-100, OJFP-200)",
+        "kwiecień 2019"
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    },
+    {
+      "id": "cke-2019-main-french-100-x-transcript-q02",
+      "title": "Transkrypcja nagrania do zadania 2",
+      "paragraphs": [
+        "Wypowiedź 1.",
+        "C’est génial ! Quand je rentre à la maison, il y a toujours quelqu’un avec qui je peux discuter",
+        "de tout ou m’amuser. Avec le grand, je peux avoir des conversations profondes. Avec les plus",
+        "jeunes, je joue à leurs jeux préférés, je m’occupe d’eux et je leur apprends des choses. Mes",
+        "parents disent que je suis de plus en plus sérieux et que je suis un bon exemple pour eux.",
+        "Wypowiedź 2.",
+        "Mes frères et sœurs me donnent toujours des ordres parce que je suis la plus petite dans la",
+        "famille et je déteste ça. Mais ce qui est bien, c’est qu’avec eux, je fais des choses amusantes",
+        "que je ne fais avec personne d’autre. Et si on n’a pas d’amis, on peut sortir le soir avec son",
+        "frère ou sa sœur.",
+        "Wypowiedź 3.",
+        "Je suis fils unique et je trouve ça bien. Mes parents peuvent me consacrer tout leur temps.",
+        "Pour moi, ça marche beaucoup mieux avec les amis qu’avec les frères et sœurs. C’est plus",
+        "pratique. Je sors avec mes copains quand je veux, je ne suis responsable de personne et à la",
+        "maison, personne ne me dérange et ne touche à mes affaires.",
+        "Wypowiedź 4.",
+        "C’est bien d’avoir un frère ou une sœur. On apprend à partager, écouter, faire des choses",
+        "ensemble. Je suis fille unique et c’est triste. J’ai un très bon contact avec mes parents mais ce",
+        "n’est pas la même chose. Avec des frères et sœurs, ce serait beaucoup mieux. Ma meilleure",
+        "amie se dispute souvent avec ses frères mais ils s’amusent bien aussi."
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    },
+    {
+      "id": "cke-2019-main-french-100-x-transcript-q03",
+      "title": "Transkrypcja nagrania do zadania 3",
+      "paragraphs": [
+        "Chers acteurs, votre attention, s’il vous plaît ! J’espère que vous vous êtes bien reposés cette",
+        "nuit car on va travailler dur jusqu’à midi. Exceptionnellement, la première scène ne sera pas",
+        "jouée dans le studio mais dans un vrai café. Ce n’est pas compliqué. Faites comme dans la vie",
+        "réelle : parlez, rigolez... Soyez naturels ! Pendant le tournage, vous devez rester assis à table",
+        "pendant au moins trente minutes. Maintenant, terminez votre petit-déjeuner et préparez-vous à",
+        "tourner la première scène. Quelqu’un a vu Sophie Marceau ? On lui demande de venir tout de",
+        "suite devant la caméra. Bon, et vous, vous avez quinze minutes pour mettre vos costumes et",
+        "faire votre maquillage. Allez ! Bon courage !"
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    },
+    {
+      "id": "cke-2019-main-french-100-x-transcript-q04",
+      "title": "Transkrypcja nagrania do zadania 4",
+      "paragraphs": [
+        "Wypowiedź 1.",
+        "Comment marche cet appareil ?",
+        "Wypowiedź 2.",
+        "Tu peux mettre la musique un peu plus fort ?",
+        "Wypowiedź 3.",
+        "Montre-moi nos billets pour le concert, s’il te plaît !",
+        "Wypowiedź 4.",
+        "Qu’est-ce que tu penses de cette musicienne ?"
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    }
+  ],
+  "questions": [
+    {
+      "id": "cke-2019-main-french-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        3
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — wybór wielokrotny",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie pięć tekstów. W zadaniach 1.1.–1.5., na podstawie informacji\nzawartych w nagraniu, z podanych odpowiedzi wybierz właściwą. Zakreśl jedną z liter:\nA, B albo C.\n1.1. Quel sport on peut voir à la télévision dimanche ?\nA. B. C.\n1.2. Quelle pièce va être bientôt rénovée ?\nA. B. C.\n1.3. Où sont les deux personnes qui parlent ?\nA. B. C.\n1.4. La personne parle\nA. d’un plat délicieux.\nB. des habitudes des chats.\nC. d’un endroit exceptionnel.\n1.5. Le journaliste veut\nA. inviter à écouter une émission.\nB. partager sa passion pour la musique.\nC. encourager les jeunes à participer à un concours.\nOJFP-100-1904 Strona 3 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "1.1: C; 1.2: B; 1.3: C; 1.4: C; 1.5: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 5,
+        "rules": [
+          "Maksymalnie 5 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 1.1: C; 1.2: B; 1.3: C; 1.4: C; 1.5: A.",
+      "solution_steps": [
+        "Klucz CKE: 1.1: C; 1.2: B; 1.3: C; 1.4: C; 1.5: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2019-main-french-100-x-transcript-q01",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-page-3"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q01-page-3",
+          "path": "public/cke/2019/french/ojfp-100-x-1904/q01-page-3.webp",
+          "sha256": "5cd373d796ea0cfb83c2edec7d006b831eca741693436e77470c19cc338ebda5",
+          "alt": "Oryginalny układ zadania 1 z arkusza OJFP-100-1904, strona 3.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 3.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-french-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — dopasowywanie",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi na temat posiadania rodzeństwa. Na podstawie\ninformacji zawartych w nagraniu dopasuj do każdej wypowiedzi (2.1.–2.4.)\nodpowiadające jej zdanie (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. Les parents ne remplaceront jamais les frères et sœurs.\nB. Avec mes frères et sœurs, je deviens responsable.\nC. Je préfère avoir des amis que des frères et sœurs.\nD. Je me dispute souvent avec mes frères et sœurs.\nE. Je n’aime pas écouter mes frères et sœurs.\n2.1. 2.2. 2.3. 2.4.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "2.1: B; 2.2: E; 2.3: C; 2.4: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 2.1: B; 2.2: E; 2.3: C; 2.4: A.",
+      "solution_steps": [
+        "Klucz CKE: 2.1: B; 2.2: E; 2.3: C; 2.4: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2019-main-french-100-x-transcript-q02",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q02-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q02-page-4",
+          "path": "public/cke/2019/french/ojfp-100-x-1904/q02-page-4.webp",
+          "sha256": "bf2ed8bb437b4a3115b7c2849b75442390afe1ed36114305b906a91d0d054184",
+          "alt": "Oryginalny układ zadania 2 z arkusza OJFP-100-1904, strona 4.",
+          "caption": "Zadanie 2 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-french-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — uzupełnianie luk",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie komunikat na planie filmowym. Na podstawie informacji\nzawartych w nagraniu odpowiedz krótko na pytania 3.1.–3.4., tak aby jak najbardziej\nprecyzyjnie oddać sens wysłuchanego tekstu. Na pytania należy odpowiedzieć w języku\nfrancuskim.\n3.1. Où sera jouée la première scène ?\n_______________________________________________________________________\n3.2. Qu’est-ce que Sophie Marceau doit faire tout de suite ?\n_______________________________________________________________________\n3.3. Combien de minutes ont les acteurs pour se préparer ?\n_______________________________________________________________________\n3.4. À quel moment de la journée les acteurs entendent ce communiqué ?\n_______________________________________________________________________",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "3.1: dans un (vrai) café; 3.2: (Elle doit) venir (devant la caméra.) / (Elle doit) venir (tout de suite.); 3.3: (Ils ont) quinze minutes / 15 minutes.; 3.4: le matin / dans la matinée / au début de la journée / en début de journée"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 3.1: dans un (vrai) café; 3.2: (Elle doit) venir (devant la caméra.) / (Elle doit) venir (tout de suite.); 3.3: (Ils ont) quinze minutes / 15 minutes.; 3.4: le matin / dans la matinée / au début de la journée / en début de journée.",
+      "solution_steps": [
+        "Klucz CKE: 3.1: dans un (vrai) café; 3.2: (Elle doit) venir (devant la caméra.) / (Elle doit) venir (tout de suite.); 3.3: (Ils ont) quinze minutes / 15 minutes.; 3.4: le matin / dans la matinée / au début de la journée / en début de journée.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2019-main-french-100-x-transcript-q03",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q03-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q03-page-4",
+          "path": "public/cke/2019/french/ojfp-100-x-1904/q03-page-4.webp",
+          "sha256": "d274d11306c9883158bb19650a5f4aa2b62ff4863c6f589c5815232602cd8395",
+          "alt": "Oryginalny układ zadania 3 z arkusza OJFP-100-1904, strona 4.",
+          "caption": "Zadanie 3 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-french-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — zadanie otwarte",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi związane z muzyką (4.1.–4.4.). Do każdej z nich\ndobierz właściwą reakcję (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedna reakcja została podana dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. Mais je ne les ai pas sur moi.\nB. Elle joue parfaitement du piano.\nC. Désolé(e), mes voisins aiment le calme.\nD. C’est bien simple. Lisez le mode d’emploi !\nE. Oui, je chante un peu dans mon temps libre.\n4.1. 4.2. 4.3. 4.4.\nOJFP-100-1904 Strona 5 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "4.1: D; 4.2: C; 4.3: A; 4.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 4.1: D; 4.2: C; 4.3: A; 4.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 4.1: D; 4.2: C; 4.3: A; 4.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2019-main-french-100-x-transcript-q04",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q04-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q04-page-5",
+          "path": "public/cke/2019/french/ojfp-100-x-1904/q04-page-5.webp",
+          "sha256": "f3d3e7e1b7d8e98fd8c9ca004ae43c2a575eb01077f9ced33b6f4b536beb962b",
+          "alt": "Oryginalny układ zadania 4 z arkusza OJFP-100-1904, strona 5.",
+          "caption": "Zadanie 4 — oryginalny układ CKE, strona 5.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-french-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe",
+      "difficulty": 3,
+      "prompt": "Dla każdej z opisanych sytuacji (5.1.–5.4.) wybierz właściwą reakcję. Zakreśl jedną z liter:\nA, B albo C.\n5.1. W stołówce szkolnej chcesz poprosić o dodatkową porcję deseru. Co powiesz?\nA. Monsieur, quel est le dessert du jour ?\nB. Excusez-moi, à qui est cette glace ?\nC. Pardon, il y a encore du gâteau ?\n5.2. Kupujesz nowe okulary. Jak zapytasz kolegę o opinię na ich temat?\nA. À quoi tu penses ?\nB. Qu’est-ce que tu en penses ?\nC. Est-ce que tu penses à elles ?\n5.3. Kolega zaprasza Cię na swoje urodziny. Co powiesz?\nA. Viens, je t’attends !\nB. Avec plaisir !\nC. Je t’en prie !\n5.4. Odbierasz telefon i chcesz się dowiedzieć, kto dzwoni. Co powiesz?\nA. Qui est à l’appareil ?\nB. D’où appelez-vous ?\nC. Qu’est-ce qu’il y a ?",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "5.1: C; 5.2: B; 5.3: B; 5.4: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 5.1: C; 5.2: B; 5.3: B; 5.4: A.",
+      "solution_steps": [
+        "Klucz CKE: 5.1: C; 5.2: B; 5.3: B; 5.4: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q05-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q05-page-6",
+          "path": "public/cke/2019/french/ojfp-100-x-1904/q05-page-6.webp",
+          "sha256": "f3c6b31b238bacd00380c46e56edcad1d0c936fa258ac6c07c348f1cc253043a",
+          "alt": "Oryginalny układ zadania 5 z arkusza OJFP-100-1904, strona 6.",
+          "caption": "Zadanie 5 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-french-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe — uzupełnianie dialogów",
+      "difficulty": 3,
+      "prompt": "Uzupełnij dialog. Wpisz w każdą lukę (6.1.–6.3.) brakujący fragment wypowiedzi, tak aby\notrzymać spójny i logiczny tekst. Luki należy uzupełnić w języku francuskim.\nX : Je voudrais réserver une table pour demain soir, vers 18 heures.\nY : À 18 heures ? Non. Je suis désolé mais 6.1. _____________________________________.\nX : Et à 20 heures ?\nY : Oui madame. Pour 6.2. ___________________________ personnes ?\nX : Pour six personnes.\nY : Je fais la réservation à quel nom ?\nX : Julie Dubois.\nY : Je n’ai pas entendu votre nom. 6.3. ____________________________________________,\ns’il vous plaît ?\nX : Je m’appelle Julie Dubois.\nY : Merci, c’est noté. On vous attend demain à 20 heures.\nOJFP-100-1904 Strona 7 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "6.1: poważny błąd językowy; 6.2: combien de; 6.3: Est-ce que vous pouvez répéter / Est-ce que vous pourriez répéter / Vous pouvez répéter / Vous pourriez répéter / Pouvez-vous répéter / Pourriez-vous répéter"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 6.1: poważny błąd językowy; 6.2: combien de; 6.3: Est-ce que vous pouvez répéter / Est-ce que vous pourriez répéter / Vous pouvez répéter / Vous pourriez répéter / Pouvez-vous répéter / Pourriez-vous répéter.",
+      "solution_steps": [
+        "Klucz CKE: 6.1: poważny błąd językowy; 6.2: combien de; 6.3: Est-ce que vous pouvez répéter / Est-ce que vous pourriez répéter / Vous pouvez répéter / Vous pourriez répéter / Pouvez-vous répéter / Pourriez-vous répéter.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q06-page-7"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q06-page-7",
+          "path": "public/cke/2019/french/ojfp-100-x-1904/q06-page-7.webp",
+          "sha256": "04a41e71cf985a2e88ec3c75a7a48156fe9990adbf7c3076b5b9329792a2091f",
+          "alt": "Oryginalny układ zadania 6 z arkusza OJFP-100-1904, strona 7.",
+          "caption": "Zadanie 6 — oryginalny układ CKE, strona 7.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-french-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        8,
+        9
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie tekstów pisanych",
+      "difficulty": 3,
+      "prompt": "Przeczytaj teksty. W zadaniach 7.1.–7.4. z podanych odpowiedzi wybierz właściwą,\nzgodną z treścią tekstu. Zakreśl jedną z liter: A, B albo C.\nMessage \nDe : Gilles\nÀ : Max\n1\nObjet : Achat d’un ordinateur\nSalut Max,\nPour répondre à ton message, j’ai regardé les deux modèles et je te conseille\nl’ordinateur portable. Tu pars souvent à la campagne, alors c’est plus pratique pour toi.\nTu penses qu’il est plus cher que l’ordinateur de bureau ? Pas du tout ! J’ai comparé\nles prix des deux modèles et ils sont identiques. Moi, j’ai choisi l’ordi de bureau parce\nque j’aime bien jouer aux jeux vidéo sur un grand écran. Mais c’est à toi de décider !\nBises,\nGilles\n7.1. L’ordinateur de bureau est\nA. moins cher que l’ordinateur portable.\nB. aussi cher que l’ordinateur portable.\nC. plus cher que l’ordinateur portable.\nÊtes-vous prêts à vivre des émotions 7.2. Ce message s’adresse aux personnes\nexceptionnelles ? Voulez-vous devenir qui veulent\nmembre de jury pour une soirée et choisir A. noter les participants.\nles lauréats de notre concours ? Ce dimanche B. se présenter sur scène.\n4 mars, des jeunes des meilleures écoles C. organiser une fête d’école.\nde musique se présenteront sur scène.\nPour voir le gala et pouvoir voter,\ncontactez les organisateurs au 03.44.10.01.02.\nCOMMENT VENIR CHEZ NOUS ?\n7.3. Sylvie Ducroux écrit pour\nSMS SANTÉ\nA. changer l’heure du rendez-vous.\nMonsieur,\nB. proposer un rendez-vous chez le médecin.\nLe docteur Brolis\nC. communiquer au patient les résultats des analyses.\na déjà reçu\nles résultats de vos\nanalyses et il voudrait\nvous voir demain\nà 18h00.\nSylvie Ducroux,\nsecrétaire médicale\nMoi, je n’avais jamais de problèmes avec les profs. Bien au contraire.\nÀ l’école primaire, Madame Calot m’a donné le goût de la lecture.\nGrâce à elle, j’ai appris beaucoup de choses. Et je n’oublierai jamais\nmon prof de français au lycée. Il m’a donné envie de devenir\nAURÉLIE écrivain. Je dis merci à tous mes profs.\nEt vous ?\n7.4. Dans son message, Aurélie parle\nA. de ses problèmes à l’école.\nB. des lectures qui l’inspirent.\nC. de ses enseignants préférés.\nOJFP-100-1904 Strona 9 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "7.1: B; 7.2: A; 7.3: B; 7.4: C"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 7.1: B; 7.2: A; 7.3: B; 7.4: C.",
+      "solution_steps": [
+        "Klucz CKE: 7.1: B; 7.2: A; 7.3: B; 7.4: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q07-page-8"
+        },
+        {
+          "type": "image",
+          "asset_id": "q07-page-9"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q07-page-8",
+          "path": "public/cke/2019/french/ojfp-100-x-1904/q07-page-8.webp",
+          "sha256": "57529903e62568456b089b6241847bf55e511d48837f2d11ef92cff630f75d11",
+          "alt": "Oryginalny układ zadania 7 z arkusza OJFP-100-1904, strona 8.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q07-page-9",
+          "path": "public/cke/2019/french/ojfp-100-x-1904/q07-page-9.webp",
+          "sha256": "dfafe86d772b0117be2cc139f733dd7de43838c6d3d96e4ede2b18df92f5bae4",
+          "alt": "Oryginalny układ zadania 7 z arkusza OJFP-100-1904, strona 9.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 9.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-french-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Spójność tekstu",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst, z którego usunięto cztery zdania. Wpisz w każdą lukę (8.1.–8.4.) literę,\nktórą oznaczono brakujące zdanie (A–E), tak aby otrzymać spójny i logiczny tekst.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej luki.\nLA VISITE DU GOUFFRE DE PADIRAC\nVous savez ce que c’est le Gouffre de Padirac ? 8.1. _____\nLa visite du Gouffre dure une heure et demie. Pour commencer,\nprenez l’ascenseur ou descendez les escaliers. 8.2. _____ Elle est\npossible grâce à une rivière silencieuse qui permet de circuler sous\nterre entre les différentes salles à bord d’une barque.\nLe Gouffre de Padirac est comme toutes les grottes : il y a une\nclimatisation naturelle mais elle est réglée sur 13 °C toute l’année\nalors, il fait plutôt frais. 8.3. _____ N’oubliez pas non plus de mettre\ndes chaussures de marche car le sol est toujours humide.\nPendant la visite, vous pouvez prendre des photos seulement\npendant la descente. 8.4. _____ Même sans flash. Attention ! Si vous\nsouffrez de claustrophobie, vous devez bien réfléchir avant d’y aller. Les salles sont plutôt\ngrandes mais nous sommes quand même sous terre. Si votre claustrophobie est légère, ça devrait\naller ! Alors, n’attendez plus et partez à la découverte du Gouffre !\nNa podstawie: www.vallee-dordogne.com\nA. En bas, elles sont absolument interdites.\nB. Il faut donc prévoir des vêtements à manches longues.\nC. En bas, c’est la découverte des galeries ouvertes au public.\nD. Le Gouffre est ouvert tous les jours, du 30 mars au 5 novembre.\nE. Il s’agit d’une grotte qui se trouve dans la Vallée de la Dordogne en Occitanie.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "8.1: E; 8.2: C; 8.3: B; 8.4: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 8.1: E; 8.2: C; 8.3: B; 8.4: A.",
+      "solution_steps": [
+        "Klucz CKE: 8.1: E; 8.2: C; 8.3: B; 8.4: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q08-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q08-page-10",
+          "path": "public/cke/2019/french/ojfp-100-x-1904/q08-page-10.webp",
+          "sha256": "7177069c8729f8251f09de9465500fc767a4d921309cc44e254992c8086ad77c",
+          "alt": "Oryginalny układ zadania 8 z arkusza OJFP-100-1904, strona 10.",
+          "caption": "Zadanie 8 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-french-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        11
+      ],
+      "type": "long_text",
+      "topic": "Wyszukiwanie informacji",
+      "difficulty": 3,
+      "prompt": "Przeczytaj trzy ogłoszenia (A–C) umieszczone na forum kolekcjonerskim oraz pytania\n9.1.–9.4. Do każdego pytania dopasuj właściwe ogłoszenie. Wpisz rozwiązania do tabeli.\nUwaga! Jedno z ogłoszeń pasuje do dwóch pytań.\nCARTES DE JOUEURS DE FOOT\nPendant les vacances, j’ai retrouvé chez mes parents les cartes de joueurs de foot\nfrançais que mon grand frère collectionnait dans les années quatre-vingts. Je ne suis\nA. pas collectionneur de cartes, je suis donc prêt à les vendre à un prix raisonnable. Moi,\nje collectionne les timbres sur le thème des animaux sauvages. Si vous partagez ma\npassion, venez consulter mon site.\nJ’ai fait de l’ordre dans ma collection de cartes des footballeurs français actuels. J’ai\ncertaines cartes en double. Je peux les donner en cadeau à un(e) passionné(e). Je suis\nB.\nun vrai spécialiste dans ce domaine, alors je peux répondre à toutes vos questions.\nSi ça vous intéresse, je vous laisse mon numéro de téléphone : 07.45.14.32.28.\nCette année, j’ai décidé de limiter ma riche collection de vieilles cartes de foot aux\njoueurs français et donc je voudrais vendre pas cher les cartes de joueurs des autres\npays. Pour les acheter, contactez-moi sur ce forum. Par contre, si vous voulez offrir les\nC.\ncartes de joueurs français dont vous n’avez plus besoin, je les prendrai volontiers.\nMerci d’avance pour tous vos conseils sur ces cartes. J’ai toujours beaucoup de choses\nà apprendre.\nQuelle annonce peut intéresser la personne qui\n9.1. a des cartes de joueurs à donner ?\n9.2. n’a pas d’argent pour acheter des cartes ?\n9.3. veut acheter de vieilles cartes de joueurs français ?\n9.4. a besoin de consulter quelqu’un sur les cartes de joueurs français ?\nOJFP-100-1904 Strona 11 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "9.1: C; 9.2: B; 9.3: A; 9.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 9.1: C; 9.2: B; 9.3: A; 9.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 9.1: C; 9.2: B; 9.3: A; 9.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q09-page-11"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q09-page-11",
+          "path": "public/cke/2019/french/ojfp-100-x-1904/q09-page-11.webp",
+          "sha256": "904456f1b21e060200c2463920c003f0384576a1774b8ab527a146b72f20f6fc",
+          "alt": "Oryginalny układ zadania 9 z arkusza OJFP-100-1904, strona 11.",
+          "caption": "Zadanie 9 — oryginalny układ CKE, strona 11.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-french-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        12,
+        13
+      ],
+      "type": "long_text",
+      "topic": "Przetwarzanie wypowiedzi",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Uzupełnij w e-mailu luki 10.1.–10.3. zgodnie z treścią tekstu, tak aby jak\nnajbardziej precyzyjnie oddać jego sens. Luki należy uzupełnić w języku polskim.\nLA MARINIÈRE\nLe fameux pull blanc à rayures reste un symbole de la France\net un emblème du style à la française. On vous raconte son histoire\nexceptionnelle.\nDepuis le XVIIe siècle, la rayure est très liée au monde des gens\nde la mer. Les peintres anglais et hollandais représentaient souvent\nles marins habillés d’une blouse rayée bleu et blanc, parfois blanc\net rouge.\nDepuis 1858, une marinière utilisée dans l’armée doit avoir sur le torse et le dos vingt\net une rayures bleu indigo. Et là, une petite anecdote sur le personnage de Napoléon\nBonaparte, mort en 1821. À l’époque, il est très présent dans l’esprit des Français et donc,\nselon une légende, ce nombre de rayures représente le nombre de ses victoires.\nPendant la Première Guerre mondiale, Coco Chanel a transformé le célèbre vêtement\nà rayures en accessoire de mode. C’est le début d’un grand succès. John Wayne au cinéma\ndans les années 1940, puis Jean Cocteau, Pablo Picasso, Brigitte Bardot en portaient\net posaient en marinière pour des photographes. Enfin, depuis les années 1980, c’est\nJean-Paul Gaultier qui en fait une superstar toujours à la mode.\nEn mars 2011, la marinière devient même le modèle pour le maillot officiel de l’équipe\nde foot française pour les matchs à l’étranger.\nNa podstawie: fr.petitsfrenchies.com\nkasia@abc.pl\nCześć!\nKasiu!\nZnalazłam ciekawy wpis na blogu o modzie. Okazuje się, że nasze ulubione sweterki\nw paski nie są pomysłem współczesnych projektantów. Już na obrazach sprzed wieków\nmożna zobaczyć 10.1. ____________________________, którzy je nosili. Wyobraź sobie,\nże podobno 21 pasków na sweterku symbolizuje 10.2. ____________________________\nNapoleona! A w świecie mody te sweterki pojawiły się po raz pierwszy dzięki\n10.3. ______________________________________. Jak ja lubię takie ciekawostki!\nPozdrowienia!\nMarysia\nOJFP-100-1904 Strona 13 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "10.1: marynarzy; 10.2: zwycięstwa / liczbę zwycięstw / 21 zwycięstw; 10.3: Coco Chanel"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 10.1: marynarzy; 10.2: zwycięstwa / liczbę zwycięstw / 21 zwycięstw; 10.3: Coco Chanel.",
+      "solution_steps": [
+        "Klucz CKE: 10.1: marynarzy; 10.2: zwycięstwa / liczbę zwycięstw / 21 zwycięstw; 10.3: Coco Chanel.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q10-page-12"
+        },
+        {
+          "type": "image",
+          "asset_id": "q10-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q10-page-12",
+          "path": "public/cke/2019/french/ojfp-100-x-1904/q10-page-12.webp",
+          "sha256": "776f7b0b738df4b88e3b08a026a40b67af209b5d3d52a86e1ac029fbc46905d2",
+          "alt": "Oryginalny układ zadania 10 z arkusza OJFP-100-1904, strona 12.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q10-page-13",
+          "path": "public/cke/2019/french/ojfp-100-x-1904/q10-page-13.webp",
+          "sha256": "6aad631c87f1f9ef26d223236d38d322fd1ca914ce9f7604330729e78430a1a0",
+          "alt": "Oryginalny układ zadania 10 z arkusza OJFP-100-1904, strona 13.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-french-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — wybór wyrazów",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Spośród wyrazów podanych w ramce wybierz te, które są poprawnym\nuzupełnieniem luk 11.1.–11.3. Wpisz odpowiednią literę (A–F) obok numeru każdej luki.\nUwaga! Trzy wyrazy zostały podane dodatkowo i nie pasują do żadnej luki.\nA. chefs B. déguster C. faire D. garçons E. pied F. table\nRESTAURANT DANS LE CIEL\nBruxelles est une ville qui permet de vivre des expériences gastronomiques très originales.\nAvez-vous entendu parler du Dinner in the Sky ? C’est une nouvelle idée née dans la capitale\nbelge. Son but est très simple : 11.1. _____ un menu dans un restaurant installé sur une\nplateforme à 50 mètres du sol. Comment ça marche ? Vous êtes assis à 11.2. _____ sur une\ngrande plateforme avec d’autres personnes. Après, on vous soulève et on vous propose un repas\n« aérien » préparé sur place par un ou plusieurs 11.3. _____ de cuisine renommés. N’ayez pas\npeur ! La sécurité est la priorité : vous ne risquez rien du tout… Et croyez-moi, l’expérience est\nvraiment extraordinaire !\nNa podstawie: www.augoutdemma.be",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "11.1: B; 11.2: F; 11.3: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 11.1: B; 11.2: F; 11.3: A.",
+      "solution_steps": [
+        "Klucz CKE: 11.1: B; 11.2: F; 11.3: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q11-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q11-page-14",
+          "path": "public/cke/2019/french/ojfp-100-x-1904/q11-page-14.webp",
+          "sha256": "64f0cc227b0c6d2be59806134459739d2d7567c644696e3eb9fd12a0ab139b99",
+          "alt": "Oryginalny układ zadania 11 z arkusza OJFP-100-1904, strona 14.",
+          "caption": "Zadanie 11 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-french-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        15
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — gramatyka i leksyka",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Wybierz poprawne uzupełnienie luk 12.1.–12.4. Zakreśl jedną z liter:\nA, B albo C.\nCHANGEMENT D’HEURE\nAttention ! 12.1. _____ nuit, on change d’heure. On passe à l’heure d’été. Par conséquent,\non 12.2. _____ avancer notre montre d’une heure : ainsi, dimanche à 2 heures du matin, il sera\n3 heures. On va dormir une heure de moins, donc on va perdre une heure de sommeil. Quelle\nmauvaise nouvelle !\nLes Français changent d’heure depuis 1976, deux fois 12.3. _____ an, le dernier dimanche\nd’octobre et le dernier dimanche de mars. La France fait partie des 70 pays 12.4. _____\npratiquent encore le changement d’heure.\n12.1. A. Ce B. Cet C. Cette\n12.2. A. doit B. doive C. devait\n12.3. A. par B. dans C. pour\n12.4. A. que B. qui C. où\nOJFP-100-1904 Strona 15 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "12.1: C; 12.2: A; 12.3: A; 12.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 12.1: C; 12.2: A; 12.3: A; 12.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 12.1: C; 12.2: A; 12.3: A; 12.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q12-page-15"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q12-page-15",
+          "path": "public/cke/2019/french/ojfp-100-x-1904/q12-page-15.webp",
+          "sha256": "8dfd8a3a9888f1dbac2d3dbbd8780eb118d01c157fb6a4599176602b394b593a",
+          "alt": "Oryginalny układ zadania 12 z arkusza OJFP-100-1904, strona 15.",
+          "caption": "Zadanie 12 — oryginalny układ CKE, strona 15.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-french-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Transformacje leksykalno-gramatyczne",
+      "difficulty": 3,
+      "prompt": "Przetłumacz na język francuski fragmenty podane w nawiasach, tak aby otrzymać zdania\nlogiczne i gramatycznie poprawne. Wymagana jest pełna poprawność ortograficzna\nwpisywanych fragmentów zdań.\nUwaga! W każdą lukę możesz wpisać maksymalnie trzy wyrazy.\n13.1. Je préfère rester à la maison parce qu’(pada deszcz) _____________________________.\n13.2. Paul, (zamknij drzwi) ______________________________________, il fait froid dehors.\n13.3. Regarde ! C’est la photo du (mistrza świata) ___________________________________\nde karaté.\n13.4. Jacques joue à l’ordinateur (codziennie) ______________________________________.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "13.1: il pleut; 13.2: ferme la porte; 13.3: champion du monde; 13.4: tous les chaque jour jours /"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 13.1: il pleut; 13.2: ferme la porte; 13.3: champion du monde; 13.4: tous les chaque jour jours /.",
+      "solution_steps": [
+        "Klucz CKE: 13.1: il pleut; 13.2: ferme la porte; 13.3: champion du monde; 13.4: tous les chaque jour jours /.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q13-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q13-page-16",
+          "path": "public/cke/2019/french/ojfp-100-x-1904/q13-page-16.webp",
+          "sha256": "291f3f2ec995720dcd160f407bbfaf4f73cbceb51259a7ca7aef8df7cf6a1bce",
+          "alt": "Oryginalny układ zadania 13 z arkusza OJFP-100-1904, strona 16.",
+          "caption": "Zadanie 13 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-french-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        16,
+        21,
+        22
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna — e-mail",
+      "difficulty": 3,
+      "prompt": "Twoja koleżanka z Francji poinformowała Cię, że chce spędzić wakacje w polskich\ngórach. W e-mailu do niej:\n• napisz, dlaczego warto pojechać w polskie góry\n• doradź, co powinna ze sobą zabrać i dlaczego\n• wyjaśnij, z jakiego powodu nie możesz pojechać razem z nią.\nNapisz swoją wypowiedź w języku francuskim. Podpisz się jako XYZ.\nRozwiń swoją wypowiedź w każdym z trzech podpunktów, tak aby osoba nieznająca polecenia\nw języku polskim uzyskała wszystkie wskazane w nim informacje. Pamiętaj, że długość\nwypowiedzi powinna wynosić od 50 do 120 słów (nie licząc wyrazów podanych na początku\nwypowiedzi). Oceniane są: umiejętność pełnego przekazania informacji, spójność, bogactwo\njęzykowe oraz poprawność językowa.",
+      "answer_key": {
+        "assessment": "rubric",
+        "minimum_words": 50,
+        "maximum_words": 120
+      },
+      "scoring": {
+        "max_points": 10,
+        "rules": [
+          "Maksymalnie 10 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Porównaj rozwiązanie z oficjalnymi zasadami oceniania CKE dołączonymi do arkusza.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q14-page-16"
+        },
+        {
+          "type": "image",
+          "asset_id": "q14-page-21"
+        },
+        {
+          "type": "image",
+          "asset_id": "q14-page-22"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q14-page-16",
+          "path": "public/cke/2019/french/ojfp-100-x-1904/q14-page-16.webp",
+          "sha256": "c381f69bddd35ab30e1b32dcd5984b1c2196568b20efe8693063503ba759766b",
+          "alt": "Oryginalny układ zadania 14 z arkusza OJFP-100-1904, strona 16.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q14-page-21",
+          "path": "public/cke/2019/french/ojfp-100-x-1904/q14-page-21.webp",
+          "sha256": "5f56ad51f27f561cecca9552f5e1009e93efcfb85360afe85e17da476e043159",
+          "alt": "Oryginalny układ zadania 14 z arkusza OJFP-100-1904, strona 21.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 21.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q14-page-22",
+          "path": "public/cke/2019/french/ojfp-100-x-1904/q14-page-22.webp",
+          "sha256": "5263962aec8589cd36cc84bd192eebff530c211396d11437412342a1e6ffc012",
+          "alt": "Oryginalny układ zadania 14 z arkusza OJFP-100-1904, strona 22.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 22.",
+          "mime_type": "image/webp"
+        }
+      ]
+    }
+  ]
+}

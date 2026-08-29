@@ -1,0 +1,1236 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2020-main-polish-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2020-main-polish-100-x",
+    "source_document_id": "OPOP-100-2004",
+    "source_pdf_sha256": "7f0baba0846772a4c9a03ee3196eb15ed45f8e73884285a9aa2e730fd8d42e22",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2020-2/",
+    "source_label": "CKE 2020 · język polski · termin główny · wariant 100-X",
+    "exam_year": 2020,
+    "exam_session": "main",
+    "subject": "polish",
+    "variant_code": "100-X",
+    "question_count": 22,
+    "supplementary_sources": [
+      {
+        "id": "cke-2020-main-polish-100-x-rules",
+        "path": "content/cke/sources/2020/polish/OPOP-100-2004-zasady.pdf",
+        "sha256": "342cff8fdd358271d7e130be965c00481d47f9bc541e9b65fd50b0f692a0b1b3",
+        "label": "Oficjalne zasady oceniania rozwiązań zadań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [],
+  "questions": [
+    {
+      "id": "cke-2020-main-polish-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Na podstawie podanego fragmentu ułóż wymienione niżej zdarzenia zgodnie\nz porządkiem chronologicznym. Wpisz litery (A–E) w kratki we właściwej kolejności.\nA. Przemowa wysłannika cezara.\nB. Recytowanie poezji przez cezara.\nC. Podjęcie decyzji przez Petroniusza.\nD. Reakcja tłumu na słowa Petroniusza.\nE. Rozmowa cezara z uczestnikami spotkania.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "BECAD"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie\nBECAD\n1 Rozporządzenie Ministra Edukacji Narodowej z dnia 27 sierpnia 2012 r. w sprawie podstawy\nprogramowej wychowania przedszkolnego oraz kształcenia ogólnego w poszczególnych typach szkół\n(Dz.U. z 2012 r. poz. 977, ze zm.); II etap edukacyjny: klasy IV–VI.\n2 Rozporządzenie Ministra Edukacji Narodowej z dnia 14 lutego 2017 r. w sprawie podstawy\nprogramowej wychowania przedszkolnego oraz podstawy programowej kształcenia ogólnego dla\nszkoły podstawowej, w tym dla uczniów z niepełnosprawnością intelektualną w stopniu umiarkowanym\nlub znacznym, kształcenia ogólnego dla branżowej szkoły I stopnia, kształcenia ogólnego dla szkoły\nspecjalnej przysposabiającej do pracy oraz kształcenia ogólnego dla szkoły policealnej (Dz.U.\nz 2017 r. poz. 356, ze zm.); II etap edukacyjny: klasy VII i VIII.\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: BECAD.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q01-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q01-page-5",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q01-page-5.webp",
+          "sha256": "5dfa0e5f6a110852672367d53ac17635daddf1b650a660c0d46d97aa35d0e291",
+          "alt": "Oryginalny układ zadania 1 z arkusza OPOP-100-2004, strona 5.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 5.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-polish-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe,\nalbo F – jeśli jest fałszywe.\nNeron postanowił zjednać sobie protestujący tłum, gdyż jako artysta\nP F\npotrzebował sprzyjającej mu publiczności.\nWedług Petroniusza liczebność wojsk Nerona była wystarczająca, by\nP F\nzapewnić bezpieczeństwo władcy.\nPRZENIEŚ ROZWIĄZANIE ZADANIA 2. NA KARTĘ ODPOWIEDZI!\nOPOP-100-2004 Strona 5 z 22",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "FF"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nFF FF",
+      "solution_steps": [
+        "Klucz CKE: FF.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q02-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q02-page-5",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q02-page-5.webp",
+          "sha256": "649c6aa3ddb45283b470646d84e26321be5546817ffe1114fa641f4cecd039ef",
+          "alt": "Oryginalny układ zadania 2 z arkusza OPOP-100-2004, strona 5.",
+          "caption": "Zadanie 2 — oryginalny układ CKE, strona 5.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-polish-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Która sytuacja spowodowała zmianę nastawienia mieszkańców Rzymu w przytoczonym\nfragmencie Quo vadis? Wybierz właściwą odpowiedź spośród podanych.\nA. Deklamowanie wierszy przez władcę Rzymu.\nB. Wypowiedź Tygellina dotycząca gotowości wojsk.\nC. Obecność pretorianów wśród zbuntowanego tłumu.\nD. Złożenie przez Petroniusza obietnic w imieniu cezara.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "D"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nD D\nEgzamin ósmoklasisty z języka polskiego – termin główny 2020 r.",
+      "solution_steps": [
+        "Klucz CKE: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q03-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q03-page-6",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q03-page-6.webp",
+          "sha256": "ebe304caebdfbd7dc7f8b5c33d270852333be6a62847bb92263f2655531331cc",
+          "alt": "Oryginalny układ zadania 3 z arkusza OPOP-100-2004, strona 6.",
+          "caption": "Zadanie 3 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-polish-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nPetroniusza, w przytoczonym fragmencie Quo vadis, charakteryzują\nA. pycha i wzburzenie.\nB. opanowanie i stanowczość.\nC. ciekawość i nieustępliwość.\nD. wrażliwość i zdenerwowanie.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nB C",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q04-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q04-page-6",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q04-page-6.webp",
+          "sha256": "9f3c8f91487189eb1083f74a2a9010c208500127ff2526ddb1ca7a9b12142d0b",
+          "alt": "Oryginalny układ zadania 4 z arkusza OPOP-100-2004, strona 6.",
+          "caption": "Zadanie 4 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-polish-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Oceń prawdziwość podanych stwierdzeń w odniesieniu do całego utworu Quo vadis.\nWybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\nNeron i Petroniusz to postacie historyczne. P F\nPrześladowanie chrześcijan to jeden z wątków historycznych w powieści\nP F\nHenryka Sienkiewicza.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "PP"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nPP PP\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: PP.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q05-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q05-page-6",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q05-page-6.webp",
+          "sha256": "d541b93dfeb49cc2a418fde714214030e2b9cc5987a9ec1fb8314bae14d1e33a",
+          "alt": "Oryginalny układ zadania 5 z arkusza OPOP-100-2004, strona 6.",
+          "caption": "Zadanie 5 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-polish-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        6,
+        7
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "6.1. Do podanej tezy sformułuj argument. Zilustruj go innym – niż w przytoczonym\nfragmencie – wydarzeniem z Quo vadis.\nTeza: Petroniusz był skutecznym mówcą.\nArgument: …………….……………………………………………………………………..….\n………………………………………………………………………………………..……...…..\n……………………………………………………………………………………………….…..\n…………………………………………………………………………………………………...\n………………………………………………………………………………………..………….\n6.2. Spośród lektur obowiązkowych, innych niż Quo vadis, wybierz tę, której bohater\nmusiał stawić czoła wyzwaniom. Podaj tytuł tej lektury oraz jej bohatera.\nUzasadnij swój wybór. W uzasadnieniu przywołaj sytuację z tej lektury, ilustrującą\nTwoją argumentację. Lista lektur obowiązkowych znajduje się na stronie 3 tego\narkusza egzaminacyjnego.\nTytuł: ……………………………………….………………………………..………………….\nBohater: …………………………………………………………………………….…….……..\nUzasadnienie: ………………………………………………………………….…..….……...…\n………………………………………………………………………………………..….………\n…………………………………………………………………………………………...………\n…………………………………………………………………………………………...………\n…………………………………………………………………………………………...………",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – poprawne sformułowanie argumentu i zilustrowanie go konkretnym wydarzeniem\nz lektury.\n0 pkt – odpowiedź nie spełnia kryteriów na 1 punkt ALBO brak odpowiedzi.\nPrzykładowa odpowiedź oceniona na 1 punkt\nPetroniusz był skutecznym mówcą, ponieważ potrafił przekonać innych do swojego zdania.\nPrzekonał Winicjusza, żeby razem z Ligią opuścili Rzym, gdyż Neronowi nie można ufać.\nPrzykładowa odpowiedź oceniona na 0 punktów\nPetroniusz był skutecznym mówcą.\n6.2. (0–2)\nZasady oceniania\n2 pkt – podanie tytułu i bohatera lektury obowiązkowej oraz poprawne uzasadnienie\nzilustrowane sytuacją z lektury.\n1 pkt – podanie tytułu i bohatera lektury obowiązkowej oraz poprawne uzasadnienie bez\nprzywołania sytuacji z lektury ALBO podanie tytułu i bohatera lektury obowiązkowej\noraz przywołanie sytuacji z lektury ALBO podanie bohatera lektury obowiązkowej oraz\npoprawne uzasadnienie zilustrowane sytuacją z lektury.\n0 pkt – odpowiedź nie spełnia kryteriów na 1 punkt ALBO brak odpowiedzi.\nUwagi:\n• W przypadku, gdy uczeń wskaże poprawnie tytuł lektury, nie wskaże bohatera, ale\nuzasadnienie pozwala zidentyfikować bohatera, otrzymuje 1 punkt.\n• W przypadku, gdy uczeń wskaże poprawnie tytuł lektury i bohatera, ale nie uzasadni\nswojego wyboru albo błędnie uzasadni swój wybór, otrzymuje 0 punktów.\nEgzamin ósmoklasisty z języka polskiego – termin główny 2020 r.\nPrzykładowa odpowiedź oceniona na 2 punkty\nTytuł lektury: „Pan Tadeusz”\nBohater: Jacek Soplica\nUzasadnienie: Jacek Soplica po tym, jak został uznany za zdrajcę, postanowił odkupić swoje\nwiny. Został tajnym emisariuszem i zaczął pracę na rzecz kraju.\nPrzykładowa odpowiedź oceniona na 1 punkt\nTytuł lektury: „Pan Tadeusz”\nBohater: Jacek Soplica\nUzasadnienie: Jacek Soplica został uznany za zdrajcę i chciał się nawrócić.\nPrzykładowa odpowiedź oceniona na 0 punktów\nTytuł lektury: „Pan Tadeusz”\nBohater: Jacek Soplica\nUzasadnienie: Jacek Soplica był złym człowiekiem.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q06-page-6"
+        },
+        {
+          "type": "image",
+          "asset_id": "q06-page-7"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q06-page-6",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q06-page-6.webp",
+          "sha256": "5ed31241d44f6f701f8b2e6b7aeda45065dff816fd6567f29d63179feae443ff",
+          "alt": "Oryginalny układ zadania 6 z arkusza OPOP-100-2004, strona 6.",
+          "caption": "Zadanie 6 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q06-page-7",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q06-page-7.webp",
+          "sha256": "de19a8bf32cff82cb99f88e58e5d3866d53a29fc525451b880522c7d1a66f4f5",
+          "alt": "Oryginalny układ zadania 6 z arkusza OPOP-100-2004, strona 7.",
+          "caption": "Zadanie 6 — oryginalny układ CKE, strona 7.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-polish-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Petroniusz, jako autorytet w sprawach mody, elegancji i dobrego smaku, nazywany był arbiter\nelegantiarum.\nGdyby tytuł arbiter elegantiarum przyznawano kobietom, to która z postaci – Telimena\nczy żona modna (z satyry Ignacego Krasickiego) – bardziej by na niego zasłużyła?\nUzasadnij swoją odpowiedź, podając jeden argument. Odwołaj się do utworu, którego\nbohaterką jest postać wybrana przez Ciebie.\n……………………………………………………………………………………………….…\n…………………………………………………………………………………………….……\n…………………………………………………………………………………………….……\n……………………………………………………………………………………………….…\n…………………………………………………………………………………………….……\nOPOP-100-2004 Strona 7 z 22",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – poprawne uzasadnienie, podanie jednego argumentu.\n0 pkt – odpowiedź nie spełnia kryteriów na 1 punkt ALBO brak odpowiedzi.\nUwagi:\n• Odpowiedzi muszą odnosić się do wybranej bohaterki: żony modnej albo Telimeny.\n• Za poprawną odpowiedź uznajemy również taką, w której uczeń uzasadnia, że obie\nbohaterki zasługują na ten tytuł albo że żadna z bohaterek nie zasługuje na ten tytuł, ale\nargumentacja musi uwzględniać odwołanie do obu utworów.\nZasady oceniania rozwiązań zadań\nPrzykładowe odpowiedzi ocenione na 1 punkt\n• Tytuł „arbiter elegantiarum” nadałabym Telimenie z „Pana Tadeusza” Adama\nMickiewicza. Telimena chętnie naśladowała najnowsze trendy w modzie, zawsze była\nelegancko ubrana.\n• Żona modna bardziej zasługuje na tytuł „arbiter elegantiarum”, ponieważ starała się\nzawsze być elegancka. Znała doskonale modę francuską.\n• Uważam, że żadna z bohaterek nie zasługuje na ten tytuł, ponieważ ich wiedza\no elegancji była powierzchowna.\nPrzykładowa odpowiedź oceniona na 0 punktów\nTytuł „arbiter elegantiarum” nadałabym Telimenie z „Pana Tadeusza” Adama Mickiewicza,\nponieważ była ona ładna.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q07-page-7"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q07-page-7",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q07-page-7.webp",
+          "sha256": "4cbf6a3b2a8dc78bf8655c919f0f31400c0399591f6eb36d38a5f16c09c2e176",
+          "alt": "Oryginalny układ zadania 7 z arkusza OPOP-100-2004, strona 7.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 7.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-polish-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "Przeczytaj poniższy fragment utworu.\nKogut przeczytał ogłoszenie: „Potrzebujemy zwierząt – Cyrk”.\n– Zgłoszę się – powiedział, składając gazetę. – Zawsze chciałem być artystą. […]\nDyrektor przyjął go na świeżym powietrzu, gdzie urzędował. Właśnie rozwijano namiot\ncyrkowy. Ja i Lis zatrzymaliśmy się opodal.\n– Bardzo mi miło, że pan się do nas zgłasza. Można poznać godność?\n– Lew – przedstawił się Kogut krótko.\n– Lew? – zdziwił się dyrektor. – Czy jest pan tego pewny?\n– Ewentualnie tygrys.\n– No dobrze. Wobec tego niech pan zaryczy.\nKogut zaryczał jak umiał.\n– Owszem, nieźle, ale są lepsze lwy od pana. Gdyby się pan zgodził na koguta, to co\ninnego. Wtedy mógłbym pana zaangażować. […]\n– Co ci strzeliło do głowy, dlaczego chciałeś grać lwa?\n– Jak to, dlaczego… – odpowiedział za niego Lis. – Czy widziałeś kiedy artystę bez\nambicji?\n8.1. Podaj tytuł lektury obowiązkowej, z której pochodzi powyższy fragment.\nTytuł: ….………………………………………………………………………………………...\n8.2. Czy postawa Koguta – bohatera z powyższego fragmentu – przypomina postawę\nNerona z powieści Quo vadis? Uzasadnij swoją odpowiedź, odwołując się do obu\nutworów.\n………………………………………………………………………………………………...…\n………………………………………………………………………………………………...…\n……………………………………………………………………………………………...……\n………………………………………………………………………………………………...…\n………………………………………………………………………………………………...…\n………………………………………………………………………………………………...…\n………………………………………………………………………………………………...…",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "Artysta"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nArtysta\n8.2. (0–1)\nZasady oceniania\n1 pkt – poprawne uzasadnienie odwołujące się do obu utworów.\n0 pkt – odpowiedź nie spełnia kryteriów na 1 punkt ALBO brak odpowiedzi.\nEgzamin ósmoklasisty z języka polskiego – termin główny 2020 r.\nPrzykładowe odpowiedzi ocenione na 1 punkt\n• Postawa Koguta przypomina postawę Nerona. Obaj chcieli być artystami i obaj mieli\nbardzo wysokie mniemanie o sobie.\n• Moim zdaniem postawa Koguta nie przypomina postawy Nerona. Kogut udaje kogoś\ninnego niż jest, a Neron jest sobą.\nPrzykładowa odpowiedź oceniona na 0 punktów\nPostawa Koguta nie przypomina postawy Nerona. Kogut chciał zostać artystą, a Neron był\ncesarzem.",
+      "solution_steps": [
+        "Klucz CKE: Artysta.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q08-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q08-page-8",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q08-page-8.webp",
+          "sha256": "b98bee5d44f83c496f714bcf7a2256b4abe1bd6c3d0617972319d0f4eab27204",
+          "alt": "Oryginalny układ zadania 8 z arkusza OPOP-100-2004, strona 8.",
+          "caption": "Zadanie 8 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-polish-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        9
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Przeczytaj definicję wyrazu burza ze słownika języka polskiego.\n1. «gwałtowne opady deszczu połączone z silnym wiatrem, grzmotami i piorunami»\n2. «wielki wstrząs dziejowy lub życiowy»\n3. «czyjaś gwałtowna reakcja na coś»\n4. «gwałtowne uczucia»\n5. «o czymś skłębionym lub rozwichrzonym, występującym w dużej ilości»\nwww.sjp.pwn.pl\nW którym z podanych zdań użyto wyrazu burza w takim samym znaczeniu, w jakim\nwyraz ten został użyty w drugim akapicie fragmentu utworu Quo vadis? Wybierz\nwłaściwą odpowiedź spośród podanych.\nA. Przez miasto przeszła ogromna burza.\nB. Projekcja tego filmu wywołała burzę komentarzy.\nC. Państwo to przetrwało mimo wielu dziejowych burz.\nD. Charakterystyczną cechą jej wyglądu była burza kręconych włosów.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nB C",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q09-page-9"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q09-page-9",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q09-page-9.webp",
+          "sha256": "dce4a2627104c0a8dd738f04e89ec323f7355f6eb7b572ed630e4ec20b071ea0",
+          "alt": "Oryginalny układ zadania 9 z arkusza OPOP-100-2004, strona 9.",
+          "caption": "Zadanie 9 — oryginalny układ CKE, strona 9.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-polish-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        9
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe,\nalbo F – jeśli jest fałszywe.\nSformułowania rozszalała fala i morze głów podkreślają liczebność\nP F\npretorianów powstrzymujących protestujący tłum.\nO stosunku Nerona do buntującego się tłumu świadczy określenie tłuszcza,\nP F\nktórego cezar używa w swojej wypowiedzi.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "FP"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania rozwiązań zadań\nZasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nFP PF",
+      "solution_steps": [
+        "Klucz CKE: FP.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q10-page-9"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q10-page-9",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q10-page-9.webp",
+          "sha256": "632f10928aee26dccd2726164ea734af0ceb59eda67aa2fbceed99f30f8ee6ea",
+          "alt": "Oryginalny układ zadania 10 z arkusza OPOP-100-2004, strona 9.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 9.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-polish-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        9
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nWyrazem pochodnym, utworzonym za pomocą formantu pełniącego tę samą funkcję,\nco w wyrazie przyjechać, jest wyraz\nA. uderzać.\nB. skończyć.\nC. zdumiewać.\nD. przytakiwać.\nOPOP-100-2004 Strona 9 z 22",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nB C",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q11-page-9"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q11-page-9",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q11-page-9.webp",
+          "sha256": "8a63abdc78316b10c30341a55f3d45b40942f1cd6110c396049b2434d20beb3f",
+          "alt": "Oryginalny układ zadania 11 z arkusza OPOP-100-2004, strona 9.",
+          "caption": "Zadanie 11 — oryginalny układ CKE, strona 9.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-polish-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        10,
+        11,
+        12
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "Z okazji Światowego Dnia Książki jedna z firm produkujących gadżety reklamowe\nprzygotowała kolekcję toreb okolicznościowych, inspirowaną twórczością wybitnych polskich\npisarzy.\nPoniżej znajduje się projekt jednej z takich toreb, inspirowanej twórczością Henryka\nSienkiewicza.\nWybierz dwa spośród elementów graficznych umieszczonych na torbie. Dla każdego\nz nich:\n• podaj tytuł utworu Henryka Sienkiewicza, do którego ten element nawiązuje;\n• wyjaśnij związek tego elementu z treścią wskazanego przez Ciebie utworu Henryka\nSienkiewicza.\nElement graficzny 1.: ....................................................................................................................\nTytuł utworu: ................................................................................................................................\nWyjaśnienie: ….............................................................................................................................\n.......................................................................................................................................................\n.......................................................................................................................................................\n.......................................................................................................................................................\nElement graficzny 2.: ....................................................................................................................\nTytuł utworu: ................................................................................................................................\nWyjaśnienie: ….............................................................................................................................\n.......................................................................................................................................................\n.......................................................................................................................................................\n.......................................................................................................................................................\nOPOP-100-2004 Strona 11 z 22\nPrzeczytaj tekst i wykonaj zadania.\nMałgorzata Smoczyńska\nŻYCIE Z PASJĄ\nW naszej kulturze słowo „pasja” najczęściej kojarzy się z czymś dostarczającym bardzo\nsilnych emocji, z jakąś pochłaniającą aktywnością wykonywaną regularnie, szczególnie\nw obszarach artystycznych, podróżniczych, sportowych. […]\nKluczowe wydaje się zrozumienie, czym tak naprawdę jest pasja. To przede wszystkim\nenergia i radość odczuwane wtedy, gdy robimy to, co karmi naszą duszę, ciało, umysł i emocje.\nTo zaangażowanie i motywacja, wyzwolone faktem, że robimy coś, co jest dla nas przyjemne\ni co chcemy dla tej właśnie przyjemności robić – bez żadnego przymusu z zewnątrz. Stąd\nefektem oddawania się pasji jest poczucie naładowania akumulatorów. […]\nLiczba aktywności, które można określić mianem pasji, jest tak naprawdę ogromna. Nie\njest istotne, czy daną czynność wykonujemy często czy rzadko, nie jest ważne to, czy osiągamy\nw niej sukcesy bądź korzyści materialne, nie ma znaczenia, czy dana aktywność jest społecznie\nistotna, czy też zupełnie błaha. To może być spacer z psem, porządkowanie ogrodu,\nprzeglądanie kolekcji zdjęć lub pocztówek. Pasją mogą być inni ludzie – rozmowy z nimi,\nwspólne spędzanie czasu. Pasją może być gotowanie, sprzątanie, czytanie, oglądanie filmów.\nWszystkie te czynności można określić mianem ziaren pasji, choć nasza kultura nazwie je\nraczej mało istotnym hobby. Tymczasem to właśnie z takich ziaren pasji, gdy trafią na żyzny\ngrunt i będą odpowiednio pielęgnowane, niczym piękna roślina, wyrasta wielka wspaniała\npasja, będąca stylem życia. Z czasem ta roślina, która z entuzjazmem i zaangażowaniem pnie\nsię do słońca, rozwijając kolejne gałązki umiejętności i talentów, może stać się wielkim\ndrzewem – kluczowym elementem naszej tożsamości, koroną rozwoju naszych talentów\ni umiejętności, pełnym owoców w postaci satysfakcji, dumy, entuzjazmu dla życia, ciągłego\nrozwoju, relacji z ludźmi, ale też pieniędzy. […]\nŻycie z pasją jest dla nas tak istotne przede wszystkim dlatego, że w bardzo dużym stopniu\nzaspokaja nasze najważniejsze potrzeby oraz daje nam życiodajną energię.\nDzięki pasji stajemy się też ciekawszym człowiekiem dla innych, wzbogacamy ich życie,\njesteśmy inspiracją. To z kolei daje nam większe zadowolenie z samych siebie, wyższe\npoczucie własnej wartości.\nŻycie z pasją dobrze zaspokaja także potrzebę przynależności – łączy nas i zbliża do ludzi\no podobnych zainteresowaniach, pozwala poczuć się częścią ich społeczności. Docelowo\npomaga nam znaleźć swoją misję i powołanie, nadaje cel i sens naszemu życiu.\nNa podstawie: Małgorzata Smoczyńska, Życie z pasją – instrukcja obsługi, „Focus Coaching Extra” nr 2/2016.\n[355 wyrazów]",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 pkt – wskazanie dwóch elementów graficznych, podanie tytułu utworu / tytułów utworów, do\nktórych te elementy nawiązują, i wyjaśnienie ich związku z wybranym utworem /\nwybranymi utworami Henryka Sienkiewicza.\n1 pkt – wskazanie jednego elementu graficznego, podanie tytułu utworu / tytułów utworów, do\nktórych ten element nawiązuje, i wyjaśnienie jego związku z wybranym utworem /\nwybranymi utworami Henryka Sienkiewicza.\n0 pkt – odpowiedź nie spełnia kryteriów na 1 punkt ALBO brak odpowiedzi.\nPrzykładowe odpowiedzi\nElement graficzny: znak ryby\nTytuł utworu: „Quo vadis”\nWyjaśnienie: Ryba była znakiem chrześcijan. Ten znak Ligia narysowała na piasku.\nElement graficzny: latarnia\nTytuł utworu: „Latarnik”\nWyjaśnienie: Miejsce, w którym zamieszkał Skawiński.\nElement graficzny: słoń\nTytuł utworu: „W pustyni i w puszczy”\nWyjaśnienie: Nel i Staś ocalili słonia.\nElement graficzny: napis „Dokąd zmierzasz, człowieku?”\nTytuł utworu: „Quo vadis”\nWyjaśnienie: Święty Piotr zapytał Chrystusa: „Quo vadis, Domine?” – Dokąd zmierzasz,\nPanie?\nElement graficzny: skrzypce\nTytuł utworu: „Janko Muzykant”\nWyjaśnienie: Główny bohater marzył o tym, by grać na skrzypcach.\nElement graficzny: książka „Pan Tadeusz”\nTytuł utworu: „Latarnik”\nWyjaśnienie: Skawiński zaczytał się w „Panu Tadeuszu” i zapomniał zapalić latarnię.\nElement graficzny: armata\nTytuł utworu: „Potop”\nWyjaśnienie: Andrzej Kmicic zatkał lufę armaty i ocalił klasztor na Jasnej Górze.\nElement graficzny: lew\nTytuł utworu: „W pustyni i w puszczy”\nWyjaśnienie: Staś zabił lwa, który im zagrażał.\nElement graficzny: lew\nTytuł utworu: „Quo vadis”\nWyjaśnienie: Lwy atakowały chrześcijan na arenie amfiteatru.\nElement graficzny: rycerz\nTytuł utworu: „Krzyżacy”\nWyjaśnienie: Zbyszko starał się o rycerskie ostrogi; bohaterami byli też rycerze polscy\ni krzyżaccy.\nElement graficzny: rydwan\nTytuł utworu: „Quo vadis”\nWyjaśnienie: Był to pojazd żołnierzy w starożytnym Rzymie.\nZasady oceniania rozwiązań zadań\nElement graficzny: amfiteatr\nTytuł utworu: „Quo vadis”\nWyjaśnienie: Na arenie amfiteatru rozegrała się jedna z ważnych scen w powieści – Ursus\npokonał byka i ocalił Ligię.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q12-page-10"
+        },
+        {
+          "type": "image",
+          "asset_id": "q12-page-11"
+        },
+        {
+          "type": "image",
+          "asset_id": "q12-page-12"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q12-page-10",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q12-page-10.webp",
+          "sha256": "cfcd21ed25921189c21f690735c36b55d02861e8953a70364e72978daa9e53eb",
+          "alt": "Oryginalny układ zadania 12 z arkusza OPOP-100-2004, strona 10.",
+          "caption": "Zadanie 12 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q12-page-11",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q12-page-11.webp",
+          "sha256": "2002f7e766008faa70e4204940171676ba9d916d31efdc754512edf913d84b67",
+          "alt": "Oryginalny układ zadania 12 z arkusza OPOP-100-2004, strona 11.",
+          "caption": "Zadanie 12 — oryginalny układ CKE, strona 11.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q12-page-12",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q12-page-12.webp",
+          "sha256": "6d32f578db74c18b0ef2945e6d90f59daaab95e603362cfb0716e882bd0b2b62",
+          "alt": "Oryginalny układ zadania 12 z arkusza OPOP-100-2004, strona 12.",
+          "caption": "Zadanie 12 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-polish-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        13
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "Uzupełnij poniższy tekst w taki sposób, aby stanowił streszczenie tekstu Życie z pasją\nMałgorzaty Smoczyńskiej.\nTematem tekstu Małgorzaty Smoczyńskiej jest ………..…………………………………..…...\n……………………………………………………………………………………….…..…..… .\nAutorka skupia się na ………………………………………………………………….…..…....\n……………………………………………………………………………………….…..…..…..\ni dochodzi do wniosku, że ………………………………………………………………………\n……………………………………………………………………………………….…..…..… .",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 pkt – poprawne określenie tematu i tego, co na ten temat powiedziano w tekście; zachowanie\nwłaściwego poziomu uogólnienia.\n1 pkt – poprawne określenie tematu i tego, co na ten temat powiedziano w tekście; zaburzony\npoziom uogólnienia.\n0 pkt – odpowiedź nie spełnia kryteriów na 1 punkt ALBO brak odpowiedzi.\nUwaga:\nUczeń otrzymuje 0 punktów, jeśli jego wypowiedź w całości składa się z fragmentów\nprzepisanych z tekstu „Życie z pasją”.\nPrzykładowa odpowiedź oceniona na 2 punkty\nTematem tekstu Małgorzaty Smoczyńskiej jest rola pasji w życiu człowieka. Autorka skupia się\nna wyjaśnieniu, czym jest pasja i dochodzi do wniosku, że pasja wzbogaca życie człowieka,\ndaje mu poczucie spełnienia.\nPrzykładowa odpowiedź oceniona na 1 punkt\nTematem tekstu Małgorzaty Smoczyńskiej jest pasja w życiu człowieka. Autorka skupia się na\ntym, że pasja nie wymaga pieniędzy i dochodzi do wniosku, że jest to cel życia i inspiracja dla\ninnych.\nPrzykładowa odpowiedź oceniona na 0 punktów\nTematem tekstu Małgorzaty Smoczyńskiej jest nasze życie. Autorka skupia się na tym, że\nczłowiek może być szczęśliwy i dochodzi do wniosku, że jest to cel życia.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q13-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q13-page-13",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q13-page-13.webp",
+          "sha256": "8692bd9f493a21341510352ff8d877314e455cf28a0ae5609d8947aec2e758b6",
+          "alt": "Oryginalny układ zadania 13 z arkusza OPOP-100-2004, strona 13.",
+          "caption": "Zadanie 13 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-polish-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        13
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe,\nalbo F – jeśli jest fałszywe.\nZ tekstu wynika, że aby realizować swoje pasje, trzeba brać pod uwagę opinię\nP F\notoczenia.\nZ tekstu wynika, że realizowanie pasji wymaga dużych nakładów\nP F\nfinansowych.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "FF"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nFF FF",
+      "solution_steps": [
+        "Klucz CKE: FF.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q14-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q14-page-13",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q14-page-13.webp",
+          "sha256": "f0dabc917a59d31f82ac66f3885d6c9c711824c57251e0d3057f2d05a9f6fe75",
+          "alt": "Oryginalny układ zadania 14 z arkusza OPOP-100-2004, strona 13.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-polish-100-x-q15",
+      "number": "15",
+      "sort_order": 15,
+      "source_pages": [
+        13
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Które z podanych niżej zdań jest niezgodne z treścią tekstu Życie z pasją? Wybierz\nwłaściwą odpowiedź spośród podanych.\nA. Człowiek, który ma pasję, dodaje innym skrzydeł.\nB. Prawdziwy pasjonat to ktoś, kto stale robi krok do przodu.\nC. Stale rozwijana pasja pozwala czerpać z życia pełnymi garściami.\nD. Pasja sprawia, że codzienne aktywności muszą zejść na dalszy plan.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "D"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nD D",
+      "solution_steps": [
+        "Klucz CKE: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q15-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q15-page-13",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q15-page-13.webp",
+          "sha256": "78ea34e69ce29ee3aff07f90b6379b27c895779b64b5e8a33e15d9f386b26be8",
+          "alt": "Oryginalny układ zadania 15 z arkusza OPOP-100-2004, strona 13.",
+          "caption": "Zadanie 15 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-polish-100-x-q16",
+      "number": "16",
+      "sort_order": 16,
+      "source_pages": [
+        13
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe,\nalbo F – jeśli jest fałszywe.\nMałgorzata Smoczyńska zgadza się z obiegowymi opiniami na temat pasji,\nP F\nistniejącymi w naszej kulturze.\nMałgorzata Smoczyńska w swoim tekście podkreśla, że posiadana pasja\nP F\nkształtuje charakter człowieka.\nOPOP-100-2004 Strona 13 z 22",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "FP"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nFP FP\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: FP.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q16-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q16-page-13",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q16-page-13.webp",
+          "sha256": "14f403dceb38527bdd24b4b4d78eaf4c019a9d95aedff601ada43fc409aa76df",
+          "alt": "Oryginalny układ zadania 16 z arkusza OPOP-100-2004, strona 13.",
+          "caption": "Zadanie 16 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-polish-100-x-q17",
+      "number": "17",
+      "sort_order": 17,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "Na forum internetowym trwa dyskusja na temat Czy pasja nadaje cel i sens naszemu\nżyciu?. Zabierz głos w dyskusji – napisz komentarz, w którym przedstawisz swoje\nstanowisko i poprzesz je dwoma argumentami.\nRe: Czy pasja nadaje cel i sens naszemu życiu?\n……………………………………………………………………………………..…\n……………………………………………………………………………………..…\n……………………………………………………………………………………..…\n…………………………………………………………………………………..……\n……………………………………………………………………………………..…\n……………………………………………………………………………………..…\n…………………………………………………………………………………..……\n……………………………………………………………………………………..…\n……………………………………………………………………………………..…",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 pkt – uczeń przedstawia stanowisko i uzasadnia je dwoma argumentami.\n1 pkt – uczeń przedstawia stanowisko i uzasadnia je jednym argumentem.\n0 pkt – odpowiedź nie spełnia kryteriów na 1 punkt ALBO brak odpowiedzi.\nPrzykładowa odpowiedź oceniona na 2 punkty\nMoim zdaniem pasja nadaje cel i sens naszemu życiu. Człowiek, który ma pasję w życiu,\npoświęca czas na to, by ją realizować, rozwija się dzięki temu i cały czas zdobywa nowe\numiejętności. Dzięki realizacji pasji życie człowieka staje się bogatsze o nowe doświadczenia.\nPrzykładowa odpowiedź oceniona na 1 punkt\nMoim zdaniem pasja nadaje cel i sens naszemu życiu. Człowiek, który ma pasję, może\npoznawać innych ludzi, którzy mają takie same zainteresowania jak on i w ten sposób\nnawiązuje nowe znajomości.\nPrzykładowa odpowiedź oceniona na 0 punktów\nMoim zdaniem to prawda, że pasja nadaje cel i sens naszemu życiu. Jeśli mamy ciekawą\npasję, to nadaje ona cel naszemu życiu.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q17-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q17-page-14",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q17-page-14.webp",
+          "sha256": "5381f4a38558e2aa4e547654885a533ad30380f4bcdd699d62d06632aaea086d",
+          "alt": "Oryginalny układ zadania 17 z arkusza OPOP-100-2004, strona 14.",
+          "caption": "Zadanie 17 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-polish-100-x-q18",
+      "number": "18",
+      "sort_order": 18,
+      "source_pages": [
+        14,
+        15
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna",
+      "difficulty": 3,
+      "prompt": "18.1. Uzupełnij poniższe zdanie. Wybierz odpowiedź spośród oznaczonych literami A i B\noraz odpowiedź spośród oznaczonych literami C i D.\nW wypowiedzeniu Stąd efektem oddawania się pasji jest poczucie naładowania akumulatorów\npodkreślony wyraz to rzeczownik A B , pełniący funkcję C D .\nA. w bierniku C. przydawki\nB. w dopełniaczu D. dopełnienia\nPRZENIEŚ ROZWIĄZANIE ZADANIA 18.1. NA KARTĘ ODPOWIEDZI!\n18.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nTaki sam typ orzeczenia jak w wypowiedzeniu Stąd efektem oddawania się pasji jest poczucie\nnaładowania akumulatorów występuje w zdaniu\nA. Życie z pasją dobrze zaspokaja także potrzebę przynależności.\nB. Dzięki pasji stajemy się też ciekawszym człowiekiem dla innych.\nC. To z kolei daje nam większe zadowolenie z samych siebie, wyższe poczucie własnej wartości.\nD. W naszej kulturze słowo „pasja” najczęściej kojarzy się z czymś dostarczającym bardzo\nsilnych emocji.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "BC"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nBC BD\n18.2. (0–1)\nZasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nB C",
+      "solution_steps": [
+        "Klucz CKE: BC.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q18-page-14"
+        },
+        {
+          "type": "image",
+          "asset_id": "q18-page-15"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q18-page-14",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q18-page-14.webp",
+          "sha256": "410a040e913a9b841aafcc5820de98a4540a91700b52612300858fedc8fcf571",
+          "alt": "Oryginalny układ zadania 18 z arkusza OPOP-100-2004, strona 14.",
+          "caption": "Zadanie 18 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q18-page-15",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q18-page-15.webp",
+          "sha256": "f7decee0cdf7d3a1b321ece8d1c4b71fcf842907e388d205bdabee42f21a1fe6",
+          "alt": "Oryginalny układ zadania 18 z arkusza OPOP-100-2004, strona 15.",
+          "caption": "Zadanie 18 — oryginalny układ CKE, strona 15.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-polish-100-x-q19",
+      "number": "19",
+      "sort_order": 19,
+      "source_pages": [
+        15
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna",
+      "difficulty": 2,
+      "prompt": "W którym z wyrazów pisownia „rz” jest zgodna z tą samą szczegółową zasadą\nortograficzną, co zastosowana w wyrazie przyjemności? Wybierz właściwą odpowiedź\nspośród podanych.\nA. rzadko\nB. kojarzy\nC. kulturze\nD. potrzebę",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "D"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nD D",
+      "solution_steps": [
+        "Klucz CKE: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q19-page-15"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q19-page-15",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q19-page-15.webp",
+          "sha256": "5e5f0c3ccffaa2c0e0225506321a21641f0728d0f175bbe5a0458f0c9637b5dd",
+          "alt": "Oryginalny układ zadania 19 z arkusza OPOP-100-2004, strona 15.",
+          "caption": "Zadanie 19 — oryginalny układ CKE, strona 15.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-polish-100-x-q20",
+      "number": "20",
+      "sort_order": 20,
+      "source_pages": [
+        15
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna",
+      "difficulty": 2,
+      "prompt": "Jeden z punktów Poradnika pasjonata zapisano niezgodnie z obowiązującymi regułami\ninterpunkcyjnymi. Wybierz zdanie, w którym interpunkcja jest niepoprawna.\nA. Twoja pasja czeka, aż dogoni ją\nodwaga.\nB. Żadna inna rzecz nie da Ci tyle\nradości, ile daje pasja.\nC. Podążaj za pasją a sukces będzie\nzawsze podążał za Tobą.\nD. Prawdziwa pasja pomaga spełniać\nmarzenia i osiągnąć sukces.\nOPOP-100-2004 Strona 15 z 22",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "C"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania rozwiązań zadań\nZasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nC B",
+      "solution_steps": [
+        "Klucz CKE: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q20-page-15"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q20-page-15",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q20-page-15.webp",
+          "sha256": "1c05c7de85e8c2496b39ab4c2a94ae19fd75547f6b2673d408e14574d357d51d",
+          "alt": "Oryginalny układ zadania 20 z arkusza OPOP-100-2004, strona 15.",
+          "caption": "Zadanie 20 — oryginalny układ CKE, strona 15.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-polish-100-x-q21",
+      "number": "21",
+      "sort_order": 21,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna",
+      "difficulty": 3,
+      "prompt": "W Twojej miejscowości organizowane jest spotkanie z człowiekiem, który ma niezwykłą\npasję. Zredaguj ogłoszenie, w którym zachęcisz mieszkańców do udziału w tym spotkaniu.\nUżyj dwóch argumentów. Nie cytuj sformułowań z arkusza.\nUwaga: w ocenie wypowiedzi będzie brana pod uwagę poprawność językowa,\nortograficzna i interpunkcyjna.\nOgłoszenie\n……………………………………………………………………………………………………………………………\n……………………………………………………………………………………………………………………………\n……………………………………………………………………………………………………………………………\n……………………………………………………………………………………………………………………………\n……………………………………………………………………………………………………………………………\n……………………………………………………………………………………………………………………………\n……………………………………………………………………………………………………………………………\n……………………………………………………………………………………………………………………………\n……………………………………………………………………………………………………………………………\n……………………………………………………………………………………………………………………………\n……………………………………………………………………………………………………………………………\n……………………………………………………………………………………………………………………………\n……………………………………………………………………………………………………………………………\n……………………………………………………………………………………………………………………………\n……………………………………………………………………………………………………………………………\n……………………………………………………………………………………………………………………………\n……………………………………………………………………………………………………………………………\n……………………………………………………………………………………………………………………………\n……………………………………………………………………………………………………………………………",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\nTreść i forma:\n2 pkt treść zgodna z poleceniem, uwzględnione 2 argumenty; uwzględnionych\n5 elementów dotyczących formy: kto ogłasza? komu ogłasza? co ogłasza?\nkiedy się odbywa? gdzie się odbywa?\n1 pkt treść zgodna z poleceniem, uwzględnione 2 argumenty; uwzględnione\n4 elementy dotyczące formy: kto ogłasza? ORAZ/ALBO komu ogłasza?\nORAZ/ALBO co ogłasza? ORAZ/ALBO kiedy się odbywa? ORAZ/ALBO gdzie\nsię odbywa?\n0 pkt treść niezgodna z poleceniem ALBO treść zgodna z poleceniem, ale\nuwzględnione tylko 3 elementy dotyczące formy: kto ogłasza? ORAZ/ALBO\nkomu ogłasza? ORAZ/ALBO co ogłasza? ORAZ/ALBO kiedy się odbywa?\nORAZ/ALBO gdzie się odbywa?\nEgzamin ósmoklasisty z języka polskiego – termin główny 2020 r.\nPoprawność językowa, ortograficzna i interpunkcyjna:\n1 pkt – łącznie nie więcej niż dwa błędy (językowe, ortograficzne, interpunkcyjne).\n0 pkt – łącznie trzy lub więcej błędów (językowych, ortograficznych, interpunkcyjnych).\nUCZNIOWIE ZE SPECYFICZNYMI TRUDNOŚCIAMI W UCZENIU SIĘ\nPoprawność językowa, ortograficzna i interpunkcyjna:\n1 pkt – łącznie nie więcej niż trzy błędy (językowe, ortograficzne, interpunkcyjne).\n0 pkt – łącznie cztery lub więcej błędów (językowych, ortograficznych, interpunkcyjnych).\nUwagi:\n• Jeżeli uczeń uwzględnia 5 elementów ogłoszenia, a podaje tylko jeden argument,\nw kryterium „Treść i forma” otrzymuje 1 punkt.\n• Kategorie „Treść i forma” oraz „Poprawność językowa” oceniamy rozłącznie.\nPrzykładowa odpowiedź oceniona na 3 punkty\nDyrekcja Domu Kultury zawiadamia wszystkich miłośników techniki, że 25 czerwca 2020 r.\norganizuje spotkanie z niezwykłym człowiekiem – pasjonatem starych zegarów. Początek\no godzinie 16.00. Zapraszamy do hali widowiskowej Domu Kultury przy ulicy Jaśminowej 10.\nPo spotkaniu będzie można obejrzeć kolekcję starych zegarów, a także uczestniczyć\nw warsztatach dotyczących różnych sposobów obliczania czasu.\nZachęcamy do udziału w tym wydarzeniu.\nDyrekcja Domu Kultury\nZASADY OCENIANIA WYPRACOWANIA\n1. Jeżeli wypowiedź w całości jest nie na temat, egzaminator ocenia ją na 0 pkt. Nie sprawdza\ni nie zaznacza żadnych błędów w pracy.\n2. Jeżeli w wypowiedzi uczeń w ogóle nie odwołał się do treści lektury obowiązkowej\nwskazanej w poleceniu, za całą wypowiedź egzaminator przyznaje 0 pkt. Nie sprawdza\ni nie zaznacza żadnych błędów w pracy. Egzaminator umieszcza dopisek – „Brak\nodwołania do lektury obowiązkowej”.\n3. Jeżeli wypowiedź jest nieczytelna, egzaminator ocenia ją na 0 pkt.\n4. Jeżeli wypowiedź nie zawiera w ogóle rozwinięcia (np. uczeń napisał tylko wstęp),\negzaminator przyznaje 0 pkt w każdym kryterium.\n5. Jeżeli wypowiedź zawiera 180 wyrazów lub mniej, jest oceniana wyłącznie w kryteriach:\nrealizacji tematu wypowiedzi, elementów twórczych / elementów retorycznych oraz\nkompetencji literackich i kulturowych. W pozostałych kryteriach egzaminator przyznaje\n0 pkt.\n6. Jeżeli wypowiedź jest napisana niesamodzielnie, np. zawiera fragmenty odtworzone\nz podręcznika, zadania zawartego w arkuszu egzaminacyjnym lub innego źródła, w tym\ninternetowego, lub jest przepisana od innego ucznia, wówczas egzamin z języka polskiego,\nw przypadku takiego ucznia, jest unieważniany.\n7. Zabronione jest pisanie wypowiedzi obraźliwych, wulgarnych lub propagujących\npostępowanie niezgodne z prawem. W przypadku takich wypowiedzi zostanie podjęta\nindywidualna decyzja dotycząca danej pracy, np. nie zostaną przyznane punkty za styl\ni język lub cała wypowiedź nie będzie podlegała ocenie.\nUwaga: Liczone są wszystkie wyrazy: samodzielne i niesamodzielne.\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q21-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q21-page-16",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q21-page-16.webp",
+          "sha256": "31defb3593cf6195f1f40a4df99f52e2d6a9239dfbbf5a2c9746dec2f02caa9b",
+          "alt": "Oryginalny układ zadania 21 z arkusza OPOP-100-2004, strona 16.",
+          "caption": "Zadanie 21 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-polish-100-x-q22",
+      "number": "22",
+      "sort_order": 22,
+      "source_pages": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        23,
+        24
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna",
+      "difficulty": 3,
+      "prompt": "Wybierz jeden z podanych tematów i napisz wypracowanie.\n• Pamiętaj o zachowaniu formy wypowiedzi wskazanej w temacie: napisz przemówienie albo\nopowiadanie.\n• W wypracowaniu odwołaj się do wybranej lektury obowiązkowej. Lista lektur\nobowiązkowych znajduje się na stronie 3 tego arkusza egzaminacyjnego.\n• Twoja praca powinna liczyć co najmniej 200 wyrazów.\n• Zapisz wypracowanie w wyznaczonym miejscu. Nie pisz na marginesie.\nTemat 1.\nNapisz przemówienie skierowane do koleżanek i kolegów, w którym przekonasz\nsłuchaczy, że książki mogą być źródłem mądrości. W wypracowaniu odwołaj się do\nwybranej lektury obowiązkowej oraz innego utworu literackiego i wykaż, że ich\nprzeczytanie może uczynić czytelnika mądrzejszym.\nTemat 2.\nNapisz opowiadanie o spotkaniu z bohaterem wybranej lektury obowiązkowej, który\npodczas spotkania nauczył Cię czegoś ważnego. Wypracowanie powinno dowodzić, że\ndobrze znasz wybraną lekturę obowiązkową.\nWypracowanie\nMiejsce dla\nna temat nr ………… egzaminatora\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\nOPOP-100-2004 Strona 17 z 22\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n.............................................................................................................................. ________\n............................................................................................................................... ________\nOPOP-100-2004 Strona 19 z 22\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................. ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\n................................................................................................................................... ________\nElementy\nRealizacja Kompetencje\ntwórcze / Kompozycja\ntematu literackie Styl Język Ortografia Interpunkcja\nelementy tekstu\nwypowiedzi i kulturowe (0–2) (0–4) (0–2) (0–1)\nretoryczne (0–2)\n(0–2) (0–2)\n(0–5)\nOPOP-100-2004 Strona 21 z 22",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 20,
+        "rules": [
+          "Maksymalnie 20 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania rozwiązań zadań\nstosuje rytm\nakapitowy\n(przeplatanie\nakapitów dłuższych\ni krótszych);\n4) wykorzystuje\nznajomość zasad\ntworzenia tezy\ni hipotezy oraz\nargumentów przy\ntworzeniu [...]\ntekstów\nargumentacyjnych;\n5) odróżnia przykład\nod argumentu;\n6) przeprowadza\nwnioskowanie jako\nelement wywodu\nargumentacyjnego;\n7) zgadza się\nz cudzymi\npoglądami lub\npolemizuje z nimi,\nrzeczowo\nuzasadniając\nwłasne zdanie.\n2. Mówienie\ni pisanie. Uczeń:\n1) tworzy spójne\nwypowiedzi\nw następujących\nformach\ngatunkowych: [...]\nprzemówienie [...].\nZasady oceniania\n1. Realizacja tematu wypowiedzi\nOceniając wypowiedź ucznia w tym kryterium, należy rozważyć m.in., czy:\n• wypowiedź jest zgodna z formą wskazaną w poleceniu\n• w wypowiedzi ujęte zostały wszystkie kluczowe elementy tematu, np. czy uczeń\nw odpowiedni sposób odwołał się do lektury wskazanej w poleceniu\n• wypowiedź jest w całości na temat.\nEgzamin ósmoklasisty z języka polskiego – termin główny 2020 r.\n2 pkt • Forma wypowiedzi zgodna z formą wskazaną w poleceniu.\n• Wszystkie pozostałe elementy polecenia uwzględnione.\n• Wypowiedź w całości dotyczy problemu wskazanego w poleceniu.\n1 pkt • Forma wypowiedzi zgodna z formą wskazaną w poleceniu.\n• Nieuwzględniony jeden element polecenia (inny niż forma). ORAZ/LUB\n• W pracy występują fragmenty niedotyczące problemu wskazanego\nw poleceniu.\n0 pkt • Forma wypowiedzi niezgodna z formą wskazaną w poleceniu. ALBO\n• Nieuwzględnione co najmniej dwa elementy polecenia (inne niż forma).\nUwaga dotycząca formy wypowiedzi.\nWypracowanie musi zawierać cechy charakterystyczne przemówienia jako wypowiedzi\no charakterze argumentacyjnym, przeznaczonej do wygłoszenia:\na) bezpośredni zwrot do adresata,\nb) retoryczne środki językowe, np.: pytanie retoryczne, anafora, antyteza, wyliczenia,\npowtórzenie, porównanie, wykrzyknienie, słownictwo nacechowane emocjonalnie,\nwartościująco i stylistycznie,\nc) czasowniki w trybie rozkazującym,\nd) czasowniki w 1. i 2. osobie l.mn. służące podtrzymaniu kontaktu z odbiorcami lub pełniące\nfunkcję perswazyjną,\ne) zaimki w 1. i 2. osobie l.mn. służące podtrzymaniu kontaktu z odbiorcami lub pełniące\nfunkcję perswazyjną,\nf) zjednywanie przychylności odbiorców, np. podkreślenie ich znaczenia, kompetencji itp.\nUczeń może otrzymać 2 punkty, jeżeli:\n• w jego wypracowaniu pojawią się bezpośredni zwrot do adresata oraz przynajmniej dwie\nróżne cechy wybrane spośród b) – f); każda cecha powinna być potwierdzona przynajmniej\njeden raz, np. uczeń w wypracowaniu użył jednego porównania i jednego zaimka\nw 1 osobie l.mn., tym samym zrealizował podpunkty b) i e),\n• wszystkie pozostałe elementy polecenia zostały uwzględnione,\n• wypowiedź w całości dotyczy problemu wskazanego w poleceniu.\nUczeń może otrzymać 1 pun",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q22-page-17"
+        },
+        {
+          "type": "image",
+          "asset_id": "q22-page-18"
+        },
+        {
+          "type": "image",
+          "asset_id": "q22-page-19"
+        },
+        {
+          "type": "image",
+          "asset_id": "q22-page-20"
+        },
+        {
+          "type": "image",
+          "asset_id": "q22-page-21"
+        },
+        {
+          "type": "image",
+          "asset_id": "q22-page-23"
+        },
+        {
+          "type": "image",
+          "asset_id": "q22-page-24"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q22-page-17",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q22-page-17.webp",
+          "sha256": "c5d8545ad46ab086887623e5433eb17920ef33613c4b1080201eaf43c5c06202",
+          "alt": "Oryginalny układ zadania 22 z arkusza OPOP-100-2004, strona 17.",
+          "caption": "Zadanie 22 — oryginalny układ CKE, strona 17.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q22-page-18",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q22-page-18.webp",
+          "sha256": "7950f66d9b0e080ac26f348e3f6d3c42fe15d136264cf80c9c1a790b5d62d60f",
+          "alt": "Oryginalny układ zadania 22 z arkusza OPOP-100-2004, strona 18.",
+          "caption": "Zadanie 22 — oryginalny układ CKE, strona 18.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q22-page-19",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q22-page-19.webp",
+          "sha256": "94445eefe3c28336fd0d40a076644dc0c3ec019e66367793b08200c787a2d639",
+          "alt": "Oryginalny układ zadania 22 z arkusza OPOP-100-2004, strona 19.",
+          "caption": "Zadanie 22 — oryginalny układ CKE, strona 19.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q22-page-20",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q22-page-20.webp",
+          "sha256": "990371a7d7ec54ccee93ccfe2f76e5cab3bb80b2cd7ebf007bc06181ea6d2510",
+          "alt": "Oryginalny układ zadania 22 z arkusza OPOP-100-2004, strona 20.",
+          "caption": "Zadanie 22 — oryginalny układ CKE, strona 20.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q22-page-21",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q22-page-21.webp",
+          "sha256": "486940fd21604a105150edf9bb602942c88fe1cf106fc4dc05c1775afed5b511",
+          "alt": "Oryginalny układ zadania 22 z arkusza OPOP-100-2004, strona 21.",
+          "caption": "Zadanie 22 — oryginalny układ CKE, strona 21.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q22-page-23",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q22-page-23.webp",
+          "sha256": "da8e9b57588d6796d8169451dd3af1384a2edd8bf3206ba9837c6c530ff913e5",
+          "alt": "Oryginalny układ zadania 22 z arkusza OPOP-100-2004, strona 23.",
+          "caption": "Zadanie 22 — oryginalny układ CKE, strona 23.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q22-page-24",
+          "path": "public/cke/2020/polish/opop-100-x-2004/q22-page-24.webp",
+          "sha256": "15c1f7dc9aa6c26e99b4d05db71baee5883dffe4b4348bf8a49434c4fbe74d29",
+          "alt": "Oryginalny układ zadania 22 z arkusza OPOP-100-2004, strona 24.",
+          "caption": "Zadanie 22 — oryginalny układ CKE, strona 24.",
+          "mime_type": "image/webp"
+        }
+      ]
+    }
+  ]
+}

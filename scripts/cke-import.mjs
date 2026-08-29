@@ -27,6 +27,18 @@ function nonEmpty(value) {
   return typeof value === "string" && value.trim().length > 0;
 }
 
+function safeAssetPath(value) {
+  if (!nonEmpty(value)) return false;
+  if (value.startsWith("https://")) {
+    try {
+      return new URL(value).hostname === "cke.gov.pl";
+    } catch {
+      return false;
+    }
+  }
+  return !value.startsWith("/") && !value.includes("..");
+}
+
 function findPostgresNullCharacters(value, path, add) {
   if (typeof value === "string") {
     if (value.includes("\u0000")) add(path, "znak NUL (\\u0000) nie może zostać zapisany w PostgreSQL");
@@ -170,7 +182,7 @@ export function validateManifest(input) {
       if (!nonEmpty(asset?.id)) add(`${path}.assets[${assetIndex}].id`, "wymagany identyfikator");
       else if (assetIds.has(asset.id)) add(`${path}.assets[${assetIndex}].id`, "duplikat zasobu");
       assetIds.add(asset?.id);
-      if (!nonEmpty(asset?.path) || asset.path.startsWith("/") || asset.path.includes("..")) add(`${path}.assets[${assetIndex}].path`, "wymagana bezpieczna ścieżka względna");
+      if (!safeAssetPath(asset?.path)) add(`${path}.assets[${assetIndex}].path`, "wymagana bezpieczna ścieżka względna lub oficjalny adres HTTPS CKE");
       if (!SHA256.test(asset?.sha256 ?? "")) add(`${path}.assets[${assetIndex}].sha256`, "wymagany SHA-256 pliku");
       if (!nonEmpty(asset?.alt)) add(`${path}.assets[${assetIndex}].alt`, "wymagany tekst alternatywny");
     });

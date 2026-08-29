@@ -1,0 +1,831 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2023-main-italian-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2023-main-italian-100-x",
+    "source_document_id": "OJWP-100-2305",
+    "source_pdf_sha256": "1a9de2b36629a1977acb2117f11c3fc0b9d27ac8a9ca657c6e8e4d5b566caade",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2023-2/",
+    "source_label": "CKE 2023 · język włoski · termin główny · wariant 100-X",
+    "exam_year": 2023,
+    "exam_session": "main",
+    "subject": "italian",
+    "variant_code": "100-X",
+    "question_count": 14,
+    "supplementary_sources": [
+      {
+        "id": "cke-2023-main-italian-100-x-recording",
+        "path": "content/cke/sources/2023/italian/OJWP-100-2305.mp3",
+        "sha256": "3457c4f7fc7cb92238c683c421714cc2307dfc75ce04fabe1e838d26f6e586f2",
+        "label": "Oficjalne nagranie do zadań 1–4"
+      },
+      {
+        "id": "cke-2023-main-italian-100-x-transcript",
+        "path": "content/cke/sources/2023/italian/OJWP-100-2305-transkrypcja.pdf",
+        "sha256": "e0b60facd888a50fdafffa64133f4495deaf7e4ed827d610f4c00fcbfb79e06d",
+        "label": "Oficjalna transkrypcja nagrań"
+      },
+      {
+        "id": "cke-2023-main-italian-100-x-rules",
+        "path": "content/cke/sources/2023/italian/OJWP-100-2305-zasady.pdf",
+        "sha256": "e0dab0052849a92f08c64cdc0aa20f1a44f02d406ed5a4d4c5569088693a811b",
+        "label": "Oficjalne zasady oceniania rozwiązań zadań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [],
+  "questions": [
+    {
+      "id": "cke-2023-main-italian-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        3,
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — wybór wielokrotny",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie pięć tekstów. W zadaniach 1.1.–1.5., na podstawie informacji\nzawartych w nagraniu, z podanych odpowiedzi wybierz właściwą. Zakreśl jedną z liter:\nA, B albo C.\n1.1. Com’è adesso il ragazzo?\nA. B. C.\n1.2. Che oggetto usa in questo momento Giulio?\nA. B. C.\n1.3. Dove sono le persone che parlano?\nA. B. C.\nOJWP-100-2305 Strona 3 z 18\n1.4. La ragazza parla di\nA. una libreria che vende fumetti.\nB. una festa di compleanno.\nC. un regalo speciale.\n1.5. Il ragazzo telefona a Gianni per\nA. domandargli qualcosa.\nB. informarlo di qualcosa.\nC. scusarsi per qualcosa.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "1.1: C; 1.2: B; 1.3: A; 1.4: C; 1.5: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 5,
+        "rules": [
+          "Maksymalnie 5 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 1.1: C; 1.2: B; 1.3: A; 1.4: C; 1.5: B.",
+      "solution_steps": [
+        "Klucz CKE: 1.1: C; 1.2: B; 1.3: A; 1.4: C; 1.5: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-page-3"
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2023/jezyk_wloski/OJWP-100-2305.mp3",
+          "sha256": "3457c4f7fc7cb92238c683c421714cc2307dfc75ce04fabe1e838d26f6e586f2",
+          "alt": "Oficjalne nagranie CKE 2023 do zadań 1–4 z przedmiotu język włoski.",
+          "caption": "Oficjalne nagranie CKE 2023 — język włoski, zadania 1–4.",
+          "mime_type": "audio/mpeg"
+        },
+        {
+          "id": "q01-page-3",
+          "path": "public/cke/2023/italian/ojwp-100-x-2305/q01-page-3.webp",
+          "sha256": "c2389677c6baf1d757c9308f7a828c88234c887ae3451e709aca36b4f5ae7cfb",
+          "alt": "Oryginalny układ zadania 1 z arkusza OJWP-100-2305, strona 3.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 3.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q01-page-4",
+          "path": "public/cke/2023/italian/ojwp-100-x-2305/q01-page-4.webp",
+          "sha256": "1017ee5ca3972b394e3c3f8b064f587e55917a08439380d25b1f474694b05b5d",
+          "alt": "Oryginalny układ zadania 1 z arkusza OJWP-100-2305, strona 4.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-italian-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — dopasowywanie",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi na temat wycieczek do lasu. Na podstawie\ninformacji zawartych w nagraniu dopasuj do każdej wypowiedzi (2.1.–2.4.)\nodpowiadające jej zdanie (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej wypowiedzi.\nLa persona che parla dice che, quando era in un bosco,\nA. ha sbagliato strada.\nB. ha fatto delle foto bellissime.\nC. qualcuno le ha fatto uno scherzo.\nD. ha incontrato un animale misterioso.\nE. ha trovato una cosa che poi ha portato a casa.\n2.1. 2.2. 2.3. 2.4.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "2.1: C; 2.2: E; 2.3: D; 2.4: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 2.1: C; 2.2: E; 2.3: D; 2.4: A.",
+      "solution_steps": [
+        "Klucz CKE: 2.1: C; 2.2: E; 2.3: D; 2.4: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        },
+        {
+          "type": "image",
+          "asset_id": "q02-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2023/jezyk_wloski/OJWP-100-2305.mp3",
+          "sha256": "3457c4f7fc7cb92238c683c421714cc2307dfc75ce04fabe1e838d26f6e586f2",
+          "alt": "Oficjalne nagranie CKE 2023 do zadań 1–4 z przedmiotu język włoski.",
+          "caption": "Oficjalne nagranie CKE 2023 — język włoski, zadania 1–4.",
+          "mime_type": "audio/mpeg"
+        },
+        {
+          "id": "q02-page-4",
+          "path": "public/cke/2023/italian/ojwp-100-x-2305/q02-page-4.webp",
+          "sha256": "8da3771e404fd419f5131070e12c64bfe3f4efeb539e4e8dba8c904e074f720a",
+          "alt": "Oryginalny układ zadania 2 z arkusza OJWP-100-2305, strona 4.",
+          "caption": "Zadanie 2 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-italian-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — uzupełnianie luk",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie rozmowę na temat sprzedaży roweru. Na podstawie informacji\nzawartych w nagraniu uzupełnij luki 3.1.–3.3. w poniższej notatce, tak aby jak\nnajbardziej precyzyjnie oddać sens wysłuchanego tekstu. Luki należy uzupełnić\nw języku włoskim.\nUNA BICICLETTA DA COMPRARE\nColore: 3.1. ____________________\nAnni: tre\nPrezzo attuale: 3.2. ____________________ euro\nIndirizzo: via Roma 10\nStato: ottimo, ma bisogna mettere 3.3. ____________________ nuove",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "3.1: blu; 3.2: centoventi; 3.3: luci"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 3.1: blu; 3.2: centoventi; 3.3: luci.",
+      "solution_steps": [
+        "Klucz CKE: 3.1: blu; 3.2: centoventi; 3.3: luci.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        },
+        {
+          "type": "image",
+          "asset_id": "q03-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2023/jezyk_wloski/OJWP-100-2305.mp3",
+          "sha256": "3457c4f7fc7cb92238c683c421714cc2307dfc75ce04fabe1e838d26f6e586f2",
+          "alt": "Oficjalne nagranie CKE 2023 do zadań 1–4 z przedmiotu język włoski.",
+          "caption": "Oficjalne nagranie CKE 2023 — język włoski, zadania 1–4.",
+          "mime_type": "audio/mpeg"
+        },
+        {
+          "id": "q03-page-5",
+          "path": "public/cke/2023/italian/ojwp-100-x-2305/q03-page-5.webp",
+          "sha256": "c6844e7c6e41d2fade3a70de26af161fc5c210320270e76750684717a62b9387",
+          "alt": "Oryginalny układ zadania 3 z arkusza OJWP-100-2305, strona 5.",
+          "caption": "Zadanie 3 — oryginalny układ CKE, strona 5.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-italian-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — zadanie otwarte",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi związane z oglądaniem filmów (4.1.–4.4.).\nDo każdej z nich dobierz właściwą reakcję (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedna reakcja została podana dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. Dipende dal genere del film.\nB. Così così, preferisco le commedie.\nC. Grazie, la prossima volta ti invito io.\nD. Sei fortunato! Io devo stare a casa a studiare.\nE. Forse in un altro cinema troviamo ancora posti liberi?\n4.1. 4.2. 4.3. 4.4.\nOJWP-100-2305 Strona 5 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "4.1: E; 4.2: A; 4.3: D; 4.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 4.1: E; 4.2: A; 4.3: D; 4.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 4.1: E; 4.2: A; 4.3: D; 4.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "audio",
+          "asset_id": "official-recording"
+        },
+        {
+          "type": "image",
+          "asset_id": "q04-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "official-recording",
+          "path": "https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/Arkusze-egzaminacyjne/2023/jezyk_wloski/OJWP-100-2305.mp3",
+          "sha256": "3457c4f7fc7cb92238c683c421714cc2307dfc75ce04fabe1e838d26f6e586f2",
+          "alt": "Oficjalne nagranie CKE 2023 do zadań 1–4 z przedmiotu język włoski.",
+          "caption": "Oficjalne nagranie CKE 2023 — język włoski, zadania 1–4.",
+          "mime_type": "audio/mpeg"
+        },
+        {
+          "id": "q04-page-5",
+          "path": "public/cke/2023/italian/ojwp-100-x-2305/q04-page-5.webp",
+          "sha256": "10e4b7c296316d2e4607ee6866fd23d6f6c8f44b77035391c911e92c831b44c6",
+          "alt": "Oryginalny układ zadania 4 z arkusza OJWP-100-2305, strona 5.",
+          "caption": "Zadanie 4 — oryginalny układ CKE, strona 5.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-italian-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe",
+      "difficulty": 3,
+      "prompt": "Dla każdej z opisanych sytuacji (5.1.–5.4.) wybierz właściwą reakcję. Zakreśl jedną\nz liter: A, B albo C.\n5.1. Twój kolega proponuje Ci wspólne wyjście na basen. Jak mu odmówisz?\nA. Lo so, l’acqua è fredda.\nB. Mi dispiace, non ne ho voglia.\nC. No, preferisco stare in piscina.\n5.2. Koleżanka głośno rozmawia podczas lekcji. Jak zwrócisz jej uwagę, żeby Ci nie\nprzeszkadzała?\nA. Non dire queste cose!\nB. Non parlare, per favore!\nC. Non ripetere le mie parole!\n5.3. Już 15 minut czekasz z przyjaciółmi na koleżankę, która zazwyczaj się nie\nspóźnia. Jak wyrazisz swoje zdziwienie?\nA. Basta, non la voglio aspettare più a lungo.\nB. Certo, come sempre è in ritardo.\nC. Strano, di solito è puntuale.\n5.4. Kolega pokazuje Ci plakat, który Ci się podoba. Jak to wyrazisz?\nA. Non c’è di che!\nB. Non fa niente!\nC. Non è male!",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "5.1: B; 5.2: B; 5.3: C; 5.4: C"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 5.1: B; 5.2: B; 5.3: C; 5.4: C.",
+      "solution_steps": [
+        "Klucz CKE: 5.1: B; 5.2: B; 5.3: C; 5.4: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q05-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q05-page-6",
+          "path": "public/cke/2023/italian/ojwp-100-x-2305/q05-page-6.webp",
+          "sha256": "0acb1de39c8020a41c8489fd98b64b2d18587d2f0963181e705aa510d4750cab",
+          "alt": "Oryginalny układ zadania 5 z arkusza OJWP-100-2305, strona 6.",
+          "caption": "Zadanie 5 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-italian-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe — uzupełnianie dialogów",
+      "difficulty": 3,
+      "prompt": "Uzupełnij dialogi 6.1.–6.2. Wpisz w każdą lukę brakujący fragment wypowiedzi, tak aby\notrzymać spójne i logiczne teksty. Luki należy uzupełnić w języku włoskim.\n6.1. X: _________________________________________ è questo zaino sotto la scrivania?\nY: È mio!\n6.2. X: Ecco il tuo tè. Ma attenzione! __________________________________ lentamente,\nè molto caldo!\nY: Faccio così. Grazie.\nOJWP-100-2305 Strona 7 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "6.1: Di chi; 6.2: Bevilo"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 6.1: Di chi; 6.2: Bevilo.",
+      "solution_steps": [
+        "Klucz CKE: 6.1: Di chi; 6.2: Bevilo.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q06-page-7"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q06-page-7",
+          "path": "public/cke/2023/italian/ojwp-100-x-2305/q06-page-7.webp",
+          "sha256": "f459a1c10e2dc0e45ba1beb764db46d94ec5e322f7f090a5fcd5819ab792b18b",
+          "alt": "Oryginalny układ zadania 6 z arkusza OJWP-100-2305, strona 7.",
+          "caption": "Zadanie 6 — oryginalny układ CKE, strona 7.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-italian-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        8,
+        9
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie tekstów pisanych",
+      "difficulty": 3,
+      "prompt": "Przeczytaj teksty. W zadaniach 7.1.–7.4. z podanych odpowiedzi wybierz właściwą,\nzgodną z treścią tekstu. Zakreśl jedną z liter: A, B albo C.\nMessaggio \nD a: Redazione del giornali no\nA: Ragazzi de lla 3b\nOggetto: gita\nRagazzi,\nricordate la nostra gita di settembre? Ora vogliamo fare una relazione online\ne abbiamo bisogno di voi. Se avete qualche foto bella, mandatela a questo indirizzo.\nPer preparare i testi ci servono anche persone che scrivono bene. Vi saremo grati di\nogni consiglio utile.\nAlessia e Sandro, ragazzi della redazione\n7.1. Alessia e Sandro hanno scritto questa e-mail per\nA. ricordare di fare qualcosa.\nB. consigliare di fare qualcosa.\nC. chiedere aiuto per fare qualcosa.\nGiorgio, sei impossibile! 7.2. Nina ha scritto questo messaggio\nStamattina mi hai\nA. la mattina.\nchiesto di telefonarti\nB. il pomeriggio.\ne ora non rispondi!\nC. la sera.\nQuesta tua abitudine\ndi spegnere il cellulare\nper dormire dopo\npranzo è veramente\nirritante! Tra poco inizio\nla lezione delle tre.\nTi chiamerò stasera.\nNina\nOgni anno vado al mare e prenoto la camera sempre nello stesso posto. La\nSandro\nspiaggia è vicina, a soli 5 minuti a piedi. E la colazione che servono in camera\nè buonissima.\nIl letto era scomodo e la camera piccola. I piatti erano cattivi e monotoni: tutti\nMonica\ni giorni servivano lo stesso dessert. Per fortuna il servizio di pulizia era ottimo.\nDalla nostra finestra c’era una splendida vista. Nel giardino c’era una grande\nAnna\npiscina. Tutto il personale dell’albergo era gentile e pronto ad aiutare. Ci\nritorneremo di sicuro!\n7.3. Queste tre persone presentano\nA. i loro passatempi.\nB. i loro piatti preferiti.\nC. le loro opinioni sugli hotel.\nMamma, siamo 7.4. Paola scrive alla mamma che\nfinalmente al campeggio.\nA. le è piaciuta la cena.\nIl viaggio è durato più di\nB. è riuscita a montare la tenda da sola.\nsei ore, siamo\nstanchissimi! Per fortuna C. è arrivata al campeggio con sei ore di ritardo.\nc’erano dei ragazzi che ci\nhanno aiutato a montare\nla tenda. Dopo siamo\nandati a mangiare una\npizza buonissima! Ora\nvado a dormire, ti\ntelefono domani.\nPaola\nOJWP-100-2305 Strona 9 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "7.1: C; 7.2: B; 7.3: C; 7.4: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 7.1: C; 7.2: B; 7.3: C; 7.4: A.",
+      "solution_steps": [
+        "Klucz CKE: 7.1: C; 7.2: B; 7.3: C; 7.4: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q07-page-8"
+        },
+        {
+          "type": "image",
+          "asset_id": "q07-page-9"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q07-page-8",
+          "path": "public/cke/2023/italian/ojwp-100-x-2305/q07-page-8.webp",
+          "sha256": "ec04a2ef8c546b41a29c83abb75d37877e37b1561ecad68ed229b8857ff956d0",
+          "alt": "Oryginalny układ zadania 7 z arkusza OJWP-100-2305, strona 8.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q07-page-9",
+          "path": "public/cke/2023/italian/ojwp-100-x-2305/q07-page-9.webp",
+          "sha256": "9cb97d58e10cd4e2b3a933c330179084ce638bddbfd768d5d7bb549806eb4b17",
+          "alt": "Oryginalny układ zadania 7 z arkusza OJWP-100-2305, strona 9.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 9.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-italian-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Spójność tekstu",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst, z którego usunięto trzy zdania. Wpisz w każdą lukę (8.1.–8.3.) literę,\nktórą oznaczono brakujące zdanie (A–D), tak aby otrzymać spójny i logiczny tekst.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej luki.\nI REGALI DEGLI ANIMALI\nNon solo le persone, ma anche gli animali si fanno\ni regali: uccelli, pesci, addirittura insetti. Perché lo\nfanno? Di solito per aiutarsi tra di loro. C’è anche un\naltro motivo: a volte un maschio vuole piacere a una\nfemmina. I regali sono di diverso tipo, ma sono sempre pratici. 8.1. _____ Oppure una bella\ncasa, che anche per gli animali è importante. Conoscete gli uccelli africani che si chiamano\ntessitori e costruiscono nidi* per le loro “mogli”? Questi uccelli abitano in tanti sullo stesso\nalbero. 8.2. _____ Anche perché il nido non può essere né troppo in basso (è pericoloso), né\ntroppo in alto (fa troppo caldo). Quando l’uccello trova il posto giusto, comincia a costruire\nl’abitazione usando diversi materiali. Dopo alcuni giorni la casa è pronta e allora invita la\nfemmina a vederla. 8.3. _____ Invece se lei è contenta del nido, insieme ci creano una\nfamiglia felice.\n* il nido – gniazdo\nA. Lo mangiano volentieri alcuni animali.\nB. Se non le piace, il maschio deve lavorare ancora.\nC. Per esempio può essere una cosa buona da mangiare.\nD. Per questo è difficile trovare un posto libero per fare una nuova casa.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "8.1: C; 8.2: D; 8.3: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 8.1: C; 8.2: D; 8.3: B.",
+      "solution_steps": [
+        "Klucz CKE: 8.1: C; 8.2: D; 8.3: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q08-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q08-page-10",
+          "path": "public/cke/2023/italian/ojwp-100-x-2305/q08-page-10.webp",
+          "sha256": "6c035d7c3a783df84e5c0897da47023ccb6e2cd32bbb623d4eadb12dcc89a5af",
+          "alt": "Oryginalny układ zadania 8 z arkusza OJWP-100-2305, strona 10.",
+          "caption": "Zadanie 8 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-italian-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        11
+      ],
+      "type": "long_text",
+      "topic": "Wyszukiwanie informacji",
+      "difficulty": 3,
+      "prompt": "Przeczytaj trzy teksty na temat zakupów przez internet (A–C) oraz pytania 9.1.–9.4.\nDo każdego pytania dopasuj właściwy tekst. Wpisz rozwiązania do tabeli.\nUwaga! Jeden z tekstów pasuje do dwóch pytań.\nSPESE ONLINE\nLa settimana scorsa ho comprato una maglietta online. Il pacco è stato spedito\nvelocemente ed è arrivato in poco tempo. La maglietta era bellissima e di taglia\nA. perfetta. Ho deciso di lavarla prima di metterla, ma per sbaglio ho messo la lavatrice\na 90 gradi. Quando ho tirato fuori la maglietta, era così piccola che andava bene\na mio fratello di 9 anni! Che rabbia!\nOdio comprare vestiti in Internet, ma ogni tanto lo faccio perché costa meno. Così ho\nfatto quando avevo bisogno di un vestito nuovo per il matrimonio di mia cugina.\nB. Ho pagato, ma poi sono passate due settimane e il vestito non arrivava. Per il\nmatrimonio ho messo un vestito vecchio. Festa rovinata! Quello nuovo è arrivato\nil giorno dopo. Ma non mi serviva più, allora l’ho mandato indietro.\nIo compro online quasi tutto: pantaloni, magliette, giacche. Faccio alcuni click\ne aspetto il pacco. E poi ci sono tante offerte. Però bisogna stare attenti. Due\nC. settimane fa ho comprato un paio di scarpe. Ieri, per caso, ho visto le stesse scarpe\nnella vetrina di un negozio. Costavano la metà! Sono arrabbiato ma non posso più\nrestituire le mie scarpe perché le ho già usate.\nQuale persona dice che\n9.1. ha aspettato a lungo il pacco?\n9.2. ha rovinato per errore un abito?\n9.3. ha pagato troppo caro un oggetto?\n9.4. ha restituito l’oggetto comprato?\nOJWP-100-2305 Strona 11 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "9.1: B; 9.2: A; 9.3: C; 9.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 9.1: B; 9.2: A; 9.3: C; 9.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 9.1: B; 9.2: A; 9.3: C; 9.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q09-page-11"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q09-page-11",
+          "path": "public/cke/2023/italian/ojwp-100-x-2305/q09-page-11.webp",
+          "sha256": "c6efbbdb0f9d1abde4a70b07ff6a297e4649d33b6ed682a1c074570d6e3e792a",
+          "alt": "Oryginalny układ zadania 9 z arkusza OJWP-100-2305, strona 11.",
+          "caption": "Zadanie 9 — oryginalny układ CKE, strona 11.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-italian-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        12,
+        13
+      ],
+      "type": "long_text",
+      "topic": "Przetwarzanie wypowiedzi",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Uzupełnij w e-mailu luki 10.1.–10.3. zgodnie z treścią tekstu, tak aby\njak najbardziej precyzyjnie oddać sens podanych informacji. Luki należy uzupełnić\nw języku polskim.\nBLOG\nI CARNEVALI PIÙ BELLI D’ITALIA\nLa Battaglia delle Arance è l’evento più importante del Carnevale di Ivrea.\nEcco qualche informazione utile per partecipare:\n• Indossate vestiti vecchi e scarpe che non\nscivolano*! Durante la battaglia nelle strade ci\nsono tanti pezzi di arance ed è facile cadere su\nquesta pappa pericolosa.\n• Per proteggere gli occhi tenete un braccio\nalzato sopra il viso. Non mettete gli occhiali da vista o da sole! Se si rompono, vi fanno\nmale invece di proteggervi!\n• Durante la battaglia molta gente indossa uno strano berretto rosso. È segno di\nneutralità: significa che queste persone non partecipano alla battaglia, ma solo la\nosservano. Mettetelo anche voi se non volete essere colpiti dalle arance che volano da\ntutte le parti!\n• Se invece volete partecipare attivamente alla battaglia, è necessario comprare il\nbiglietto. Solo così potrete usare le arance delle casse che si trovano nelle piazze.\nOppure potete raccogliere le arance cadute a terra e tirare quelle. Portate una borsa di\nplastica per mettere dentro le arance da lanciare, altrimenti presto vi troverete con le\nmani vuote.\nNa podstawie: patatofriendly.com\n* scivolare – ślizgać się\nWiadomość \nO d: Marek\nDo: Tomek\nTemat: Karnawał w Ivrei\nCześć, Tomku!\nZnalazłem w internecie interesujący blog o karnawale w miejscowości Ivrea, gdzie co\nroku organizowana jest bitwa na pomarańcze. To musi być niezła zabawa! Z blogu\ndowiedziałem się, jak przygotować się do takiej bitwy. Otóż najlepiej założyć stare\nubrania i odpowiednie buty. Natomiast lepiej nie zakładać 10.1. ________________\n___________________, bo wbrew pozorom to żadna ochrona. Na zdjęciach, które\nwidziałem na blogu, wiele osób miało śmieszne czerwone czapki. Okazuje się, że\ntrzeba taką czapkę założyć, żeby 10.2. __________________________________\n_______________________. Kto chce się bić, powinien zabrać ze sobą torbę na\npomarańcze, żeby mieć je pod ręką. Ale żeby móc korzystać z owoców wyłożonych\nw skrzyniach na ulicy, trzeba koniecznie 10.3. ______________________________\n________________________. Oczywiście, można też zbierać pomarańcze leżące na\nchodniku.\nMoże i my wybierzemy się na karnawał do Ivrei? Daj znać!\nMarek\nOJWP-100-2305 Strona 13 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "10.1: okularów; 10.2: nie być obrzuconym pomarańczami; 10.3: kupić bilet"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 10.1: okularów; 10.2: nie być obrzuconym pomarańczami; 10.3: kupić bilet.",
+      "solution_steps": [
+        "Klucz CKE: 10.1: okularów; 10.2: nie być obrzuconym pomarańczami; 10.3: kupić bilet.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q10-page-12"
+        },
+        {
+          "type": "image",
+          "asset_id": "q10-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q10-page-12",
+          "path": "public/cke/2023/italian/ojwp-100-x-2305/q10-page-12.webp",
+          "sha256": "bb1c0d44f3e1d48c2e3f628a4772d0ccee79416722860c79208ee47064f81078",
+          "alt": "Oryginalny układ zadania 10 z arkusza OJWP-100-2305, strona 12.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q10-page-13",
+          "path": "public/cke/2023/italian/ojwp-100-x-2305/q10-page-13.webp",
+          "sha256": "4a944de8cb81656c38a39cf4134f7ded8dc636e8d56ce56151a9ed182c168892",
+          "alt": "Oryginalny układ zadania 10 z arkusza OJWP-100-2305, strona 13.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-italian-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — wybór wyrazów",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Spośród wyrazów podanych w ramce wybierz te, które są\npoprawnym uzupełnieniem luk 11.1.–11.3. Wpisz odpowiednią literę (A–F) obok\nnumeru każdej luki.\nUwaga! Trzy wyrazy zostały podane dodatkowo i nie pasują do żadnej luki.\nA. amano B. faccia C. gamba D. gusto E. sugo F. vedono\nPASTA ALL’ARRABBIATA\nLa pasta all’arrabbiata è un piatto veloce. Bisogna soltanto cuocere la pasta,\npreparare un semplice 11.1. _____ di pomodoro e aggiungere del peperoncino.\nIl peperoncino è un ingrediente fondamentale e, come si sa, è molto piccante.\nL’effetto è che la 11.2. _____ di chi mangia questo piatto diventa subito rossa, come\nquella di una persona molto arrabbiata. Ecco perché chiamiamo la pasta con questo\nnome. Gli italiani, specialmente quelli del Sud, 11.3. _____ la pasta all’arrabbiata.\nE a voi piacerebbe provarla?",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "11.1: E; 11.2: B; 11.3: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 11.1: E; 11.2: B; 11.3: A.",
+      "solution_steps": [
+        "Klucz CKE: 11.1: E; 11.2: B; 11.3: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q11-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q11-page-14",
+          "path": "public/cke/2023/italian/ojwp-100-x-2305/q11-page-14.webp",
+          "sha256": "c72d29a5b13188f5037ef190f861203c846ff3715de60d07883465a509379bd4",
+          "alt": "Oryginalny układ zadania 11 z arkusza OJWP-100-2305, strona 14.",
+          "caption": "Zadanie 11 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-italian-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        15
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — gramatyka i leksyka",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Wybierz poprawne uzupełnienie luk 12.1.–12.3. Zakreśl jedną z liter:\nA, B albo C.\nUNA PISTA CICLABILE ECOLOGICA\nAlcuni anni fa in Olanda un gruppo di ingegneri ecologisti ha realizzato una pista\nciclabile in plastica riciclata. È stata la prima strada di questo tipo al mondo. Adesso\nanche l’Italia segue il progetto ecologico olandese. A Follonica, una località\n12.1. _____ Toscana, si inaugura il primo tratto di pista per le bici che è realizzato\ncompletamente con le bottiglie di plastica. Per poter 12.2. _____ i soli primi 20 metri\ndella pista sono state usate sessantamila bottiglie. La città di Follonica le ha raccolte\ncon l’aiuto dei 12.3. _____ abitanti. Quindi si può dire che grazie alle persone che ogni\ngiorno separano correttamente i rifiuti, gli abitanti di Follonica hanno a disposizione\nquesta nuova strada.\nNa podstawie: www.chebellafirenze.it\n12.1.\nA. a\nB. in\nC. per\n12.2.\nA. creare\nB. creando\nC. hanno creato\n12.3.\nA. miei\nB. tuoi\nC. suoi\nOJWP-100-2305 Strona 15 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "12.1: B; 12.2: A; 12.3: C"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 12.1: B; 12.2: A; 12.3: C.",
+      "solution_steps": [
+        "Klucz CKE: 12.1: B; 12.2: A; 12.3: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q12-page-15"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q12-page-15",
+          "path": "public/cke/2023/italian/ojwp-100-x-2305/q12-page-15.webp",
+          "sha256": "5e8f05e42c768d828f3f3447596df932262e739c59d6fc65044cb36865dcf974",
+          "alt": "Oryginalny układ zadania 12 z arkusza OJWP-100-2305, strona 15.",
+          "caption": "Zadanie 12 — oryginalny układ CKE, strona 15.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-italian-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Transformacje leksykalno-gramatyczne",
+      "difficulty": 3,
+      "prompt": "Uzupełnij zdania 13.1.–13.3. Wykorzystaj w odpowiedniej formie wyrazy podane\nw nawiasach. Nie należy zmieniać kolejności podanych wyrazów, trzeba natomiast\n– jeśli jest to konieczne – dodać inne wyrazy, tak aby otrzymać zdania logiczne\ni gramatycznie poprawne. Wymagana jest pełna poprawność ortograficzna\nwpisywanych fragmentów.\nUwaga! W każdą lukę możesz wpisać maksymalnie cztery wyrazy, wliczając w to\nwyrazy już podane.\n13.1. A me questa storia (sembrare / noioso) _____________________________________\n_______________________________.\n13.2. Tu non sei alto, ma sei veramente bravo quando (giocare / pallacanestro) __________\n____________________________________________________________________.\n13.3. Vicino alla nostra scuola (esserci / molto / bar) _______________________________\n_____________________________________.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "13.1: sembra/sembrava/ è sembrata noiosa; 13.2: giochi a pallacanestro; 13.3: ci sono molti bar / c’erano molti bar"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 13.1: sembra/sembrava/ è sembrata noiosa; 13.2: giochi a pallacanestro; 13.3: ci sono molti bar / c’erano molti bar.",
+      "solution_steps": [
+        "Klucz CKE: 13.1: sembra/sembrava/ è sembrata noiosa; 13.2: giochi a pallacanestro; 13.3: ci sono molti bar / c’erano molti bar.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q13-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q13-page-16",
+          "path": "public/cke/2023/italian/ojwp-100-x-2305/q13-page-16.webp",
+          "sha256": "3ba0e853b193066b9e35ed347bc9f0a6b395c543313bc31d3a20f86ee557e43d",
+          "alt": "Oryginalny układ zadania 13 z arkusza OJWP-100-2305, strona 16.",
+          "caption": "Zadanie 13 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2023-main-italian-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna — e-mail",
+      "difficulty": 3,
+      "prompt": "Wraz z kolegami organizujesz w Twojej szkole cykl spotkań z różnymi gośćmi. Na\npierwsze spotkanie zaprosiliście muzyka. Na stronie internetowej Twojej szkoły:\n• wyjaśnij, dlaczego zaprosiliście właśnie tego muzyka\n• opisz przebieg tego spotkania\n• zachęć uczniów do udziału w kolejnym spotkaniu i poinformuj, czym zajmuje się\nWasz następny gość.\nNapisz swoją wypowiedź w języku włoskim. Podpisz się jako XYZ.\nRozwiń swoją wypowiedź w każdym z trzech podpunktów, tak aby osoba nieznająca\npolecenia w języku polskim uzyskała wszystkie wskazane w nim informacje. Pamiętaj, że\ndługość wypowiedzi powinna wynosić od 50 do 120 wyrazów (nie licząc wyrazów podanych\nna początku wypowiedzi). Oceniane są: umiejętność pełnego przekazania informacji,\nspójność, bogactwo językowe oraz poprawność językowa.",
+      "answer_key": {
+        "assessment": "rubric",
+        "minimum_words": 50,
+        "maximum_words": 120
+      },
+      "scoring": {
+        "max_points": 10,
+        "rules": [
+          "Maksymalnie 10 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Porównaj rozwiązanie z oficjalnymi zasadami oceniania CKE dołączonymi do arkusza.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q14-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q14-page-16",
+          "path": "public/cke/2023/italian/ojwp-100-x-2305/q14-page-16.webp",
+          "sha256": "ae1c8322abbe256906816df78524af4d3892cc3f7e784b1a78f5729d5249217c",
+          "alt": "Oryginalny układ zadania 14 z arkusza OJWP-100-2305, strona 16.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    }
+  ]
+}

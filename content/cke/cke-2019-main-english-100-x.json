@@ -1,0 +1,922 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2019-main-english-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2019-main-english-100-x",
+    "source_document_id": "OJAP-100-1904",
+    "source_pdf_sha256": "6b44adb4358c493fd12ba541312e6bc50d6d7d537d8a8b927b3524c50f9951ea",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2019-2/",
+    "source_label": "CKE 2019 · język angielski · termin główny · wariant 100-X",
+    "exam_year": 2019,
+    "exam_session": "main",
+    "subject": "english",
+    "variant_code": "100-X",
+    "question_count": 14,
+    "supplementary_sources": [
+      {
+        "id": "cke-2019-main-english-100-x-rules",
+        "path": "content/cke/sources/2019/english/OJAP-100-1904-zasady.pdf",
+        "sha256": "38f63093281d3a0c02c7e8e6327f384279861b8bb8d5685e2899fe3cd97338f9",
+        "label": "Oficjalne zasady oceniania rozwiązań zadań"
+      },
+      {
+        "id": "cke-2019-main-english-100-x-transcript",
+        "path": "content/cke/sources/2019/english/OJAP-100-1904-transkrypcja.pdf",
+        "sha256": "abcf647e0f858a32afb71531471c4ee52f0ab719a30f95b5c182fda84fa715f5",
+        "label": "Oficjalna transkrypcja nagrań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [
+    {
+      "id": "cke-2019-main-english-100-x-transcript-q01",
+      "title": "Transkrypcja nagrania do zadania 1",
+      "paragraphs": [
+        "Tekst 1.",
+        "Man: Helen, we’re moving our things to the new house this afternoon.",
+        "Girl: Great. I can’t wait to arrange my new room.",
+        "Man: Today we will take your bookcase so please pack your books. And empty your",
+        "desk. Mr Jackson is going to take it for his daughter.",
+        "Girl: My pink desk?",
+        "Man: Don’t you remember? We agreed to get you a bigger one. I’ve seen some",
+        "interesting furniture for teenagers at the shop and I’m sure we’ll find something for",
+        "you there.",
+        "Girl: Great! And what about my bed?",
+        "Man: Tonight we are still sleeping in this house. We are moving our beds tomorrow.",
+        "Tekst 2.",
+        "Boy: Mum, I need your help with my project. I have to choose a picture showing a",
+        "typical English person.",
+        "Woman: Well… it’s hard because everybody’s different.",
+        "Boy: I know, but at school we are talking about European nations and their",
+        "characteristics.",
+        "Woman: Fine, let’s try then. Drinking tea at five o’clock is definitely not true anymore.",
+        "Boy: Yes, you’re right. What about taking an umbrella everywhere because it rains a lot",
+        "in England?",
+        "Woman: Well, my English friends don’t do that. I think it’s safe to say the English love pets,",
+        "so the picture with puppies is perfect.",
+        "Boy: Good point! I’ll use that one.",
+        "Tekst 3.",
+        "Man: You look sad. What’s happened?",
+        "Girl: I wanted to pay for this book but I can’t find my purse.",
+        "Man: Think where you last had it.",
+        "Girl: I remember paying for a bus ticket an hour ago.",
+        "Man: Are you sure?",
+        "Girl: Yes, I am. I think I lost it or somebody stole it then.",
+        "Man: You should report it to the police. And don’t worry. I’ll keep the book for you until",
+        "tomorrow. It costs £10.",
+        "Girl: Thanks, that’s very kind of you.",
+        "Tekst 4.",
+        "Man: Thank you for inviting me to the career day at your school. I’d like to tell you when",
+        "my passion for cooking started. One morning, when I was about seven, I went to",
+        "the garden with my mother to pick apples. Then we made a delicious pie. And that",
+        "inspired me to become a chef.",
+        "Tekst 5.",
+        "Girl: Hi Sue! Chris called me today to say sorry for not coming to my party! He offered",
+        "to help me with the geography project and invited me for a bike ride tomorrow. But",
+        "my bike’s broken. Could I use yours? Please! Call me back!"
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    },
+    {
+      "id": "cke-2019-main-english-100-x-transcript-q02",
+      "title": "Transkrypcja nagrania do zadania 2",
+      "paragraphs": [
+        "Wypowiedź 1.",
+        "Boy: I have swimming practice, Spanish lessons and guitar lessons because my parents",
+        "organize all my free time. In the summer they take me to see interesting places so I can",
+        "learn new things. I think it’s too much. It would be nice just to stay at home and do",
+        "nothing.",
+        "Wypowiedź 2.",
+        "Girl: I play in our school band and I have lots of friends and hobbies, so I don’t often get",
+        "bored. But being bored is not so bad, at least for me. That’s when the best ideas for",
+        "new songs come into my head. When I sit in my room, doing nothing, I suddenly start",
+        "singing a new melody to myself!",
+        "Wypowiedź 3.",
+        "Boy: There are a lot of situations where you might get bored. It may be on the bus, or in the",
+        "dentist’s waiting room. Then you’ve got some time and nothing to do. That’s why",
+        "wherever I go, I have a small notebook and a pencil in my pocket. I just take them out",
+        "and start filling my notebook with funny pictures.",
+        "Wypowiedź 4.",
+        "Girl: Every time I feel bored I make lists. I write lists of things to do, lists of books to read",
+        "or films to watch. I make them because when I note something down, I remember it",
+        "better. And when I complete a task, I cross it out. That’s my way of getting things",
+        "done. It works and I enjoy it."
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    },
+    {
+      "id": "cke-2019-main-english-100-x-transcript-q03",
+      "title": "Transkrypcja nagrania do zadania 3",
+      "paragraphs": [
+        "Man: Visit the Gaming Festival at the Sports Arena from 29th to 31st May. What can you do",
+        "there?",
+        "If you want to test your knowledge of video games, take part in our team quiz. Your",
+        "team should have from 3 to 5 players who will have to answer a set of questions.",
+        "Would you prefer to compete on your own? There is a creative corner where you can",
+        "draw your favourite video game hero using the latest software. The best 3 will get a",
+        "prize.",
+        "But it’s not only about fun. If you are worried about the effects of video and computer",
+        "games on your health, come and talk to our expert, Professor Steve Jones. He will tell",
+        "you how your body reacts to gaming.",
+        "Tickets are available at www.londontickets.co.uk. But you should also visit",
+        "www.game.london.com where you can test new games and learn more about the",
+        "festival. See you there!"
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    },
+    {
+      "id": "cke-2019-main-english-100-x-transcript-q04",
+      "title": "Transkrypcja nagrania do zadania 4",
+      "paragraphs": [
+        "Wypowiedź 1.",
+        "Where can I try on these trousers?",
+        "Wypowiedź 2.",
+        "Which jacket do you prefer? The blue one or the red one?",
+        "Wypowiedź 3.",
+        "I’d like to return this sweater. Is it possible?",
+        "Wypowiedź 4.",
+        "Are these jeans the right size?"
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    }
+  ],
+  "questions": [
+    {
+      "id": "cke-2019-main-english-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        3
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — wybór wielokrotny",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie pięć tekstów. W zadaniach 1.1.–1.5., na podstawie informacji\nzawartych w nagraniu, z podanych odpowiedzi wybierz właściwą. Zakreśl jedną z liter:\nA, B albo C.\n1.1. What are they going to buy for Helen?\nA. B. C.\n1.2. Which picture will the boy use in his project?\nA. B. C.\n1.3. Who is the girl talking to?\nA. B. C.\n1.4. The man is talking about\nA. his job as a gardener.\nB. his childhood memory.\nC. his recipe for an apple pie.\n1.5. The girl is calling her friend to\nA. say sorry to her.\nB. offer her some help.\nC. borrow something from her.\nOJAP-100-1904 Strona 3 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "1.1: B; 1.2: A; 1.3: C; 1.4: B; 1.5: C"
+        ]
+      },
+      "scoring": {
+        "max_points": 5,
+        "rules": [
+          "Maksymalnie 5 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 1.1: B; 1.2: A; 1.3: C; 1.4: B; 1.5: C.",
+      "solution_steps": [
+        "Klucz CKE: 1.1: B; 1.2: A; 1.3: C; 1.4: B; 1.5: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2019-main-english-100-x-transcript-q01",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-page-3"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q01-page-3",
+          "path": "public/cke/2019/english/ojap-100-x-1904/q01-page-3.webp",
+          "sha256": "702fe0fe849563d5e6144df83e22dc14262f240de65e0105a197232725dc97e3",
+          "alt": "Oryginalny układ zadania 1 z arkusza OJAP-100-1904, strona 3.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 3.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-english-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — dopasowywanie",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi na temat nudzenia się. Na podstawie informacji\nzawartych w nagraniu dopasuj do każdej wypowiedzi (2.1.–2.4.) odpowiadające jej zdanie\n(A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. I watch sports or listen to music when I’m bored.\nB. I get creative when I feel bored at home.\nC. I start to draw when I feel bored.\nD. I’d like to have a less busy life.\nE. I like to plan my activities.\n2.1. 2.2. 2.3. 2.4.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "2.1: D; 2.2: B; 2.3: C; 2.4: E"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 2.1: D; 2.2: B; 2.3: C; 2.4: E.",
+      "solution_steps": [
+        "Klucz CKE: 2.1: D; 2.2: B; 2.3: C; 2.4: E.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2019-main-english-100-x-transcript-q02",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q02-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q02-page-4",
+          "path": "public/cke/2019/english/ojap-100-x-1904/q02-page-4.webp",
+          "sha256": "6d3b6b6da5a3ab85ad63e49a2db4479879ceb16d979dba3abba70db2030230cf",
+          "alt": "Oryginalny układ zadania 2 z arkusza OJAP-100-1904, strona 4.",
+          "caption": "Zadanie 2 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-english-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — uzupełnianie luk",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie komunikat o festiwalu gier komputerowych. Na podstawie\ninformacji zawartych w nagraniu uzupełnij luki 3.1.–3.4. w notatce, tak aby jak\nnajbardziej precyzyjnie oddać sens wysłuchanego tekstu. Luki należy uzupełnić w języku\nangielskim.\nUwaga! W każdą lukę możesz wpisać maksymalnie trzy wyrazy.\nGaming Festival\nWhere? Sports Arena\nWhen? 29th – 31st May\nWhat’s planned?\n• Quiz for groups with a maximum size of 3.1. _________________________ people.\n• Competition for individuals: make a drawing of your favourite 3.2. ______________\n________________________________________ and win a prize.\n• Meeting with an expert: find out what happens to your 3.3. ____________________\nwhen you play.\nAt www.game.london.com you can 3.4. ________________________________ and find\nout more about the event.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "3.1: five / 5; 3.2: video game hero / video game character; 3.3: body / health; 3.4: test new games"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 3.1: five / 5; 3.2: video game hero / video game character; 3.3: body / health; 3.4: test new games.",
+      "solution_steps": [
+        "Klucz CKE: 3.1: five / 5; 3.2: video game hero / video game character; 3.3: body / health; 3.4: test new games.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2019-main-english-100-x-transcript-q03",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q03-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q03-page-4",
+          "path": "public/cke/2019/english/ojap-100-x-1904/q03-page-4.webp",
+          "sha256": "2a04212dfaad9bdaae69e993b1124ebb0b9f16a4037f714809231703c178d1a0",
+          "alt": "Oryginalny układ zadania 3 z arkusza OJAP-100-1904, strona 4.",
+          "caption": "Zadanie 3 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-english-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — zadanie otwarte",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi związane z robieniem zakupów (4.1.–4.4.).\nDo każdej z nich dobierz właściwą reakcję (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedna reakcja została podana dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. No thanks, I’m just looking.\nB. Not really. They are too tight.\nC. In the changing rooms over there.\nD. I can’t decide. I like both of them.\nE. Of course. Can you tell me what’s wrong with it?\n4.1. 4.2. 4.3. 4.4.\nOJAP-100-1904 Strona 5 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "4.1: C; 4.2: D; 4.3: E; 4.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 4.1: C; 4.2: D; 4.3: E; 4.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 4.1: C; 4.2: D; 4.3: E; 4.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2019-main-english-100-x-transcript-q04",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q04-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q04-page-5",
+          "path": "public/cke/2019/english/ojap-100-x-1904/q04-page-5.webp",
+          "sha256": "b79313f9c905e1fcc0f0032db475400c7f172265072ec3475dcf88a144d478b6",
+          "alt": "Oryginalny układ zadania 4 z arkusza OJAP-100-1904, strona 5.",
+          "caption": "Zadanie 4 — oryginalny układ CKE, strona 5.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-english-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe",
+      "difficulty": 3,
+      "prompt": "Dla każdej z opisanych sytuacji (5.1.–5.4.) wybierz właściwą reakcję. Zakreśl jedną z liter:\nA, B albo C.\n5.1. Nie wiesz, gdzie zostawiłeś/zostawiłaś kluczyk do szafki. Jak o tym poinformujesz\nswojego kolegę?\nA. I’m afraid I can’t find my key.\nB. I don’t know whose key it can be.\nC. I should remember to leave the key.\n5.2. Koleżanka chce pogłaskać obcego psa na ulicy. Uważasz, że nie powinna tego robić.\nCo jej powiesz?\nA. Don’t let the dog out!\nB. Look after the dog!\nC. Don’t touch the dog!\n5.3. Kolega nie wie, czym poczęstować odwiedzającą go jutro kuzynkę. Jakiej rady mu\nudzielisz?\nA. What will she get for dessert?\nB. Why don’t you get her some fruit salad?\nC. Where did you get this cake for her?\n5.4. Rozmawiasz przez telefon w hałaśliwym miejscu. Jak poprosisz swojego rozmówcę,\naby mówił głośniej?\nA. Could you talk slowly, please?\nB. Could you say it again, please?\nC. Could you speak more loudly, please?",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "5.1: A; 5.2: C; 5.3: B; 5.4: C"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 5.1: A; 5.2: C; 5.3: B; 5.4: C.",
+      "solution_steps": [
+        "Klucz CKE: 5.1: A; 5.2: C; 5.3: B; 5.4: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q05-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q05-page-6",
+          "path": "public/cke/2019/english/ojap-100-x-1904/q05-page-6.webp",
+          "sha256": "91a63a9f043d9e9590f13f0a853147fe2156c09336386f1e6cf0a44057279e84",
+          "alt": "Oryginalny układ zadania 5 z arkusza OJAP-100-1904, strona 6.",
+          "caption": "Zadanie 5 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-english-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe — uzupełnianie dialogów",
+      "difficulty": 3,
+      "prompt": "Uzupełnij dialogi. Wpisz w każdą lukę 6.1.–6.3. brakujący fragment wypowiedzi, tak aby\notrzymać spójne i logiczne teksty. Luki należy uzupełnić w języku angielskim.\nUwaga! W każdą lukę możesz wpisać maksymalnie trzy wyrazy.\nWhat are we going\nto do today?\nToday we are going to read a story,\nso 6.1. _______________________\non page 24. Before we start, tell me\nwho you can see in the picture.\nIt’s a great film, isn’t it?\nYes, I 6.2. _______________ too.\nThe special effects are fantastic!\n6.3. __________________\nYou’re welcome. It’s\nfor walking me to the park. not a problem at all.\nOJAP-100-1904 Strona 7 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "6.1: open your book(s); 6.2: like it / love it / think so / am enjoying it; 6.3: Thank you / Thanks"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 6.1: open your book(s); 6.2: like it / love it / think so / am enjoying it; 6.3: Thank you / Thanks.",
+      "solution_steps": [
+        "Klucz CKE: 6.1: open your book(s); 6.2: like it / love it / think so / am enjoying it; 6.3: Thank you / Thanks.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q06-page-7"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q06-page-7",
+          "path": "public/cke/2019/english/ojap-100-x-1904/q06-page-7.webp",
+          "sha256": "9b970ebc86d7c9dcc145fc54e752b2052284a512d42bdf333040e3b6ac713019",
+          "alt": "Oryginalny układ zadania 6 z arkusza OJAP-100-1904, strona 7.",
+          "caption": "Zadanie 6 — oryginalny układ CKE, strona 7.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-english-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        8,
+        9
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie tekstów pisanych",
+      "difficulty": 3,
+      "prompt": "Przeczytaj teksty. W zadaniach 7.1.–7.4. z podanych odpowiedzi wybierz właściwą,\nzgodną z treścią tekstu. Zakreśl jedną z liter: A, B albo C.\nCOOKING CLASSES IN YOUR HOME\nYou can learn how to cook the foods you love. Simply choose the date and time of your\nclass and the dish you want to prepare. We will send one of our chef-instructors to your\nhome. The price of one cooking lesson is £95. Before the class, we will send you\na shopping list so that you can get all the necessary products for the dish.\n7.1. The students can decide\nA. what they will cook.\nB. which chef-instructor will arrive.\nC. what to write on the shopping list.\nImportant!\nAs you know, Mr Jackson has signed\na new contract in Germany and won’t\ncoach us anymore. We are meeting\ntonight after the press conference\nto thank him for the three successful\nyears he’s spent with us. No fans!\nThe meeting is just for the players.\n7.2. This notice is for\nA. fans.\nB. journalists.\nC. team members.\n7.3. Sophie wrote this message to\nA. invite her dad to a film.\nDad,\nWe missed the five B. ask her dad for permission.\no’clock showing of the C. complain to her dad about a show.\nfilm because we are still\nwaiting for Amy’s sister\nto come. There’s another\nshowing at seven. Is it OK\nif I go? I’ll be back around\n9 p.m. Please say yes.\nIt’s Saturday tomorrow\nand I don’t need to do any\nhomework.\nSophie \nI’m worried about Luna.\nShe’s sleeping all the time John called. He’s really sorry\nand hasn’t eaten anything but he can’t go to the zoo with\nyou tomorrow or to the school\nsince yesterday. Take her\ndisco on Thursday. He’s got\nto the vet after school to\na headache and a temperature.\nfind out what we should\nThe doctor told him to stay in\ndo. bed.\nMum Dad\n7.4. Both texts are about\nA. school trips.\nB. favourite pets.\nC. medical problems.\nOJAP-100-1904 Strona 9 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "7.1: A; 7.2: C; 7.3: B; 7.4: C"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 7.1: A; 7.2: C; 7.3: B; 7.4: C.",
+      "solution_steps": [
+        "Klucz CKE: 7.1: A; 7.2: C; 7.3: B; 7.4: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q07-page-8"
+        },
+        {
+          "type": "image",
+          "asset_id": "q07-page-9"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q07-page-8",
+          "path": "public/cke/2019/english/ojap-100-x-1904/q07-page-8.webp",
+          "sha256": "380c4c35252ff33e307c29aa96a6d24c13efceff599bf53807d05a254f38cc3b",
+          "alt": "Oryginalny układ zadania 7 z arkusza OJAP-100-1904, strona 8.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q07-page-9",
+          "path": "public/cke/2019/english/ojap-100-x-1904/q07-page-9.webp",
+          "sha256": "6ca6ee9b9b1af2d1defe1eb3a04d030e41a22bb8adf31f56b6f8b646bba6c573",
+          "alt": "Oryginalny układ zadania 7 z arkusza OJAP-100-1904, strona 9.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 9.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-english-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Spójność tekstu",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst, z którego usunięto cztery zdania. Wpisz w każdą lukę (8.1.–8.4.) literę,\nktórą oznaczono brakujące zdanie (A–E), tak aby otrzymać spójny i logiczny tekst.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej luki.\nIT ALL STARTED WITH MICKEY MOUSE\nIn the early 1950s, Walt Disney started dreaming of an amusement park where whole families\ncould have fun. What inspired him? 8.1. _____ Soon after receiving it, he started to design\nthe park.\nIts construction began during the summer of 1954 and the plan was to open it just twelve months\nlater. 8.2. _____ To watch their progress, Disney built a small apartment on the second floor\nof the Fire House, right in the middle of Disneyland’s Main Street. 8.3. _____ Today,\nin memory of Walt Disney, the light in his room is always on.\nFinally, on July 17, 1955, the park opened to the public. Originally, it had 26 attractions.\n8.4. _____ He said: “Disneyland will never be completed. It will continue to grow.”\nNa podstawie: waltsdisneyland.wordpress.com\nA. The builders had to work 24 hours a day to finish the job on time.\nB. Disneyland was visited by 50 million guests in the last ten years.\nC. A little girl who wanted to meet Mickey Mouse once wrote a letter to him.\nD. Soon, more were added because Disney wanted visitors to return to his park.\nE. At night he left a lamp switched on to let the workers know that he was in his flat.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "8.1: C; 8.2: A; 8.3: E; 8.4: D"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 8.1: C; 8.2: A; 8.3: E; 8.4: D.",
+      "solution_steps": [
+        "Klucz CKE: 8.1: C; 8.2: A; 8.3: E; 8.4: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q08-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q08-page-10",
+          "path": "public/cke/2019/english/ojap-100-x-1904/q08-page-10.webp",
+          "sha256": "a9d4eccc22e894c52372b3f1a237a0457897e5d96cfc981be7be002d3669353b",
+          "alt": "Oryginalny układ zadania 8 z arkusza OJAP-100-1904, strona 10.",
+          "caption": "Zadanie 8 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-english-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        11
+      ],
+      "type": "long_text",
+      "topic": "Wyszukiwanie informacji",
+      "difficulty": 3,
+      "prompt": "Przeczytaj trzy zaproszenia na imprezy związane z biciem rekordów Guinnessa (A–C)\noraz zdania 9.1.–9.4. Do każdego zdania dopasuj właściwe zaproszenie. Wpisz\nrozwiązania do tabeli.\nUwaga! Jedno z zaproszeń pasuje do dwóch zdań.\nA. B.\nJoin\nBreak the World\nTHE LARGEST\nRecord for\nopen-air exercise class\nNORDIC WALKING\nSouth Park, 14th May\nSunday, 21st May\nEmily Stuart, a local fitness instructor,\nat Embleside Sports Club\ninvites you to join her class.\nTogether we will try to break\nFree of charge!\nthe Guinness World Record.*\nFamous actors and singers said Yes!\nParticipants at all fitness levels are\nCan YOU say No?\nwelcome. No special equipment is needed.\nAll you need is a pair of Nordic poles\nTickets – £5\n(you must have your own).\nBring your dog with you if you wish. A rock concert, food trucks and other\nattractions will be there as well.\nNOTE: We are looking for a company\nto cover the cost of having an official judge *For safety reasons dogs and other animals\nfrom Guinness World Records (£6,500). are not allowed.\nC.\nGuinness World Record\nfor the greatest number of surfers riding the same wave\nNorth Beach, 7th May\nThings you need to know about the event:\nFree? Yes, but you have to register and bring\nyour printed ticket.\nPet-friendly? Not this time.\nNote: We have boards and wetsuits for you\nif you need them.\nAfter the event: BARBECUE!\n9.1. You have to pay some money to take part in the event.\n9.2. You can borrow the equipment from the organisers.\n9.3. You can come with a pet.\n9.4. You will have a chance to listen to live music.\nOJAP-100-1904 Strona 11 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "9.1: B; 9.2: C; 9.3: A; 9.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 9.1: B; 9.2: C; 9.3: A; 9.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 9.1: B; 9.2: C; 9.3: A; 9.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q09-page-11"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q09-page-11",
+          "path": "public/cke/2019/english/ojap-100-x-1904/q09-page-11.webp",
+          "sha256": "d409530f50baf0947128e6eddd848a6ff615b2bbf441353e0fcd220281f0510f",
+          "alt": "Oryginalny układ zadania 9 z arkusza OJAP-100-1904, strona 11.",
+          "caption": "Zadanie 9 — oryginalny układ CKE, strona 11.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-english-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        12
+      ],
+      "type": "long_text",
+      "topic": "Przetwarzanie wypowiedzi",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Uzupełnij w e-mailu luki 10.1.–10.3. zgodnie z treścią tekstu, tak aby jak\nnajbardziej precyzyjnie oddać jego sens. Luki należy uzupełnić w języku polskim.\nONE-MAN STAR WARS TRILOGY\nat Dominion Theatre\nCritics’ reviews:\n“You won’t stop laughing!” Daily Newspaper\n“Funnier than you could possibly imagine!” Theatre Magazine\nCelebrating ten years since he first brought his show to Great Britain, the Canadian actor,\nCharles Ross, returns from a galaxy far, far away with his One-Man Star Wars Trilogy.\nExperience again the atmosphere of the first three classic Star Wars films with him. Charles\nRoss himself plays all the characters.\nOne-Man Star Wars Trilogy was written by Ross and directed by his friend TJ Dawe. It has\nbeen watched by thousands of people all over the world and everybody loves it.\nYou can’t miss this show!\nTicket information\nRegular price – £20*\n*Come to the show wearing a Star Wars character costume and receive a 50% discount.\nWiadomość \nOd: Michał\nDo: Ania\nTemat: Gwiezdne Wojny\nAniu,\nw Teatrze Dominion grają ciekawą sztukę opartą na Gwiezdnych Wojnach. Według\nrecenzji prasowych jest ona bardzo 10.1. _________________________. To nie jest\nnowa sztuka, była już wystawiana na całym świecie.\nWystępuje w niej kanadyjski aktor Charles Ross. On sam gra w niej wszystkie role\ni jest również jej 10.2. _________________________.\nJeśli chcemy kupić bilety ze zniżką, musimy 10.3. _________________________\n___________________________ Gwiezdnych Wojen.\nIdziemy?\nMichał",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "10.1: zabawna / śmieszna; 10.2: autorem; 10.3: przebrać się w kostiumy z / przebrać się za postaci z"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 10.1: zabawna / śmieszna; 10.2: autorem; 10.3: przebrać się w kostiumy z / przebrać się za postaci z.",
+      "solution_steps": [
+        "Klucz CKE: 10.1: zabawna / śmieszna; 10.2: autorem; 10.3: przebrać się w kostiumy z / przebrać się za postaci z.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q10-page-12"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q10-page-12",
+          "path": "public/cke/2019/english/ojap-100-x-1904/q10-page-12.webp",
+          "sha256": "852576de1ff674417c08190f16da022f4053fa69906c863552601e0d999d84b0",
+          "alt": "Oryginalny układ zadania 10 z arkusza OJAP-100-1904, strona 12.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-english-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        13
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — wybór wyrazów",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Spośród wyrazów podanych w ramce wybierz te, które są poprawnym\nuzupełnieniem luk 11.1.–11.3. Wpisz odpowiednią literę (A–F) obok numeru każdej luki.\nUwaga! Trzy wyrazy zostały podane dodatkowo i nie pasują do żadnej luki.\nA. closest B. different C. exercise D. full E. shortest F. type\nDRONE RACING\nDrone racing is a new 11.1. _____ of sport, mostly popular with men aged 15-45.\nIt is held on a track with gates and tunnels. Drones must fly through them to complete\nthe race. The drone operator who finishes a race in the 11.2. _____ time is the winner.\nDrones often crash during races because the newest models can fly extremely fast. Each\ndrone has lights of a 11.3. _____ colour, so the people watching the competition can easily\nidentify them.\nOJAP-100-1904 Strona 13 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "11.1: F; 11.2: E; 11.3: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 11.1: F; 11.2: E; 11.3: B.",
+      "solution_steps": [
+        "Klucz CKE: 11.1: F; 11.2: E; 11.3: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q11-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q11-page-13",
+          "path": "public/cke/2019/english/ojap-100-x-1904/q11-page-13.webp",
+          "sha256": "aa2a8813f5624f4bac365de9e1c5e50808ece971f4400d8099c56d00ad6eb8b2",
+          "alt": "Oryginalny układ zadania 11 z arkusza OJAP-100-1904, strona 13.",
+          "caption": "Zadanie 11 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-english-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — gramatyka i leksyka",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Wybierz poprawne uzupełnienie luk 12.1.–12.4. Zakreśl jedną z liter:\nA, B albo C.\nAN UNUSUAL HOUSE\nAn eco-friendly building made of old plastic bottles has recently appeared in Atlanta, USA.\nSome students heard about a house like that in Algeria and they wanted 12.1. _____ the idea.\nWhen they were building the house, 12.2. _____ people stopped to watch. Most of them didn’t\nbelieve it would be a comfortable place to live in. When the building 12.3. _____, they returned\nto see the final result. The walls of the house are made of plastic bottles, sand, cement, earth\nand dry grass. After a month spent in the house, the students are sure 12.4. _____ the building\ngives good protection from the heat and it won’t fall apart in heavy rain, either.\n12.1. A. trying out B. try out C. to try out\n12.2. A. a lot of B. much C. any\n12.3. A. was completed B. completed C. has completed\n12.4. A. how B. that C. such",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "12.1: C; 12.2: A; 12.3: A; 12.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 12.1: C; 12.2: A; 12.3: A; 12.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 12.1: C; 12.2: A; 12.3: A; 12.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q12-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q12-page-14",
+          "path": "public/cke/2019/english/ojap-100-x-1904/q12-page-14.webp",
+          "sha256": "0e7efed400236c381884bd03c88cff1d0fe69adc1d832dbd6dc907360da0b00d",
+          "alt": "Oryginalny układ zadania 12 z arkusza OJAP-100-1904, strona 14.",
+          "caption": "Zadanie 12 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-english-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        15
+      ],
+      "type": "long_text",
+      "topic": "Transformacje leksykalno-gramatyczne",
+      "difficulty": 3,
+      "prompt": "Uzupełnij zdania 13.1.–13.4. Wykorzystaj w odpowiedniej formie wyrazy podane\nw nawiasach. Nie należy zmieniać kolejności podanych wyrazów, trzeba natomiast – jeśli\njest to konieczne – dodać inne wyrazy, tak aby otrzymać zdania logiczne i gramatycznie\npoprawne. Wymagana jest pełna poprawność ortograficzna wpisywanych fragmentów.\nUwaga! W każdą lukę możesz wpisać maksymalnie cztery wyrazy, wliczając w to wyrazy\njuż podane.\n13.1. She is a good student. She is (interest / in / learn) ________________________________\n_____________________________________________________________ new things.\n13.2. Bob, (be / you / old) _________________________________________ than your sister?\n13.3. What (she / look / for) ________________________________________________ now?\nHas she lost her phone again?\n13.4. Oops, I have to go back home. I’ve taken a pair of my (father / shoe) _________________\n_____________________________ by mistake. He will be angry.\nOJAP-100-1904 Strona 15 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "13.1: interested in learning; 13.2: are you older; 13.3: is / (‘s) she looking for; 13.4: father’s shoes"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 13.1: interested in learning; 13.2: are you older; 13.3: is / (‘s) she looking for; 13.4: father’s shoes.",
+      "solution_steps": [
+        "Klucz CKE: 13.1: interested in learning; 13.2: are you older; 13.3: is / (‘s) she looking for; 13.4: father’s shoes.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q13-page-15"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q13-page-15",
+          "path": "public/cke/2019/english/ojap-100-x-1904/q13-page-15.webp",
+          "sha256": "778c8288178a6b559f4330839a56615cb1e99912ff18991f8397f558515ef999",
+          "alt": "Oryginalny układ zadania 13 z arkusza OJAP-100-1904, strona 15.",
+          "caption": "Zadanie 13 — oryginalny układ CKE, strona 15.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2019-main-english-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        16,
+        17,
+        21,
+        22
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna — e-mail",
+      "difficulty": 3,
+      "prompt": "Proponujesz grupie przyjaciół z Anglii wyjazd w polskie góry. W e-mailu do jednego\nz nich:\n• napisz, dlaczego warto pojechać w polskie góry\n• opisz osobę, która będzie się Wami opiekować podczas Waszego wyjazdu\n• doradź, co powinni ze sobą zabrać, i uzasadnij dlaczego.\nNapisz swoją wypowiedź w języku angielskim. Podpisz się jako XYZ.\nRozwiń swoją wypowiedź w każdym z trzech podpunktów, tak aby osoba nieznająca polecenia\nw języku polskim uzyskała wszystkie wskazane w nim informacje. Pamiętaj, że długość\nwypowiedzi powinna wynosić od 50 do 120 słów (nie licząc wyrazów podanych na początku\nwypowiedzi). Oceniane są: umiejętność pełnego przekazania informacji, spójność, bogactwo\njęzykowe oraz poprawność językowa.",
+      "answer_key": {
+        "assessment": "rubric",
+        "minimum_words": 50,
+        "maximum_words": 120
+      },
+      "scoring": {
+        "max_points": 10,
+        "rules": [
+          "Maksymalnie 10 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Porównaj rozwiązanie z oficjalnymi zasadami oceniania CKE dołączonymi do arkusza.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q14-page-16"
+        },
+        {
+          "type": "image",
+          "asset_id": "q14-page-17"
+        },
+        {
+          "type": "image",
+          "asset_id": "q14-page-21"
+        },
+        {
+          "type": "image",
+          "asset_id": "q14-page-22"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q14-page-16",
+          "path": "public/cke/2019/english/ojap-100-x-1904/q14-page-16.webp",
+          "sha256": "41ad6716e7710e606fe34c4ba35903e350e15bff18af76d85c5267e3988f4952",
+          "alt": "Oryginalny układ zadania 14 z arkusza OJAP-100-1904, strona 16.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q14-page-17",
+          "path": "public/cke/2019/english/ojap-100-x-1904/q14-page-17.webp",
+          "sha256": "0b9cdb017eb244b78f268535654ad9ee420fe8c6c3b9bea85c11159c0638f7e1",
+          "alt": "Oryginalny układ zadania 14 z arkusza OJAP-100-1904, strona 17.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 17.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q14-page-21",
+          "path": "public/cke/2019/english/ojap-100-x-1904/q14-page-21.webp",
+          "sha256": "258fe29fd3f044a46c3408e4800c6f8f5e6aa77d5180679672f8b90751deca08",
+          "alt": "Oryginalny układ zadania 14 z arkusza OJAP-100-1904, strona 21.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 21.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q14-page-22",
+          "path": "public/cke/2019/english/ojap-100-x-1904/q14-page-22.webp",
+          "sha256": "5263962aec8589cd36cc84bd192eebff530c211396d11437412342a1e6ffc012",
+          "alt": "Oryginalny układ zadania 14 z arkusza OJAP-100-1904, strona 22.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 22.",
+          "mime_type": "image/webp"
+        }
+      ]
+    }
+  ]
+}

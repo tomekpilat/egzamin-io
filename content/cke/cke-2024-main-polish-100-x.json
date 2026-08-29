@@ -1,0 +1,1029 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2024-main-polish-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2024-main-polish-100-x",
+    "source_document_id": "OPOP-100-X-2405",
+    "source_pdf_sha256": "c8031ce916c2883030f9408908c2721ae07c9887717f70a47ac448313628f547",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2024-2/",
+    "source_label": "CKE 2024 · język polski · termin główny · wariant 100-X",
+    "exam_year": 2024,
+    "exam_session": "main",
+    "subject": "polish",
+    "variant_code": "100-X",
+    "question_count": 18,
+    "supplementary_sources": [
+      {
+        "id": "cke-2024-main-polish-100-x-answer-card",
+        "path": "content/cke/sources/2024/polish/OPOP-100-X-2405-karta-odpowiedzi.pdf",
+        "sha256": "7e79fdab5abb2cff594e08edccd523af5fef9d1855c74d842b26a937acc5a590",
+        "label": "Karta odpowiedzi"
+      },
+      {
+        "id": "cke-2024-main-polish-100-x-rules",
+        "path": "content/cke/sources/2024/polish/OPOP-100-400-500-660-2405-zasady.pdf",
+        "sha256": "15f5aad877da99095632d5dec23689e7a4a01b2b8e7dfcc97de7e48bae8d569a",
+        "label": "Oficjalne zasady oceniania rozwiązań zadań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [],
+  "questions": [
+    {
+      "id": "cke-2024-main-polish-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Na podstawie przytoczonego fragmentu Kamieni na szaniec oceń prawdziwość\npodanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest\nfałszywe.\nW tekście znajduje się informacja o tym, kiedy dekorowano niektóre budynki\nP F\nhitlerowskimi flagami.\nZdjęcie przez Alka hitlerowskiej flagi z gmachu PKO skłoniło Rudego\nP F\ndo przeprowadzenia podobnej akcji.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "PP"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y2\nPP PP",
+      "solution_steps": [
+        "Klucz CKE: PP.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q01-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q01-page-5",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q01-page-5.webp",
+          "sha256": "6ac9c3eac7e51a8fc3bb4d6ec87c89987abf37940354ef42547a0445a609a8e7",
+          "alt": "Oryginalny układ zadania 1 z arkusza OPOP-100-2405, strona 5.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 5.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-polish-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Na podstawie przytoczonego fragmentu Kamieni na szaniec dokończ zdanie. Wybierz\nwłaściwą odpowiedź spośród podanych.\nZ przytoczonego fragmentu utworu wynika, że\nA. wyczyn Rudego nie wywarł na Alku żadnego wrażenia.\nB. Zośka nie brał udziału w planowaniu akcji przeciw okupantowi.\nC. przyjaciele podziwiali Zośkę za umiejętność zachowania zimnej krwi w każdej sytuacji.\nD. koledzy pomagali Alkowi w ściągnięciu flagi z budynku Pocztowej Kasy Oszczędności.\nOPOP-100-2405 Strona 5 z 23",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "C"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nC D\n1 Rozporządzenie Ministra Edukacji i Nauki z dnia 15 lipca 2022 r. w sprawie wymagań egzaminacyjnych dla\negzaminu ósmoklasisty przeprowadzanego w roku szkolnym 2022/2023 i 2023/2024 (Dz.U. 2022 poz.1591).\n2 Odpowiedzi w wersji Y dotyczą tylko arkusza OPOP-100-2405.\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q02-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q02-page-5",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q02-page-5.webp",
+          "sha256": "74fb40dc2f5f47a1255370f0eb3efd1d5a8ae3db2de72e52268a09513a00649d",
+          "alt": "Oryginalny układ zadania 2 z arkusza OPOP-100-2405, strona 5.",
+          "caption": "Zadanie 2 — oryginalny układ CKE, strona 5.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-polish-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Na podstawie przytoczonego fragmentu Kamieni na szaniec wyjaśnij, jak fakt, że silnie\ngrała w Alku ambicja, wpływał na podejmowane przez niego działania. Nie cytuj.\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nPrzykładowe odpowiedzi ocenione na 1 punkt\n• Alek był bardzo ambitny. Kiedy zrywał niemieckie flagi, zawsze wybierał te, które wisiały\nw centralnych punktach miasta.\n• W Alku silnie grała ambicja i to sprawiało, że kiedy zrywał niemieckie flagi, zawsze\nwybierał te, które były największe.\n• Alek był ambitny i podejmował się wyjątkowych i trudnych wyzwań.\nPrzykładowe odpowiedzi ocenione na 0 punktów\n• Brał udział w wielu akcjach.\n• Alek podejmował się różnych akcji.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q03-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q03-page-6",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q03-page-6.webp",
+          "sha256": "0a2e5ea3ece292bbe95f50b8d00884e63a4780a45f1feb81443314b6b9edc511",
+          "alt": "Oryginalny układ zadania 3 z arkusza OPOP-100-2405, strona 6.",
+          "caption": "Zadanie 3 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-polish-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Przeczytaj poniższy fragment.\nW każdej pracy, jaką trzeba było robić, Zośka brał osobiście żywy i bezpośredni udział.\nPrzewodził w czasie szaleństwa „victorii”, bił rekordy w czasie rysowania „kotwic”.\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nPodkreślona część wypowiedzenia oznacza, że Zośka działał przede wszystkim\nA. szybko.\nB. konsekwentnie.\nC. bez zastanowienia.\nD. z zaangażowaniem.\nPRZENIEŚ ROZWIĄZANIE ZADANIA 4. NA KARTĘ ODPOWIEDZI!",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "D"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nD C\nEgzamin ósmoklasisty z języka polskiego – termin główny 2024 r.",
+      "solution_steps": [
+        "Klucz CKE: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q04-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q04-page-6",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q04-page-6.webp",
+          "sha256": "759344f5da7a70c5796d93fd828cae9f4427db154aef475c1ae745bbcc315fb5",
+          "alt": "Oryginalny układ zadania 4 z arkusza OPOP-100-2405, strona 6.",
+          "caption": "Zadanie 4 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-polish-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Obejrzyj poniższą ilustrację umieszczoną na okładce komiksu przygotowanego przez\nMuzeum II Wojny Światowej w Gdańsku.\n* Niemiecki napis na tablicy: Wielkiemu astronomowi Mikołajowi Kopernikowi.\nElżbieta Olczak, Sławomir Kiełbus, Akcja Kopernik, Gdańsk 2020.\nNa podstawie znajomości całego utworu Kamienie na szaniec uzasadnij, że sytuacja –\ndo której nawiązuje powyższa ilustracja – stanowi potwierdzenie, że Alek potrafił\ndecydować się na czyny niełatwe. W uzasadnieniu wyjaśnij, na czym polegała\ntrudność tej akcji.\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n………………………………………………………………………………………………………..…..\n………………………………………………………………………………………………………..…..\nOPOP-100-2405 Strona 7 z 23",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna, uwzględniająca wyjaśnienie, na czym polegała trudność tej\nakcji.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nPrzykładowe odpowiedzi ocenione na 1 punkt\n• Akcja, która polegała na zdjęciu niemieckiej tablicy z pomnika Mikołaja Kopernika, może\nstanowić potwierdzenie tej opinii. Odsłonięcie napisu na pomniku wymagało czasu,\nponieważ tablica była przytwierdzona kilkoma śrubami. Ponadto pomnik znajdował się\nw centrum Warszawy, w punkcie obserwowanym przez Niemców.\n• Moim zdaniem akcja „Kopernik” to potwierdza. Mimo że w pobliżu pomnika byli niemieccy\nżandarmi, Alek zdjął tablicę zakrywającą polski napis.\nPrzykładowa odpowiedź oceniona na 0 punktów\nAlek decydował się na czyny niełatwe, bo w tej akcji groziło mu niebezpieczeństwo.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q05-page-7"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q05-page-7",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q05-page-7.webp",
+          "sha256": "61b9b6a10bd0ae1cfc578b7b146729c5525dcc8743f123572e1184a4cf586d19",
+          "alt": "Oryginalny układ zadania 5 z arkusza OPOP-100-2405, strona 7.",
+          "caption": "Zadanie 5 — oryginalny układ CKE, strona 7.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-polish-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "Na podstawie znajomości całego utworu Kamienie na szaniec ułóż poniższe zdarzenia\nzgodnie z porządkiem chronologicznym. Wpisz litery (A–E) w kratki we właściwej\nkolejności.\nA. Wybuch wojny i opuszczenie Warszawy przez Buki.\nB. Powrót do stolicy i przystąpienie do organizacji PLAN.\nC. Zdanie matury i wyprawa zespołu Buków w polskie góry.\nD. Podjęcie działań dywersyjnych i udział w akcji pod Arsenałem.\nE. Włączenie się w działalność Małego Sabotażu i pierwsza akcja uliczna.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "CABED"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 pkt – poprawne uzupełnienie 5 liter.\n1 pkt – poprawne uzupełnienie 4 albo 3 liter.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie\nCABED\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: CABED.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q06-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q06-page-8",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q06-page-8.webp",
+          "sha256": "b08d5c5657c77c3d31a4b7667cd44110e14258bb87bc71e9c792b198e3a2d862",
+          "alt": "Oryginalny układ zadania 6 z arkusza OPOP-100-2405, strona 8.",
+          "caption": "Zadanie 6 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-polish-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        8
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "Wybierz bohatera lektury obowiązkowej – innej niż Kamienie na szaniec – który,\npodobnie jak Alek, potrafił się zdobyć na bohaterski czyn, przekraczający możliwości\nprzeciętnego człowieka. Podaj tytuł tej lektury oraz jej bohatera.\nUzasadnij swój wybór. W uzasadnieniu przywołaj sytuację z tej lektury, ilustrującą\nTwoją argumentację.\nUwaga! Lista lektur obowiązkowych znajduje się na stronie 3 tego arkusza egzaminacyjnego.\nTytuł lektury: …………………………………………………………………………………………….\nBohater lektury: ………………………………………………………………………………………...\nUzasadnienie wyboru: …………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 pkt – podanie tytułu lektury obowiązkowej i bohatera, poprawne uzasadnienie zilustrowane\nsytuacją z lektury.\n1 pkt – podanie tytułu lektury obowiązkowej i bohatera, poprawne uzasadnienie bez\nzilustrowania sytuacją z lektury.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nUwagi.\n• W przypadku, gdy zdający wskaże poprawnie tytuł lektury, nie wskaże bohatera, ale\nuzasadnienie pozwala go zidentyfikować, otrzymuje maksymalnie 1 punkt.\n• W przypadku, gdy zdający nie wskaże tytułu lektury, wskaże poprawnie bohatera\ni poprawnie uzasadni swój wybór, otrzymuje maksymalnie 1 punkt.\n• W przypadku, gdy zdający wskaże poprawnie tytuł lektury i bohatera, ale błędnie uzasadni\nswój wybór, otrzymuje 0 punktów.\n• W przypadku, gdy zdający wskaże poprawnie tytuł lektury i bohatera, ale nie uzasadni\nswojego wyboru, otrzymuje 0 punktów.\nPrzykładowe odpowiedzi ocenione na 2 punkty\n• Tytuł lektury: „Reduta Ordona”\nBohater lektury: Ordon\nUzasadnienie wyboru: Ordon zdobył się na czyn przekraczający możliwości przeciętnego\nczłowieka. Był bardzo odważny i nie bał się śmierci. Wysadził redutę, żeby przeciwnik nie\nprzejął amunicji.\n• Tytuł lektury: „Quo vadis”\nBohater lektury: Marek Winicjusz\nUzasadnienie wyboru: Marek wykazał się wielką odwagą, dokonał bohaterskiego czynu.\nPodczas ogromnego pożaru, ryzykując własnym życiem, starał się uratować Ligię.\nEgzamin ósmoklasisty z języka polskiego – termin główny 2024 r.\nPrzykładowa odpowiedź oceniona na 1 punkt\n• Tytuł lektury: „Reduta Ordona”\nBohater lektury: Juliusz Ordon\nUzasadnienie wyboru: Poświęcił swoje życie dla dobra ojczyzny.\nPrzykładowa odpowiedź oceniona na 0 punktów\n• Tytuł lektury: „Opowieść wigilijna”\nBohater lektury: Ebenezer Scrooge\nUzasadnienie wyboru: Scrooge przekroczył możliwości człowieka, ponieważ we śnie\nzobaczył trzy duchy.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q07-page-8"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q07-page-8",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q07-page-8.webp",
+          "sha256": "e797959536473b845fbda71aea9ec03ecdf289054d87ef2cd80efbd97357dbbb",
+          "alt": "Oryginalny układ zadania 7 z arkusza OPOP-100-2405, strona 8.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-polish-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        9
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "8.1. Uzupełnij poniższe zdanie. Wybierz odpowiedź spośród oznaczonych literami\nA i B oraz odpowiedź spośród oznaczonych literami C i D.\nW wypowiedzeniu Alek już z daleka wlepił wzrok we fronton Zachęty funkcję podmiotu\npełni wyraz A B , natomiast wyrażenie z daleka jest C D .\nA. wzrok C. dopełnieniem\nB. Alek D. okolicznikiem\n8.2. Wypowiedzenie Alek już z daleka wlepił wzrok we fronton Zachęty przeredaguj tak,\naby użyte w nim sformułowanie charakterystyczne dla polszczyzny potocznej\nzastąpić wyrazem lub sformułowaniem charakterystycznym dla polszczyzny\nwzorcowej.\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "BD"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nBD AC\n8.2. (0–1)\nZasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nPrzykładowe odpowiedzi ocenione na 1 punkt\n• Alek już z daleka wpatrywał się we fronton Zachęty.\n• Alek już z daleka obserwował fronton Zachęty.\nPrzykładowa odpowiedź oceniona na 0 punktów\nAlek już z daleka gapił się na fronton Zachęty.\nZasady oceniania rozwiązań zadań",
+      "solution_steps": [
+        "Klucz CKE: BD.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q08-page-9"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q08-page-9",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q08-page-9.webp",
+          "sha256": "1cfbc0d487b4b03529f36492aa2b1166a53e3cfb347c0ff036a6fa0dc539e82f",
+          "alt": "Oryginalny układ zadania 8 z arkusza OPOP-100-2405, strona 9.",
+          "caption": "Zadanie 8 — oryginalny układ CKE, strona 9.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-polish-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        9
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe,\nalbo F – jeśli jest fałszywe.\nW wypowiedzeniu Jedźmy, sprawdzimy przecinek oddziela zdania składowe\nP F\nw wypowiedzeniu złożonym współrzędnie.\nW wypowiedzeniu Bujasz, niemożliwe! wykrzyknik służy podkreśleniu\nP F\nrozkazującego tonu wypowiedzi.\nOPOP-100-2405 Strona 9 z 23",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "PF"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – poprawna odpowiedź.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nPF FP",
+      "solution_steps": [
+        "Klucz CKE: PF.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q09-page-9"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q09-page-9",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q09-page-9.webp",
+          "sha256": "77c6eb50cbf2e574dde2ff143705396701457ba537ff7ac209a578c3a1fa3e14",
+          "alt": "Oryginalny układ zadania 9 z arkusza OPOP-100-2405, strona 9.",
+          "caption": "Zadanie 9 — oryginalny układ CKE, strona 9.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-polish-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        10,
+        11,
+        12
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "Uczniowie jednej ze szkół podstawowych zaprojektowali grę planszową opartą na motywach\nutworu Kamienie na szaniec. Na polach planszy do gry umieścili elementy graficzne\nnawiązujące do treści lektury. Poniżej znajduje się projekt graficzny planszy do tej gry.\nSpośród elementów graficznych nawiązujących do treści lektury – umieszczonych\nna planszy – wybierz dwa i wyjaśnij, w jaki sposób elementy graficzne wybrane przez\nCiebie łączą się z działaniami bohaterów Kamieni na szaniec.\nElement graficzny 1.: ………………………………………………………………………………….\nWyjaśnienie: ……………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\nElement graficzny 2.: ………………………………………………………………………………….\nWyjaśnienie: ……………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\nOPOP-100-2405 Strona 11 z 23\nPrzeczytaj tekst i wykonaj zadania.\nFrédéric Lenoir\nO SZCZĘŚCIU\nO wiele łatwiej odpowiedzieć każdemu z nas na pytanie: Co sprawia, że jestem\nszczęśliwy?, niż na pytanie: Czym jest szczęście?. Mogę powiedzieć, że jestem szczęśliwy,\ngdy przebywam z tymi, których kocham, gdy głaszczę kota, siedząc przed rozpalonym\nkominkiem, słucham Bacha lub Mozarta1, kiedy wędruję górskim szlakiem… Te\ndoświadczenia oraz wiele innych sprawiają, że jestem szczęśliwy. Ale czy szczęście\nsprowadza się do prostego mnożenia takich chwil? I dlaczego te czy inne przeżycia dają\nmi szczęście, choć niekoniecznie przecież muszą uszczęśliwiać każdego z nas?\nWe współczesnym świecie można żyć jako tako szczęśliwie, nie zadając sobie zbyt\nwielu pytań. Można skupić się na tym, co nam sprawia przyjemność, i w miarę możliwości\nunikać wszystkiego, co trudne. Jednak życie pokazuje, że są rzeczy w danej chwili bardzo\nprzyjemne, które ostatecznie przynoszą negatywne skutki. I na odwrót, bywa, że przykre\ndoświadczenia umożliwiają nam rozwój i okazują się w dłuższej perspektywie korzystne.\nByć szczęśliwym to nauczyć się wybierać. Nie tylko właściwe przyjemności, lecz także\nwłasną drogę, zawód, to, jak się żyje. Wybierać rozrywki, przyjaciół, wartości, na których\nopieramy życie. Wybieramy tę, a nie tamtą przyjemność lub rezygnujemy z innej, bo tym\nsamym nadajemy naszemu życiu sens. Niektórzy szukają sensu życia w niesieniu pomocy\nbliskim, w walce z nierównościami społecznymi, w poświęcaniu czasu ludziom cierpiącym.\nTreść tego „sensu” może się różnić w zależności od osoby, ale ostatecznie stwierdzamy,\nże aby budować nasze życie, każdy z nas musi nim pokierować, przypisać mu cel, nadać\njakieś znaczenie, jakiś kierunek.\nNie sposób osiągnąć głębokiego szczęścia bez rezygnacji z niektórych\nnatychmiastowych przyjemności lub bez zastanowienia się nad naszymi wyborami\ni zamierzeniami. Innymi słowy: dążenie do pełniejszego szczęścia wymaga od nas więcej\ninteligencji i silnej woli. Będziemy sobie wyznaczać cele, które nas uszczęśliwią, i wybierać\nśrodki do ich osiągnięcia. Pasjonat muzyki, który marzy o tym, by zajmować się nią\nzawodowo, poświęci wiele godzin dziennie na naukę gry na instrumencie. Podejmie wszelkie\nwysiłki, aby opanować ją do perfekcji kosztem rozrywek i przyjemności. A im większe będzie\nrobił postępy, tym więcej przyjemności będzie czerpał z gry, aż wreszcie zrobi karierę\nmuzyka. Będzie szczęśliwy, że udało mu się zrealizować najgłębsze marzenia, choć zapłaci\nza to wysoką cenę swoimi wyborami, zaangażowaniem, wytrwałością w pracy. Ktoś inny\nmoże gonić za tym samym marzeniem, ale nie podporządkuje życia temu celowi i wciąż\nbędzie grał po amatorsku. Latami będzie powtarzał rodzinie, że ma „duszę muzyka”,\nże pragnąłby żyć ze swojej pasji, lecz z powodu braku wytrwałości i wysiłku nigdy mu się to\nnie uda, co być może wywoła u niego frustrację2.\nJak podkreślał filozof Alain3, „nie może być szczęśliwy ten, kto tego nie pragnie; dlatego\ntrzeba chcieć swojego szczęścia i je tworzyć”.\nNa podstawie: Frédéric Lenoir, O szczęściu. Podróż filozoficzna, tłum. Wojciech Prażuch, Warszawa 2016.\n1 Bach, Mozart – znani kompozytorzy muzyki klasycznej.\n2 Frustracja – rozgoryczenie, złość.\n3 Alain – pseudonim francuskiego filozofa o nazwisku Émile Chartier.\n[453 wyrazy]",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 pkt – wskazanie dwóch elementów graficznych i wyjaśnienie, w jaki sposób łączą się\nz działaniami bohaterów lektury.\n1 pkt – wskazanie jednego elementu graficznego i wyjaśnienie, w jaki sposób łączy się\nz działaniami bohaterów lektury.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nPrzykładowe odpowiedzi\n• Element graficzny 1.: budynek z napisem „Fotograf”\nWyjaśnienie: Jedną z akcji Małego Sabotażu było wybijanie szyb w zakładach\nfotograficznych współpracujących z Niemcami.\n• Element graficzny 2.: budynek z napisem „Kino”\nWyjaśnienie: Jedną z akcji Małego Sabotażu było wpuszczanie gazu do kin, aby zniechęcić\nPolaków do oglądania niemieckich filmów propagandowych.\n• Element graficzny 3.: budynek z napisem „Restauracja”\nWyjaśnienie: W ramach Małego Sabotażu chłopcy organizowali akcje przeciwko\nPaprockiemu, restauratorowi, który pośredniczył w prenumeracie niemieckich gazet.\nEgzamin ósmoklasisty z języka polskiego – termin główny 2024 r.\n• Element graficzny 4.: budynek z napisem „Wędliny”\nWyjaśnienie: W ramach Małego Sabotażu chłopcy wpuścili gaz do sklepu z wędlinami,\nw którym zakupy mogli robić tylko Niemcy.\n• Element graficzny 5.: pociąg\nWyjaśnienie: W ramach jednej z akcji dywersyjnych chłopcy wysadzili pociąg, który przewoził\nbroń dla niemieckich żołnierzy.\n• Element graficzny 6.: samochód więźniarka\nWyjaśnienie: Takim samochodem byli przewożeni więźniowie aresztowani przez Gestapo,\nw tym Rudy. Chłopcy z Szarych Szeregów odbili tych więźniów w akcji pod Arsenałem.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q10-page-10"
+        },
+        {
+          "type": "image",
+          "asset_id": "q10-page-11"
+        },
+        {
+          "type": "image",
+          "asset_id": "q10-page-12"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q10-page-10",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q10-page-10.webp",
+          "sha256": "09c5fb27b7b5e2915a2ad83ec097434d576a5b4519cf50c181580b34cf999d14",
+          "alt": "Oryginalny układ zadania 10 z arkusza OPOP-100-2405, strona 10.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q10-page-11",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q10-page-11.webp",
+          "sha256": "007d2dd54c52daae9063b74b4b90aa5c5f5bffc757102a4b4fecd805163c52bf",
+          "alt": "Oryginalny układ zadania 10 z arkusza OPOP-100-2405, strona 11.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 11.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q10-page-12",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q10-page-12.webp",
+          "sha256": "f8d8e74a4c20d55ca317a8d9583eb1f78c049b5ead5b5e75e385123ffe51b2d2",
+          "alt": "Oryginalny układ zadania 10 z arkusza OPOP-100-2405, strona 12.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-polish-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        13
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "Uzupełnij poniższe zdania tak, aby powstało spójne streszczenie tekstu O szczęściu.\nTematem tekstu Frédérica Lenoira jest …………………………………………………………… .\nAutor rozpoczyna swoje rozważania od .……………………………………………………………\n………………………………………………………………………………………………………….. ,\na następnie ……………………………………………………………………………………………..\n……………………………………………………………………………………………………………\n………………………………………………………………………………………………………….. .\nW zakończeniu …………………………………………………………………………………………\n………………………………………………………………………………………………………….. .",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n2 pkt – poprawne określenie tematu i tego, co na ten temat powiedziano w tekście;\nzachowanie właściwego poziomu uogólnienia.\n1 pkt – poprawne określenie tematu i tego, co na ten temat powiedziano w tekście;\nzaburzony poziom uogólnienia.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nUwaga.\nUczeń otrzymuje 0 punktów, jeśli jego wypowiedź w całości składa się z fragmentów\nprzepisanych z tekstu „O szczęściu”.\nPrzykładowe odpowiedzi ocenione na 2 punkty\n• Tematem tekstu Frédérica Lenoira jest szczęście. Autor rozpoczyna swoje rozważania od\nwymienienia tego, co może uszczęśliwić człowieka, a następnie zwraca uwagę na fakt, że\nnie można osiągnąć szczęścia bez rezygnacji z niektórych przyjemności. W zakończeniu\nprzywołuje słowa Alaina, żeby podkreślić, że nie można być szczęśliwym, jeśli się tego\nnie pragnie.\n• Tematem tekstu Frédérica Lenoira jest szczęście i sposób jego osiągania.\nAutor rozpoczyna swoje rozważania od spostrzeżeń na temat tego, co człowiekowi daje\nszczęście i czym ono właściwie jest, a następnie zauważa, że każdy inaczej postrzega\nszczęście oraz sens życia. W zakończeniu przekonuje, że mamy wpływ na to, czy\nbędziemy szczęśliwi.\nZasady oceniania rozwiązań zadań\nPrzykładowa odpowiedź oceniona na 1 punkt\nTematem tekstu Frédérica Lenoira jest szczęście. Autor rozpoczyna swoje rozważania od\ntego, kiedy jesteśmy szczęśliwi, a następnie pokazuje związek między szczęściem\na wybieraniem. W zakończeniu mówi o dążeniu do szczęścia.\nPrzykładowa odpowiedź oceniona na 0 punktów\nTematem tekstu Frédérica Lenoira jest szczęście. Autor rozpoczyna swoje rozważania od\npytań, a następnie szuka odpowiedzi. W zakończeniu podsumowuje rozważania.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q11-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q11-page-13",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q11-page-13.webp",
+          "sha256": "ff3c9faa1be4dbc5965ac3190b0c671213e4b7f3f6096254a27449240d9b96d9",
+          "alt": "Oryginalny układ zadania 11 z arkusza OPOP-100-2405, strona 13.",
+          "caption": "Zadanie 11 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-polish-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        13
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Spośród podanych pytań wskaż to, na które można znaleźć odpowiedź w 3. akapicie\ntekstu Frédérica Lenoira. Wybierz właściwą odpowiedź spośród podanych.\nA. Czy przyjemności mogą pociągać za sobą złe skutki?\nB. Czy odpowiedź na pytanie o istotę szczęścia jest łatwa?\nC. Dlaczego w dążeniu do szczęścia potrzebna jest wytrwałość?\nD. Jaki jest związek między poczuciem szczęścia a podejmowaniem wyborów?",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "D"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nD C",
+      "solution_steps": [
+        "Klucz CKE: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q12-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q12-page-13",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q12-page-13.webp",
+          "sha256": "03815c75759ed78ac6206f06123cb61be9357c430825dbc94fd52d3e04f27008",
+          "alt": "Oryginalny układ zadania 12 z arkusza OPOP-100-2405, strona 13.",
+          "caption": "Zadanie 12 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-polish-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        13
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Na podstawie 4. akapitu tekstu Frédérica Lenoira dokończ zdanie. Wybierz właściwą\nodpowiedź spośród podanych.\nZgodnie z treścią 4. akapitu tekstu Frédérica Lenoira szczęście jest\nA. otrzymywane jako niespodziewany prezent.\nB. zdobywane przez tych, którzy unikają trudności.\nC. osiągane w wyniku realizacji wyznaczonych celów.\nD. odczuwane silniej, gdy nie wymaga od nas wysiłku.\nOPOP-100-2405 Strona 13 z 23",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "C"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nC A\nEgzamin ósmoklasisty z języka polskiego – termin główny 2024 r.",
+      "solution_steps": [
+        "Klucz CKE: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q13-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q13-page-13",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q13-page-13.webp",
+          "sha256": "621c6b09be72c4cc6cb13abe96576abd383cf33a0e29b4f42dd6a57e5fc59a19",
+          "alt": "Oryginalny układ zadania 13 z arkusza OPOP-100-2405, strona 13.",
+          "caption": "Zadanie 13 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-polish-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "Na podstawie tekstu Frédérica Lenoira oceń prawdziwość podanych stwierdzeń.\nWybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\nPrzykre i trudne doświadczenia nie mają wpływu na nasz rozwój. P F\nAby być w pełni szczęśliwym, trzeba przemyśleć kierunek swoich działań. P F\nPRZENIEŚ ROZWIĄZANIE ZADANIA 14. NA KARTĘ ODPOWIEDZI!",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "FP"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nFP PF",
+      "solution_steps": [
+        "Klucz CKE: FP.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q14-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q14-page-14",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q14-page-14.webp",
+          "sha256": "258afc36b2af66156f730ed5204661acf90aef5829ab5329d1abcc67fe07f220",
+          "alt": "Oryginalny układ zadania 14 z arkusza OPOP-100-2405, strona 14.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-polish-100-x-q15",
+      "number": "15",
+      "sort_order": 15,
+      "source_pages": [
+        14,
+        15
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "Przeczytaj wiersz Dar Czesława Miłosza.\nCzesław Miłosz\nCzesław Miłosz\nDAR (1911–2004)\nJeden z najwybitniejszych\npolskich poetów, prozaik,\nDzień taki szczęśliwy. eseista, historyk literatury.\nW 1980 r. otrzymał\nMgła opadła wcześnie, pracowałem w ogrodzie. Nagrodę Nobla\nKolibry przystawały nad kwiatem kaprifolium1. w dziedzinie literatury.\nNie było na ziemi rzeczy, którą chciałbym mieć.\nNie znałem nikogo, komu warto byłoby zazdrościć.\nCo przydarzyło się złego, zapomniałem.\nNie wstydziłem się myśleć, że byłem, kim jestem.\nNie czułem w ciele żadnego bólu.\nProstując się, widziałem niebieskie morze i żagle.\nBerkeley, 1971\nCzesław Miłosz, Dar, [w:] tegoż, Wiersze wszystkie, Kraków 2018.\n1 Kapryfolium – tu: kaprifolium – pnący krzew o różowych, białych lub żółtawych kwiatach.\n15.1. Spośród podanych niżej sformułowań wybierz te trzy, które dotyczą podmiotu\nlirycznego wiersza Dar. Następnie zapisz oznaczenia literowe tych sformułowań\nw miejscach wyznaczonych kropkami.\nA. Akceptacja siebie.\nB. Odczuwanie spokoju.\nC. Zaspokajanie ambicji.\nD. Bliska więź z innymi ludźmi.\nE. Kontakt ze światem przyrody.\nSformułowania, które dotyczą podmiotu lirycznego wiersza Dar, oznaczono literami:\n…… , …… oraz …… .\n15.2. Czy opinia filozofa Alaina: nie może być szczęśliwy ten, kto tego nie pragnie;\ndlatego trzeba chcieć swojego szczęścia i je tworzyć, może stanowić komentarz\ndo wiersza Dar? Uzasadnij odpowiedź, odwołując się do treści utworu\nCzesława Miłosza.\n....................................................................................................................................................\n....................................................................................................................................................\n....................................................................................................................................................\n....................................................................................................................................................\n....................................................................................................................................................\n....................................................................................................................................................",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "Sformułowania, które dotyczą podmiotu lirycznego wiersza Dar, oznaczono literami:"
+        ]
+      },
+      "scoring": {
+        "max_points": 2,
+        "rules": [
+          "Maksymalnie 2 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie\nSformułowania, które dotyczą podmiotu lirycznego wiersza Dar, oznaczono literami:\nA, B oraz E.\nUwaga. Kolejność wpisywania liter nie ma znaczenia przy ocenie poprawności odpowiedzi.\n15.2. (0–1)\nZasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nPrzykładowe odpowiedzi ocenione na 1 punkt\n• Uważam, że opinia Alaina może stanowić komentarz do wiersza pt. „Dar”, ponieważ\npodmiot liryczny odczuwa szczęście z tego, że żyje. Akceptuje siebie. Potrafi być\nszczęśliwym człowiekiem, dlatego że cieszy się z prostych rzeczy.\nZasady oceniania rozwiązań zadań\n• Nie, ponieważ podmiot liryczny zadowala się naturą i wszystkim, co go otacza. Proste\nrzeczy sprawiają, że jest szczęśliwy i nie musi swojego szczęścia „tworzyć”, bo ma je na\nwyciągnięcie ręki. Tytuł wiersza „Dar” to potwierdza.\nPrzykładowa odpowiedź oceniona na 0 punktów\nUważam, że ta opinia nie stanowi komentarza do wiersza Czesława Miłosza. Filozof mówi\no tym, że szczęścia trzeba pragnąć i chcieć, natomiast u Miłosza nie ma nic o szczęściu.\nPodmiot liryczny nie pragnie szczęścia, nie stara się być w pełni szczęśliwy.",
+      "solution_steps": [
+        "Klucz CKE: Sformułowania, które dotyczą podmiotu lirycznego wiersza Dar, oznaczono literami:.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q15-page-14"
+        },
+        {
+          "type": "image",
+          "asset_id": "q15-page-15"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q15-page-14",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q15-page-14.webp",
+          "sha256": "de677f5517e9f9285e5619be098f113dea5855947bd808061241433e6beb80ee",
+          "alt": "Oryginalny układ zadania 15 z arkusza OPOP-100-2405, strona 14.",
+          "caption": "Zadanie 15 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q15-page-15",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q15-page-15.webp",
+          "sha256": "1d7152c2fe0cffff4081ce542c6e50da68fb3ddf8a1940bcfdcc115f07c43cdc",
+          "alt": "Oryginalny układ zadania 15 z arkusza OPOP-100-2405, strona 15.",
+          "caption": "Zadanie 15 — oryginalny układ CKE, strona 15.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-polish-100-x-q16",
+      "number": "16",
+      "sort_order": 16,
+      "source_pages": [
+        15
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 2,
+      "prompt": "W którym z wyrazów pisownia „ż” jest zgodna z tą samą szczegółową zasadą\nortograficzną, co zastosowana w wyrazie ważyć? Wybierz właściwą odpowiedź\nspośród podanych.\nA. dążyć\nB. mnożyć\nC. przeżyć\nD. angażować\nPRZENIEŚ ROZWIĄZANIE ZADANIA 16. NA KARTĘ ODPOWIEDZI!\nOPOP-100-2405 Strona 15 z 23",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "B"
+        ]
+      },
+      "scoring": {
+        "max_points": 1,
+        "rules": [
+          "Maksymalnie 1 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nB C",
+      "solution_steps": [
+        "Klucz CKE: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q16-page-15"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q16-page-15",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q16-page-15.webp",
+          "sha256": "9d62defa4e7ce37a48993cfc2186e9651b0e98de82be63b7a004c80fbb0d6e7f",
+          "alt": "Oryginalny układ zadania 16 z arkusza OPOP-100-2405, strona 15.",
+          "caption": "Zadanie 16 — oryginalny układ CKE, strona 15.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-polish-100-x-q17",
+      "number": "17",
+      "sort_order": 17,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Czytanie, język i literatura",
+      "difficulty": 3,
+      "prompt": "Zredaguj ogłoszenie o otwarciu wystawy fotograficznej pod tytułem Szczęście\nzatrzymane w obiektywie. Zachęć do udziału w tym wydarzeniu, używając dwóch\nargumentów.\nUwaga: w ocenie wypowiedzi będzie brana pod uwagę poprawność językowa,\nortograficzna i interpunkcyjna.\nOgłoszenie\n.............................................................................................................................\n.............................................................................................................................\n.............................................................................................................................\n.............................................................................................................................\n.............................................................................................................................\n.............................................................................................................................\n.............................................................................................................................\n.............................................................................................................................\n............................................................................................................................\n.............................................................................................................................\n.............................................................................................................................\n.............................................................................................................................\n.............................................................................................................................\n.............................................................................................................................\n.............................................................................................................................\n.............................................................................................................................\n.............................................................................................................................",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania\nTreść i forma:\n2 pkt treść zgodna z poleceniem, uwzględnione 2 argumenty; uwzględnionych\n5 elementów dotyczących formy: kto ogłasza? komu ogłasza? co ogłasza?\nkiedy się odbywa? gdzie się odbywa?\n1 pkt treść zgodna z poleceniem, uwzględnione 2 argumenty; uwzględnione\n4 elementy dotyczące formy: kto ogłasza? ORAZ/ALBO komu ogłasza?\nORAZ/ALBO co ogłasza? ORAZ/ALBO kiedy się odbywa? ORAZ/ALBO gdzie\nsię odbywa?\n0 pkt treść niezgodna z poleceniem ALBO treść zgodna z poleceniem, ale\nuwzględnione tylko 3 elementy dotyczące formy: kto ogłasza? ORAZ/ALBO\nkomu ogłasza? ORAZ/ALBO co ogłasza? ORAZ/ALBO kiedy się odbywa?\nORAZ/ALBO gdzie się odbywa?\nPoprawność językowa, ortograficzna i interpunkcyjna:\n1 pkt – łącznie nie więcej niż dwa błędy (językowe, ortograficzne, interpunkcyjne).\n0 pkt – łącznie trzy lub więcej błędów (językowych, ortograficznych, interpunkcyjnych).\nUCZNIOWIE ZE SPECYFICZNYMI TRUDNOŚCIAMI W UCZENIU SIĘ\nPoprawność językowa, ortograficzna i interpunkcyjna:\n1 pkt – łącznie nie więcej niż trzy błędy (językowe, ortograficzne, interpunkcyjne).\n0 pkt – łącznie cztery lub więcej błędów (językowych, ortograficznych, interpunkcyjnych).\nUwagi.\n• Jeżeli uczeń uwzględnia 5 elementów ogłoszenia, a podaje tylko jeden argument,\nw kryterium „Treść i forma” otrzymuje 1 punkt.\n• Kategorie „Treść i forma” oraz „Poprawność językowa, ortograficzna i interpunkcyjna”\noceniamy rozłącznie.\nPrzykładowa odpowiedź oceniona na 3 punkty\nUczniowie! 25 maja 2024 roku odbędzie się otwarcie wystawy fotograficznej pod tytułem\n„Szczęście zatrzymane w obiektywie”. Uroczystość zacznie się o godzinie 10.00 w galerii\nsztuki przy ul. Szkolnej 8. W czasie wydarzenia będzie można obejrzeć przepiękne fotografie\nznanych twórców. Zaplanowano również kurs fotograficzny dla zainteresowanych tym\nrodzajem sztuki.\nPrzewodnicząca Samorządu Uczniowskiego\nAnna Nowak\nZasady oceniania rozwiązań zadań\nZASADY OCENIANIA WYPRACOWAŃ\n1. Jeżeli wypowiedź w całości jest nie na temat, egzaminator oceni ją na 0 punktów. Nie\nsprawdza i nie zaznacza żadnych błędów w pracy. Egzaminator umieszcza dopisek –\n„Praca nie na temat”.\n2. Jeżeli w wypowiedzi uczeń w ogóle nie odwołał się do treści lektury obowiązkowej\nwskazanej w poleceniu, za całą wypowiedź egzaminator przyzna 0 punktów.\n3. Jeżeli wypowiedź jest nieczytelna, egzaminator oceni ją na 0 punktów.\n4. Jeżeli wypowiedź nie zawiera w ogóle rozwinięcia (np. uczeń napisał tylko wstęp),\negzaminator przyzna 0 punktów w każdym kryterium.\n5. Funkcjonalność wykorzystania w wypracowaniu utworu literackiego nie oznacza\nkonieczności omówienia przez zdającego wszystkich elementów fabuły, sensów\nutworu istotnych (z punktu widzenia egzaminatora) ze względu na zagadnienie\nsformułowane w temacie. Należy jednak pamiętać, że samo przywołanie imienia\nbohatera literackiego nie jest funkcjonalnym wykorzystaniem utworu.\n6. Za utwór literacki w wypracowaniu nie uznaje się: powieści obrazkowej, mangi,\nscenariusza filmowego, gry komputerowej.\n7. Jeżeli wypowiedź zawiera 180 wyrazów lub mniej, jest oceniana wyłącznie\nw kryteriach: Realizacja tematu wypowiedzi, Elementy twórcze / Elementy retoryczne\noraz Kompetencje literackie i kulturowe. W pozostałych kryteriach egzaminator\nprzyzna 0 punktów.\n8. Jeżeli wypowiedź jest napisana niesamodzielnie, np. zawiera fragmenty odtworzone\nz podręcznika, zadania zawartego w arkuszu egzaminacyjnym lub innego źródła,\nw tym internetowego, lub jest przepisana od innego ucznia, wówczas egzamin\nz języka polskiego, w przypadku takiego ucznia, zostanie unieważniony.\n9. W ocenie wypowiedzi uczniów, którym przyznano dostosowanie warunków\nprzeprowadzania egzaminu, zgodnie z Komunikatem dyrektora Centralnej Komisji\nEgzaminacyjnej w sprawie szczegółowych sposobów dostosowania warunków i form\nprzeprowadzania egzaminu ósmoklasisty w danym roku szkolnym, stosuje się\nszczegółowe zasady oceniania rozwiązań zadań otwartych z języka polskiego\nuwzględniające specyficzne trudności w uczeniu się.\n10. Zabronione jest pisanie wypowiedzi obraźliwych, wulgarnych lub propagujących\npostępowanie niezgodne z prawem albo wypowiedzi aprobujących nieetyczne\npostępowanie bohatera. W przypadku takich wypowiedzi zostanie podjęta\nindywidualna decyzja dotycząca danej pracy, np. nie zostaną przyznane punkty za\nstyl i język lub cała wypowiedź nie będzie podlegała ocenie.\nUwaga. Liczone są wszystkie wyrazy: samodzielne i niesamodzielne.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q17-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q17-page-16",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q17-page-16.webp",
+          "sha256": "8a1bfcfaa306db114eed67a80ef1ccdac1672ea31b1fcc33683bbeae9dec69d1",
+          "alt": "Oryginalny układ zadania 17 z arkusza OPOP-100-2405, strona 16.",
+          "caption": "Zadanie 17 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2024-main-polish-100-x-q18",
+      "number": "18",
+      "sort_order": 18,
+      "source_pages": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        23,
+        24
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna",
+      "difficulty": 3,
+      "prompt": "Wybierz jeden z podanych tematów i napisz wypracowanie.\n• Pamiętaj o zachowaniu formy wypowiedzi wskazanej w temacie: napisz rozprawkę albo\nopowiadanie.\n• W wypracowaniu odwołaj się do wybranej lektury obowiązkowej. Lista lektur\nobowiązkowych znajduje się na stronie 3 tego arkusza egzaminacyjnego.\n• Innym utworem literackim w rozprawce może być także lektura obowiązkowa.\n• Twoja praca powinna liczyć co najmniej 200 wyrazów.\n• Zapisz wypracowanie w wyznaczonym miejscu. Nie pisz na marginesie.\n• Pisz czytelnie.\n• Pamiętaj, że zabronione jest pisanie wypowiedzi obraźliwych, wulgarnych lub\npropagujących postępowanie niezgodne z prawem albo wypowiedzi aprobujących\nnieetyczne postępowanie bohatera.\nTemat 1.\nNapisz rozprawkę, w której rozważysz trafność stwierdzenia, że warto pomagać innym.\nW argumentacji odwołaj się do wybranej lektury obowiązkowej oraz do innego utworu\nliterackiego.\nTemat 2.\nBez ciebie nie poradziłbym/poradziłabym sobie w tej sytuacji… Napisz opowiadanie\no przygodzie z bohaterem wybranej lektury obowiązkowej, którego pomoc sprawiła,\nże Wasza przygoda zakończyła się szczęśliwie. Wypracowanie powinno dowodzić,\nże dobrze znasz wybraną lekturę obowiązkową.\nWYPRACOWANIE\nna temat nr …………\nMiejsce dla Miejsce dla\negzaminatora egzaminatora\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\nOPOP-100-2405 Strona 17 z 23\nMiejsce dla Miejsce dla\negzaminatora egzaminatora\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ …………………………………………………………………………… _______\n_______ ………………………………………………………….………………… _______\nMiejsce dla Miejsce dla\negzaminatora egzaminatora\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ …………………………………………………………………………… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\nOPOP-100-2405 Strona 19 z 23\nMiejsce dla Miejsce dla\negzaminatora egzaminatora\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ …………………………………………………………………………… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\nMiejsce dla Miejsce dla\negzaminatora egzaminatora\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\n_______ ………………………………………………………….………………… _______\n_______ ……………….…………………………………………………………... _______\n_______ ……………………………………………………………………….…… _______\nTabela przeznaczona dla egzaminatora!\nZakres\nśrodków\nElementy\nRealizacja Kompetencje językowych\ntwórcze / Kompozycja\ntematu literackie Styl A B C Ortografia Interpunkcja\nelementy tekstu\nwypowiedzi i kulturowe (0–2) (0–2) (0–1)\nretoryczne (0–2)\n(0–2) (0–2) Język\n(0–5)\n(0–4)\nOPOP-100-2405 Strona 21 z 23",
+      "answer_key": {
+        "assessment": "rubric"
+      },
+      "scoring": {
+        "max_points": 20,
+        "rules": [
+          "Maksymalnie 20 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Zasady oceniania rozwiązań zadań\n3. Rozwijanie umiejętności stosowania 2) gromadzi i porządkuje materiał rzeczowy\nśrodków stylistycznych, dbałości o estetykę potrzebny do tworzenia wypowiedzi [...];\ntekstu oraz umiejętności organizacji tekstu. 3) tworzy wypowiedź, stosując odpowiednią\n4. Poznawanie podstawowych zasad dla danej formy gatunkowej kompozycję\nretoryki, w szczególności argumentowania oraz zasady spójności językowej między\n[…]. akapitami; rozumie rolę akapitów jako\nspójnych całości myślowych w tworzeniu\nwypowiedzi pisemnych oraz stosuje rytm\nakapitowy (przeplatanie akapitów dłuższych\ni krótszych);\n4) wykorzystuje znajomość zasad tworzenia\ntezy i hipotezy oraz argumentów przy\ntworzeniu rozprawki [...];\n5) odróżnia przykład od argumentu;\n6) przeprowadza wnioskowanie jako\nelement wywodu argumentacyjnego;\n7) zgadza się z cudzymi poglądami lub\npolemizuje z nimi, rzeczowo uzasadniając\nwłasne zdanie.\n2. Mówienie i pisanie. Uczeń:\n1) tworzy spójne wypowiedzi\nw następujących formach gatunkowych: [...]\nrozprawka [...].\nZasady oceniania\n1. Realizacja tematu wypowiedzi\nOceniając wypowiedź ucznia w tym kryterium, należy rozważyć m.in., czy:\n• wypowiedź jest zgodna z formą wskazaną w poleceniu\n• w wypowiedzi ujęte zostały wszystkie kluczowe elementy tematu, np. czy uczeń\nw odpowiedni sposób odwołał się do lektury wskazanej w poleceniu\n• wypowiedź jest w całości na temat.\n2 pkt • Forma wypowiedzi zgodna z formą wskazaną w poleceniu.\n• Wszystkie pozostałe elementy polecenia uwzględnione.\n• Wypowiedź w całości dotyczy problemu wskazanego w poleceniu.\n1 pkt • Forma wypowiedzi zgodna z formą wskazaną w poleceniu.\n• Nieuwzględniony jeden element polecenia (inny niż forma). ORAZ/LUB\n• W pracy występują fragmenty niedotyczące problemu wskazanego\nw poleceniu.\n0 pkt • Forma wypowiedzi niezgodna z formą wskazaną w poleceniu. ALBO\n• Nieuwzględnione co najmniej dwa elementy polecenia (inne niż forma).\nUwaga: jeżeli za wypowiedź przyznano 0 pkt w kryterium Realizacja tematu wypowiedzi,\nwe wszystkich pozostałych kryteriach przyznaje się 0 pkt.\nEgzamin ósmoklasisty z języka polskiego – termin główny 2024 r.\n2. Elementy retoryczne\nOceniając wypowiedź ucznia w tym kryterium, należy rozważyć m.in., czy:\n• argumentacja w pracy jest wnikliwa\n• argumenty są poparte właściwymi przykładami\n• argumenty są przedstawione w sposób uporządkowany, np. są przedstawione od\nnajbardziej do najmniej ważnego albo są zapisane w porządku argument –\nkontrargument.\n5 pkt • Pogłębiona argumentacja.\n• Argumenty odwołujące się np. do faktów, logiki, emocji, zilustrowane\nodpowiednimi przykładami ORAZ/LUB wykorzystanie przykładów w funkcji\nargumentacyjnej.\n• Argumenty/przykłady uporządkowane, np. zhierarchizowane.\n4 pkt Praca spełnia wszystkie wymagania na 3 pkt i niektóre na 5 pkt.\n3 pkt • Powierzchowna argumentacja; w wypowiedzi brak wnikliwości.\n• Niektóre argumenty zilustrowane odpowiednimi przykładami ORAZ/LUB\nwykorzystanie przykładów w funkcji argumentacyjnej.\n• Argumenty/przykłady częściowo uporządkowane.\n2 pkt Praca spełnia wszystkie wymagania na 1 pkt i niektóre na 3 pkt.\n1 pkt • Podjęta próba argumentowania.\n• Ograniczenie do wyliczenia powierzchownie omówionych przykładów,\npowiązanych z problemem określonym w temacie.\n0 pkt Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt.\n3. Kompetencje literackie i kulturowe\nOceniając wypowiedź ucznia w tym kryterium, należy rozważyć m.in., czy:\n• uczeń wykorzystał znajomość lektury obowiązkowej wskazanej w poleceniu (a także\ninnych tekstów – jeżeli polecenie tego wymagało) w sposób funkcjonalny, tzn. np. czy\nprzywołał w pracy takie wydarzenia albo omówił takie wątki, które istotnie wspierają jego\ntok rozumowania albo dobrze ilustrują to, o czym pisze\n• uczeń, pisząc np. o wydarzeniach z danej lektury, nie popełnił błędów, np. nie pomylił\nimion postaci, nie przypis",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q18-page-17"
+        },
+        {
+          "type": "image",
+          "asset_id": "q18-page-18"
+        },
+        {
+          "type": "image",
+          "asset_id": "q18-page-19"
+        },
+        {
+          "type": "image",
+          "asset_id": "q18-page-20"
+        },
+        {
+          "type": "image",
+          "asset_id": "q18-page-21"
+        },
+        {
+          "type": "image",
+          "asset_id": "q18-page-23"
+        },
+        {
+          "type": "image",
+          "asset_id": "q18-page-24"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q18-page-17",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q18-page-17.webp",
+          "sha256": "3b172e89b75fe7fb9a09c8a8fed025b92204b7ee6ae87c1f2f7aa63fdfc2e79a",
+          "alt": "Oryginalny układ zadania 18 z arkusza OPOP-100-2405, strona 17.",
+          "caption": "Zadanie 18 — oryginalny układ CKE, strona 17.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q18-page-18",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q18-page-18.webp",
+          "sha256": "8ac56fe00e5effae5e6e61fb3e4ee305643fdb45971e0bc4227752ec9bd3b59c",
+          "alt": "Oryginalny układ zadania 18 z arkusza OPOP-100-2405, strona 18.",
+          "caption": "Zadanie 18 — oryginalny układ CKE, strona 18.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q18-page-19",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q18-page-19.webp",
+          "sha256": "12b138f28f30f9141faee329b5c16170db534bfd5f2933ac270a5ec44fa3e75b",
+          "alt": "Oryginalny układ zadania 18 z arkusza OPOP-100-2405, strona 19.",
+          "caption": "Zadanie 18 — oryginalny układ CKE, strona 19.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q18-page-20",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q18-page-20.webp",
+          "sha256": "b9e7ced62d2ea619b460bc879588b67ea0137e6b5b1c9d6d4c66de8c9689783c",
+          "alt": "Oryginalny układ zadania 18 z arkusza OPOP-100-2405, strona 20.",
+          "caption": "Zadanie 18 — oryginalny układ CKE, strona 20.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q18-page-21",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q18-page-21.webp",
+          "sha256": "f5edf38df5a1cc381ba918064ab867359f251a91d3eab5c6a69cc7a2f7db2b81",
+          "alt": "Oryginalny układ zadania 18 z arkusza OPOP-100-2405, strona 21.",
+          "caption": "Zadanie 18 — oryginalny układ CKE, strona 21.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q18-page-23",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q18-page-23.webp",
+          "sha256": "24ce562fae2e5bfd157733ded0e87f53b96f5d7f7175b7164cb56be19e54de76",
+          "alt": "Oryginalny układ zadania 18 z arkusza OPOP-100-2405, strona 23.",
+          "caption": "Zadanie 18 — oryginalny układ CKE, strona 23.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q18-page-24",
+          "path": "public/cke/2024/polish/opop-100-x-2405/q18-page-24.webp",
+          "sha256": "df89f83236211f2bcfe70c543280fe9c8831c89865ef5b3c97c763de043febf6",
+          "alt": "Oryginalny układ zadania 18 z arkusza OPOP-100-2405, strona 24.",
+          "caption": "Zadanie 18 — oryginalny układ CKE, strona 24.",
+          "mime_type": "image/webp"
+        }
+      ]
+    }
+  ]
+}

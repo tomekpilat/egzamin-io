@@ -1,0 +1,884 @@
+{
+  "schema_version": 1,
+  "manifest_id": "cke-2020-main-italian-100-x",
+  "manifest_version": 1,
+  "paper": {
+    "id": "cke-2020-main-italian-100-x",
+    "source_document_id": "OJWP-100-2004",
+    "source_pdf_sha256": "c997b8ec165caac5afb0c9f248d70c6b2900b50031d7296c3089a7f52a12178d",
+    "source_url": "https://cke.gov.pl/egzamin-osmoklasisty/arkusze/2020-2/",
+    "source_label": "CKE 2020 · język włoski · termin główny · wariant 100-X",
+    "exam_year": 2020,
+    "exam_session": "main",
+    "subject": "italian",
+    "variant_code": "100-X",
+    "question_count": 14,
+    "supplementary_sources": [
+      {
+        "id": "cke-2020-main-italian-100-x-rules",
+        "path": "content/cke/sources/2020/italian/OJWP-100-2004-zasady.pdf",
+        "sha256": "9e2a9cde0ef90fe543b048697ee3fbcd6f5a91706646dbf4d1b2adc6fea930f3",
+        "label": "Oficjalne zasady oceniania rozwiązań zadań"
+      },
+      {
+        "id": "cke-2020-main-italian-100-x-transcript",
+        "path": "content/cke/sources/2020/italian/OJWP-100-2004-transkrypcja.pdf",
+        "sha256": "4076c0a2d23e1ce2d0471fe48358b44539cb9e06d9809c6e7d387bd855247bfb",
+        "label": "Oficjalna transkrypcja nagrań"
+      }
+    ]
+  },
+  "permission": {
+    "reference": "Zgoda CKE na wykorzystanie materiałów potwierdzona przez operatora egzaminio",
+    "verified_by": "Tomasz Piłat",
+    "verified_at": "2026-08-28T12:00:00Z",
+    "notes": "Przed publikacją produkcyjną dołącz numer lub lokalizację dokumentu zgody do rejestru zgodności poza repozytorium."
+  },
+  "passages": [
+    {
+      "id": "cke-2020-main-italian-100-x-transcript-q01",
+      "title": "Transkrypcja nagrania do zadania 1",
+      "paragraphs": [
+        "Tekst 1.",
+        "Ragazza: Questo è Leo, il mio gatto. Quando era piccolo, giocava con me tutto il tempo.",
+        "Adesso non ha più voglia di correre dietro alla pallina. Comunque Leo ama stare",
+        "con me, soprattutto quando faccio i compiti. Allora sale sulla scrivania e mi osserva",
+        "mentre scrivo. Invece quando lo prendo tra le mie braccia, scappa subito molto",
+        "arrabbiato. Come tutti i gatti, Leo è un grande individualista.",
+        "Tekst 2.",
+        "Donna: Marco, cosa stai cercando?",
+        "Ragazzo: Il mio biglietto dell’autobus.",
+        "Donna: Hai guardato nella tasca dei pantaloni?",
+        "Ragazzo: Sì. Ma c’era solo il mio tesserino scolastico.",
+        "Donna: Forse il biglietto è tra le pagine del quaderno.",
+        "Ragazzo: Non mi sembra, però ora guardo. Ah, sì, avevi ragione. Eccolo qui.",
+        "Donna: Bene. Adesso ricordati di metterlo nel portafoglio.",
+        "Tekst 3.",
+        "Donna: Ragazzi, so che siete stanchi e avete fame. Fra mezz’ora andiamo a mangiare una",
+        "pizza qui vicino. Questa sala è l’ultima che visiterete. Leggete le informazioni che",
+        "sono accanto alle sculture e ai quadri e rispondete alle domande che si trovano nella",
+        "vostra scheda di lavoro. Domani ne discuteremo durante la lezione.",
+        "Tekst 4.",
+        "Uomo: Guarda questa foto. Questo sono io e quello è Alberto, il mio miglior amico.",
+        "All’epoca avevamo 8 anni. Dopo le lezioni andavamo spesso al fiume a pescare",
+        "e fare il bagno. Quando tornavamo a casa, passavamo nel negozio dove lavorava",
+        "il nonno di Alberto. Ci offriva sempre biscotti e caramelle. Eravamo molto felici.",
+        "Tekst 5.",
+        "Donna: Ragazzi! In estate nella nostra regione capitano spesso dei temporali. Ecco cosa fare",
+        "in una simile situazione. Se arriva un temporale mentre nuotate nel lago uscite",
+        "subito dall’acqua. Se siete fuori a giocare o passeggiare nel bosco, non restate mai",
+        "sotto un albero perché è pericoloso. Cercate di entrare velocemente in un edificio.",
+        "Insomma, state attenti!"
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    },
+    {
+      "id": "cke-2020-main-italian-100-x-transcript-q02",
+      "title": "Transkrypcja nagrania do zadania 2",
+      "paragraphs": [
+        "Wypowiedź 1.",
+        "Molte persone sono convinte che la Giornata senza auto è una cattiva idea, però a me sembra",
+        "fantastica. È un’occasione per girare liberamente in bicicletta o a piedi. Io abito a Roma e vedo",
+        "che ci sono sempre troppe macchine. Complimenti allora a chi ha pensato a organizzare una",
+        "giornata di questo tipo. Peccato che non lo facciamo più volte all’anno, sarebbe proprio utile.",
+        "Egzamin ósmoklasisty z języka włoskiego (OJWP-100)",
+        "kwiecień 2020",
+        "Wypowiedź 2.",
+        "Io sono contro. La mia scuola si trova a nove chilometri da casa mia e quel giorno per andarci",
+        "in autobus impiego quasi mezz’ora. In più devo aspettare diversi minuti alla fermata. Con mio",
+        "padre, in macchina, facciamo una strada più breve e ci vogliono solo dieci minuti. Invece",
+        "di perdere il tempo sugli autobus affollati, posso parlare con mio padre o leggere una delle mie",
+        "riviste preferite.",
+        "Wypowiedź 3.",
+        "Secondo me la Giornata senza auto è un’occasione per pensare alla propria salute. La gente",
+        "può andare al lavoro a piedi o in bici e respirare l’aria pulita. C’è anche un altro vantaggio: quel",
+        "giorno nessuno paga il biglietto per i tram o per gli autobus. E poi è bello vedere la città senza",
+        "il solito traffico, più tranquilla e meno pericolosa.",
+        "Wypowiedź 4.",
+        "È un’ottima idea lasciare la macchina nel garage. Io e la mia famiglia prendiamo spesso i mezzi",
+        "pubblici. Muoversi in questo modo è meno pericoloso che andare in macchina, e poi c’è meno",
+        "rumore e inquinamento in città. Secondo me ci vogliono più dibattiti e programmi in TV",
+        "dedicati a quest’evento. Altrimenti non cambierà niente."
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    },
+    {
+      "id": "cke-2020-main-italian-100-x-transcript-q03",
+      "title": "Transkrypcja nagrania do zadania 3",
+      "paragraphs": [
+        "Buona sera a tutti. Durante le ultime lezioni ho parlato con gli allievi dei lavori in campagna.",
+        "E così abbiamo deciso di visitare la fattoria biologica a Poggio. La partenza è lunedì mattina.",
+        "Noi insegnanti ci incontreremo con i ragazzi davanti alla scuola alle nove e un quarto. Partiamo",
+        "puntualmente alle nove e mezza. Torneremo a scuola nel pomeriggio, allora date ai figli",
+        "qualcosa da mangiare. Subito dopo l’arrivo i ragazzi vedranno come funziona la fattoria.",
+        "Assaggeranno anche il formaggio ecologico prodotto in quel posto. Alla fine ci sarà il",
+        "laboratorio e gli allievi avranno l’occasione di fare il burro in modo tradizionale, con le proprie",
+        "mani. Ancora una cosa. Le previsioni dicono che il giorno della nostra gita si aspettano brevi",
+        "piogge. Quindi i ragazzi devono portare giacche impermeabili. Sono sicuro che i vostri figli si",
+        "divertiranno molto."
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    },
+    {
+      "id": "cke-2020-main-italian-100-x-transcript-q04",
+      "title": "Transkrypcja nagrania do zadania 4",
+      "paragraphs": [
+        "Wypowiedź 1.",
+        "Mamma, ho fame.",
+        "Wypowiedź 2.",
+        "Desidera qualcos’altro?",
+        "Wypowiedź 3.",
+        "A me piace la pizza, e a te?",
+        "Wypowiedź 4.",
+        "Ecco, ho preparato dei panini."
+      ],
+      "source": "Oficjalna transkrypcja CKE."
+    }
+  ],
+  "questions": [
+    {
+      "id": "cke-2020-main-italian-100-x-q01",
+      "number": "1",
+      "sort_order": 1,
+      "source_pages": [
+        3
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — wybór wielokrotny",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie pięć tekstów. W zadaniach 1.1.–1.5., na podstawie informacji\nzawartych w nagraniu, z podanych odpowiedzi wybierz właściwą. Zakreśl jedną z liter:\nA, B albo C.\n1.1. Che cosa piace di più al gatto della ragazza?\nA. B. C.\n1.2. Dove il ragazzo ha trovato il biglietto?\nA. B. C.\n1.3. Dov’è la persona che parla?\nA. B. C.\n1.4. L’uomo parla\nA. del suo lavoro.\nB. della sua infanzia.\nC. della sua famiglia.\n1.5. La donna\nA. dà dei consigli.\nB. offre il suo aiuto.\nC. chiede spiegazioni.\nOJWP-100-2004 Strona 3 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "1.1: C; 1.2: A; 1.3: C; 1.4: B; 1.5: A"
+        ]
+      },
+      "scoring": {
+        "max_points": 5,
+        "rules": [
+          "Maksymalnie 5 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 1.1: C; 1.2: A; 1.3: C; 1.4: B; 1.5: A.",
+      "solution_steps": [
+        "Klucz CKE: 1.1: C; 1.2: A; 1.3: C; 1.4: B; 1.5: A.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2020-main-italian-100-x-transcript-q01",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q01-page-3"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q01-page-3",
+          "path": "public/cke/2020/italian/ojwp-100-x-2004/q01-page-3.webp",
+          "sha256": "376b86eeaba14467dde17925a4a1a7dcec4705c95beb89e05786ef9d3fe73a44",
+          "alt": "Oryginalny układ zadania 1 z arkusza OJWP-100-2004, strona 3.",
+          "caption": "Zadanie 1 — oryginalny układ CKE, strona 3.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-italian-100-x-q02",
+      "number": "2",
+      "sort_order": 2,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — dopasowywanie",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi na temat dnia bez samochodu. Na podstawie\ninformacji zawartych w nagraniu dopasuj do każdej wypowiedzi (2.1.–2.4.)\nodpowiadające jej zdanie (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej wypowiedzi.\nQuesta persona dice che\nA. la Giornata senza auto dovrebbe esserci più spesso.\nB. quel giorno tutti possono usare i mezzi pubblici gratis.\nC. è pericoloso andare in bicicletta durante la Giornata senza auto.\nD. bisogna parlare di più della Giornata senza auto in televisione.\nE. viaggiare con i mezzi di trasporto pubblico dura troppo a lungo.\n2.1. 2.2. 2.3. 2.4.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "2.1: A; 2.2: E; 2.3: B; 2.4: D"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 2.1: A; 2.2: E; 2.3: B; 2.4: D.",
+      "solution_steps": [
+        "Klucz CKE: 2.1: A; 2.2: E; 2.3: B; 2.4: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2020-main-italian-100-x-transcript-q02",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q02-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q02-page-4",
+          "path": "public/cke/2020/italian/ojwp-100-x-2004/q02-page-4.webp",
+          "sha256": "89c41273252ec1f2737202e74738d64db1786fcd83ef12a977af9b4baec6ea0b",
+          "alt": "Oryginalny układ zadania 2 z arkusza OJWP-100-2004, strona 4.",
+          "caption": "Zadanie 2 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-italian-100-x-q03",
+      "number": "3",
+      "sort_order": 3,
+      "source_pages": [
+        4
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — uzupełnianie luk",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie wypowiedź na temat wycieczki na farmę. Na podstawie informacji\nzawartych w nagraniu uzupełnij luki w zdaniach 3.1.–3.4., tak aby jak najbardziej\nprecyzyjnie oddać sens wysłuchanego tekstu. Luki należy uzupełnić w języku włoskim.\n3.1. La partenza per la fattoria sarà lunedì alle ore ___________________________________.\n3.2. Nella fattoria i ragazzi proveranno a fare _______________________________________.\n3.3. Il giorno della gita forse pioverà, allora i ragazzi devono portare ____________________.\n3.4. La persona che parla si rivolge ai/agli ________________________________________.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "3.1: nove e mezza / mezzo; 3.2: il burro; 3.3: giacche impermeabili; 3.4: genitori"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 3.1: nove e mezza / mezzo; 3.2: il burro; 3.3: giacche impermeabili; 3.4: genitori.",
+      "solution_steps": [
+        "Klucz CKE: 3.1: nove e mezza / mezzo; 3.2: il burro; 3.3: giacche impermeabili; 3.4: genitori.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2020-main-italian-100-x-transcript-q03",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q03-page-4"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q03-page-4",
+          "path": "public/cke/2020/italian/ojwp-100-x-2004/q03-page-4.webp",
+          "sha256": "1a33b454fa2e3b3e6fec84df6cf9415c82632edb5a483dbd6546cb935b879a96",
+          "alt": "Oryginalny układ zadania 3 z arkusza OJWP-100-2004, strona 4.",
+          "caption": "Zadanie 3 — oryginalny układ CKE, strona 4.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-italian-100-x-q04",
+      "number": "4",
+      "sort_order": 4,
+      "source_pages": [
+        5
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie ze słuchu — zadanie otwarte",
+      "difficulty": 3,
+      "prompt": "Usłyszysz dwukrotnie cztery wypowiedzi związane z sytuacjami życia codziennego\n(4.1.–4.4.). Do każdej z nich dobierz właściwą reakcję (A–E). Wpisz rozwiązania do tabeli.\nUwaga! Jedna reakcja została podana dodatkowo i nie pasuje do żadnej wypowiedzi.\nA. Sì, prendo un caffè.\nB. Prendi un po’ di pizza.\nC. No, neanch’io la voglio.\nD. Perfetto, li mangiamo subito.\nE. Quella della mamma, moltissimo.\n4.1. 4.2. 4.3. 4.4.\nOJWP-100-2004 Strona 5 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "4.1: B; 4.2: A; 4.3: E; 4.4: D"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 4.1: B; 4.2: A; 4.3: E; 4.4: D.",
+      "solution_steps": [
+        "Klucz CKE: 4.1: B; 4.2: A; 4.3: E; 4.4: D.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "passage",
+          "passage_id": "cke-2020-main-italian-100-x-transcript-q04",
+          "default_open": false
+        },
+        {
+          "type": "image",
+          "asset_id": "q04-page-5"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q04-page-5",
+          "path": "public/cke/2020/italian/ojwp-100-x-2004/q04-page-5.webp",
+          "sha256": "ddb88fc6380e8af68a3540cce462aeea14e27fe10dc0ed6cc5a4c25e6974ac5e",
+          "alt": "Oryginalny układ zadania 4 z arkusza OJWP-100-2004, strona 5.",
+          "caption": "Zadanie 4 — oryginalny układ CKE, strona 5.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-italian-100-x-q05",
+      "number": "5",
+      "sort_order": 5,
+      "source_pages": [
+        6
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe",
+      "difficulty": 3,
+      "prompt": "Dla każdej z opisanych sytuacji (5.1.–5.4.) wybierz właściwą reakcję. Zakreśl jedną z liter:\nA, B albo C.\n5.1. Kolega zdawał egzamin. Jak zapytasz go o wynik?\nA. Quando hai passato l’esame?\nB. Quanti esami hai dato?\nC. Com’è andato l’esame?\n5.2. Chcesz pożyczyć od kolegi książkę. Co mu powiesz?\nA. Mi racconti questo libro?\nB. Mi presti questo libro?\nC. Ti do questo libro?\n5.3. Kolega proponuje Ci wyjście na koncert. Jak wyrazisz wahanie?\nA. Mah, non sono sicuro(-a).\nB. Che bella idea!\nC. Perché no?\n5.4. Chcesz zwiedzić muzeum. Jak zapytasz, gdzie można kupić bilet?\nA. Scusi, ci sono biglietti ridotti per gli studenti?\nB. Scusi, sa dirmi dov’è la biglietteria?\nC. Scusi, quanto costa un biglietto?",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "5.1: C; 5.2: B; 5.3: A; 5.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 5.1: C; 5.2: B; 5.3: A; 5.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 5.1: C; 5.2: B; 5.3: A; 5.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q05-page-6"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q05-page-6",
+          "path": "public/cke/2020/italian/ojwp-100-x-2004/q05-page-6.webp",
+          "sha256": "68ba6a9e307efe5ed1d59b7653096df8f10335c318e28bcbb21fd653832c806c",
+          "alt": "Oryginalny układ zadania 5 z arkusza OJWP-100-2004, strona 6.",
+          "caption": "Zadanie 5 — oryginalny układ CKE, strona 6.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-italian-100-x-q06",
+      "number": "6",
+      "sort_order": 6,
+      "source_pages": [
+        7
+      ],
+      "type": "long_text",
+      "topic": "Funkcje językowe — uzupełnianie dialogów",
+      "difficulty": 3,
+      "prompt": "Uzupełnij dialogi 6.1.–6.3. Wpisz w każdą lukę brakujący fragment wypowiedzi, tak aby\notrzymać spójne i logiczne teksty. Luki należy uzupełnić w języku włoskim.\n6.1. X: ____________________________________________________________________?\nY: No, sono figlio unico.\n6.2. X: Due chili di patate, per favore.\nY: ____________________________________________________________________?\nX: No, vorrei ancora due limoni e un melone, per favore.\n6.3. X: __________________________________________________ a fare questo compito?\nY: Sì, grazie, sei molto gentile.\nOJWP-100-2004 Strona 7 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "6.1: Hai fratelli / Hai un fratello o una sorella; 6.2: È tutto / Basta così; 6.3: Ti aiuto / Posso aiutarti"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 6.1: Hai fratelli / Hai un fratello o una sorella; 6.2: È tutto / Basta così; 6.3: Ti aiuto / Posso aiutarti.",
+      "solution_steps": [
+        "Klucz CKE: 6.1: Hai fratelli / Hai un fratello o una sorella; 6.2: È tutto / Basta così; 6.3: Ti aiuto / Posso aiutarti.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q06-page-7"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q06-page-7",
+          "path": "public/cke/2020/italian/ojwp-100-x-2004/q06-page-7.webp",
+          "sha256": "41dc228673a503c5f5a900a7c651a9aa19b3039859432e6c22cfb0b8d4248380",
+          "alt": "Oryginalny układ zadania 6 z arkusza OJWP-100-2004, strona 7.",
+          "caption": "Zadanie 6 — oryginalny układ CKE, strona 7.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-italian-100-x-q07",
+      "number": "7",
+      "sort_order": 7,
+      "source_pages": [
+        8,
+        9
+      ],
+      "type": "long_text",
+      "topic": "Rozumienie tekstów pisanych",
+      "difficulty": 3,
+      "prompt": "Przeczytaj teksty. W zadaniach 7.1.–7.4. z podanych odpowiedzi wybierz właściwą,\nzgodną z treścią tekstu. Zakreśl jedną z liter: A, B albo C.\nTHAILANDIA:\nIl NOSTRO UNA TURISTA INCONTRA UN COCCODRILLO\nQUOTIDIANO\nIn un parco nazionale in Thailandia una donna ha deciso di farsi un selfie con un coccodrillo\nche riposava vicino a un fiume. Era sicura che il coccodrillo dormiva perché aveva gli occhi\nchiusi. Vicino al fiume c’era un enorme cartello: ATTENZIONE AI COCCODRILLI!\nVIETATO AVVICINARSI!, ma lei non ha rispettato il divieto. Si è avvicinata e in quel\nmomento il coccodrillo l’ha attaccata. La donna, molto spaventata, ha cominciato a correre\ne il suo telefonino è caduto per terra. Per fortuna la signora è scappata in tempo, quindi non\nle è successo niente. L’unica vittima è stato il telefonino che è finito nella pancia del\ncoccodrillo.\n7.1. Che cosa ha fatto il coccodrillo?\nA. È scappato nell’acqua.\nB. Ha fatto male alla turista.\nC. Ha mangiato il cellulare.\nLunedì, 14.00\nCiao a tutti!\nGrazie per i vostri commenti entusiastici che mi danno la motivazione per continuare\na scrivere il mio blog. Mi domandate perché ho scelto questa professione. Quest’idea mi\nè venuta grazie alla mia insegnante di geografia. Amo il mio lavoro perché non è monotono\ne mi permette di viaggiare spesso. Ogni gruppo di visitatori è diverso. Gli architetti, per\nesempio, mi fanno molte domande tecniche che riguardano i posti e gli edifici che gli faccio\nvedere. Mi preparo sempre bene prima di ogni visita. Certo, spesso sono stanca, ma non mi\nannoio mai.\n7.2. La persona che scrive il blog è\nA. una guida.\nB. un architetto.\nC. un’insegnante.\nMessaggio \nDa: Marco@abc.it\nA: Teo@xyz.com\nOggetto: Harry Potter\nCiao Teo!\nConosci la mia opinione su Harry Potter. Sono diventato il suo fan subito, quando ho\nletto il primo libro della serie. Tu lo critichi spesso ma dovresti fare quello che faccio io\nadesso. Sono a Londra e visito i posti dove è stato girato il film. Che bella esperienza!\nTi ricordi King’s Cross e il famoso binario 9 ¾? È forte! Vacci, ne vale la pena!\nA risentirci presto,\nMarco\n7.3. In questo messaggio Marco\nA. critica una cosa.\nB. consiglia di fare una cosa.\nC. chiede un’opinione su una cosa.\nIL SALONE “IMMAGINE NUOVA”\nAncora una volta abbiamo vinto il titolo del “Miglior salone della città”.\nPerché?\nPerché da dieci anni offriamo sempre la migliore qualità al miglior prezzo.\nAbbiamo molti clienti soddisfatti.\nNel nostro salone lavorano i migliori parrucchieri.\nI nostri stilisti vincono premi ai concorsi internazionali.\nLe stelle del cinema scelgono il nostro salone.\nGrazie per i vostri voti!\n7.4. L’autore di quest’annuncio informa\nA. della nuova offerta del salone.\nB. dei maggiori successi del salone.\nC. del programma di apertura del salone.\nOJWP-100-2004 Strona 9 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "7.1: C; 7.2: A; 7.3: B; 7.4: B"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 7.1: C; 7.2: A; 7.3: B; 7.4: B.",
+      "solution_steps": [
+        "Klucz CKE: 7.1: C; 7.2: A; 7.3: B; 7.4: B.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q07-page-8"
+        },
+        {
+          "type": "image",
+          "asset_id": "q07-page-9"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q07-page-8",
+          "path": "public/cke/2020/italian/ojwp-100-x-2004/q07-page-8.webp",
+          "sha256": "f9d9413473788934bfa7b6db2da2e7d922739564baec224e1e261eb80dbaa659",
+          "alt": "Oryginalny układ zadania 7 z arkusza OJWP-100-2004, strona 8.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 8.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q07-page-9",
+          "path": "public/cke/2020/italian/ojwp-100-x-2004/q07-page-9.webp",
+          "sha256": "d777c3ae5f1cb9387be167187ab990d70f5a5db816c052e49e363291c4ee7296",
+          "alt": "Oryginalny układ zadania 7 z arkusza OJWP-100-2004, strona 9.",
+          "caption": "Zadanie 7 — oryginalny układ CKE, strona 9.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-italian-100-x-q08",
+      "number": "8",
+      "sort_order": 8,
+      "source_pages": [
+        10
+      ],
+      "type": "long_text",
+      "topic": "Spójność tekstu",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst, z którego usunięto cztery zdania. Wpisz w każdą lukę (8.1.–8.4.) literę,\nktórą oznaczono brakujące zdanie (A–E), tak aby otrzymać spójny i logiczny tekst.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej luki.\nUNA VICINA CURIOSA\nL’anno scorso io e la mia famiglia abbiamo cambiato casa. 8.1. _____ Ci vivono poche\nfamiglie e tutti si conoscono. Nell’appartamento davanti al nostro abita una vecchietta. È stata\nla prima persona che abbiamo conosciuto nel nuovo palazzo. La signora era felice di avere una\ngiovane famiglia accanto. 8.2. _____ Oltre a questa caratteristica la signora però ne aveva\nun’altra: era una persona molto curiosa. Quando qualcuno di noi usciva di casa, lei apriva\nsempre la porta. Ci salutava e scambiavamo qualche parola. La signora voleva sapere dove\nandavamo, quali programmi per la giornata avevamo. 8.3. _____ Lo facevamo per essere\ngentili. Però con il tempo quella situazione ci dava sempre più fastidio.\nUna sera, quando siamo andati a mangiare fuori, un uomo è arrivato davanti al nostro\nappartamento e ha cercato di entrare. La vicina ha sentito il rumore e ha guardato fuori. Ha\ndetto: “Buona sera” ma l’uomo non l’ha salutata. Così la signora ha chiamato la polizia.\n8.4. _____ Hanno fermato l’uomo che era un ladro. Più tardi la vicina ci ha spiegato: “Ho capito\nche non era nessuno della vostra famiglia perché non mi ha nemmeno risposto buona sera.” Da\nquel giorno la salutiamo con piacere ogni volta che appare sulla porta.\nA. Infatti, non trova mai le chiavi di casa.\nB. Adesso abitiamo in un piccolo palazzo.\nC. Per fortuna gli agenti sono arrivati in tempo.\nD. Noi le rispondevamo raccontando ampiamente di noi.\nE. Anche noi eravamo contenti di avere una vicina simpatica.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "8.1: B; 8.2: E; 8.3: D; 8.4: C"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 8.1: B; 8.2: E; 8.3: D; 8.4: C.",
+      "solution_steps": [
+        "Klucz CKE: 8.1: B; 8.2: E; 8.3: D; 8.4: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q08-page-10"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q08-page-10",
+          "path": "public/cke/2020/italian/ojwp-100-x-2004/q08-page-10.webp",
+          "sha256": "919f0f5efb98f0b13e23b9dee5bf33d2ab26ff5495f5ffb912b0b2211c0720c5",
+          "alt": "Oryginalny układ zadania 8 z arkusza OJWP-100-2004, strona 10.",
+          "caption": "Zadanie 8 — oryginalny układ CKE, strona 10.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-italian-100-x-q09",
+      "number": "9",
+      "sort_order": 9,
+      "source_pages": [
+        11
+      ],
+      "type": "long_text",
+      "topic": "Wyszukiwanie informacji",
+      "difficulty": 3,
+      "prompt": "Przeczytaj wpisy na trzech blogach poświęconych kuchni (A–C) oraz pytania 9.1.–9.4.\nDo każdego pytania dopasuj właściwy wpis. Wpisz rozwiązania do tabeli.\nUwaga! Jeden z wpisów pasuje do dwóch pytań.\nIl mio blog festeggia il suo primo anniversario! Grazie a tutti voi che siete stati con\nme! Dodici mesi fa ho cominciato con qualche ricetta. Oggi ne ho moltissime e ogni\ngiorno ne invento delle nuove. Mi fa piacere che le mie ricette abbiano successo, che\nA.\nle troviate facili e molto varie. Purtroppo scrivere un blog occupa molto tempo, perciò\nmi serve aiuto. Se avete idee buone in cucina, siete creativi e volete lavorare con me,\nscrivete subito! Vi aspetto.\nMi chiamo Tatiana e sono vissuta molti anni in diverse città italiane, perciò conosco\ntante ricette regionali e ne sono esperta. Spesso invito amici a casa mia e gli servo\ni miei piatti. Sono sempre serate piacevoli! Quindi se non vi piace mangiare\nB.\nal ristorante provate anche voi a ospitare la gente a casa vostra. Forse non sapete\ncucinare o non avete tempo per farlo? Allora chiamate me. Decidiamo insieme il menù\ne prepariamo insieme la cena. Di sicuro ne sarete soddisfatti.\nChi non ha ancora assaggiato i piatti della cucina cinese deve farlo: è molto buona\ne saporita. Non vi consiglio di prepararli a casa perché non è facile farli come si deve.\nVi consiglio invece un piccolo locale in via Crispi dove il cibo è squisito, le porzioni\nC.\nsono grandi e i camerieri gentili. E poi, si spende poco. Se invece siete cuochi\ncoraggiosi e volete cucinare da soli, almeno cercate un negozio che offre prodotti\noriginali. Quelli del supermercato sono di bassa qualità.\nQuale autore\n9.1. offre aiuto in cucina?\n9.2. cerca un collaboratore?\n9.3. è bravo a preparare piatti tipici italiani?\n9.4. propone un ristorante dove si mangia bene?\nOJWP-100-2004 Strona 11 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "9.1: B; 9.2: A; 9.3: B; 9.4: C"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 9.1: B; 9.2: A; 9.3: B; 9.4: C.",
+      "solution_steps": [
+        "Klucz CKE: 9.1: B; 9.2: A; 9.3: B; 9.4: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q09-page-11"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q09-page-11",
+          "path": "public/cke/2020/italian/ojwp-100-x-2004/q09-page-11.webp",
+          "sha256": "74b7b226a075e2a47001dae40c638df5df4fae031d6bcc7d855866d2b4993373",
+          "alt": "Oryginalny układ zadania 9 z arkusza OJWP-100-2004, strona 11.",
+          "caption": "Zadanie 9 — oryginalny układ CKE, strona 11.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-italian-100-x-q10",
+      "number": "10",
+      "sort_order": 10,
+      "source_pages": [
+        12,
+        13
+      ],
+      "type": "long_text",
+      "topic": "Przetwarzanie wypowiedzi",
+      "difficulty": 3,
+      "prompt": "Przeczytaj teksty 1. i 2. Uzupełnij w e-mailu luki 10.1.–10.3. zgodnie z treścią tekstów, tak\naby jak najbardziej precyzyjnie oddać ich sens. Luki należy uzupełnić w języku polskim.\nTekst 1.\nFERIE\nAGENZIA VIAGGI\nChi siamo Attualità Offerta\nCategoria: appartamenti\nL’appartamento è\n a due passi dalla Basilica, in un palazzo antico di quattro\npiani\n recentemente rinnovato\n situato al primo piano\n composto dal soggiorno con angolo di cottura, due camere\nALCAMO\ne due bagni.\nNelle vicinanze c’è anche il parcheggio privato.\nPer andare al mare potete prendere i minibus che vi porteranno\nalla spiaggia in dieci minuti.\nTekst 2.\nCOMMENTO\nIl mese scorso io e mio marito abbiamo fatto una vacanza di due settimane ad Alcamo in\nquesto appartamento. È ben attrezzato e carino. La posizione è ottima. Vicino si trovano\ntanti negozi e ristoranti. Le finestre della casa danno sulla piazza centrale dove spesso ci\nsono concerti e spettacoli all’aperto. Ogni giovedì mattina c’è un grande mercato. Ci potete\nacquistare di tutto: frutta e verdura fresche, souvenir e abbigliamento. Però se vi piacciono\ni posti silenziosi questo appartamento non è adatto a voi. Noi siamo abituati ad andare a letto\npresto, e il rumore è stato per noi un problema. Ma ci abbiamo trascorso lo stesso una bella\nvacanza.\nma@abc.pl\nWakacje we Włoszech\nDroga Ciociu!\nTak jak prosiłaś, znalazłam dla Ciebie atrakcyjne mieszkanie na wakacje w miejscowości\nAlcamo. Znajduje się ono na 10.1. ________________________ piętrze. Składa się z salonu\nz aneksem kuchennym, dwóch sypialni i dwóch łazienek. Położone jest w centrum miasta,\nprzy głównym placu, na którym jest dużo sklepów i restauracji, a ponadto raz w tygodniu\n10.2. _______________________. Goście, którzy wynajmowali to mieszkanie w zeszłym\nmiesiącu, byli zadowoleni. Z komentarza, który zamieścili na stronie internetowej, wynika,\nże mieszkanie jest ładne i dobrze wyposażone. Według nich jedyną jego wadą jest\n10.3. _______________________. Załączam link z ofertą.\nPozdrawiam\nKarolina\nOJWP-100-2004 Strona 13 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "10.1: pierwszym / 1.; 10.2: jest /odbywa się targ; 10.3: hałas"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 10.1: pierwszym / 1.; 10.2: jest /odbywa się targ; 10.3: hałas.",
+      "solution_steps": [
+        "Klucz CKE: 10.1: pierwszym / 1.; 10.2: jest /odbywa się targ; 10.3: hałas.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q10-page-12"
+        },
+        {
+          "type": "image",
+          "asset_id": "q10-page-13"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q10-page-12",
+          "path": "public/cke/2020/italian/ojwp-100-x-2004/q10-page-12.webp",
+          "sha256": "8545869ca4d9fdec014bb6a0478608c2330d19dd255e95928af3fddcae351780",
+          "alt": "Oryginalny układ zadania 10 z arkusza OJWP-100-2004, strona 12.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 12.",
+          "mime_type": "image/webp"
+        },
+        {
+          "id": "q10-page-13",
+          "path": "public/cke/2020/italian/ojwp-100-x-2004/q10-page-13.webp",
+          "sha256": "7035c9dc1f830769a9ee197563834a94b3b716c2ab56cc990aca7b12fcfbf74d",
+          "alt": "Oryginalny układ zadania 10 z arkusza OJWP-100-2004, strona 13.",
+          "caption": "Zadanie 10 — oryginalny układ CKE, strona 13.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-italian-100-x-q11",
+      "number": "11",
+      "sort_order": 11,
+      "source_pages": [
+        14
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — wybór wyrazów",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Spośród wyrazów podanych w ramce wybierz te, które są poprawnym\nuzupełnieniem luk 11.1.–11.3. Wpisz odpowiednią literę (A–F) obok numeru każdej luki.\nUwaga! Trzy wyrazy zostały podane dodatkowo i nie pasują do żadnej luki.\nA. amica B. aula C. classe D. comoda E. contenta F. idea\nLE BUGIE HANNO LE GAMBE CORTE\nFacevo la seconda 11.1. _____ della scuola elementare e mi piaceva studiare. Ero\nabbastanza brava, ma un giorno non ho scritto bene il test e invece di ricevere il voto\nmassimo di 10 ho ricevuto un 2. È stata la prima volta che ho preso un voto tanto brutto.\nAvevo paura della reazione dei miei genitori. Però ho avuto un’11.2. _____ fantastica: dopo\nil voto 2 che mi ha dato l’insegnante, ho aggiunto uno zero. Così è venuto un bel 20. Sono\ntornata a casa felice. Sono entrata e ho detto 11.3. _____: “Mamma, oggi a scuola ho preso\nun 20!”. La mamma non si è arrabbiata ma ha cominciato a ridere. Non esiste un voto così!\nE la mamma ride ancora oggi quando si ricorda di questa storia.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "11.1: C; 11.2: F; 11.3: E"
+        ]
+      },
+      "scoring": {
+        "max_points": 3,
+        "rules": [
+          "Maksymalnie 3 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 11.1: C; 11.2: F; 11.3: E.",
+      "solution_steps": [
+        "Klucz CKE: 11.1: C; 11.2: F; 11.3: E.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q11-page-14"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q11-page-14",
+          "path": "public/cke/2020/italian/ojwp-100-x-2004/q11-page-14.webp",
+          "sha256": "6434985fb53aae4c2b864bf06b812eb112e2286e19272004b947e9a635b4f798",
+          "alt": "Oryginalny układ zadania 11 z arkusza OJWP-100-2004, strona 14.",
+          "caption": "Zadanie 11 — oryginalny układ CKE, strona 14.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-italian-100-x-q12",
+      "number": "12",
+      "sort_order": 12,
+      "source_pages": [
+        15
+      ],
+      "type": "long_text",
+      "topic": "Środki językowe — gramatyka i leksyka",
+      "difficulty": 3,
+      "prompt": "Przeczytaj tekst. Wybierz poprawne uzupełnienie luk 12.1.–12.4. Zakreśl jedną z liter:\nA, B albo C.\nUNA BIBLIOTECA INSOLITA\nIl Bibliobus è uno dei bus più colorati di Milano. È un bus che non 12.1. _____ persone ma\nparole, tantissime parole cioè libri. Il Bibliobus è una vera e propria biblioteca viaggiante\n12.2. _____ ogni giorno si ferma in una piazza diversa di Milano. Il Bibliobus arriva\nin quelle zone di Milano dove non 12.3. _____ biblioteche. Il Bibliobus funziona come\nqualsiasi altra biblioteca. Basta avere un documento d’identità e abitare 12.4. _____ Italia\nper avere la tessera gratuita.\nNa podstawie http://manoxmano.it\n12.1. A. trasporto B. trasporta C. trasportano\n12.2. A. che B. chi C. cosa\n12.3. A. ci sono B. esserci C. c’è\n12.4. A. su B. a C. in\nOJWP-100-2004 Strona 15 z 18",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "12.1: B; 12.2: A; 12.3: A; 12.4: C"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 12.1: B; 12.2: A; 12.3: A; 12.4: C.",
+      "solution_steps": [
+        "Klucz CKE: 12.1: B; 12.2: A; 12.3: A; 12.4: C.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q12-page-15"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q12-page-15",
+          "path": "public/cke/2020/italian/ojwp-100-x-2004/q12-page-15.webp",
+          "sha256": "e06eed93a172677e8656a0af590e8dcfbe5f862b8182db5960d4e0f81e19c99b",
+          "alt": "Oryginalny układ zadania 12 z arkusza OJWP-100-2004, strona 15.",
+          "caption": "Zadanie 12 — oryginalny układ CKE, strona 15.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-italian-100-x-q13",
+      "number": "13",
+      "sort_order": 13,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Transformacje leksykalno-gramatyczne",
+      "difficulty": 3,
+      "prompt": "Przetłumacz na język włoski fragmenty podane w nawiasach, tak aby otrzymać zdania\nlogiczne i gramatycznie poprawne. Wymagana jest pełna poprawność ortograficzna\nwpisywanych fragmentów zdań.\nUwaga! W każdą lukę możesz wpisać maksymalnie trzy wyrazy.\n13.1. Ieri le lezioni (skończyły się) _______________________________________________\na mezzogiorno.\n13.2. Quando c’è (dużo śniegu) _________________________________________________\nvado a sciare.\n13.3. Vieni a scuola (pieszo) ___________________________________________________?\n13.4. (Moi dziadkowie) _________________________________________ sono in pensione.",
+      "answer_key": {
+        "assessment": "rubric",
+        "accepted_results": [
+          "13.1: sono finite; 13.2: molta neve; 13.3: a piedi; 13.4: i miei nonni"
+        ]
+      },
+      "scoring": {
+        "max_points": 4,
+        "rules": [
+          "Maksymalnie 4 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Klucz odpowiedzi zgodny z oficjalnymi zasadami CKE: 13.1: sono finite; 13.2: molta neve; 13.3: a piedi; 13.4: i miei nonni.",
+      "solution_steps": [
+        "Klucz CKE: 13.1: sono finite; 13.2: molta neve; 13.3: a piedi; 13.4: i miei nonni.",
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q13-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q13-page-16",
+          "path": "public/cke/2020/italian/ojwp-100-x-2004/q13-page-16.webp",
+          "sha256": "b459343101cb9942520dc35f33044e3b5dbafea1851a2dcb410e5ba33fdd9b10",
+          "alt": "Oryginalny układ zadania 13 z arkusza OJWP-100-2004, strona 16.",
+          "caption": "Zadanie 13 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    },
+    {
+      "id": "cke-2020-main-italian-100-x-q14",
+      "number": "14",
+      "sort_order": 14,
+      "source_pages": [
+        16
+      ],
+      "type": "long_text",
+      "topic": "Wypowiedź pisemna — e-mail",
+      "difficulty": 3,
+      "prompt": "Twoja koleżanka z klasy przeprowadza się wkrótce za granicę. W e-mailu do kolegi\nz Włoch:\n• napisz, co Twoja klasa dała tej koleżance w prezencie, i opisz ten przedmiot\n• poinformuj, jak koleżanka zareagowała na Wasz prezent\n• wyjaśnij, jak zamierzasz utrzymywać kontakt z tą koleżanką.\nNapisz swoją wypowiedź w języku włoskim. Podpisz się jako XYZ.\nRozwiń swoją wypowiedź w każdym z trzech podpunktów, tak aby osoba nieznająca polecenia\nw języku polskim uzyskała wszystkie wskazane w nim informacje. Pamiętaj, że długość\nwypowiedzi powinna wynosić od 50 do 120 słów (nie licząc wyrazów podanych na początku\nwypowiedzi). Oceniane są: umiejętność pełnego przekazania informacji, spójność, bogactwo\njęzykowe oraz poprawność językowa.",
+      "answer_key": {
+        "assessment": "rubric",
+        "minimum_words": 50,
+        "maximum_words": 120
+      },
+      "scoring": {
+        "max_points": 10,
+        "rules": [
+          "Maksymalnie 10 pkt zgodnie z oficjalnymi zasadami oceniania CKE."
+        ]
+      },
+      "explanation": "Porównaj rozwiązanie z oficjalnymi zasadami oceniania CKE dołączonymi do arkusza.",
+      "solution_steps": [
+        "Porównaj swoją odpowiedź z oficjalnym rozwiązaniem i kryteriami punktowania.",
+        "Sprawdź, czy odpowiedź realizuje wszystkie elementy polecenia."
+      ],
+      "hints": [
+        "Przeczytaj uważnie wszystkie warunki polecenia i zaznacz dane kluczowe.",
+        "Rozwiązuj po jednym elemencie, a na końcu sprawdź kompletność odpowiedzi."
+      ],
+      "content_blocks": [
+        {
+          "type": "image",
+          "asset_id": "q14-page-16"
+        }
+      ],
+      "assets": [
+        {
+          "id": "q14-page-16",
+          "path": "public/cke/2020/italian/ojwp-100-x-2004/q14-page-16.webp",
+          "sha256": "e93254a4b1238d1422dcea7966023ec6f49548f42f300a0ee456e749ef12fb75",
+          "alt": "Oryginalny układ zadania 14 z arkusza OJWP-100-2004, strona 16.",
+          "caption": "Zadanie 14 — oryginalny układ CKE, strona 16.",
+          "mime_type": "image/webp"
+        }
+      ]
+    }
+  ]
+}

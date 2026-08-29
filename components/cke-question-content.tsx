@@ -24,6 +24,7 @@ export type CkeQuestionAsset = {
 };
 
 function publicAssetPath(path: string) {
+  if (path.startsWith("https://cke.gov.pl/")) return path;
   const normalized = path.replace(/^public\//, "").replace(/^\/+/, "");
   return `/${normalized}`;
 }
