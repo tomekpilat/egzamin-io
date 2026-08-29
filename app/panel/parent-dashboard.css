@@ -103,6 +103,23 @@
 .dashboard-parent-page .parent-overview-privacy { max-width: 820px; color: var(--quiet-copy); font-size: 14px; line-height: 1.6; }
 .dashboard-parent-page .parent-next-step { padding: 20px 24px; background: var(--brand-soft); border-color: var(--brand); border-radius: 11px; }
 
+.dashboard-parent-page .guardian-avatar {
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 44px;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 1px solid color-mix(in srgb, var(--brand) 18%, var(--border));
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+}
+
 .dashboard-parent-page .guardian-requests { gap: 14px; }
 .dashboard-parent-page .linked-children { margin: 0; padding: 0; gap: 14px; background: transparent; border: 0; border-radius: 0; }
 .dashboard-parent-page .linked-children > .guardian-section-heading { margin-bottom: 2px; align-items: flex-end; }
@@ -112,7 +129,6 @@
 .dashboard-parent-page .child-settings-card { overflow: hidden; }
 .dashboard-parent-page .child-settings-card [data-slot="card-header"] { padding: 20px 24px; border-bottom: 1px solid var(--subtle-line); }
 .dashboard-parent-page .child-settings-card [data-slot="card-content"] { padding: 24px; gap: 22px; }
-.dashboard-parent-page .child-card-title-row .guardian-avatar { width: 44px; height: 44px; border-radius: 999px; font-size: 13px; }
 .dashboard-parent-page .child-card-title-row [data-slot="card-title"] { font-size: 17px; }
 .dashboard-parent-page .child-card-title-row [data-slot="card-description"] { font-size: 14px; }
 .dashboard-parent-page .goal-overview > div { justify-content: flex-start; gap: 8px; font-size: 16px; }

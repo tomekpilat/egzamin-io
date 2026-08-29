@@ -60,6 +60,16 @@ describe("parent panel actions", () => {
     expect(parentStyles).toContain("max-width: 992px");
   });
 
+  it("keeps child initials centered inside the same circular avatar in every parent view", () => {
+    expect(panel.match(/className="guardian-avatar"/g)).toHaveLength(4);
+    expect(parentStyles).toContain(".dashboard-parent-page .guardian-avatar {");
+    expect(parentStyles).toContain("display: inline-grid;");
+    expect(parentStyles).toContain("place-items: center;");
+    expect(parentStyles).toContain("flex: 0 0 44px;");
+    expect(parentStyles).toContain("border-radius: 50%;");
+    expect(parentStyles).not.toContain(".child-card-title-row .guardian-avatar");
+  });
+
   it("keeps plan, privacy and theme controls in their intended places", () => {
     expect(panel).toContain('"/plan-plus#dla-rodzica"');
     expect(panel).toContain('"/plan-plus#dla-ucznia"');
