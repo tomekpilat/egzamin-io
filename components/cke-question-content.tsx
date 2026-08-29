@@ -42,10 +42,10 @@ function ZoomableQuestionImage({ asset }: { asset: CkeQuestionAsset }) {
       </DialogTrigger>
       {asset.caption && <figcaption>{asset.caption}</figcaption>}
     </figure>
-    <DialogContent className="cke-image-dialog max-h-[96vh] w-[min(96vw,1440px)] max-w-none overflow-hidden p-3 sm:p-5" aria-describedby={undefined}>
+    <DialogContent className="cke-image-dialog" aria-describedby={undefined}>
       <DialogTitle className="sr-only">Powiększony obraz: {asset.alt}</DialogTitle>
       <figure>
-        <img src={src} alt={asset.alt} />
+        <img className="cke-image-dialog-media" src={src} alt={asset.alt} />
         {asset.caption && <figcaption>{asset.caption}</figcaption>}
       </figure>
     </DialogContent>

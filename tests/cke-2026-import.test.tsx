@@ -58,6 +58,7 @@ describe("CKE 2026 mathematics import", () => {
     await user.click(screen.getByRole("button", { name: "Powiększ obraz: Opis diagramu" }));
     expect(screen.getByRole("dialog", { name: "Powiększony obraz: Opis diagramu" })).toBeInTheDocument();
     expect(screen.getByRole("img", { name: "Opis diagramu" })).toHaveAttribute("src", "/cke/example.png");
+    expect(screen.getByRole("img", { name: "Opis diagramu" })).toHaveClass("cke-image-dialog-media");
     await user.click(screen.getByRole("button", { name: "Zamknij" }));
     expect(screen.getByRole("table", { name: "Dane" })).toBeInTheDocument();
     expect(document.querySelector(".cke-math-block")).toHaveTextContent("x^2");
