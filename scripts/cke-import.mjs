@@ -27,6 +27,23 @@ function nonEmpty(value) {
   return typeof value === "string" && value.trim().length > 0;
 }
 
+function findPostgresNullCharacters(value, path, add) {
+  if (typeof value === "string") {
+    if (value.includes("\u0000")) add(path, "znak NUL (\\u0000) nie może zostać zapisany w PostgreSQL");
+    return;
+  }
+  if (Array.isArray(value)) {
+    value.forEach((item, index) => findPostgresNullCharacters(item, `${path}[${index}]`, add));
+    return;
+  }
+  if (value && typeof value === "object") {
+    Object.entries(value).forEach(([key, item]) => {
+      if (key.includes("\u0000")) add(`${path} (nazwa pola)`, "znak NUL (\\u0000) nie może zostać zapisany w PostgreSQL");
+      findPostgresNullCharacters(item, `${path}.${key}`, add);
+    });
+  }
+}
+
 export function prepareManifest(input) {
   const manifest = structuredClone(input);
   const passages = new Map((manifest.passages ?? []).map((passage) => [passage.id, passage]));
@@ -51,6 +68,7 @@ export function validateManifest(input) {
   const errors = [];
   const add = (path, message) => errors.push(`${path}: ${message}`);
   if (!input || typeof input !== "object" || Array.isArray(input)) return { valid: false, errors: ["manifest: wymagany obiekt JSON"] };
+  findPostgresNullCharacters(input, "manifest", add);
 
   if (input.schema_version !== 1) add("schema_version", "obsługiwana jest wersja 1");
   if (!SLUG.test(input.manifest_id ?? "")) add("manifest_id", "użyj 3–120 małych liter, cyfr i łączników");

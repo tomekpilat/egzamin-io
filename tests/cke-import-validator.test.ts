@@ -37,6 +37,14 @@ describe("manual CKE import validator", () => {
     expect(errors).toContain("brak odpowiadającego zasobu");
   });
 
+  it("rejects NUL characters before PostgreSQL staging", () => {
+    const invalid = structuredClone(template);
+    invalid.questions[0].prompt = "Treść przed znakiem\u0000treść po znaku";
+    const result = validateManifest(invalid);
+    expect(result.valid).toBe(false);
+    expect(result.errors).toContain("manifest.questions[0].prompt: znak NUL (\\u0000) nie może zostać zapisany w PostgreSQL");
+  });
+
   it("generates deterministic per-question and manifest checksums", () => {
     const first = prepareManifest(template);
     const second = prepareManifest(structuredClone(template));

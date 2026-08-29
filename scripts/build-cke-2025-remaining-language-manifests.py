@@ -84,8 +84,12 @@ def sha256(path: Path) -> str:
 
 
 def clean_text(value: str) -> str:
+    # PDF extractors can emit control characters that JSON accepts but
+    # PostgreSQL text/jsonb rejects (notably U+0000). Strip those artifacts
+    # before any extracted content reaches a manifest.
+    value = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]", "", value.replace("\u00ad", ""))
     lines: list[str] = []
-    for line in value.replace("\u00ad", "").splitlines():
+    for line in value.splitlines():
         line = re.sub(r"\s+", " ", line).strip()
         if not line:
             continue
