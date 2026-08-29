@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { cleanup, render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { afterEach, describe, expect, it } from "vitest";
 import { CkeQuestionContent } from "@/components/cke-question-content";
 
@@ -43,7 +44,8 @@ describe("CKE 2026 mathematics import", () => {
     }
   });
 
-  it("renders accessible image, math and table content", () => {
+  it("renders accessible, enlargeable image, math and table content", async () => {
+    const user = userEvent.setup();
     render(<CkeQuestionContent
       blocks={[
         { type: "math", latex: "x^2", display: true },
@@ -53,6 +55,10 @@ describe("CKE 2026 mathematics import", () => {
       assets={[{ id: "diagram", path: "public/cke/example.png", sha256: "0".repeat(64), alt: "Opis diagramu", caption: "Źródło" }]}
     />);
     expect(screen.getByRole("img", { name: "Opis diagramu" })).toHaveAttribute("src", "/cke/example.png");
+    await user.click(screen.getByRole("button", { name: "Powiększ obraz: Opis diagramu" }));
+    expect(screen.getByRole("dialog", { name: "Powiększony obraz: Opis diagramu" })).toBeInTheDocument();
+    expect(screen.getByRole("img", { name: "Opis diagramu" })).toHaveAttribute("src", "/cke/example.png");
+    await user.click(screen.getByRole("button", { name: "Zamknij" }));
     expect(screen.getByRole("table", { name: "Dane" })).toBeInTheDocument();
     expect(document.querySelector(".cke-math-block")).toHaveTextContent("x^2");
   });

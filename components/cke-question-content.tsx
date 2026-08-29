@@ -3,6 +3,8 @@
 /* eslint-disable @next/next/no-img-element -- CKE assets have audited local paths and original aspect ratios. */
 
 import { MathFormula } from "@/components/math-formula";
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { ZoomIn } from "lucide-react";
 
 export type CkeContentBlock =
   | { type: "markdown"; text: string }
@@ -26,6 +28,29 @@ function publicAssetPath(path: string) {
   return `/${normalized}`;
 }
 
+function ZoomableQuestionImage({ asset }: { asset: CkeQuestionAsset }) {
+  const src = publicAssetPath(asset.path);
+
+  return <Dialog>
+    <figure className="cke-image-block">
+      <DialogTrigger asChild>
+        <button type="button" className="cke-image-trigger" aria-label={`Powiększ obraz: ${asset.alt}`}>
+          <img src={src} alt={asset.alt} />
+          <span className="cke-image-zoom-label" aria-hidden="true"><ZoomIn />Powiększ</span>
+        </button>
+      </DialogTrigger>
+      {asset.caption && <figcaption>{asset.caption}</figcaption>}
+    </figure>
+    <DialogContent className="cke-image-dialog max-h-[96vh] w-[min(96vw,1440px)] max-w-none overflow-hidden p-3 sm:p-5" aria-describedby={undefined}>
+      <DialogTitle className="sr-only">Powiększony obraz: {asset.alt}</DialogTitle>
+      <figure>
+        <img src={src} alt={asset.alt} />
+        {asset.caption && <figcaption>{asset.caption}</figcaption>}
+      </figure>
+    </DialogContent>
+  </Dialog>;
+}
+
 export function CkeQuestionContent({ blocks, assets }: { blocks: CkeContentBlock[]; assets: CkeQuestionAsset[] }) {
   const byId = new Map(assets.map((asset) => [asset.id, asset]));
 
@@ -36,7 +61,7 @@ export function CkeQuestionContent({ blocks, assets }: { blocks: CkeContentBlock
       if (block.type === "image") {
         const asset = byId.get(block.asset_id);
         if (!asset) return null;
-        return <figure key={index} className="cke-image-block"><img src={publicAssetPath(asset.path)} alt={asset.alt} />{asset.caption && <figcaption>{asset.caption}</figcaption>}</figure>;
+        return <ZoomableQuestionImage key={index} asset={asset} />;
       }
       if (block.type === "audio") {
         const asset = byId.get(block.asset_id);
