@@ -283,6 +283,7 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+  const [paperProgressError, setPaperProgressError] = useState("");
   const [access, setAccess] = useState<PracticeAccess>(() => normalizePracticeAccess(undefined, hasPlusAccess));
   const answerRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
@@ -290,24 +291,27 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
     let active = true;
     getSupabaseClient()
       .then(async (supabase) => {
-        const [{ data, error: questionsError }, { data: accessData, error: accessError }, progressResult] = await Promise.all([
-          supabase.rpc("get_practice_questions"),
+        const { data, error: questionsError } = await supabase.rpc("get_practice_questions");
+        if (questionsError) throw questionsError;
+        const loaded = ((data as Record<string, unknown>[] | null) ?? []).map(normalizeQuestion);
+        const [accessOutcome, progressOutcome] = await Promise.allSettled([
           supabase.rpc("get_student_practice_access"),
           hasPlusAccess ? supabase.rpc("get_student_paper_progress") : Promise.resolve({ data: [], error: null }),
         ]);
-        if (questionsError || accessError || progressResult.error) throw questionsError ?? accessError ?? progressResult.error;
-        const loaded = ((data as Record<string, unknown>[] | null) ?? []).map(normalizeQuestion);
-        const progress = ((progressResult.data as Record<string, unknown>[] | null) ?? []).map(normalizePaperProgress);
-        const nextAccess = normalizePracticeAccess(((accessData as Record<string, unknown>[] | null) ?? [])[0], hasPlusAccess);
+        const accessResult = accessOutcome.status === "fulfilled" && !accessOutcome.value.error ? accessOutcome.value : null;
+        const progressResult = progressOutcome.status === "fulfilled" && !progressOutcome.value.error ? progressOutcome.value : null;
+        const progress = ((progressResult?.data as Record<string, unknown>[] | null) ?? []).map(normalizePaperProgress);
+        const nextAccess = normalizePracticeAccess(((accessResult?.data as Record<string, unknown>[] | null) ?? [])[0], hasPlusAccess);
         if (active) {
           setQuestions(loaded);
           setPaperProgress(progress);
+          setPaperProgressError(hasPlusAccess && !progressResult ? "Nie udało się pobrać wyników arkuszy. Zadania nadal są dostępne — spróbuj odświeżyć panel za chwilę." : "");
           setAccess(nextAccess);
           setMaterial(defaultMaterialFilter(loaded));
         }
       })
       .catch(() => {
-        if (active) setError("Nie udało się pobrać materiałów. Administrator powinien zastosować najnowszą migrację Supabase.");
+        if (active) setError("Nie udało się pobrać zadań. Odśwież panel i spróbuj ponownie.");
       })
       .finally(() => {
         if (active) setLoading(false);
@@ -634,7 +638,7 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
   }
 
   if (error && !questions.length) {
-    return <Alert variant="destructive"><AlertTitle>Zestaw demo jest niedostępny</AlertTitle><AlertDescription>{error}</AlertDescription></Alert>;
+    return <Alert variant="destructive"><AlertTitle>Nie udało się załadować zadań</AlertTitle><AlertDescription>{error}</AlertDescription></Alert>;
   }
 
   return (
@@ -792,7 +796,7 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
             <h3 id="paper-progress-title">Wyniki według rocznika i arkusza</h3>
             <p>Każdy arkusz liczony osobno. Wynik procentowy pokazuje punkty zdobyte względem maksymalnej liczby punktów w arkuszu.</p>
           </header>
-          {paperProgress.length ? <>
+          {paperProgressError ? <Alert variant="destructive" className="paper-progress-warning"><AlertTitle>Wyniki arkuszy są chwilowo niedostępne</AlertTitle><AlertDescription>{paperProgressError}</AlertDescription></Alert> : paperProgress.length ? <>
             <div className="paper-year-filters" role="group" aria-label="Filtruj wyniki według rocznika">
               <button type="button" className={paperYearFilter === null ? "active" : ""} aria-pressed={paperYearFilter === null} onClick={() => setPaperYearFilter(null)}>Wszystkie roczniki</button>
               {paperProgressYears.map((year) => <button key={year} type="button" className={paperYearFilter === year ? "active" : ""} aria-pressed={paperYearFilter === year} onClick={() => setPaperYearFilter(year)}>CKE {year}</button>)}

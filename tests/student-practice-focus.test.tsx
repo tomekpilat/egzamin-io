@@ -64,7 +64,7 @@ const questions = [
   },
 ];
 
-function prepareRpc(questionRows: Record<string, unknown>[] = questions, progressRows: Record<string, unknown>[] = [], submitResult?: (params: Record<string, unknown>) => Record<string, unknown>, access = { active_plan: "plus", practice_used_today: 0, practice_daily_limit: null, progress_enabled: true, ai_enabled: true }) {
+function prepareRpc(questionRows: Record<string, unknown>[] = questions, progressRows: Record<string, unknown>[] = [], submitResult?: (params: Record<string, unknown>) => Record<string, unknown>, access = { active_plan: "plus", practice_used_today: 0, practice_daily_limit: null, progress_enabled: true, ai_enabled: true }, progressError: unknown = null) {
   vi.stubGlobal("fetch", vi.fn().mockImplementation(async (_input: RequestInfo | URL, init?: RequestInit) => new Response(JSON.stringify(init?.method === "POST" ? {
     message: { id: "ai-response-1", role: "assistant", content: "Wyjaśnienie AI do aktualnego zadania.", created_at: "2026-08-28T10:00:00.000Z" },
     usage: { used: 1, limit: 3, remaining: 2, plan: "free" },
@@ -77,7 +77,7 @@ function prepareRpc(questionRows: Record<string, unknown>[] = questions, progres
   rpc.mockImplementation(async (name: string, params: Record<string, unknown>) => {
     if (name === "get_practice_questions") return { data: questionRows, error: null };
     if (name === "get_student_practice_access") return { data: [access], error: null };
-    if (name === "get_student_paper_progress") return { data: progressRows, error: null };
+    if (name === "get_student_paper_progress") return { data: progressRows, error: progressError };
     if (name === "submit_practice_response") {
       return {
         data: [submitResult?.(params) ?? {
@@ -184,6 +184,18 @@ describe("StudentPractice focus mode", () => {
     await user.click(screen.getByRole("button", { name: "Wszystkie roczniki" }));
     await user.click(screen.getByRole("button", { name: "Wróć do zadania 2 →" }));
     expect(onNavigate).toHaveBeenCalledWith("exercises");
+  });
+
+  it("keeps questions available when only paper progress fails to load", async () => {
+    prepareRpc(questions, [], undefined, { active_plan: "plus", practice_used_today: 0, practice_daily_limit: null, progress_enabled: true, ai_enabled: true }, { message: "missing progress function" });
+    const { rerender } = render(<StudentPractice activeView="start" onNavigate={() => undefined} />);
+
+    expect(await screen.findByText("Zacznij od jednego zadania", { selector: '[data-slot="card-title"]' })).toBeInTheDocument();
+    expect(screen.queryByText("Zestaw demo jest niedostępny")).not.toBeInTheDocument();
+
+    rerender(<StudentPractice activeView="progress" onNavigate={() => undefined} />);
+    expect(screen.getByText("Wyniki arkuszy są chwilowo niedostępne")).toBeInTheDocument();
+    expect(screen.getByText(/Zadania nadal są dostępne/)).toBeInTheDocument();
   });
 
   it("detects only a changed, unsubmitted draft", () => {
