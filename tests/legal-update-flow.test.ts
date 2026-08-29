@@ -17,5 +17,7 @@ describe("returning user legal update flow", () => {
     expect(legalUpdate).not.toContain("complete_onboarding");
     expect(legalUpdate).not.toContain("selected_role");
     expect(legalUpdate).toContain("Twoja rola i ustawienia pozostają bez zmian");
+    expect(legalUpdate).toContain("disabled={busy || !accepted}");
+    expect(legalUpdate).toContain('className="legal-update-submit"');
   });
 });

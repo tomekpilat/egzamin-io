@@ -77,18 +77,18 @@ export default function AcceptLegalChangesPage() {
   return (
     <main className="consent-page">
       <div className="consent-top"><a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a></div>
-      <Card className="consent-card legal-update-card">
-        <CardHeader>
+      <Card className="consent-card legal-update-card" aria-labelledby="legal-update-title">
+        <CardHeader className="legal-update-header">
           <Badge variant="secondary"><FileCheck2 size={13} aria-hidden="true" /> Aktualizacja dokumentów</Badge>
-          <CardTitle>Twoja rola i ustawienia pozostają bez zmian</CardTitle>
-          <CardDescription>Zaktualizowaliśmy dokumenty prawne {LEGAL_UPDATED_LABEL}. Nie musisz ponownie wybierać typu konta.</CardDescription>
+          <CardTitle id="legal-update-title">Zaktualizowaliśmy dokumenty prawne</CardTitle>
+          <CardDescription>Twoja rola i ustawienia pozostają bez zmian. Aktualizacja obowiązuje od {LEGAL_UPDATED_LABEL}</CardDescription>
         </CardHeader>
         <CardContent className="consent-content legal-update-content">
-          <p>Przed powrotem do panelu zapoznaj się z aktualną wersją dokumentów. Twoje postępy, połączone konta i ustawienia nie zostaną zmienione.</p>
-          <nav aria-label="Zaktualizowane dokumenty"><Button variant="outline" asChild><a href="/regulamin" target="_blank">Otwórz regulamin</a></Button><Button variant="outline" asChild><a href="/polityka-prywatnosci" target="_blank">Otwórz politykę prywatności</a></Button></nav>
-          <div className="feedback-contact-consent legal-update-consent"><Checkbox id="accept-legal-update" checked={accepted} onCheckedChange={(value) => setAccepted(value === true)} /><Label htmlFor="accept-legal-update">Akceptuję regulamin i potwierdzam zapoznanie się z polityką prywatności.</Label></div>
+          <p>Przeczytaj aktualny regulamin i politykę prywatności. Zachowamy Twoje postępy, połączone konta oraz ustawienia.</p>
+          <nav aria-label="Zaktualizowane dokumenty"><Button variant="outline" asChild><a href="/regulamin" target="_blank" rel="noreferrer">Regulamin</a></Button><Button variant="outline" asChild><a href="/polityka-prywatnosci" target="_blank" rel="noreferrer">Polityka prywatności</a></Button></nav>
+          <div className="feedback-contact-consent legal-update-consent"><Checkbox id="accept-legal-update" checked={accepted} disabled={busy} onCheckedChange={(value) => setAccepted(value === true)} /><Label htmlFor="accept-legal-update">Akceptuję <a href="/regulamin" target="_blank" rel="noreferrer">regulamin</a> i potwierdzam zapoznanie się z <a href="/polityka-prywatnosci" target="_blank" rel="noreferrer">polityką prywatności</a>.</Label></div>
           {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-          <Button type="button" size="lg" onClick={() => void acceptChanges()} disabled={busy}>{busy ? "Sprawdzam…" : "Zapisz i przejdź do panelu"}</Button>
+          <Button className="legal-update-submit" type="button" size="lg" onClick={() => void acceptChanges()} disabled={busy || !accepted}>{busy ? "Sprawdzam…" : "Akceptuję i przechodzę do panelu"}</Button>
         </CardContent>
       </Card>
     </main>
