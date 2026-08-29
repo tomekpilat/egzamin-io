@@ -16,6 +16,7 @@ import { ThemeSettings } from "@/components/theme-settings";
 import { trackAnalyticsEvent } from "@/lib/analytics";
 import { CkeQuestionContent, type CkeContentBlock, type CkeQuestionAsset } from "@/components/cke-question-content";
 import { FREE_PRACTICE_QUESTIONS_PER_DAY } from "@/lib/plans";
+import { PromoCodeRedemption } from "@/components/promo-code-redemption";
 
 export type StudentView = "start" | "exercises" | "progress" | "settings";
 type Subject = SubjectKey;
@@ -836,6 +837,7 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
           <CardHeader><CardTitle id="student-settings-title">Ustawienia konta</CardTitle><CardDescription>Motyw i zarządzanie kontem w jednym miejscu.</CardDescription></CardHeader>
           <CardContent className="student-account-settings-content">
             <div className="account-theme-setting"><span>Wygląd aplikacji</span><ThemeSettings /></div>
+            <PromoCodeRedemption disabled={hasPlusAccess} onRedeemed={() => window.location.reload()} />
             <div className="student-account-links"><Button variant="outline" asChild><a href="/plan-plus#dla-ucznia">Poznaj pakiet Plus</a></Button><Button variant="outline" className="student-delete-account" asChild><a href="/usun-konto">Usuń konto i dane</a></Button></div>
           </CardContent>
         </Card>

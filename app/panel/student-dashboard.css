@@ -104,6 +104,7 @@
 .dashboard-student-page .practice-paper-card,
 .dashboard-student-page .practice-paper-empty,
 .dashboard-student-page .student-account-settings-card { padding: 0; gap: 0; }
+.dashboard-student-page .student-account-settings-content .promo-code-redemption { width: 100%; flex-basis: 100%; }
 .dashboard-student-page .student-resume-card [data-slot="card-header"] { padding: 26px 28px 0; gap: 10px; }
 .dashboard-student-page .student-resume-card [data-slot="card-description"] { color: var(--muted-copy); font-size: 15px; }
 .dashboard-student-page .student-resume-card [data-slot="card-title"] { font-size: 36px; line-height: 1.1; font-weight: 600; letter-spacing: -.02em; }

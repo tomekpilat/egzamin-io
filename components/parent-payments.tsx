@@ -9,6 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { PromoCodeRedemption } from "@/components/promo-code-redemption";
 import { formatPaymentAmount, isPaymentStatus, paymentStatusLabels, type PaymentStatus } from "@/lib/payments";
 import { getSupabaseClient } from "@/lib/supabase-browser";
 
@@ -185,6 +186,8 @@ export function ParentPayments({ linkedChildren, onConnect }: { linkedChildren: 
 
         {!config?.enabled && !loading ? <Alert variant="warning"><AlertTitle>Sprzedaż nie jest jeszcze aktywna</AlertTitle><AlertDescription>Historia pozostaje dostępna. Administrator musi ukończyć konfigurację Stripe przed przyjmowaniem płatności.</AlertDescription></Alert> : null}
         <div className="payment-checkout-action"><div><b>Do zapłaty: {config ? formatPaymentAmount(config.amountMinor, config.currency) : "149,00 zł"}</b><span>Jednorazowo. Brak automatycznego odnowienia.</span><p className="payment-provider-note">Bezpieczna płatność odbywa się na stronie Stripe. egzaminio nie otrzymuje pełnego numeru karty.</p></div><Button type="button" size="lg" disabled={!canPurchase} onClick={() => void startCheckout()}>{submitting ? "Przekierowujemy do Stripe…" : "Zamawiam pakiet Plus — płacę 149 zł"}</Button></div>
+        <div className="payment-or-promo"><span>lub</span></div>
+        <PromoCodeRedemption studentId={effectiveStudentId} disabled={!selectedChild || isActivePlus(selectedChild, renderedAt)} onRedeemed={() => window.location.reload()} />
       </CardContent>
     </Card>}
 

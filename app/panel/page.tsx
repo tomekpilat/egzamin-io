@@ -8,6 +8,7 @@ import { AccountMenuTrigger } from "@/components/account-menu-trigger";
 import { BrandLogo } from "@/components/brand-logo";
 import { FeedbackDialog } from "@/components/feedback-dialog";
 import { ParentPayments } from "@/components/parent-payments";
+import { AdminPromoCodes } from "@/components/admin-promo-codes";
 import { ParentProgress } from "@/components/parent-progress";
 import { StudentPractice, type StudentView } from "@/components/student-practice";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -257,6 +258,7 @@ function AdminPanel({ counts, feedback, busy, feedbackBusyId, error, onGrantTeac
           <div className="admin-teacher-form"><Label htmlFor="teacher-email">Adres e-mail zweryfikowanego nauczyciela</Label><div><Input id="teacher-email" type="email" autoComplete="email" placeholder="nauczyciel@szkola.pl" value={teacherEmail} onChange={(event) => setTeacherEmail(event.target.value)} /><Button type="button" onClick={() => void grantTeacherRole()} disabled={busy || !teacherEmail.trim()}>{busy ? "Nadaję rolę…" : "Nadaj rolę"}</Button></div></div>
         </CardContent>
       </Card>
+      <AdminPromoCodes />
       <Card className="admin-feedback-card" id="feedback">
         <CardHeader><div className="admin-feedback-heading"><div><CardTitle>Feedback użytkowników</CardTitle><CardDescription>Najnowsze zgłoszenia z aplikacji. Dane kontaktowe pojawiają się wyłącznie po zgodzie użytkownika.</CardDescription></div><Badge variant="secondary">{feedback.filter((item) => item.feedback_status === "new").length} nowych</Badge></div></CardHeader>
         <CardContent>

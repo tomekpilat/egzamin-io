@@ -65,6 +65,8 @@ Ręczne przygotowanie, walidacja, wersjonowanie i publikacja arkuszy CKE są opi
 
 Konfiguracja nauczyciela AI, limity, workflow zatwierdzania opracowań i benchmark są opisane w [docs/ai-tutor-mvp.md](docs/ai-tutor-mvp.md). Uzasadnienie modelu i szacunek kosztów znajdują się w [docs/ai-model-evaluation.md](docs/ai-model-evaluation.md).
 
+Bezpłatne nadawanie Pakietu Plus kodem promocyjnym i zasady jego bezpiecznej obsługi są opisane w [docs/plus-promo-codes.md](docs/plus-promo-codes.md).
+
 Roboczy pakiet prawny (prywatność, regulamin, cookies, dzieci i AI oraz odstąpienie od umowy) jest dostępny pod `/informacje-prawne`. Dokumenty są celowo wyłączone z indeksowania do czasu uzupełnienia danych operatora, dostawców i konsultacji prawnej.
 
 ## Weryfikacja

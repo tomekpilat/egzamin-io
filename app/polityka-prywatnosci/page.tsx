@@ -19,7 +19,7 @@ export default function PrivacyPage() {
       </div>
 
       <nav className="legal-toc" aria-label="Spis treści">
-        <b>Na tej stronie</b><a href="#administrator">Administrator</a><a href="#dane">Dane i źródła</a><a href="#cele">Cele i podstawy</a><a href="#platnosci">Płatności Stripe</a><a href="#dzieci">Dzieci i rodzice</a><a href="#ai">Nauczyciel AI</a><a href="#feedback">Feedback</a><a href="#newsletter">Alerty i lista pakietu Plus</a><a href="#analityka">Analityka GA4</a><a href="#odbiorcy">Dostawcy i transfery</a><a href="#retencja">Jak długo przechowujemy</a><a href="#prawa">Twoje prawa</a>
+        <b>Na tej stronie</b><a href="#administrator">Administrator</a><a href="#dane">Dane i źródła</a><a href="#cele">Cele i podstawy</a><a href="#platnosci">Płatności i kody Plus</a><a href="#dzieci">Dzieci i rodzice</a><a href="#ai">Nauczyciel AI</a><a href="#feedback">Feedback</a><a href="#newsletter">Alerty i lista pakietu Plus</a><a href="#analityka">Analityka GA4</a><a href="#odbiorcy">Dostawcy i transfery</a><a href="#retencja">Jak długo przechowujemy</a><a href="#prawa">Twoje prawa</a>
       </nav>
 
       <section className="legal-section" id="administrator">
@@ -38,6 +38,7 @@ export default function PrivacyPage() {
             <tr><td>Rozmowy z AI</td><td>Treść pytania, kontekst zadania, odpowiedź modelu, liczba tokenów, szacowany koszt i czas odpowiedzi</td><td>Od użytkownika, aplikacji i dostawcy modelu</td></tr>
             <tr><td>Rodzic i nauczyciel</td><td>Zaproszenia, powiązania kont, grupy, zestawy i raporty postępów</td><td>Od użytkowników i z ich aktywności</td></tr>
             <tr><td>Płatności Stripe</td><td>Kupujący rodzic i wskazane konto ucznia, e-mail, produkt, kwota, waluta, status, daty, wersja zaakceptowanych warunków, identyfikatory Checkout/płatności/klienta/obciążenia/faktury, adres dokumentu i informacje o zwrocie; dane rozliczeniowe podane w Stripe. egzaminio nie otrzymuje pełnego numeru karty ani CVC.</td><td>Od rodzica, aplikacji i Stripe podczas zakupu, potwierdzenia, reklamacji lub zwrotu</td></tr>
+            <tr><td>Kody promocyjne Plus</td><td>Jednokierunkowy skrót i skrócona podpowiedź kodu, opis, termin i limit użyć, konto ucznia, konto aktywujące, czas aktywacji oraz rejestr udanych i nieudanych prób. Nie przechowujemy pełnej treści kodu.</td><td>Od administratora, ucznia lub rodzica oraz z działania aplikacji</td></tr>
             <tr><td>Bezpieczeństwo</td><td>Adres IP, typ urządzenia i przeglądarki, zdarzenia logowania, błędy, identyfikatory sesji</td><td>Automatycznie z urządzenia i infrastruktury</td></tr>
             <tr><td>Feedback w aplikacji</td><td>Kategoria, opcjonalna ocena, treść opinii, rola konta, bieżący ekran i identyfikator zadania; adres e-mail tylko po zgodzie na kontakt</td><td>Od użytkownika i z kontekstu bieżącego ekranu</td></tr>
             <tr><td>Alerty rekrutacyjne i lista pakietu Plus</td><td>Adres e-mail, typ zapisu, wskazana szkoła lub klasa i rok rekrutacji, dokładna treść i wersja zgody, czas i źródło zapisu oraz status wypisu</td><td>Od osoby wypełniającej osobny formularz</td></tr>
@@ -54,6 +55,7 @@ export default function PrivacyPage() {
           <thead><tr><th>Cel</th><th>Podstawa</th></tr></thead>
           <tbody>
             <tr><td>Utworzenie konta, logowanie, ćwiczenia, zapis postępu i obsługa AI</td><td>Niezbędność do wykonania umowy lub działań przed jej zawarciem — art. 6 ust. 1 lit. b RODO</td></tr>
+            <tr><td>Aktywacja i obsługa bezpłatnego dostępu Plus na podstawie kodu</td><td>Wykonanie umowy — art. 6 ust. 1 lit. b RODO; ograniczanie prób i zapobieganie nadużyciom — prawnie uzasadniony interes, art. 6 ust. 1 lit. f RODO</td></tr>
             <tr><td>Rozliczenia, rachunkowość, obowiązki konsumenckie i odpowiedzi organom</td><td>Obowiązek prawny — art. 6 ust. 1 lit. c RODO</td></tr>
             <tr><td>Bezpieczeństwo, zapobieganie nadużyciom, diagnostyka, obrona roszczeń i podstawowe statystyki usługi</td><td>Prawnie uzasadniony interes — art. 6 ust. 1 lit. f RODO, po teście równowagi uwzględniającym szczególną ochronę dzieci</td></tr>
             <tr><td>Przyjmowanie i analiza feedbacku, naprawa błędów oraz rozwój aplikacji</td><td>Prawnie uzasadniony interes w ulepszaniu i zabezpieczaniu usługi — art. 6 ust. 1 lit. f RODO; kontakt zwrotny następuje wyłącznie po dobrowolnej zgodzie — art. 6 ust. 1 lit. a RODO</td></tr>
@@ -66,10 +68,11 @@ export default function PrivacyPage() {
       </section>
 
       <section className="legal-section" id="platnosci">
-        <h2>3.1. Jak przetwarzamy płatności Stripe</h2>
+        <h2>3.1. Jak przetwarzamy płatności i kody Plus</h2>
         <p>Zakup Pakietu Plus jest inicjowany przez konto rodzica i realizowany na hostowanej stronie Stripe. Do Stripe przekazujemy e-mail rodzica, nazwę produktu, cenę, walutę, niejawny techniczny identyfikator zamówienia oraz informację o okresie dostępu. Nie przekazujemy Stripe identyfikatora ani adresu e-mail dziecka. Stripe zbiera bezpośrednio dane metody płatności i rozliczeniowe. Nie zapisujemy w bazie pełnego numeru karty ani CVC.</p>
         <p>Po podpisanym komunikacie Stripe zapisujemy status płatności, identyfikatory transakcji, linki do potwierdzenia lub faktury oraz kwotę zwrotu. Dane te służą wykonaniu umowy, aktywacji dostępu, obsłudze zwrotów i reklamacji, zapobieganiu nadużyciom oraz wykonaniu obowiązków podatkowych, rachunkowych i konsumenckich. Nie wykorzystujemy danych płatniczych do profilowania dziecka ani nie przekazujemy ich do nauczyciela AI lub Google Analytics.</p>
         <p>Stripe może działać jako podmiot przetwarzający dane na nasze zlecenie oraz — w określonym przez własne obowiązki zakresie, np. przeciwdziałania oszustwom i obowiązków regulacyjnych — jako odrębny administrator. Szczegóły i właściwy podmiot Stripe zależą od miejsca działalności usługodawcy i konfiguracji konta. <mark>Przed uruchomieniem sprzedaży trzeba wpisać podmiot sprzedawcy, zaakceptować DPA Stripe i zweryfikować konfigurację podatkową.</mark></p>
+        <p>Przy aktywacji kodu promocyjnego łączymy uprawnienie z kontem ucznia i zapisujemy, kto je aktywował. Pełny kod jest normalizowany i porównywany wyłącznie przez jednokierunkowy skrót; nie zapisujemy jego jawnej treści. Rejestrujemy próby bez treści wpisanego kodu, aby ograniczać automatyczne zgadywanie. Aktywacja kodem nie przekazuje danych do Stripe i nie tworzy transakcji płatniczej.</p>
       </section>
 
       <section className="legal-section" id="dzieci">
@@ -143,6 +146,7 @@ export default function PrivacyPage() {
             <tr><td>Kontakt i reklamacje</td><td>24 miesiące od zamknięcia sprawy lub przez okres dochodzenia/obrony roszczeń</td></tr>
             <tr><td>Zgody i ich wycofanie</td><td>Przez czas korzystania z podstawy zgody i okres niezbędny do wykazania zgodności lub obrony roszczeń</td></tr>
             <tr><td>Zamówienia, statusy Stripe, zgody zakupowe, zwroty i dokumenty rozliczeniowe</td><td>Przez okres wykonania umowy, a następnie przez okres wymagany przez przepisy podatkowe i rachunkowe oraz do przedawnienia roszczeń. Usunięcie konta nie powoduje usunięcia danych, które musimy zachować z obowiązku prawnego lub dla roszczeń; po tym okresie są usuwane albo anonimizowane.</td></tr>
+            <tr><td>Kody promocyjne, ich aktywacje i przyznane uprawnienia</td><td>Przez okres ważności dostępu, a następnie do 24 miesięcy dla obsługi nadużyć, reklamacji i roszczeń; potem dane są usuwane albo anonimizowane. Rejestr samych prób aktywacji przechowujemy maksymalnie 30 dni.</td></tr>
           </tbody>
         </table></div>
       </section>

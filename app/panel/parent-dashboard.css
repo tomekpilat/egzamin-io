@@ -188,6 +188,17 @@
 .dashboard-parent-page .payment-provider-note { color: var(--muted-copy); font-size: 13px; line-height: 1.5; }
 .dashboard-parent-page .payment-provider-note { margin: 0; }
 .dashboard-parent-page .payment-checkout-action [data-slot="button"] { min-height: 48px; padding-inline: 24px; font-size: 15px; }
+.dashboard-parent-page .payment-or-promo { display: flex; align-items: center; gap: 12px; color: var(--quiet-copy); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+.dashboard-parent-page .payment-or-promo::before,
+.dashboard-parent-page .payment-or-promo::after { height: 1px; content: ""; flex: 1; background: var(--subtle-line); }
+.promo-code-redemption { padding: 18px 20px; display: grid; grid-template-columns: minmax(210px, 1fr) minmax(300px, 1.25fr); align-items: center; gap: 14px 22px; background: var(--surface-soft); border: 1px solid var(--border); border-radius: 10px; }
+.promo-code-redemption > div:first-child { display: grid; gap: 5px; }
+.promo-code-redemption > div:first-child b { font-size: 15px; }
+.promo-code-redemption > div:first-child span,
+.promo-code-disabled { margin: 0; color: var(--muted-copy); font-size: 13px; line-height: 1.45; }
+.promo-code-form { display: grid; grid-template-columns: minmax(150px, 1fr) auto; gap: 8px; }
+.promo-code-form [data-slot="input"], .promo-code-form [data-slot="button"] { min-height: 42px; }
+.promo-code-redemption > [data-slot="alert"], .promo-code-disabled { grid-column: 1 / -1; }
 .dashboard-parent-page .payment-history-empty { min-height: 100px; margin: 0; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; color: var(--foreground); text-align: center; }
 .dashboard-parent-page .payment-history-empty b { font-size: 15px; font-weight: 500; }
 .dashboard-parent-page .payment-history-empty span { max-width: 460px; color: var(--muted-copy); font-size: 14px; line-height: 1.5; }
@@ -255,6 +266,8 @@
   .dashboard-parent-page .parent-connect-steps span:last-child { border-bottom: 0; }
   .dashboard-parent-page .payment-checkout-action { align-items: stretch; flex-direction: column; }
   .dashboard-parent-page .payment-checkout-action [data-slot="button"] { width: 100%; }
+  .promo-code-redemption { grid-template-columns: 1fr; padding: 16px; }
+  .promo-code-form { grid-template-columns: 1fr; }
   .dashboard-parent-page .parent-account-settings-content { align-items: stretch; flex-direction: column; }
   .dashboard-parent-page .parent-account-links { flex-direction: column; }
   .dashboard-parent-page .parent-account-links [data-slot="button"] { width: 100%; }
