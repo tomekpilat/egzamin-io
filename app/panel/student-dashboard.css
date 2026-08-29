@@ -269,4 +269,5 @@
   .dashboard-student-page .student-account-settings-content { align-items: stretch; flex-direction: column; }
   .dashboard-student-page .student-account-links { flex-direction: column; }
   .dashboard-student-page .student-account-links [data-slot="button"] { width: 100%; }
+  .dashboard-student-page .dashboard-feedback-trigger { bottom: calc(86px + env(safe-area-inset-bottom)); }
 }

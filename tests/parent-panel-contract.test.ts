@@ -45,6 +45,8 @@ describe("parent panel actions", () => {
     expect(parentStyles).toContain("grid-template-columns: 250px minmax(0, 1fr)");
     expect(parentStyles).toContain("min-height: 63px");
     expect(parentStyles).toContain("padding: 34px 34px 56px");
+    expect(parentStyles).toContain("@media (max-width: 760px)");
+    expect(parentStyles).toContain("position: fixed; z-index: 55; top: auto; bottom: 0; left: 0;");
     expect(parentStyles).not.toContain("box-shadow");
   });
 

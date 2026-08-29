@@ -509,8 +509,13 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
 
 @media (max-width: 680px) {
   .site-header { height: 64px; padding-inline: 16px; gap: 12px; }
-  .header-login { display: none; }
-  .header-cta { min-height: 36px; padding-inline: 12px; font-size: 13px; }
+  .site-header .wordmark { font-size: 17px; }
+  .mobile-nav-trigger { width: 36px; padding-inline: 8px; }
+  .mobile-nav-trigger span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .header-actions { gap: 6px; }
+  .header-login { min-height: 36px; padding: 7px 10px; display: inline-flex; align-items: center; font-size: 12px; white-space: nowrap; }
+  .header-cta { min-height: 36px; padding-inline: 10px; font-size: 12px; white-space: nowrap; }
+  .header-session-placeholder { width: 158px; height: 36px; }
   .dashboard-account-copy { display: none; }
   .home-redesign .hero,
   .home-redesign .how-section,
@@ -541,6 +546,14 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
   .home-redesign .recruitment-hook,
   .home-redesign .final-cta { align-items: flex-start; flex-direction: column; }
   .footer-links { width: 100%; grid-template-columns: 1fr 1fr; gap: 28px; }
+}
+
+@media (max-width: 380px) {
+  .site-header { padding-inline: 10px; gap: 8px; }
+  .site-header .wordmark { font-size: 15px; }
+  .header-actions { gap: 4px; }
+  .header-login,
+  .header-cta { padding-inline: 8px; font-size: 11px; }
 }
 
 /* Account, onboarding and consent */

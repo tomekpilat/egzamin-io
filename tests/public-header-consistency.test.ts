@@ -53,5 +53,7 @@ describe("shared public site header", () => {
   it("uses one desktop and mobile header height", () => {
     expect(styles).toMatch(/\.site-header\s*\{[^}]*height:\s*70px;/s);
     expect(styles).toMatch(/@media \(max-width:\s*680px\)[\s\S]*?\.site-header\s*\{\s*height:\s*64px;/);
+    expect(styles).toContain(".header-login { min-height: 36px; padding: 7px 10px; display: inline-flex;");
+    expect(styles).not.toMatch(/@media \(max-width:\s*680px\)[\s\S]*?\.header-login\s*\{\s*display:\s*none;/);
   });
 });
