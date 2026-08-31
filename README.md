@@ -27,7 +27,7 @@ Strona będzie dostępna pod adresem `http://localhost:3000`.
 
 ## Docker
 
-Obraz produkcyjny korzysta z wieloetapowego buildu i uruchamia wyłącznie serwer standalone na porcie `3000`.
+Obraz produkcyjny korzysta z wieloetapowego buildu i uruchamia odchudzony serwer Vinext na porcie `3000`. W Dockerze pomijamy generator `standalone`, ponieważ duplikuje on obszerną bibliotekę plików CKE z `dist/client` do drugiego katalogu i niepotrzebnie obciąża małe hosty podczas wdrożenia.
 
 ```bash
 docker build -t egzaminio .

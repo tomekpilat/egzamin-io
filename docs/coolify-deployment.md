@@ -89,7 +89,7 @@ Jeżeli konfigurujesz health check także w panelu Coolify, użyj:
 
 ## 5. Deploy
 
-Kliknij **Deploy**. Pierwszy build wykona kolejno instalację zależności, kompilację produkcyjną i utworzenie małego obrazu zawierającego tylko serwer standalone.
+Kliknij **Deploy**. Pierwszy build wykona kolejno instalację zależności, kompilację produkcyjną i utworzenie obrazu zawierającego serwer Vinext oraz jeden egzemplarz biblioteki zasobów CKE. Konfiguracja Docker celowo pomija generator `standalone`, który wcześniej kopiował cały katalog `public` drugi raz i mógł zatrzymać wdrożenie przy wysokim użyciu CPU lub dysku już po zakończeniu kompilacji.
 
 Po wdrożeniu sprawdź:
 

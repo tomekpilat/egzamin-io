@@ -13,6 +13,7 @@ COPY --from=dependencies /app/node_modules ./node_modules
 COPY . .
 
 ENV NODE_ENV=production
+ENV EGZAMINIO_DOCKER_BUILD=1
 
 RUN npm run build
 
@@ -29,7 +30,9 @@ ENV NODE_ENV=production \
     HOST=0.0.0.0 \
     VINEXT_TRUST_PROXY=1
 
-COPY --from=builder --chown=node:node /app/dist/standalone ./
+COPY --from=builder --chown=node:node /app/dist ./dist
+COPY --from=builder --chown=node:node /app/server.mjs ./server.mjs
+COPY --from=builder --chown=node:node /app/package.json ./package.json
 COPY --from=production-dependencies --chown=node:node /app/node_modules ./node_modules
 
 USER node
@@ -41,4 +44,4 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
 
 STOPSIGNAL SIGTERM
 
-CMD ["node", "server.js"]
+CMD ["node", "server.mjs"]

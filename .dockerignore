@@ -1,8 +1,14 @@
 .git
 .gitignore
+.dist-stale-*
+.vinext
 .wrangler
+coverage
+content/cke/sources
 dist
 node_modules
+tmp
+tsconfig.tsbuildinfo
 npm-debug.log*
 .DS_Store
 .env
