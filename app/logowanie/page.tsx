@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
 
 import { useSearchParams } from "next/navigation";
 import { FormEvent, useEffect, useState } from "react";
@@ -170,6 +171,7 @@ export default function LoginPage() {
                 <Label htmlFor="auth-password">Hasło<Input id="auth-password" type="password" value={password} onChange={(event) => setPassword(event.target.value)} minLength={8} maxLength={128} autoComplete={mode === "signup" ? "new-password" : "current-password"} placeholder={mode === "signup" ? "Minimum 8 znaków" : "Twoje hasło"} required /></Label>
                 {mode === "signup" && <Label htmlFor="auth-password-confirmation" className={passwordMismatch ? "auth-field-invalid" : ""}>Powtórz hasło<Input id="auth-password-confirmation" type="password" value={passwordConfirmation} onChange={(event) => setPasswordConfirmation(event.target.value)} minLength={8} maxLength={128} autoComplete="new-password" placeholder="Wpisz to samo hasło" aria-invalid={passwordMismatch} aria-describedby={passwordMismatch ? "auth-password-confirmation-error" : undefined} required />{passwordMismatch && <small id="auth-password-confirmation-error" className="auth-field-error">Hasła nie są takie same.</small>}</Label>}
               </div>
+              {mode === "login" && <a className="auth-forgot-password" href="/odzyskaj-haslo">Nie pamiętasz hasła?</a>}
               {mode === "signup" && role === "student" && <Label htmlFor="guardian-email">E-mail rodzica lub opiekuna<Input id="guardian-email" type="email" value={guardianEmail} onChange={(event) => setGuardianEmail(event.target.value)} maxLength={254} autoComplete="email" placeholder="np. anna.n@example.com" required /><small className="guardian-help">Wyślemy tam prośbę o zgodę. Bez niej nie odblokujemy zadań ani tutora AI.</small></Label>}
               {mode === "signup" && <div className="check-row"><Checkbox id="accepted-terms" checked={acceptedTerms} onCheckedChange={(checked) => setAcceptedTerms(checked === true)} /><label htmlFor="accepted-terms">Akceptuję <a href="/regulamin" target="_blank">regulamin</a> i <a href="/polityka-prywatnosci" target="_blank">politykę prywatności</a>.</label></div>}
               {notice && <Alert variant={notice.type === "error" ? "destructive" : "success"} className={`auth-notice ${notice.type}`}><AlertDescription role="status" aria-live="polite">{notice.message}</AlertDescription></Alert>}

@@ -33,6 +33,18 @@ W **Authentication → Providers → Email** pozostaw włączony provider e-mail
 
 Domyślna wysyłka Supabase służy tylko do testów i ma niskie limity.
 
+### Polski e-mail do odzyskiwania hasła
+
+W **Authentication → Email Templates → Reset password** ustaw:
+
+```text
+Subject: Ustaw nowe hasło do egzaminio
+```
+
+Jako treść wklej zawartość pliku [`docs/supabase-email-templates/reset-password.html`](supabase-email-templates/reset-password.html). Szablon używa oficjalnej zmiennej Supabase `{{ .ConfirmationURL }}` i nie wymaga wpisywania adresu projektu na stałe.
+
+W **Authentication → SMTP Settings** ustaw nazwę nadawcy `egzaminio` oraz adres z własnej domeny, na przykład `powiadomienia@egzamin.io`. Po zapisaniu wyślij wiadomość testową i sprawdź Gmail, Outlook oraz folder spam.
+
 ## 3. Adresy aplikacji
 
 W **Authentication → URL Configuration** ustaw:
@@ -47,9 +59,11 @@ Dodaj do Redirect URLs:
 https://egzamin.io/panel
 https://egzamin.io/wybierz-role
 https://egzamin.io/oczekuje-na-zgode
+https://egzamin.io/ustaw-nowe-haslo
 http://localhost:3000/panel
 http://localhost:3000/wybierz-role
 http://localhost:3000/oczekuje-na-zgode
+http://localhost:3000/ustaw-nowe-haslo
 ```
 
 Jeśli używasz `www`, dodaj analogiczne adresy z `https://www.egzamin.io`.
@@ -112,14 +126,16 @@ Sprawdź kolejno:
 
 1. rejestrację e-mail i link potwierdzający,
 2. logowanie istniejącym hasłem,
-3. Google i powrót na `/wybierz-role`,
-4. Facebook na koncie testera Meta,
-5. wybór każdej roli i właściwy panel,
-6. brak możliwości ustawienia `admin` przez żądanie z przeglądarki,
-7. wylogowanie i wygaśnięcie sesji.
-8. zapis `terms_accepted_at`, `privacy_acknowledged_at` i `legal_version` po rejestracji e-mail oraz onboardingu OAuth.
-9. blokadę konta ucznia do czasu zatwierdzenia przez konto rodzica o zgodnym adresie e-mail.
-10. brak dostępu nieweryfikowanego nauczyciela do funkcji grup i wyników uczniów.
+3. wysłanie linku na `/odzyskaj-haslo`, powrót na `/ustaw-nowe-haslo` i zapis nowego hasła,
+4. ponowne wysłanie linku oraz neutralny komunikat dla adresu bez konta,
+5. Google i powrót na `/wybierz-role`,
+6. Facebook na koncie testera Meta,
+7. wybór każdej roli i właściwy panel,
+8. brak możliwości ustawienia `admin` przez żądanie z przeglądarki,
+9. wylogowanie i wygaśnięcie sesji,
+10. zapis `terms_accepted_at`, `privacy_acknowledged_at` i `legal_version` po rejestracji e-mail oraz onboardingu OAuth,
+11. blokadę konta ucznia do czasu zatwierdzenia przez konto rodzica o zgodnym adresie e-mail,
+12. brak dostępu nieweryfikowanego nauczyciela do funkcji grup i wyników uczniów.
 
 ## Ważne przed publicznym MVP
 

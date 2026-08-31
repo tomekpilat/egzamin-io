@@ -14,3 +14,18 @@ export function validateSignupConfirmation(
 
   return null;
 }
+
+export function validatePasswordReset(
+  password: string,
+  passwordConfirmation: string,
+) {
+  if (password.length < 8) {
+    return "Hasło musi mieć co najmniej 8 znaków.";
+  }
+
+  if (password !== passwordConfirmation) {
+    return "Podane hasła nie są identyczne.";
+  }
+
+  return null;
+}

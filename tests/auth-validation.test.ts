@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { validateSignupConfirmation } from "@/lib/auth-validation";
+import { validatePasswordReset, validateSignupConfirmation } from "@/lib/auth-validation";
 
 describe("signup confirmation", () => {
   it("accepts matching emails regardless of case and surrounding spaces", () => {
@@ -34,5 +34,16 @@ describe("signup confirmation", () => {
         "haslo-123",
       ),
     ).toBe("Podane hasła nie są identyczne.");
+  });
+});
+
+describe("password reset validation", () => {
+  it("accepts matching passwords with at least eight characters", () => {
+    expect(validatePasswordReset("NoweHaslo-123", "NoweHaslo-123")).toBeNull();
+  });
+
+  it("rejects short and mismatched passwords", () => {
+    expect(validatePasswordReset("krotkie", "krotkie")).toBe("Hasło musi mieć co najmniej 8 znaków.");
+    expect(validatePasswordReset("NoweHaslo-123", "InneHaslo-123")).toBe("Podane hasła nie są identyczne.");
   });
 });
