@@ -939,10 +939,24 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
 .practice-launch-card [data-slot="card-content"] { display: grid; gap: 20px; }
 .practice-launch-filters { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .practice-launch-filters label { color: var(--muted-copy); font-size: 13px; }
+.practice-material-breakdown { padding: 16px 0; display: grid; gap: 12px; border-top: 1px solid var(--subtle-line); border-bottom: 1px solid var(--subtle-line); }
+.practice-material-breakdown > header { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+.practice-material-breakdown > header > b { font-size: 14px; }
+.practice-material-breakdown > header > span { color: var(--muted-copy); font-size: 12px; }
+.practice-material-breakdown > div { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.practice-material-breakdown button { min-width: 0; padding: 12px; display: flex; align-items: center; gap: 10px; color: var(--foreground); text-align: left; background: transparent; border: 1px solid var(--subtle-line); border-radius: 10px; cursor: pointer; }
+.practice-material-breakdown button:hover { border-color: color-mix(in srgb, var(--brand-blue) 45%, var(--subtle-line)); }
+.practice-material-breakdown button[aria-pressed="true"] { background: color-mix(in srgb, var(--brand-blue) 7%, transparent); border-color: color-mix(in srgb, var(--brand-blue) 55%, var(--subtle-line)); }
+.practice-material-icon { width: 30px; height: 30px; flex: 0 0 auto; }
+.practice-material-breakdown button > span { min-width: 0; display: grid; gap: 2px; }
+.practice-material-breakdown button b { overflow: hidden; font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
+.practice-material-breakdown button small { color: var(--muted-copy); font-size: 11px; }
 .practice-launch-summary { padding-top: 18px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid var(--subtle-line); }
 .practice-launch-summary > div { display: flex; align-items: baseline; gap: 8px; }
 .practice-launch-summary b { font-family: var(--font-source-serif), Georgia, serif; font-size: 30px; }
 .practice-launch-summary span { color: var(--muted-copy); font-size: 13px; }
+.practice-launch-summary > .practice-launch-button { width: fit-content; justify-content: center; gap: 8px; }
+.practice-launch-button svg { width: 16px; height: 16px; flex: 0 0 auto; }
 .practice-demo-note { color: var(--quiet-copy); font-size: 12px; }
 .practice-subject-progress,
 .practice-paper-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
@@ -1373,6 +1387,8 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
   .parent-topic-grid { grid-template-columns: 1fr; }
   .parent-subject-progress > div:last-child { grid-template-columns: 1fr; }
   .practice-launch-filters { grid-template-columns: 1fr; }
+  .practice-material-breakdown > header { display: grid; gap: 3px; }
+  .practice-material-breakdown > div { grid-template-columns: 1fr; }
   .student-resume-grid { grid-template-columns: 1fr; }
   .student-progress-layout { grid-template-columns: 1fr; }
   .parent-progress-toolbar { align-items: stretch; flex-direction: column; }

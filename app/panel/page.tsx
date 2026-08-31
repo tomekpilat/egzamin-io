@@ -10,7 +10,7 @@ import { FeedbackDialog } from "@/components/feedback-dialog";
 import { ParentPayments } from "@/components/parent-payments";
 import { AdminPromoCodes } from "@/components/admin-promo-codes";
 import { ParentProgress } from "@/components/parent-progress";
-import { StudentPractice, type StudentView } from "@/components/student-practice";
+import { StudentPractice, type PracticeSelection, type StudentView } from "@/components/student-practice";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -286,6 +286,7 @@ export default function DashboardPage() {
   const [linkedChildren, setLinkedChildren] = useState<LinkedChild[]>([]);
   const [parentView, setParentView] = useState<ParentView>("start");
   const [studentView, setStudentView] = useState<StudentView>("start");
+  const [studentPracticeSelection, setStudentPracticeSelection] = useState<PracticeSelection | null>(null);
   const [guardianActionBusy, setGuardianActionBusy] = useState("");
   const [actionError, setActionError] = useState("");
   const [actionMessage, setActionMessage] = useState("");
@@ -526,7 +527,7 @@ export default function DashboardPage() {
       : `${profile.role}:start`;
 
   if (focusMode) {
-    return <main className="task-route-shell"><StudentPractice activeView="exercises" onNavigate={setStudentView} hasPlusAccess={studentHasPlus} /></main>;
+    return <main className="task-route-shell"><StudentPractice activeView="exercises" onNavigate={setStudentView} hasPlusAccess={studentHasPlus} selection={studentPracticeSelection} onSelectionChange={setStudentPracticeSelection} /></main>;
   }
 
   return (
@@ -592,7 +593,7 @@ export default function DashboardPage() {
           <div><span>{roleLabels[profile.role]}</span><h1>Cześć, {firstName}!</h1></div>
         </header>}
         <div className={focusMode ? "dashboard-content dashboard-focus-content" : "dashboard-content"}>
-          {profile.role === "student" && <StudentPractice activeView={studentView} onNavigate={setStudentView} hasPlusAccess={studentHasPlus} />}
+          {profile.role === "student" && <StudentPractice activeView={studentView} onNavigate={setStudentView} hasPlusAccess={studentHasPlus} selection={studentPracticeSelection} onSelectionChange={setStudentPracticeSelection} />}
           {actionError && profile.role === "parent" && <Alert variant="destructive" className="dashboard-alert"><AlertDescription>{actionError}</AlertDescription></Alert>}
           {actionMessage && profile.role === "parent" && <Alert variant="success" className="dashboard-alert"><AlertDescription>{actionMessage}</AlertDescription></Alert>}
           {profile.role === "parent" && <ParentPanel activeView={parentView} parentEmail={profile.email} requests={guardianRequests} linkedChildren={linkedChildren} actionBusy={guardianActionBusy} onNavigate={setParentView} onApprove={(id) => void decideGuardianRequest(id, "approve")} onReject={(id) => void decideGuardianRequest(id, "reject")} onSavePreferences={(studentId, weeklyGoal) => void saveGuardianPreferences(studentId, weeklyGoal)} />}

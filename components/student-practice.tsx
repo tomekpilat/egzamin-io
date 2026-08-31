@@ -18,11 +18,17 @@ import { CkeQuestionContent, type CkeContentBlock, type CkeQuestionAsset } from 
 import { FREE_PRACTICE_QUESTIONS_PER_DAY } from "@/lib/plans";
 import { PromoCodeRedemption } from "@/components/promo-code-redemption";
 import { PracticeQuestionPrompt } from "@/components/practice-question-prompt";
+import { ArrowRight } from "lucide-react";
 
 export type StudentView = "start" | "exercises" | "progress" | "settings";
 type Subject = SubjectKey;
-type SubjectFilter = "all" | Subject;
+export type SubjectFilter = "all" | Subject;
 export type MaterialFilter = "demo" | "all-cke" | `year:${number}`;
+export type PracticeSelection = {
+  subject: SubjectFilter;
+  material: MaterialFilter;
+  paperId: string;
+};
 type ExamSession = "main" | "additional";
 type QuestionType = "single_choice" | "multiple_choice" | "numeric" | "short_text" | "long_text";
 type GradingStatus = "auto" | "awaiting_self_assessment" | "self_assessed";
@@ -325,13 +331,26 @@ function useQuestionTimer(questionId: string | null, running: boolean) {
   return `${minutes}:${seconds}`;
 }
 
-export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }: { activeView: StudentView; onNavigate: (view: StudentView) => void; hasPlusAccess?: boolean }) {
+export function StudentPractice({
+  activeView,
+  onNavigate,
+  hasPlusAccess = true,
+  selection,
+  onSelectionChange,
+}: {
+  activeView: StudentView;
+  onNavigate: (view: StudentView) => void;
+  hasPlusAccess?: boolean;
+  selection?: PracticeSelection | null;
+  onSelectionChange?: (selection: PracticeSelection) => void;
+}) {
+  const initialSelection = useRef(selection);
   const [questions, setQuestions] = useState<PracticeQuestion[]>([]);
   const [paperProgress, setPaperProgress] = useState<PaperProgress[]>([]);
   const [paperYearFilter, setPaperYearFilter] = useState<number | null>(null);
-  const [subject, setSubject] = useState<SubjectFilter>("all");
-  const [material, setMaterial] = useState<MaterialFilter>("demo");
-  const [paperId, setPaperId] = useState("all");
+  const [subject, setSubject] = useState<SubjectFilter>(selection?.subject ?? "all");
+  const [material, setMaterial] = useState<MaterialFilter>(selection?.material ?? "demo");
+  const [paperId, setPaperId] = useState(selection?.paperId ?? "all");
   const [questionIndex, setQuestionIndex] = useState(0);
   const [draftAnswer, setDraftAnswer] = useState<{ questionId: string; index: number } | null>(null);
   const [draftMultiple, setDraftMultiple] = useState<{ questionId: string; indices: number[] } | null>(null);
@@ -364,7 +383,21 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
           setPaperProgress(progress);
           setPaperProgressError(hasPlusAccess && !progressResult ? "Nie udało się pobrać wyników arkuszy. Zadania nadal są dostępne — spróbuj odświeżyć panel za chwilę." : "");
           setAccess(nextAccess);
-          setMaterial(defaultMaterialFilter(loaded));
+          const restoredSelection = initialSelection.current;
+          const canRestoreSelection = restoredSelection
+            ? filterPracticeQuestions(loaded, restoredSelection.subject, restoredSelection.material, restoredSelection.paperId).length > 0
+            : false;
+          if (restoredSelection && canRestoreSelection) {
+            setSubject(restoredSelection.subject);
+            setMaterial(restoredSelection.material);
+            setPaperId(restoredSelection.paperId);
+          } else {
+            const nextMaterial = defaultMaterialFilter(loaded);
+            setSubject("all");
+            setMaterial(nextMaterial);
+            setPaperId("all");
+            onSelectionChange?.({ subject: "all", material: nextMaterial, paperId: "all" });
+          }
         }
       })
       .catch(() => {
@@ -376,7 +409,7 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
     return () => {
       active = false;
     };
-  }, [hasPlusAccess]);
+  }, [hasPlusAccess, onSelectionChange]);
 
   const examYears = useMemo(
     () => Array.from(new Set(questions.flatMap((question) => question.source_type === "cke" && question.exam_year ? [question.exam_year] : []))).sort((a, b) => b - a),
@@ -419,12 +452,18 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
       const current = byPaper.get(question.exam_paper_id);
       byPaper.set(question.exam_paper_id, {
         id: question.exam_paper_id,
-        label: `${question.exam_year} · ${question.exam_session ? sessionLabels[question.exam_session] : "CKE"}${question.exam_variant && question.exam_variant !== "standard" ? ` · ${question.exam_variant}` : ""}`,
+        label: `${subjectLabels[question.subject]} · ${question.exam_year} · ${question.exam_session ? sessionLabels[question.exam_session] : "CKE"}${question.exam_variant && question.exam_variant !== "standard" ? ` · ${question.exam_variant}` : ""}`,
         count: (current?.count ?? 0) + 1,
       });
     });
     return Array.from(byPaper.values());
   }, [questions, subject, material]);
+  const materialBreakdown = useMemo(() => SUBJECT_KEYS.flatMap((subjectKey) => {
+    const subjectQuestions = filterPracticeQuestions(questions, subjectKey, material);
+    if (!subjectQuestions.length) return [];
+    const paperCount = new Set(subjectQuestions.flatMap((question) => question.exam_paper_id ? [question.exam_paper_id] : [])).size;
+    return [{ subject: subjectKey, questionCount: subjectQuestions.length, paperCount }];
+  }), [material, questions]);
   const filteredQuestions = useMemo(
     () => filterPracticeQuestions(questions, subject, material, paperId),
     [questions, subject, material, paperId],
@@ -433,6 +472,7 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
   const questionTime = useQuestionTimer(currentQuestion?.question_id ?? null, activeView === "exercises");
   const answeredCount = questions.filter((question) => question.selected_response !== null || question.selected_answer !== null).length;
   const correctCount = questions.filter((question) => question.is_correct).length;
+  const correctAnswerPercentage = answeredCount ? Math.round((correctCount / answeredCount) * 100) : 0;
   const earnedPoints = questions.reduce((sum, question) => sum + (question.points_awarded ?? (question.is_correct ? 1 : 0)), 0);
   const availablePoints = questions.reduce((sum, question) => sum + ((question.selected_response !== null || question.selected_answer !== null) ? (question.max_points ?? question.scoring.max_points ?? 1) : 0), 0);
   const score = availablePoints ? Math.round((earnedPoints / availablePoints) * 100) : 0;
@@ -527,6 +567,7 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
     if (nextSubject === subject || !confirmDraftDiscard()) return;
     setSubject(nextSubject);
     setPaperId("all");
+    onSelectionChange?.({ subject: nextSubject, material, paperId: "all" });
     setQuestionIndex(0);
     clearDrafts();
     setSubmittedAnswer(null);
@@ -538,7 +579,9 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
     const nextQuestions = filterPracticeQuestions(questions, "all", nextMaterial);
     setMaterial(nextMaterial);
     setPaperId("all");
-    if (subject !== "all" && !nextQuestions.some((question) => question.subject === subject)) setSubject("all");
+    const nextSubject = subject !== "all" && !nextQuestions.some((question) => question.subject === subject) ? "all" : subject;
+    if (nextSubject !== subject) setSubject(nextSubject);
+    onSelectionChange?.({ subject: nextSubject, material: nextMaterial, paperId: "all" });
     setQuestionIndex(0);
     clearDrafts();
     setSubmittedAnswer(null);
@@ -555,6 +598,9 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
       }
       setMaterial(selection.material);
       setSubject(selection.subject);
+      onSelectionChange?.({ subject: selection.subject, material: selection.material, paperId: nextPaperId });
+    } else {
+      onSelectionChange?.({ subject, material, paperId: "all" });
     }
     setPaperId(nextPaperId);
     setQuestionIndex(0);
@@ -570,6 +616,7 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
     }
     setQuestionIndex(0);
     setError("");
+    onSelectionChange?.({ subject, material, paperId });
     trackAnalyticsEvent("practice_started");
     onNavigate("exercises");
   }
@@ -590,6 +637,7 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
     setMaterial(selection.material);
     setSubject(selection.subject);
     setPaperId(selection.paperId);
+    onSelectionChange?.({ subject: selection.subject, material: selection.material, paperId: selection.paperId });
     setQuestionIndex(preferredIndex >= 0 ? preferredIndex : 0);
     clearDrafts();
     setSubmittedAnswer(null);
@@ -723,7 +771,7 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
             <CardHeader><CardDescription>{answeredCount ? `Ostatnio: ${material === "demo" ? "zestaw demonstracyjny" : material.replace("year:", "CKE ")}` : "Pierwsza sesja"}</CardDescription><CardTitle>{answeredCount ? "Wróć do nauki" : "Zacznij od jednego zadania"}</CardTitle></CardHeader>
             <CardContent><p>{filteredQuestions.length ? `${filteredQuestions.length} zadań w wybranym materiale. Wszystkie arkusze są dostępne bezpłatnie${practiceRemaining === null ? "." : `, a dziś możesz interaktywnie sprawdzić jeszcze ${practiceRemaining} odpowiedzi.`}` : "Wybierz dostępny materiał poniżej, aby rozpocząć."}</p><div><Button type="button" onClick={startPractice} disabled={!filteredQuestions.length}>Otwórz arkusz</Button><Button variant="outline" type="button" onClick={() => onNavigate("progress")}>{progressEnabled ? "Zobacz wyniki" : "Śledzenie postępów w Plus"}</Button></div></CardContent>
           </Card>
-          <Card className="student-summary-card"><CardContent><div><span>Rozwiązane zadania</span><b>{answeredCount}</b></div><div><span>Poprawne odpowiedzi</span><b>{score}%</b></div><div><span>Arkusze CKE</span><strong>{paperProgress.length}</strong><small>Dostępne roczniki i przedmioty</small></div></CardContent></Card>
+          <Card className="student-summary-card"><CardContent><div><span>Rozwiązane zadania</span><b>{answeredCount}</b></div><div><span>Poprawne odpowiedzi</span><b>{correctAnswerPercentage}%</b><small>{correctCount} z {answeredCount} sprawdzonych</small></div><div><span>Dostępne arkusze CKE</span><strong>{paperCatalog.length}</strong><small>{paperCatalogQuestionCount} zadań w {paperProgressYears.length} {paperProgressYears.length === 1 ? "roczniku" : "rocznikach"}</small></div></CardContent></Card>
         </section>
         <Card className="practice-launch-card">
           <CardHeader><div><CardTitle>Wybierz materiał</CardTitle><CardDescription>Dostępne {questions.length} zadań · {questions.length - answeredCount} nierozwiązanych</CardDescription></div></CardHeader>
@@ -749,7 +797,14 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
                 </Select>
               </label>}
             </div>
-            <div className="practice-launch-summary"><div><b>{filteredQuestions.length}</b><span>{filteredQuestions.length === 1 ? "dostępne pytanie" : "dostępnych pytań"}{practiceRemaining !== null ? ` · ${practiceRemaining} z 15 sprawdzeń zostało dziś` : " · bez limitu w Plus"}</span></div><Button type="button" size="lg" onClick={startPractice} disabled={!filteredQuestions.length}>Otwórz arkusz <span>→</span></Button></div>
+            {materialBreakdown.length > 0 && <section className="practice-material-breakdown" aria-label="Rozbicie wybranego materiału">
+              <header><b>Arkusze według przedmiotu</b><span>Wybierz przedmiot, aby zobaczyć tylko właściwe zadania.</span></header>
+              <div>{materialBreakdown.map((item) => <button key={item.subject} type="button" aria-pressed={subject === item.subject} onClick={() => selectSubject(item.subject)}>
+                <SubjectIcon subject={item.subject} className="practice-material-icon" />
+                <span><b>{subjectLabels[item.subject]}</b><small>{item.paperCount ? paperCountLabel(item.paperCount) : "Zestaw demo"} · {item.questionCount} {item.questionCount === 1 ? "pytanie" : "pytań"}</small></span>
+              </button>)}</div>
+            </section>}
+            <div className="practice-launch-summary"><div><b>{filteredQuestions.length}</b><span>{filteredQuestions.length === 1 ? "dostępne pytanie" : "dostępnych pytań"}{practiceRemaining !== null ? ` · ${practiceRemaining} z 15 sprawdzeń zostało dziś` : " · bez limitu w Plus"}</span></div><Button className="practice-launch-button" type="button" size="lg" onClick={startPractice} disabled={!filteredQuestions.length}>Otwórz arkusz <ArrowRight aria-hidden="true" /></Button></div>
             {material === "demo" && <p className="practice-demo-note">To autorski zestaw demonstracyjny egzaminio — nie jest oficjalnym arkuszem CKE.</p>}
           </CardContent>
         </Card>

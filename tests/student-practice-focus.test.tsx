@@ -6,6 +6,7 @@ import {
   countResponseWords,
   hasUnsavedPracticeAnswer,
   StudentPractice,
+  type PracticeSelection,
   type StudentView,
   UNSAVED_ANSWER_MESSAGE,
 } from "@/components/student-practice";
@@ -15,6 +16,18 @@ const { rpc } = vi.hoisted(() => ({ rpc: vi.fn() }));
 function StudentPracticeHarness({ initialView }: { initialView: StudentView }) {
   const [view, setView] = useState<StudentView>(initialView);
   return <StudentPractice activeView={view} onNavigate={setView} />;
+}
+
+function RemountingStudentPracticeHarness() {
+  const [view, setView] = useState<StudentView>("start");
+  const [selection, setSelection] = useState<PracticeSelection | null>(null);
+  return <StudentPractice
+    key={view === "exercises" ? "focus" : "panel"}
+    activeView={view}
+    onNavigate={setView}
+    selection={selection}
+    onSelectionChange={setSelection}
+  />;
 }
 
 vi.mock("@/lib/supabase-browser", () => ({
@@ -254,6 +267,82 @@ describe("StudentPractice focus mode", () => {
     expect(screen.queryByRole("heading", { name: "English task that must not open" })).not.toBeInTheDocument();
   });
 
+  it("preserves a subject chosen from the material breakdown when focus mode remounts", async () => {
+    const mathematics = {
+      ...questions[0],
+      question_id: "cke-2026-mat-remount",
+      source_type: "cke",
+      source_label: "Wariant standardowy",
+      exam_paper_id: "cke-2026-main-mathematics-100-x",
+      exam_year: 2026,
+      exam_session: "main",
+      exam_variant: "100-X",
+      source_document_id: "OMAP-100-X-2605",
+      paper_question_number: 1,
+      subject: "mathematics",
+      prompt: "Właściwe zadanie z matematyki",
+    };
+    const english = {
+      ...mathematics,
+      question_id: "cke-2026-eng-remount",
+      exam_paper_id: "cke-2026-main-english-100-x",
+      source_document_id: "OJAP-100-X-2605",
+      subject: "english",
+      prompt: "Niewłaściwe zadanie z angielskiego",
+    };
+    prepareRpc([english, mathematics]);
+    const user = userEvent.setup();
+    render(<RemountingStudentPracticeHarness />);
+
+    const breakdown = await screen.findByLabelText("Rozbicie wybranego materiału");
+    await user.click(within(breakdown).getByRole("button", { name: /Matematyka/ }));
+    const launchCard = breakdown.closest('[data-slot="card"]');
+    expect(launchCard).not.toBeNull();
+    await user.click(within(launchCard as HTMLElement).getByRole("button", { name: "Otwórz arkusz" }));
+
+    expect(await screen.findByRole("heading", { name: "Właściwe zadanie z matematyki" })).toBeInTheDocument();
+    expect(screen.getByRole("combobox", { name: "Wybierz przedmiot" })).toHaveTextContent("Matematyka");
+    expect(screen.queryByRole("heading", { name: "Niewłaściwe zadanie z angielskiego" })).not.toBeInTheDocument();
+  });
+
+  it("counts available CKE papers from the question catalog even without progress rows", async () => {
+    const firstPaper = {
+      ...questions[0],
+      question_id: "cke-summary-mat",
+      source_type: "cke",
+      source_label: "Wariant standardowy",
+      exam_paper_id: "cke-2026-main-mathematics-100-x",
+      exam_year: 2026,
+      exam_session: "main",
+      exam_variant: "100-X",
+      source_document_id: "OMAP-100-X-2605",
+      paper_question_number: 1,
+      selected_answer: 1,
+      selected_response: { index: 1 },
+      is_correct: true,
+    };
+    const secondPaper = {
+      ...firstPaper,
+      question_id: "cke-summary-pol",
+      exam_paper_id: "cke-2025-main-polish-100-x",
+      exam_year: 2025,
+      source_document_id: "OPOP-100-X-2505",
+      subject: "polish",
+      selected_answer: 0,
+      selected_response: { index: 0 },
+      is_correct: false,
+    };
+    prepareRpc([firstPaper, secondPaper], []);
+    render(<StudentPractice activeView="start" onNavigate={() => undefined} />);
+
+    const summaryLabel = await screen.findByText("Dostępne arkusze CKE", { selector: ".student-summary-card span" });
+    expect(summaryLabel.nextElementSibling).toHaveTextContent("2");
+    expect(summaryLabel.parentElement).toHaveTextContent("2 zadań w 2 rocznikach");
+    const accuracyLabel = screen.getByText("Poprawne odpowiedzi", { selector: ".student-summary-card span" });
+    expect(accuracyLabel.nextElementSibling).toHaveTextContent("50%");
+    expect(accuracyLabel.parentElement).toHaveTextContent("1 z 2 sprawdzonych");
+  });
+
   it("keeps questions available when only paper progress fails to load", async () => {
     prepareRpc(questions, [], undefined, { active_plan: "plus", practice_used_today: 0, practice_daily_limit: null, progress_enabled: true, ai_enabled: true }, { message: "missing progress function" });
     const { rerender } = render(<StudentPractice activeView="start" onNavigate={() => undefined} />);
@@ -408,7 +497,9 @@ describe("StudentPractice focus mode", () => {
 
     expect(await screen.findByRole("combobox", { name: "Rocznik" })).toHaveTextContent("CKE 2025");
     expect(screen.getByText("1", { selector: ".practice-launch-summary b" })).toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Otwórz arkusz →" }));
+    const launchCard = screen.getByText("Wybierz materiał", { selector: '[data-slot="card-title"]' }).closest('[data-slot="card"]');
+    expect(launchCard).not.toBeNull();
+    await user.click(within(launchCard as HTMLElement).getByRole("button", { name: "Otwórz arkusz" }));
     expect(await screen.findByRole("heading", { name: "Pytanie z 2025 roku" })).toBeInTheDocument();
     expect(screen.getByText(/CKE 2025 · termin główny · zadanie 1/)).toBeInTheDocument();
   });

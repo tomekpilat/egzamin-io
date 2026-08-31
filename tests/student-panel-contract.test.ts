@@ -21,7 +21,7 @@ describe("student panel navigation", () => {
     expect(practice).toContain('activeView === "exercises"');
     expect(practice).toContain('activeView === "progress"');
     expect(practice).toContain('activeView === "settings"');
-    expect(panel).toContain('<StudentPractice activeView={studentView} onNavigate={setStudentView} hasPlusAccess={studentHasPlus} />');
+    expect(panel).toContain('<StudentPractice activeView={studentView} onNavigate={setStudentView} hasPlusAccess={studentHasPlus} selection={studentPracticeSelection} onSelectionChange={setStudentPracticeSelection} />');
   });
 
   it("loads questions and saves answers through authenticated database functions", () => {
@@ -52,7 +52,8 @@ describe("student panel navigation", () => {
     expect(panel).toContain('const focusMode = profile.role === "student" && studentView === "exercises"');
     expect(panel).toContain('if (focusMode)');
     expect(panel).toContain('className="task-route-shell"');
-    expect(panel).toContain('<StudentPractice activeView="exercises" onNavigate={setStudentView} hasPlusAccess={studentHasPlus} />');
+    expect(panel).toContain('<StudentPractice activeView="exercises" onNavigate={setStudentView} hasPlusAccess={studentHasPlus} selection={studentPracticeSelection} onSelectionChange={setStudentPracticeSelection} />');
+    expect(panel).toContain('useState<PracticeSelection | null>(null)');
     expect(styles).toContain(".task-route-shell { position: fixed;");
     expect(styles).toContain("width: 100vw; max-width: none; height: 100dvh;");
     expect(panel).toContain('!focusMode && profile.role !== "student" && <aside');
