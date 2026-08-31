@@ -39,7 +39,7 @@ export function SeoHeader() {
 
 export function SeoFooter() {
   return (
-    <footer className="knowledge-footer"><a href="/"><BrandLogo /></a><div><a href="/baza-wiedzy">Baza wiedzy</a><a href="/polityka-prywatnosci">Polityka prywatności</a><a href="mailto:kontakt@egzamin.io">Kontakt</a></div><small>© 2026 egzaminio · Niezależny projekt edukacyjny, niepowiązany z CKE.</small></footer>
+    <footer className="knowledge-footer"><a href="/"><BrandLogo /></a><div><a href="/baza-wiedzy">Baza wiedzy</a><a href="/polityka-prywatnosci">Polityka prywatności</a><a href="mailto:kontakt@egzaminio.io">Kontakt</a></div><small>© 2026 egzaminio · Tomasz Piłat · Niezależny projekt edukacyjny, niepowiązany z CKE.</small></footer>
   );
 }
 

@@ -44,7 +44,7 @@ export function LegalShell({ title, description, currentPath, children, kicker =
       </div>
       <footer className="legal-footer">
         <BrandLogo />
-        <div><a href="/informacje-prawne">Informacje prawne</a><a href="/usun-konto">Usuń konto</a><a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a><span>© 2026 egzaminio</span></div>
+        <div><a href="/informacje-prawne">Informacje prawne</a><a href="/usun-konto">Usuń konto</a><a href="mailto:kontakt@egzaminio.io">kontakt@egzaminio.io</a><span>© 2026 egzaminio · Tomasz Piłat</span></div>
       </footer>
     </main>
   );

@@ -212,7 +212,7 @@ function TeacherPanel({ verificationStatus }: { verificationStatus: Profile["tea
         </div>
         <div className="teacher-stack"><i>CKE</i><i>6 zadań</i><i>Link dla klasy</i></div>
       </section>
-      {!verified && <Alert variant={verificationStatus === "rejected" ? "destructive" : "warning"} className="teacher-verification"><AlertTitle>{verificationStatus === "rejected" ? "Weryfikacja wymaga wyjaśnienia" : "Konto nauczyciela oczekuje na weryfikację"}</AlertTitle><AlertDescription>Możesz przeglądać panel i bibliotekę. Tworzenie grup, zapraszanie uczniów i dostęp do ich wyników są zablokowane do potwierdzenia roli nauczyciela przez administratora. Napisz na kontakt@egzamin.io z adresu szkolnego.</AlertDescription></Alert>}
+      {!verified && <Alert variant={verificationStatus === "rejected" ? "destructive" : "warning"} className="teacher-verification"><AlertTitle>{verificationStatus === "rejected" ? "Weryfikacja wymaga wyjaśnienia" : "Konto nauczyciela oczekuje na weryfikację"}</AlertTitle><AlertDescription>Możesz przeglądać panel i bibliotekę. Tworzenie grup, zapraszanie uczniów i dostęp do ich wyników są zablokowane do potwierdzenia roli nauczyciela przez administratora. Napisz na kontakt@egzaminio.io z adresu szkolnego.</AlertDescription></Alert>}
       <section className="dashboard-grid three-columns" id="postep">
         <article className="metric-card"><span>Moje grupy</span><b>0</b><small>Utwórz grupę lub zaproś klasę.</small></article>
         <article className="metric-card"><span>Aktywne zestawy</span><b>0</b><small>Gotowe zadania pojawią się tutaj.</small></article>
@@ -584,7 +584,7 @@ export default function DashboardPage() {
           <span>Konto rodzica <i aria-hidden="true">/</i> <b>{parentViewLabels[parentView]}</b></span>
           <div className="parent-topbar-actions">
             <button type="button" className="parent-plan-pill" onClick={() => setParentView("payments")}>{parentPlusChildren ? `Pakiet Plus · ${parentPlusChildren} ${parentPlusChildren === 1 ? "dziecko" : "dzieci"}` : `Plan Free · ${linkedChildren.length} ${linkedChildren.length === 1 ? "dziecko" : "dzieci"}`}</button>
-            <a className="parent-help-link" href="mailto:kontakt@egzamin.io"><CircleHelp aria-hidden="true" />Pomoc</a>
+            <a className="parent-help-link" href="mailto:kontakt@egzaminio.io"><CircleHelp aria-hidden="true" />Pomoc</a>
             <AccountMenu displayName={displayName} email={profile.email} triggerClassName="header-account-session" onSettings={openAccountSettings} onSignOut={() => void signOut()} />
           </div>
         </header>}

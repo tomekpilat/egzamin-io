@@ -15,7 +15,7 @@ Sprzedaż jest domyślnie wyłączona przez `PAYMENTS_ENABLED=false`. Nie włąc
 ## 1. Konto, dane sprzedawcy i branding Stripe
 
 1. W Stripe przełącz się najpierw na **Test mode**.
-2. Uzupełnij **Business → Business details**, publiczne dane firmy, adres, stronę `https://egzamin.io`, e-mail `kontakt@egzamin.io` i nazwę widoczną na wyciągu.
+2. Uzupełnij **Business → Business details**, publiczne dane sprzedawcy (Tomasz Piłat), adres, stronę `https://egzamin.io`, e-mail `kontakt@egzaminio.io` i nazwę widoczną na wyciągu.
 3. W **Branding** dodaj logo egzaminio, kolor marki i ikonę.
 4. Uzupełnij dane podatkowe i wypłaty. Jeżeli używasz Stripe Tax, najpierw potwierdź obowiązek rejestracji z księgowym.
 5. Włącz e-maile do klientów o udanych płatnościach i zwrotach. Zrób test rzeczywistego wyglądu wiadomości, nazwy nadawcy, języka oraz danych sprzedawcy.

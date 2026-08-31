@@ -9,7 +9,7 @@ export function SiteFooter() {
       <div className="design-footer-links">
         <div><b>Produkt</b><a href="/#zadania">Jak to działa</a><a href="/#cennik">Cennik</a><a href="/kalkulator-punktow">Kalkulator punktów</a></div>
         <div><b>Dokumenty</b><a href="/regulamin">Regulamin</a><a href="/polityka-prywatnosci">Polityka prywatności</a><a href="/polityka-cookies">Pliki cookie</a><a href="/bezpieczenstwo-dzieci-ai">Dzieci i AI</a></div>
-        <div><b>Kontakt</b><a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a><a href="/odstapienie-od-umowy">Odstąpienie od umowy</a></div>
+        <div><b>Kontakt</b><a href="mailto:kontakt@egzaminio.io">kontakt@egzaminio.io</a><span>Tomasz Piłat</span><a href="/odstapienie-od-umowy">Odstąpienie od umowy</a></div>
       </div>
     </div>
     <div className="design-footer-note"><div className="design-home-container">Zadania pochodzą z arkuszy CKE. Aplikacja nie zastępuje nauczyciela ani korepetytora.</div></div>

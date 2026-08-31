@@ -76,7 +76,7 @@ function PaymentDocuments({ item }: { item: PaymentHistoryItem }) {
   const available = documents.filter(([url]) => Boolean(url));
   const refundable = ["paid", "partially_refunded"].includes(item.payment_status);
   if (!available.length && !refundable) return <span className="payment-no-documents">Dokument pojawi się po zaksięgowaniu płatności.</span>;
-  return <div className="payment-document-links">{available.map(([url, label]) => <a key={label} href={url!} target="_blank" rel="noreferrer"><FileText aria-hidden="true" />{label}<ExternalLink aria-hidden="true" /></a>)}{refundable && <a href={`mailto:kontakt@egzamin.io?subject=${encodeURIComponent(`Prośba o zwrot — ${item.payment_order_id}`)}&body=${encodeURIComponent(`Proszę o sprawdzenie możliwości zwrotu dla zamówienia ${item.payment_order_id}.\n\nPowód (opcjonalnie): `)}`}>Poproś o zwrot</a>}</div>;
+  return <div className="payment-document-links">{available.map(([url, label]) => <a key={label} href={url!} target="_blank" rel="noreferrer"><FileText aria-hidden="true" />{label}<ExternalLink aria-hidden="true" /></a>)}{refundable && <a href={`mailto:kontakt@egzaminio.io?subject=${encodeURIComponent(`Prośba o zwrot — ${item.payment_order_id}`)}&body=${encodeURIComponent(`Proszę o sprawdzenie możliwości zwrotu dla zamówienia ${item.payment_order_id}.\n\nPowód (opcjonalnie): `)}`}>Poproś o zwrot</a>}</div>;
 }
 
 export function ParentPayments({ linkedChildren, onConnect }: { linkedChildren: PaymentChild[]; onConnect: () => void }) {
@@ -214,6 +214,6 @@ export function ParentPayments({ linkedChildren, onConnect }: { linkedChildren: 
       </article>)}</div>}</CardContent>
     </Card>
 
-    <p className="payment-help">Problem z płatnością lub prośba o zwrot? Napisz na <a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a> i podaj adres konta rodzica.</p>
+    <p className="payment-help">Problem z płatnością lub prośba o zwrot? Napisz na <a href="mailto:kontakt@egzaminio.io">kontakt@egzaminio.io</a> i podaj adres konta rodzica.</p>
   </section>;
 }

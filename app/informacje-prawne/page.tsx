@@ -22,7 +22,7 @@ export default function LegalHubPage() {
     <LegalShell currentPath="/informacje-prawne" title="Zasady, które da się zrozumieć" description={`Pakiet dokumentów egzaminio. Ostatnia aktualizacja: ${LEGAL_UPDATED_LABEL}`}>
       <div className="legal-alert legal-alert-critical">
         <b>Wersja przed konsultacją prawną</b>
-        <p>Przed publicznym uruchomieniem trzeba uzupełnić dane operatora, dostawców, regiony przetwarzania i realne okresy retencji, a następnie usunąć blokadę indeksowania tych stron. Techniczny Checkout Stripe pozostaje wyłączony przełącznikiem środowiskowym do czasu zakończenia tej kontroli.</p>
+        <p>Operatorem i administratorem danych jest Tomasz Piłat, a adresem kontaktowym <a href="mailto:kontakt@egzaminio.io">kontakt@egzaminio.io</a>. Przed publicznym uruchomieniem trzeba jeszcze uzupełnić adres i — jeżeli dotyczy — dane rejestrowe, a także potwierdzić dostawców, regiony przetwarzania i realne okresy retencji. Techniczny Checkout Stripe pozostaje wyłączony przełącznikiem środowiskowym do czasu zakończenia tej kontroli.</p>
       </div>
       <div className="legal-cards">
         {documents.map(([href, title, description]) => (
@@ -32,7 +32,7 @@ export default function LegalHubPage() {
       <section className="legal-section">
         <h2>Co trzeba uzupełnić przed publikacją</h2>
         <ul className="legal-checklist">
-          <li>Dane administratora i usługodawcy: nazwa, adres, kraj, NIP/REGON lub dane rejestrowe.</li>
+          <li>Dane administratora i usługodawcy: Tomasz Piłat i kontakt@egzaminio.io są uzupełnione; nadal trzeba dodać adres, kraj oraz — jeżeli dotyczy — NIP, REGON i dane rejestrowe.</li>
           <li>Faktyczny hosting, region Supabase, dostawca modelu AI, e-maili i płatności.</li>
           <li>Umowy powierzenia, podprocesorzy i mechanizmy transferów poza EOG.</li>
           <li>Prawna akceptacja wdrożonego procesu zgody: osobny e-mail, zablokowane konto ucznia i decyzja z zalogowanego konta rodzica.</li>

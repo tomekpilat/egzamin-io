@@ -14,8 +14,8 @@ export default function PrivacyPage() {
   return (
     <LegalShell currentPath="/polityka-prywatnosci" title="Polityka prywatności" description={`Wersja robocza · ostatnia aktualizacja: ${LEGAL_UPDATED_LABEL}`}>
       <div className="legal-alert legal-alert-critical">
-        <b>Uzupełnij przed publicznym uruchomieniem</b>
-        <p>Administratorem będzie: <mark>[NAZWA / IMIĘ I NAZWISKO, ADRES, KRAJ, DANE REJESTROWE]</mark>. Kontakt: <a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a>. Jeżeli administrator jest poza EOG i oferuje usługę osobom w Polsce, prawnik powinien zweryfikować obowiązek wyznaczenia przedstawiciela w UE.</p>
+        <b>Dane wymagające uzupełnienia przed publicznym uruchomieniem</b>
+        <p>Administratorem danych osobowych jest <b>Tomasz Piłat</b>. Kontakt: <a href="mailto:kontakt@egzaminio.io">kontakt@egzaminio.io</a>. Przed publicznym uruchomieniem trzeba uzupełnić adres i kraj prowadzenia działalności oraz — jeżeli dotyczy — dane rejestrowe. Jeżeli administrator jest poza EOG i oferuje usługę osobom w Polsce, prawnik powinien zweryfikować obowiązek wyznaczenia przedstawiciela w UE.</p>
       </div>
 
       <nav className="legal-toc" aria-label="Spis treści">
@@ -24,7 +24,7 @@ export default function PrivacyPage() {
 
       <section className="legal-section" id="administrator">
         <h2>1. Kto odpowiada za dane</h2>
-        <p>Administratorem danych osobowych użytkowników egzaminio jest podmiot wskazany powyżej. To on decyduje, po co i jak przetwarzane są dane. W sprawach prywatności, usunięcia konta lub wycofania zgody napisz na <a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a>. Inspektor ochrony danych: <mark>[NIE WYZNACZONO / UZUPEŁNIJ KONTAKT]</mark>.</p>
+        <p>Administratorem danych osobowych użytkowników egzaminio jest Tomasz Piłat. Administrator decyduje, po co i jak przetwarzane są dane. W sprawach prywatności, usunięcia konta lub wycofania zgody napisz na <a href="mailto:kontakt@egzaminio.io">kontakt@egzaminio.io</a>. Ten adres służy również do kontaktu we wszystkich sprawach dotyczących ochrony danych.</p>
       </section>
 
       <section className="legal-section" id="dane">
@@ -97,13 +97,13 @@ export default function PrivacyPage() {
       <section className="legal-section" id="feedback">
         <h2>6. Opinie i zgłoszenia z aplikacji</h2>
         <p>Formularz feedbacku jest opcjonalny. Do zgłoszenia zapisujemy jego kategorię, treść, opcjonalną ocenę, rolę konta, ścieżkę strony i nazwę bieżącego ekranu. Gdy zgłoszenie dotyczy konkretnego zadania, możemy dołączyć jego identyfikator i arkusz źródłowy. Nie dołączamy odpowiedzi ucznia ani treści prywatnych rozmów z AI.</p>
-        <p>Adres e-mail zapisujemy tylko wtedy, gdy użytkownik zaznaczy zgodę na kontakt w sprawie zgłoszenia. Zgodę można wycofać przez wiadomość na <a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a>; nie wpływa to na wcześniejsze, zgodne z prawem przetwarzanie. Dla ochrony usługi ograniczamy formularz do 3 zgłoszeń w ciągu 10 minut na konto.</p>
+        <p>Adres e-mail zapisujemy tylko wtedy, gdy użytkownik zaznaczy zgodę na kontakt w sprawie zgłoszenia. Zgodę można wycofać przez wiadomość na <a href="mailto:kontakt@egzaminio.io">kontakt@egzaminio.io</a>; nie wpływa to na wcześniejsze, zgodne z prawem przetwarzanie. Dla ochrony usługi ograniczamy formularz do 3 zgłoszeń w ciągu 10 minut na konto.</p>
       </section>
 
       <section className="legal-section" id="newsletter">
         <h2>7. Alerty rekrutacyjne i lista oczekujących na pakiet Plus</h2>
         <p>Zapis nie wymaga konta i jest niezależny od użycia kalkulatora. Adres e-mail zapisujemy dopiero po zaznaczeniu osobnej, niewymuszonej zgody. Przy alercie rekrutacyjnym zapisujemy również nazwę szkoły lub klasy i rok, aby wysłać informację odpowiadającą prośbie. Nie zapisujemy ocen, procentów ani wyniku wpisanego do kalkulatora.</p>
-        <p>Każda wiadomość wysłana z tych list powinna zawierać indywidualny link rezygnacji prowadzący do strony <a href="/wypisz">wypisu</a>. Zgodę można wycofać jednym kliknięciem lub przez wiadomość na <a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a>. Wycofanie nie wpływa na zgodność wcześniejszego przetwarzania i nie ogranicza korzystania z bezpłatnego kalkulatora ani konta.</p>
+        <p>Każda wiadomość wysłana z tych list powinna zawierać indywidualny link rezygnacji prowadzący do strony <a href="/wypisz">wypisu</a>. Zgodę można wycofać jednym kliknięciem lub przez wiadomość na <a href="mailto:kontakt@egzaminio.io">kontakt@egzaminio.io</a>. Wycofanie nie wpływa na zgodność wcześniejszego przetwarzania i nie ogranicza korzystania z bezpłatnego kalkulatora ani konta.</p>
       </section>
 
       <section className="legal-section" id="analityka">
@@ -155,7 +155,7 @@ export default function PrivacyPage() {
         <h2>11. Twoje prawa</h2>
         <p>W zależności od podstawy i sytuacji możesz żądać:</p>
         <ul><li>dostępu do danych i ich kopii,</li><li>sprostowania danych,</li><li>usunięcia danych lub ograniczenia przetwarzania,</li><li>przeniesienia danych dostarczonych na podstawie zgody lub umowy,</li><li>sprzeciwu wobec przetwarzania opartego na prawnie uzasadnionym interesie,</li><li>wycofania zgody bez wpływu na zgodność wcześniejszego przetwarzania.</li></ul>
-        <p>Napisz na <a href="mailto:kontakt@egzamin.io">kontakt@egzamin.io</a>. Możemy poprosić o rozsądną weryfikację tożsamości. Odpowiemy co do zasady w ciągu miesiąca. Masz też prawo złożyć skargę do <a href="https://uodo.gov.pl/pl/p/skargi" target="_blank" rel="noreferrer">Prezesa Urzędu Ochrony Danych Osobowych</a> lub właściwego organu w swoim kraju.</p>
+        <p>Napisz na <a href="mailto:kontakt@egzaminio.io">kontakt@egzaminio.io</a>. Możemy poprosić o rozsądną weryfikację tożsamości. Odpowiemy co do zasady w ciągu miesiąca. Masz też prawo złożyć skargę do <a href="https://uodo.gov.pl/pl/p/skargi" target="_blank" rel="noreferrer">Prezesa Urzędu Ochrony Danych Osobowych</a> lub właściwego organu w swoim kraju.</p>
       </section>
 
       <section className="legal-section">

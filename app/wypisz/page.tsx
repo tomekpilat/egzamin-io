@@ -18,7 +18,7 @@ export default function UnsubscribePage() {
       setMessage(payload.message ?? "Gotowe.");
       setStatus(response.ok ? "done" : "error");
     } catch {
-      setMessage("Nie udało się wypisać. Napisz na kontakt@egzamin.io.");
+      setMessage("Nie udało się wypisać. Napisz na kontakt@egzaminio.io.");
       setStatus("error");
     }
   }
