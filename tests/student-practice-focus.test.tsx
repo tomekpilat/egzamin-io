@@ -1,4 +1,4 @@
-import { cleanup, render, screen, waitFor } from "@testing-library/react";
+import { cleanup, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import {
@@ -162,7 +162,20 @@ describe("StudentPractice focus mode", () => {
       subject: "polish",
       source_document_id: "OPOP-100-X-2505",
     };
-    prepareRpc([cke2026, cke2025], [
+    const cke2024 = {
+      ...cke2026,
+      question_id: "cke-2024-eng-01",
+      source_label: "Wariant standardowy",
+      exam_paper_id: "cke-2024-main-english-100-x",
+      exam_year: 2024,
+      subject: "english",
+      source_document_id: "OJAP-100-X-2405",
+      selected_answer: null,
+      selected_response: null,
+      is_correct: null,
+      points_awarded: null,
+    };
+    prepareRpc([cke2026, cke2025, cke2024], [
       { progress_paper_id: cke2026.exam_paper_id, exam_year: 2026, exam_session: "main", subject: "mathematics", variant_code: "100-X", source_label: "Wariant standardowy", total_questions: 20, answered_questions: 1, correct_questions: 1, accuracy_percent: 100, earned_points: 1, available_points: 1, score_percent: 100, completion_status: "in_progress" },
       { progress_paper_id: cke2025.exam_paper_id, exam_year: 2025, exam_session: "main", subject: "polish", variant_code: "100-X", source_label: "Wariant standardowy", total_questions: 20, answered_questions: 20, correct_questions: 17, accuracy_percent: 85, earned_points: 22, available_points: 26, score_percent: 85, completion_status: "completed" },
     ]);
@@ -174,6 +187,13 @@ describe("StudentPractice focus mode", () => {
     expect(screen.getByRole("button", { name: "Wszystkie roczniki" })).toHaveAttribute("aria-pressed", "true");
     expect(screen.getByRole("heading", { name: "CKE 2026" })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "CKE 2025" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "CKE 2024" })).toBeInTheDocument();
+    const catalogSummary = screen.getByLabelText("Podsumowanie dostępnych arkuszy");
+    expect(within(catalogSummary).getByText("Dostępnych arkuszy").previousSibling).toHaveTextContent("3");
+    expect(within(catalogSummary).getByText("Rozpoczętych").previousSibling).toHaveTextContent("2");
+    expect(within(catalogSummary).getByText("Ukończonych").previousSibling).toHaveTextContent("1");
+    expect(screen.getByText("Nierozpoczęty")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "CKE 2024" })).toHaveTextContent("1");
     expect(screen.getByText("W toku")).toBeInTheDocument();
     expect(screen.getByText("Ukończony")).toBeInTheDocument();
 

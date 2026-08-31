@@ -37,6 +37,10 @@ describe("student panel navigation", () => {
     expect(practice).toContain('aria-label="Wybierz rocznik"');
     expect(practice).toContain('id="paper-progress-title"');
     expect(practice).toContain('className="paper-year-filters"');
+    expect(practice).toContain('className="paper-catalog-summary"');
+    expect(practice).toContain("buildPaperCatalog");
+    expect(practice).toContain("Dostępnych arkuszy");
+    expect(practice).toContain("dostępnych arkuszy.");
     expect(practice).toContain('className="paper-result-card"');
     expect(practice).toContain('openPaperFromProgress');
     expect(studentStyles).toContain(".dashboard-student-page .paper-result-summary");

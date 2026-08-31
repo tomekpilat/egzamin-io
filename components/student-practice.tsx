@@ -65,6 +65,7 @@ type PaperProgress = {
   subject: Subject;
   variant_code: string;
   source_label: string;
+  source_document_id: string | null;
   total_questions: number;
   answered_questions: number;
   correct_questions: number;
@@ -212,6 +213,7 @@ function normalizePaperProgress(value: Record<string, unknown>): PaperProgress {
     subject,
     variant_code: String(value.variant_code),
     source_label: String(value.source_label),
+    source_document_id: value.source_document_id == null ? null : String(value.source_document_id),
     total_questions: Number(value.total_questions),
     answered_questions: Number(value.answered_questions),
     correct_questions: Number(value.correct_questions),
@@ -221,6 +223,46 @@ function normalizePaperProgress(value: Record<string, unknown>): PaperProgress {
     score_percent: Number(value.score_percent ?? value.accuracy_percent ?? 0),
     completion_status: status,
   };
+}
+
+export function buildPaperCatalog(questions: PracticeQuestion[], progress: PaperProgress[]) {
+  const papers = new Map<string, PaperProgress>();
+  questions.forEach((question) => {
+    if (question.source_type !== "cke" || !question.exam_paper_id || !question.exam_year || !question.exam_session) return;
+    const current = papers.get(question.exam_paper_id);
+    papers.set(question.exam_paper_id, {
+      progress_paper_id: question.exam_paper_id,
+      exam_year: question.exam_year,
+      exam_session: question.exam_session,
+      subject: question.subject,
+      variant_code: question.exam_variant ?? "standard",
+      source_label: question.source_label,
+      source_document_id: current?.source_document_id ?? question.source_document_id,
+      total_questions: (current?.total_questions ?? 0) + 1,
+      answered_questions: current?.answered_questions ?? 0,
+      correct_questions: current?.correct_questions ?? 0,
+      accuracy_percent: current?.accuracy_percent ?? 0,
+      earned_points: current?.earned_points ?? 0,
+      available_points: current?.available_points ?? 0,
+      score_percent: current?.score_percent ?? 0,
+      completion_status: current?.completion_status ?? "not_started",
+    });
+  });
+  progress.forEach((result) => {
+    const available = papers.get(result.progress_paper_id);
+    papers.set(result.progress_paper_id, {
+      ...available,
+      ...result,
+      source_document_id: available?.source_document_id ?? result.source_document_id,
+      total_questions: Math.max(available?.total_questions ?? 0, result.total_questions),
+    });
+  });
+  return Array.from(papers.values()).sort((left, right) =>
+    right.exam_year - left.exam_year
+    || SUBJECT_KEYS.indexOf(left.subject) - SUBJECT_KEYS.indexOf(right.subject)
+    || left.exam_session.localeCompare(right.exam_session)
+    || left.variant_code.localeCompare(right.variant_code),
+  );
 }
 
 export function defaultMaterialFilter(questions: PracticeQuestion[]): MaterialFilter {
@@ -326,17 +368,21 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
     () => Array.from(new Set(questions.flatMap((question) => question.source_type === "cke" && question.exam_year ? [question.exam_year] : []))).sort((a, b) => b - a),
     [questions],
   );
+  const paperCatalog = useMemo(() => buildPaperCatalog(questions, paperProgress), [paperProgress, questions]);
   const paperProgressYears = useMemo(
-    () => Array.from(new Set(paperProgress.map((paper) => paper.exam_year))).sort((a, b) => b - a),
-    [paperProgress],
+    () => Array.from(new Set(paperCatalog.map((paper) => paper.exam_year))).sort((a, b) => b - a),
+    [paperCatalog],
   );
   const groupedPaperProgress = useMemo(() => {
     const groups = new Map<number, PaperProgress[]>();
-    paperProgress
+    paperCatalog
       .filter((paper) => paperYearFilter === null || paper.exam_year === paperYearFilter)
       .forEach((paper) => groups.set(paper.exam_year, [...(groups.get(paper.exam_year) ?? []), paper]));
     return Array.from(groups.entries()).sort(([left], [right]) => right - left);
-  }, [paperProgress, paperYearFilter]);
+  }, [paperCatalog, paperYearFilter]);
+  const paperCatalogQuestionCount = paperCatalog.reduce((sum, paper) => sum + paper.total_questions, 0);
+  const startedPaperCount = paperCatalog.filter((paper) => paper.completion_status !== "not_started").length;
+  const completedPaperCount = paperCatalog.filter((paper) => paper.completion_status === "completed").length;
   const materialOptions = useMemo(() => {
     const options: { value: MaterialFilter; label: string; count: number }[] = [];
     if (examYears.length) options.push({ value: "all-cke", label: "Wszystkie lata CKE", count: questions.filter((question) => question.source_type === "cke").length });
@@ -775,7 +821,7 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
           <article className="metric-card"><span>Rozwiązane zadania</span><b>{answeredCount}</b><small>{questions.length - answeredCount} nadal czeka.</small></article>
           <article className="metric-card"><span>Poprawne odpowiedzi</span><b>{correctCount}</b><small>Liczymy ostatnią odpowiedź.</small></article>
           <article className="metric-card"><span>Skuteczność</span><b>{score}%</b><small>Ze sprawdzonych zadań.</small></article>
-          <article className="metric-card"><span>Arkusze CKE</span><b>{paperProgress.filter((paper) => paper.completion_status !== "not_started").length}</b><small>Rozpoczęte lub ukończone.</small></article>
+          <article className="metric-card"><span>Dostępne arkusze CKE</span><b>{paperCatalog.length}</b><small>{paperCatalogQuestionCount} zadań w {paperProgressYears.length} {paperProgressYears.length === 1 ? "roczniku" : "rocznikach"}.</small></article>
         </section>
         <section className="student-progress-layout">
           <Card className="student-subject-overview">
@@ -797,11 +843,14 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
             <h3 id="paper-progress-title">Wyniki według rocznika i arkusza</h3>
             <p>Każdy arkusz liczony osobno. Wynik procentowy pokazuje punkty zdobyte względem maksymalnej liczby punktów w arkuszu.</p>
           </header>
-          {paperProgressError ? <Alert variant="destructive" className="paper-progress-warning"><AlertTitle>Wyniki arkuszy są chwilowo niedostępne</AlertTitle><AlertDescription>{paperProgressError}</AlertDescription></Alert> : paperProgress.length ? <>
+          {paperCatalog.length > 0 && <div className="paper-catalog-summary" aria-label="Podsumowanie dostępnych arkuszy"><div><b>{paperCatalog.length}</b><span>Dostępnych arkuszy</span></div><div><b>{paperCatalogQuestionCount}</b><span>Zadań CKE</span></div><div><b>{paperProgressYears.length}</b><span>{paperProgressYears.length === 1 ? "Rocznik" : "Roczników"}</span></div><div><b>{startedPaperCount}</b><span>Rozpoczętych</span></div><div><b>{completedPaperCount}</b><span>Ukończonych</span></div></div>}
+          {paperProgressError && <Alert variant="destructive" className="paper-progress-warning"><AlertTitle>Wyniki arkuszy są chwilowo niedostępne</AlertTitle><AlertDescription>{paperProgressError}</AlertDescription></Alert>}
+          {paperCatalog.length ? <>
             <div className="paper-year-filters" role="group" aria-label="Filtruj wyniki według rocznika">
               <button type="button" className={paperYearFilter === null ? "active" : ""} aria-pressed={paperYearFilter === null} onClick={() => setPaperYearFilter(null)}>Wszystkie roczniki</button>
-              {paperProgressYears.map((year) => <button key={year} type="button" className={paperYearFilter === year ? "active" : ""} aria-pressed={paperYearFilter === year} onClick={() => setPaperYearFilter(year)}>CKE {year}</button>)}
+              {paperProgressYears.map((year) => <button key={year} type="button" className={paperYearFilter === year ? "active" : ""} aria-label={`CKE ${year}`} aria-pressed={paperYearFilter === year} onClick={() => setPaperYearFilter(year)}>CKE {year}<span>{paperCatalog.filter((paper) => paper.exam_year === year).length}</span></button>)}
             </div>
+            <p className="paper-filter-result-count">Wyświetlamy <b>{groupedPaperProgress.reduce((sum, [, papers]) => sum + papers.length, 0)}</b> z <b>{paperCatalog.length}</b> dostępnych arkuszy.</p>
             <div className="paper-year-groups">{groupedPaperProgress.map(([year, papers]) => {
               const sessions = Array.from(new Set(papers.map((paper) => sessionLabels[paper.exam_session])));
               return <section className="paper-year-group" key={year} aria-labelledby={`paper-year-${year}`}>
@@ -818,7 +867,7 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
                       <SubjectIcon subject={paper.subject} className="paper-result-icon" />
                       <div className="paper-result-copy">
                         <div><h5>{subjectLabels[paper.subject]}</h5><span className={`paper-status paper-status-${paper.completion_status}`}>{statusLabel}</span></div>
-                        <p>{paper.source_label} · {sessionLabels[paper.exam_session]}{paper.variant_code ? ` · wariant ${paper.variant_code}` : ""}</p>
+                        <p>{paper.source_label} · {sessionLabels[paper.exam_session]}{paper.variant_code && paper.variant_code !== "standard" ? ` · wariant ${paper.variant_code}` : ""}{paper.source_document_id ? ` · dokument ${paper.source_document_id}` : ""}</p>
                       </div>
                       <div className={`paper-result-score${paper.completion_status === "not_started" ? " is-empty" : ""}`}><b>{paper.score_percent}%</b><span>{paper.earned_points} z {paper.available_points} pkt · {paper.answered_questions} z {paper.total_questions} zadań</span></div>
                     </div>

@@ -166,10 +166,21 @@
 .dashboard-student-page .paper-progress-kicker { padding: 6px 14px; color: var(--muted-copy); background: var(--secondary); border: 0; border-radius: 999px; font-size: 12px; font-weight: 600; letter-spacing: .04em; }
 .dashboard-student-page .paper-progress-intro h3 { margin: 0; font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif; font-size: 38px; font-weight: 600; letter-spacing: -.02em; line-height: 1.15; }
 .dashboard-student-page .paper-progress-intro p { max-width: 640px; margin: 0; color: var(--muted-copy); font-size: 14px; line-height: 1.6; text-wrap: pretty; }
+.dashboard-student-page .paper-catalog-summary { padding: 18px 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-top: 1px solid var(--subtle-line); border-bottom: 1px solid var(--subtle-line); }
+.dashboard-student-page .paper-catalog-summary > div { min-width: 0; padding: 0 18px; display: grid; gap: 4px; border-right: 1px solid var(--subtle-line); }
+.dashboard-student-page .paper-catalog-summary > div:first-child { padding-left: 0; }
+.dashboard-student-page .paper-catalog-summary > div:last-child { padding-right: 0; border-right: 0; }
+.dashboard-student-page .paper-catalog-summary b { font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif; font-size: 25px; line-height: 1; font-weight: 600; }
+.dashboard-student-page .paper-catalog-summary span { color: var(--quiet-copy); font-size: 12px; line-height: 1.35; }
 .dashboard-student-page .paper-year-filters { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; padding-bottom: 4px; }
-.dashboard-student-page .paper-year-filters button { min-height: 34px; padding: 7px 16px; color: var(--muted-copy); background: var(--card); border: 1px solid var(--border); border-radius: 999px; font-family: inherit; font-size: 13px; font-weight: 500; cursor: pointer; }
+.dashboard-student-page .paper-year-filters button { min-height: 34px; padding: 7px 11px 7px 16px; display: inline-flex; align-items: center; gap: 8px; color: var(--muted-copy); background: var(--card); border: 1px solid var(--border); border-radius: 999px; font-family: inherit; font-size: 13px; font-weight: 500; cursor: pointer; }
+.dashboard-student-page .paper-year-filters button:first-child { padding-right: 16px; }
+.dashboard-student-page .paper-year-filters button span { min-width: 20px; height: 20px; padding: 0 6px; display: inline-grid; place-items: center; color: var(--quiet-copy); background: var(--secondary); border-radius: 999px; font-size: 11px; line-height: 1; }
 .dashboard-student-page .paper-year-filters button:hover { color: var(--foreground); border-color: color-mix(in srgb, var(--foreground) 28%, var(--border)); }
 .dashboard-student-page .paper-year-filters button.active { color: var(--primary-foreground); background: var(--brand); border-color: var(--brand); font-weight: 600; }
+.dashboard-student-page .paper-year-filters button.active span { color: var(--brand); background: var(--primary-foreground); }
+.dashboard-student-page .paper-filter-result-count { margin: -10px 0 0; color: var(--quiet-copy); font-size: 13px; line-height: 1.5; }
+.dashboard-student-page .paper-filter-result-count b { color: var(--foreground); font-weight: 600; }
 .dashboard-student-page .paper-year-groups { display: flex; flex-direction: column; gap: 28px; }
 .dashboard-student-page .paper-year-group { display: flex; flex-direction: column; gap: 12px; }
 .dashboard-student-page .paper-year-heading { display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px; }
@@ -262,6 +273,13 @@
   .dashboard-student-page .practice-launch-summary [data-slot="button"] { width: 100%; }
   .dashboard-student-page .practice-paper-progress { padding-top: 26px; gap: 20px; }
   .dashboard-student-page .paper-progress-intro h3 { font-size: 30px; }
+  .dashboard-student-page .paper-catalog-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0; }
+  .dashboard-student-page .paper-catalog-summary > div,
+  .dashboard-student-page .paper-catalog-summary > div:first-child,
+  .dashboard-student-page .paper-catalog-summary > div:last-child { padding: 14px 12px; border-right: 0; border-bottom: 1px solid var(--subtle-line); }
+  .dashboard-student-page .paper-catalog-summary > div:nth-child(odd) { padding-left: 0; border-right: 1px solid var(--subtle-line); }
+  .dashboard-student-page .paper-catalog-summary > div:nth-child(even) { padding-right: 0; }
+  .dashboard-student-page .paper-catalog-summary > div:last-child { border-right: 0; border-bottom: 0; }
   .dashboard-student-page .paper-result-card { padding: 18px; }
   .dashboard-student-page .paper-result-summary { grid-template-columns: 38px minmax(0, 1fr); gap: 13px; }
   .dashboard-student-page .paper-result-score { grid-column: 1 / -1; align-items: flex-start; padding-top: 2px; }
