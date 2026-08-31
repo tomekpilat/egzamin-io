@@ -6,7 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   calculatePlusPackageEconomics,
+  FREE_AI_QUESTIONS_PER_DAY,
   PLAN_COMPARISON_ROWS,
+  PLUS_AI_QUESTIONS_PER_DAY,
   PLUS_PACKAGE_PRICE_PLN,
 } from "@/lib/plans";
 
@@ -22,7 +24,7 @@ export default function PlanPlusPage() {
           <div>
             <Badge variant="secondary">Pakiet Plus · dostępny</Badge>
             <h1>Regularna nauka bez dokładania presji.</h1>
-            <p>Wszystkie arkusze pozostają bezpłatne. Plus odblokowuje interaktywne rozwiązywanie bez limitu, nauczyciela AI oraz śledzenie postępów.</p>
+            <p>Free obejmuje wszystkie arkusze, {FREE_AI_QUESTIONS_PER_DAY} pytania do AI dziennie i podstawowy postęp. Plus daje ćwiczenia bez limitu, {PLUS_AI_QUESTIONS_PER_DAY} pytań do AI oraz szczegółowe wyniki i powtórki.</p>
           </div>
           <Card className="plan-plus-price-card">
             <CardHeader><CardTitle>Pakiet Plus</CardTitle></CardHeader>

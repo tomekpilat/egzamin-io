@@ -8,17 +8,19 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { SubjectIcon } from "@/components/subject-icon";
 import { Button } from "@/components/ui/button";
-import { PLUS_PACKAGE_PRICE_PLN } from "@/lib/plans";
+import { FREE_AI_QUESTIONS_PER_DAY, PLUS_AI_QUESTIONS_PER_DAY, PLUS_PACKAGE_PRICE_PLN } from "@/lib/plans";
 
 const FREE_FEATURES = [
   "Pełny dostęp do wszystkich arkuszy CKE",
   "15 interaktywnych pytań dziennie",
+  `${FREE_AI_QUESTIONS_PER_DAY} pytania do nauczyciela AI dziennie`,
+  "Podstawowe podsumowanie postępu",
   "Bez karty i bez opłat",
 ] as const;
 
 const PLUS_FEATURES = [
   "Interaktywne rozwiązywanie bez limitu",
-  "50 pytań do tutora AI dziennie",
+  `${PLUS_AI_QUESTIONS_PER_DAY} pytań do tutora AI dziennie`,
   "Śledzenie postępów, trendy i powtórki",
 ] as const;
 
@@ -60,7 +62,7 @@ export default function Home() {
           </div>
 
           <div className="design-task-preview" aria-label="Podgląd ćwiczenia">
-            <div className="design-task-bar"><span>CKE 2024 · Matematyka · zadanie 7</span><span>Nauczyciel AI · Pakiet Plus</span></div>
+            <div className="design-task-bar"><span>CKE 2024 · Matematyka · zadanie 7</span><span>Nauczyciel AI · 3 pytania w Free</span></div>
             <div className="design-task-content">
               <p>Trapez ma podstawy o długościach 8 cm i 12 cm oraz wysokość 5 cm. Oblicz pole tego trapezu.</p>
               <div className="design-task-answers" role="radiogroup" aria-label="Przykładowe odpowiedzi">
@@ -113,7 +115,7 @@ export default function Home() {
               <div>{PLUS_FEATURES.map((feature) => <span key={feature}><Check aria-hidden="true" />{feature}</span>)}</div>
             </article>
           </div>
-          <p>Wszystkie arkusze są dostępne bezpłatnie. Plus kupuje rodzic dla wybranego dziecka, aby odblokować AI, śledzenie postępów i interaktywne ćwiczenia bez limitu. Godzina korepetycji to zwykle 80–120 zł.</p>
+          <p>Free obejmuje wszystkie arkusze, 3 pytania do AI dziennie i podstawowy postęp. Plus kupuje rodzic dla wybranego dziecka, aby zwiększyć limit AI do 50, odblokować szczegółowe wyniki i ćwiczyć bez limitu. Godzina korepetycji to zwykle 80–120 zł.</p>
         </div>
       </section>
 

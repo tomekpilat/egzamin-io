@@ -84,7 +84,7 @@ const questions = [
   },
 ];
 
-function prepareRpc(questionRows: Record<string, unknown>[] = questions, progressRows: Record<string, unknown>[] = [], submitResult?: (params: Record<string, unknown>) => Record<string, unknown>, access = { active_plan: "plus", practice_used_today: 0, practice_daily_limit: null, progress_enabled: true, ai_enabled: true }, progressError: unknown = null) {
+function prepareRpc(questionRows: Record<string, unknown>[] = questions, progressRows: Record<string, unknown>[] = [], submitResult?: (params: Record<string, unknown>) => Record<string, unknown>, access: { active_plan: string; practice_used_today: number; practice_daily_limit: number | null; progress_enabled: boolean; ai_enabled: boolean } = { active_plan: "plus", practice_used_today: 0, practice_daily_limit: null, progress_enabled: true, ai_enabled: true }, progressError: unknown = null, basicProgress = { solved_count: questionRows.filter((question) => question.selected_answer != null || question.selected_response != null).length, correct_count: questionRows.filter((question) => question.is_correct === true).length, accuracy_percent: 0 }) {
   vi.stubGlobal("fetch", vi.fn().mockImplementation(async (_input: RequestInfo | URL, init?: RequestInit) => new Response(JSON.stringify(init?.method === "POST" ? {
     message: { id: "ai-response-1", role: "assistant", content: "Wyjaśnienie AI do aktualnego zadania.", created_at: "2026-08-28T10:00:00.000Z" },
     usage: { used: 1, limit: 3, remaining: 2, plan: "free" },
@@ -97,6 +97,7 @@ function prepareRpc(questionRows: Record<string, unknown>[] = questions, progres
   rpc.mockImplementation(async (name: string, params: Record<string, unknown>) => {
     if (name === "get_practice_questions") return { data: questionRows, error: null };
     if (name === "get_student_practice_access") return { data: [access], error: null };
+    if (name === "get_student_basic_progress") return { data: [basicProgress], error: null };
     if (name === "get_student_paper_progress") return { data: progressRows, error: progressError };
     if (name === "submit_practice_response") {
       return {
@@ -361,18 +362,22 @@ describe("StudentPractice focus mode", () => {
     expect(hasUnsavedPracticeAnswer("q1", null, { questionId: "q2", index: 2 })).toBe(false);
   });
 
-  it("keeps every paper visible in Free while gating AI, progress and the sixteenth daily check", async () => {
-    prepareRpc(questions, [], undefined, { active_plan: "free", practice_used_today: 15, practice_daily_limit: 15, progress_enabled: false, ai_enabled: false });
+  it("keeps every paper, three AI questions and basic progress in Free while gating the sixteenth daily check", async () => {
+    prepareRpc(questions, [], undefined, { active_plan: "free", practice_used_today: 15, practice_daily_limit: 15, progress_enabled: true, ai_enabled: true }, null, { solved_count: 8, correct_count: 5, accuracy_percent: 63 });
     const { rerender } = render(<StudentPractice activeView="exercises" onNavigate={() => undefined} hasPlusAccess={false} />);
 
     expect(await screen.findByText("0 / 15 sprawdzeń dziś")).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "Ile wynosi 20% z 50?" })).toBeInTheDocument();
-    expect(screen.getByText(/Wszystkie arkusze CKE są dostępne bezpłatnie/)).toBeInTheDocument();
+    expect(await screen.findByText("Zostały 3 z 3 pytań dziś")).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Limit 15 pytań wykorzystany" })).toBeDisabled();
+    expect(rpc).toHaveBeenCalledWith("get_student_basic_progress");
     expect(rpc).not.toHaveBeenCalledWith("get_student_paper_progress");
 
     rerender(<StudentPractice activeView="progress" onNavigate={() => undefined} hasPlusAccess={false} />);
-    expect(screen.getByText("Śledzenie postępów jest dostępne w Plus")).toBeInTheDocument();
+    expect(screen.getByText("Podstawowe podsumowanie w wersji Free")).toBeInTheDocument();
+    expect(screen.getByText("8", { selector: ".metric-card b" })).toBeInTheDocument();
+    expect(screen.getByText("63%", { selector: ".metric-card b" })).toBeInTheDocument();
+    expect(screen.getByText("Zobacz dokładnie, co warto powtórzyć")).toBeInTheDocument();
   });
 
   it("shows one question with minimal progress and keyboard answer navigation", async () => {

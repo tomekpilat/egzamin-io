@@ -1,12 +1,11 @@
 import { AiProviderError, askTutorProvider } from "@/lib/ai-provider";
 import { normalizeUsage, validateTutorMessage, validateTutorScope, type AiChatMessage, type TutorQuestionContext } from "@/lib/ai-tutor";
+import { FREE_AI_QUESTIONS_PER_DAY, PLUS_AI_QUESTIONS_PER_DAY } from "@/lib/plans";
 import { getSupabaseServiceClient, verifySupabaseAccessToken } from "@/lib/supabase-server";
 
 export const dynamic = "force-dynamic";
 
 const noStoreHeaders = { "Cache-Control": "no-store, max-age=0" };
-
-class PlusRequiredError extends Error {}
 
 function json(body: Record<string, unknown>, status = 200) {
   return Response.json(body, { status, headers: noStoreHeaders });
@@ -43,13 +42,12 @@ function hasActivePlus(profile: { plan_tier?: unknown; plan_valid_until?: unknow
   return profile.plan_tier === "plus" && (!validUntil || validUntil > new Date());
 }
 
-async function requireActivePlusStudent(studentId: string) {
+async function requireActiveStudent(studentId: string) {
   const { data: profile, error } = await getSupabaseServiceClient().from("profiles")
     .select("role,onboarding_completed,plan_tier,plan_valid_until")
     .eq("id", studentId)
     .single();
   if (error || !profile || profile.role !== "student" || !profile.onboarding_completed) throw new Error("active_student_profile_required");
-  if (!hasActivePlus(profile)) throw new PlusRequiredError("plus_required");
   return profile;
 }
 
@@ -70,7 +68,6 @@ async function loadChat(studentId: string, questionId: string) {
   if (profileError || !profile || profile.role !== "student" || !profile.onboarding_completed) {
     throw new Error("active_student_profile_required");
   }
-  if (!hasActivePlus(profile)) throw new PlusRequiredError("plus_required");
   if (questionError || !question) throw new Error("published_question_not_found");
 
   const [{ data: thread, error: threadError }, { data: usageRow, error: usageError }, { data: explanation, error: explanationError }] = await Promise.all([
@@ -113,8 +110,8 @@ async function loadChat(studentId: string, questionId: string) {
       }));
   }
 
-  const activePlan = "plus";
-  const dailyLimit = 50;
+  const activePlan = hasActivePlus(profile) ? "plus" : "free";
+  const dailyLimit = activePlan === "plus" ? PLUS_AI_QUESTIONS_PER_DAY : FREE_AI_QUESTIONS_PER_DAY;
   return {
     messages,
     usage: normalizeUsage(usageRow?.reserved_count, dailyLimit, activePlan),
@@ -131,7 +128,6 @@ export async function GET(request: Request) {
     if (!validQuestionId(questionId)) return json({ error: "Nieprawidłowe zadanie." }, 400);
     return json(await loadChat(auth.user.id, questionId));
   } catch (error) {
-    if (error instanceof PlusRequiredError) return json({ error: "Nauczyciel AI jest dostępny w Pakiecie Plus.", code: "plus_required" }, 403);
     console.error("[ai-tutor] chat bootstrap failed", error instanceof Error ? error.message : "unknown_error");
     return json({ error: "Nie udało się uruchomić pomocy AI. Spróbuj ponownie lub zgłoś problem administratorowi." }, 503);
   }
@@ -142,7 +138,7 @@ export async function POST(request: Request) {
   try {
     const auth = await authenticatedStudent(request);
     if (!auth) return json({ error: "Zaloguj się ponownie." }, 401);
-    await requireActivePlusStudent(auth.user.id);
+    await requireActiveStudent(auth.user.id);
 
     const declaredLength = Number(request.headers.get("content-length")) || 0;
     if (declaredLength > 2_000) return json({ error: "Żądanie jest zbyt duże." }, 413);
@@ -272,7 +268,6 @@ export async function POST(request: Request) {
         // The reservation expires automatically; never expose server details to a student.
       }
     }
-    if (error instanceof PlusRequiredError) return json({ error: "Nauczyciel AI jest dostępny w Pakiecie Plus.", code: "plus_required" }, 403);
     console.error("[ai-tutor] request failed", error instanceof Error ? error.message : "unknown_error");
     return json({ error: "Nie udało się połączyć z nauczycielem AI. Spróbuj ponownie." }, 500);
   }

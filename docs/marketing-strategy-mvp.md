@@ -18,7 +18,8 @@ Na start rekomendowany jest wąski, mierzalny produkt:
 - odpowiedź ucznia i natychmiastowa informacja zwrotna,
 - wszystkie arkusze dostępne w planie darmowym,
 - maksymalnie 15 interaktywnie sprawdzanych pytań dziennie w planie darmowym,
-- nauczyciel AI i śledzenie postępów w Pakiecie Plus,
+- 3 pytania do nauczyciela AI dziennie i podstawowy postęp w Free,
+- 50 pytań do AI dziennie, szczegółowe wyniki, trendy i powtórki w Pakiecie Plus,
 - cotygodniowy raport dla rodzica,
 - proste zestawy udostępniane przez nauczyciela,
 - płatność dopiero po potwierdzeniu aktywacji i retencji.

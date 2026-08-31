@@ -30,7 +30,7 @@ const choices: Array<{
     value: "parent",
     title: "Jestem rodzicem",
     description: "Chcę wspierać dziecko",
-    detail: "Zgoda na konto dziecka oraz postęp i AI po aktywacji Plus.",
+    detail: "Zgoda na konto dziecka; szczegółowy postęp rodzica po aktywacji Plus.",
   },
 ];
 
@@ -153,7 +153,7 @@ export default function ChooseRolePage() {
               <span className="role-choice-dot" aria-hidden="true" />
               <div>
                 <b>{choice.value === "student" ? "Uczeń" : "Rodzic lub opiekun"}</b>
-                <small>{choice.value === "student" ? "Masz wszystkie arkusze CKE i 15 interaktywnych pytań dziennie. AI oraz postęp odblokowuje Plus." : "Zatwierdzasz konto dziecka, kupujesz Plus i wtedy widzisz postęp oraz wykorzystanie AI."}</small>
+                <small>{choice.value === "student" ? "Masz wszystkie arkusze CKE, 15 interaktywnych odpowiedzi, 3 pytania do AI dziennie i podstawowy postęp." : "Zatwierdzasz konto dziecka, kupujesz Plus i wtedy widzisz szczegółowy postęp oraz wykorzystanie AI."}</small>
               </div>
             </button>
           ))}

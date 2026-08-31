@@ -3,6 +3,7 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 
 const migration = readFileSync(join(process.cwd(), "supabase/migrations/20260828230000_free_papers_plus_interactivity.sql"), "utf8");
+const freeValueMigration = readFileSync(join(process.cwd(), "supabase/migrations/20260831120000_free_ai_and_basic_progress.sql"), "utf8");
 const route = readFileSync(join(process.cwd(), "app/api/ai/tutor/route.ts"), "utf8");
 
 describe("Free papers and Plus interactivity access", () => {
@@ -21,13 +22,20 @@ describe("Free papers and Plus interactivity access", () => {
     expect(migration).toContain("practice_daily_limit_reached");
   });
 
-  it("gates progress and Tutor AI on the server", () => {
+  it("keeps detailed and parent progress in Plus", () => {
     expect(migration).toContain("plus plan required for progress");
     expect(migration).toContain("plus plan required for AI usage");
-    expect(migration).toContain("plus plan required for AI");
+  });
+
+  it("restores three Free AI questions and aggregate student progress on the server", () => {
+    expect(freeValueMigration).toContain("create or replace function public.get_student_basic_progress()");
+    expect(freeValueMigration).toContain("count(*) filter (where attempt.is_correct)");
+    expect(freeValueMigration).toContain("grant execute on function public.get_student_basic_progress() to authenticated");
+    expect(freeValueMigration).toContain("return query select * from public.reserve_ai_tutor_request_plus_unchecked");
+    expect(freeValueMigration).not.toContain("plus plan required for AI");
     expect(migration).toContain("grant execute on function public.reserve_ai_tutor_request(uuid, text, text) to service_role");
-    expect(route).toContain("requireActivePlusStudent");
-    expect(route).toContain("PlusRequiredError");
-    expect(route).toContain('code: "plus_required"');
+    expect(route).toContain("requireActiveStudent");
+    expect(route).toContain("FREE_AI_QUESTIONS_PER_DAY");
+    expect(route).not.toContain("PlusRequiredError");
   });
 });

@@ -49,8 +49,9 @@ describe("AI tutor end-to-end contract", () => {
     expect(component).toContain("Nie wpisuj danych osobowych");
     expect(component).toContain('href="/plan-plus#porownanie"');
     expect(route).toContain("pytanie nie zostało odliczone");
-    expect(route).toContain("requireActivePlusStudent");
-    expect(component).toContain("Wszystkie arkusze CKE są dostępne bezpłatnie");
+    expect(route).toContain("requireActiveStudent");
+    expect(route).toContain("FREE_AI_QUESTIONS_PER_DAY");
+    expect(component).toContain("W wersji Free otrzymujesz 3 pytania do nauczyciela AI dziennie");
   });
 
   it("expands an active conversation and keeps a usable chat viewport", () => {

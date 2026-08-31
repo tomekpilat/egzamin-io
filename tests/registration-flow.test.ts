@@ -40,7 +40,8 @@ describe("simplified registration flow", () => {
   });
 
   it("explains both roles without teacher-account messaging", () => {
-    expect(login).toContain("Rozwiązujesz zadania z arkuszy CKE");
+    expect(login).toContain("Masz wszystkie arkusze CKE");
+    expect(login).toContain("3 pytania do AI dziennie");
     expect(login).toContain("Zatwierdzasz konto dziecka");
     expect(login).not.toMatch(/kont(a|o) nauczyciel/i);
     expect(onboarding).not.toMatch(/dostęp nauczycielski/i);

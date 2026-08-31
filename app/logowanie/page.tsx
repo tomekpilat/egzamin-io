@@ -23,7 +23,7 @@ type SignupStage = "role" | "form";
 type Notice = { type: "error" | "success"; message: string } | null;
 
 const ROLE_OPTIONS: Array<{ value: SelfServiceRole; title: string; description: string }> = [
-  { value: "student", title: "Uczeń", description: "Rozwiązujesz zadania z arkuszy CKE — wszystkie roczniki i 15 interaktywnych pytań dziennie. AI oraz postęp odblokowuje Plus." },
+  { value: "student", title: "Uczeń", description: "Masz wszystkie arkusze CKE, 15 interaktywnych odpowiedzi, 3 pytania do AI dziennie i podstawowy podgląd postępu." },
   { value: "parent", title: "Rodzic lub opiekun", description: "Zatwierdzasz konto dziecka, kupujesz Plus i wtedy widzisz postęp oraz wykorzystanie AI." },
 ];
 

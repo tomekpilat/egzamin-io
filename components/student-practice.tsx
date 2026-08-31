@@ -104,14 +104,28 @@ type PracticeAccess = {
   ai_enabled: boolean;
 };
 
+type BasicProgress = {
+  solved_count: number;
+  correct_count: number;
+  accuracy_percent: number;
+};
+
 function normalizePracticeAccess(value: Record<string, unknown> | undefined, hasPlusAccess: boolean): PracticeAccess {
   const isPlus = value?.active_plan === "plus" || (value?.active_plan == null && hasPlusAccess);
   return {
     active_plan: isPlus ? "plus" : "free",
     practice_used_today: Math.max(0, Number(value?.practice_used_today) || 0),
     practice_daily_limit: isPlus ? null : Math.max(0, Number(value?.practice_daily_limit) || FREE_PRACTICE_QUESTIONS_PER_DAY),
-    progress_enabled: isPlus,
-    ai_enabled: isPlus,
+    progress_enabled: true,
+    ai_enabled: value?.ai_enabled !== false,
+  };
+}
+
+function normalizeBasicProgress(value: Record<string, unknown> | undefined): BasicProgress {
+  return {
+    solved_count: Math.max(0, Number(value?.solved_count) || 0),
+    correct_count: Math.max(0, Number(value?.correct_count) || 0),
+    accuracy_percent: Math.min(100, Math.max(0, Number(value?.accuracy_percent) || 0)),
   };
 }
 
@@ -347,6 +361,7 @@ export function StudentPractice({
   const initialSelection = useRef(selection);
   const [questions, setQuestions] = useState<PracticeQuestion[]>([]);
   const [paperProgress, setPaperProgress] = useState<PaperProgress[]>([]);
+  const [basicProgress, setBasicProgress] = useState<BasicProgress>(() => normalizeBasicProgress(undefined));
   const [paperYearFilter, setPaperYearFilter] = useState<number | null>(null);
   const [subject, setSubject] = useState<SubjectFilter>(selection?.subject ?? "all");
   const [material, setMaterial] = useState<MaterialFilter>(selection?.material ?? "demo");
@@ -370,17 +385,21 @@ export function StudentPractice({
         const { data, error: questionsError } = await supabase.rpc("get_practice_questions");
         if (questionsError) throw questionsError;
         const loaded = ((data as Record<string, unknown>[] | null) ?? []).map(normalizeQuestion);
-        const [accessOutcome, progressOutcome] = await Promise.allSettled([
+        const [accessOutcome, basicProgressOutcome, progressOutcome] = await Promise.allSettled([
           supabase.rpc("get_student_practice_access"),
+          supabase.rpc("get_student_basic_progress"),
           hasPlusAccess ? supabase.rpc("get_student_paper_progress") : Promise.resolve({ data: [], error: null }),
         ]);
         const accessResult = accessOutcome.status === "fulfilled" && !accessOutcome.value.error ? accessOutcome.value : null;
+        const basicProgressResult = basicProgressOutcome.status === "fulfilled" && !basicProgressOutcome.value.error ? basicProgressOutcome.value : null;
         const progressResult = progressOutcome.status === "fulfilled" && !progressOutcome.value.error ? progressOutcome.value : null;
         const progress = ((progressResult?.data as Record<string, unknown>[] | null) ?? []).map(normalizePaperProgress);
+        const basic = normalizeBasicProgress(((basicProgressResult?.data as Record<string, unknown>[] | null) ?? [])[0]);
         const nextAccess = normalizePracticeAccess(((accessResult?.data as Record<string, unknown>[] | null) ?? [])[0], hasPlusAccess);
         if (active) {
           setQuestions(loaded);
           setPaperProgress(progress);
+          setBasicProgress(basic);
           setPaperProgressError(hasPlusAccess && !progressResult ? "Nie udało się pobrać wyników arkuszy. Zadania nadal są dostępne — spróbuj odświeżyć panel za chwilę." : "");
           setAccess(nextAccess);
           const restoredSelection = initialSelection.current;
@@ -470,15 +489,18 @@ export function StudentPractice({
   );
   const currentQuestion = filteredQuestions[questionIndex] ?? null;
   const questionTime = useQuestionTimer(currentQuestion?.question_id ?? null, activeView === "exercises");
-  const answeredCount = questions.filter((question) => question.selected_response !== null || question.selected_answer !== null).length;
-  const correctCount = questions.filter((question) => question.is_correct).length;
-  const correctAnswerPercentage = answeredCount ? Math.round((correctCount / answeredCount) * 100) : 0;
+  const loadedAnsweredCount = questions.filter((question) => question.selected_response !== null || question.selected_answer !== null).length;
+  const loadedCorrectCount = questions.filter((question) => question.is_correct).length;
+  const answeredCount = Math.max(loadedAnsweredCount, basicProgress.solved_count);
+  const correctCount = Math.max(loadedCorrectCount, basicProgress.correct_count);
+  const correctAnswerPercentage = answeredCount ? Math.round((correctCount / answeredCount) * 100) : basicProgress.accuracy_percent;
   const earnedPoints = questions.reduce((sum, question) => sum + (question.points_awarded ?? (question.is_correct ? 1 : 0)), 0);
   const availablePoints = questions.reduce((sum, question) => sum + ((question.selected_response !== null || question.selected_answer !== null) ? (question.max_points ?? question.scoring.max_points ?? 1) : 0), 0);
   const score = availablePoints ? Math.round((earnedPoints / availablePoints) * 100) : 0;
   const practiceRemaining = access.practice_daily_limit === null ? null : Math.max(0, access.practice_daily_limit - access.practice_used_today);
   const practiceLimitReached = practiceRemaining === 0;
   const progressEnabled = access.progress_enabled;
+  const detailedProgressEnabled = access.active_plan === "plus";
   const aiEnabled = access.ai_enabled;
   const reviewTopics = useMemo(() => {
     const byTopic = new Map<string, { subject: Subject; topic: string; answered: number; correct: number }>();
@@ -696,6 +718,11 @@ export function StudentPractice({
       const result = (data as AnswerResult[] | null)?.[0];
       if (!result) throw new Error("missing_result");
       setSubmittedAnswer({ ...result, questionId: currentQuestion.question_id });
+      setBasicProgress({
+        solved_count: result.solved_count,
+        correct_count: result.correct_count,
+        accuracy_percent: result.solved_count ? Math.round((result.correct_count / result.solved_count) * 100) : 0,
+      });
       trackAnalyticsEvent("answer_checked");
       clearDrafts();
       setQuestions((current) =>
@@ -720,7 +747,7 @@ export function StudentPractice({
       const { data: accessData } = await supabase.rpc("get_student_practice_access");
       const nextAccess = normalizePracticeAccess(((accessData as Record<string, unknown>[] | null) ?? [])[0], hasPlusAccess);
       setAccess(nextAccess);
-      if (nextAccess.progress_enabled) {
+      if (nextAccess.active_plan === "plus") {
         const { data: progressData, error: progressError } = await supabase.rpc("get_student_paper_progress");
         if (!progressError) setPaperProgress(((progressData as Record<string, unknown>[] | null) ?? []).map(normalizePaperProgress));
       }
@@ -769,12 +796,12 @@ export function StudentPractice({
         <section className="student-resume-grid">
           <Card className="student-resume-card">
             <CardHeader><CardDescription>{answeredCount ? `Ostatnio: ${material === "demo" ? "zestaw demonstracyjny" : material.replace("year:", "CKE ")}` : "Pierwsza sesja"}</CardDescription><CardTitle>{answeredCount ? "Wróć do nauki" : "Zacznij od jednego zadania"}</CardTitle></CardHeader>
-            <CardContent><p>{filteredQuestions.length ? `${filteredQuestions.length} zadań w wybranym materiale. Wszystkie arkusze są dostępne bezpłatnie${practiceRemaining === null ? "." : `, a dziś możesz interaktywnie sprawdzić jeszcze ${practiceRemaining} odpowiedzi.`}` : "Wybierz dostępny materiał poniżej, aby rozpocząć."}</p><div><Button type="button" onClick={startPractice} disabled={!filteredQuestions.length}>Otwórz arkusz</Button><Button variant="outline" type="button" onClick={() => onNavigate("progress")}>{progressEnabled ? "Zobacz wyniki" : "Śledzenie postępów w Plus"}</Button></div></CardContent>
+            <CardContent><p>{filteredQuestions.length ? `${filteredQuestions.length} zadań w wybranym materiale. Wszystkie arkusze są dostępne bezpłatnie${practiceRemaining === null ? "." : `, a dziś możesz interaktywnie sprawdzić jeszcze ${practiceRemaining} odpowiedzi.`}` : "Wybierz dostępny materiał poniżej, aby rozpocząć."}</p><div><Button type="button" onClick={startPractice} disabled={!filteredQuestions.length}>Otwórz arkusz</Button><Button variant="outline" type="button" onClick={() => onNavigate("progress")}>Zobacz wyniki</Button></div></CardContent>
           </Card>
           <Card className="student-summary-card"><CardContent><div><span>Rozwiązane zadania</span><b>{answeredCount}</b></div><div><span>Poprawne odpowiedzi</span><b>{correctAnswerPercentage}%</b><small>{correctCount} z {answeredCount} sprawdzonych</small></div><div><span>Dostępne arkusze CKE</span><strong>{paperCatalog.length}</strong><small>{paperCatalogQuestionCount} zadań w {paperProgressYears.length} {paperProgressYears.length === 1 ? "roczniku" : "rocznikach"}</small></div></CardContent></Card>
         </section>
         <Card className="practice-launch-card">
-          <CardHeader><div><CardTitle>Wybierz materiał</CardTitle><CardDescription>Dostępne {questions.length} zadań · {questions.length - answeredCount} nierozwiązanych</CardDescription></div></CardHeader>
+          <CardHeader><div><CardTitle>Wybierz materiał</CardTitle><CardDescription>Dostępne {questions.length} zadań · {Math.max(0, questions.length - answeredCount)} nierozwiązanych</CardDescription></div></CardHeader>
           <CardContent>
             {!questions.length && <Alert><AlertTitle>Brak opublikowanych arkuszy</AlertTitle><AlertDescription>Materiały pojawią się tutaj po ich zweryfikowaniu i publikacji.</AlertDescription></Alert>}
             <div className="practice-launch-filters">
@@ -895,12 +922,20 @@ export function StudentPractice({
         </div>}
       </section>}
 
-      {activeView === "progress" && !progressEnabled && <section className="student-content-view student-progress-view" aria-labelledby="student-progress-gate-title"><div className="dashboard-view-heading"><div><h2 id="student-progress-gate-title">Twój postęp</h2><small>Wyniki, regularność i tematy do powtórki</small></div></div><Card className="parent-empty-view"><CardHeader><Badge variant="secondary">Pakiet Plus</Badge><CardTitle>Śledzenie postępów jest dostępne w Plus</CardTitle><CardDescription>W wersji Free masz pełny dostęp do wszystkich arkuszy i 15 interaktywnych pytań dziennie. Plus zapisuje wyniki i podpowiada, co powtórzyć.</CardDescription></CardHeader><CardContent><Button asChild><a href="/plan-plus#porownanie">Porównaj Free i Plus</a></Button></CardContent></Card></section>}
+      {activeView === "progress" && progressEnabled && !detailedProgressEnabled && <section className="student-content-view student-progress-view" aria-labelledby="student-basic-progress-title">
+        <div className="dashboard-view-heading"><div><h2 id="student-basic-progress-title">Twój postęp</h2><small>Podstawowe podsumowanie w wersji Free</small></div><Button variant="outline" type="button" onClick={() => onNavigate("exercises")}>Wróć do ćwiczeń</Button></div>
+        <section className="dashboard-grid three-columns student-progress-metrics">
+          <article className="metric-card"><span>Rozwiązane zadania</span><b>{answeredCount}</b><small>Łącznie na tym koncie.</small></article>
+          <article className="metric-card"><span>Poprawne odpowiedzi</span><b>{correctCount}</b><small>Liczymy ostatnią odpowiedź.</small></article>
+          <article className="metric-card"><span>Skuteczność</span><b>{correctAnswerPercentage}%</b><small>Ze sprawdzonych zadań.</small></article>
+        </section>
+        <Card className="parent-empty-view"><CardHeader><Badge variant="secondary">Pakiet Plus</Badge><CardTitle>Zobacz dokładnie, co warto powtórzyć</CardTitle><CardDescription>Plus dodaje wyniki według arkusza i rocznika, trendy, słabsze tematy, powtórki oraz podgląd postępu dla rodzica.</CardDescription></CardHeader><CardContent><Button asChild><a href="/plan-plus#porownanie">Porównaj Free i Plus</a></Button></CardContent></Card>
+      </section>}
 
-      {activeView === "progress" && progressEnabled && <section className="student-content-view student-progress-view" aria-labelledby="student-progress-title">
+      {activeView === "progress" && progressEnabled && detailedProgressEnabled && <section className="student-content-view student-progress-view" aria-labelledby="student-progress-title">
         <div className="dashboard-view-heading"><div><h2 id="student-progress-title">Twój postęp</h2><small>Wyniki z arkuszy CKE i materiałów demonstracyjnych</small></div><Button variant="outline" type="button" onClick={() => onNavigate("exercises")}>Wróć do ćwiczeń</Button></div>
         <section className="dashboard-grid four-columns student-progress-metrics">
-          <article className="metric-card"><span>Rozwiązane zadania</span><b>{answeredCount}</b><small>{questions.length - answeredCount} nadal czeka.</small></article>
+          <article className="metric-card"><span>Rozwiązane zadania</span><b>{answeredCount}</b><small>{Math.max(0, questions.length - answeredCount)} nadal czeka.</small></article>
           <article className="metric-card"><span>Poprawne odpowiedzi</span><b>{correctCount}</b><small>Liczymy ostatnią odpowiedź.</small></article>
           <article className="metric-card"><span>Skuteczność</span><b>{score}%</b><small>Ze sprawdzonych zadań.</small></article>
           <article className="metric-card"><span>Dostępne arkusze CKE</span><b>{paperCatalog.length}</b><small>{paperCatalogQuestionCount} zadań w {paperProgressYears.length} {paperProgressYears.length === 1 ? "roczniku" : "rocznikach"}.</small></article>
