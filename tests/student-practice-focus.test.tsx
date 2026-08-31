@@ -1,14 +1,21 @@
 import { cleanup, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { useState } from "react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import {
   countResponseWords,
   hasUnsavedPracticeAnswer,
   StudentPractice,
+  type StudentView,
   UNSAVED_ANSWER_MESSAGE,
 } from "@/components/student-practice";
 
 const { rpc } = vi.hoisted(() => ({ rpc: vi.fn() }));
+
+function StudentPracticeHarness({ initialView }: { initialView: StudentView }) {
+  const [view, setView] = useState<StudentView>(initialView);
+  return <StudentPractice activeView={view} onNavigate={setView} />;
+}
 
 vi.mock("@/lib/supabase-browser", () => ({
   getSupabaseClient: async () => ({
@@ -204,6 +211,47 @@ describe("StudentPractice focus mode", () => {
     await user.click(screen.getByRole("button", { name: "Wszystkie roczniki" }));
     await user.click(screen.getByRole("button", { name: "Wróć do zadania 2 →" }));
     expect(onNavigate).toHaveBeenCalledWith("exercises");
+  });
+
+  it("opens the selected mathematics paper and keeps mathematics selected in focus mode", async () => {
+    const mathematics = {
+      ...questions[0],
+      question_id: "cke-2026-mat-selection",
+      source_type: "cke",
+      source_label: "Wariant standardowy",
+      exam_paper_id: "cke-2026-main-mathematics-100-x",
+      exam_year: 2026,
+      exam_session: "main",
+      exam_variant: "100-X",
+      source_document_id: "OMAP-100-X-2605",
+      paper_question_number: 1,
+      subject: "mathematics",
+      prompt: "Zadanie wyłącznie z matematyki",
+    };
+    const english = {
+      ...mathematics,
+      question_id: "cke-2026-eng-selection",
+      exam_paper_id: "cke-2026-main-english-200-x",
+      exam_variant: "200-X",
+      source_document_id: "OJAP-200-X-2605",
+      subject: "english",
+      prompt: "English task that must not open",
+    };
+    prepareRpc([english, mathematics], [
+      { progress_paper_id: mathematics.exam_paper_id, exam_year: 2026, exam_session: "main", subject: "mathematics", variant_code: "100-X", source_label: "Wariant standardowy", total_questions: 1, answered_questions: 0, correct_questions: 0, accuracy_percent: 0, earned_points: 0, available_points: 0, score_percent: 0, completion_status: "not_started" },
+      { progress_paper_id: english.exam_paper_id, exam_year: 2026, exam_session: "main", subject: "english", variant_code: "200-X", source_label: "Wariant standardowy", total_questions: 1, answered_questions: 0, correct_questions: 0, accuracy_percent: 0, earned_points: 0, available_points: 0, score_percent: 0, completion_status: "not_started" },
+    ]);
+    const user = userEvent.setup();
+    render(<StudentPracticeHarness initialView="progress" />);
+
+    const mathematicsHeading = await screen.findByRole("heading", { name: "Matematyka" });
+    const mathematicsCard = mathematicsHeading.closest(".paper-result-card");
+    expect(mathematicsCard).not.toBeNull();
+    await user.click(within(mathematicsCard as HTMLElement).getByRole("button", { name: "Rozpocznij arkusz →" }));
+
+    expect(await screen.findByRole("heading", { name: "Zadanie wyłącznie z matematyki" })).toBeInTheDocument();
+    expect(screen.getByRole("combobox", { name: "Wybierz przedmiot" })).toHaveTextContent("Matematyka");
+    expect(screen.queryByRole("heading", { name: "English task that must not open" })).not.toBeInTheDocument();
   });
 
   it("keeps questions available when only paper progress fails to load", async () => {

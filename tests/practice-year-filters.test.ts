@@ -3,6 +3,7 @@ import {
   defaultMaterialFilter,
   filterPracticeQuestions,
   formatQuestionSource,
+  resolvePaperSelection,
   type PracticeQuestion,
 } from "@/components/student-practice";
 
@@ -55,6 +56,16 @@ describe("practice year catalog", () => {
   it("filters by year, subject and exact paper", () => {
     expect(filterPracticeQuestions(catalog, "mathematics", "year:2025").map((item) => item.question_id)).toEqual(["cke-2025-mat-1"]);
     expect(filterPracticeQuestions(catalog, "all", "all-cke", "cke-2024-main-mat").map((item) => item.question_id)).toEqual(["cke-2024-mat-1"]);
+  });
+
+  it("derives the year and subject from the exact selected paper", () => {
+    const selection = resolvePaperSelection(catalog, "cke-2025-main-mat");
+    expect(selection).toMatchObject({
+      paperId: "cke-2025-main-mat",
+      material: "year:2025",
+      subject: "mathematics",
+    });
+    expect(selection?.questions.map((item) => item.question_id)).toEqual(["cke-2025-mat-1"]);
   });
 
   it("formats official context without relabelling demo as CKE", () => {

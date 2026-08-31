@@ -288,6 +288,19 @@ export function filterPracticeQuestions(
   });
 }
 
+export function resolvePaperSelection(questions: PracticeQuestion[], selectedPaperId: string) {
+  if (selectedPaperId === "all") return null;
+  const paperQuestions = questions.filter((question) => question.exam_paper_id === selectedPaperId);
+  const firstQuestion = paperQuestions[0];
+  if (!firstQuestion || firstQuestion.source_type !== "cke" || !firstQuestion.exam_year) return null;
+  return {
+    paperId: selectedPaperId,
+    material: `year:${firstQuestion.exam_year}` as MaterialFilter,
+    subject: firstQuestion.subject,
+    questions: paperQuestions,
+  };
+}
+
 export function formatQuestionSource(question: PracticeQuestion) {
   if (question.source_type === "demo") return "Zestaw demonstracyjny egzaminio";
   const session = question.exam_session ? sessionLabels[question.exam_session] : "arkusz CKE";
@@ -533,6 +546,15 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
 
   function selectPaper(nextPaperId: string) {
     if (nextPaperId === paperId || !confirmDraftDiscard()) return;
+    if (nextPaperId !== "all") {
+      const selection = resolvePaperSelection(questions, nextPaperId);
+      if (!selection) {
+        setError("Nie udało się otworzyć wybranego arkusza. Odśwież panel i spróbuj ponownie.");
+        return;
+      }
+      setMaterial(selection.material);
+      setSubject(selection.subject);
+    }
     setPaperId(nextPaperId);
     setQuestionIndex(0);
     clearDrafts();
@@ -552,17 +574,21 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
   }
 
   function openPaperFromProgress(paper: PaperProgress, mode: "resume" | "preview" | "partial" | "review") {
-    const paperQuestions = questions.filter((question) => question.exam_paper_id === paper.progress_paper_id);
+    const selection = resolvePaperSelection(questions, paper.progress_paper_id);
+    if (!selection) {
+      setError("Nie udało się otworzyć wybranego arkusza. Odśwież panel i spróbuj ponownie.");
+      return;
+    }
     const isAnswered = (question: PracticeQuestion) => question.selected_response !== null || question.selected_answer !== null;
     const preferredIndex = mode === "review"
-      ? paperQuestions.findIndex((question) => isAnswered(question) && question.is_correct === false)
+      ? selection.questions.findIndex((question) => isAnswered(question) && question.is_correct === false)
       : mode === "partial"
-        ? paperQuestions.findIndex(isAnswered)
-        : paperQuestions.findIndex((question) => !isAnswered(question));
+        ? selection.questions.findIndex(isAnswered)
+        : selection.questions.findIndex((question) => !isAnswered(question));
 
-    setMaterial(`year:${paper.exam_year}`);
-    setSubject(paper.subject);
-    setPaperId(paper.progress_paper_id);
+    setMaterial(selection.material);
+    setSubject(selection.subject);
+    setPaperId(selection.paperId);
     setQuestionIndex(preferredIndex >= 0 ? preferredIndex : 0);
     clearDrafts();
     setSubmittedAnswer(null);
