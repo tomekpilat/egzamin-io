@@ -56,7 +56,8 @@ describe("CKE 2026 mathematics import", () => {
     />);
     expect(screen.getByRole("img", { name: "Opis diagramu" })).toHaveAttribute("src", "/cke/example.png");
     await user.click(screen.getByRole("button", { name: "Powiększ obraz: Opis diagramu" }));
-    expect(screen.getByRole("dialog", { name: "Powiększony obraz: Opis diagramu" })).toBeInTheDocument();
+    expect(screen.getByRole("dialog", { name: "Powiększony obraz: Opis diagramu" })).toHaveClass("z-[100]");
+    expect(document.querySelector('[data-slot="dialog-overlay"]')).toHaveClass("z-[100]");
     expect(screen.getByRole("img", { name: "Opis diagramu" })).toHaveAttribute("src", "/cke/example.png");
     expect(screen.getByRole("img", { name: "Opis diagramu" })).toHaveClass("cke-image-dialog-media");
     await user.click(screen.getByRole("button", { name: "Zamknij" }));

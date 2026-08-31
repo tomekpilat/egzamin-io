@@ -5,6 +5,7 @@ import { describe, expect, it } from "vitest";
 const read = (path: string) => readFileSync(join(process.cwd(), path), "utf8");
 const migration = read("supabase/migrations/20260829090000_fix_practice_response_submission.sql");
 const component = read("components/cke-question-content.tsx");
+const dialog = read("components/ui/dialog.tsx");
 const css = read("app/redesign.css");
 
 describe("practice response and image enlargement regression", () => {
@@ -40,5 +41,7 @@ describe("practice response and image enlargement regression", () => {
     expect(css).toContain("width: 100%; height: 100%");
     expect(css).toContain("width: calc(100vw - 16px)");
     expect(css).toContain("height: calc(100dvh - 16px)");
+    expect(dialog.match(/z-\[100\]/g)).toHaveLength(2);
+    expect(css).toContain(".task-route-shell { position: fixed; z-index: 60;");
   });
 });
