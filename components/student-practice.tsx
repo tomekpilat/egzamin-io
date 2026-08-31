@@ -17,6 +17,7 @@ import { trackAnalyticsEvent } from "@/lib/analytics";
 import { CkeQuestionContent, type CkeContentBlock, type CkeQuestionAsset } from "@/components/cke-question-content";
 import { FREE_PRACTICE_QUESTIONS_PER_DAY } from "@/lib/plans";
 import { PromoCodeRedemption } from "@/components/promo-code-redemption";
+import { PracticeQuestionPrompt } from "@/components/practice-question-prompt";
 
 export type StudentView = "start" | "exercises" | "progress" | "settings";
 type Subject = SubjectKey;
@@ -789,7 +790,7 @@ export function StudentPractice({ activeView, onNavigate, hasPlusAccess = true }
             </div>
 
             <div className="task-prompt">
-              <h1 className="mathjax_process">{currentQuestion.prompt}</h1>
+              <PracticeQuestionPrompt prompt={currentQuestion.prompt} />
               <CkeQuestionContent blocks={currentQuestion.content_blocks} assets={currentQuestion.assets} />
               <small>Pytanie {questionIndex + 1} z {filteredQuestions.length} · {formatQuestionSource(currentQuestion)}{currentQuestion.paper_question_number ? ` · zadanie ${currentQuestion.paper_question_number}` : ""}</small>
             </div>

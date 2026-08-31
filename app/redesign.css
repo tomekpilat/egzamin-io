@@ -989,8 +989,21 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
 .task-question-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; color: var(--muted-foreground); font-size: 12px; }
 .task-question-meta > span { padding: 3px 8px; background: var(--card); border: 1px solid var(--border); border-radius: 5px; }
 .task-question-meta p { margin: 0; }
-.task-prompt { max-width: 660px; display: flex; flex-direction: column; gap: 18px; }
-.task-prompt h1 { margin: 0; color: var(--foreground); font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif; font-size: 23px; line-height: 1.5; font-weight: 400; letter-spacing: 0; text-wrap: pretty; }
+.task-prompt { width: 100%; max-width: 900px; display: flex; flex-direction: column; gap: 18px; }
+.task-prompt-copy { width: 100%; display: grid; gap: 18px; }
+.task-prompt-copy h1 { margin: 0; color: var(--foreground); font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif; font-size: 23px; line-height: 1.5; font-weight: 400; letter-spacing: 0; white-space: pre-wrap; text-wrap: pretty; }
+.task-prompt-copy.is-long h1 { max-width: 820px; font-size: 20px; line-height: 1.55; }
+.task-prompt-items { width: 100%; margin: 0; padding: 0; display: grid; gap: 0; list-style: none; }
+.task-prompt-items > li { padding: 15px 0; display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 12px; border-top: 1px solid var(--subtle-line); }
+.task-prompt-items > li:last-child { border-bottom: 1px solid var(--subtle-line); }
+.task-prompt-number { padding-top: 2px; color: var(--brand); font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.task-prompt-items > li > div { min-width: 0; display: grid; gap: 10px; }
+.task-prompt-items p { margin: 0; color: var(--foreground); font-size: 16px; line-height: 1.6; white-space: pre-wrap; text-wrap: pretty; }
+.task-prompt-choices { margin: 0; padding: 0; display: grid; gap: 7px; list-style: none; }
+.task-prompt-copy > .task-prompt-choices { max-width: 820px; padding-top: 2px; }
+.task-prompt-choices li { display: grid; grid-template-columns: 25px minmax(0, 1fr); gap: 9px; color: var(--muted-foreground); font-size: 15px; line-height: 1.55; }
+.task-prompt-choices li b { color: var(--foreground); font-size: 13px; line-height: 1.8; }
+.task-prompt-choices li span { min-width: 0; white-space: pre-wrap; text-wrap: pretty; }
 .task-prompt small { color: var(--quiet-copy); font-size: 12px; }
 .task-answers { width: min(660px, 100%); display: flex; flex-direction: column; gap: 10px; }
 .task-answer { width: 100%; min-height: 58px; padding: 16px 18px; display: flex; align-items: center; gap: 14px; color: var(--foreground); text-align: left; background: var(--card); border: 1px solid var(--border); border-radius: 9px; cursor: pointer; }
@@ -1026,7 +1039,7 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
 .dark .task-verdict.is-incorrect { color: #f7e9e5; background: #39231f; border-color: #bd6a5c; }
 .dark .task-verdict p,
 .dark .task-verdict small { color: inherit; }
-.cke-question-content { width: min(660px, 100%); display: grid; gap: 14px; color: var(--foreground); font-size: 15px; line-height: 1.65; }
+.cke-question-content { width: min(900px, 100%); display: grid; gap: 14px; color: var(--foreground); font-size: 15px; line-height: 1.65; }
 .cke-question-content p { margin: 0; }
 .cke-question-content .math-formula { overflow-x: auto; }
 .cke-passage-block { overflow: hidden; border: 1px solid var(--border); border-radius: 8px; background: var(--card); }
@@ -1377,7 +1390,11 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
   .task-question-meta > span { display: none; }
   .task-question-meta p { font-size: 12px; }
   .task-prompt { gap: 8px; }
-  .task-prompt h1 { font-size: 19px; }
+  .task-prompt-copy h1,
+  .task-prompt-copy.is-long h1 { font-size: 19px; line-height: 1.5; }
+  .task-prompt-items > li { padding: 13px 0; grid-template-columns: 42px minmax(0, 1fr); gap: 8px; }
+  .task-prompt-items p { font-size: 15px; }
+  .task-prompt-choices li { font-size: 14px; }
   .task-prompt small { display: none; }
   .task-answer { min-height: 52px; padding: 14px 16px; gap: 12px; }
   .task-answer > b { width: 22px; height: 22px; font-size: 11px; }
