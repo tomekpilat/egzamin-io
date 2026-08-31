@@ -33,9 +33,11 @@ describe("GA4 basic consent contract", () => {
     expect(component).toContain("Ustawienia prywatności");
     expect(component).toContain("clearGoogleAnalyticsCookies");
     expect(component).toContain("window.location.reload()");
+    expect(component).toContain("window.addEventListener(OPEN_PRIVACY_SETTINGS_EVENT, openSettings)");
     const quickLinksRule = styles.match(/\.privacy-quick-links\s*\{([^}]*)\}/)?.[1] ?? "";
     expect(quickLinksRule).not.toContain("position: fixed");
     expect(quickLinksRule).toContain("border-top");
+    expect(styles).toContain("body:has(.dashboard-page) .privacy-quick-links { display: none; }");
   });
 
   it("documents Google, consent, retention, cookies and prohibited education data", () => {

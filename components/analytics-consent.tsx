@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import {
   ANALYTICS_CONSENT_KEY,
   ANALYTICS_COOKIE_MAX_AGE_SECONDS,
+  OPEN_PRIVACY_SETTINGS_EVENT,
   createAnalyticsConsentRecord,
   clearGoogleAnalyticsCookies,
   parseAnalyticsConsentRecord,
@@ -103,6 +104,16 @@ export function AnalyticsConsent({ measurementId }: { measurementId?: string }) 
     document.addEventListener("click", onClick);
     return () => document.removeEventListener("click", onClick);
   }, [enabled]);
+
+  useEffect(() => {
+    if (!enabled) return;
+    const openSettings = () => {
+      setAnalyticsEnabled(choice === "accepted");
+      setSettingsOpen(true);
+    };
+    window.addEventListener(OPEN_PRIVACY_SETTINGS_EVENT, openSettings);
+    return () => window.removeEventListener(OPEN_PRIVACY_SETTINGS_EVENT, openSettings);
+  }, [choice, enabled]);
 
   if (!enabled) return null;
 

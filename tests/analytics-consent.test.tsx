@@ -1,7 +1,7 @@
 import { cleanup, fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { AnalyticsConsent } from "@/components/analytics-consent";
-import { ANALYTICS_CONSENT_KEY } from "@/lib/analytics";
+import { ANALYTICS_CONSENT_KEY, OPEN_PRIVACY_SETTINGS_EVENT } from "@/lib/analytics";
 
 describe("AnalyticsConsent", () => {
   beforeEach(() => {
@@ -47,5 +47,11 @@ describe("AnalyticsConsent", () => {
       expect.arrayContaining(["config", "G-ABC12345"]),
       expect.arrayContaining(["event", "page_view"]),
     ]));
+  });
+
+  it("opens privacy settings from the dashboard sidebar trigger", async () => {
+    render(<AnalyticsConsent measurementId="G-ABC12345" />);
+    fireEvent(window, new Event(OPEN_PRIVACY_SETTINGS_EVENT));
+    expect(await screen.findByRole("dialog", { name: "Ustawienia prywatności" })).toBeInTheDocument();
   });
 });

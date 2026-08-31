@@ -76,6 +76,7 @@ describe("parent panel actions", () => {
     // One shared sidebar component plus the non-student account settings.
     expect(panel.match(/<a href="\/polityka-prywatnosci">Polityka prywatności<\/a>/g)).toHaveLength(2);
     expect(panel).toContain('function DashboardLegalNav()');
+    expect(panel).toContain("window.dispatchEvent(new Event(OPEN_PRIVACY_SETTINGS_EVENT))");
     expect(panel).not.toContain("ThemeToggle");
     expect(panel).toContain('<span>Wygląd aplikacji</span><ThemeSettings />');
   });

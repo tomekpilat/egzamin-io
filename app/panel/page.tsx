@@ -26,6 +26,7 @@ import { getSupabaseClient } from "@/lib/supabase-browser";
 import { LEGAL_VERSION } from "@/lib/legal";
 import { FEEDBACK_CATEGORIES, feedbackStatusLabels, type FeedbackStatus } from "@/lib/feedback";
 import { resolveAccountRoute } from "@/lib/account-routing";
+import { OPEN_PRIVACY_SETTINGS_EVENT } from "@/lib/analytics";
 
 type Profile = {
   id: string;
@@ -84,6 +85,7 @@ function DashboardLegalNav() {
     <a href="/polityka-prywatnosci">Polityka prywatności</a>
     <a href="/polityka-cookies">Pliki cookie</a>
     <a href="/bezpieczenstwo-dzieci-ai">Dzieci i AI</a>
+    <button type="button" onClick={() => window.dispatchEvent(new Event(OPEN_PRIVACY_SETTINGS_EVENT))}>Ustawienia prywatności</button>
   </nav>;
 }
 

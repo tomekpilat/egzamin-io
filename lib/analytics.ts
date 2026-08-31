@@ -1,5 +1,6 @@
 export const ANALYTICS_CONSENT_VERSION = "2026-08-25-ga4-v1";
 export const ANALYTICS_CONSENT_KEY = "egzaminio:privacy-consent";
+export const OPEN_PRIVACY_SETTINGS_EVENT = "egzaminio:open-privacy-settings";
 export const ANALYTICS_CONSENT_MAX_AGE_DAYS = 180;
 export const ANALYTICS_COOKIE_MAX_AGE_SECONDS = 60 * 60 * 24 * 90;
 
