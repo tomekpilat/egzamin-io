@@ -1900,7 +1900,8 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
 :root:not(.dark) .design-home-hero-image { background: #fff3d6; border: 0; border-radius: 14px; }
 :root:not(.dark) .design-home-section { background: var(--paper); }
 :root:not(.dark) .design-process-list > div { padding: 20px 22px; background: #fff; border: 1px solid var(--border); border-radius: 12px; }
-:root:not(.dark) .design-process-list > div > span { color: #20180a; background: var(--gold); border: 0; }
+:root:not(.dark) .design-process-list > div { grid-template-columns: 26px minmax(0, 1fr); gap: 14px; }
+:root:not(.dark) .design-process-list > div > span { width: 26px; height: 26px; color: var(--gold-deep); background: transparent; border: 0; border-radius: 0; }
 :root:not(.dark) .design-task-preview { overflow: hidden; background: #fff; border-color: var(--border); border-radius: 14px; }
 :root:not(.dark) .design-task-bar { color: var(--gold-deep); background: var(--gold-wash); border-bottom-color: var(--subtle-line); }
 :root:not(.dark) .design-task-answers button.selected { background: var(--gold-wash); border-color: var(--gold-strong); }
@@ -1911,7 +1912,8 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
 :root:not(.dark) .design-ai-hint span { color: #fff; }
 :root:not(.dark) .design-subjects-grid article { background: #fff; border-color: var(--border); border-radius: 12px; }
 :root:not(.dark) .design-subjects-grid article > svg,
-:root:not(.dark) .design-subjects-grid article > span:first-child { color: #20180a; background: var(--gold); }
+:root:not(.dark) .design-subjects-grid article > span:first-child { color: var(--gold-deep); background: transparent; }
+:root:not(.dark) .design-subjects-grid article > span:first-child { width: 23px; height: 23px; margin-bottom: 5px; display: inline-grid; place-items: center; border: 0; border-radius: 0; }
 :root:not(.dark) #rodzice.design-home-section-card { background: var(--gold-soft); }
 :root:not(.dark) .design-parent-grid { gap: 16px; background: transparent; border: 0; }
 :root:not(.dark) .design-parent-grid > div { background: #fff; border: 1px solid var(--border); border-radius: 12px; }
@@ -1980,9 +1982,11 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
 .dark .design-home-actions > :last-child { color: #20180a; background: #fff; border-color: #fff; }
 .dark .design-home-trust { border-top-color: #dfaa29; }
 .dark .design-home-hero-image { background: #fff3d6; border: 0; border-radius: 14px; }
-.dark .design-process-list > div > span,
+.dark .design-process-list > div { grid-template-columns: 26px minmax(0, 1fr); gap: 14px; }
+.dark .design-process-list > div > span { width: 26px; height: 26px; color: var(--gold); background: transparent; border: 0; border-radius: 0; }
 .dark .design-subjects-grid article > svg,
-.dark .design-subjects-grid article > span:first-child { color: #20180a; background: var(--gold); border-color: var(--gold); }
+.dark .design-subjects-grid article > span:first-child { color: var(--gold); background: transparent; border-color: transparent; }
+.dark .design-subjects-grid article > span:first-child { width: 23px; height: 23px; margin-bottom: 5px; display: inline-grid; place-items: center; border: 0; border-radius: 0; }
 .dark .design-task-bar { color: var(--gold); background: var(--gold-wash); }
 .dark .design-task-answers button.selected { background: var(--gold-wash); border-color: var(--gold-strong); }
 .dark .design-task-answers button.selected b { color: #20180a; background: var(--gold); border-color: var(--gold); }
