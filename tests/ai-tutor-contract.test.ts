@@ -14,6 +14,8 @@ describe("AI tutor end-to-end contract", () => {
     expect(route).toContain("getSupabaseServiceClient");
     expect(provider).toContain("process.env.DEEPSEEK_API_KEY");
     expect(provider).toContain('thinking: { type: "disabled" }');
+    expect(provider).toContain("Odpowiedz po polsku");
+    expect(provider).toContain("polishResponseReminder");
     expect(provider).toContain("pseudonymousUserId");
     expect(component).not.toContain("DEEPSEEK_API_KEY");
     expect(component).not.toContain("SUPABASE_SERVICE_ROLE_KEY");

@@ -14,6 +14,18 @@ WORKDIR /assets
 
 COPY public/cke ./cke
 
+# Vinext records public-file paths while compiling. Give the builder the full
+# directory structure as zero-byte placeholders, then overwrite those files
+# with the real media in the runner image. This keeps the generated route list
+# correct without making Vite process hundreds of megabytes of binary data.
+FROM cke-assets AS cke-placeholders
+
+RUN find /assets/cke -type f | while IFS= read -r source_file; do \
+      relative_path="${source_file#/assets/cke/}"; \
+      mkdir -p "/placeholders/$(dirname "$relative_path")"; \
+      : > "/placeholders/$relative_path"; \
+    done
+
 FROM node:24-alpine AS builder
 
 WORKDIR /app
@@ -29,6 +41,7 @@ COPY public/google-g-official.svg ./public/google-g-official.svg
 COPY public/og.png ./public/og.png
 COPY public/rodzic-i-uczen-nauka.png ./public/rodzic-i-uczen-nauka.png
 COPY public/uczen-nauka-logowanie.png ./public/uczen-nauka-logowanie.png
+COPY --from=cke-placeholders /placeholders ./public/cke
 COPY components.json next-env.d.ts next.config.ts postcss.config.mjs server.mjs tsconfig.json vite.config.ts ./
 
 ENV NODE_ENV=production

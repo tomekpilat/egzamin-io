@@ -84,12 +84,17 @@ const genericTaskQuestions = [
   /^(?:wyja[śs]nij|wyt[łl]umacz) (?:mi )?(?:odpowied[źz] [a-d]|t[eę] odpowied[źz]|ten krok|ten wynik)[?!. ]*$/i,
   /^(?:czy )?(?:moja |ta )?odpowied[źz] (?:jest )?(?:dobra|poprawna|b[łl][eę]dna)[?!. ]*$/i,
   /^(?:tak|nie|dok[łl]adnie|dalej|jeszcze raz)[?!. ]*$/i,
+  /^(?:(?:nadal|wci[aą][żz]|ci[aą]gle|dalej) )?(?:tego )?nie (?:rozumiem|wiem|jestem pewn(?:y|a))(?:,? co dalej)?[?!. ]*$/i,
+  /^(?:a )?(?:co dalej|co teraz|i co dalej|i co teraz|a potem|mo[żz]esz kontynuowa[ćc]|powiedz to inaczej|wyja[śs]nij to inaczej)[?!. ]*$/i,
+  /^(?:poka[żz]|daj) (?:mi )?(?:inny|kolejny|prostszy) przyk[łl]ad[?!. ]*$/i,
 ];
 
 const candidateAnswerQuestions = [
   /^(?:(?:a\s+)?czy(?:\s+to)?\s+(?:mo[żz]e\s+by[ćc]|wyjdzie|b[eę]dzie)|(?:mi\s+)?wysz[łl]o|mam(?:\s+wynik)?|otrzyma[łl](?:em|am)|my[śs]l[eę],?\s+[żz]e).{1,100}[?!. ]*$/i,
   /^(?:a\s+)?czy\s+(?:to\s+)?(?:odpowied[źz]\s+)?[a-d](?:\s+jest)?(?:\s+(?:dobra|poprawna|b[łl][eę]dna))?[?!. ]*$/i,
 ];
+
+const conversationalFollowUpPattern = /(?:nie (?:jestem )?pewn|nie rozumiem|mam (?:jeszcze )?(?:w[aą]tpliwo[śs]ci|problem)|(?:wyja[śs]nij|wyt[łl]umacz|powiedz).{0,30}(?:pro[śs]ciej|inaczej|jeszcze raz)|mo[żz]esz.{0,30}(?:dalej|kontynuowa[ćc]|wyja[śs]ni[ćc]|wyt[łl]umaczy[ćc])|co dalej|co teraz|a potem|kolejn(?:y|a) (?:krok|podpowied[źz])|prostszy przyk[łl]ad)/i;
 
 const learningIntentPattern = /(?:dlaczego|jak|sk[aą]d|co oznacza|wyja[śs]nij|wyt[łl]umacz|pom[oó][żz]|podpowied|oblicz|policz|sprawd[źz]|regu[łl]|wz[oó]r|krok|odpowied[źz]|wynik|zdani|s[łl]ow|czas|forma|procent|u[łl]amek|explain|why|how|hint|step|answer)/i;
 
@@ -112,6 +117,7 @@ export function validateTutorScope(message: string, context: TutorScopeContext):
     return { ok: false, code: "off_topic", message: "Nauczyciel AI odpowiada wyłącznie na pytania dotyczące aktualnego zadania." };
   }
   if (genericTaskQuestions.some((pattern) => pattern.test(message))) return { ok: true };
+  if (message.length <= 180 && conversationalFollowUpPattern.test(message)) return { ok: true };
   const messageRoots = normalizedRoots(message);
   const contextRoots = normalizedRoots([
     context.topic,
@@ -174,6 +180,7 @@ export function buildTutorSystemPrompt(context: TutorQuestionContext): string {
   return [
     "Masz na imię Maia. Jesteś spokojną, życzliwą nauczycielką przygotowującą ósmoklasistę do egzaminu.",
     "Pisz naturalnie i po ludzku, jak cierpliwa nauczycielka w rozmowie jeden na jeden. Bądź konkretna, wspierająca i bez sztucznego entuzjazmu. Nie przedstawiaj się ponownie w każdej odpowiedzi.",
+    "Zawsze odpowiadaj po polsku, niezależnie od języka zadania i języka pytania ucznia. W języku obcym zapisuj wyłącznie analizowane słowo, zdanie lub krótki przykład, a całe objaśnienie, wskazówki i pytania kontrolne formułuj po polsku.",
     "Odpowiadasz wyłącznie o aktualnym zadaniu. Nie prosisz o imię, szkołę, adres ani inne dane osobowe.",
     "Stosuj metodę podpowiedź → krok → krótkie sprawdzenie zrozumienia. Nie podawaj bezrefleksyjnie samej litery odpowiedzi.",
     "Zatwierdzony klucz odpowiedzi i opracowanie są nadrzędne. Nie zmieniaj ich. Jeśli pytanie wykracza poza kontekst, skieruj rozmowę z powrotem do zadania.",

@@ -57,6 +57,8 @@ describe("AI tutor validation and prompt", () => {
     const prompt = buildTutorSystemPrompt(context);
     expect(prompt).toContain("Masz na imię Maia");
     expect(prompt).toContain("Pisz naturalnie i po ludzku");
+    expect(prompt).toContain("Zawsze odpowiadaj po polsku");
+    expect(prompt).toContain("W języku obcym zapisuj wyłącznie analizowane słowo");
     expect(prompt).toContain("Zatwierdzony klucz: {\"correct_index\":1}");
     expect(prompt).toContain("Nie zmieniaj ich");
     expect(prompt).toContain("MathJax");
@@ -82,6 +84,11 @@ describe("AI tutor validation and prompt", () => {
     expect(validateTutorScope("A może 8338?", codeContext)).toEqual({ ok: true });
     expect(validateTutorScope("Czy odpowiedź B jest poprawna?", codeContext)).toEqual({ ok: true });
     expect(validateTutorScope("Czy X = 9?", codeContext)).toEqual({ ok: true });
+    expect(validateTutorScope("Ciągle nie jestem pewny", codeContext)).toEqual({ ok: true });
+    expect(validateTutorScope("Nadal tego nie rozumiem", codeContext)).toEqual({ ok: true });
+    expect(validateTutorScope("Możesz kontynuować?", codeContext)).toEqual({ ok: true });
+    expect(validateTutorScope("Pokaż mi prostszy przykład", codeContext)).toEqual({ ok: true });
+    expect(validateTutorScope("Wciąż mam wątpliwości, możesz powiedzieć to prościej?", codeContext)).toEqual({ ok: true });
   });
 
   it("blocks unrelated requests and prompt injection before model use", () => {

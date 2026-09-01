@@ -51,6 +51,7 @@ export async function askTutorProvider(
   const timeoutMs = numericEnv("AI_TIMEOUT_MS", 25_000);
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), timeoutMs);
+  const polishResponseReminder = "Odpowiedz po polsku. Fragmentów w języku obcym używaj tylko jako krótkich przykładów i zawsze objaśniaj je po polsku.";
 
   try {
     const response = await fetch(`${baseUrl}/chat/completions`, {
@@ -65,7 +66,7 @@ export async function askTutorProvider(
         messages: [
           { role: "system", content: buildTutorSystemPrompt(context) },
           ...context.history,
-          { role: "user", content: userMessage },
+          { role: "user", content: `${userMessage}\n\n${polishResponseReminder}` },
         ],
         thinking: { type: "disabled" },
         temperature: 0.2,

@@ -25,6 +25,8 @@ describe("Coolify Docker build", () => {
   it("keeps large CKE media outside Vite and restores it in the runtime image", () => {
     expect(dockerfile).toContain("FROM node:24-alpine AS cke-assets");
     expect(dockerfile).toContain("COPY public/cke ./cke");
+    expect(dockerfile).toContain("FROM cke-assets AS cke-placeholders");
+    expect(dockerfile).toContain("COPY --from=cke-placeholders /placeholders ./public/cke");
     expect(dockerfile).toContain("COPY --from=cke-assets --chown=node:node /assets/cke ./dist/client/cke");
     expect(dockerfile).not.toContain("COPY . .");
     expect(dockerignore).toContain("content\n");
