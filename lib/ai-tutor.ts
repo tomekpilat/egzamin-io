@@ -1,5 +1,6 @@
-export const FREE_AI_QUESTIONS_PER_DAY = 0;
-export const PLUS_AI_QUESTIONS_PER_DAY = 50;
+import { FREE_AI_QUESTIONS_PER_DAY, PLUS_AI_QUESTIONS_PER_DAY } from "@/lib/plans";
+
+export { FREE_AI_QUESTIONS_PER_DAY, PLUS_AI_QUESTIONS_PER_DAY };
 export const AI_MESSAGE_MAX_LENGTH = 600;
 export const AI_HISTORY_MESSAGE_LIMIT = 8;
 
@@ -82,6 +83,12 @@ const genericTaskQuestions = [
   /^(?:dlaczego )?(?:w tym zadaniu )?(?:odpowied[źz] [a-d]|ta odpowied[źz]|ten wynik|ten krok)(?: jest)? (?:poprawn[ay]|b[łl][eę]dn[ay]|taki)[?!. ]*$/i,
   /^(?:wyja[śs]nij|wyt[łl]umacz) (?:mi )?(?:odpowied[źz] [a-d]|t[eę] odpowied[źz]|ten krok|ten wynik)[?!. ]*$/i,
   /^(?:czy )?(?:moja |ta )?odpowied[źz] (?:jest )?(?:dobra|poprawna|b[łl][eę]dna)[?!. ]*$/i,
+  /^(?:tak|nie|dok[łl]adnie|dalej|jeszcze raz)[?!. ]*$/i,
+];
+
+const candidateAnswerQuestions = [
+  /^(?:(?:a\s+)?czy(?:\s+to)?\s+(?:mo[żz]e\s+by[ćc]|wyjdzie|b[eę]dzie)|(?:mi\s+)?wysz[łl]o|mam(?:\s+wynik)?|otrzyma[łl](?:em|am)|my[śs]l[eę],?\s+[żz]e).{1,100}[?!. ]*$/i,
+  /^(?:a\s+)?czy\s+(?:to\s+)?(?:odpowied[źz]\s+)?[a-d](?:\s+jest)?(?:\s+(?:dobra|poprawna|b[łl][eę]dna))?[?!. ]*$/i,
 ];
 
 const learningIntentPattern = /(?:dlaczego|jak|sk[aą]d|co oznacza|wyja[śs]nij|wyt[łl]umacz|pom[oó][żz]|podpowied|oblicz|policz|sprawd[źz]|regu[łl]|wz[oó]r|krok|odpowied[źz]|wynik|zdani|s[łl]ow|czas|forma|procent|u[łl]amek|explain|why|how|hint|step|answer)/i;
@@ -93,8 +100,8 @@ const contextStopWords = new Set([
 function normalizedRoots(value: string) {
   const normalized = value.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
   return new Set((normalized.match(/[a-z0-9]+/g) ?? [])
-    .filter((word) => word.length >= 4 && !contextStopWords.has(word))
-    .map((word) => word.length > 6 ? word.slice(0, 6) : word));
+    .filter((word) => (/^\d+$/.test(word) || word.length >= 4) && !contextStopWords.has(word))
+    .map((word) => /^\d+$/.test(word) ? word : word.length > 6 ? word.slice(0, 6) : word));
 }
 
 export function validateTutorScope(message: string, context: TutorScopeContext): TutorScopeValidation {
@@ -105,11 +112,6 @@ export function validateTutorScope(message: string, context: TutorScopeContext):
     return { ok: false, code: "off_topic", message: "Nauczyciel AI odpowiada wyłącznie na pytania dotyczące aktualnego zadania." };
   }
   if (genericTaskQuestions.some((pattern) => pattern.test(message))) return { ok: true };
-
-  const hasIntent = learningIntentPattern.test(message);
-  if (!hasIntent) {
-    return { ok: false, code: "off_topic", message: "Zapytaj o treść, odpowiedź albo kolejny krok w aktualnym zadaniu." };
-  }
   const messageRoots = normalizedRoots(message);
   const contextRoots = normalizedRoots([
     context.topic,
@@ -121,6 +123,12 @@ export function validateTutorScope(message: string, context: TutorScopeContext):
   ].join(" "));
   const overlapsContext = [...messageRoots].some((root) => contextRoots.has(root));
   if (overlapsContext) return { ok: true };
+  if (candidateAnswerQuestions.some((pattern) => pattern.test(message))) return { ok: true };
+
+  const hasIntent = learningIntentPattern.test(message);
+  if (!hasIntent) {
+    return { ok: false, code: "off_topic", message: "Zapytaj o treść, odpowiedź albo kolejny krok w aktualnym zadaniu." };
+  }
 
   return { ok: false, code: "off_topic", message: "Nauczyciel AI odpowiada wyłącznie na pytania dotyczące aktualnego zadania." };
 }
