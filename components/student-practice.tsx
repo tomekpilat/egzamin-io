@@ -10,6 +10,7 @@ import { Progress } from "@/components/ui/progress";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { getSupabaseClient } from "@/lib/supabase-browser";
+import { practiceSubmissionDiagnostic, practiceSubmissionErrorMessage } from "@/lib/practice-submission-error";
 import { isSubjectKey, SUBJECT_KEYS, SubjectIcon, subjectLabels, type SubjectKey } from "@/components/subject-icon";
 import { AiTutor } from "@/components/ai-tutor";
 import { ThemeSettings } from "@/components/theme-settings";
@@ -752,8 +753,8 @@ export function StudentPractice({
         if (!progressError) setPaperProgress(((progressData as Record<string, unknown>[] | null) ?? []).map(normalizePaperProgress));
       }
     } catch (submitFailure) {
-      const message = submitFailure instanceof Error ? submitFailure.message : String((submitFailure as { message?: unknown })?.message ?? "");
-      setError(message.includes("practice_daily_limit_reached") ? "Dzisiejszy limit 15 pytań został wykorzystany. Nadal możesz przeglądać wszystkie arkusze albo odblokować ćwiczenia bez limitu w Plus." : "Nie udało się zapisać odpowiedzi. Spróbuj ponownie.");
+      console.error("[practice-response] Submission failed", practiceSubmissionDiagnostic(submitFailure));
+      setError(practiceSubmissionErrorMessage(submitFailure));
     } finally {
       setSubmitting(false);
     }

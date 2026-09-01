@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 
 const read = (path: string) => readFileSync(join(process.cwd(), path), "utf8");
-const migration = read("supabase/migrations/20260829090000_fix_practice_response_submission.sql");
+const migration = read("supabase/migrations/20260901013000_repair_practice_response_runtime.sql");
 const component = read("components/cke-question-content.tsx");
 const dialog = read("components/ui/dialog.tsx");
 const css = read("app/redesign.css");
@@ -33,6 +33,7 @@ describe("practice response and image enlargement regression", () => {
     expect(migration).toContain("practice_daily_limit_reached");
     expect(migration).toContain("event.question_id = target_question_id");
     expect(migration).toContain("Europe/Warsaw");
+    expect(migration).toContain("notify pgrst, 'reload schema'");
   });
 
   it("expands the dialog image to the available viewport instead of intrinsic pixels", () => {
