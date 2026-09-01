@@ -1,4 +1,4 @@
-import { cleanup, render, screen, waitFor } from "@testing-library/react";
+import { cleanup, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import DashboardPage from "@/app/panel/page";
@@ -65,14 +65,14 @@ describe("redesigned parent panel", () => {
     expect(screen.getByRole("link", { name: "Dzieci i AI" })).toHaveAttribute("href", "/bezpieczenstwo-dzieci-ai");
 
     await user.click(screen.getByRole("button", { name: "Dzieci" }));
-    expect(screen.getByRole("heading", { name: "Dzieci" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Twoje dzieci" })).toBeInTheDocument();
     expect(screen.getByText("Kasia Nowak")).toBeInTheDocument();
     expect(screen.getByRole("combobox", { name: "Liczba sesji w tygodniu" })).toBeInTheDocument();
     expect(screen.queryByText("Wariant arkuszy")).not.toBeInTheDocument();
     expect(screen.getByRole("banner")).toHaveTextContent("Dzieci");
 
-    await user.click(screen.getByRole("button", { name: "Podłącz dziecko" }));
-    expect(screen.getByRole("heading", { name: "Podłącz dziecko" })).toBeInTheDocument();
+    await user.click(within(screen.getByRole("navigation", { name: "Panel" })).getByRole("button", { name: "Dodaj dziecko" }));
+    expect(screen.getByRole("heading", { name: "Dodaj dziecko" })).toBeInTheDocument();
     expect(screen.getByText("Dziecko wpisuje Twój e-mail")).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Kopiuj link dla dziecka" })).toBeInTheDocument();
 

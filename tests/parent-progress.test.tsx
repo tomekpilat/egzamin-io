@@ -107,7 +107,7 @@ describe("ParentProgress", () => {
 
   it("shows the connection state without calling progress RPC", () => {
     render(<ParentProgress linkedChildren={[]} pendingRequests={1} onConnect={() => undefined} />);
-    expect(screen.getByText("Połączenie czeka na zatwierdzenie")).toBeInTheDocument();
+    expect(screen.getByText("Prośba czeka na zatwierdzenie")).toBeInTheDocument();
     expect(rpc).not.toHaveBeenCalled();
   });
 

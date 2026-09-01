@@ -152,7 +152,7 @@ function ParentPanel({ activeView, parentEmail, requests, linkedChildren, action
   return (
     <>
       {activeView === "start" && <section className="parent-content-view parent-overview-view" aria-labelledby="parent-overview-title">
-        <div className="dashboard-view-heading parent-overview-heading"><div><h2 id="parent-overview-title">Przegląd</h2><small>Połączone konta, zgody i najważniejsze informacje</small></div><Button variant="outline" type="button" onClick={() => onNavigate("progress")}>Zobacz pełny postęp</Button></div>
+        <div className="dashboard-view-heading parent-overview-heading"><div><h2 id="parent-overview-title">Przegląd</h2><small>Twoje dzieci, zgody i najważniejsze informacje</small></div><Button variant="outline" type="button" onClick={() => onNavigate("progress")}>Zobacz pełny postęp</Button></div>
         {requests.length > 0 && <section className="guardian-requests parent-next-step" aria-labelledby="guardian-requests-title">
           <div className="guardian-section-heading"><div><span className="parent-next-step-label">Następny krok</span><h3 id="guardian-requests-title">Zatwierdź konto dziecka, żeby mogło zacząć naukę</h3></div><small>Sprawdź tożsamość dziecka poza serwisem.</small></div>
           {requests.map((request) => <article className="guardian-request-card" key={request.request_id}>
@@ -162,19 +162,19 @@ function ParentPanel({ activeView, parentEmail, requests, linkedChildren, action
           </article>)}
         </section>}
         <section className="dashboard-grid three-columns parent-overview-metrics">
-          <article className="metric-card"><span>Połączone konta</span><b>{linkedChildren.length}</b><small>Wyłącznie po zatwierdzonej prośbie.</small></article>
+          <article className="metric-card"><span>Twoje dzieci</span><b>{linkedChildren.length}</b><small>Dodane po zatwierdzeniu prośby.</small></article>
           <article className="metric-card"><span>Cel tygodniowy</span><b>{totalWeeklyGoal || "—"}</b><small>Łączna liczba zaplanowanych sesji.</small></article>
           <article className="metric-card"><span>Prośby o zgodę</span><b>{requests.length}</b><small>{requests.length ? "Czekają na Twoją decyzję." : "Brak oczekujących próśb."}</small></article>
         </section>
         <section className="dashboard-card parent-overview-children">
-          <div className="guardian-section-heading"><div><h3>Podłączone dzieci</h3><small>Postęp, cel tygodniowy i dostęp Plus ustawiasz osobno.</small></div><Button variant="outline" size="sm" type="button" onClick={() => onNavigate("connect")}>Podłącz kolejne</Button></div>
-          {linkedChildren.length ? <div className="parent-overview-child-list">{linkedChildren.map((child) => <button type="button" key={child.student_id} onClick={() => onNavigate("progress")}><span className="guardian-avatar">{(child.student_display_name || child.student_email).slice(0, 2).toUpperCase()}</span><span><b>{child.student_display_name || "Uczeń"}</b><small>{child.student_email}</small></span><Badge variant={child.plan_tier === "plus" ? "secondary" : "outline"}>{child.plan_tier === "plus" ? "Plus aktywny" : "Plan Free"}</Badge><em>Postęp</em></button>)}</div> : <div className="parent-overview-empty"><p>Nie ma jeszcze połączonych kont dzieci.</p><Button type="button" onClick={() => onNavigate("connect")}>Połącz konto dziecka</Button></div>}
+          <div className="guardian-section-heading"><div><h3>Twoje dzieci</h3><small>Postęp, cel tygodniowy i dostęp Plus ustawiasz osobno.</small></div><Button variant="outline" size="sm" type="button" onClick={() => onNavigate("connect")}>Dodaj dziecko</Button></div>
+          {linkedChildren.length ? <div className="parent-overview-child-list">{linkedChildren.map((child) => <button type="button" key={child.student_id} onClick={() => onNavigate("progress")}><span className="guardian-avatar">{(child.student_display_name || child.student_email).slice(0, 2).toUpperCase()}</span><span><b>{child.student_display_name || "Uczeń"}</b><small>{child.student_email}</small></span><Badge variant={child.plan_tier === "plus" ? "secondary" : "outline"}>{child.plan_tier === "plus" ? "Plus aktywny" : "Plan Free"}</Badge><em>Postęp</em></button>)}</div> : <div className="parent-overview-empty"><p>Nie masz jeszcze dodanych dzieci.</p><Button type="button" onClick={() => onNavigate("connect")}>Dodaj dziecko</Button></div>}
         </section>
-        <p className="parent-overview-privacy">Nie pokazujemy treści rozmów dziecka z Maią AI. Widzisz liczby, tematy, wykorzystanie AI i regularność nauki.</p>
+        <p className="parent-overview-privacy">W panelu widzisz wyniki, tematy, wykorzystanie Mai AI i regularność nauki — wszystko, czego potrzebujesz, by wspierać dziecko.</p>
       </section>}
 
       {activeView === "children" && <section className="parent-content-view parent-children-view" aria-labelledby="parent-children-title">
-        <div className="dashboard-view-heading"><div><h2 id="parent-children-title">Dzieci</h2><small>Połączone konta i indywidualne ustawienia nauki</small></div><Button type="button" onClick={() => onNavigate("connect")}>Dodaj dziecko</Button></div>
+        <div className="dashboard-view-heading"><div><h2 id="parent-children-title">Twoje dzieci</h2><small>Postęp i indywidualne ustawienia nauki</small></div><Button type="button" onClick={() => onNavigate("connect")}>Dodaj dziecko</Button></div>
         {requests.length > 0 && <section className="guardian-requests" aria-labelledby="children-requests-title">
           <div className="guardian-section-heading"><div><Badge variant="secondary">Wymaga decyzji</Badge><h3 id="children-requests-title">Prośby o zgodę opiekuna</h3></div><small>Sprawdź tożsamość dziecka poza serwisem przed zatwierdzeniem.</small></div>
           {requests.map((request) => <article className="guardian-request-card" key={request.request_id}>
@@ -183,7 +183,7 @@ function ParentPanel({ activeView, parentEmail, requests, linkedChildren, action
             <div className="guardian-request-actions"><Button size="sm" onClick={() => onApprove(request.request_id)} disabled={Boolean(actionBusy)}>Zatwierdź</Button><Button size="sm" variant="outline" onClick={() => onReject(request.request_id)} disabled={Boolean(actionBusy)}>Odrzuć</Button></div>
           </article>)}
         </section>}
-        {linkedChildren.length > 0 ? <section className="linked-children"><div className="guardian-section-heading"><div><Badge variant="secondary">Ustawienia nauki</Badge><h3>Połączone konta dzieci</h3></div><small>Cel tygodniowy ustawiasz osobno dla każdego dziecka.</small></div>{linkedChildren.map((child) => <ChildSettingsCard key={child.student_id} child={child} busy={actionBusy === child.student_id} onSave={onSavePreferences} />)}</section> : <Card className="parent-empty-view"><CardHeader><CardTitle>Nie ma jeszcze połączonych kont</CardTitle><CardDescription>Wyślij dziecku link rejestracyjny. Po zatwierdzeniu prośby zobaczysz je tutaj.</CardDescription></CardHeader><CardContent><Button type="button" onClick={() => onNavigate("connect")}>Połącz konto dziecka</Button></CardContent></Card>}
+        {linkedChildren.length > 0 ? <section className="linked-children"><div className="guardian-section-heading"><div><Badge variant="secondary">Ustawienia nauki</Badge><h3>Ustawienia dzieci</h3></div><small>Cel tygodniowy ustawiasz osobno dla każdego dziecka.</small></div>{linkedChildren.map((child) => <ChildSettingsCard key={child.student_id} child={child} busy={actionBusy === child.student_id} onSave={onSavePreferences} />)}</section> : <Card className="parent-empty-view"><CardHeader><CardTitle>Nie masz jeszcze dodanych dzieci</CardTitle><CardDescription>Wyślij dziecku link rejestracyjny. Gdy zatwierdzisz prośbę, zobaczysz je tutaj.</CardDescription></CardHeader><CardContent><Button type="button" onClick={() => onNavigate("connect")}>Dodaj dziecko</Button></CardContent></Card>}
       </section>}
 
       {activeView === "progress" && <ParentProgress linkedChildren={linkedChildren} pendingRequests={requests.length} onConnect={() => onNavigate(requests.length ? "children" : "connect")} />}
@@ -191,9 +191,9 @@ function ParentPanel({ activeView, parentEmail, requests, linkedChildren, action
       {activeView === "payments" && <ParentPayments linkedChildren={linkedChildren} onConnect={() => onNavigate("connect")} />}
 
       {activeView === "connect" && <section className="parent-content-view parent-connect-view" aria-labelledby="parent-connect-title">
-        <div className="dashboard-view-heading"><div><h2 id="parent-connect-title">Podłącz dziecko</h2><small>Zaproś ucznia i zatwierdź bezpieczne połączenie kont</small></div></div>
+        <div className="dashboard-view-heading"><div><h2 id="parent-connect-title">Dodaj dziecko</h2><small>Zaproś ucznia i zatwierdź jego konto</small></div></div>
         <Card className="parent-connect-card">
-          <CardHeader><Badge variant="secondary">Działa od razu</Badge><CardTitle>Połącz konto dziecka</CardTitle><CardDescription>Wyślij link i swój e-mail. Po rejestracji prośba o zgodę pojawi się w widoku „Dzieci”.</CardDescription></CardHeader>
+          <CardHeader><Badge variant="secondary">Działa od razu</Badge><CardTitle>Dodaj dziecko do swojego konta</CardTitle><CardDescription>Wyślij link i swój e-mail. Po rejestracji prośba o zgodę pojawi się w widoku „Twoje dzieci”.</CardDescription></CardHeader>
           <CardContent><div className="parent-connect-steps"><span><b>1</b>Wyślij link</span><span><b>2</b>Dziecko wpisuje Twój e-mail</span><span><b>3</b>Zatwierdzasz prośbę</span></div><div className="parent-connect-actions"><Button type="button" onClick={() => void copyInvite()}>Kopiuj link dla dziecka</Button><Button variant="outline" type="button" onClick={() => void copyGuardianEmail()}>Kopiuj mój e-mail</Button><Button variant="outline" asChild><a href={`mailto:?subject=${encodeURIComponent("Zaproszenie do egzaminio")}&body=${encodeURIComponent(`Załóż konto ucznia przez ten link: ${publicInviteUrl}\nW polu opiekuna wpisz: ${parentEmail}`)}`}>Wyślij e-mailem</a></Button><Button variant="ghost" asChild><a href="/bezpieczenstwo-dzieci-ai">Jak chronimy dane?</a></Button></div>{inviteStatus && <p className="parent-invite-status" role="status">{inviteStatus}</p>}</CardContent>
         </Card>
       </section>}
@@ -398,7 +398,7 @@ export default function DashboardPage() {
       const { error: decisionError } = await supabase.rpc(functionName, { target_request_id: requestId });
       if (decisionError) throw decisionError;
       await refreshParentData();
-      setActionMessage(decision === "approve" ? "Konto dziecka zostało połączone." : "Prośba została odrzucona.");
+      setActionMessage(decision === "approve" ? "Dziecko zostało dodane do Twojego konta." : "Prośba została odrzucona.");
     } catch {
       setActionError("Nie udało się zapisać decyzji opiekuna. Odśwież stronę i spróbuj ponownie.");
     } finally {
@@ -511,7 +511,7 @@ export default function DashboardPage() {
     start: "Przegląd",
     progress: "Postęp dziecka",
     children: "Dzieci",
-    connect: "Podłącz dziecko",
+    connect: "Dodaj dziecko",
     payments: "Płatności i faktury",
     settings: "Ustawienia",
   };
@@ -544,7 +544,7 @@ export default function DashboardPage() {
             <button type="button" className={parentView === "start" ? "active" : ""} aria-current={parentView === "start" ? "page" : undefined} onClick={() => setParentView("start")}><LayoutDashboard className="parent-nav-icon" aria-hidden="true" /><span>Przegląd</span></button>
             <button type="button" className={parentView === "progress" ? "active" : ""} aria-current={parentView === "progress" ? "page" : undefined} onClick={() => setParentView("progress")}><ChartNoAxesColumnIncreasing className="parent-nav-icon" aria-hidden="true" /><span>Postęp dziecka</span></button>
             <button type="button" className={`${parentView === "children" ? "active " : ""}dashboard-nav-with-count`.trim()} aria-current={parentView === "children" ? "page" : undefined} onClick={() => setParentView("children")}><Users className="parent-nav-icon" aria-hidden="true" /><span>Dzieci</span>{guardianRequests.length > 0 && <b>{guardianRequests.length}</b>}</button>
-            <button type="button" className={parentView === "connect" ? "active" : ""} aria-current={parentView === "connect" ? "page" : undefined} onClick={() => setParentView("connect")}><UserPlus className="parent-nav-icon" aria-hidden="true" /><span>Podłącz dziecko</span></button>
+            <button type="button" className={parentView === "connect" ? "active" : ""} aria-current={parentView === "connect" ? "page" : undefined} onClick={() => setParentView("connect")}><UserPlus className="parent-nav-icon" aria-hidden="true" /><span>Dodaj dziecko</span></button>
             <button type="button" className={parentView === "payments" ? "active" : ""} aria-current={parentView === "payments" ? "page" : undefined} onClick={() => setParentView("payments")}><CreditCard className="parent-nav-icon" aria-hidden="true" /><span>Płatności i faktury</span></button>
             <button type="button" className={parentView === "settings" ? "active" : ""} aria-current={parentView === "settings" ? "page" : undefined} onClick={() => setParentView("settings")}><SettingsIcon className="parent-nav-icon" aria-hidden="true" /><span>Ustawienia</span></button>
           </> : <>
@@ -554,7 +554,7 @@ export default function DashboardPage() {
             <a href="#ustawienia">Ustawienia</a>
           </>}
         </nav>
-        <div className="sidebar-plan"><b>{parentPlusChildren ? `Pakiet Plus · ${parentPlusChildren}` : "Wersja bezpłatna"}</b><span>{parentPlusChildren ? "Aktywny dla połączonych dzieci" : "15 interaktywnych pytań dziennie"}</span><i><em /></i>{profile.role === "parent" ? <button type="button" onClick={() => setParentView("payments")}>{parentPlusChildren ? "Płatności i dokumenty →" : "Poznaj pakiet Plus →"}</button> : <a href="/plan-plus">Poznaj pakiet Plus →</a>}</div>
+        <div className="sidebar-plan"><b>{parentPlusChildren ? `Pakiet Plus · ${parentPlusChildren}` : "Wersja bezpłatna"}</b><span>{parentPlusChildren ? "Aktywny dla Twoich dzieci" : "15 interaktywnych pytań dziennie"}</span><i><em /></i>{profile.role === "parent" ? <button type="button" onClick={() => setParentView("payments")}>{parentPlusChildren ? "Płatności i dokumenty →" : "Poznaj pakiet Plus →"}</button> : <a href="/plan-plus">Poznaj pakiet Plus →</a>}</div>
         {profile.role === "parent" ? <DashboardLegalNav /> : null}
       </aside>}
 

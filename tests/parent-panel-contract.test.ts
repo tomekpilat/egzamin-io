@@ -90,6 +90,6 @@ describe("parent panel actions", () => {
     expect(panel).not.toContain("Raporty e-mail");
     expect(panel).not.toContain("Tygodniowy raport");
     expect(panel).toContain("Zobacz pełny postęp");
-    expect(panel).toContain("wykorzystanie AI");
+    expect(panel).toContain("wykorzystanie Mai AI");
   });
 });

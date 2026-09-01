@@ -155,7 +155,7 @@ export function ParentProgress({ linkedChildren, pendingRequests, onConnect }: {
     return (
       <section className="parent-content-view parent-progress-view" aria-labelledby="parent-progress-empty-title">
         <div className="dashboard-view-heading"><div><h2>Postęp dziecka</h2><small>Wyniki, regularność i wykorzystanie pomocy AI</small></div></div>
-        <Card className="parent-empty-view"><CardHeader><CardTitle id="parent-progress-empty-title">{pendingRequests ? "Połączenie czeka na zatwierdzenie" : "Najpierw połącz konto dziecka"}</CardTitle><CardDescription>{pendingRequests ? "Po zatwierdzeniu prośby pierwsze wyniki pojawią się tutaj automatycznie." : "Wyślij dziecku link rejestracyjny i zatwierdź relację, aby zobaczyć postęp."}</CardDescription></CardHeader><CardContent><Button type="button" onClick={onConnect}>{pendingRequests ? "Przejdź do próśb" : "Połącz konto dziecka"}</Button></CardContent></Card>
+        <Card className="parent-empty-view"><CardHeader><CardTitle id="parent-progress-empty-title">{pendingRequests ? "Prośba czeka na zatwierdzenie" : "Najpierw dodaj dziecko"}</CardTitle><CardDescription>{pendingRequests ? "Po zatwierdzeniu prośby pierwsze wyniki pojawią się tutaj automatycznie." : "Wyślij dziecku link rejestracyjny i zatwierdź jego konto, aby zobaczyć postęp."}</CardDescription></CardHeader><CardContent><Button type="button" onClick={onConnect}>{pendingRequests ? "Przejdź do próśb" : "Dodaj dziecko"}</Button></CardContent></Card>
       </section>
     );
   }
@@ -175,7 +175,7 @@ export function ParentProgress({ linkedChildren, pendingRequests, onConnect }: {
 
       {!hasPlusAccess && <PlusLockedPreview
         title="Szczegółowy postęp dziecka jest dostępny w Plus"
-        description="Połączenie konta pozostaje bezpłatne. Plus odblokowuje rodzicowi czytelny obraz nauki bez pokazywania treści prywatnych rozmów."
+        description="Dodanie dziecka pozostaje bezpłatne. Plus daje rodzicowi czytelny obraz nauki i podpowiada, gdzie warto wesprzeć dziecko."
         href="/panel?widok=platnosci"
         actionLabel="Wykup Plus dla dziecka"
         features={[

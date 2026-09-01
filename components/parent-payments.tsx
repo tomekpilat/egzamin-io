@@ -159,7 +159,7 @@ export function ParentPayments({ linkedChildren, onConnect }: { linkedChildren: 
     <div className="dashboard-view-heading"><div><h2 id="parent-payments-title">Płatności</h2><small>Pakiet Plus, historia zakupów i dokumenty Stripe</small></div><Button variant="outline" type="button" onClick={() => void refresh()} disabled={loading}>Odśwież historię</Button></div>
 
     <div className="parent-payment-summary" aria-label="Podsumowanie płatności">
-      <article><span>Aktywne pakiety Plus</span><b>{activePlusCount}</b><small>dla {linkedChildren.length} {linkedChildren.length === 1 ? "połączonego dziecka" : "połączonych dzieci"}</small></article>
+      <article><span>Aktywne pakiety Plus</span><b>{activePlusCount}</b><small>dla {linkedChildren.length} {linkedChildren.length === 1 ? "dziecka" : "dzieci"}</small></article>
       <article><span>Wartość zakupów</span><b>{formatPaymentAmount(paidTotal, config?.currency ?? "pln")}</b><small>{paidOrders.length} {paidOrders.length === 1 ? "rozliczona płatność" : "rozliczonych płatności"}</small></article>
       <article><span>Model płatności</span><b>Jednorazowy</b><small>149 zł · bez automatycznego odnowienia</small></article>
     </div>
@@ -167,7 +167,7 @@ export function ParentPayments({ linkedChildren, onConnect }: { linkedChildren: 
     {checkoutCancelled && <Alert><AlertTitle>Płatność nie została pobrana</AlertTitle><AlertDescription>Checkout został zamknięty. Możesz wrócić do zakupu w dowolnym momencie.</AlertDescription></Alert>}
     {error && <Alert variant="destructive"><AlertTitle>Nie udało się wykonać operacji</AlertTitle><AlertDescription>{error}</AlertDescription></Alert>}
 
-    {!linkedChildren.length ? <Card className="parent-payment-empty"><CardHeader><CardTitle>Najpierw połącz konto dziecka</CardTitle><CardDescription>Pakiet Plus jest przypisywany do konkretnego ucznia. Połącz konto, aby kupić dostęp i zobaczyć dokumenty płatności.</CardDescription></CardHeader><CardContent><Button type="button" onClick={onConnect}>Połącz konto dziecka</Button></CardContent></Card> : <Card className="parent-payment-checkout">
+    {!linkedChildren.length ? <Card className="parent-payment-empty"><CardHeader><CardTitle>Najpierw dodaj dziecko</CardTitle><CardDescription>Pakiet Plus jest przypisywany do konkretnego ucznia. Dodaj dziecko, aby kupić dostęp i zobaczyć dokumenty płatności.</CardDescription></CardHeader><CardContent><Button type="button" onClick={onConnect}>Dodaj dziecko</Button></CardContent></Card> : <Card className="parent-payment-checkout">
       <CardHeader><div><Badge variant="secondary">Jednorazowo · bez abonamentu</Badge><CardTitle>Pakiet Plus — 149 zł</CardTitle><CardDescription>Interaktywne ćwiczenia bez limitu, do 50 pytań do AI dziennie, śledzenie postępów i powtórki.</CardDescription></div>{config?.accessUntil && <div className="payment-access-date"><span>Dostęp do</span><b>{formatDate(config.accessUntil)}</b></div>}</CardHeader>
       <CardContent>
         <div className="payment-checkout-layout">
