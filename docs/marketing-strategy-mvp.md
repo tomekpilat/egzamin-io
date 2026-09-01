@@ -220,6 +220,18 @@ Test kreatywny powinien porównywać:
 
 Do płatnej promocji wykorzystać zwycięski wariant dopiero po osiągnięciu założonej retencji D7. Nie optymalizować kampanii wyłącznie pod wyświetlenia; celem jest rozpoczęcie pierwszego zadania. Materiał nie może sugerować oficjalnego partnerstwa z CKE, a CTA kierowane do ucznia nie może prowadzić bezpośrednio do zakupu.
 
+#### Film produktowy 18 s: „Policz → Zrozum → Ćwicz”
+
+Drugi przypięty materiał, [egzaminio-tools-social-18s.mp4](marketing/video/egzaminio-tools-social-18s.mp4), poszerza obraz produktu poza arkusze. Pokazuje kolejno kalkulator punktów, bazę wiedzy i naturalną rozmowę z Maią, a dopiero potem domyka ścieżkę ćwiczeniem na zadaniach CKE. Szczegółowy przebieg znajduje się w [storyboardzie](marketing/video/storyboard-tools.md), gotowy tekst narracji w [voiceoverze](marketing/video/voiceover-tools-pl.txt), a okładka w pliku [tools-preview.png](marketing/video/tools-preview.png).
+
+Ten wariant powinien kierować do kalkulatora, dlatego jego podstawowy UTM to:
+
+```text
+https://egzamin.io/kalkulator-punktow-do-liceum?utm_source=instagram&utm_medium=organic_social&utm_campaign=tools_2026&utm_content=tools_18s
+```
+
+Główna metryka: rozpoczęte obliczenie w kalkulatorze. Metryki pomocnicze: ukończenie filmu, przejścia do bazy wiedzy, rozpoczęte rozmowy z Maią i późniejsze rozpoczęcie arkusza.
+
 ### 4. Meta Ads do rodziców
 
 Uruchomić dopiero po osiągnięciu retencji D7. Pierwsze kreacje:

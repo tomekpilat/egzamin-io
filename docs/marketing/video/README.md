@@ -4,9 +4,13 @@ Gotowy materiał pionowy do Reels, TikTok i YouTube Shorts:
 
 - `egzaminio-social-15s.mp4` — 1080 × 1920 px, H.264, wersja działająca bez dźwięku z tekstami wpisanymi w obraz,
 - `egzaminio-runway-social-15s.mp4` — finalny wariant z filmowym otwarciem wygenerowanym w Runway i dokładnym UI produktu,
+- `egzaminio-tools-social-18s.mp4` — drugi film produktowy: kalkulator punktów, baza wiedzy, Maia AI i końcowe przejście do arkuszy,
+- `tools-preview.png` — gotowa okładka drugiego filmu z kadrem rozmowy z Maią,
 - `runway-opening.mp4` — surowe, pięciosekundowe ujęcie wygenerowane w Runway,
 - `voiceover-pl.txt` — tekst narracji,
+- `voiceover-tools-pl.txt` — narracja do filmu „Policz → Zrozum → Ćwicz”,
 - `storyboard.md` — plan ujęć i wskazówki do przygotowania kolejnych wariantów.
+- `storyboard-tools.md` — scenariusz drugiego filmu i jego zastosowania.
 
 Film jest gotowy do publikacji bez dźwięku. Nie sugeruje, że egzaminio jest oficjalnym serwisem CKE. Tekst z `voiceover-pl.txt` można wkleić do funkcji text-to-speech w CapCut albo nagrać własnym głosem.
 
@@ -22,6 +26,14 @@ Skrypt `scripts/render-marketing-video.py` wymaga Pillow oraz FFmpeg:
 python3 scripts/render-marketing-video.py \
   --ffmpeg /ścieżka/do/ffmpeg \
   --output docs/marketing/video/egzaminio-social-15s.mp4
+```
+
+Drugi film renderuje osobny skrypt:
+
+```bash
+python3 scripts/render-content-marketing-video.py \
+  --ffmpeg /ścieżka/do/ffmpeg \
+  --output docs/marketing/video/egzaminio-tools-social-18s.mp4
 ```
 
 ## Edycja
