@@ -10,6 +10,8 @@ Gotowy materiał pionowy do Reels, TikTok i YouTube Shorts:
 
 Film jest gotowy do publikacji bez dźwięku. Nie sugeruje, że egzaminio jest oficjalnym serwisem CKE. Tekst z `voiceover-pl.txt` można wkleić do funkcji text-to-speech w CapCut albo nagrać własnym głosem.
 
+Plan publikacji, opisy, UTM-y i test A/B są opisane w [strategii marketingowej MVP](../../marketing-strategy-mvp.md#film-startowy-15-s-zacznij-od-prawdziwych-zadań).
+
 ## Ponowne renderowanie
 
 Skrypt `scripts/render-marketing-video.py` wymaga Pillow oraz FFmpeg:

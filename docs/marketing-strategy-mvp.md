@@ -170,6 +170,56 @@ Każda strona powinna zawierać jedno pełne ćwiczenie, fragment rozmowy z AI i
 
 TikTok, Shorts i Reels: jeden błąd, jedno zadanie, jedno wyjaśnienie w 30–45 sekund. Treść edukacyjna powinna prowadzić do bezpłatnego ćwiczenia. Nie kierować do dzieci bezpośrednich wezwań do zakupu ani nakłaniania rodziców.
 
+#### Film startowy 15 s: „Zacznij od prawdziwych zadań”
+
+Gotowym materiałem otwierającym komunikację marki jest pionowy film [egzaminio-runway-social-15s.mp4](marketing/video/egzaminio-runway-social-15s.mp4). Łączy filmowe ujęcie nauki wygenerowane w Runway z dokładnie odwzorowanymi ekranami bazy arkuszy, zadania, Mai i panelu rodzica. Okładką może być [runway-preview.png](marketing/video/runway-preview.png).
+
+Rola filmu: krótko wyjaśnić, czym jest egzaminio, i skierować odbiorcę do bezpłatnego rozpoczęcia pracy. Nie zastępuje on cyklu edukacyjnego 30–45 s — jest materiałem przypiętym do profilu, reklamą rozpoznawalnościową i wejściem do lejka.
+
+Publikacja organiczna:
+
+| Kanał | Zastosowanie | CTA |
+| --- | --- | --- |
+| Instagram Reels | główny materiał startowy i przypięta rolka | „Sprawdź bezpłatnie — link w profilu” |
+| Instagram Stories | przypomnienie po 2–3 dniach, z naklejką linku | „Otwórz arkusze” |
+| TikTok | przedstawienie produktu uczniom bez presji zakupowej | „Rozwiąż pierwsze zadanie” |
+| YouTube Shorts | evergreen odpowiadający na pytanie „co oferuje egzaminio?” | „Zobacz arkusze na egzamin.io” |
+| Facebook Reels | komunikacja do rodziców | „Zobacz, jak wygląda nauka” |
+
+Proponowany opis dla rodzica:
+
+> Ponad 1000 pytań z autentycznych arkuszy CKE z lat 2019–2026. Uczeń rozwiązuje zadania, korzysta ze wskazówek Mai, a rodzic widzi najważniejsze postępy. Zacznij bezpłatnie na egzamin.io.
+
+Proponowany opis dla ucznia:
+
+> Zamiast przypadkowych ćwiczeń — zadania, które pojawiały się na egzaminie. Rozwiąż, zapytaj Maię i zrozum kolejny krok. Pierwsze zadania zrobisz bezpłatnie.
+
+Pierwszy harmonogram wykorzystania:
+
+1. Dzień 1: publikacja jako Reel, TikTok i Short; przypięcie filmu na Instagramie i TikToku.
+2. Dzień 3: Stories z krótką ankietą „Z którego przedmiotu zaczynasz?” i linkiem do aplikacji.
+3. Dzień 7: ponowna publikacja wersji czysto produktowej bez ujęcia Runway jako test A/B.
+4. Dzień 14: decyzja, który hook zostaje, na podstawie ukończeń filmu i rozpoczętych zadań.
+
+Każdy kanał powinien otrzymać osobny link UTM, np.:
+
+```text
+https://egzamin.io/?utm_source=instagram&utm_medium=organic_social&utm_campaign=start_2026&utm_content=runway_15s
+https://egzamin.io/?utm_source=tiktok&utm_medium=organic_social&utm_campaign=start_2026&utm_content=runway_15s
+https://egzamin.io/?utm_source=youtube&utm_medium=organic_social&utm_campaign=start_2026&utm_content=runway_15s
+https://egzamin.io/?utm_source=facebook&utm_medium=organic_social&utm_campaign=start_2026&utm_content=runway_15s
+```
+
+Test kreatywny powinien porównywać:
+
+- wariant A: [filmowe otwarcie Runway + ekrany produktu](marketing/video/egzaminio-runway-social-15s.mp4),
+- wariant B: [wyłącznie animowane ekrany produktu](marketing/video/egzaminio-social-15s.mp4),
+- identyczny opis, CTA, dzień i zbliżona godzina publikacji,
+- główna metryka: rozpoczęte zadania z danego linku UTM,
+- pomocnicze metryki: obejrzenia 3 s, ukończenia 50% i 95%, wejścia na profil, CTR oraz rejestracje.
+
+Do płatnej promocji wykorzystać zwycięski wariant dopiero po osiągnięciu założonej retencji D7. Nie optymalizować kampanii wyłącznie pod wyświetlenia; celem jest rozpoczęcie pierwszego zadania. Materiał nie może sugerować oficjalnego partnerstwa z CKE, a CTA kierowane do ucznia nie może prowadzić bezpośrednio do zakupu.
+
 ### 4. Meta Ads do rodziców
 
 Uruchomić dopiero po osiągnięciu retencji D7. Pierwsze kreacje:
