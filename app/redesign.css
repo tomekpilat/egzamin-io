@@ -1192,6 +1192,14 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
 .task-chat-message > span { color: var(--brand); font-size: 12px; font-weight: 600; }
 .task-chat-message.user > span { color: var(--muted-foreground); font-weight: 400; }
 .task-chat-message p { margin: 0; color: color-mix(in srgb, var(--foreground) 85%, var(--background)); font-size: 14px; line-height: 1.6; white-space: pre-wrap; }
+.task-conversation-heading b span { color: var(--quiet-copy); font-size: 12px; font-weight: 400; }
+.task-quick-questions { display: grid; gap: 8px; }
+.task-quick-questions > div { margin-bottom: 2px; display: grid; gap: 2px; }
+.task-quick-questions > div b { font-size: 13px; font-weight: 600; }
+.task-quick-questions > div small { color: var(--quiet-copy); font-size: 11px; line-height: 1.45; }
+.task-quick-questions > button { width: 100%; padding: 10px 12px; display: flex; align-items: center; justify-content: space-between; gap: 10px; color: var(--muted-foreground); text-align: left; background: var(--surface-soft); border: 1px solid var(--subtle-line); border-radius: 8px; font-size: 13px; line-height: 1.4; cursor: pointer; }
+.task-quick-questions > button:hover { color: var(--foreground); border-color: var(--border); }
+.task-quick-questions > button span { color: var(--brand); }
 .task-chat-entry { margin-top: auto; display: flex; flex-direction: column; gap: 12px; }
 .task-chat-composer { min-height: 56px; padding: 6px 6px 6px 14px; display: flex; align-items: center; gap: 12px; background: var(--surface-soft); border: 1px solid var(--border); border-radius: 9px; }
 .task-chat-composer textarea { min-height: 42px; height: 42px; max-height: 96px; padding: 10px 0; resize: none; color: var(--foreground); background: transparent; border: 0; border-radius: 0; font-size: 14px; line-height: 1.5; }

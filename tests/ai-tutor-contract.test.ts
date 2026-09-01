@@ -51,7 +51,7 @@ describe("AI tutor end-to-end contract", () => {
     expect(route).toContain("pytanie nie zostało odliczone");
     expect(route).toContain("requireActiveStudent");
     expect(route).toContain("FREE_AI_QUESTIONS_PER_DAY");
-    expect(component).toContain("W wersji Free otrzymujesz 3 pytania do nauczyciela AI dziennie");
+    expect(component).toContain("W wersji Free otrzymujesz 3 własne pytania do Mai dziennie");
   });
 
   it("expands an active conversation and keeps a usable chat viewport", () => {
@@ -59,7 +59,9 @@ describe("AI tutor end-to-end contract", () => {
     expect(component).toContain('role="log"');
     expect(component).toContain('rows={1}');
     expect(component).toContain('className="task-chat-entry"');
-    expect(component).not.toContain("task-quick-questions");
+    expect(component).toContain("task-quick-questions");
+    expect(component).toContain("Te podpowiedzi nie zmniejszają dziennego limitu");
+    expect(component).toContain("handleQuickQuestion");
     expect(styles).toContain(".task-workspace { min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 452px;");
     expect(styles).toContain(".task-chat { min-height: 180px;");
     expect(component).toContain("conversationRef.current.scrollTop = conversationRef.current.scrollHeight");

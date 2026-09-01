@@ -437,13 +437,29 @@ describe("StudentPractice focus mode", () => {
     const user = userEvent.setup();
     render(<StudentPractice activeView="exercises" onNavigate={() => undefined} />);
 
-    await user.click(await screen.findByRole("tab", { name: "Tutor AI" }));
+    await user.click(await screen.findByRole("tab", { name: "Maja AI" }));
     const composer = screen.getByRole("textbox", { name: "Pytanie do nauczyciela AI" });
     await user.type(composer, "Dlaczego?");
     await user.click(screen.getByRole("button", { name: "Wyślij pytanie" }));
 
     expect(await screen.findByText("Wyjaśnienie AI do aktualnego zadania.")).toBeInTheDocument();
     expect(composer).toHaveValue("");
+  });
+
+  it("offers ready questions without consuming the daily AI limit", async () => {
+    prepareRpc();
+    const user = userEvent.setup();
+    render(<StudentPractice activeView="exercises" onNavigate={() => undefined} />);
+
+    await user.click(await screen.findByRole("tab", { name: "Maja AI" }));
+    expect(await screen.findByText("Zostały 3 z 3 pytań dziś")).toBeInTheDocument();
+    await waitFor(() => expect(vi.mocked(fetch)).toHaveBeenCalledTimes(1));
+
+    await user.click(screen.getByRole("button", { name: /Od czego zacząć/ }));
+
+    expect(await screen.findByText("Zamień procent na ułamek.")).toBeInTheDocument();
+    expect(screen.getByText("Zostały 3 z 3 pytań dziś")).toBeInTheDocument();
+    expect(vi.mocked(fetch)).toHaveBeenCalledTimes(1);
   });
 
   it("saves the answer before navigation and exits without a discard warning", async () => {

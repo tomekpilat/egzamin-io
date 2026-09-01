@@ -33,7 +33,7 @@ export function MathFormula({ latex, display = false, className }: { latex: stri
     window.addEventListener("mathjax-ready", typeset);
     return () => {
       window.removeEventListener("mathjax-ready", typeset);
-      if (ref.current) window.MathJax?.typesetClear?.([ref.current]);
+      window.MathJax?.typesetClear?.([element]);
     };
   }, [latex, source]);
 

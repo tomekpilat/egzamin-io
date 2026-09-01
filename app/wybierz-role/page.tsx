@@ -173,7 +173,7 @@ export default function ChooseRolePage() {
         <Button className="auth-submit" type="button" disabled={busy} onClick={saveRole}>
           {busy ? "Chwila…" : "Dalej"}
         </Button>
-        <p className="auth-role-note">Konto ucznia wymaga zgody rodzica. Rozmowy z tutorem AI pozostają prywatne.</p>
+        <p className="auth-role-note">Konto ucznia wymaga zgody rodzica. Rozmowy z Mają AI pozostają prywatne.</p>
       </section>
     </main>
   );

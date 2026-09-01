@@ -20,7 +20,7 @@ const FREE_FEATURES = [
 
 const PLUS_FEATURES = [
   "Interaktywne rozwiązywanie bez limitu",
-  `${PLUS_AI_QUESTIONS_PER_DAY} pytań do tutora AI dziennie`,
+  `${PLUS_AI_QUESTIONS_PER_DAY} pytań do Mai AI dziennie`,
   "Śledzenie postępów, trendy i powtórki",
 ] as const;
 
@@ -72,7 +72,7 @@ export default function Home() {
                   return <button type="button" role="radio" aria-checked={chosen} className={chosen ? "selected" : ""} key={letter} onClick={() => setSelectedAnswer(letter)}><b>{letter}</b><span>{value}</span>{chosen && letter === "B" ? <small>Poprawna</small> : null}</button>;
                 })}
               </div>
-              <div className="design-ai-hint"><b>Tutor AI</b><span>Najpierw dzielimy sumę podstaw przez 2. Ile wyjdzie?</span></div>
+              <div className="design-ai-hint"><b>Maja · nauczycielka AI</b><span>Najpierw dzielimy sumę podstaw przez 2. Ile wyjdzie?</span></div>
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function Home() {
           <div className="design-parent-grid">
             <div><CalendarDays aria-hidden="true" /><b>Regularność</b><span>Ile dni w tygodniu dziecko siadło do zadań.</span></div>
             <div><ListChecks aria-hidden="true" /><b>Tematy do powtórki</b><span>Konkretne zagadnienia z arkuszy.</span></div>
-            <div><EyeOff aria-hidden="true" /><b>Czego nie widzisz</b><span>Treści rozmów z tutorem AI.</span></div>
+            <div><EyeOff aria-hidden="true" /><b>Czego nie widzisz</b><span>Treści rozmów z Mają AI.</span></div>
           </div>
           <Button asChild><a href="/logowanie?tryb=rejestracja&rola=rodzic">Załóż konto rodzica</a></Button>
         </div>
