@@ -4,6 +4,7 @@ import { describe, expect, it } from "vitest";
 
 const nextConfig = readFileSync(join(process.cwd(), "next.config.ts"), "utf8");
 const dockerfile = readFileSync(join(process.cwd(), "Dockerfile"), "utf8");
+const dockerignore = readFileSync(join(process.cwd(), ".dockerignore"), "utf8");
 const server = readFileSync(join(process.cwd(), "server.mjs"), "utf8");
 
 describe("Coolify Docker build", () => {
@@ -19,5 +20,14 @@ describe("Coolify Docker build", () => {
     expect(dockerfile).toContain('CMD ["node", "server.mjs"]');
     expect(server).toContain('from "vinext/server/prod-server"');
     expect(server).toContain('new URL("./dist", import.meta.url)');
+  });
+
+  it("keeps large CKE media outside Vite and restores it in the runtime image", () => {
+    expect(dockerfile).toContain("FROM node:24-alpine AS cke-assets");
+    expect(dockerfile).toContain("COPY public/cke ./cke");
+    expect(dockerfile).toContain("COPY --from=cke-assets --chown=node:node /assets/cke ./dist/client/cke");
+    expect(dockerfile).not.toContain("COPY . .");
+    expect(dockerignore).toContain("content\n");
+    expect(dockerignore).toContain("tests\n");
   });
 });

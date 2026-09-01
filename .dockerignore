@@ -4,9 +4,16 @@
 .vinext
 .wrangler
 coverage
-content/cke/sources
+content
+db
+docs
+drizzle
+examples
 dist
 node_modules
+scripts
+supabase
+tests
 tmp
 tsconfig.tsbuildinfo
 npm-debug.log*
