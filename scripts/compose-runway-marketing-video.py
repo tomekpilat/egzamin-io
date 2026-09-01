@@ -13,10 +13,11 @@ from PIL import Image, ImageDraw, ImageFont
 
 WIDTH = 1080
 HEIGHT = 1920
-INK = "#1F1F1C"
-MUTED = "#625F59"
-BLUE = "#365B9D"
-PAPER = "#F6F4EE"
+INK = "#1E1B2E"
+MUTED = "#5B5674"
+INDIGO = "#4338CA"
+AMBER = "#F59E0B"
+PAPER = "#FAFAF9"
 ARIAL = "/System/Library/Fonts/Supplemental/Arial.ttf"
 ARIAL_BOLD = "/System/Library/Fonts/Supplemental/Arial Bold.ttf"
 GEORGIA_BOLD = "/System/Library/Fonts/Supplemental/Georgia Bold.ttf"
@@ -32,19 +33,19 @@ def make_overlay(path: Path) -> None:
 
     logo_regular = font(ARIAL_BOLD, 40)
     logo_bold = font(ARIAL_BOLD, 40)
-    draw.rounded_rectangle((48, 54, 310, 132), radius=28, fill=(31, 31, 28, 190))
-    draw.text((78, 73), "egzamin", font=logo_regular, fill="#D8D5CE")
+    draw.rounded_rectangle((48, 54, 310, 132), radius=28, fill=(30, 27, 46, 220))
+    draw.text((78, 73), "egzamin", font=logo_regular, fill="#DEDBE9")
     end = draw.textbbox((78, 73), "egzamin", font=logo_regular)[2]
     draw.text((end, 73), "io", font=logo_bold, fill="#FFFFFF")
 
     draw.rounded_rectangle(
         (48, 1235, WIDTH - 48, 1780),
         radius=36,
-        fill=(246, 244, 238, 238),
+        fill=(250, 250, 249, 242),
         outline=(255, 255, 255, 210),
         width=2,
     )
-    draw.text((92, 1295), "AUTENTYCZNE ARKUSZE CKE", font=font(ARIAL_BOLD, 25), fill=BLUE)
+    draw.text((92, 1295), "AUTENTYCZNE ARKUSZE CKE", font=font(ARIAL_BOLD, 25), fill=INDIGO)
     draw.multiline_text(
         (88, 1370),
         "Zacznij od\nprawdziwych zadań.",
@@ -53,8 +54,10 @@ def make_overlay(path: Path) -> None:
         spacing=8,
     )
     draw.text((92, 1575), "Ponad 1000 pytań z lat 2019–2026.", font=font(ARIAL, 31), fill=MUTED)
-    draw.rounded_rectangle((92, 1650, 475, 1730), radius=20, fill=BLUE)
+    draw.rounded_rectangle((92, 1650, 475, 1730), radius=20, fill=INDIGO)
     draw.text((130, 1672), "egzamin.io  →", font=font(ARIAL_BOLD, 28), fill=PAPER)
+    draw.rounded_rectangle((500, 1650, 620, 1730), radius=20, fill="#FEF3C7")
+    draw.line(((535, 1690), (551, 1706), (584, 1671)), fill=AMBER, width=7, joint="curve")
     image.save(path)
 
 

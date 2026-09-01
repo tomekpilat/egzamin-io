@@ -14,4 +14,6 @@
 - nie używać generowanych przez AI imitacji interfejsu,
 - nie używać sformułowań sugerujących partnerstwo lub oficjalne powiązanie z CKE,
 - pozostawić bezpieczny margines u góry i na dole dla interfejsu Reels/TikTok,
-- używać materiałów i kolorów zgodnych z aktualną stroną egzaminio.
+- używać materiałów i kolorów zgodnych z aktualną stroną egzaminio,
+- podstawowym kolorem akcji jest indygo `#4338CA`, wyróżnikiem bursztyn `#F59E0B`, a tłem złamana biel `#FAFAF9`,
+- nie wracać w kolejnych wariantach do poprzedniego niebieskiego `#365B9D` ani kremowego tła `#F6F4EE`.
