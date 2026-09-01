@@ -192,7 +192,7 @@ def task_scene(local_t: float) -> Image.Image:
         active = selected and letter == "B"
         rounded(draw, (95, y, 935, y + 105), BLUE_LIGHT if active else CARD, BLUE if active else LINE, 3 if active else 2, 18)
         draw.ellipse((122, y + 27, 172, y + 77), fill=BLUE if active else CARD, outline=BLUE if active else LINE, width=2)
-        draw.text((138, y + 39), letter, font=F_TINY, fill=CARD if active else MUTED, anchor="mm")
+        draw.text((147, y + 52), letter, font=F_TINY, fill=CARD if active else MUTED, anchor="mm")
         draw.text((198, y + 31), answer_text, font=F_BODY, fill=INK)
         if active:
             draw.text((760, y + 38), "Poprawna", font=F_SMALL_BOLD, fill=GREEN)
