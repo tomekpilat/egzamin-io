@@ -10,7 +10,9 @@ const manifestPath = join(process.cwd(), "content/cke/cke-2026-main-mathematics-
 const manifest = JSON.parse(readFileSync(manifestPath, "utf8")) as {
   paper: { question_count: number; supplementary_sources: Array<{ path: string; sha256: string }> };
   questions: Array<{
+    id: string;
     number: string;
+    prompt: string;
     type: string;
     scoring: { max_points: number };
     content_blocks: Array<Record<string, unknown>>;
@@ -32,6 +34,23 @@ describe("CKE 2026 mathematics import", () => {
     expect(manifest.questions.slice(0, 14).every((question) => ["single_choice", "multiple_choice"].includes(question.type))).toBe(true);
     expect(manifest.questions.slice(14).every((question) => question.type === "long_text")).toBe(true);
     expect(manifest.questions.filter((question) => question.type === "multiple_choice").map((question) => question.number)).toEqual(["6", "8", "10", "12"]);
+  });
+
+  it("keeps mathematical expressions in one canonical MathJax block", () => {
+    const question3 = manifest.questions.find((question) => question.number === "3");
+    const question8 = manifest.questions.find((question) => question.number === "8");
+
+    expect(question3?.prompt).toBe("Dane są cztery liczby. Która z nich jest równa 0?");
+    expect(question3?.prompt).not.toContain("√");
+    expect(question3?.content_blocks).toEqual([
+      expect.objectContaining({ type: "math", latex: expect.stringContaining("\\sqrt") }),
+    ]);
+
+    expect(question8?.prompt).toBe("Sumę liczb od 1 do n opisuje podany wzór. Wybierz wartość sumy od 1 do 100 oraz poprawnie przekształconą postać wzoru.");
+    expect(question8?.prompt).not.toContain("½");
+    expect(question8?.content_blocks).toEqual([
+      expect.objectContaining({ type: "math", latex: "S=\\frac{1}{2}n(n+1)" }),
+    ]);
   });
 
   it("keeps every referenced illustration present and checksum-verified", () => {

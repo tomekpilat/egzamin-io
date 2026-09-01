@@ -14,17 +14,28 @@ declare global {
 
 export function MathFormula({ latex, display = false, className }: { latex: string; display?: boolean; className?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
+  const source = display ? `\\[${latex}\\]` : `\\(${latex}\\)`;
 
   useEffect(() => {
     const typeset = () => {
-      if (!ref.current || !window.MathJax?.typesetPromise) return;
-      window.MathJax.typesetClear?.([ref.current]);
-      void window.MathJax.typesetPromise([ref.current]);
+      const element = ref.current;
+      if (!element || !window.MathJax?.typesetPromise || element.querySelector("mjx-container")) return;
+      void window.MathJax.typesetPromise([element]).catch(() => {
+        if (ref.current && !ref.current.querySelector("mjx-container")) ref.current.textContent = latex;
+      });
     };
+
+    const element = ref.current;
+    if (!element) return;
+    window.MathJax?.typesetClear?.([element]);
+    element.textContent = source;
     typeset();
     window.addEventListener("mathjax-ready", typeset);
-    return () => window.removeEventListener("mathjax-ready", typeset);
-  }, [latex, display]);
+    return () => {
+      window.removeEventListener("mathjax-ready", typeset);
+      if (ref.current) window.MathJax?.typesetClear?.([ref.current]);
+    };
+  }, [latex, source]);
 
-  return <span ref={ref} className={cn("mathjax_process", display && "block overflow-x-auto py-2 text-center", className)}>{display ? `\\[${latex}\\]` : `\\(${latex}\\)`}</span>;
+  return <span ref={ref} className={cn("math-formula", "mathjax_process", display && "block overflow-x-auto py-2 text-center", className)} aria-label={`Wzór matematyczny: ${latex}`} />;
 }

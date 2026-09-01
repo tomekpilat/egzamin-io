@@ -48,7 +48,7 @@
     },
     {
       "id": "cke-2026-main-mathematics-100-x-q03", "number": "3", "sort_order": 3, "source_pages": [4], "type": "single_choice", "topic": "Pierwiastki", "difficulty": 1,
-      "prompt": "Dane są liczby: w = √(100 − 64) − 2, x = 12 − √(64 + 36), y = √(25 − 16) − 3, z = 7 − √(9 + 16). Która z nich jest równa 0?",
+      "prompt": "Dane są cztery liczby. Która z nich jest równa 0?",
       "answer_options": ["w", "x", "y", "z"], "answer_key": { "correct_index": 2 },
       "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedź C", "0 pkt – odpowiedź niepoprawna albo brak odpowiedzi"] },
       "explanation": "y = √(25 − 16) − 3 = √9 − 3 = 3 − 3 = 0.",
@@ -95,7 +95,7 @@
     },
     {
       "id": "cke-2026-main-mathematics-100-x-q08", "number": "8", "sort_order": 8, "source_pages": [8], "type": "multiple_choice", "topic": "Wyrażenia algebraiczne", "difficulty": 1,
-      "prompt": "Sumę S = 1 + 2 + … + n oblicza się ze wzoru S = ½n(n + 1). Wybierz wartość sumy od 1 do 100 oraz poprawnie przekształconą postać wzoru.",
+      "prompt": "Sumę liczb od 1 do n opisuje podany wzór. Wybierz wartość sumy od 1 do 100 oraz poprawnie przekształconą postać wzoru.",
       "answer_options": ["Suma od 1 do 100 wynosi 5001.", "Suma od 1 do 100 wynosi 5050.", "S = ½n² + 1", "S = ½n² + ½n"],
       "answer_key": { "correct_indices": [1, 3] },
       "scoring": { "max_points": 1, "rules": ["1 pkt – odpowiedzi B i D", "0 pkt – inny zestaw odpowiedzi albo brak odpowiedzi"] },

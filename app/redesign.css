@@ -1081,7 +1081,8 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
 .dark .task-verdict small { color: inherit; }
 .cke-question-content { width: min(900px, 100%); display: grid; gap: 14px; color: var(--foreground); font-size: 15px; line-height: 1.65; }
 .cke-question-content p { margin: 0; }
-.cke-question-content .math-formula { overflow-x: auto; }
+.cke-question-content .math-formula { width: 100%; max-width: 100%; overflow-x: auto; overflow-y: hidden; scrollbar-width: thin; }
+.cke-question-content .math-formula mjx-container[display="true"] { width: max-content; min-width: 100%; margin: .4em 0; padding: 2px 4px; }
 .cke-passage-block { overflow: hidden; border: 1px solid var(--border); border-radius: 8px; background: var(--card); }
 .cke-passage-block summary { padding: 12px 14px; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 8px 12px; color: var(--foreground); cursor: pointer; }
 .cke-passage-block summary::marker { color: var(--quiet-copy); }
