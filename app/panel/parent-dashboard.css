@@ -313,3 +313,37 @@
   .dashboard-parent-page .parent-account-links [data-slot="button"] { width: 100%; }
   .dashboard-parent-page .dashboard-feedback-trigger { bottom: calc(86px + env(safe-area-inset-bottom)); }
 }
+
+/* Golden parent dashboard from the supplied product screens. */
+:root:not(.dark) .dashboard-parent-page .dashboard-sidebar { color: var(--sidebar-text); background: var(--sidebar); border-right-color: var(--sidebar-surface); }
+:root:not(.dark) .dashboard-parent-page .dashboard-sidebar .wordmark-main { color: var(--gold); }
+:root:not(.dark) .dashboard-parent-page .dashboard-sidebar .wordmark-io { color: var(--sidebar-strong); }
+:root:not(.dark) .dashboard-parent-page .dashboard-nav-label { color: var(--sidebar-muted); }
+:root:not(.dark) .dashboard-parent-page .dashboard-sidebar nav button { color: var(--sidebar-text); }
+:root:not(.dark) .dashboard-parent-page .dashboard-sidebar nav button:hover { color: var(--sidebar-strong); background: var(--sidebar-surface); }
+:root:not(.dark) .dashboard-parent-page .dashboard-sidebar nav button.active { color: #20180a; background: var(--gold); border-color: var(--gold); }
+:root:not(.dark) .dashboard-parent-page .dashboard-nav-with-count b { color: #20180a; background: var(--gold); }
+:root:not(.dark) .dashboard-parent-page .dashboard-sidebar .dashboard-sidebar-legal { border-top-color: var(--sidebar-surface); }
+:root:not(.dark) .dashboard-parent-page .dashboard-sidebar .dashboard-sidebar-legal :is(a, button) { color: var(--sidebar-muted); }
+:root:not(.dark) .dashboard-parent-page .dashboard-sidebar .dashboard-sidebar-legal :is(a, button):hover { color: var(--sidebar-strong); }
+:root:not(.dark) .parent-dashboard-topbar { background: #fff; border-bottom-color: var(--border); }
+:root:not(.dark) .dashboard-parent-page .dashboard-content { background: var(--paper); }
+:root:not(.dark) .dashboard-parent-page .parent-overview-metrics .metric-card:first-child { background: var(--gold); border-color: var(--gold); }
+:root:not(.dark) .dashboard-parent-page .parent-overview-metrics .metric-card:first-child :is(span, b, small) { color: #20180a; }
+:root:not(.dark) .dashboard-parent-page .parent-next-step { background: var(--gold-soft); border-color: var(--gold-strong); }
+:root:not(.dark) .dashboard-parent-page .parent-overview-privacy { padding: 15px 18px; color: #3e2c05; background: var(--gold-wash); border: 1px solid var(--border); border-radius: 10px; }
+:root:not(.dark) .dashboard-parent-page [data-slot="progress"] { background: var(--gold-soft); }
+:root:not(.dark) .dashboard-parent-page [data-slot="progress-indicator"] { background: var(--gold-strong); }
+
+@media (max-width: 760px) {
+  :root:not(.dark) .dashboard-parent-page .dashboard-sidebar { background: var(--sidebar); border-top-color: var(--sidebar-surface); }
+  :root:not(.dark) .dashboard-parent-page .dashboard-sidebar nav button,
+  :root:not(.dark) .dashboard-parent-page .dashboard-sidebar nav button:not(.active) { color: var(--sidebar-muted); }
+  :root:not(.dark) .dashboard-parent-page .dashboard-sidebar nav button.active { color: #20180a; }
+}
+
+.dark .dashboard-parent-page .dashboard-sidebar { background: var(--sidebar); border-right-color: var(--sidebar-surface); }
+.dark .dashboard-parent-page .dashboard-sidebar nav button.active { color: #20180a; background: var(--gold); border-color: var(--gold); }
+.dark .dashboard-parent-page .dashboard-nav-with-count b { color: #20180a; background: var(--gold); }
+.dark .dashboard-parent-page .parent-next-step { background: var(--gold-soft); border-color: var(--gold-strong); }
+.dark .dashboard-parent-page [data-slot="progress-indicator"] { background: var(--gold); }
