@@ -1,5 +1,4 @@
 "use client";
-/* eslint-disable @next/next/no-html-link-for-pages -- Full-page anchors avoid a Vinext production navigation failure. */
 
 import { useEffect, useMemo, useState } from "react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -7,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
+import { PlusLockedPreview } from "@/components/plus-locked-preview";
 import { getSupabaseClient } from "@/lib/supabase-browser";
 import { isSubjectKey, SUBJECT_KEYS, SubjectIcon, subjectLabels, type SubjectKey } from "@/components/subject-icon";
 
@@ -173,7 +173,18 @@ export function ParentProgress({ linkedChildren, pendingRequests, onConnect }: {
         <div className="parent-range-selector"><span>Okres</span><div>{ranges.map((item) => <Button key={item.value} type="button" size="sm" variant={range === item.value ? "default" : "outline"} aria-pressed={range === item.value} onClick={() => setRange(item.value)}>{item.label}</Button>)}</div></div>
       </section>
 
-      {!hasPlusAccess && <Card className="parent-empty-view parent-progress-empty"><CardHeader><Badge variant="secondary">Pakiet Plus</Badge><CardTitle>Śledzenie postępów jest dostępne w Plus</CardTitle><CardDescription>Wszystkie arkusze CKE pozostają bezpłatne. Plus pokazuje wyniki, regularność, tematy do powtórki i liczbę użyć nauczyciela AI.</CardDescription></CardHeader><CardContent><Button asChild><a href="/plan-plus#porownanie">Porównaj Free i Plus</a></Button></CardContent></Card>}
+      {!hasPlusAccess && <PlusLockedPreview
+        title="Szczegółowy postęp dziecka jest dostępny w Plus"
+        description="Połączenie konta pozostaje bezpłatne. Plus odblokowuje rodzicowi czytelny obraz nauki bez pokazywania treści prywatnych rozmów."
+        href="/panel?widok=platnosci"
+        actionLabel="Wykup Plus dla dziecka"
+        features={[
+          { title: "Wyniki według przedmiotu", description: "Skuteczność i liczba rozwiązanych zadań z każdego przedmiotu." },
+          { title: "Regularność i cel tygodniowy", description: "Aktywne dni oraz realizacja ustalonego planu nauki." },
+          { title: "Wykorzystanie Mai AI", description: "Liczba zadanych pytań bez ujawniania treści rozmów dziecka." },
+          { title: "Tematy do powtórki", description: "Słabsze obszary i konkretna rekomendacja następnego kroku." },
+        ]}
+      />}
 
       {hasPlusAccess && loading && <section className="parent-progress-loading" aria-live="polite"><Card><CardContent>Liczymy postęp dla wybranego okresu…</CardContent></Card></section>}
       {error && <Alert variant="destructive" className="dashboard-alert"><AlertTitle>Postępy są chwilowo niedostępne</AlertTitle><AlertDescription>{error}<Button variant="outline" size="sm" type="button" onClick={() => setRefreshKey((value) => value + 1)}>Spróbuj ponownie</Button></AlertDescription></Alert>}

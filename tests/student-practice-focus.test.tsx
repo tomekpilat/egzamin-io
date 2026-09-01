@@ -377,7 +377,10 @@ describe("StudentPractice focus mode", () => {
     expect(screen.getByText("Podstawowe podsumowanie w wersji Free")).toBeInTheDocument();
     expect(screen.getByText("8", { selector: ".metric-card b" })).toBeInTheDocument();
     expect(screen.getByText("63%", { selector: ".metric-card b" })).toBeInTheDocument();
-    expect(screen.getByText("Zobacz dokładnie, co warto powtórzyć")).toBeInTheDocument();
+    expect(screen.getByRole("region", { name: "Szczegółowy postęp czeka w Plus" })).toBeInTheDocument();
+    expect(screen.getByText("Wyniki według rocznika i arkusza")).toBeInTheDocument();
+    expect(screen.getByText("Inteligentne powtórki")).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Zobacz Pakiet Plus" })).toHaveAttribute("href", "/plan-plus#dla-ucznia");
   });
 
   it("shows one question with minimal progress and keyboard answer navigation", async () => {

@@ -19,6 +19,7 @@ import { CkeQuestionContent, type CkeContentBlock, type CkeQuestionAsset } from 
 import { FREE_PRACTICE_QUESTIONS_PER_DAY } from "@/lib/plans";
 import { PromoCodeRedemption } from "@/components/promo-code-redemption";
 import { PracticeQuestionPrompt } from "@/components/practice-question-prompt";
+import { PlusLockedPreview } from "@/components/plus-locked-preview";
 import { ArrowRight } from "lucide-react";
 
 export type StudentView = "start" | "exercises" | "progress" | "settings";
@@ -930,7 +931,18 @@ export function StudentPractice({
           <article className="metric-card"><span>Poprawne odpowiedzi</span><b>{correctCount}</b><small>Liczymy ostatnią odpowiedź.</small></article>
           <article className="metric-card"><span>Skuteczność</span><b>{correctAnswerPercentage}%</b><small>Ze sprawdzonych zadań.</small></article>
         </section>
-        <Card className="parent-empty-view"><CardHeader><Badge variant="secondary">Pakiet Plus</Badge><CardTitle>Zobacz dokładnie, co warto powtórzyć</CardTitle><CardDescription>Plus dodaje wyniki według arkusza i rocznika, trendy, słabsze tematy, powtórki oraz podgląd postępu dla rodzica.</CardDescription></CardHeader><CardContent><Button asChild><a href="/plan-plus#porownanie">Porównaj Free i Plus</a></Button></CardContent></Card>
+        <PlusLockedPreview
+          title="Szczegółowy postęp czeka w Plus"
+          description="Podstawowe wyniki pozostają dostępne w Free. Plus pokazuje, gdzie dokładnie tracisz punkty i co ćwiczyć dalej."
+          href="/plan-plus#dla-ucznia"
+          actionLabel="Zobacz Pakiet Plus"
+          features={[
+            { title: "Wyniki według rocznika i arkusza", description: "Osobny wynik, status i liczba punktów dla każdego arkusza CKE." },
+            { title: "Tematy do powtórki", description: "Lista najsłabszych obszarów wyliczona z Twoich odpowiedzi." },
+            { title: "Trend skuteczności", description: "Porównanie wyników i regularności nauki w kolejnych okresach." },
+            { title: "Inteligentne powtórki", description: "Priorytety i następne kroki zamiast przypadkowych zadań." },
+          ]}
+        />
       </section>}
 
       {activeView === "progress" && progressEnabled && detailedProgressEnabled && <section className="student-content-view student-progress-view" aria-labelledby="student-progress-title">

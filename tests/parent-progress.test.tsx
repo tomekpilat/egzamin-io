@@ -113,7 +113,10 @@ describe("ParentProgress", () => {
 
   it("gates progress for a child on Free without calling aggregate RPCs", () => {
     render(<ParentProgress linkedChildren={[{ ...children[0], plan_tier: "free" }]} pendingRequests={0} onConnect={() => undefined} />);
-    expect(screen.getByText("Śledzenie postępów jest dostępne w Plus")).toBeInTheDocument();
+    expect(screen.getByRole("region", { name: "Szczegółowy postęp dziecka jest dostępny w Plus" })).toBeInTheDocument();
+    expect(screen.getByText("Wyniki według przedmiotu")).toBeInTheDocument();
+    expect(screen.getByText("Wykorzystanie Mai AI")).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Wykup Plus dla dziecka" })).toHaveAttribute("href", "/panel?widok=platnosci");
     expect(rpc).not.toHaveBeenCalled();
   });
 });
