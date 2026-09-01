@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SeoCategoryPage, SeoContentPage } from "@/components/seo-content-page";
 import { SEO_CATEGORIES, SEO_PAGES, getSeoCategory, getSeoPage } from "@/lib/seo-pages";
+import { DEFAULT_SOCIAL_IMAGE } from "@/lib/site-metadata";
 import "./knowledge-article.css";
 
 type RouteProps = { params: Promise<{ seoSlug: string[] }> };
@@ -31,8 +32,8 @@ export async function generateMetadata({ params }: RouteProps): Promise<Metadata
     description,
     keywords: page?.keywords,
     alternates: { canonical: path },
-    openGraph: { title, description, type: "article", locale: "pl_PL", url: path, images: [] },
-    twitter: { card: "summary", title, description, images: [] },
+    openGraph: { title, description, type: "article", locale: "pl_PL", url: path, images: [DEFAULT_SOCIAL_IMAGE] },
+    twitter: { card: "summary_large_image", title, description, images: [DEFAULT_SOCIAL_IMAGE] },
   };
 }
 

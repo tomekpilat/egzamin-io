@@ -3,6 +3,7 @@ import { Instrument_Sans, Source_Serif_4 } from "next/font/google";
 import { MathJaxProvider } from "@/components/mathjax-provider";
 import { AnalyticsConsent } from "@/components/analytics-consent";
 import { ThemeProvider } from "@/components/theme-provider";
+import { DEFAULT_SOCIAL_IMAGE, SITE_URL } from "@/lib/site-metadata";
 import "./globals.css";
 import "./redesign.css";
 
@@ -17,31 +18,27 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://egzamin.io"),
+  metadataBase: new URL(SITE_URL),
   title: "egzaminio — Egzamin bez paniki",
   description:
     "Ćwiczenia z arkuszy CKE i nauczyciel AI, który wyjaśnia zadania krok po kroku.",
+  alternates: { canonical: "/" },
   openGraph: {
     title: "egzaminio — Egzamin bez paniki. Krok po kroku.",
     description:
       "Ćwicz na zadaniach z arkuszy CKE i pytaj nauczyciela AI, gdy czegoś nie rozumiesz.",
     type: "website",
     locale: "pl_PL",
-    images: [
-      {
-        url: "/og.png",
-        width: 1730,
-        height: 909,
-        alt: "egzaminio — Egzamin bez paniki. Krok po kroku.",
-      },
-    ],
+    url: "/",
+    siteName: "egzaminio",
+    images: [DEFAULT_SOCIAL_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: "egzaminio — Egzamin bez paniki. Krok po kroku.",
     description:
       "Ćwiczenia z arkuszy CKE i nauczyciel AI, który naprawdę tłumaczy.",
-    images: ["/og.png"],
+    images: [DEFAULT_SOCIAL_IMAGE],
   },
 };
 

@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CKE_SUBJECT_LABELS, getPublicCkeSeoPage, scoringSummary } from "@/lib/cke-seo";
+import { DEFAULT_SOCIAL_IMAGE } from "@/lib/site-metadata";
 
 type Params = { year: string; subject: string; session: string; paper: string; number: string };
 type RouteProps = { params: Promise<Params> };
@@ -48,8 +49,8 @@ export async function generateMetadata({ params }: RouteProps): Promise<Metadata
     title,
     description,
     alternates: { canonical: page.canonical_path },
-    openGraph: { title, description, type: "article", locale: "pl_PL", url: page.canonical_path, images: [] },
-    twitter: { card: "summary", title, description, images: [] },
+    openGraph: { title, description, type: "article", locale: "pl_PL", url: page.canonical_path, images: [DEFAULT_SOCIAL_IMAGE] },
+    twitter: { card: "summary_large_image", title, description, images: [DEFAULT_SOCIAL_IMAGE] },
   };
 }
 

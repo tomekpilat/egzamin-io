@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_SOCIAL_IMAGE } from "@/lib/site-metadata";
 import "./calculator.css";
 
 export const metadata: Metadata = {
@@ -11,13 +12,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pl_PL",
     url: "/kalkulator-punktow",
-    images: [],
+    images: [DEFAULT_SOCIAL_IMAGE],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Kalkulator punktów do liceum i technikum 2027 — egzaminio",
     description: "Policz bezpłatnie wynik rekrutacyjny do 200 punktów.",
-    images: [],
+    images: [DEFAULT_SOCIAL_IMAGE],
   },
 };
 

@@ -115,10 +115,11 @@ describe("public recruitment calculator", () => {
     expect(page).toContain("Tabela punktów za oceny");
   });
 
-  it("has dedicated shareable metadata without inheriting an unrelated social image", () => {
+  it("has dedicated shareable metadata with the branded social image", () => {
     expect(layout).toContain("Kalkulator punktów do liceum i technikum 2027 — egzaminio");
     expect(layout).toContain('canonical: "/kalkulator-punktow"');
-    expect(layout.match(/images: \[\]/g)).toHaveLength(2);
+    expect(layout).toContain("DEFAULT_SOCIAL_IMAGE");
+    expect(layout).toContain('card: "summary_large_image"');
     expect(layout).toContain('dynamic = "force-static"');
   });
 });
