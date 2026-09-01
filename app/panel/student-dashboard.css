@@ -291,14 +291,14 @@
   .dashboard-student-page .dashboard-feedback-trigger { bottom: calc(86px + env(safe-area-inset-bottom)); }
 }
 
-/* Golden student dashboard from the supplied product screens. */
+/* Indigo and amber student dashboard from the supplied product screens. */
 :root:not(.dark) .dashboard-student-page .student-dashboard-sidebar { color: var(--sidebar-text); background: var(--sidebar); border-right-color: var(--sidebar-surface); }
-:root:not(.dark) .dashboard-student-page .student-dashboard-sidebar .wordmark-main { color: var(--gold); }
+:root:not(.dark) .dashboard-student-page .student-dashboard-sidebar .wordmark-main { color: var(--sidebar-muted); }
 :root:not(.dark) .dashboard-student-page .student-dashboard-sidebar .wordmark-io { color: var(--sidebar-strong); }
 :root:not(.dark) .dashboard-student-page .dashboard-nav-label { color: var(--sidebar-muted); }
 :root:not(.dark) .dashboard-student-page .student-dashboard-sidebar nav button { color: var(--sidebar-text); }
 :root:not(.dark) .dashboard-student-page .student-dashboard-sidebar nav button:hover { color: var(--sidebar-strong); background: var(--sidebar-surface); }
-:root:not(.dark) .dashboard-student-page .student-dashboard-sidebar nav button.active { color: #20180a; background: var(--gold); border-color: var(--gold); }
+:root:not(.dark) .dashboard-student-page .student-dashboard-sidebar nav button.active { color: #1e1b2e; background: var(--gold); border-color: var(--gold); }
 :root:not(.dark) .student-session-card { color: var(--sidebar-strong); background: var(--sidebar-surface); border-color: var(--sidebar-surface); }
 :root:not(.dark) .student-session-card:hover { background: color-mix(in srgb, var(--sidebar-surface) 82%, var(--gold)); }
 :root:not(.dark) .student-session-card > span,
@@ -313,23 +313,23 @@
 :root:not(.dark) .dashboard-student-page .dashboard-content { background: var(--paper); }
 :root:not(.dark) .dashboard-student-page .student-resume-card { background: var(--gold); border-color: var(--gold); }
 :root:not(.dark) .dashboard-student-page .student-resume-card :is([data-slot="card-title"], [data-slot="card-description"]),
-:root:not(.dark) .dashboard-student-page .student-resume-card [data-slot="card-content"] > p { color: #20180a; }
+:root:not(.dark) .dashboard-student-page .student-resume-card [data-slot="card-content"] > p { color: #1e1b2e; }
 :root:not(.dark) .dashboard-student-page .student-progress-metrics .metric-card:first-child { background: var(--gold); border-color: var(--gold); }
-:root:not(.dark) .dashboard-student-page .student-progress-metrics .metric-card:first-child :is(span, b, small) { color: #20180a; }
+:root:not(.dark) .dashboard-student-page .student-progress-metrics .metric-card:first-child :is(span, b, small) { color: #1e1b2e; }
 :root:not(.dark) .dashboard-student-page [data-slot="progress"] { background: var(--gold-soft); }
-:root:not(.dark) .dashboard-student-page [data-slot="progress-indicator"] { background: var(--gold-strong); }
+:root:not(.dark) .dashboard-student-page [data-slot="progress-indicator"] { background: var(--primary); }
 :root:not(.dark) .dashboard-student-page .student-review-card { color: #fff; background: var(--primary); border-color: var(--primary); }
 
 @media (max-width: 760px) {
   :root:not(.dark) .dashboard-student-page .student-dashboard-sidebar { background: var(--sidebar); border-top-color: var(--sidebar-surface); }
   :root:not(.dark) .dashboard-student-page .student-dashboard-sidebar nav button,
   :root:not(.dark) .dashboard-student-page .student-dashboard-sidebar nav button:not(.active) { color: var(--sidebar-muted); }
-  :root:not(.dark) .dashboard-student-page .student-dashboard-sidebar nav button.active { color: #20180a; }
+  :root:not(.dark) .dashboard-student-page .student-dashboard-sidebar nav button.active { color: #1e1b2e; }
 }
 
 .dark .dashboard-student-page .student-dashboard-sidebar { background: var(--sidebar); border-right-color: var(--sidebar-surface); }
-.dark .dashboard-student-page .student-dashboard-sidebar nav button.active { color: #20180a; background: var(--gold); border-color: var(--gold); }
+.dark .dashboard-student-page .student-dashboard-sidebar nav button.active { color: #1e1b2e; background: var(--gold); border-color: var(--gold); }
 .dark .student-session-card { background: var(--sidebar-surface); border-color: var(--sidebar-surface); }
 .dark .student-session-card > b span { color: var(--gold); }
-.dark .student-session-card > i em,
-.dark .dashboard-student-page [data-slot="progress-indicator"] { background: var(--gold); }
+.dark .student-session-card > i em { background: var(--gold); }
+.dark .dashboard-student-page [data-slot="progress-indicator"] { background: var(--primary); }
