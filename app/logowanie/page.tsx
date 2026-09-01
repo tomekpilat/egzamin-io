@@ -154,7 +154,7 @@ export default function LoginPage() {
               </RadioGroup>
             </fieldset>
             <Button type="button" className="auth-submit" onClick={() => setSignupStage("form")}>Dalej</Button>
-            <p className="auth-role-note">Konto ucznia wymaga zgody rodzica. Rozmowy z Mają AI pozostają prywatne.</p>
+            <p className="auth-role-note">Konto ucznia wymaga zgody rodzica. Rozmowy z Maią AI pozostają prywatne.</p>
             <button type="button" className="auth-mode-link" onClick={() => changeMode("login")}>Masz już konto? Zaloguj się</button>
           </div>
         ) : (

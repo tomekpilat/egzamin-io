@@ -1210,6 +1210,9 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
 .task-chat-message.user > span { color: var(--muted-foreground); font-weight: 400; }
 .task-chat-message p { margin: 0; color: color-mix(in srgb, var(--foreground) 85%, var(--background)); font-size: 14px; line-height: 1.6; white-space: pre-wrap; }
 .task-conversation-heading b span { color: var(--quiet-copy); font-size: 12px; font-weight: 400; }
+.task-tutor-welcome { padding: 14px 16px; display: grid; gap: 5px; background: var(--surface-soft); border: 1px solid var(--subtle-line); border-radius: 9px; }
+.task-tutor-welcome b { font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif; font-size: 17px; font-weight: 600; }
+.task-tutor-welcome p { margin: 0; color: var(--muted-foreground); font-size: 13px; line-height: 1.55; text-wrap: pretty; }
 .task-quick-questions { display: grid; gap: 8px; }
 .task-quick-questions > div { margin-bottom: 2px; display: grid; gap: 2px; }
 .task-quick-questions > div b { font-size: 13px; font-weight: 600; }

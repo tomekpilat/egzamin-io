@@ -52,6 +52,8 @@ describe("AI tutor end-to-end contract", () => {
     expect(route).toContain("requireActiveStudent");
     expect(route).toContain("FREE_AI_QUESTIONS_PER_DAY");
     expect(component).toContain("W wersji Free otrzymujesz 3 własne pytania do Mai dziennie");
+    expect(component).toContain("Cześć, jestem Maia — Twoja pomocniczka w nauce");
+    expect(component).not.toContain('TUTOR_NAME = "Maja"');
   });
 
   it("expands an active conversation and keeps a usable chat viewport", () => {

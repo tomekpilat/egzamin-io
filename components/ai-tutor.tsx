@@ -27,7 +27,8 @@ type TutorPayload = {
 
 type TutorTab = "hints" | "solution" | "ai";
 
-const TUTOR_NAME = "Maja";
+const TUTOR_NAME = "Maia";
+const TUTOR_WELCOME = "Powiedz, gdzie utknąłeś, a przejdziemy przez to zadanie razem, krok po kroku.";
 const QUICK_QUESTION_LABELS = [
   "Od czego zacząć?",
   "Jaki jest kolejny krok?",
@@ -186,7 +187,7 @@ function AiTutorConversation({
     <div className="task-help-tabs" role="tablist" aria-label="Rodzaj pomocy">
       <button type="button" role="tab" aria-selected={displayedTab === "hints"} onClick={() => setActiveTab("hints")}>Wskazówki</button>
       <button type="button" role="tab" aria-selected={displayedTab === "solution"} onClick={() => setActiveTab("solution")} disabled={!feedback}>Rozwiązanie</button>
-      <button type="button" role="tab" aria-selected={displayedTab === "ai"} onClick={() => setActiveTab("ai")}>Maja AI</button>
+      <button type="button" role="tab" aria-selected={displayedTab === "ai"} onClick={() => setActiveTab("ai")}>Maia AI</button>
     </div>
     <div className="task-help-content">
       {displayedTab === "hints" && !feedback && <section className="task-help-view task-hints" aria-labelledby="hints-title">
@@ -200,26 +201,27 @@ function AiTutorConversation({
             return <Button key={index} type="button" variant="outline" onClick={() => setVisibleHintCount(index + 1)} disabled={!isNext}><span><b>{index + 1}</b>{index === 1 ? "Wyjaśnij kolejny krok" : "Prostszy przykład"}</span><em>{isNext ? "Pokaż" : "Po kolei"}</em></Button>;
           })}</div> : hints.length > 0 ? <small>To wszystkie podpowiedzi do tego zadania.</small> : <p className="task-help-placeholder">Nie ma jeszcze podpowiedzi do tego zadania.</p>}
         </> : <p className="task-help-placeholder">Podpowiedzi do tego zadania czekają na zatwierdzenie.</p>}
-        {!loading && available && <button type="button" className="task-tutor-launch" onClick={() => setActiveTab("ai")}><span><b>Zapytaj Maję</b><small>Zostały {usage.remaining} z {usage.limit} pytań dziś</small></span><span>Napisz, czego nie rozumiesz w tym zadaniu… <b>↑</b></span><small>Maja odpowiada tylko na pytania o to zadanie. Rodzic nie widzi treści rozmowy.</small></button>}
+        {!loading && available && <button type="button" className="task-tutor-launch" onClick={() => setActiveTab("ai")}><span><b>Zapytaj Maię</b><small>Zostały {usage.remaining} z {usage.limit} pytań dziś</small></span><span>Napisz, czego nie rozumiesz w tym zadaniu… <b>↑</b></span><small>Maia odpowiada tylko na pytania o to zadanie. Rodzic nie widzi treści rozmowy.</small></button>}
       </section>}
 
       {displayedTab === "solution" && feedback && <section className="task-help-view task-solution" aria-labelledby="answer-help-title">
         <div className="task-solution-heading"><b id="answer-help-title">Rozwiązanie krok po kroku</b><span>{Math.max(solutionSteps.length, 1)} {solutionSteps.length === 1 ? "krok" : "kroki"}</span></div>
         <ol>{(solutionSteps.length ? solutionSteps : [feedback.explanation]).map((step, index) => <li key={`${index}-${step}`}><span>{index + 1}</span><div><b>{index === 0 ? "Zobacz sposób rozwiązania" : "Kolejny krok"}</b><p className="mathjax_process">{step}</p></div></li>)}</ol>
         <div className="task-solution-answer"><span>ODPOWIEDŹ</span><b>{feedback.correctAnswer}</b></div>
-        <button type="button" className="task-solution-tutor" onClick={() => setActiveTab("ai")}>Zapytaj Maję o to rozwiązanie →</button>
+        <button type="button" className="task-solution-tutor" onClick={() => setActiveTab("ai")}>Zapytaj Maię o to rozwiązanie →</button>
       </section>}
 
       {displayedTab === "ai" && <section className="task-help-view task-conversation" aria-labelledby="conversation-title">
-        <div className="task-conversation-heading"><b id="conversation-title">Maja <span>· nauczycielka AI</span></b><small>Zostały {usage.remaining} z {usage.limit} pytań dziś</small></div>
+        <div className="task-conversation-heading"><b id="conversation-title">Maia <span>· nauczycielka AI</span></b><small>Zostały {usage.remaining} z {usage.limit} pytań dziś</small></div>
         {loading ? <p className="task-help-loading">Uruchamiamy nauczyciela AI…</p> : loadError ? <Alert variant="destructive"><AlertDescription><span>{loadError}</span><Button type="button" size="sm" variant="outline" onClick={() => void loadTutor()}><RotateCcw aria-hidden="true" /> Spróbuj ponownie</Button></AlertDescription></Alert> : !available ? <p className="task-help-placeholder">Rozmowa będzie dostępna po zatwierdzeniu opracowania zadania.</p> : <>
           {sendError && <Alert variant="destructive" className="task-chat-error"><AlertDescription>{sendError}</AlertDescription></Alert>}
+          {messages.length === 0 && <div className="task-tutor-welcome"><b>Cześć, jestem Maia — Twoja pomocniczka w nauce</b><p>{TUTOR_WELCOME}</p></div>}
           {messages.length > 0 && <div ref={conversationRef} className="task-chat" role="log" aria-label="Rozmowa z nauczycielem AI" aria-live="polite">{messages.map((message) => <TutorMessage key={message.id} message={message} />)}</div>}
           {quickQuestions.some((suggestion) => !suggestion.used) && <div className="task-quick-questions" aria-label="Gotowe pytania do Mai"><div><b>Możesz zacząć od gotowego pytania</b><small>Te podpowiedzi nie zmniejszają dziennego limitu.</small></div>{quickQuestions.filter((suggestion) => !suggestion.used).map((suggestion) => <button key={suggestion.index} type="button" onClick={() => handleQuickQuestion(suggestion.index)}>{suggestion.question}<span aria-hidden="true">→</span></button>)}</div>}
           {usage.remaining > 0 ? <div className="task-chat-entry"><div className="task-chat-composer">
             <Textarea value={input} onChange={(event) => setInput(event.target.value)} onKeyDown={(event) => { if (event.key === "Enter" && !event.shiftKey) { event.preventDefault(); void sendMessage(); } }} maxLength={AI_MESSAGE_MAX_LENGTH} rows={1} placeholder="Napisz, czego nie rozumiesz w tym zadaniu…" aria-label="Pytanie do nauczyciela AI" disabled={sending} />
             <button type="button" aria-label="Wyślij pytanie" onClick={() => void sendMessage()} disabled={sending || input.trim().length < 2}>↑</button>
-          </div><p className="task-tutor-privacy">Maja odpowiada tylko na pytania o to zadanie. Rodzic nie widzi treści rozmowy.<span className="sr-only"> Nie wpisuj danych osobowych.</span></p></div> : <div className="task-tutor-limit"><div><b>Dzisiejszy limit został wykorzystany</b><span>Nowe własne pytania będą dostępne jutro. Nadal możesz użyć gotowych podpowiedzi powyżej.</span></div>{usage.plan === "free" && <Button variant="outline" asChild><a href="/plan-plus#porownanie">Poznaj pakiet Plus</a></Button>}</div>}
+          </div><p className="task-tutor-privacy">Maia odpowiada tylko na pytania o to zadanie. Rodzic nie widzi treści rozmowy.<span className="sr-only"> Nie wpisuj danych osobowych.</span></p></div> : <div className="task-tutor-limit"><div><b>Dzisiejszy limit został wykorzystany</b><span>Nowe własne pytania będą dostępne jutro. Nadal możesz użyć gotowych podpowiedzi powyżej.</span></div>{usage.plan === "free" && <Button variant="outline" asChild><a href="/plan-plus#porownanie">Poznaj pakiet Plus</a></Button>}</div>}
         </>}
       </section>}
     </div>
@@ -238,9 +240,9 @@ export function AiTutor({
   if (!aiEnabled) {
     const solutionSteps = feedback?.explanation.split(/(?<=[.!?])\s+/).map((step) => step.trim()).filter(Boolean) ?? [];
     return <section className="task-help-panel" aria-label="Pomoc do zadania">
-      <div className="task-help-tabs" role="tablist" aria-label="Rodzaj pomocy"><button type="button" role="tab" aria-selected={Boolean(feedback)} disabled={!feedback}>Rozwiązanie</button><button type="button" role="tab" aria-selected={!feedback}>Maja AI</button></div>
+      <div className="task-help-tabs" role="tablist" aria-label="Rodzaj pomocy"><button type="button" role="tab" aria-selected={Boolean(feedback)} disabled={!feedback}>Rozwiązanie</button><button type="button" role="tab" aria-selected={!feedback}>Maia AI</button></div>
       <div className="task-help-content">
-        {feedback ? <section className="task-help-view task-solution" aria-labelledby="answer-help-title-free"><div className="task-solution-heading"><b id="answer-help-title-free">Rozwiązanie krok po kroku</b><span>{Math.max(solutionSteps.length, 1)} {solutionSteps.length === 1 ? "krok" : "kroki"}</span></div><ol>{(solutionSteps.length ? solutionSteps : [feedback.explanation]).map((step, index) => <li key={`${index}-${step}`}><span>{index + 1}</span><div><b>{index === 0 ? "Zobacz sposób rozwiązania" : "Kolejny krok"}</b><p className="mathjax_process">{step}</p></div></li>)}</ol><div className="task-solution-answer"><span>ODPOWIEDŹ</span><b>{feedback.correctAnswer}</b></div><div className="task-tutor-limit"><div><b>Maja AI jest chwilowo niedostępna</b><span>Rozwiązanie zadania nadal możesz przejrzeć krok po kroku.</span></div></div></section> : <section className="task-help-view task-conversation" aria-labelledby="ai-unavailable-title"><div className="task-conversation-heading"><b id="ai-unavailable-title">Maja · nauczycielka AI</b><small>Chwilowo niedostępna</small></div><p className="task-help-placeholder">Spróbuj ponownie później. W wersji Free otrzymujesz 3 własne pytania do Mai dziennie.</p></section>}
+        {feedback ? <section className="task-help-view task-solution" aria-labelledby="answer-help-title-free"><div className="task-solution-heading"><b id="answer-help-title-free">Rozwiązanie krok po kroku</b><span>{Math.max(solutionSteps.length, 1)} {solutionSteps.length === 1 ? "krok" : "kroki"}</span></div><ol>{(solutionSteps.length ? solutionSteps : [feedback.explanation]).map((step, index) => <li key={`${index}-${step}`}><span>{index + 1}</span><div><b>{index === 0 ? "Zobacz sposób rozwiązania" : "Kolejny krok"}</b><p className="mathjax_process">{step}</p></div></li>)}</ol><div className="task-solution-answer"><span>ODPOWIEDŹ</span><b>{feedback.correctAnswer}</b></div><div className="task-tutor-limit"><div><b>Maia AI jest chwilowo niedostępna</b><span>Rozwiązanie zadania nadal możesz przejrzeć krok po kroku.</span></div></div></section> : <section className="task-help-view task-conversation" aria-labelledby="ai-unavailable-title"><div className="task-conversation-heading"><b id="ai-unavailable-title">Maia · nauczycielka AI</b><small>Chwilowo niedostępna</small></div><p className="task-help-placeholder">Spróbuj ponownie później. W wersji Free otrzymujesz 3 własne pytania do Mai dziennie.</p></section>}
       </div>
     </section>;
   }

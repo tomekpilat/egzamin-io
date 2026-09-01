@@ -55,6 +55,8 @@ describe("AI tutor validation and prompt", () => {
 
   it("anchors the tutor to the approved answer and subject method", () => {
     const prompt = buildTutorSystemPrompt(context);
+    expect(prompt).toContain("Masz na imię Maia");
+    expect(prompt).toContain("Pisz naturalnie i po ludzku");
     expect(prompt).toContain("Zatwierdzony klucz: {\"correct_index\":1}");
     expect(prompt).toContain("Nie zmieniaj ich");
     expect(prompt).toContain("MathJax");

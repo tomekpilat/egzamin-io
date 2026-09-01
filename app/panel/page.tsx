@@ -170,7 +170,7 @@ function ParentPanel({ activeView, parentEmail, requests, linkedChildren, action
           <div className="guardian-section-heading"><div><h3>Podłączone dzieci</h3><small>Postęp, cel tygodniowy i dostęp Plus ustawiasz osobno.</small></div><Button variant="outline" size="sm" type="button" onClick={() => onNavigate("connect")}>Podłącz kolejne</Button></div>
           {linkedChildren.length ? <div className="parent-overview-child-list">{linkedChildren.map((child) => <button type="button" key={child.student_id} onClick={() => onNavigate("progress")}><span className="guardian-avatar">{(child.student_display_name || child.student_email).slice(0, 2).toUpperCase()}</span><span><b>{child.student_display_name || "Uczeń"}</b><small>{child.student_email}</small></span><Badge variant={child.plan_tier === "plus" ? "secondary" : "outline"}>{child.plan_tier === "plus" ? "Plus aktywny" : "Plan Free"}</Badge><em>Postęp</em></button>)}</div> : <div className="parent-overview-empty"><p>Nie ma jeszcze połączonych kont dzieci.</p><Button type="button" onClick={() => onNavigate("connect")}>Połącz konto dziecka</Button></div>}
         </section>
-        <p className="parent-overview-privacy">Nie pokazujemy treści rozmów dziecka z Mają AI. Widzisz liczby, tematy, wykorzystanie AI i regularność nauki.</p>
+        <p className="parent-overview-privacy">Nie pokazujemy treści rozmów dziecka z Maią AI. Widzisz liczby, tematy, wykorzystanie AI i regularność nauki.</p>
       </section>}
 
       {activeView === "children" && <section className="parent-content-view parent-children-view" aria-labelledby="parent-children-title">

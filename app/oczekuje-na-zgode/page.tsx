@@ -66,7 +66,7 @@ export default function WaitingForGuardianPage() {
           <b>Co rodzic zobaczy</b>
           <span>Liczbę rozwiązanych zadań, poprawność, przedmioty, tematy do powtórki, wykorzystanie AI i regularność nauki.</span>
           <b>Czego nie zobaczy</b>
-          <span>Treści Twoich rozmów z Mają AI ani pojedynczych pytań, które jej zadajesz.</span>
+          <span>Treści Twoich rozmów z Maią AI ani pojedynczych pytań, które jej zadajesz.</span>
         </div>
         {status?.request_status === "withdrawn" && <Alert variant="warning"><AlertTitle>Zgoda została wycofana</AlertTitle><AlertDescription>Do dalszego korzystania potrzebne jest ponowne zatwierdzenie przez opiekuna.</AlertDescription></Alert>}
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}

@@ -440,7 +440,7 @@ describe("StudentPractice focus mode", () => {
     const user = userEvent.setup();
     render(<StudentPractice activeView="exercises" onNavigate={() => undefined} />);
 
-    await user.click(await screen.findByRole("tab", { name: "Maja AI" }));
+    await user.click(await screen.findByRole("tab", { name: "Maia AI" }));
     const composer = screen.getByRole("textbox", { name: "Pytanie do nauczyciela AI" });
     await user.type(composer, "Dlaczego?");
     await user.click(screen.getByRole("button", { name: "Wyślij pytanie" }));
@@ -454,7 +454,7 @@ describe("StudentPractice focus mode", () => {
     const user = userEvent.setup();
     render(<StudentPractice activeView="exercises" onNavigate={() => undefined} />);
 
-    await user.click(await screen.findByRole("tab", { name: "Maja AI" }));
+    await user.click(await screen.findByRole("tab", { name: "Maia AI" }));
     expect(await screen.findByText("Zostały 3 z 3 pytań dziś")).toBeInTheDocument();
     await waitFor(() => expect(vi.mocked(fetch)).toHaveBeenCalledTimes(1));
 
