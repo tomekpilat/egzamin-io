@@ -42,8 +42,8 @@ export default function PlanPlusPage() {
             <CardContent><p>Interaktywne rozwiązywanie bez limitu, nauczyciel AI i powtórki dobrane do tematów, które wymagają uwagi.</p></CardContent>
           </Card>
           <Card id="dla-rodzica">
-            <CardHeader><Badge variant="outline">Dla rodzica</Badge><CardTitle>Widzisz postęp, nie prywatne rozmowy.</CardTitle></CardHeader>
-            <CardContent><p>Trend, regularność, wykorzystanie AI i jedna rekomendacja na tydzień — bez zaglądania dziecku przez ramię.</p></CardContent>
+            <CardHeader><Badge variant="outline">Dla rodzica</Badge><CardTitle>Widzisz postęp i wiesz, jak wspierać.</CardTitle></CardHeader>
+            <CardContent><p>Trend, regularność, wykorzystanie AI i czytelna rekomendacja pomagają spokojnie zaplanować kolejny krok w nauce.</p></CardContent>
           </Card>
         </div>
 

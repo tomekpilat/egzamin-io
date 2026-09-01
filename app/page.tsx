@@ -3,7 +3,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { Calculator, CalendarDays, Check, CircleCheck, EyeOff, FileText, ListChecks, MessageCircleQuestion } from "lucide-react";
+import { Calculator, CalendarDays, Check, CircleCheck, FileText, ListChecks, MessageCircleQuestion } from "lucide-react";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { SubjectIcon } from "@/components/subject-icon";
@@ -41,9 +41,9 @@ export default function Home() {
               <Button size="lg" variant="outline" asChild><a href="#rodzice">Jestem rodzicem</a></Button>
             </div>
             <div className="design-home-trust" aria-label="Najważniejsze zasady">
-              <span><FileText aria-hidden="true" />Arkusze CKE 2019–2025</span>
+              <span><FileText aria-hidden="true" />Arkusze CKE 2019–2026</span>
               <span><MessageCircleQuestion aria-hidden="true" />Pomoc bez gotowej odpowiedzi</span>
-              <span><EyeOff aria-hidden="true" />Rodzic nie czyta rozmów</span>
+              <span><CircleCheck aria-hidden="true" />Treści pod opieką ludzi</span>
             </div>
           </div>
           <div className="design-home-hero-image"><Image src="/uczen-nauka-logowanie.png" width={1536} height={1024} priority sizes="(max-width: 880px) 100vw, 460px" alt="Uczeń przy biurku z arkuszem i laptopem" /></div>
@@ -78,6 +78,14 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="design-home-section design-human-section">
+        <div className="design-home-container design-human-content">
+          <span className="design-eyebrow">Technologia i doświadczenie</span>
+          <h2>AI pomaga. Za jakość egzaminio odpowiadają ludzie.</h2>
+          <p>Maia wspiera ucznia podczas rozwiązywania zadań, ale egzaminio nie jest automatycznie wygenerowanym katalogiem treści. Nad doborem materiałów, strukturą opracowań i zgłoszeniami użytkowników czuwają prawdziwi ludzie.</p>
+        </div>
+      </section>
+
       <section id="przedmioty" className="design-home-section design-subjects-section">
         <div className="design-home-container">
           <div className="design-subjects-heading"><span className="design-eyebrow">Przedmioty</span><h2>Ćwiczysz dokładnie to, co pojawia się na egzaminie</h2><p>Matematyka, język polski i wszystkie języki obce dostępne na egzaminie — w zadaniach z arkuszy CKE.</p></div>
@@ -92,11 +100,11 @@ export default function Home() {
 
       <section id="rodzice" className="design-home-section design-home-section-card">
         <div className="design-home-container design-parent-section">
-          <h2>Rodzic widzi postęp, nie prywatne rozmowy — w Plus</h2>
+          <h2>Rodzic widzi, jak idzie nauka i wie, gdzie warto pomóc — w Plus</h2>
           <div className="design-parent-grid">
             <div><CalendarDays aria-hidden="true" /><b>Regularność</b><span>Ile dni w tygodniu dziecko siadło do zadań.</span></div>
             <div><ListChecks aria-hidden="true" /><b>Tematy do powtórki</b><span>Konkretne zagadnienia z arkuszy.</span></div>
-            <div><EyeOff aria-hidden="true" /><b>Czego nie widzisz</b><span>Treści rozmów z Maią AI.</span></div>
+            <div><CircleCheck aria-hidden="true" /><b>Jasny kolejny krok</b><span>Krótka rekomendacja, na czym skupić kolejną sesję nauki.</span></div>
           </div>
           <Button asChild><a href="/logowanie?tryb=rejestracja&rola=rodzic">Załóż konto rodzica</a></Button>
         </div>

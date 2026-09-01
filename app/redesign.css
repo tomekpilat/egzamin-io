@@ -1794,6 +1794,11 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
 .design-process-list p { margin: 5px 0 0; color: var(--muted-copy); font-size: 16px; line-height: 1.65; }
 .design-process-list strong { color: var(--foreground); font-weight: 600; }
 
+.design-human-section { background: var(--card); }
+.design-human-content { padding-block: 48px; display: grid; grid-template-columns: minmax(180px, .45fr) minmax(320px, .9fr) minmax(360px, 1.25fr); align-items: start; gap: 32px; }
+.design-human-content h2 { margin: 0; font-size: 30px; line-height: 1.22; font-weight: 600; text-wrap: pretty; }
+.design-human-content p { margin: 2px 0 0; color: var(--muted-copy); font-size: 16px; line-height: 1.7; text-wrap: pretty; }
+
 .design-home-simple .design-parent-section > h2,
 .design-home-simple .design-pricing-section > h2 { max-width: 680px; margin: 0; font-size: 32px; line-height: 1.2; font-weight: 600; }
 .design-home-simple .design-parent-grid > div { min-height: 165px; gap: 11px; }
@@ -1824,6 +1829,8 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
 
 @media (max-width: 880px) {
   .design-home-simple .design-home-hero-grid { grid-template-columns: 1fr; }
+  .design-human-content { grid-template-columns: 1fr; gap: 12px; }
+  .design-human-content p { max-width: 720px; }
   .design-plan-grid,
   .design-dual-cta { grid-template-columns: 1fr; }
   .design-dual-cta > div,
@@ -1836,6 +1843,8 @@ a:not([data-slot="button"]):hover { color: var(--brand); }
   .design-home-simple .design-home-hero-image { height: 320px; }
   .design-home-trust { gap: 13px; }
   .design-home-trust span { width: 100%; }
+  .design-human-content { padding-block: 38px; }
+  .design-human-content h2 { font-size: 27px; }
   .design-plan-card { min-height: auto; padding: 24px 20px; }
   .design-plan-card header { align-items: flex-start; flex-direction: column; }
 }

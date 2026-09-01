@@ -10,9 +10,11 @@ const privacy = readFileSync(join(root, "app", "polityka-prywatnosci", "page.tsx
 const childSafety = readFileSync(join(root, "app", "bezpieczenstwo-dzieci-ai", "page.tsx"), "utf8");
 
 describe("standard CKE papers in the MVP UI", () => {
-  it("keeps the parent privacy promise on the simplified homepage", () => {
-    expect(homepage).toContain("Rodzic widzi postęp, nie prywatne rozmowy");
-    expect(homepage).toContain("Rodzic nie czyta rozmów");
+  it("communicates positive parent support and human content oversight", () => {
+    expect(homepage).toContain("Rodzic widzi, jak idzie nauka i wie, gdzie warto pomóc");
+    expect(homepage).toContain("Treści pod opieką ludzi");
+    expect(homepage).toContain("Za jakość egzaminio odpowiadają ludzie");
+    expect(homepage).not.toContain("Czego nie widzisz");
     expect(homepage).toContain('rola=rodzic');
   });
 
