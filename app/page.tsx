@@ -35,7 +35,8 @@ export default function Home() {
         <div className="design-home-container design-home-hero-grid">
           <div className="design-home-hero-copy">
             <span className="design-eyebrow">Egzamin ósmoklasisty</span>
-            <h1>Prawdziwe zadania CKE i pomoc dokładnie tam, gdzie się zacięło</h1>
+            <h1>Ćwicz na autentycznych arkuszach CKE z poprzednich lat</h1>
+            <p>Ponad 1000 pytań wraz z odpowiedziami i wyjaśnieniami krok po kroku — żeby nie tylko sprawdzić wynik, ale naprawdę zrozumieć zadanie.</p>
             <div className="design-home-actions">
               <Button size="lg" asChild><a href="/logowanie?tryb=rejestracja&rola=uczen">Zacznij jako uczeń</a></Button>
               <Button size="lg" variant="outline" asChild><a href="#rodzice">Jestem rodzicem</a></Button>
@@ -88,7 +89,7 @@ export default function Home() {
 
       <section id="przedmioty" className="design-home-section design-subjects-section">
         <div className="design-home-container">
-          <div className="design-subjects-heading"><span className="design-eyebrow">Przedmioty</span><h2>Ćwiczysz dokładnie to, co pojawia się na egzaminie</h2><p>Matematyka, język polski i wszystkie języki obce dostępne na egzaminie — w zadaniach z arkuszy CKE.</p></div>
+          <div className="design-subjects-heading"><span className="design-eyebrow">Przedmioty</span><h2>Ćwiczysz dokładnie to, co pojawiało się na egzaminie</h2><p>Matematyka, język polski i wszystkie języki obce dostępne na egzaminie — w zadaniach z arkuszy CKE.</p></div>
           <div className="design-subjects-grid">
             <article><SubjectIcon subject="mathematics" /><b>Matematyka</b><span>Zadania zamknięte i otwarte, obliczenia oraz geometria.</span></article>
             <article><SubjectIcon subject="polish" /><b>Język polski</b><span>Czytanie ze zrozumieniem, język i przygotowanie do wypowiedzi.</span></article>
