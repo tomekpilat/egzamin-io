@@ -13,8 +13,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { trackAnalyticsEvent } from "@/lib/analytics";
+import { buildEmailSignupCredentials, friendlyAuthError, normalizeAuthEmail } from "@/lib/auth-signup";
 import { validateSignupConfirmation } from "@/lib/auth-validation";
-import { LEGAL_VERSION } from "@/lib/legal";
 import type { SelfServiceRole } from "@/lib/roles";
 import { getSupabaseClient } from "@/lib/supabase-browser";
 
@@ -26,14 +26,6 @@ const ROLE_OPTIONS: Array<{ value: SelfServiceRole; title: string; description: 
   { value: "student", title: "Uczeń", description: "Masz wszystkie arkusze CKE, 15 interaktywnych odpowiedzi, 3 pytania do AI dziennie i podstawowy podgląd postępu." },
   { value: "parent", title: "Rodzic lub opiekun", description: "Zatwierdzasz konto dziecka, kupujesz Plus i wtedy widzisz postęp oraz wykorzystanie AI." },
 ];
-
-function friendlyAuthError(message: string) {
-  if (/invalid login credentials/i.test(message)) return "Nieprawidłowy e-mail lub hasło.";
-  if (/email not confirmed/i.test(message)) return "Potwierdź adres e-mail przez link, który wysłaliśmy.";
-  if (/user already registered/i.test(message)) return "Konto z tym adresem już istnieje. Spróbuj się zalogować.";
-  if (/password/i.test(message)) return "Hasło musi mieć co najmniej 8 znaków.";
-  return "Nie udało się wykonać operacji. Spróbuj ponownie za chwilę.";
-}
 
 export default function LoginPage() {
   const searchParams = useSearchParams();
@@ -94,14 +86,13 @@ export default function LoginPage() {
     try {
       const supabase = await getSupabaseClient();
       if (mode === "signup") {
-        const { data, error } = await supabase.auth.signUp({
-          email: email.trim(),
+        const { data, error } = await supabase.auth.signUp(buildEmailSignupCredentials({
+          email,
           password,
-          options: {
-            emailRedirectTo: `${window.location.origin}/panel`,
-            data: { display_name: email.trim().split("@")[0], requested_role: role, guardian_email: role === "student" ? guardianEmail.trim().toLowerCase() : null, legal_accepted: true, legal_version: LEGAL_VERSION },
-          },
-        });
+          role,
+          guardianEmail,
+          redirectOrigin: window.location.origin,
+        }));
         if (error) throw error;
         trackAnalyticsEvent("signup_completed");
         setPassword("");
@@ -109,7 +100,7 @@ export default function LoginPage() {
         if (data.session) { window.location.assign("/panel"); return; }
         setNotice({ type: "success", message: "Konto utworzone. Sprawdź skrzynkę i potwierdź adres e-mail, aby się zalogować." });
       } else {
-        const { error } = await supabase.auth.signInWithPassword({ email: email.trim(), password });
+        const { error } = await supabase.auth.signInWithPassword({ email: normalizeAuthEmail(email), password });
         if (error) throw error;
         trackAnalyticsEvent("login_completed");
         window.location.assign("/panel");
