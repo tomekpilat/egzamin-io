@@ -227,7 +227,7 @@ Drugi przypięty materiał, [egzaminio-tools-social-18s.mp4](marketing/video/egz
 Ten wariant powinien kierować do kalkulatora, dlatego jego podstawowy UTM to:
 
 ```text
-https://egzamin.io/kalkulator-punktow-do-liceum?utm_source=instagram&utm_medium=organic_social&utm_campaign=tools_2026&utm_content=tools_18s
+https://egzamin.io/kalkulator-punktow?utm_source=instagram&utm_medium=organic_social&utm_campaign=tools_2026&utm_content=tools_18s
 ```
 
 Główna metryka: rozpoczęte obliczenie w kalkulatorze. Metryki pomocnicze: ukończenie filmu, przejścia do bazy wiedzy, rozpoczęte rozmowy z Maią i późniejsze rozpoczęcie arkusza.
