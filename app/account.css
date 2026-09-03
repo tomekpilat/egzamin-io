@@ -393,6 +393,7 @@
 .admin-teacher-form { display: grid; gap: 9px; }
 .admin-teacher-form > label { font-size: 13px; font-weight: 750; }
 .admin-teacher-form > div { display: grid; grid-template-columns: minmax(220px, 1fr) auto; gap: 10px; }
+.admin-feature-form > div { grid-template-columns: minmax(220px, 1fr) minmax(160px, 190px) auto; }
 .parent-connect-card { margin-top: 15px; scroll-margin-top: 20px; border-color: var(--border); }
 .parent-connect-card [data-slot="card-header"] { padding-bottom: 16px; }
 .parent-connect-card [data-slot="badge"] { width: fit-content; }
@@ -705,7 +706,7 @@
 @media (max-width: 680px) {
   .child-card-title-row { grid-template-columns: 42px 1fr; }
   .child-card-title-row [data-slot="badge"] { grid-column: 1 / -1; width: fit-content; }
-  .child-preference-grid, .admin-teacher-form > div { grid-template-columns: 1fr; }
+  .child-preference-grid, .admin-teacher-form > div, .admin-feature-form > div { grid-template-columns: 1fr; }
   .parent-connect-steps { grid-template-columns: 1fr; }
   .parent-connect-actions { display: grid; }
   .parent-payment-checkout [data-slot="card-header"] { flex-direction: column; }

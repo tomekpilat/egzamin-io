@@ -15,7 +15,7 @@
 .dashboard-parent-page .dashboard-sidebar > a:first-child { margin: 0 8px 24px; }
 .dashboard-parent-page .dashboard-nav-label { padding: 0 8px 6px; color: var(--quiet-copy); font-size: 11px; font-weight: 600; letter-spacing: .06em; }
 .dashboard-parent-page .dashboard-sidebar nav { margin: 0; gap: 4px; }
-.dashboard-parent-page .dashboard-sidebar nav button {
+.dashboard-parent-page .dashboard-sidebar nav :is(button, .feature-nav-link) {
   min-height: 40px;
   padding: 9px 10px;
   gap: 10px;
@@ -25,10 +25,10 @@
   font-size: 14px;
   font-weight: 400;
 }
-.dashboard-parent-page .dashboard-sidebar nav button:hover { color: var(--foreground); background: var(--surface-soft); }
+.dashboard-parent-page .dashboard-sidebar nav :is(button, .feature-nav-link):hover { color: var(--foreground); background: var(--surface-soft); text-decoration: none; }
 .dashboard-parent-page .dashboard-sidebar nav button.active { color: var(--brand); background: var(--brand-soft); border-color: color-mix(in srgb, var(--brand) 25%, var(--border)); font-weight: 600; }
 .dashboard-parent-page .parent-nav-icon { width: 16px; height: 16px; flex: none; stroke-width: 1.6; }
-.dashboard-parent-page .dashboard-sidebar nav button > span { min-width: 0; flex: 1; color: inherit; font-size: inherit; text-align: left; }
+.dashboard-parent-page .dashboard-sidebar nav :is(button, .feature-nav-link) > span { min-width: 0; flex: 1; color: inherit; font-size: inherit; text-align: left; }
 .dashboard-parent-page .dashboard-nav-with-count b { min-width: 20px; height: 20px; padding-inline: 6px; color: var(--primary-foreground); background: var(--brand); }
 .dashboard-parent-page .dashboard-sidebar .dashboard-sidebar-legal {
   margin-top: auto;
@@ -271,9 +271,11 @@
   .dashboard-parent-page { display: block; padding-bottom: 72px; }
   .dashboard-parent-page .dashboard-sidebar { position: fixed; z-index: 55; top: auto; bottom: 0; left: 0; width: 100%; height: 72px; padding: 7px 10px; overflow-x: auto; align-items: stretch; background: var(--card); border: 0; border-top: 1px solid var(--border); }
   .dashboard-parent-page .dashboard-sidebar nav { min-width: 510px; grid-template-columns: repeat(6, minmax(76px, 1fr)); gap: 2px; }
+  .dashboard-parent-page .dashboard-sidebar nav.has-tutoring-access { min-width: 594px; grid-template-columns: repeat(7, minmax(76px, 1fr)); }
   .dashboard-parent-page .dashboard-sidebar nav button,
-  .dashboard-parent-page .dashboard-sidebar nav button:not(.active) { width: auto; height: 56px; min-height: 56px; padding: 5px 7px; flex-direction: column; justify-content: center; gap: 3px; color: var(--muted-copy); font-size: 10px; }
-  .dashboard-parent-page .dashboard-sidebar nav button > span { width: auto; flex: none; font-size: 10px; text-align: center; }
+  .dashboard-parent-page .dashboard-sidebar nav button:not(.active),
+  .dashboard-parent-page .dashboard-sidebar nav .feature-nav-link { width: auto; height: 56px; min-height: 56px; padding: 5px 7px; flex-direction: column; justify-content: center; gap: 3px; color: var(--muted-copy); font-size: 10px; }
+  .dashboard-parent-page .dashboard-sidebar nav :is(button, .feature-nav-link) > span { width: auto; flex: none; font-size: 10px; text-align: center; }
   .dashboard-parent-page .parent-nav-icon { width: 17px; height: 17px; }
   .dashboard-parent-page .dashboard-nav-with-count { position: relative; }
   .dashboard-parent-page .dashboard-nav-with-count b { position: absolute; top: 2px; right: 10px; }
@@ -319,8 +321,8 @@
 :root:not(.dark) .dashboard-parent-page .dashboard-sidebar .wordmark-main { color: var(--sidebar-muted); }
 :root:not(.dark) .dashboard-parent-page .dashboard-sidebar .wordmark-io { color: var(--sidebar-strong); }
 :root:not(.dark) .dashboard-parent-page .dashboard-nav-label { color: var(--sidebar-muted); }
-:root:not(.dark) .dashboard-parent-page .dashboard-sidebar nav button { color: var(--sidebar-text); }
-:root:not(.dark) .dashboard-parent-page .dashboard-sidebar nav button:hover { color: var(--sidebar-strong); background: var(--sidebar-surface); }
+:root:not(.dark) .dashboard-parent-page .dashboard-sidebar nav :is(button, .feature-nav-link) { color: var(--sidebar-text); }
+:root:not(.dark) .dashboard-parent-page .dashboard-sidebar nav :is(button, .feature-nav-link):hover { color: var(--sidebar-strong); background: var(--sidebar-surface); }
 :root:not(.dark) .dashboard-parent-page .dashboard-sidebar nav button.active { color: #1e1b2e; background: var(--gold); border-color: var(--gold); }
 :root:not(.dark) .dashboard-parent-page .dashboard-nav-with-count b { color: #1e1b2e; background: var(--gold); }
 :root:not(.dark) .dashboard-parent-page .dashboard-sidebar .dashboard-sidebar-legal { border-top-color: var(--sidebar-surface); }
@@ -338,7 +340,8 @@
 @media (max-width: 760px) {
   :root:not(.dark) .dashboard-parent-page .dashboard-sidebar { background: var(--sidebar); border-top-color: var(--sidebar-surface); }
   :root:not(.dark) .dashboard-parent-page .dashboard-sidebar nav button,
-  :root:not(.dark) .dashboard-parent-page .dashboard-sidebar nav button:not(.active) { color: var(--sidebar-muted); }
+  :root:not(.dark) .dashboard-parent-page .dashboard-sidebar nav button:not(.active),
+  :root:not(.dark) .dashboard-parent-page .dashboard-sidebar nav .feature-nav-link { color: var(--sidebar-muted); }
   :root:not(.dark) .dashboard-parent-page .dashboard-sidebar nav button.active { color: #1e1b2e; }
 }
 

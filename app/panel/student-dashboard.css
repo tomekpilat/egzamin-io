@@ -16,7 +16,7 @@
 .dashboard-student-page .student-dashboard-sidebar > a:first-child { margin: 0 8px 24px; }
 .dashboard-student-page .dashboard-nav-label { padding: 0 8px 6px; color: var(--quiet-copy); font-size: 11px; font-weight: 600; letter-spacing: .06em; }
 .dashboard-student-page .student-dashboard-sidebar nav { margin: 0; gap: 4px; }
-.dashboard-student-page .student-dashboard-sidebar nav button {
+.dashboard-student-page .student-dashboard-sidebar nav :is(button, .feature-nav-link) {
   min-height: 40px;
   padding: 9px 10px;
   gap: 10px;
@@ -26,10 +26,10 @@
   font-size: 14px;
   font-weight: 400;
 }
-.dashboard-student-page .student-dashboard-sidebar nav button:hover { color: var(--foreground); background: var(--surface-soft); }
+.dashboard-student-page .student-dashboard-sidebar nav :is(button, .feature-nav-link):hover { color: var(--foreground); background: var(--surface-soft); text-decoration: none; }
 .dashboard-student-page .student-dashboard-sidebar nav button.active { color: var(--brand); background: var(--brand-soft); border-color: color-mix(in srgb, var(--brand) 25%, var(--border)); font-weight: 600; }
 .dashboard-student-page .student-nav-icon { width: 16px; height: 16px; flex: none; stroke-width: 1.6; }
-.dashboard-student-page .student-dashboard-sidebar nav button > span { min-width: 0; flex: 1; color: inherit; font-size: inherit; text-align: left; }
+.dashboard-student-page .student-dashboard-sidebar nav :is(button, .feature-nav-link) > span { min-width: 0; flex: 1; color: inherit; font-size: inherit; text-align: left; }
 
 .student-session-card {
   width: 100%;
@@ -244,9 +244,11 @@
   .dashboard-student-page .student-session-card,
   .dashboard-student-page .student-dashboard-sidebar .dashboard-sidebar-legal { display: none; }
   .dashboard-student-page .student-dashboard-sidebar nav { width: 100%; grid-template-columns: repeat(3, minmax(84px, 1fr)); gap: 2px; }
+  .dashboard-student-page .student-dashboard-sidebar nav.has-tutoring-access { grid-template-columns: repeat(4, minmax(72px, 1fr)); }
   .dashboard-student-page .student-dashboard-sidebar nav button,
-  .dashboard-student-page .student-dashboard-sidebar nav button:not(.active) { width: auto; height: 56px; min-height: 56px; padding: 5px 7px; flex-direction: column; justify-content: center; gap: 3px; color: var(--muted-copy); font-size: 10px; }
-  .dashboard-student-page .student-dashboard-sidebar nav button > span { width: auto; flex: none; font-size: 10px; text-align: center; }
+  .dashboard-student-page .student-dashboard-sidebar nav button:not(.active),
+  .dashboard-student-page .student-dashboard-sidebar nav .feature-nav-link { width: auto; height: 56px; min-height: 56px; padding: 5px 7px; flex-direction: column; justify-content: center; gap: 3px; color: var(--muted-copy); font-size: 10px; }
+  .dashboard-student-page .student-dashboard-sidebar nav :is(button, .feature-nav-link) > span { width: auto; flex: none; font-size: 10px; text-align: center; }
   .dashboard-student-page .student-nav-icon { width: 17px; height: 17px; }
   .student-dashboard-topbar { min-height: 58px; padding: 8px 15px; }
   .student-dashboard-topbar > span { font-size: 12px; }
@@ -296,8 +298,8 @@
 :root:not(.dark) .dashboard-student-page .student-dashboard-sidebar .wordmark-main { color: var(--sidebar-muted); }
 :root:not(.dark) .dashboard-student-page .student-dashboard-sidebar .wordmark-io { color: var(--sidebar-strong); }
 :root:not(.dark) .dashboard-student-page .dashboard-nav-label { color: var(--sidebar-muted); }
-:root:not(.dark) .dashboard-student-page .student-dashboard-sidebar nav button { color: var(--sidebar-text); }
-:root:not(.dark) .dashboard-student-page .student-dashboard-sidebar nav button:hover { color: var(--sidebar-strong); background: var(--sidebar-surface); }
+:root:not(.dark) .dashboard-student-page .student-dashboard-sidebar nav :is(button, .feature-nav-link) { color: var(--sidebar-text); }
+:root:not(.dark) .dashboard-student-page .student-dashboard-sidebar nav :is(button, .feature-nav-link):hover { color: var(--sidebar-strong); background: var(--sidebar-surface); }
 :root:not(.dark) .dashboard-student-page .student-dashboard-sidebar nav button.active { color: #1e1b2e; background: var(--gold); border-color: var(--gold); }
 :root:not(.dark) .student-session-card { color: var(--sidebar-strong); background: var(--sidebar-surface); border-color: var(--sidebar-surface); }
 :root:not(.dark) .student-session-card:hover { background: color-mix(in srgb, var(--sidebar-surface) 82%, var(--gold)); }
@@ -323,7 +325,8 @@
 @media (max-width: 760px) {
   :root:not(.dark) .dashboard-student-page .student-dashboard-sidebar { background: var(--sidebar); border-top-color: var(--sidebar-surface); }
   :root:not(.dark) .dashboard-student-page .student-dashboard-sidebar nav button,
-  :root:not(.dark) .dashboard-student-page .student-dashboard-sidebar nav button:not(.active) { color: var(--sidebar-muted); }
+  :root:not(.dark) .dashboard-student-page .student-dashboard-sidebar nav button:not(.active),
+  :root:not(.dark) .dashboard-student-page .student-dashboard-sidebar nav .feature-nav-link { color: var(--sidebar-muted); }
   :root:not(.dark) .dashboard-student-page .student-dashboard-sidebar nav button.active { color: #1e1b2e; }
 }
 

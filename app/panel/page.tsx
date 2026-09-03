@@ -3,7 +3,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { User } from "@supabase/supabase-js";
-import { BookOpen, ChartNoAxesColumnIncreasing, CircleHelp, CreditCard, LayoutDashboard, LogOut, Settings as SettingsIcon, UserPlus, Users } from "lucide-react";
+import { BookOpen, ChartNoAxesColumnIncreasing, CircleHelp, CreditCard, GraduationCap, LayoutDashboard, LogOut, Settings as SettingsIcon, UserPlus, Users } from "lucide-react";
 import { AccountMenuTrigger } from "@/components/account-menu-trigger";
 import { BrandLogo } from "@/components/brand-logo";
 import { FeedbackDialog } from "@/components/feedback-dialog";
@@ -27,6 +27,7 @@ import { LEGAL_VERSION } from "@/lib/legal";
 import { FEEDBACK_CATEGORIES, feedbackStatusLabels, type FeedbackStatus } from "@/lib/feedback";
 import { resolveAccountRoute } from "@/lib/account-routing";
 import { OPEN_PRIVACY_SETTINGS_EVENT } from "@/lib/analytics";
+import { TUTORING_MARKETPLACE_FEATURE } from "@/lib/feature-flags";
 
 type Profile = {
   id: string;
@@ -61,6 +62,18 @@ type AdminFeedback = {
   feedback_screen_context: string;
   feedback_status: FeedbackStatus;
   feedback_created_at: string;
+};
+type AdminTutoringApplication = {
+  application_id: string;
+  applicant_email: string;
+  applicant_display_name: string | null;
+  applicant_role: UserRole;
+  application_subject: string;
+  application_lesson_format: string;
+  application_city: string | null;
+  application_description: string;
+  application_status: string;
+  application_updated_at: string;
 };
 
 function AccountMenu({ displayName, email, className = "", triggerClassName = "dashboard-session", onSettings, onSignOut }: { displayName: string; email: string; className?: string; triggerClassName?: string; onSettings: () => void; onSignOut: () => void }) {
@@ -228,14 +241,42 @@ function TeacherPanel({ verificationStatus }: { verificationStatus: Profile["tea
   );
 }
 
-function AdminPanel({ counts, feedback, busy, feedbackBusyId, error, onGrantTeacher, onUpdateFeedback }: { counts: RoleCounts; feedback: AdminFeedback[]; busy: boolean; feedbackBusyId: string; error: string; onGrantTeacher: (email: string) => Promise<boolean>; onUpdateFeedback: (id: string, status: FeedbackStatus) => void }) {
+function AdminPanel({ counts, feedback, busy, feedbackBusyId, error, onGrantTeacher, onSetFeatureAccess, onUpdateFeedback }: { counts: RoleCounts; feedback: AdminFeedback[]; busy: boolean; feedbackBusyId: string; error: string; onGrantTeacher: (email: string) => Promise<boolean>; onSetFeatureAccess: (email: string, enabled: boolean) => Promise<boolean>; onUpdateFeedback: (id: string, status: FeedbackStatus) => void }) {
   const total = Object.values(counts).reduce((sum, value) => sum + value, 0);
   const [teacherEmail, setTeacherEmail] = useState("");
+  const [featureEmail, setFeatureEmail] = useState("");
+  const [featureEnabled, setFeatureEnabled] = useState("enable");
+  const [featureMessage, setFeatureMessage] = useState("");
+  const [pilotApplications, setPilotApplications] = useState<AdminTutoringApplication[]>([]);
+  const [pilotLoadError, setPilotLoadError] = useState("");
+
+  useEffect(() => {
+    let active = true;
+    getSupabaseClient().then(async (supabase) => {
+      const { data, error: applicationsError } = await supabase.rpc("get_admin_tutoring_pilot_applications", { requested_limit: 100 });
+      if (!active) return;
+      if (applicationsError) setPilotLoadError("Nie udało się pobrać zgłoszeń. Sprawdź, czy migracja pilotażu została wdrożona.");
+      else setPilotApplications((data as AdminTutoringApplication[] | null) ?? []);
+    }).catch(() => {
+      if (active) setPilotLoadError("Nie udało się pobrać zgłoszeń pilotażowych.");
+    });
+    return () => { active = false; };
+  }, []);
 
   async function grantTeacherRole() {
     const email = teacherEmail.trim().toLowerCase();
     if (!email) return;
     if (await onGrantTeacher(email)) setTeacherEmail("");
+  }
+
+  async function updateFeatureAccess() {
+    const email = featureEmail.trim().toLowerCase();
+    if (!email) return;
+    setFeatureMessage("");
+    if (await onSetFeatureAccess(email, featureEnabled === "enable")) {
+      setFeatureMessage(featureEnabled === "enable" ? "Dostęp do pilotażu został włączony." : "Dostęp do pilotażu został wyłączony.");
+      setFeatureEmail("");
+    }
   }
 
   return (
@@ -258,6 +299,24 @@ function AdminPanel({ counts, feedback, busy, feedbackBusyId, error, onGrantTeac
         <CardContent>
           {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
           <div className="admin-teacher-form"><Label htmlFor="teacher-email">Adres e-mail zweryfikowanego nauczyciela</Label><div><Input id="teacher-email" type="email" autoComplete="email" placeholder="nauczyciel@szkola.pl" value={teacherEmail} onChange={(event) => setTeacherEmail(event.target.value)} /><Button type="button" onClick={() => void grantTeacherRole()} disabled={busy || !teacherEmail.trim()}>{busy ? "Nadaję rolę…" : "Nadaj rolę"}</Button></div></div>
+        </CardContent>
+      </Card>
+      <Card className="admin-teacher-card" id="feature-flags">
+        <CardHeader><CardTitle>Pilotaż korepetycji</CardTitle><CardDescription>Włącz lub wyłącz moduł dla konkretnego, istniejącego konta. Użytkownik zobaczy wtedy pozycję „Korepetycje” w swoim panelu.</CardDescription></CardHeader>
+        <CardContent>
+          {featureMessage && <Alert variant="success"><AlertDescription>{featureMessage}</AlertDescription></Alert>}
+          <div className="admin-teacher-form admin-feature-form"><Label htmlFor="feature-email">Adres e-mail użytkownika</Label><div><Input id="feature-email" type="email" autoComplete="email" placeholder="uzytkownik@example.com" value={featureEmail} onChange={(event) => setFeatureEmail(event.target.value)} /><Select value={featureEnabled} onValueChange={setFeatureEnabled} disabled={busy}><SelectTrigger aria-label="Zmiana dostępu"><SelectValue /></SelectTrigger><SelectContent><SelectItem value="enable">Włącz dostęp</SelectItem><SelectItem value="disable">Wyłącz dostęp</SelectItem></SelectContent></Select><Button type="button" onClick={() => void updateFeatureAccess()} disabled={busy || !featureEmail.trim()}>{busy ? "Zapisuję…" : "Zapisz dostęp"}</Button></div></div>
+        </CardContent>
+      </Card>
+      <Card className="admin-feedback-card" id="tutoring-applications">
+        <CardHeader><div className="admin-feedback-heading"><div><CardTitle>Zgłoszenia do pilotażu</CardTitle><CardDescription>Rodzice, uczniowie i nauczyciele, którzy opisali swoje potrzeby.</CardDescription></div><Badge variant="secondary">{pilotApplications.length}</Badge></div></CardHeader>
+        <CardContent>
+          {pilotLoadError && <Alert variant="destructive"><AlertDescription>{pilotLoadError}</AlertDescription></Alert>}
+          {!pilotLoadError && !pilotApplications.length ? <p className="admin-feedback-empty">Nie ma jeszcze zgłoszeń do pilotażu.</p> : <div className="admin-feedback-list">{pilotApplications.map((item) => <article className="admin-feedback-item" key={item.application_id}>
+            <div className="admin-feedback-meta"><Badge variant="outline">{item.application_subject}</Badge><span>{roleLabels[item.applicant_role]}</span><span>{item.application_lesson_format}</span><Badge variant="secondary">{item.application_status}</Badge><time dateTime={item.application_updated_at}>{new Date(item.application_updated_at).toLocaleString("pl-PL")}</time></div>
+            <p>{item.application_description}</p>
+            <div className="admin-feedback-context"><b>{item.applicant_display_name || item.applicant_email}</b><a href={`mailto:${item.applicant_email}`}>{item.applicant_email}</a>{item.application_city && <span>{item.application_city}</span>}</div>
+          </article>)}</div>}
         </CardContent>
       </Card>
       <AdminPromoCodes />
@@ -296,6 +355,7 @@ export default function DashboardPage() {
   const [adminFeedback, setAdminFeedback] = useState<AdminFeedback[]>([]);
   const [feedbackBusyId, setFeedbackBusyId] = useState("");
   const [adminActionError, setAdminActionError] = useState("");
+  const [tutoringAccess, setTutoringAccess] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -360,6 +420,8 @@ export default function DashboardPage() {
           }
 
           setProfile(nextProfile);
+          const { data: featureAccess } = await supabase.rpc("has_feature_access", { requested_feature: TUTORING_MARKETPLACE_FEATURE });
+          setTutoringAccess(Boolean(featureAccess));
           if (nextProfile.role === "parent") {
             await refreshParentData();
             if (new URLSearchParams(window.location.search).get("widok") === "platnosci") setParentView("payments");
@@ -440,6 +502,26 @@ export default function DashboardPage() {
       return true;
     } catch {
       setAdminActionError("Nie udało się nadać roli. Sprawdź adres, status konta i uprawnienia administratora.");
+      return false;
+    } finally {
+      setAdminActionBusy(false);
+    }
+  }
+
+  async function setFeatureAccess(email: string, enabled: boolean) {
+    setAdminActionBusy(true);
+    setAdminActionError("");
+    try {
+      const supabase = await getSupabaseClient();
+      const { error: featureError } = await supabase.rpc("set_user_feature_access", {
+        target_email: email,
+        requested_feature: TUTORING_MARKETPLACE_FEATURE,
+        next_enabled: enabled,
+      });
+      if (featureError) throw featureError;
+      return true;
+    } catch {
+      setAdminActionError("Nie udało się zmienić dostępu do pilotażu. Sprawdź adres e-mail, migrację bazy i uprawnienia administratora.");
       return false;
     } finally {
       setAdminActionBusy(false);
@@ -539,18 +621,20 @@ export default function DashboardPage() {
       {!focusMode && profile.role !== "student" && <aside className="dashboard-sidebar">
         <a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a>
         <span className="dashboard-nav-label">{profile.role === "parent" ? "Konto rodzica" : profile.role === "teacher" ? "Panel nauczyciela" : "Administracja"}</span>
-        <nav aria-label="Panel">
+        <nav aria-label="Panel" className={tutoringAccess ? "has-tutoring-access" : undefined}>
           {profile.role === "parent" ? <>
             <button type="button" className={parentView === "start" ? "active" : ""} aria-current={parentView === "start" ? "page" : undefined} onClick={() => setParentView("start")}><LayoutDashboard className="parent-nav-icon" aria-hidden="true" /><span>Przegląd</span></button>
             <button type="button" className={parentView === "progress" ? "active" : ""} aria-current={parentView === "progress" ? "page" : undefined} onClick={() => setParentView("progress")}><ChartNoAxesColumnIncreasing className="parent-nav-icon" aria-hidden="true" /><span>Postęp dziecka</span></button>
             <button type="button" className={`${parentView === "children" ? "active " : ""}dashboard-nav-with-count`.trim()} aria-current={parentView === "children" ? "page" : undefined} onClick={() => setParentView("children")}><Users className="parent-nav-icon" aria-hidden="true" /><span>Dzieci</span>{guardianRequests.length > 0 && <b>{guardianRequests.length}</b>}</button>
             <button type="button" className={parentView === "connect" ? "active" : ""} aria-current={parentView === "connect" ? "page" : undefined} onClick={() => setParentView("connect")}><UserPlus className="parent-nav-icon" aria-hidden="true" /><span>Dodaj dziecko</span></button>
             <button type="button" className={parentView === "payments" ? "active" : ""} aria-current={parentView === "payments" ? "page" : undefined} onClick={() => setParentView("payments")}><CreditCard className="parent-nav-icon" aria-hidden="true" /><span>Płatności i faktury</span></button>
+            {tutoringAccess && <a className="feature-nav-link" href="/korepetycje"><GraduationCap className="parent-nav-icon" aria-hidden="true" /><span>Korepetycje</span></a>}
             <button type="button" className={parentView === "settings" ? "active" : ""} aria-current={parentView === "settings" ? "page" : undefined} onClick={() => setParentView("settings")}><SettingsIcon className="parent-nav-icon" aria-hidden="true" /><span>Ustawienia</span></button>
           </> : <>
             <a className="active" href="/panel">Start</a>
             <a href="#zadania">{profile.role === "teacher" ? "Zestawy" : "Użytkownicy"}</a>
             <a href="#postep">{profile.role === "admin" ? "Treści CKE" : "Postępy"}</a>
+            {tutoringAccess && <a className="feature-nav-link" href="/korepetycje">Korepetycje</a>}
             <a href="#ustawienia">Ustawienia</a>
           </>}
         </nav>
@@ -561,9 +645,10 @@ export default function DashboardPage() {
       {!focusMode && profile.role === "student" && <aside className="dashboard-sidebar student-dashboard-sidebar">
         <a href="/" aria-label="egzaminio — strona główna"><BrandLogo /></a>
         <span className="dashboard-nav-label">Konto ucznia</span>
-        <nav aria-label="Panel ucznia">
+        <nav aria-label="Panel ucznia" className={tutoringAccess ? "has-tutoring-access" : undefined}>
           <button type="button" className={studentView === "start" ? "active" : ""} aria-current={studentView === "start" ? "page" : undefined} onClick={() => setStudentView("start")}><BookOpen className="student-nav-icon" aria-hidden="true" /><span>Nauka</span></button>
           <button type="button" className={studentView === "progress" ? "active" : ""} aria-current={studentView === "progress" ? "page" : undefined} onClick={() => setStudentView("progress")}><ChartNoAxesColumnIncreasing className="student-nav-icon" aria-hidden="true" /><span>Postęp</span></button>
+          {tutoringAccess && <a className="feature-nav-link" href="/korepetycje"><GraduationCap className="student-nav-icon" aria-hidden="true" /><span>Korepetycje</span></a>}
           <button type="button" className={studentView === "settings" ? "active" : ""} aria-current={studentView === "settings" ? "page" : undefined} onClick={() => setStudentView("settings")}><SettingsIcon className="student-nav-icon" aria-hidden="true" /><span>Ustawienia</span></button>
         </nav>
         <button type="button" className="student-session-card" onClick={() => setStudentView("exercises")}>
@@ -600,7 +685,7 @@ export default function DashboardPage() {
           {actionMessage && profile.role === "parent" && <Alert variant="success" className="dashboard-alert"><AlertDescription>{actionMessage}</AlertDescription></Alert>}
           {profile.role === "parent" && <ParentPanel activeView={parentView} parentEmail={profile.email} requests={guardianRequests} linkedChildren={linkedChildren} actionBusy={guardianActionBusy} onNavigate={setParentView} onApprove={(id) => void decideGuardianRequest(id, "approve")} onReject={(id) => void decideGuardianRequest(id, "reject")} onSavePreferences={(studentId, weeklyGoal) => void saveGuardianPreferences(studentId, weeklyGoal)} />}
           {profile.role === "teacher" && <TeacherPanel verificationStatus={profile.teacher_verification_status} />}
-          {profile.role === "admin" && <AdminPanel counts={counts} feedback={adminFeedback} busy={adminActionBusy} feedbackBusyId={feedbackBusyId} error={adminActionError} onGrantTeacher={grantTeacherRole} onUpdateFeedback={(id, status) => void updateFeedbackStatus(id, status)} />}
+          {profile.role === "admin" && <AdminPanel counts={counts} feedback={adminFeedback} busy={adminActionBusy} feedbackBusyId={feedbackBusyId} error={adminActionError} onGrantTeacher={grantTeacherRole} onSetFeatureAccess={setFeatureAccess} onUpdateFeedback={(id, status) => void updateFeedbackStatus(id, status)} />}
           {profile.role === "parent" && parentView === "settings" && <section className="parent-content-view parent-settings-view" id="ustawienia" aria-labelledby="parent-settings-title">
             <Card className="account-settings-card parent-account-settings-card">
               <CardHeader><CardTitle id="parent-settings-title">Ustawienia konta</CardTitle><CardDescription>Motyw i zarządzanie kontem w jednym miejscu.</CardDescription></CardHeader>
