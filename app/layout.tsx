@@ -23,6 +23,15 @@ export const metadata: Metadata = {
   description:
     "Ćwiczenia z arkuszy CKE i nauczyciel AI, który wyjaśnia zadania krok po kroku.",
   alternates: { canonical: "/" },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml", sizes: "64x64" },
+      { url: "/favicon-16.svg", type: "image/svg+xml", sizes: "16x16" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.svg", type: "image/svg+xml", sizes: "180x180" },
+    ],
+  },
   openGraph: {
     title: "egzaminio — Egzamin bez paniki. Krok po kroku.",
     description:

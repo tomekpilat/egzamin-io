@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#4338CA" />
+  <text x="32" y="44" text-anchor="middle" font-family="Instrument Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="36" font-weight="700" letter-spacing="-1.8" fill="#FAFAF9">io</text>
+  <rect x="0" y="56" width="64" height="8" fill="#F59E0B" />
+</svg>
