@@ -38,6 +38,9 @@ COPY lib ./lib
 COPY worker ./worker
 COPY .openai ./.openai
 COPY public/google-g-official.svg ./public/google-g-official.svg
+COPY public/favicon.svg ./public/favicon.svg
+COPY public/favicon-16.svg ./public/favicon-16.svg
+COPY public/apple-touch-icon.svg ./public/apple-touch-icon.svg
 COPY public/og.png ./public/og.png
 COPY public/rodzic-i-uczen-nauka.png ./public/rodzic-i-uczen-nauka.png
 COPY public/uczen-nauka-logowanie.png ./public/uczen-nauka-logowanie.png

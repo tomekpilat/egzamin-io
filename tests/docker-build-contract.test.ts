@@ -32,4 +32,10 @@ describe("Coolify Docker build", () => {
     expect(dockerignore).toContain("content\n");
     expect(dockerignore).toContain("tests\n");
   });
+
+  it("copies every favicon referenced by the root metadata into the image", () => {
+    expect(dockerfile).toContain("COPY public/favicon.svg ./public/favicon.svg");
+    expect(dockerfile).toContain("COPY public/favicon-16.svg ./public/favicon-16.svg");
+    expect(dockerfile).toContain("COPY public/apple-touch-icon.svg ./public/apple-touch-icon.svg");
+  });
 });
